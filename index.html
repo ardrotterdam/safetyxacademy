@@ -822,6 +822,16 @@
             }
         }
 
+        /* Comparison Table Styling */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .mobile-comparison-cards {
+            display: none;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -867,6 +877,15 @@
 
             .step::after {
                 display: none;
+            }
+
+            /* Hide table, show cards on mobile */
+            .comparison-table-wrapper table {
+                display: none;
+            }
+            
+            .mobile-comparison-cards {
+                display: block;
             }
         }
     </style>
@@ -1149,7 +1168,8 @@
                 📊 Vergelijking in Detail
             </h3>
             
-            <div style="overflow-x: auto;">
+            <!-- Desktop Table -->
+            <div class="comparison-table-wrapper" style="overflow-x: auto;">
                 <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">
                     <thead>
                         <tr style="background: var(--primary-color); color: white;">
@@ -1199,7 +1219,7 @@
                                 💰 Investering
                             </td>
                             <td style="padding: 1.2rem; color: #555;">
-                                €2.000 - €4.000<br>
+                                €5.000 - €7.000<br>
                                 <small>(Afhankelijk van aanbieder)</small>
                             </td>
                             <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
@@ -1229,8 +1249,8 @@
                                 <small>(In Nederland)</small>
                             </td>
                             <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
-                                <strong style="color: #FF7F11;">€45.000 - €100.000+</strong><br>
-                                <small>NL: €45-70K | Dubai: €50-80K (tax-free)<br>Noorwegen: €70-100K</small>
+                                <strong style="color: #FF7F11;">€35.000 - €100.000+</strong><br>
+                                <small>NL: €35-70K | Dubai: €30-80K+ (tax-free)*<br>Noorwegen: €60-100K+<br><em style="font-size: 0.85em; color: #999;">*Afhankelijk van ervaring en sector</em></small>
                             </td>
                         </tr>
                         <tr>
@@ -1248,6 +1268,125 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            
+            <!-- Mobile Cards (alleen zichtbaar op mobiel) -->
+            <div class="mobile-comparison-cards" style="display: none;">
+                
+                <!-- Erkenning Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        🌍 Erkenning
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">🇳🇱 Nederland</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">120+ landen wereldwijd</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Incl. NL, Dubai, Noorwegen, UK, Australië</p>
+                    </div>
+                </div>
+
+                <!-- Taal Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        🗣️ Taal
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Nederlands</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">Engels</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Met Nederlandse begeleiding bij ons!</p>
+                    </div>
+                </div>
+
+                <!-- Duur Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        ⏱️ Duur
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Varieert per aanbieder</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">10-12 weken</p>
+                    </div>
+                </div>
+
+                <!-- Investering Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        💰 Investering
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">€5.000 - €7.000</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">(Afhankelijk van aanbieder)</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">€3.500 all-inclusive</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Incl. examen, materiaal & jobplacement</p>
+                    </div>
+                </div>
+
+                <!-- Carrièremogelijkheden Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        💼 Carrièremogelijkheden
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Nederlandse bouw, industrie, logistiek, productie</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">Wereldwijd alle sectoren</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Haven, offshore, olie & gas, bouw, industrie, consultancy, management</p>
+                    </div>
+                </div>
+
+                <!-- Gemiddeld Salaris Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        📈 Gemiddeld Salaris
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">€40.000 - €55.000</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">(In Nederland)</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">€35.000 - €100.000+</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">NL: €35-70K | Dubai: €30-80K+* | Noorwegen: €60-100K+</p>
+                        <p style="color: #999; font-size: 0.8rem; margin: 0.25rem 0 0 0; font-style: italic;">*Tax-free, afhankelijk van ervaring</p>
+                    </div>
+                </div>
+
+                <!-- Best voor Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        🎯 Best voor
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Je weet zeker dat je in Nederland blijft werken</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">Je wilt alle opties openhouden</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Nederland EN internationaal</p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -1507,7 +1646,7 @@
                     <li>Haven operaties</li>
                     <li>Offshore wind</li>
                     <li>Industriële faciliteiten</li>
-                    <li>Gem. salaris: €45-70K</li>
+                    <li>Gem. salaris: €35-70K*</li>
                 </ul>
             </div>
 
@@ -1519,7 +1658,7 @@
                     <li>Bouw</li>
                     <li>Oil & Gas</li>
                     <li>Belastingvrij inkomen</li>
-                    <li>Gem. salaris: AED 12-20K</li>
+                    <li>Salaris: €30-80K+ tax-free*</li>
                 </ul>
             </div>
 
@@ -1543,7 +1682,7 @@
                     <li>Offshore oil & gas</li>
                     <li>Maritieme industrie</li>
                     <li>Hoge salarissen</li>
-                    <li>Gem. salaris: €70-100K</li>
+                    <li>Gem. salaris: €60-100K+*</li>
                 </ul>
             </div>
 
@@ -1570,6 +1709,18 @@
                     <li>Gem. salaris: SAR 15-25K</li>
                 </ul>
             </div>
+        </div>
+        
+        <!-- Salary Disclaimer -->
+        <div style="max-width: 1200px; margin: 2rem auto 0; padding: 1.5rem; background: #f8f9fa; border-left: 4px solid var(--secondary-color); border-radius: 8px;">
+            <p style="margin: 0; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                <strong style="color: var(--primary-color);">*Salaris informatie:</strong> Genoemde salarissen zijn indicatief en gebaseerd op marktonderzoek (2025). 
+                Werkelijke salarissen variëren sterk per:<br>
+                • <strong>Ervaring:</strong> Starters (€30-45K) | Mid-level (€45-70K) | Senior (€70K+)<br>
+                • <strong>Sector:</strong> Oil & gas en offshore betalen doorgaans 20-40% meer dan bouw/industrie<br>
+                • <strong>Werkgever:</strong> Multinationals bieden vaak betere paketten dan lokale bedrijven<br>
+                <em>Bronnen: HSE Study Guide, Indeed, Bayt (2025)</em>
+            </p>
         </div>
     </section>
 
