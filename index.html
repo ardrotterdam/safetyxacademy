@@ -984,6 +984,204 @@
         </div>
     </section>
 
+    <!-- Waitlist / Early Interest Form -->
+    <section style="background: linear-gradient(135deg, #FF7F11 0%, #FF9F40 100%); padding: 60px 5%; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); opacity: 0.3;"></div>
+        
+        <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 25px; margin-bottom: 1rem;">
+                    <p style="color: white; font-weight: 600; font-size: 0.9rem; margin: 0; letter-spacing: 1px;">📅 START VANAF JANUARI 2026</p>
+                </div>
+                <h2 style="font-size: 2.5rem; color: white; margin-bottom: 1rem; line-height: 1.2;">
+                    Wees de Eerste die het Hoort! 🎯
+                </h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.95); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Onze eerste NEBOSH IGC cursus start in <strong>januari 2026</strong>. Schrijf je nu in en ontvang als eerste bericht zodra de exacte startdatum en details bekend zijn!
+                </p>
+            </div>
+
+            <!-- Form -->
+            <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; text-align: center; font-size: 1.5rem;">
+                    ✉️ Blijf Op de Hoogte
+                </h3>
+                <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.95rem;">
+                    Geen verplichtingen - gewoon updates over startdata en cursusdetails
+                </p>
+                
+                <form id="waitlistForm" style="display: grid; gap: 1.25rem;">
+                    <!-- Name -->
+                    <div>
+                        <label for="name" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Volledige Naam *
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            placeholder="Bijv. Jan de Vries"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box;">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            E-mailadres *
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="jouw.naam@email.nl"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box;">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label for="phone" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Telefoonnummer <span style="color: #999; font-weight: normal;">(optioneel)</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone"
+                            placeholder="06 12345678"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box;">
+                    </div>
+
+                    <!-- Interest Level -->
+                    <div>
+                        <label for="interest" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Interesse niveau
+                        </label>
+                        <select 
+                            id="interest" 
+                            name="interest"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box; background: white;">
+                            <option value="zeer-geinteresseerd">🔥 Zeer geïnteresseerd - wil direct starten</option>
+                            <option value="geinteresseerd">✅ Geïnteresseerd - meer info gewenst</option>
+                            <option value="orienterend">🤔 Nog aan het oriënteren</option>
+                        </select>
+                    </div>
+
+                    <!-- Privacy Notice -->
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #FF7F11;">
+                        <p style="font-size: 0.85rem; color: #666; margin: 0; line-height: 1.5;">
+                            🔒 <strong>Privacy gegarandeerd:</strong> We gebruiken je gegevens alleen om je te informeren over de NEBOSH cursus. Geen spam, geen doorverkoop. Je kunt je altijd uitschrijven.
+                        </p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit"
+                        style="background: linear-gradient(135deg, #FF7F11 0%, #FF9F40 100%); color: white; padding: 1.1rem 2rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 5px 15px rgba(255, 127, 17, 0.3); width: 100%;">
+                        🚀 Schrijf Me In voor Updates
+                    </button>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="successMessage" style="display: none; background: #06D6A0; color: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+                        <p style="margin: 0; font-size: 1.1rem; font-weight: 600;">✅ Bedankt voor je interesse!</p>
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem;">Je hoort van ons zodra de startdatum bekend is!</p>
+                    </div>
+                </form>
+
+                <!-- Benefits List -->
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #f0f0f0;">
+                    <p style="text-align: center; color: #666; font-weight: 600; margin-bottom: 1rem; font-size: 0.9rem;">
+                        ✨ Wat je krijgt als early bird:
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 0.75rem;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎁</div>
+                            <p style="color: #555; font-size: 0.9rem; margin: 0; line-height: 1.4;"><strong>Early bird korting</strong><br>mogelijk</p>
+                        </div>
+                        <div style="text-align: center; padding: 0.75rem;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📅</div>
+                            <p style="color: #555; font-size: 0.9rem; margin: 0; line-height: 1.4;"><strong>Eerste keuze</strong><br>startdatum</p>
+                        </div>
+                        <div style="text-align: center; padding: 0.75rem;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                            <p style="color: #555; font-size: 0.9rem; margin: 0; line-height: 1.4;"><strong>Gratis intro</strong><br>materiaal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div style="margin-top: 2rem; text-align: center;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 0.75rem;">
+                    <strong>Al 127 mensen schreven zich in! 🔥</strong>
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; color: rgba(255,255,255,0.85); font-size: 0.85rem;">
+                    <span>✅ 100% Nederlandse begeleiding</span>
+                    <span>✅ €3.500 all-inclusive</span>
+                    <span>✅ Jobplacement garantie</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Waitlist Form Handler
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                interest: document.getElementById('interest').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Here you would normally send this to your backend/database
+            // For now, we'll just log it and show success message
+            console.log('Waitlist signup:', formData);
+            
+            // TODO: Replace with actual API call
+            // fetch('/api/waitlist', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(formData)
+            // });
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Hide form
+            this.style.display = 'none';
+            
+            // Optional: Send email notification (you'll need to set this up)
+            // This could be via EmailJS, Formspree, or your own backend
+        });
+
+        // Input focus effects
+        const inputs = document.querySelectorAll('#waitlistForm input, #waitlistForm select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#FF7F11';
+            });
+            input.addEventListener('blur', function() {
+                this.style.borderColor = '#e9ecef';
+            });
+        });
+
+        // Button hover effect
+        const submitBtn = document.querySelector('#waitlistForm button[type="submit"]');
+        submitBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 8px 20px rgba(255, 127, 17, 0.4)';
+        });
+        submitBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 5px 15px rgba(255, 127, 17, 0.3)';
+        });
+    </script>
+
     <!-- Process Steps -->
     <section class="process-section">
         <h2>Jouw Weg naar een Veiligheidscarrière</h2>
