@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes">
     <meta name="description" content="NEBOSH IGC opleiding Rotterdam Westplein 12, Veerhaven District. Train in het Scheepvaartkwartier tussen Parklaan en Veerhaven, vier je succes bij De Ballentent. €3.500 all-inclusive. Nederlandse ondersteuning, wereldwijde carrièremogelijkheden.">
     <meta name="keywords" content="NEBOSH IGC Rotterdam, Westplein 12, Veerhaven Rotterdam, Parklaan Rotterdam, Scheepvaartkwartier, De Ballentent, NEBOSH opleiding, veiligheidsopleiding, HSE training, offshore training, haven Rotterdam, Grand Café Loos, maritieme training">
     <title>NEBOSH IGC Rotterdam Westplein 12 | Veerhaven District | SafetyXAcademy - Train Lokaal, Werk Wereldwijd</title>
@@ -87,6 +87,11 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         :root {
             --primary-color: #0A284B;
             --secondary-color: #FF7F11;
@@ -101,6 +106,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            position: relative;
         }
 
         /* Header & Navigation */
@@ -341,13 +347,14 @@
         .comparison-table {
             background: white;
             border-radius: 15px;
-            overflow: hidden;
+            overflow-x: auto;
             box-shadow: 0 5px 30px rgba(0,0,0,0.1);
             margin: 50px 0;
         }
 
         .comparison-table table {
             width: 100%;
+            min-width: 600px;
             border-collapse: collapse;
         }
 
@@ -356,6 +363,7 @@
             color: white;
             padding: 20px;
             text-align: left;
+            white-space: nowrap;
         }
 
         .comparison-table td {
@@ -365,6 +373,34 @@
 
         .comparison-table tr:hover {
             background: var(--light-color);
+        }
+
+        /* Mobile scroll indicator for table */
+        @media (max-width: 768px) {
+            .comparison-table {
+                position: relative;
+                margin: 30px -20px;
+                padding: 0 20px;
+                border-radius: 0;
+            }
+            
+            .comparison-table::after {
+                content: '← Swipe om tabel te bekijken →';
+                display: block;
+                text-align: center;
+                padding: 10px;
+                color: #666;
+                font-size: 0.85rem;
+            }
+            
+            .comparison-table table {
+                font-size: 0.9rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px;
+            }
         }
 
         /* Process Steps */
@@ -825,6 +861,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            /* General mobile fixes */
+            section {
+                padding: 60px 20px !important;
+            }
+            
+            .section-title {
+                font-size: 2rem !important;
+                padding: 0 10px;
+            }
+            
+            /* Navigation */
             .mobile-menu {
                 display: block;
             }
@@ -845,6 +892,7 @@
                 transform: translateX(0);
             }
 
+            /* Hero */
             .hero h1 {
                 font-size: 2rem;
             }
@@ -852,18 +900,82 @@
             .hero-subtitle {
                 font-size: 1.2rem;
             }
+            
+            .certification-badge {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+                margin: 5px 2px;
+            }
 
+            /* Training & Contact grids */
             .training-content,
             .contact-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            /* Images responsive */
+            img {
+                max-width: 100%;
+                height: auto;
             }
 
+            /* Process steps */
             .process-steps {
                 flex-direction: column;
             }
 
+            /* Features grid */
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* Stats grid */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            /* Jobs grid */
+            .jobs-grid {
+                grid-template-columns: 1fr;
+                padding: 0;
+            }
+            
+            .job-card {
+                margin: 0 10px 20px 10px;
+            }
+
+            /* Waitlist form */
+            .waitlist-form {
+                flex-direction: column;
+            }
+            
+            .waitlist-form input,
+            .waitlist-form button {
+                width: 100%;
+                min-width: unset;
+            }
+
+            /* Footer */
             .footer-content {
                 grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            /* Location section */
+            #location > div > div {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* About section grid */
+            #about .training-content > div {
+                grid-template-columns: 1fr !important;
             }
         }
 
@@ -873,15 +985,34 @@
             }
 
             .section-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem !important;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
             }
 
-            .jobs-grid {
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            /* Price tag */
+            .price-tag {
+                font-size: 2rem;
+            }
+            
+            /* Process steps */
+            .step {
+                padding: 20px 10px;
             }
         }
 
@@ -924,6 +1055,13 @@
 
         .fade-in {
             animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* Global image responsiveness */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Country Cards Styles */
@@ -1085,15 +1223,70 @@
             .country-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                padding: 0 10px;
             }
             
             .country-card {
                 padding: 20px;
+                margin: 0 auto;
+                max-width: 100%;
             }
             
             .new-badge {
                 top: -8px;
                 right: 15px;
+            }
+            
+            .country-flag {
+                font-size: 2.5rem;
+            }
+            
+            .country-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .salary-badge {
+                font-size: 1rem;
+            }
+            
+            /* International section specific */
+            #international-opportunities h2 {
+                font-size: 1.8rem !important;
+                line-height: 1.3;
+            }
+            
+            #international-opportunities p {
+                font-size: 1rem !important;
+            }
+            
+            #international-opportunities button {
+                font-size: 1rem !important;
+                padding: 12px 25px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Extra small screens */
+            .country-card {
+                padding: 15px;
+            }
+            
+            .country-highlights li {
+                font-size: 0.85rem;
+            }
+            
+            .country-sectors {
+                font-size: 0.75rem;
+            }
+            
+            .tax-free-badge,
+            .expat-badge {
+                font-size: 0.8rem;
+                padding: 3px 8px;
+            }
+            
+            #international-opportunities h3 {
+                font-size: 1.4rem !important;
             }
         }
     </style>
@@ -1205,57 +1398,59 @@
         <!-- Comparison Table -->
         <div class="comparison-table" style="margin-top: 60px;">
             <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">NEBOSH IGC vs Nederlandse MVK</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Aspect</th>
-                        <th>MVK (Middelbaar Veiligheidskunde)</th>
-                        <th style="background: var(--secondary-color);">NEBOSH IGC ⭐</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Internationale Erkenning</strong></td>
-                        <td>❌ Alleen Nederland/België</td>
-                        <td>✅ 120+ landen wereldwijd</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Taal</strong></td>
-                        <td>Nederlands</td>
-                        <td>Engels (met NL begeleiding)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Dubai/Middle East</strong></td>
-                        <td>❌ Niet erkend</td>
-                        <td>✅ Vereist voor HSE functies</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Salaris Potentieel</strong></td>
-                        <td>€35.000 - €55.000</td>
-                        <td>€40.000 - €95.000 (tax-free mogelijk)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Studieduur</strong></td>
-                        <td>2-3 jaar deeltijd</td>
-                        <td>10-12 weken intensief</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Kosten</strong></td>
-                        <td>€8.000 - €12.000</td>
-                        <td>€3.500 all-inclusive</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Jobplacement Support</strong></td>
-                        <td>Minimaal</td>
-                        <td>✅ Actieve internationale placement</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Beste Voor</strong></td>
-                        <td>NL/BE bouwsector</td>
-                        <td>Internationale carrières</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>MVK (Middelbaar Veiligheidskunde)</th>
+                            <th style="background: var(--secondary-color);">NEBOSH IGC ⭐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Internationale Erkenning</strong></td>
+                            <td>❌ Alleen Nederland/België</td>
+                            <td>✅ 120+ landen wereldwijd</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Taal</strong></td>
+                            <td>Nederlands</td>
+                            <td>Engels (met NL begeleiding)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dubai/Middle East</strong></td>
+                            <td>❌ Niet erkend</td>
+                            <td>✅ Vereist voor HSE functies</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Salaris Potentieel</strong></td>
+                            <td>€35.000 - €55.000</td>
+                            <td>€40.000 - €95.000 (tax-free mogelijk)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Studieduur</strong></td>
+                            <td>2-3 jaar deeltijd</td>
+                            <td>10-12 weken intensief</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kosten</strong></td>
+                            <td>€8.000 - €12.000</td>
+                            <td>€3.500 all-inclusive</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jobplacement Support</strong></td>
+                            <td>Minimaal</td>
+                            <td>✅ Actieve internationale placement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Beste Voor</strong></td>
+                            <td>NL/BE bouwsector</td>
+                            <td>Internationale carrières</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
@@ -1425,9 +1620,9 @@
     </section>
 
     <!-- International Opportunities Section -->
-    <section id="international-opportunities" style="padding: 80px 5%; background: var(--light-color);">
+    <section id="international-opportunities" style="padding: 80px 5%; background: var(--light-color); overflow: hidden;">
         <div style="max-width: 1400px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 60px;">
+            <div style="text-align: center; margin-bottom: 60px; padding: 0 10px;">
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">
                     🌍 Werk Wereldwijd met NEBOSH IGC
                 </h2>
@@ -1581,14 +1776,14 @@
             </div>
 
             <!-- CTA Section -->
-            <div style="text-align: center; margin-top: 60px; padding: 40px; background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); border-radius: 15px;">
+            <div style="text-align: center; margin-top: 60px; padding: 40px 20px; background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); border-radius: 15px;">
                 <h3 style="color: white; font-size: 1.8rem; margin-bottom: 1rem;">
                     Niet zeker welk land bij je past?
                 </h3>
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem; padding: 0 10px;">
                     Doe onze gratis internationale carrière scan en ontdek je ideale bestemming
                 </p>
-                <button style="background: var(--secondary-color); color: white; padding: 15px 40px; font-size: 1.1rem; border: none; border-radius: 50px; cursor: pointer; font-weight: bold;">
+                <button style="background: var(--secondary-color); color: white; padding: 15px 40px; font-size: 1.1rem; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; max-width: 90%; white-space: normal;">
                     Start Carrière Scan →
                 </button>
             </div>
