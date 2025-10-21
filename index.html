@@ -114,16 +114,35 @@
             font-weight: 600;
             font-size: 0.9rem;
             transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            line-height: 1.4;
         }
 
         .btn-primary {
             background: var(--secondary);
-            color: white;
+            color: white !important;
+            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: #ff9533;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.3);
         }
 
         .btn-secondary {
             background: white;
-            color: var(--primary);
+            color: var(--primary) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         /* USP Banner */
@@ -302,6 +321,11 @@
             font-size: 0.9rem;
             color: #666;
         }
+        
+        /* FAQ Section Header */
+        .faq .container {
+            background: white;
+        }
 
         /* Jobs CTA */
         .jobs-cta {
@@ -322,59 +346,128 @@
             line-height: 1.6;
         }
 
-        /* FAQ */
+        /* FAQ - Mooiere Styling */
         .faq-item {
             background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            margin-bottom: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 5px 20px rgba(255, 127, 17, 0.15);
+            transform: translateY(-2px);
         }
 
         .faq-item summary {
-            padding: 1rem;
+            padding: 1.25rem 1.25rem 1.25rem 3rem;
             cursor: pointer;
             font-weight: 600;
             color: var(--primary);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             list-style: none;
+            position: relative;
+            transition: all 0.3s ease;
+            background: linear-gradient(to right, #f8f9fa 0%, white 100%);
+        }
+        
+        /* FAQ Icon */
+        .faq-item summary:before {
+            content: "❓";
+            position: absolute;
+            left: 1rem;
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item[open] summary:before {
+            content: "✓";
+            color: var(--success);
+        }
+        
+        /* Arrow indicator */
+        .faq-item summary:after {
+            content: "▼";
+            position: absolute;
+            right: 1.25rem;
+            font-size: 0.7rem;
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item[open] summary:after {
+            transform: rotate(180deg);
         }
 
-        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::-webkit-details-marker { 
+            display: none; 
+        }
 
         .faq-item[open] summary {
-            background: var(--light-bg);
+            background: linear-gradient(135deg, var(--secondary), #ff9533);
+            color: white;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .faq-item[open] summary:after {
+            color: white;
         }
 
         .faq-content {
-            padding: 0 1rem 1rem;
+            padding: 1.25rem;
             font-size: 0.9rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            background: #fafbfc;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .faq-content strong {
+            color: var(--primary);
         }
 
         .faq-content ul {
-            margin: 0.5rem 0;
+            margin: 0.75rem 0;
             padding-left: 1.5rem;
         }
+        
+        .faq-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-content a {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .faq-content a:hover {
+            text-decoration: underline;
+        }
 
-        /* Contact */
+        /* Contact - Verbeterde Styling */
         .contact-info {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: linear-gradient(135deg, white, #f8f9fa);
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-top: 1.5rem;
             text-align: center;
+            border: 2px solid var(--secondary);
         }
 
         .contact-info h3 {
             color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .contact-info p {
-            margin-bottom: 0.75rem;
-            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .contact-info a {
@@ -382,6 +475,19 @@
             text-decoration: none;
             font-weight: 600;
             word-break: break-word;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #ff9533;
+            text-decoration: underline;
+        }
+        
+        /* Contact Button Special */
+        .contact-info .btn {
+            margin-top: 1rem;
+            display: inline-block;
+            min-width: 200px;
         }
 
         /* Footer */
@@ -407,6 +513,16 @@
             .usp-grid { grid-template-columns: repeat(4, 1fr); }
             .training-grid { grid-template-columns: repeat(2, 1fr); }
             .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            
+            /* Tablet FAQ */
+            .faq-item summary { 
+                font-size: 1rem;
+                padding: 1.25rem 1.25rem 1.25rem 3.25rem;
+            }
+            .faq-item summary:before { 
+                font-size: 1.4rem;
+                left: 1.1rem;
+            }
         }
 
         /* Desktop (900px+) */
@@ -428,6 +544,31 @@
             .comparison-table td { padding: 1rem; font-size: 1rem; }
             .jobs-cta h2 { font-size: 2.5rem; }
             .jobs-cta p { font-size: 1.2rem; }
+            
+            /* Desktop FAQ improvements */
+            .faq-item summary { 
+                font-size: 1.1rem; 
+                padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+            }
+            .faq-item summary:before { 
+                font-size: 1.5rem;
+                left: 1.25rem;
+            }
+            .faq-content { 
+                padding: 1.5rem; 
+                font-size: 1rem; 
+            }
+            
+            /* Desktop contact */
+            .contact-info {
+                padding: 2.5rem 2rem;
+            }
+            .contact-info h3 {
+                font-size: 1.5rem;
+            }
+            .contact-info p {
+                font-size: 1.05rem;
+            }
         }
     </style>
 </head>
