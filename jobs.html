@@ -20,6 +20,10 @@
   <meta property="twitter:description" content="HSE/NEBOSH vacatures in Rotterdam en wereldwijd.">
   <meta property="twitter:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+
   <!-- Small perf wins -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -31,8 +35,12 @@
     }
     *{box-sizing:border-box}
     body{margin:0; font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif; line-height:1.6; color:#333;}
-    header{background:var(--primary); color:#fff; padding:1.25rem 5%;}
-    header a{color:#fff; text-decoration:none}
+    header{background:var(--primary); color:#fff; padding:1.25rem 5%; position:sticky; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+    .header-content{max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;}
+    .logo{font-size:1.5rem; font-weight:bold; color:var(--secondary); text-decoration:none;}
+    nav{display:flex; gap:2rem; align-items:center;}
+    header a{color:#fff; text-decoration:none; font-weight:500; transition:color 0.3s;}
+    header a:hover{color:var(--secondary)}
     .wrap{max-width:1000px; margin:0 auto; padding:0 5%;}
     nav.breadcrumbs{font-size:.9rem; color:#cdd6e1; margin:.25rem 0 .5rem}
     nav.breadcrumbs a{color:#cdd6e1; text-decoration:none}
@@ -58,6 +66,10 @@
     .faq details{background:#fff; border:1px solid #EAECF0; border-radius:10px; padding:1rem 1.1rem; margin-bottom:.75rem}
     footer{background:var(--dark); color:#fff; text-align:center; padding:2rem 5%; margin-top:2rem}
     footer a{color:#fff}
+    @media (max-width: 768px) {
+      nav{gap:1rem;}
+      nav a{font-size:0.9rem;}
+    }
   </style>
 
   <!-- Schema.org: WebPage + CollectionPage + ItemList (safe pre-live) -->
@@ -119,24 +131,33 @@
 <body>
 
   <header>
-    <div class="wrap">
-      <nav class="breadcrumbs" aria-label="Breadcrumbs">
-        <a href="/">Home</a> &nbsp;›&nbsp; Vacatures
+    <div class="header-content">
+      <a href="index.html" class="logo">SafetyXAcademy</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#training">Training</a>
+        <a href="jobs.html">Vacatures</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
-      <h1>NEBOSH & HSE Vacatures – Rotterdam & Wereldwijd</h1>
-      <p class="lead">
-        World-class safety careers. <strong>Rotterdam</strong>, <strong>Dubai</strong>, <strong>Norway Offshore</strong>,
-        <strong>UK</strong>, <strong>Saudi (NEOM)</strong>, <strong>Singapore</strong>, <strong>Germany</strong>.
-        Schrijf je in voor updates & jobplacement-support.
-      </p>
-      <p>
-        <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Inschrijven%20Vacature%20Updates">Inschrijven voor updates</a>
-        &nbsp; <a class="btn btn-link" href="/#training">NEBOSH opleiding bekijken →</a>
-      </p>
     </div>
   </header>
 
-  <main class="wrap" id="content">
+  <main class="wrap" id="content" style="padding-top:2rem; padding-bottom:2rem;">
+
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <a href="/">Home</a> &nbsp;›&nbsp; Vacatures
+    </nav>
+    
+    <h1>NEBOSH & HSE Vacatures – Rotterdam & Wereldwijd</h1>
+    <p class="lead">
+      World-class safety careers. <strong>Rotterdam</strong>, <strong>Dubai</strong>, <strong>Norway Offshore</strong>,
+      <strong>UK</strong>, <strong>Saudi (NEOM)</strong>, <strong>Singapore</strong>, <strong>Germany</strong>.
+      Schrijf je in voor updates & jobplacement-support.
+    </p>
+    <p>
+      <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Inschrijven%20Vacature%20Updates">Inschrijven voor updates</a>
+      &nbsp; <a class="btn btn-link" href="index.html#training">NEBOSH opleiding bekijken →</a>
+    </p>
 
     <!-- Filters -->
     <div class="filters" aria-label="Filters">
@@ -154,14 +175,14 @@
     <section aria-labelledby="hotspots" class="notice">
       <h2 id="hotspots">🌍 Wereldwijde HSE Hotspots</h2>
       <p class="lead" style="color:#475467;margin:.5rem 0 0;">
-        <strong>Waar is het “hot” nu?</strong><br>
+        <strong>Waar is het "hot" nu?</strong><br>
         • <em>Dubai / VAE</em> – mega-projecten & industrie (oil & gas, construction)<br>
         • <em>Saudi (NEOM)</em> – giga-builds, strenge HSE-standaarden<br>
         • <em>Noorwegen Offshore</em> – olie & gas + wind op zee, sterke veiligheidscultuur<br>
         • <em>UK</em> – mature HSE-markt, veel compliance-rollen<br>
         • <em>Singapore</em> – havens & logistiek hub voor Azië<br>
         • <em>Duitsland</em> – chemie & zware industrie<br>
-        • <em>Rotterdam</em> – Europa’s grootste haven, terminals & raffinage
+        • <em>Rotterdam</em> – Europa's grootste haven, terminals & raffinage
       </p>
     </section>
 
@@ -213,7 +234,7 @@
       <article class="card" data-tags="singapore ports international">
         <h3>Port Safety Supervisor — PSA / Logistics (Singapore)</h3>
         <p class="meta"><span>📍 Singapore</span><span>⏱️ Shifts</span><span>🚢 Terminals</span></p>
-        <p>Operations safety bij ’s werelds top-havenhub: yard safety, traffic management, incident response.</p>
+        <p>Operations safety bij 's werelds top-havenhub: yard safety, traffic management, incident response.</p>
         <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=Port%20Safety%20Supervisor%20Singapore">Apply via e-mail</a></p>
       </article>
 
@@ -246,14 +267,21 @@
       </details>
 
       <details>
-        <summary>Welke markt is nu “hot”?</summary>
+        <summary>Welke markt is nu "hot"?</summary>
         <p>Veel vraag in Dubai/VAE (mega-projecten), Saudi (NEOM), Noorwegen (offshore), Singapore (havens), en natuurlijk Rotterdam (haven/raffinage).</p>
       </details>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> SafetyXAcademy · Rotterdam · <a href="/privacy.html">Privacy</a></p>
+    <p>&copy; <span id="year"></span> SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+    <p>
+      <a href="index.html">Home</a> | 
+      <a href="jobs.html">Vacatures</a> | 
+      <a href="privacy.html">Privacy</a> | 
+      <a href="index.html#contact">Contact</a>
+    </p>
+    <p style="margin-top: 1rem; font-style: italic; color: #999;">🌍 Train Lokaal, Werk Wereldwijd</p>
   </footer>
 
   <script>
