@@ -4,129 +4,282 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NEBOSH & HSE Jobs – Rotterdam • Dubai • Norway • UK | SafetyXAcademy</title>
-  <meta name="description" content="Wereldwijde HSE/NEBOSH vacatures en carrières: Rotterdam, Dubai (VAE), Noorwegen offshore, UK, Saudi (NEOM), Singapore, Duitsland. Schrijf je in voor updates & jobplacement.">
-
-  <!-- Canonical & Open Graph -->
+  <meta name="description" content="Wereldwijde HSE/NEBOSH vacatures: Rotterdam, Dubai, Noorwegen, UK, Saudi, Singapore, Duitsland. Schrijf je in voor updates & jobplacement.">
+  
   <link rel="canonical" href="https://www.safetyxacademy.nl/jobs">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.safetyxacademy.nl/jobs">
-  <meta property="og:title" content="NEBOSH & HSE Jobs – Rotterdam • Dubai • Norway • UK | SafetyXAcademy">
-  <meta property="og:description" content="Global HSE/NEBOSH kansen: Rotterdam, Dubai, Noorwegen, UK, Saudi, Singapore, Duitsland. Meld je aan voor updates.">
-  <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
-
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.safetyxacademy.nl/jobs">
-  <meta property="twitter:title" content="NEBOSH & HSE Jobs – Rotterdam • Dubai • Norway • UK | SafetyXAcademy">
-  <meta property="twitter:description" content="HSE/NEBOSH vacatures in Rotterdam en wereldwijd.">
-  <meta property="twitter:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 
-  <!-- Small perf wins -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  <!-- Styles (matcht je huisstijl) -->
   <style>
-    :root{
-      --primary:#0A284B; --secondary:#FF7F11; --dark:#2F3E46; --light:#F5F6F8; --muted:#667085;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0A284B;
+      --secondary: #FF7F11;
+      --dark: #2F3E46;
+      --light: #F5F6F8;
+      --muted: #667085;
     }
-    *{box-sizing:border-box}
-    body{margin:0; font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif; line-height:1.6; color:#333;}
-    header{background:var(--primary); color:#fff; padding:1.25rem 5%; position:sticky; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-    .header-content{max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;}
-    .logo{font-size:1.5rem; font-weight:bold; color:var(--secondary); text-decoration:none;}
-    nav{display:flex; gap:2rem; align-items:center;}
-    header a{color:#fff; text-decoration:none; font-weight:500; transition:color 0.3s;}
-    header a:hover{color:var(--secondary)}
-    .wrap{max-width:1000px; margin:0 auto; padding:0 5%;}
-    nav.breadcrumbs{font-size:.9rem; color:#cdd6e1; margin:.25rem 0 .5rem}
-    nav.breadcrumbs a{color:#cdd6e1; text-decoration:none}
-    h1{color:#fff; margin:.25rem 0 0}
-    .lead{color:#e9eef7; margin:.5rem 0 1.25rem}
-    .filters{display:flex; gap:.5rem; flex-wrap:wrap; margin:1rem 0 1.5rem}
-    .chip{border:1px solid #d0d5dd; background:#fff; color:#344054; padding:.4rem .8rem; border-radius:999px; font-size:.9rem; cursor:pointer}
-    .chip.active{background:var(--primary); color:#fff; border-color:var(--primary)}
-    .notice{background:var(--light); padding:1rem; border-left:4px solid var(--primary); border-radius:8px; margin:1.5rem 0}
-    .notice h2{margin:.25rem 0 0; color:var(--primary)}
-    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem}
-    .card{background:#fff; border-left:4px solid var(--secondary); border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,.08); padding:1.1rem}
-    .card h3{margin:.25rem 0 .25rem; color:var(--primary)}
-    .meta{color:#667085; font-size:.92rem; display:flex; gap:1rem; flex-wrap:wrap}
-    .meta span{display:inline-flex; align-items:center; gap:.35rem}
-    .cta{margin-top:.75rem}
-    .btn{display:inline-block; padding:.6rem 1rem; border-radius:999px; text-decoration:none; font-weight:600; transition:.2s}
-    .btn-primary{background:var(--secondary); color:#fff}
-    .btn-primary:hover{filter:brightness(1.05); transform:translateY(-1px)}
-    .btn-link{color:#fff; text-decoration:none}
-    .faq{margin:2rem 0}
-    .faq h2{color:var(--primary); margin:0 0 .5rem}
-    .faq details{background:#fff; border:1px solid #EAECF0; border-radius:10px; padding:1rem 1.1rem; margin-bottom:.75rem}
-    footer{background:var(--dark); color:#fff; text-align:center; padding:2rem 5%; margin-top:2rem}
-    footer a{color:#fff}
-    @media (max-width: 768px) {
-      nav{gap:1rem;}
-      nav a{font-size:0.9rem;}
+    
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+    
+    /* Header - Mobile First */
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 4%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .logo {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--secondary);
+      text-decoration: none;
+    }
+    
+    nav {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    /* Main Content */
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem 4%;
+    }
+    
+    h1 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin: 0.5rem 0 0.75rem;
+      line-height: 1.3;
+    }
+    
+    .lead {
+      color: #555;
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.25rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    
+    .btn-primary {
+      background: var(--secondary);
+      color: #fff;
+    }
+    
+    .btn-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    
+    /* Filters */
+    .filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.5rem;
+    }
+    
+    .chip {
+      border: 1px solid #d0d5dd;
+      background: #fff;
+      color: #344054;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    
+    .chip.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    
+    /* Notice Box */
+    .notice {
+      background: var(--light);
+      padding: 1rem;
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+    
+    .notice h2 {
+      margin: 0.25rem 0 0.5rem;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+    
+    .notice p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    /* Grid - Mobile Responsive */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .card {
+      background: #fff;
+      border-left: 4px solid var(--secondary);
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      padding: 1.25rem;
+    }
+    
+    .card h3 {
+      margin: 0 0 0.5rem;
+      color: var(--primary);
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+    
+    .meta {
+      color: #667085;
+      font-size: 0.85rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 0.5rem 0;
+    }
+    
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    
+    .card p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    
+    .cta {
+      margin-top: 0.75rem;
+    }
+    
+    /* FAQ */
+    .faq {
+      margin: 2rem 0;
+    }
+    
+    .faq h2 {
+      color: var(--primary);
+      margin: 0 0 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .faq details {
+      background: #fff;
+      border: 1px solid #EAECF0;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+      list-style: none;
+    }
+    
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    .faq p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 4%;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+    }
+    
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Tablet+ */
+    @media (min-width: 600px) {
+      .logo { font-size: 1.3rem; }
+      nav a { font-size: 0.95rem; }
+      h1 { font-size: 2rem; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .notice h2 { font-size: 1.4rem; }
+    }
+    
+    /* Desktop */
+    @media (min-width: 900px) {
+      .logo { font-size: 1.5rem; }
+      nav { gap: 2rem; }
+      nav a { font-size: 1rem; }
+      h1 { font-size: 2.3rem; }
+      .wrap { padding: 2.5rem 5%; }
+      .grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
     }
   </style>
-
-  <!-- Schema.org: WebPage + CollectionPage + ItemList (safe pre-live) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":["WebPage","CollectionPage"],
-    "name":"NEBOSH & HSE Vacatures – Wereldwijd",
-    "url":"https://www.safetyxacademy.nl/jobs",
-    "breadcrumb":{
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.safetyxacademy.nl/"},
-        {"@type":"ListItem","position":2,"name":"Vacatures","item":"https://www.safetyxacademy.nl/jobs"}
-      ]
-    },
-    "about":[
-      {"@type":"Thing","name":"NEBOSH"},
-      {"@type":"Thing","name":"HSE careers"},
-      {"@type":"Thing","name":"Offshore safety"},
-      {"@type":"Thing","name":"Dubai jobs"},
-      {"@type":"Thing","name":"Norway offshore jobs"},
-      {"@type":"Thing","name":"UK HSE jobs"},
-      {"@type":"Thing","name":"Singapore port jobs"},
-      {"@type":"Thing","name":"Germany chemical industry jobs"},
-      {"@type":"Thing","name":"Rotterdam port jobs"}
-    ],
-    "mainEntity":{
-      "@type":"ItemList",
-      "itemListOrder":"http://schema.org/ItemListOrderDescending",
-      "name":"Vacaturecategorieën",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Haven & Terminal Veiligheid"},
-        {"@type":"ListItem","position":2,"name":"Offshore Safety"},
-        {"@type":"ListItem","position":3,"name":"Industrie & Bouwveiligheid"}
-      ]
-    }
-  }
-  </script>
-
-  <!-- (OPT-IN LATER) Real JobPosting JSON-LD per echte vacature
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"JobPosting",
-    "title":"Offshore Safety Officer",
-    "description":"HTML omschrijving ...",
-    "datePosted":"2025-10-21",
-    "employmentType":"FULL_TIME",
-    "hiringOrganization":{"@type":"Organization","name":"Partnerbedrijf"},
-    "jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Rotterdam","addressRegion":"Zuid-Holland","addressCountry":"NL"}},
-    "applicantLocationRequirements":{"@type":"Country","name":"Netherlands"},
-    "baseSalary":{"@type":"MonetaryAmount","currency":"EUR","value":{"@type":"QuantitativeValue","minValue":5200,"maxValue":6500,"unitText":"MONTH"}},
-    "validThrough":"2025-12-31T23:59"
-  }
-  </script>
-  -->
 </head>
 <body>
 
@@ -142,153 +295,184 @@
     </div>
   </header>
 
-  <main class="wrap" id="content" style="padding-top:2rem; padding-bottom:2rem;">
-
-    <nav class="breadcrumbs" aria-label="Breadcrumbs">
-      <a href="/">Home</a> &nbsp;›&nbsp; Vacatures
-    </nav>
-    
-    <h1>NEBOSH & HSE Vacatures – Rotterdam & Wereldwijd</h1>
+  <main class="wrap">
+    <h1>NEBOSH & HSE Vacatures – Wereldwijd</h1>
     <p class="lead">
-      World-class safety careers. <strong>Rotterdam</strong>, <strong>Dubai</strong>, <strong>Norway Offshore</strong>,
-      <strong>UK</strong>, <strong>Saudi (NEOM)</strong>, <strong>Singapore</strong>, <strong>Germany</strong>.
+      World-class safety careers in <strong>Rotterdam, Dubai, Norway, UK, Saudi, Singapore, Germany</strong>.
       Schrijf je in voor updates & jobplacement-support.
     </p>
     <p>
-      <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Inschrijven%20Vacature%20Updates">Inschrijven voor updates</a>
-      &nbsp; <a class="btn btn-link" href="index.html#training">NEBOSH opleiding bekijken →</a>
+      <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Vacature%20Updates">Inschrijven voor updates</a>
+      &nbsp; <a class="btn-link" href="index.html#training">NEBOSH opleiding →</a>
     </p>
 
     <!-- Filters -->
-    <div class="filters" aria-label="Filters">
+    <div class="filters">
       <button class="chip active" data-filter="all">All</button>
       <button class="chip" data-filter="rotterdam">Rotterdam</button>
-      <button class="chip" data-filter="dubai">Dubai / UAE</button>
-      <button class="chip" data-filter="norway">Norway Offshore</button>
-      <button class="chip" data-filter="uk">United Kingdom</button>
-      <button class="chip" data-filter="saudi">Saudi / NEOM</button>
-      <button class="chip" data-filter="singapore">Singapore Ports</button>
-      <button class="chip" data-filter="germany">Germany Industry</button>
+      <button class="chip" data-filter="dubai">Dubai</button>
+      <button class="chip" data-filter="norway">Norway</button>
+      <button class="chip" data-filter="uk">UK</button>
+      <button class="chip" data-filter="saudi">Saudi</button>
+      <button class="chip" data-filter="singapore">Singapore</button>
+      <button class="chip" data-filter="germany">Germany</button>
     </div>
 
-    <!-- Hotspots (story) -->
-    <section aria-labelledby="hotspots" class="notice">
-      <h2 id="hotspots">🌍 Wereldwijde HSE Hotspots</h2>
-      <p class="lead" style="color:#475467;margin:.5rem 0 0;">
+    <!-- Hotspots -->
+    <section class="notice">
+      <h2>🌍 Wereldwijde HSE Hotspots</h2>
+      <p style="color:#475467;">
         <strong>Waar is het "hot" nu?</strong><br>
-        • <em>Dubai / VAE</em> – mega-projecten & industrie (oil & gas, construction)<br>
-        • <em>Saudi (NEOM)</em> – giga-builds, strenge HSE-standaarden<br>
-        • <em>Noorwegen Offshore</em> – olie & gas + wind op zee, sterke veiligheidscultuur<br>
-        • <em>UK</em> – mature HSE-markt, veel compliance-rollen<br>
-        • <em>Singapore</em> – havens & logistiek hub voor Azië<br>
-        • <em>Duitsland</em> – chemie & zware industrie<br>
-        • <em>Rotterdam</em> – Europa's grootste haven, terminals & raffinage
+        • Dubai / VAE – mega-projecten (oil & gas, construction)<br>
+        • Saudi (NEOM) – giga-builds, strenge HSE<br>
+        • Noorwegen – offshore (olie, gas, wind op zee)<br>
+        • UK – mature HSE-markt<br>
+        • Singapore – havens & logistiek<br>
+        • Duitsland – chemie & industrie<br>
+        • Rotterdam – grootste haven Europa
       </p>
     </section>
 
-    <!-- Vacancy cards (placeholders nu; echte content later) -->
-    <section aria-labelledby="results-heading" class="grid">
-      <h2 id="results-heading" class="sr-only" style="position:absolute;left:-9999px;">Vacature resultaten</h2>
-
+    <!-- Vacancy cards -->
+    <section class="grid">
       <!-- Rotterdam -->
       <article class="card" data-tags="rotterdam starter haven">
-        <h3>Haveninspecteur (Starter) — Europoort, Rotterdam</h3>
-        <p class="meta"><span>📍 Rotterdam</span><span>💼 Vast</span><span>💶 €3.800–€4.500</span></p>
-        <p>Kickstart je HSE-loopbaan: inspecties, toolbox, LMRA, rapportages. NL & EN.</p>
-        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=Haveninspecteur%20Rotterdam">Apply via e-mail</a></p>
+        <h3>Haveninspecteur (Starter)<br>Europoort, Rotterdam</h3>
+        <p class="meta">
+          <span>📍 Rotterdam</span>
+          <span>💼 Vast</span>
+          <span>💶 €3.800-4.500</span>
+        </p>
+        <p>Kickstart HSE: inspecties, toolbox, LMRA, rapportages. NL & EN.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Haveninspecteur%20Rotterdam">Apply</a>
+        </p>
       </article>
 
-      <!-- Dubai / UAE -->
+      <!-- Dubai -->
       <article class="card" data-tags="dubai international">
-        <h3>HSE Advisor — Mega-Project (Dubai, UAE)</h3>
-        <p class="meta"><span>📍 Dubai</span><span>💼 Full-time</span><span>🌐 Visa support</span></p>
-        <p>NEBOSH IGC, sterke PTW & incident-investigation skills. Bouw/oil&gas. Internationale teams.</p>
-        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Advisor%20Dubai">Apply via e-mail</a></p>
+        <h3>HSE Advisor<br>Mega-Project Dubai</h3>
+        <p class="meta">
+          <span>📍 Dubai</span>
+          <span>💼 Full-time</span>
+          <span>🌐 Visa support</span>
+        </p>
+        <p>NEBOSH IGC, PTW & incident investigation. Bouw/oil&gas.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=HSE%20Advisor%20Dubai">Apply</a>
+        </p>
       </article>
 
-      <!-- Norway Offshore -->
+      <!-- Norway -->
       <article class="card" data-tags="norway offshore international">
-        <h3>Offshore Safety Officer — North Sea (Norway)</h3>
-        <p class="meta"><span>📍 Offshore Norway</span><span>🔁 2/2 rotation</span><span>🏷️ BOSIET</span></p>
-        <p>Rig audits, PTW, emergency drills. Engels vereist; Scandinavische safety-cultuur.</p>
-        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=Offshore%20Safety%20Officer%20Norway">Apply via e-mail</a></p>
+        <h3>Offshore Safety Officer<br>North Sea, Norway</h3>
+        <p class="meta">
+          <span>📍 Offshore</span>
+          <span>🔁 2/2 rotation</span>
+          <span>🏷️ BOSIET</span>
+        </p>
+        <p>Rig audits, PTW, emergency drills. Engels vereist.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Offshore%20Norway">Apply</a>
+        </p>
       </article>
 
-      <!-- United Kingdom -->
+      <!-- UK -->
       <article class="card" data-tags="uk">
-        <h3>HSE Manager — Manufacturing (UK)</h3>
-        <p class="meta"><span>📍 Midlands/UK</span><span>💼 Permanent</span><span>📈 ISO 45001</span></p>
-        <p>Leid HSE-strategie, audits, training. Ervaring met ISO-systemen en change management.</p>
-        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20UK">Apply via e-mail</a></p>
+        <h3>HSE Manager<br>Manufacturing, UK</h3>
+        <p class="meta">
+          <span>📍 Midlands</span>
+          <span>💼 Permanent</span>
+          <span>📈 ISO 45001</span>
+        </p>
+        <p>HSE-strategie, audits, training. ISO-systemen & change management.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20UK">Apply</a>
+        </p>
       </article>
 
-      <!-- Saudi / NEOM -->
+      <!-- Saudi -->
       <article class="card" data-tags="saudi international">
-        <h3>HSE Specialist — NEOM (Saudi Arabia)</h3>
-        <p class="meta"><span>📍 NEOM</span><span>💼 Full-time</span><span>🏗️ Giga-project</span></p>
-        <p>Site HSE governance op schaal: contractor management, high-risk controls, LOTO, confined space.</p>
-        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Specialist%20NEOM">Apply via e-mail</a></p>
+        <h3>HSE Specialist<br>NEOM, Saudi Arabia</h3>
+        <p class="meta">
+          <span>📍 NEOM</span>
+          <span>💼 Full-time</span>
+          <span>🏗️ Giga-project</span>
+        </p>
+        <p>Site HSE governance: contractor mgmt, high-risk controls, LOTO.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=HSE%20NEOM">Apply</a>
+        </p>
       </article>
 
-      <!-- Singapore Ports -->
+      <!-- Singapore -->
       <article class="card" data-tags="singapore ports international">
-        <h3>Port Safety Supervisor — PSA / Logistics (Singapore)</h3>
-        <p class="meta"><span>📍 Singapore</span><span>⏱️ Shifts</span><span>🚢 Terminals</span></p>
-        <p>Operations safety bij 's werelds top-havenhub: yard safety, traffic management, incident response.</p>
-        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=Port%20Safety%20Supervisor%20Singapore">Apply via e-mail</a></p>
+        <h3>Port Safety Supervisor<br>PSA Singapore</h3>
+        <p class="meta">
+          <span>📍 Singapore</span>
+          <span>⏱️ Shifts</span>
+          <span>🚢 Terminals</span>
+        </p>
+        <p>Operations safety: yard safety, traffic, incident response.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Port%20Singapore">Apply</a>
+        </p>
       </article>
 
-      <!-- Germany Industry -->
+      <!-- Germany -->
       <article class="card" data-tags="germany industry international">
-        <h3>HSE Engineer — Chemical Plant (Germany)</h3>
-        <p class="meta"><span>📍 NRW / DE</span><span>💼 Permanent</span><span>🧪 Chemie</span></p>
-        <p>Procesveiligheid, MOC, ATEX, PSM. Duits/Engels. Samenwerking met operations & maintenance.</p>
-        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Engineer%20Germany">Apply via e-mail</a></p>
+        <h3>HSE Engineer<br>Chemical Plant, Germany</h3>
+        <p class="meta">
+          <span>📍 NRW, DE</span>
+          <span>💼 Permanent</span>
+          <span>🧪 Chemie</span>
+        </p>
+        <p>Procesveiligheid, MOC, ATEX, PSM. Duits/Engels.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=HSE%20Germany">Apply</a>
+        </p>
       </article>
     </section>
 
     <!-- Notice -->
     <div class="notice" role="status">
-      <strong>Heads-up:</strong> Live vacatures worden gefaseerd toegevoegd. Schrijf je in voor vroege toegang en koppeling aan partnerbedrijven.
+      <strong>Heads-up:</strong> Live vacatures worden gefaseerd toegevoegd. Schrijf je in voor vroege toegang.
     </div>
 
-    <!-- FAQ internationaal -->
-    <section class="faq" aria-labelledby="faq-heading">
-      <h2 id="faq-heading">FAQ: Werken met NEBOSH – internationaal</h2>
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>FAQ: Werken met NEBOSH</h2>
 
       <details>
         <summary>Kan ik met NEBOSH IGC internationaal werken?</summary>
-        <p>Ja. IGC is wereldwijd bekend (o.a. VAE, Noorwegen, UK, Singapore). Vereist vaak: goed Engels en soms extra certificaten (bijv. BOSIET offshore).</p>
+        <p>Ja. IGC is wereldwijd erkend (VAE, Noorwegen, UK, Singapore). Vaak vereist: goed Engels en soms extra certificaten (BOSIET offshore).</p>
       </details>
 
       <details>
         <summary>Regelen jullie visa of relocatie?</summary>
-        <p>Wij begeleiden richting partnerbedrijven. Visa/relocatie verschilt per land en werkgever; we adviseren per case.</p>
+        <p>Wij begeleiden richting partnerbedrijven. Visa/relocatie verschilt per land en werkgever.</p>
       </details>
 
       <details>
         <summary>Welke markt is nu "hot"?</summary>
-        <p>Veel vraag in Dubai/VAE (mega-projecten), Saudi (NEOM), Noorwegen (offshore), Singapore (havens), en natuurlijk Rotterdam (haven/raffinage).</p>
+        <p>Veel vraag in Dubai/VAE, Saudi (NEOM), Noorwegen (offshore), Singapore (havens), en Rotterdam (haven/raffinage).</p>
       </details>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+    <p>&copy; 2025 SafetyXAcademy - ABshops.nl (KVK 72037628)</p>
     <p>
       <a href="index.html">Home</a> | 
       <a href="jobs.html">Vacatures</a> | 
       <a href="privacy.html">Privacy</a> | 
       <a href="index.html#contact">Contact</a>
     </p>
-    <p style="margin-top: 1rem; font-style: italic; color: #999;">🌍 Train Lokaal, Werk Wereldwijd</p>
+    <p style="margin-top:0.75rem; font-style:italic; color:#999;">🌍 Train Lokaal, Werk Wereldwijd</p>
   </footer>
 
   <script>
-    // Jaar in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Simpele filter-UX
+    // Filter UX
     const chips = document.querySelectorAll('.chip');
     const cards = document.querySelectorAll('.card');
     chips.forEach(chip => {
@@ -303,15 +487,6 @@
             card.style.display = 'none';
           }
         });
-      });
-    });
-
-    // GA4 event op mailto clicks (werkt als gtag op de site staat)
-    document.querySelectorAll('.apply-mail').forEach(a=>{
-      a.addEventListener('click', ()=>{
-        if (typeof gtag === 'function') {
-          gtag('event', 'job_apply_click', { event_category:'jobs', event_label:a.getAttribute('href') });
-        }
       });
     });
   </script>
