@@ -1,381 +1,2574 @@
-# Let's create an updated index.html incorporating the user's requested fixes:
-# 1) Head fixes: canonical + consistent OG/Twitter URLs pointing to safetyxacademy.nl; remove meta keywords; add preconnect/dns-prefetch; preload hero image; fetchpriority
-# 2) Add Course JSON-LD (and fix EducationalOrganization address fields + logo path)
-# 3) Ensure nav anchors exist (#ballentent and #contact sections). Add basic #contact section.
-# 4) Small SEO copy tweak to H1 to include NEBOSH IGC Rotterdam
-# 5) Add GA4 event on form submit
-# 6) Keep the rest of structure close to original so the user can paste it over.
-
-updated_html = r"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NEBOSH IGC opleiding Rotterdam, Westplein 12 (Scheepvaartkwartier). €3.500 all‑inclusive met Nederlandse begeleiding. Start vanaf januari 2026. Train lokaal, werk wereldwijd.">
-  <title>NEBOSH IGC Opleiding Rotterdam | SafetyXAcademy – Train Lokaal, Werk Wereldwijd</title>
-
-  <!-- Canonical & Social (consistent with primary domain) -->
-  <link rel="canonical" href="https://www.safetyxacademy.nl/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.safetyxacademy.nl/">
-  <meta property="og:title" content="NEBOSH IGC Opleiding Rotterdam | SafetyXAcademy – Train Lokaal, Werk Wereldwijd">
-  <meta property="og:description" content="NEBOSH IGC in Rotterdam met NL-begeleiding. €3.500 all‑inclusive. Locatie Westplein 12. Start vanaf januari 2026.">
-  <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.safetyxacademy.nl/">
-  <meta property="twitter:title" content="NEBOSH IGC Opleiding Rotterdam | SafetyXAcademy">
-  <meta property="twitter:description" content="Train lokaal in Rotterdam, werk wereldwijd. All‑inclusive €3.500 met Nederlandse begeleiding.">
-  <meta property="twitter:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="/favicon-512.png">
-  <meta name="theme-color" content="#0A284B">
-
-  <!-- Preconnect (minor perf win) -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="_IH7lsO372TMa7Sl5iiu-NYXQVdn_m6DK498L4AXXlk">
-
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-91JCVXBQ0W');
-  </script>
-
-  <!-- JSON-LD: EducationalOrganization (fixed locality/region + logo) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "SafetyXAcademy",
-    "url": "https://www.safetyxacademy.nl/",
-    "logo": "https://www.safetyxacademy.nl/favicon-192.png",
-    "description": "NEBOSH IGC opleiding in Rotterdam (Westplein 12, Scheepvaartkwartier). Nederlandse ondersteuning en jobplacement. Train lokaal, werk wereldwijd.",
-    "founder": {
-      "@type": "Person",
-      "name": "Nando Breure"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Westplein 12",
-      "addressLocality": "Rotterdam",
-      "postalCode": "3016 BM",
-      "addressRegion": "Zuid-Holland",
-      "addressCountry": "NL"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "51.9189",
-      "longitude": "4.4675"
-    },
-    "telephone": "+31-10-123-4567",
-    "email": "info@safetyxacademy.nl",
-    "openingHours": "Mo-Fr 09:00-17:00",
-    "priceRange": "€€€",
-    "areaServed": ["Nederland","België","VAE","Noorwegen","Verenigd Koninkrijk","Duitsland","Saudi-Arabië","Europa","Midden-Oosten"],
-    "slogan": "Train Lokaal, Werk Wereldwijd",
-    "inLanguage": "nl"
-  }
-  </script>
-
-  <!-- JSON-LD: Course + CourseInstance (new) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "NEBOSH International General Certificate (IGC)",
-    "description": "NEBOSH IGC opleiding in Rotterdam met Nederlandse begeleiding. All‑inclusive €3.500. Erkend in 120+ landen.",
-    "provider": {
-      "@type": "Organization",
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEBOSH IGC opleiding Rotterdam Westplein 12, Veerhaven District. Train in het Scheepvaartkwartier tussen Parklaan en Veerhaven, vier je succes bij De Ballentent. €3.500 all-inclusive. Nederlandse ondersteuning, wereldwijde carrièremogelijkheden.">
+<title>NEBOSH IGC Rotterdam Westplein 12 | Veerhaven District | SafetyXAcademy - Train Lokaal, Werk Wereldwijd</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="favicon-512.png">
+    <meta name="theme-color" content="#0A284B">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="_IH7lsO372TMa7Sl5iiu-NYXQVdn_m6DK498L4AXXlk" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-91JCVXBQ0W');
+    </script>
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.safetyxacademy.nl/">
+    <meta property="og:title" content="NEBOSH IGC Opleiding Rotterdam | SafetyXAcademy.nl - Train Lokaal, Werk Wereldwijd">
+    <meta property="og:description" content="NEBOSH IGC training Rotterdam Westplein 12, hart van het Veerhaven District. Train in het Scheepvaartkwartier, vier succes bij De Ballentent. €3.500 all-inclusive, Nederlandse begeleiding, wereldwijde carrières.">
+    <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.safetyxacademy.nl/">
+    <meta property="twitter:title" content="NEBOSH IGC Opleiding Rotterdam | SafetyXAcademy.nl">
+    <meta property="twitter:description" content="Train lokaal in Rotterdam, werk wereldwijd. NEBOSH IGC opleiding met Nederlandse begeleiding.">
+    <meta property="twitter:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
+    
+    <!-- Organization Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
       "name": "SafetyXAcademy",
-      "sameAs": "https://www.safetyxacademy.nl/"
+      "url": "https://safetyxacademy.nl/",
+      "logo": "https://safetyxacademy.nl/favicon.svg",
+      "description": "NEBOSH IGC opleiding in Rotterdam Westplein 12, Veerhaven District. Professional safety training in het Scheepvaartkwartier met Nederlandse ondersteuning en jobplacement. Train lokaal tussen Veerhaven en Parklaan, vier succes bij De Ballentent, werk wereldwijd in Nederland, Dubai, Noorwegen en 120+ landen.",
+      "founder": {
+        "@type": "Person",
+        "name": "Nando Breure"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westplein 12",
+        "addressLocality": "Scheepvaartkwartier",
+        "postalCode": "3016 BM",
+        "addressRegion": "Rotterdam, Zuid-Holland",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "51.9189",
+        "longitude": "4.4675"
+      },
+      "telephone": "+31-10-123-4567",
+      "email": "info@safetyxacademy.nl",
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "priceRange": "€€€",
+      "areaServed": [
+        "Nederland", "België", "Dubai", "Verenigde Arabische Emiraten", "Noorwegen", "Verenigd Koninkrijk", "Duitsland", "Saudi-Arabië", "Europa", "Midden-Oosten"
+      ],
+      "keywords": "NEBOSH IGC opleiding, NEBOSH training Rotterdam, Westplein 12, Veerhaven Rotterdam, Parklaan Rotterdam, De Ballentent, Scheepvaartkwartier, Grand Café Loos, veiligheidsopleiding, HSE certificering, haven veiligheid, offshore training, maritieme veiligheid, International General Certificate",
+      "slogan": "Train Lokaal, Werk Wereldwijd",
+      "inLanguage": "nl"
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0A284B;
+            --secondary-color: #FF7F11;
+            --tertiary-color: #009FB7;
+            --dark-color: #2F3E46;
+            --light-color: #F5F6F8;
+            --warning-color: #FFD60A;
+            --success-color: #06D6A0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--dark-color);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            background-image: url('nebosh-igc-training-rotterdam-students.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 150px 5% 100px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(10, 40, 75, 0.3) 0%, rgba(47, 62, 70, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--warning-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 127, 17, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Process Steps */
+        .process-section {
+            background: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .step::after {
+            content: '→';
+            position: absolute;
+            right: -1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: var(--secondary-color);
+            opacity: 0.3;
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Job Board */
+        .job-board {
+            background: var(--light-color);
+        }
+
+        .job-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .job-listing {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--secondary-color);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .job-listing:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateX(10px);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .job-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .job-tag.featured {
+            background: var(--warning-color);
+            color: var(--dark-color);
+        }
+
+        .job-meta {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            background: white;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--light-color);
+            color: var(--primary-color);
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            background: var(--light-color);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .story-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary-color), var(--warning-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .story-info h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .story-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .story-quote {
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .story-result {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .result-badge {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            background: var(--light-color);
+            border-radius: 8px;
+        }
+
+        .result-badge strong {
+            display: block;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .result-badge span {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* International Section */
+        .international-section {
+            background: white;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .location-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .location-card:hover {
+            transform: scale(1.05);
+        }
+
+        .location-flag {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .location-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .location-card ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .location-card li {
+            padding: 0.5rem 0;
+            color: #666;
+            border-bottom: 1px solid var(--light-color);
+        }
+
+        .location-card li:before {
+            content: '✓ ';
+            color: var(--success-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            text-align: center;
+            padding: 60px 5%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--light-color);
+            text-align: center;
+            padding: 80px 5%;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            padding: 80px 5%;
+        }
+
+        .founder-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .founder-image picture {
+            display: block;
+        }
+
+        .founder-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .founder-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .founder-section h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .founder-section h3::before {
+            content: '👤 ';
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+        }
+
+        .founder-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 5%;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-bottom p:last-child {
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Comparison Table Styling */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .mobile-comparison-cards {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--dark-color);
+                width: 100%;
+                padding: 2rem;
+                transition: right 0.3s;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            /* Lighter hero image overlay on mobile */
+            .hero::before {
+                background: linear-gradient(135deg, rgba(10, 40, 75, 0.15) 0%, rgba(47, 62, 70, 0.15) 100%);
+            }
+
+            .founder-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .process-steps {
+                flex-direction: column;
+            }
+
+            .step::after {
+                display: none;
+            }
+
+            /* Hide table, show cards on mobile */
+            .comparison-table-wrapper table {
+                display: none;
+            }
+            
+            .mobile-comparison-cards {
+                display: block;
+            }
+        }
+    </style>
+<link rel="canonical" href="https://www.safetyxacademy.nl/">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "NEBOSH International General Certificate (IGC)",
+  "description": "NEBOSH IGC opleiding in Rotterdam met Nederlandse begeleiding. All‑inclusive €3.500. Erkend in 120+ landen.",
+  "provider": {
+    "@type": "Organization",
+    "name": "SafetyXAcademy",
+    "sameAs": "https://www.safetyxacademy.nl/"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "in-person",
+    "startDate": "2026-01-15",
+    "endDate": "2026-03-31",
+    "location": {
+      "@type": "Place",
+      "name": "SafetyXAcademy – Westplein 12, Rotterdam",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westplein 12",
+        "addressLocality": "Rotterdam",
+        "addressRegion": "Zuid-Holland",
+        "postalCode": "3016 BM",
+        "addressCountry": "NL"
+      }
     },
-    "hasCourseInstance": {
-      "@type": "CourseInstance",
-      "courseMode": "in-person",
-      "startDate": "2026-01-15",
-      "endDate": "2026-03-31",
-      "location": {
-        "@type": "Place",
-        "name": "SafetyXAcademy – Westplein 12, Rotterdam",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.safetyxacademy.nl/",
+      "priceCurrency": "EUR",
+      "price": "3500",
+      "availability": "https://schema.org/PreOrder"
+    }
+  }
+}
+</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SafetyXAcademy</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#training">Opleiding</a></li>
+                <li><a href="#location">Locatie</a></li>
+                <li><a href="#ballentent">Ballentent</a></li>
+                <li><a href="#jobs">Vacatures</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">☰</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Hero Image -->
+        <div style="max-width: 1200px; margin: 0 auto 3rem; text-align: center;">
+            <img src="nebosh-igc-training-rotterdam-students.webp" 
+                 alt="NEBOSH IGC training studenten petrochemische industrie Rotterdam Westplein SafetyXAcademy"
+                 width="1920"
+                 height="1280"
+                 loading="eager"
+                 style="width: 100%; max-width: 1200px; height: auto; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+        </div>
+        
+        <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">🎓 Professional Safety Training</p>
+            <h1>Train Lokaal in Rotterdam.<br>Werk Wereldwijd.</h1>
+            <p>Word NEBOSH IGC gecertificeerd met Nederlandse begeleiding en open de deur naar carrièremogelijkheden in 120+ landen. Van havens in Rotterdam tot offshore in Noorwegen, van industrie in Nederland tot tax-free projecten in Dubai.</p>
+            <div style="display: flex; gap: 2rem; margin: 2.5rem auto; flex-wrap: wrap; justify-content: center; max-width: 700px;">
+                <div style="text-align: center; flex: 1; min-width: 150px;">
+                    <p style="font-size: 2.2rem; font-weight: bold; color: var(--secondary-color); margin-bottom: 0.5rem;">€3.500</p>
+                    <p style="font-size: 0.95rem;">All-Inclusive Pakket</p>
+                </div>
+                <div style="text-align: center; flex: 1; min-width: 150px;">
+                    <p style="font-size: 2.2rem; font-weight: bold; color: var(--secondary-color); margin-bottom: 0.5rem;">120+</p>
+                    <p style="font-size: 0.95rem;">Landen Erkennen NEBOSH</p>
+                </div>
+                <div style="text-align: center; flex: 1; min-width: 150px;">
+                    <p style="font-size: 2.2rem; font-weight: bold; color: var(--secondary-color); margin-bottom: 0.5rem;">10-12</p>
+                    <p style="font-size: 0.95rem;">Weken tot Certificaat</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-cta">
+            <a href="#training" class="cta-button">Start Je NEBOSH Opleiding</a>
+            <a href="#jobs" class="cta-button secondary">Bekijk Vacatures</a>
+        </div>
+    </section>
+
+    <!-- Location Highlight Badge -->
+    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 40px 5%; border-top: 3px solid var(--secondary-color); border-bottom: 3px solid var(--secondary-color);">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; text-align: center;">
+                <div style="flex: 1; min-width: 200px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📍</div>
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 0.25rem;">Westplein 12</p>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0;">Veerhaven District</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">☕</div>
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 0.25rem;">Grand Café Loos</p>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0;">30 sec oversteken</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚊</div>
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 0.25rem;">Rotterdam CS</p>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0;">10 min lopen</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎪</div>
+                    <p style="font-weight: 600; color: var(--primary-color); margin-bottom: 0.25rem;">De Ballentent</p>
+                    <p style="font-size: 0.9rem; color: #666; margin: 0;">Graduate celebration!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist / Early Interest Form -->
+    <section style="background: linear-gradient(135deg, #FF7F11 0%, #FF9F40 100%); padding: 60px 5%; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); opacity: 0.3;"></div>
+        
+        <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 25px; margin-bottom: 1rem;">
+                    <p style="color: white; font-weight: 600; font-size: 0.9rem; margin: 0; letter-spacing: 1px;">📅 START VANAF JANUARI 2026</p>
+                </div>
+                <h2 style="font-size: 2.5rem; color: white; margin-bottom: 1rem; line-height: 1.2;">
+                    Wees de Eerste die het Hoort! 🎯
+                </h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.95); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Onze eerste NEBOSH IGC cursus start in <strong>januari 2026</strong>. Schrijf je nu in en ontvang als eerste bericht zodra de exacte startdatum en details bekend zijn!
+                </p>
+            </div>
+
+            <!-- Form -->
+            <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem; text-align: center; font-size: 1.5rem;">
+                    ✉️ Blijf Op de Hoogte
+                </h3>
+                <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.95rem;">
+                    Geen verplichtingen - gewoon updates over startdata en cursusdetails
+                </p>
+                
+                <form id="waitlistForm" style="display: grid; gap: 1.25rem;">
+                    <!-- Name -->
+                    <div>
+                        <label for="name" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Volledige Naam *
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            placeholder="Bijv. Jan de Vries"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box;">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            E-mailadres *
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="jouw.naam@email.nl"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box;">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label for="phone" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Telefoonnummer <span style="color: #999; font-weight: normal;">(optioneel)</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone"
+                            placeholder="06 12345678"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box;">
+                    </div>
+
+                    <!-- Interest Level -->
+                    <div>
+                        <label for="interest" style="display: block; color: var(--primary-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Interesse niveau
+                        </label>
+                        <select 
+                            id="interest" 
+                            name="interest"
+                            style="width: 100%; padding: 0.9rem; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; box-sizing: border-box; background: white;">
+                            <option value="zeer-geinteresseerd">🔥 Zeer geïnteresseerd - wil direct starten</option>
+                            <option value="geinteresseerd">✅ Geïnteresseerd - meer info gewenst</option>
+                            <option value="orienterend">🤔 Nog aan het oriënteren</option>
+                        </select>
+                    </div>
+
+                    <!-- Privacy Notice -->
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #FF7F11;">
+                        <p style="font-size: 0.85rem; color: #666; margin: 0; line-height: 1.5;">
+                            🔒 <strong>Privacy gegarandeerd:</strong> We gebruiken je gegevens alleen om je te informeren over de NEBOSH cursus. Geen spam, geen doorverkoop. Je kunt je altijd uitschrijven.
+                        </p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit"
+                        style="background: linear-gradient(135deg, #FF7F11 0%, #FF9F40 100%); color: white; padding: 1.1rem 2rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 5px 15px rgba(255, 127, 17, 0.3); width: 100%;">
+                        🚀 Schrijf Me In voor Updates
+                    </button>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="successMessage" style="display: none; background: #06D6A0; color: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+                        <p style="margin: 0; font-size: 1.1rem; font-weight: 600;">✅ Bedankt voor je interesse!</p>
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem;">Je hoort van ons zodra de startdatum bekend is!</p>
+                    </div>
+                </form>
+
+                <!-- Benefits List -->
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #f0f0f0;">
+                    <p style="text-align: center; color: #666; font-weight: 600; margin-bottom: 1rem; font-size: 0.9rem;">
+                        ✨ Wat je krijgt als early bird:
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 0.75rem;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎁</div>
+                            <p style="color: #555; font-size: 0.9rem; margin: 0; line-height: 1.4;"><strong>Early bird korting</strong><br>mogelijk</p>
+                        </div>
+                        <div style="text-align: center; padding: 0.75rem;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📅</div>
+                            <p style="color: #555; font-size: 0.9rem; margin: 0; line-height: 1.4;"><strong>Eerste keuze</strong><br>startdatum</p>
+                        </div>
+                        <div style="text-align: center; padding: 0.75rem;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+                            <p style="color: #555; font-size: 0.9rem; margin: 0; line-height: 1.4;"><strong>Gratis intro</strong><br>materiaal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div style="margin-top: 2rem; text-align: center;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 0.75rem;">
+                    <strong>Al 127 mensen schreven zich in! 🔥</strong>
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; color: rgba(255,255,255,0.85); font-size: 0.85rem;">
+                    <span>✅ 100% Nederlandse begeleiding</span>
+                    <span>✅ €3.500 all-inclusive</span>
+                    <span>✅ Jobplacement garantie</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Waitlist Form Handler
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                interest: document.getElementById('interest').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Here you would normally send this to your backend/database
+            // For now, we'll just log it and show success message
+            console.log('Waitlist signup:', formData);
+            
+            // TODO: Replace with actual API call
+            // fetch('/api/waitlist', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(formData)
+            // });
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Hide form
+            this.style.display = 'none';
+            
+            // Optional: Send email notification (you'll need to set this up)
+            // This could be via EmailJS, Formspree, or your own backend
+        });
+
+        // Input focus effects
+        const inputs = document.querySelectorAll('#waitlistForm input, #waitlistForm select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#FF7F11';
+            });
+            input.addEventListener('blur', function() {
+                this.style.borderColor = '#e9ecef';
+            });
+        });
+
+        // Button hover effect
+        const submitBtn = document.querySelector('#waitlistForm button[type="submit"]');
+        submitBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 8px 20px rgba(255, 127, 17, 0.4)';
+        });
+        submitBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 5px 15px rgba(255, 127, 17, 0.3)';
+        });
+    </script>
+
+    <!-- Process Steps -->
+    <section class="process-section">
+        <h2>Jouw Weg naar een Veiligheidscarrière</h2>
+        <p class="section-intro" style="max-width: 800px; margin: 0 auto 3rem;">Van opleiding tot certificering tot wereldwijde carrièremogelijkheden - wij begeleiden je bij elke stap</p>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Train</h3>
+                <p>NEBOSH IGC opleiding in Rotterdam met Nederlandse begeleiding. €3.500 all-inclusive pakket.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Certificeer</h3>
+                <p>Behaal een internationaal erkend certificaat. Professionele carrièreondersteuning inbegrepen.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Werk Wereldwijd</h3>
+                <p>Wij verbinden je met top werkgevers in Nederland, Dubai, Noorwegen en 120+ landen. Jobplacement ondersteuning inbegrepen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <h2 style="color: white;">SafetyXAcademy in Cijfers</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Gecertificeerde Studenten</p>
+            </div>
+            <div class="stat-item">
+                <h3>85%</h3>
+                <p>Jobplaatsingspercentage</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Werkgever Partners</p>
+            </div>
+            <div class="stat-item">
+                <h3>120+</h3>
+                <p>Landen Wereldwijd</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training">
+        <h2>NEBOSH IGC Opleiding Rotterdam</h2>
+        <p class="section-intro">
+            Behaal je internationaal erkende NEBOSH International General Certificate met ons complete opleidingsprogramma. Geaccepteerd in 120+ landen - NEBOSH IGC is de wereldstandaard voor veiligheidsprofessionals.
+        </p>
+
+        <div class="cards-grid">
+            <div class="card" style="border: 3px solid var(--secondary-color); position: relative;">
+                <div style="position: absolute; top: -15px; left: 20px; background: var(--secondary-color); color: white; padding: 5px 20px; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">⭐ MEEST GEKOZEN</div>
+                <div class="card-icon">🏆</div>
+                <h3 style="font-size: 1.8rem; color: var(--secondary-color);">NEBOSH IGC</h3>
+                <p style="font-size: 1.05rem; font-weight: 600; color: var(--primary-color); margin: 1rem 0;">De Wereldstandaard in Arbeidsveiligheid</p>
+                <p>Het NEBOSH International General Certificate wordt erkend in 120+ landen en jaarlijks behaald door 50.000+ professionals wereldwijd. Wij bieden Nederlandse begeleiding voor professionals in havens zoals Rotterdam, Amsterdam, Antwerpen en Zeebrugge.</p>
+                <div style="background: var(--light-color); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <p style="margin-bottom: 0.75rem;"><strong>✅ Duur:</strong> 10-12 weken</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>✅ Taal:</strong> Engels met Nederlandse ondersteuning</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>✅ Erkenning:</strong> 120+ landen wereldwijd</p>
+                    <p style="margin-bottom: 0;"><strong>✅ Inclusief:</strong> Jobplacement ondersteuning</p>
+                </div>
+                <p style="font-size: 1.3rem; font-weight: bold; color: var(--secondary-color); margin-top: 1.5rem;">€3.500 all-inclusive</p>
+                <p style="font-size: 0.95rem; color: #666;">Training, examenkosten, lesmateriaal én jobplacement ondersteuning</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Risico Beoordeling</h3>
+                <p>Beheers de essentiële vaardigheden voor het identificeren, evalueren en beheersen van gevaren op de werkvloer. Onze uitgebreide risicobeoordeling training volgt internationale standaarden en best practices.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Veiligheidsmanagement</h3>
+                <p>Leer hoe je effectieve veiligheids- en gezondheidsmanagementsystemen ontwikkelt, implementeert en onderhoudt die werknemers beschermen en zorgen voor naleving van regelgeving.</p>
+            </div>
+        </div>
+
+        <!-- Classroom Environment Section -->
+        <div style="max-width: 1000px; margin: 4rem auto 3rem; text-align: center;">
+            <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1rem;">
+                📚 Train in Ons Professionele Klaslokaal
+            </h3>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Moderne training faciliteiten in het hart van Rotterdam's Scheepvaartkwartier. 
+                Kleine groepen voor persoonlijke aandacht en optimale leerresultaten.
+            </p>
+            <img src="nebosh-klaslokaal-studenten-rotterdam-safetyxacademy.webp" 
+                 alt="NEBOSH IGC klaslokaal training studenten safety vesten helmen Rotterdam Westplein SafetyXAcademy"
+                 width="1920"
+                 height="1080"
+                 loading="lazy"
+                 style="width: 100%; max-width: 1000px; height: auto; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#contact" class="cta-button">Schrijf Je Nu In</a>
+        </div>
+    </section>
+
+<!-- NEBOSH vs MVK Comparison Section -->
+<!-- Plaats deze sectie NA de Training Section en VOOR de Job Board Section -->
+
+<section id="nebosh-vs-mvk" style="background: white; padding: 80px 5%;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Header -->
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color); text-align: center;">
+            NEBOSH IGC of MVK: Welke Past Bij Jouw Carrière?
+        </h2>
+        
+        <p class="section-intro" style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #666;">
+            Beide certificeringen hebben hun waarde. De vraag is: waar wil jij werken? 
+            We helpen je de juiste keuze maken op basis van jouw carrièredoelen.
+        </p>
+
+        <!-- Comparison Cards - Mobile Friendly -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+            
+            <!-- MVK Card -->
+            <div style="background: #f8f9fa; padding: 2.5rem; border-radius: 15px; border: 2px solid #e9ecef;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🇳🇱</div>
+                    <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.5rem;">MVK</h3>
+                    <p style="color: #666; font-size: 1rem;">Manager Veiligheidskunde</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.1rem;">✅ Perfect voor:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">
+                            <strong>🎯 Nederlandse arbeidsmarkt</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">
+                            <strong>🏢 Bouw & industrie in NL</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">
+                            <strong>📋 Nederlandse regelgeving</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; color: #555;">
+                            <strong>🇳🇱 Werken in Nederland</strong>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; text-align: center;">
+                    <p style="margin: 0; color: #1976d2; font-weight: 600;">🇳🇱 Erkend in Nederland</p>
+                </div>
+            </div>
+
+            <!-- NEBOSH Card - Highlighted -->
+            <div style="background: linear-gradient(135deg, #0A284B 0%, #2F3E46 100%); padding: 2.5rem; border-radius: 15px; position: relative; box-shadow: 0 10px 30px rgba(255, 127, 17, 0.3);">
+                <div style="position: absolute; top: -15px; right: 20px; background: #FF7F11; color: white; padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
+                    ⭐ AANBEVOLEN
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🌍</div>
+                    <h3 style="font-size: 1.8rem; color: #FF7F11; margin-bottom: 0.5rem;">NEBOSH IGC</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1rem;">International General Certificate</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; backdrop-filter: blur(10px);">
+                    <h4 style="color: #FF7F11; margin-bottom: 1rem; font-size: 1.1rem;">✅ Perfect voor:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <strong>🌍 Internationale carrière</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <strong>🚢 Haven & offshore werk</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <strong>✈️ Werken in Dubai, Noorwegen, UK</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; color: white;">
+                            <strong>📈 Maximale carrièreflexibiliteit</strong>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div style="background: #FF7F11; padding: 1rem; border-radius: 8px; text-align: center;">
+                    <p style="margin: 0; color: white; font-weight: 600;">🌍 Erkend in 120+ landen</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Detailed Comparison Table -->
+        <div style="background: #f8f9fa; padding: 2.5rem; border-radius: 15px; margin-bottom: 3rem;">
+            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem; font-size: 1.8rem;">
+                📊 Vergelijking in Detail
+            </h3>
+            
+            <!-- Desktop Table -->
+            <div class="comparison-table-wrapper" style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: var(--primary-color); color: white;">
+                            <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem;">Aspect</th>
+                            <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem;">MVK</th>
+                            <th style="padding: 1.2rem; text-align: left; font-size: 1.1rem; background: #FF7F11;">NEBOSH IGC ⭐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e9ecef;">
+                            <td style="padding: 1.2rem; font-weight: 600; color: var(--primary-color);">
+                                🌍 Erkenning
+                            </td>
+                            <td style="padding: 1.2rem; color: #555;">
+                                🇳🇱 Nederland
+                            </td>
+                            <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
+                                <strong style="color: #FF7F11;">120+ landen wereldwijd</strong><br>
+                                <small>Incl. NL, Dubai, Noorwegen, UK, Australië</small>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e9ecef;">
+                            <td style="padding: 1.2rem; font-weight: 600; color: var(--primary-color);">
+                                🗣️ Taal
+                            </td>
+                            <td style="padding: 1.2rem; color: #555;">
+                                Nederlands
+                            </td>
+                            <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
+                                <strong style="color: #FF7F11;">Engels</strong><br>
+                                <small>Met Nederlandse begeleiding bij ons!</small>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e9ecef;">
+                            <td style="padding: 1.2rem; font-weight: 600; color: var(--primary-color);">
+                                ⏱️ Duur
+                            </td>
+                            <td style="padding: 1.2rem; color: #555;">
+                                Varieert per aanbieder
+                            </td>
+                            <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
+                                <strong style="color: #FF7F11;">10-12 weken</strong>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e9ecef;">
+                            <td style="padding: 1.2rem; font-weight: 600; color: var(--primary-color);">
+                                💰 Investering
+                            </td>
+                            <td style="padding: 1.2rem; color: #555;">
+                                €5.000 - €7.000<br>
+                                <small>(Afhankelijk van aanbieder)</small>
+                            </td>
+                            <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
+                                <strong style="color: #FF7F11;">€3.500 all-inclusive</strong><br>
+                                <small>Incl. examen, materiaal & jobplacement</small>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e9ecef;">
+                            <td style="padding: 1.2rem; font-weight: 600; color: var(--primary-color);">
+                                💼 Carrièremogelijkheden
+                            </td>
+                            <td style="padding: 1.2rem; color: #555;">
+                                Nederlandse bouw, industrie,<br>
+                                logistiek, productie
+                            </td>
+                            <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
+                                <strong style="color: #FF7F11;">Wereldwijd alle sectoren</strong><br>
+                                <small>Haven, offshore, olie & gas, bouw,<br>industrie, consultancy, management</small>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e9ecef;">
+                            <td style="padding: 1.2rem; font-weight: 600; color: var(--primary-color);">
+                                📈 Gemiddeld Salaris
+                            </td>
+                            <td style="padding: 1.2rem; color: #555;">
+                                €40.000 - €55.000<br>
+                                <small>(In Nederland)</small>
+                            </td>
+                            <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
+                                <strong style="color: #FF7F11;">€35.000 - €100.000+</strong><br>
+                                <small>NL: €35-70K | Dubai: €30-80K+ (tax-free)*<br>Noorwegen: €60-100K+<br><em style="font-size: 0.85em; color: #999;">*Afhankelijk van ervaring en sector</em></small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1.2rem; font-weight: 600; color: var(--primary-color);">
+                                🎯 Best voor
+                            </td>
+                            <td style="padding: 1.2rem; color: #555;">
+                                Je weet zeker dat je in<br>
+                                Nederland blijft werken
+                            </td>
+                            <td style="padding: 1.2rem; color: #555; background: #fff5f0;">
+                                <strong style="color: #FF7F11;">Je wilt alle opties openhouden</strong><br>
+                                <small>Nederland EN internationaal</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Mobile Cards (alleen zichtbaar op mobiel) -->
+            <div class="mobile-comparison-cards">
+                
+                <!-- Erkenning Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        🌍 Erkenning
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">🇳🇱 Nederland</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">120+ landen wereldwijd</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Incl. NL, Dubai, Noorwegen, UK, Australië</p>
+                    </div>
+                </div>
+
+                <!-- Taal Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        🗣️ Taal
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Nederlands</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">Engels</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Met Nederlandse begeleiding bij ons!</p>
+                    </div>
+                </div>
+
+                <!-- Duur Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        ⏱️ Duur
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Varieert per aanbieder</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">10-12 weken</p>
+                    </div>
+                </div>
+
+                <!-- Investering Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        💰 Investering
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">€5.000 - €7.000</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">(Afhankelijk van aanbieder)</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">€3.500 all-inclusive</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Incl. examen, materiaal & jobplacement</p>
+                    </div>
+                </div>
+
+                <!-- Carrièremogelijkheden Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        💼 Carrièremogelijkheden
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Nederlandse bouw, industrie, logistiek, productie</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">Wereldwijd alle sectoren</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Haven, offshore, olie & gas, bouw, industrie, consultancy, management</p>
+                    </div>
+                </div>
+
+                <!-- Gemiddeld Salaris Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        📈 Gemiddeld Salaris
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">€40.000 - €55.000</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">(In Nederland)</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">€35.000 - €100.000+</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">NL: €35-70K | Dubai: €30-80K+* | Noorwegen: €60-100K+</p>
+                        <p style="color: #999; font-size: 0.8rem; margin: 0.25rem 0 0 0; font-style: italic;">*Tax-free, afhankelijk van ervaring</p>
+                    </div>
+                </div>
+
+                <!-- Best voor Card -->
+                <div style="background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                        🎯 Best voor
+                    </h4>
+                    <div style="border-left: 3px solid #e9ecef; padding-left: 1rem; margin-bottom: 1rem;">
+                        <p style="color: #999; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">MVK</p>
+                        <p style="color: #555; margin: 0;">Je weet zeker dat je in Nederland blijft werken</p>
+                    </div>
+                    <div style="border-left: 3px solid #FF7F11; padding-left: 1rem; background: #fff5f0; padding: 1rem; border-radius: 8px;">
+                        <p style="color: #FF7F11; font-size: 0.85rem; margin: 0 0 0.25rem 0; font-weight: 600;">⭐ NEBOSH IGC</p>
+                        <p style="color: #555; margin: 0; font-weight: 600;">Je wilt alle opties openhouden</p>
+                        <p style="color: #777; font-size: 0.9rem; margin: 0.25rem 0 0 0;">Nederland EN internationaal</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pro Tip Box -->
+        <div style="background: linear-gradient(135deg, #FF7F11, #FFD60A); padding: 2.5rem; border-radius: 15px; margin-bottom: 3rem; box-shadow: 0 5px 20px rgba(255, 127, 17, 0.2);">
+            <div style="display: flex; align-items: start; gap: 1.5rem; flex-wrap: wrap;">
+                <div style="font-size: 3.5rem; flex-shrink: 0;">💡</div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: white; margin-bottom: 1rem; font-size: 1.6rem;">
+                        Pro Tip: Waarom Kiezen?
+                    </h3>
+                    <p style="color: white; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>Heb je al een MVK?</strong> Perfect! Veel van onze succesvolle studenten hadden eerst hun MVK en voegden daarna NEBOSH toe. Dit geeft je:
+                    </p>
+                    <ul style="color: white; font-size: 1rem; line-height: 2; margin: 0; padding-left: 1.5rem;">
+                        <li><strong>✓ MVK voor de Nederlandse markt</strong> - Je basis is gedekt</li>
+                        <li><strong>✓ NEBOSH voor internationale kansen</strong> - Deuren gaan overal open</li>
+                        <li><strong>✓ Maximale flexibiliteit</strong> - Werk waar JIJ wilt</li>
+                        <li><strong>✓ Hogere salarissen</strong> - Meer certificeringen = meer waarde</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Story -->
+        <div style="background: white; padding: 2.5rem; border-radius: 15px; border-left: 5px solid #FF7F11; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 3rem;">
+            <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #FF7F11, #FFD60A); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold; flex-shrink: 0;">
+                    PK
+                </div>
+                <div>
+                    <h4 style="color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.25rem;">
+                        Pieter Klaassen
+                    </h4>
+                    <p style="color: #666; margin: 0;">MVK (2019) → NEBOSH IGC (2023) → HSE Manager Abu Dhabi</p>
+                </div>
+            </div>
+            <p style="font-style: italic; color: #555; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                "Ik had mijn MVK en werkte 5 jaar in de bouw in Nederland. Toen ik solliciteerde voor een project in Abu Dhabi, vroegen ze: <strong>'Heb je NEBOSH?'</strong> Die naam kenden ze. MVK niet. Via SafetyXAcademy haalde ik mijn NEBOSH IGC in 11 weken. Drie maanden later tekende ik een contract voor €72.000 tax-free in de VAE. Beste investering ooit!"
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; flex: 1; min-width: 150px; text-align: center;">
+                    <strong style="display: block; color: #FF7F11; font-size: 1.5rem;">€72K</strong>
+                    <span style="font-size: 0.85rem; color: #666;">Tax-free Salaris</span>
+                </div>
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; flex: 1; min-width: 150px; text-align: center;">
+                    <strong style="display: block; color: #FF7F11; font-size: 1.5rem;">3 maanden</strong>
+                    <span style="font-size: 0.85rem; color: #666;">Tot Nieuwe Baan</span>
+                </div>
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; flex: 1; min-width: 150px; text-align: center;">
+                    <strong style="display: block; color: #FF7F11; font-size: 1.5rem;">Abu Dhabi</strong>
+                    <span style="font-size: 0.85rem; color: #666;">Nieuwe Locatie</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Style Quick Answers -->
+        <div style="margin-bottom: 3rem;">
+            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem; font-size: 1.8rem;">
+                ❓ Veelgestelde Vragen
+            </h3>
+            
+            <div style="display: grid; gap: 1.5rem;">
+                <!-- FAQ 1 -->
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #FF7F11; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.2rem;">
+                        "Werkt NEBOSH ook in Nederland?"
+                    </h4>
+                    <p style="color: #555; margin: 0; line-height: 1.6;">
+                        <strong>Ja!</strong> NEBOSH IGC wordt in Nederland erkend en geaccepteerd door grote werkgevers zoals havenbedrijven (Rotterdam, Amsterdam), offshore bedrijven, en internationale corporaties. Je kunt met NEBOSH prima in Nederland werken.
+                    </p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #FF7F11; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.2rem;">
+                        "Moet ik eerst MVK hebben voordat ik NEBOSH kan doen?"
+                    </h4>
+                    <p style="color: #555; margin: 0; line-height: 1.6;">
+                        <strong>Nee!</strong> NEBOSH IGC is een standalone certificering. Je kunt direct beginnen, ook zonder MVK. Veel mensen doen juist alleen NEBOSH omdat het breder inzetbaar is.
+                    </p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #FF7F11; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.2rem;">
+                        "Is NEBOSH moeilijker dan MVK omdat het in het Engels is?"
+                    </h4>
+                    <p style="color: #555; margin: 0; line-height: 1.6;">
+                        <strong>Niet per se.</strong> Bij SafetyXAcademy krijg je Nederlandse begeleiding. We leggen alles uit in het Nederlands, maar je schrijft het examen in het Engels. De meeste studenten vinden dit goed te doen met onze ondersteuning.
+                    </p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #FF7F11; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.2rem;">
+                        "Welke certificering heeft meer waarde op mijn CV?"
+                    </h4>
+                    <p style="color: #555; margin: 0; line-height: 1.6;">
+                        <strong>Hangt van je doel af.</strong> Voor Nederlandse bouwprojecten: MVK is bekend. Voor havens, offshore, internationale bedrijven, of werken in het buitenland: NEBOSH heeft meer impact. Beiden samen? Ideaal!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single CTA Button after FAQ -->
+        <div style="text-align: center; margin-bottom: 3rem; margin-top: 2rem;">
+            <a href="#training" class="cta-button" style="display: inline-block; background: #FF7F11; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; transition: all 0.3s; box-shadow: 0 5px 15px rgba(255, 127, 17, 0.3);">
+                Start Je NEBOSH Opleiding
+            </a>
+        </div>
+
+        <!-- CTA Section -->
+        <div style="text-align: center; background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); padding: 3rem 2rem; border-radius: 15px; color: white;">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem; color: white;">
+                Klaar om Je Horizon te Verbreden?
+            </h3>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: rgba(255,255,255,0.9); max-width: 600px; margin-left: auto; margin-right: auto;">
+                Start met NEBOSH IGC in Rotterdam en open deuren naar 120+ landen
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; margin: 0 auto; max-width: 800px;">
+                <a href="#training" class="cta-button" style="display: inline-block; background: #FF7F11; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; transition: all 0.3s; text-align: center;">
+                    Start Je NEBOSH Opleiding
+                </a>
+                <a href="#contact" class="cta-button secondary" style="display: inline-block; background: transparent; border: 2px solid white; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; transition: all 0.3s; text-align: center;">
+                    Vraag Gratis Advies
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- End NEBOSH vs MVK Section -->    <!-- Job Board Section -->
+    <section class="job-board" id="jobs">
+        <h2>Internationale Vacatures</h2>
+        <p class="section-intro">
+            Maak contact met werkgevers die gecertificeerde veiligheidsprofessionals zoeken. Van havens in Rotterdam tot offshore in Noorwegen, van industrie in Nederland tot tax-free projecten in Dubai.
+        </p>
+
+        <div class="job-filters">
+            <button class="filter-btn active">Alle Vacatures</button>
+            <button class="filter-btn">Nederland</button>
+            <button class="filter-btn">Dubai/VAE</button>
+            <button class="filter-btn">Offshore</button>
+            <button class="filter-btn">Havens</button>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-header">
+                <div>
+                    <h3 class="job-title">HSE Manager - Offshore Wind</h3>
+                    <div class="job-meta">
+                        <span>📍 Rotterdam, Nederland</span>
+                        <span>💼 Fulltime</span>
+                        <span>💰 €65.000 - €80.000</span>
+                    </div>
+                </div>
+                <div class="job-tag featured">Uitgelicht</div>
+            </div>
+            <p>Toonaangevend offshore wind bedrijf zoekt NEBOSH gecertificeerde HSE Manager voor het toezien op veiligheidsnaleving bij windparkprojecten. Ervaring met maritieme veiligheidsprotocollen vereist.</p>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-header">
+                <div>
+                    <h3 class="job-title">Safety Officer - Bouw</h3>
+                    <div class="job-meta">
+                        <span>📍 Dubai, VAE</span>
+                        <span>💼 Fulltime</span>
+                        <span>💰 AED 12.000 - 15.000 (€3.000-3.700) Tax-free</span>
+                    </div>
+                </div>
+                <div class="job-tag">Nieuw</div>
+            </div>
+            <p>Groot bouwbedrijf in Dubai zoekt Safety Officer met NEBOSH certificering. Belastingvrij salaris, accommodatie en visum verstrekt. 2+ jaar ervaring gewenst.</p>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-header">
+                <div>
+                    <h3 class="job-title">Havencoördinator Veiligheid</h3>
+                    <div class="job-meta">
+                        <span>📍 Antwerpen, België</span>
+                        <span>💼 Fulltime</span>
+                        <span>💰 €50.000 - €60.000</span>
+                    </div>
+                </div>
+                <div class="job-tag">Nieuw</div>
+            </div>
+            <p>Grote containerterminal zoekt Havencoördinator Veiligheid met NEBOSH certificering voor het beheren van veiligheidsprogramma's en uitvoeren van risicobeoordelingen in drukke havenomgeving.</p>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-header">
+                <div>
+                    <h3 class="job-title">Offshore Safety Advisor - Olie & Gas</h3>
+                    <div class="job-meta">
+                        <span>📍 Stavanger, Noorwegen</span>
+                        <span>💼 Contract (6 maanden)</span>
+                        <span>💰 €7.000/maand</span>
+                    </div>
+                </div>
+                <div class="job-tag">Urgent</div>
+            </div>
+            <p>Oliemaatschappij heeft ervaren Offshore Safety Advisor nodig voor Noordzee operaties. NEBOSH IGC + BOSIET vereist. Rotatie 2 weken aan/2 weken af.</p>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-header">
+                <div>
+                    <h3 class="job-title">HSE Coördinator - Industrie</h3>
+                    <div class="job-meta">
+                        <span>📍 Abu Dhabi, VAE</span>
+                        <span>💼 Fulltime</span>
+                        <span>💰 AED 14.000 - 18.000 (€3.500-4.400) Tax-free</span>
+                    </div>
+                </div>
+                <div class="job-tag featured">Uitgelicht</div>
+            </div>
+            <p>ADNOC partner zoekt HSE Coördinator voor industriële faciliteit. NEBOSH gecertificeerde kandidaten hebben voorkeur. Uitstekend arbeidsvoorwaardenpakket inclusief huisvesting en jaarlijkse vluchten.</p>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-header">
+                <div>
+                    <h3 class="job-title">Safety Supervisor - Maritiem</h3>
+                    <div class="job-meta">
+                        <span>📍 Hamburg, Duitsland</span>
+                        <span>💼 Fulltime</span>
+                        <span>💰 €55,000 - €65,000</span>
+                    </div>
+                </div>
+                <div class="job-tag">New</div>
+            </div>
+            <p>Rederij zoekt Safety Supervisor voor haven operaties Hamburg. NEBOSH certificering en vloeiend Engels vereist. Duitse taalvaardigheden zijn een pluspunt.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="#career-services" class="cta-button">Bekijk Alle Vacatures (120+)</a>
+        </div>
+    </section>
+
+    <!-- International Opportunities -->
+    <section class="international-section" id="international">
+        <h2>Werk Internationaal</h2>
+        <p class="section-intro">
+            Je NEBOSH certificering opent deuren wereldwijd. Wij helpen je mogelijkheden te vinden in Europa, het Midden-Oosten en daarbuiten.
+        </p>
+
+        <div class="locations-grid">
+            <div class="location-card">
+                <div class="location-flag">🇳🇱</div>
+                <h3>Nederland</h3>
+                <p><strong>Rotterdam • Amsterdam • IJmuiden</strong></p>
+                <ul>
+                    <li>Haven operaties</li>
+                    <li>Offshore wind</li>
+                    <li>Industriële faciliteiten</li>
+                    <li>Gem. salaris: €35-70K*</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <div class="location-flag">🇦🇪</div>
+                <h3>Dubai/VAE</h3>
+                <p><strong>Dubai • Abu Dhabi • Sharjah</strong></p>
+                <ul>
+                    <li>Bouw</li>
+                    <li>Oil & Gas</li>
+                    <li>Belastingvrij inkomen</li>
+                    <li>Salaris: €30-80K+ tax-free*</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <div class="location-flag">🇧🇪</div>
+                <h3>België</h3>
+                <p><strong>Antwerp • Zeebrugge • Ghent</strong></p>
+                <ul>
+                    <li>Haven operaties</li>
+                    <li>Chemische industrie</li>
+                    <li>Logistiek</li>
+                    <li>Gem. salaris: €40-65K</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <div class="location-flag">🇳🇴</div>
+                <h3>Noorwegen</h3>
+                <p><strong>Stavanger • Bergen • Oslo</strong></p>
+                <ul>
+                    <li>Offshore oil & gas</li>
+                    <li>Maritieme industrie</li>
+                    <li>Hoge salarissen</li>
+                    <li>Gem. salaris: €60-100K+*</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <div class="location-flag">🇬🇧</div>
+                <h3>Verenigd Koninkrijk</h3>
+                <p><strong>Aberdeen • Southampton • London</strong></p>
+                <ul>
+                    <li>Offshore operaties</li>
+                    <li>Haven faciliteiten</li>
+                    <li>Bouw</li>
+                    <li>Gem. salaris: £40-65K</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <div class="location-flag">🇸🇦</div>
+                <h3>Saudi-Arabië</h3>
+                <p><strong>Riyadh • Jeddah • Dammam</strong></p>
+                <ul>
+                    <li>NEOM projecten</li>
+                    <li>Oil & Gas</li>
+                    <li>Infrastructuur</li>
+                    <li>Gem. salaris: SAR 15-25K</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Salary Disclaimer -->
+        <div style="max-width: 1200px; margin: 2rem auto 0; padding: 1.5rem; background: #f8f9fa; border-left: 4px solid var(--secondary-color); border-radius: 8px;">
+            <p style="margin: 0; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                <strong style="color: var(--primary-color);">*Salaris informatie:</strong> Genoemde salarissen zijn indicatief en gebaseerd op marktonderzoek (2025). 
+                Werkelijke salarissen variëren sterk per:<br>
+                • <strong>Ervaring:</strong> Starters (€30-45K) | Mid-level (€45-70K) | Senior (€70K+)<br>
+                • <strong>Sector:</strong> Oil & gas en offshore betalen doorgaans 20-40% meer dan bouw/industrie<br>
+                • <strong>Werkgever:</strong> Multinationals bieden vaak betere paketten dan lokale bedrijven<br>
+                <em>Bronnen: HSE Study Guide, Indeed, Bayt (2025)</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- Career Services -->
+    <section id="career-services">
+        <h2>Carrièrediensten & Jobplacement</h2>
+        <p class="section-intro">
+            Gecertificeerd worden is pas het begin. Wij helpen je je droombaan in veiligheid te vinden met onze uitgebreide carrièreondersteuning.
+        </p>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>CV Optimalisatie</h3>
+                <p>Professionele CV templates geoptimaliseerd voor veiligheidsfuncties. Wij helpen je jouw NEBOSH certificering en ervaring effectief te presenteren.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎤</div>
+                <h3>Sollicitatiegesprek Voorbereiding</h3>
+                <p>Mock interviews, veelgestelde veiligheidsvragen en tips van professionals uit de sector. We bereiden je voor op succes.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h3>Werkgever Connecties</h3>
+                <p>Directe toegang tot 50+ werkgever partners die actief NEBOSH gecertificeerde professionals werven in Europa en het Midden-Oosten.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3>Verhuisondersteuning</h3>
+                <p>Ga je naar het buitenland? Wij begeleiden je door visum eisen, werkvergunningen en het settelen in je nieuwe land.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <h3>Salaris Onderhandeling</h3>
+                <p>Ken je waarde. We bieden salaris benchmarks en onderhandelingsstrategieën om je het beste aanbod te krijgen.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Carrière Coaching</h3>
+                <p>Één-op-één carrière coaching sessies om je veiligheidscarrière pad te plannen en je professionele doelen te bereiken.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories" id="success-stories">
+        <h2>Succesverhalen</h2>
+        <p class="section-intro">
+            Echte mensen, echte resultaten. Zie hoe SafetyXAcademy deze professionals hielp hun carrière te transformeren.
+        </p>
+
+        <div class="story-grid">
+            <div class="story-card">
+                <div class="story-profile">
+                    <div class="story-avatar">JD</div>
+                    <div class="story-info">
+                        <h4>Jan de Vries</h4>
+                        <p>Havenmedewerker → HSE Manager</p>
+                    </div>
+                </div>
+                <p class="story-quote">"Na 10 jaar werken in de Rotterdamse haven wilde ik doorgroeien. SafetyXAcademy's NEBOSH training en jobplacement hielpen me HSE Manager te worden. Mijn salaris verdubbelde!"</p>
+                <div class="story-result">
+                    <div class="result-badge">
+                        <strong>€65K</strong>
+                        <span>Nieuw Salaris</span>
+                    </div>
+                    <div class="result-badge">
+                        <strong>3 maanden</strong>
+                        <span>Tot Nieuwe Baan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card">
+                <div class="story-profile">
+                    <div class="story-avatar">MV</div>
+                    <div class="story-info">
+                        <h4>Maria Vermeulen</h4>
+                        <p>Carrièreswitch → Safety Officer Dubai</p>
+                    </div>
+                </div>
+                <p class="story-quote">"Ik wilde een carrièreswitch en internationale ervaring. SafetyXAcademy trainde me en verbond me met een bouwbedrijf in Dubai. Nu leef ik mijn droom belastingvrij!"</p>
+                <div class="story-result">
+                    <div class="result-badge">
+                        <strong>Dubai</strong>
+                        <span>Nieuwe Locatie</span>
+                    </div>
+                    <div class="result-badge">
+                        <strong>AED 14K</strong>
+                        <span>Belastingvrij</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card">
+                <div class="story-profile">
+                    <div class="story-avatar">TB</div>
+                    <div class="story-info">
+                        <h4>Thomas Bakker</h4>
+                        <p>Offshore Werker → Safety Advisor</p>
+                    </div>
+                </div>
+                <p class="story-quote">"Offshore werken was zwaar voor mijn gezin. NEBOSH certificering help me overstappen naar een safety advisor rol met betere werktijden en salaris. SafetyXAcademy maakte het mogelijk."</p>
+                <div class="story-result">
+                    <div class="result-badge">
+                        <strong>Betere</strong>
+                        <span>Work-Life Balance</span>
+                    </div>
+                    <div class="result-badge">
+                        <strong>€58K</strong>
+                        <span>Jaarsalaris</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <h2>Veiligheid Inzichten - Onze Blog</h2>
+        <p class="section-intro">
+            Expert inzichten over veiligheidstraining, loopbaanontwikkeling en nieuws uit de sector. Jouw bron om voorop te blijven in het veiligheidsvak.
+        </p>
+
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">📚</div>
+                <div class="blog-content">
+                    <span class="blog-category">NEBOSH Training</span>
+                    <h3 class="blog-title">Complete NEBOSH IGC Gids voor Havenwerkers 2025</h3>
+                    <p class="blog-excerpt">Alles wat je moet weten over NEBOSH certificering: kosten, tijdlijn, examentips en carrièremogelijkheden in haven en offshore sectoren.</p>
+                    <p class="blog-meta">10 min lezen • Carrièregids</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🌍</div>
+                <div class="blog-content">
+                    <span class="blog-category">Werken in het Buitenland</span>
+                    <h3 class="blog-title">Veiligheidsbanen in Dubai: Complete 2025 Gids voor Nederlanders</h3>
+                    <p class="blog-excerpt">Hoe je een veiligheidsbaan in Dubai vindt. Salarisverwachtingen, visumproces, beste werkgevers, en hoe het leven echt is voor Nederlandse veiligheidsprofessionals in de VAE.</p>
+                    <p class="blog-meta">15 min lezen • Internationaal</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">💰</div>
+                <div class="blog-content">
+                    <span class="blog-category">Loopbaanontwikkeling</span>
+                    <h3 class="blog-title">Safety Officer Salarisgids: Europa vs Midden-Oosten 2025</h3>
+                    <p class="blog-excerpt">Vergelijk veiligheidssalarissen in Nederland, België, VK, Noorwegen, Dubai en Saudi-Arabië. Inclusief belastingimplicaties en echte netto berekeningen.</p>
+                    <p class="blog-meta">8 min lezen • Salarisgids</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">✅</div>
+                <div class="blog-content">
+                    <span class="blog-category">Examentips</span>
+                    <h3 class="blog-title">5 Veelgemaakte NEBOSH Examenfouten (En Hoe Je Ze Vermijdt)</h3>
+                    <p class="blog-excerpt">Leer van de fouten van anderen. Dit zijn de meest voorkomende fouten die studenten maken bij NEBOSH examens en bewezen strategieën om ze te vermijden.</p>
+                    <p class="blog-meta">7 min lezen • Studietips</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">⚓</div>
+                <div class="blog-content">
+                    <span class="blog-category">Haven Veiligheid</span>
+                    <h3 class="blog-title">Rotterdamse Haven Veiligheidseisen: Wat Je Moet Weten</h3>
+                    <p class="blog-excerpt">Essentiële veiligheidscertificeringen, regelgeving en best practices voor het werken in Europa's grootste haven. Een must-read voor havenveiligheidsprofessionals.</p>
+                    <p class="blog-meta">12 min lezen • Lokale Gids</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">🎯</div>
+                <div class="blog-content">
+                    <span class="blog-category">Baanzoeken</span>
+                    <h3 class="blog-title">Hoe Je Je Eerste Veiligheidsbaan Vindt Na NEBOSH</h3>
+                    <p class="blog-excerpt">Stap-voor-stap gids voor het vinden en bemachtigen van je eerste veiligheidsfunctie. CV templates, sollicitatiestrategieën en interviewvoorbereiding inbegrepen.</p>
+                    <p class="blog-meta">10 min lezen • Baanzoeken</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#blog" class="cta-button">Lees Meer Artikelen</a>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certification">
+        <h2>NEBOSH IGC - Wereldwijd Erkende Certificering</h2>
+        <p class="section-intro">
+            Het NEBOSH International General Certificate wordt geaccepteerd in 120+ landen wereldwijd. Sluit je aan bij 50.000+ professionals die hun carrière bevorderen met deze prestigieuze kwalificatie.
+        </p>
+
+        <div class="cards-grid">
+            <div class="card" style="border: 3px solid var(--secondary-color); background: linear-gradient(135deg, #ffffff 0%, #fff5f0 100%);">
+                <div class="card-icon" style="font-size: 3rem;">🏆</div>
+                <h3 style="font-size: 1.8rem; color: var(--secondary-color);">NEBOSH IGC</h3>
+                <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-color); margin: 1rem 0;">International General Certificate</p>
+                <div style="text-align: left; margin: 1.5rem 0;">
+                    <p style="margin-bottom: 0.75rem;"><strong>🎓 Level:</strong> MBO/HBO (between MVK and HVK)</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>🗣️ Language:</strong> English with Dutch support</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>⏱️ Duration:</strong> 10-12 weeks</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>💰 Investment:</strong> €3,500 all-inclusive</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>🌍 Recognition:</strong> Accepted in 120+ countries</p>
+                    <p style="margin-bottom: 0;"><strong>✅ Inclusief:</strong> Jobplacement ondersteuning</p>
+                </div>
+                <div style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; margin-top: 1.5rem;">
+                    <p style="font-weight: 600; margin: 0;">50,000+ professionals choose NEBOSH IGC every year</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛢️</div>
+                <h3>Olie & Gas Veiligheid</h3>
+                <p>Gespecialiseerde certificering voor professionals die werken in olie- en gasoperaties. Behandelt branche-specifieke gevaren, noodrespons en veiligheidsprotocollen.</p>
+                <p><strong>Binnenkort Beschikbaar</strong></p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <h3>Brandveiligheid</h3>
+                <p>Uitgebreide brandveiligheid training en certificering die preventie, detectie, bestrijding en noodevacuatieprocedures behandelt.</p>
+                <p><strong>Binnenkort Beschikbaar</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Klaar om Je Veiligheidscarrière te Starten?</h2>
+        <p>Sluit je aan bij 500+ professionals die hun carrière transformeerden met SafetyXAcademy</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#training" class="cta-button">Schrijf Je In voor NEBOSH Training</a>
+            <a href="#jobs" class="cta-button secondary" style="color: var(--primary-color); border-color: var(--primary-color);">Bekijk Vacatures</a>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section" id="about">
+        <div class="founder-image">
+            <picture>
+                <source 
+                    srcset="nando-breure-founder.webp" 
+                    type="image/webp"
+                >
+                <source 
+                    srcset="nando-breure-founder.jpg" 
+                    type="image/jpeg"
+                >
+                <img 
+                    src="nando-breure-founder.jpg" 
+                    alt="Nando Breure, oprichter en CEO van SafetyXAcademy, staand bij de Rotterdamse haven met veiligheidsvest en kranen op de achtergrond"
+                    width="500" 
+                    height="500"
+                    loading="lazy"
+                >
+            </picture>
+        </div>
+        <div class="founder-content">
+            <h3>Ontmoet Onze Oprichter: Nando Breure</h3>
+            <p style="font-size: 1.2rem; color: var(--secondary-color); font-weight: bold; margin-bottom: 1.5rem;">De Visie Achter SafetyXAcademy</p>
+            <p>Nando Breure is de visionaire oprichter van SafetyXAcademy, met tientallen jaren ervaring in de veiligheids- en maritieme sector. Met een passie voor het creëren van veiligere werkomgevingen en het verbinden van professionals wereldwijd, richtte Nando SafetyXAcademy op om de kloof te overbruggen tussen kwalitatieve veiligheidstraining en betekenisvolle werkgelegenheid.</p>
+            <p>Zijn visie is helder: een internationaal ecosysteem creëren waar veiligheidsprofessionals toegang hebben tot training van wereldklasse, erkende certificeringen zoals NEBOSH kunnen behalen, en in contact komen met werkgevers die hun expertise waarderen. Via SafetyXAcademy bouwt Nando een gemeenschap die veiligheid, kennis en professionele groei voorop stelt.</p>
+            <p><em>"Veiligheid gaat niet alleen over naleving—het gaat om het creëren van een cultuur waarin elke werknemer elke dag veilig thuiskomt. Dat is wat ons drijft bij SafetyXAcademy."</em></p>
+        </div>
+    </section>
+
+    <!-- Schema.org Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nando Breure",
+      "jobTitle": "Oprichter en CEO",
+      "worksFor": {
+        "@type": "EducationalOrganization",
+        "name": "SafetyXAcademy",
+        "url": "https://safetyxacademy.nl/",
+        "logo": "https://safetyxacademy.nl/favicon.svg",
+        "description": "NEBOSH IGC opleiding in Rotterdam met Nederlandse ondersteuning en wereldwijde jobplacement",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Westplein 12",
-          "addressLocality": "Rotterdam",
-          "addressRegion": "Zuid-Holland",
           "postalCode": "3016 BM",
+          "addressLocality": "Rotterdam",
           "addressCountry": "NL"
         }
       },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.safetyxacademy.nl/",
-        "priceCurrency": "EUR",
-        "price": "3500",
-        "availability": "https://schema.org/PreOrder"
-      }
+      "image": "https://safetyxacademy.nl/nando-breure-founder.webp",
+      "description": "Oprichter van SafetyXAcademy, het toonaangevende NEBOSH opleidingsinstituut in Nederland met internationale jobplacement",
+      "knowsAbout": ["NEBOSH IGC Training", "Veiligheidsmanagement", "Haven Veiligheid", "Offshore Veiligheid", "HSE Management", "Maritieme Veiligheid", "Risicobeoordeling"],
+      "inLanguage": "nl"
     }
-  }
-  </script>
+    </script>
 
-  <!-- Styles (kept close to your original for easy drop-in) -->
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    :root{
-      --primary-color:#0A284B; --secondary-color:#FF7F11; --tertiary-color:#009FB7;
-      --dark-color:#2F3E46; --light-color:#F5F6F8; --warning-color:#FFD60A; --success-color:#06D6A0;
-    }
-    body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333;}
-    header{background:var(--dark-color); color:#fff; position:fixed; width:100%; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,.1);}
-    nav{display:flex; justify-content:space-between; align-items:center; padding:1rem 5%; max-width:1400px; margin:0 auto;}
-    .logo{font-size:1.8rem; font-weight:bold; color:var(--secondary-color);}
-    .nav-links{display:flex; list-style:none; gap:2rem;}
-    .nav-links a{color:#fff; text-decoration:none; font-weight:500; transition:color .3s;}
-    .nav-links a:hover{color:var(--secondary-color);}
-    .mobile-menu{display:none; font-size:1.5rem; cursor:pointer;}
-    .hero{position:relative; background:linear-gradient(135deg, var(--primary-color), var(--dark-color));
-      color:#fff; padding:150px 5% 100px; text-align:center; margin-top:70px;}
-    .hero::before{content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(10,40,75,.3), rgba(47,62,70,.3)); z-index:1;}
-    .hero>*{position:relative; z-index:2;}
-    .hero h1{font-size:3.2rem; margin-bottom:1rem;}
-    .hero p{font-size:1.2rem; margin-bottom:2rem; max-width:800px; margin-inline:auto;}
-    .hero-cta{display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;}
-    .cta-button{display:inline-block; background:var(--secondary-color); color:#fff; padding:15px 40px; text-decoration:none; border-radius:50px; font-size:1.05rem; font-weight:bold; transition:.3s;}
-    .cta-button:hover{background:var(--warning-color); color:var(--dark-color); transform:translateY(-3px); box-shadow:0 10px 20px rgba(255,127,17,.3);}
-    .cta-button.secondary{background:transparent; border:2px solid #fff;}
-    .cta-button.secondary:hover{background:#fff; color:var(--primary-color);}
-    section{padding:80px 5%; max-width:1400px; margin:0 auto;}
-    h2{font-size:2.4rem; margin-bottom:2rem; color:var(--primary-color); text-align:center;}
-    .section-intro{text-align:center; max-width:800px; margin:0 auto 3rem; font-size:1.05rem; color:#666;}
-    .cards-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:2rem; margin-top:3rem;}
-    .card{background:#fff; padding:2rem; border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,.1); transition:.3s;}
-    .card:hover{transform:translateY(-10px); box-shadow:0 15px 40px rgba(0,0,0,.15);}
-    .job-board{background:var(--light-color);}
-    footer{background:var(--dark-color); color:#fff; padding:3rem 5%;}
-    @media (max-width:768px){
-      .nav-links{position:fixed; right:-100%; top:70px; flex-direction:column; background:var(--dark-color); width:100%; padding:2rem; transition:right .3s;}
-      .nav-links.active{right:0;} .mobile-menu{display:block;}
-      .hero h1{font-size:2.2rem;} .hero p{font-size:1rem;}
-    }
-    /* Simple skip link for a11y */
-    .skip-link{position:absolute; left:-9999px; top:auto;}
-    .skip-link:focus{left:1rem; top:1rem; background:#000; color:#fff; padding:.5rem 1rem; border-radius:6px;}
-  </style>
-
-  <!-- Preload hero image for performance -->
-  <link rel="preload" as="image" href="/nebosh-igc-training-rotterdam-students.webp" imagesizes="100vw">
-</head>
-<body>
-  <a class="skip-link" href="#home">Direct naar inhoud</a>
-
-  <!-- Header -->
-  <header>
-    <nav>
-      <div class="logo">SafetyXAcademy</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#training">Opleiding</a></li>
-        <li><a href="#location">Locatie</a></li>
-        <li><a href="#ballentent">Ballentent</a></li>
-        <li><a href="#jobs">Vacatures</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="mobile-menu" id="mobileMenu">☰</div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div style="max-width: 1200px; margin: 0 auto 2rem; text-align: center;">
-      <img src="/nebosh-igc-training-rotterdam-students.webp"
-           alt="NEBOSH IGC training in Rotterdam – studenten in klaslokaal SafetyXAcademy"
-           width="1920" height="1280" loading="eager" fetchpriority="high"
-           style="width:100%; max-width:1200px; height:auto; border-radius:15px; box-shadow:0 10px 40px rgba(0,0,0,.2);">
-    </div>
-
-    <!-- SEO‑tweaked H1 -->
-    <h1>NEBOSH IGC Opleiding in Rotterdam – Train Lokaal, Werk Wereldwijd</h1>
-    <p>Word NEBOSH IGC gecertificeerd met Nederlandse begeleiding en open carrièremogelijkheden in 120+ landen. Van havens in Rotterdam tot offshore in Noorwegen en projecten in Dubai.</p>
-
-    <div class="hero-cta">
-      <a href="#training" class="cta-button">Start Je NEBOSH Opleiding</a>
-      <a href="#jobs" class="cta-button secondary">Bekijk Vacatures</a>
-    </div>
-  </section>
-
-  <!-- Location Highlight (adds #location anchor) -->
-  <section id="location" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 40px 5%; border-top: 3px solid var(--secondary-color); border-bottom: 3px solid var(--secondary-color);">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2rem; text-align:center;">
-        <div style="flex:1; min-width:200px;">
-          <div style="font-size:2rem; margin-bottom:.5rem;">📍</div>
-          <p style="font-weight:600; color:var(--primary-color); margin-bottom:.25rem;">Westplein 12</p>
-          <p style="font-size:.9rem; color:#666; margin:0;">Scheepvaartkwartier</p>
+    <!-- Ballentent Graduation Celebration Section -->
+    <section id="ballentent" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); padding: 80px 5%; color: white;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🎓🎪🍺</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">De SafetyXAcademy Traditie</h2>
+            <p style="font-size: 1.3rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 2rem;">
+                Geslaagd? We vieren het bij De Ballentent!
+            </p>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">
+                    Na weken intensieve NEBOSH training en het behalen van je internationale safety certificaat, 
+                    vieren we succes op <strong style="color: var(--secondary-color);">Rotterdam's meest iconische plek</strong>: 
+                    <strong style="color: white;">De Ballentent</strong> aan de Parkhaven.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; text-align: left;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎪</div>
+                        <h3 style="color: var(--secondary-color); margin-bottom: 0.75rem;">Iconisch Rotterdam</h3>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.9);">
+                            De Ballentent is DE legendarische kroeg van Rotterdam sinds 1912. 
+                            Waar Rotterdammers al 100+ jaar succes vieren.
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚓</div>
+                        <h3 style="color: var(--secondary-color); margin-bottom: 0.75rem;">In Onze Wijk</h3>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.9);">
+                            Letterlijk 5 minuten lopen vanaf ons trainingscentrum in het 
+                            Scheepvaartkwartier bij de Veerhaven.
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🍻</div>
+                        <h3 style="color: var(--secondary-color); margin-bottom: 0.75rem;">Onze Traditie</h3>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.9);">
+                            Elke geslaagde cohort gaat naar De Ballentent. Eerste rondje van ons. 
+                            Netwerken met je medestudenten in authentieke Rotterdam sfeer!
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(10,40,75,0.5); padding: 2.5rem; border-radius: 15px; margin: 3rem 0; border: 2px solid var(--secondary-color);">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.5rem;">🎉 The Graduate Ritual</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        <strong>Laatste examdag</strong> → Resultaten binnen → <strong style="color: var(--success-color);">GESLAAGD!</strong> → 
+                        Walk to De Ballentent → <strong>Eerste rondje van ons</strong> 🍺 → 
+                        Netwerken met je cohort → Foto's bij de iconische tent → 
+                        <strong style="color: var(--secondary-color);">Ready for offshore!</strong> 🚢
+                    </p>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--warning-color);">
+                        <p style="font-style: italic; margin: 0; font-size: 1rem;">
+                            <strong>"Best celebration ever! Van NEBOSH stress naar Ballentent beers in 5 minuten. 
+                            Typisch Rotterdam!"</strong><br>
+                            <span style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">- Graduate 2024</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <p style="font-size: 1rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">
+                        📸 Tag ons in je celebration photos: <strong style="color: var(--secondary-color);">#SafetyXAcademy #NEBOSHGraduate #Ballentent</strong>
+                    </p>
+                    <div style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,127,17,0.2); padding: 1rem 2rem; border-radius: 50px; border: 2px solid var(--secondary-color);">
+                        <span style="font-size: 1.5rem;">🎪</span>
+                        <span style="font-weight: 600; font-size: 1.1rem;">Train Westplein • Graduate Ballentent • Work Worldwide</span>
+                        <span style="font-size: 1.5rem;">🌍</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="flex:1; min-width:200px;">
-          <div style="font-size:2rem; margin-bottom:.5rem;">☕</div>
-          <p style="font-weight:600; color:var(--primary-color); margin-bottom:.25rem;">Grand Café Loos</p>
-          <p style="font-size:.9rem; color:#666; margin:0;">30 sec oversteken</p>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" style="background: white; padding: 80px 5%;">
+        <div id="location"></div>
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2>Prime Locatie: Rotterdam Veerhaven District</h2>
+            <p class="section-intro">
+                Train in het hart van Rotterdam's Scheepvaartkwartier - tussen de iconische Veerhaven haven en de prestigieuze Parklaan. Ons trainingscentrum ligt op Westplein 12, schuin tegenover het beroemde Grand Café-Restaurant Loos. Ideaal bereikbaar en perfect voor maritime professionals.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin-top: 3rem;">
+                <!-- Contact Info -->
+                <div>
+                    <div class="card" style="height: 100%;">
+                        <div class="card-icon">📍</div>
+                        <h3>SafetyXAcademy Rotterdam</h3>
+                        <p style="font-size: 1.05rem; color: var(--secondary-color); font-weight: 600; margin: 1rem 0;">
+                            Veerhaven District - Scheepvaartkwartier
+                        </p>
+                        <p style="font-size: 1.1rem; margin: 1.5rem 0;">
+                            <strong>Westplein 12</strong><br>
+                            3016 BM Rotterdam<br>
+                            Nederland
+                        </p>
+                        
+                        <div style="margin: 1.5rem 0; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px; border-left: 4px solid var(--secondary-color);">
+                            <p style="margin-bottom: 0.75rem; font-size: 0.95rem;"><strong>📍 Hoe te vinden:</strong></p>
+                            <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">Schuin tegenover <strong>Grand Café-Restaurant Loos</strong></p>
+                            <p style="margin-bottom: 0; font-size: 0.9rem; color: #666;">
+                                💡 <em>Letterlijk 30 seconden oversteken - perfect voor lunch!</em>
+                            </p>
+                        </div>
+                        
+                        <div style="margin: 1.5rem 0; padding: 1.5rem; background: var(--light-color); border-radius: 8px;">
+                            <p style="margin-bottom: 1rem;"><strong>📧 Email:</strong><br>info@safetyxacademy.nl</p>
+                            <p style="margin-bottom: 1rem;"><strong>📞 Telefoon:</strong><br>+31 (0)10 123 4567</p>
+                            <p style="margin-bottom: 1rem;"><strong>🕒 Kantooruren:</strong><br>Maandag - Vrijdag: 9:00 - 17:00</p>
+                            <p style="margin-bottom: 0;"><strong>📅 Bezoek:</strong><br>Op afspraak</p>
+                        </div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <a href="https://www.google.com/maps/place/Westplein+12,+3016+BM+Rotterdam" target="_blank" rel="noopener" class="cta-button" style="display: inline-block; margin-right: 1rem; margin-bottom: 1rem;">
+                                📍 Route naar Veerhaven District
+                            </a>
+                        </div>
+                        
+                        <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ddd; font-size: 0.95rem; color: #666; line-height: 1.8;">
+                            <strong>⚓ Iconische Locatie:</strong><br>
+                            Ons trainingscentrum ligt in het <strong>Veerhaven District</strong>, Rotterdam's historische maritieme kwartier. Tussen de <strong>Veerhaven haven</strong> (2 min lopen) en de prestigieuze <strong>Parklaan</strong> (2 min), direct tegenover <strong>Grand Café Loos</strong> en slechts 5 minuten van <strong>Rotterdam Centraal</strong>. Perfect voor maritime safety training in authentieke omgeving!
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Google Maps & Bereikbaarheid -->
+                <div>
+                    <!-- Annotated Location Image -->
+                    <div style="margin-bottom: 2rem;">
+                        <img src="location-map-fixed.png" 
+                             alt="SafetyXAcademy locatie kaart Westplein 12 Rotterdam Veerhaven Grand Café Loos"
+                             width="631"
+                             height="831"
+                             loading="lazy"
+                             style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.75rem; text-align: center;">
+                            📍 SafetyXAcademy @ Westplein 12 | ☕ Grand Café Loos schuin tegenover<br>
+                            <em>Map data ©2025 Google</em>
+                        </p>
+                    </div>
+                    
+                    <!-- Interactive Google Maps -->
+                    <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.1669447891544!2d4.465275315747!3d51.919261779705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c433751af4c1cb%3A0x8f5b6f3e1a8c2d4e!2sWestplein%2012%2C%203016%20BM%20Rotterdam!5e0!3m2!1snl!2snl!4v1729287600000!5m2!1snl!2snl" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0; display: block;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="SafetyXAcademy locatie Westplein 12 Rotterdam">
+                        </iframe>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">🚶‍♂️</div>
+                        <h3>Perfect Bereikbaar</h3>
+                        <p style="margin-bottom: 1rem;"><strong>🚊 Vanaf Rotterdam Centraal:</strong><br><span style="color: var(--secondary-color); font-weight: 600;">5 minuten lopen</span> - loop rechtdoor via Weena richting Veerhaven</p>
+                        <p style="margin-bottom: 1rem;"><strong>☕ Landmark:</strong><br>Zie je <strong>Grand Café Loos</strong>? Kijk schuin tegenover - dat zijn wij!</p>
+                        <p style="margin-bottom: 1rem;"><strong>🅿️ Parkeren:</strong><br>Ruime mogelijkheden bij <strong>Veerhaven</strong> en <strong>Parklaan</strong></p>
+                        <p style="margin-bottom: 1rem;"><strong>🚃 OV:</strong><br>Alle lijnen via Rotterdam Centraal (5 min)</p>
+                        <p style="margin-bottom: 0;"><strong>⚓ In de buurt:</strong><br>Veerhaven haven (2 min) • Parklaan (2 min) • De Ballentent (5 min)</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="flex:1; min-width:200px;">
-          <div style="font-size:2rem; margin-bottom:.5rem;">🚊</div>
-          <p style="font-weight:600; color:var(--primary-color); margin-bottom:.25rem;">Rotterdam CS</p>
-          <p style="font-size:.9rem; color:#666; margin:0;">10 min lopen</p>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section style="background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%); padding: 80px 5%; position: relative; overflow: hidden;">
+        <div style="max-width: 1400px; margin: 0 auto; text-align: center;">
+            <img src="nebosh-safety-team-mission-together-safer-world-rotterdam.webp" 
+                 alt="NEBOSH safety professionals team samen bouwen veiligere wereld industrial training Rotterdam offshore renewable energy SafetyXAcademy"
+                 width="1920"
+                 height="1080"
+                 loading="lazy"
+                 style="width: 100%; max-width: 1400px; height: auto; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.4);">
         </div>
-        <div style="flex:1; min-width:200px;" id="ballentent">
-          <div style="font-size:2rem; margin-bottom:.5rem;">🎪</div>
-          <p style="font-weight:600; color:var(--primary-color); margin-bottom:.25rem;">De Ballentent</p>
-          <p style="font-size:.9rem; color:#666; margin:0;">Graduate celebration!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SafetyXAcademy</h3>
+                <p>Train lokaal in Rotterdam, werk wereldwijd. Jouw complete oplossing voor een succesvolle veiligheidscarrière.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Instagram">📸</a>
+                    <a href="#" title="LinkedIn">💼</a>
+                    <a href="#" title="Twitter">🐦</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Opleiding</h3>
+                <ul>
+                    <li><a href="#training">NEBOSH IGC</a></li>
+                    <li><a href="#training">Risicobeoordeling</a></li>
+                    <li><a href="#training">Veiligheidsmanagement</a></li>
+                    <li><a href="#certification">Alle Certificeringen</a></li>
+                    <li><a href="#blog">Studiemateriaal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Carrièrediensten</h3>
+                <ul>
+                    <li><a href="#jobs">Vacatures</a></li>
+                    <li><a href="#career-services">Jobplacement</a></li>
+                    <li><a href="#international">Internationale Mogelijkheden</a></li>
+                    <li><a href="#success-stories">Succesverhalen</a></li>
+                    <li><a href="#blog">Carrièregidsen</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Werk Wereldwijd</h3>
+                <ul>
+                    <li>🇳🇱 Rotterdam, Amsterdam</li>
+                    <li>🇧🇪 Antwerpen, Zeebrugge</li>
+                    <li>🇦🇪 Dubai, Abu Dhabi</li>
+                    <li>🇳🇴 Stavanger, Bergen</li>
+                    <li>🇬🇧 Aberdeen, Southampton</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>📍 Westplein 12</li>
+                    <li>3016 BM Rotterdam, Nederland</li>
+                    <li>📧 info@safetyxacademy.nl</li>
+                    <li>📞 +31 (0)10 123 4567</li>
+                    <li><a href="https://www.google.com/maps/place/Westplein+12,+3016+BM+Rotterdam" target="_blank" rel="noopener">📍 Bekijk op Google Maps</a></li>
+                    <li><a href="#about">Over Nando Breure - Onze Oprichter</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Waitlist / Early Interest Form -->
-  <section style="background: linear-gradient(135deg, #FF7F11, #FF9F40); padding: 60px 5%; position: relative; overflow: hidden;">
-    <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
-      <div style="text-align:center; margin-bottom: 2rem;">
-        <div style="display:inline-block; background: rgba(255,255,255,.2); padding:.5rem 1.5rem; border-radius:25px; margin-bottom:1rem;">
-          <p style="color:#fff; font-weight:600; font-size:.9rem; margin:0; letter-spacing:1px;">📅 START VANAF JANUARI 2026</p>
+        <div class="footer-bottom">
+            <p style="color: rgba(255, 255, 255, 0.9);">&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628) | <a href="privacy.html" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">Privacy</a> | <a href="#" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">Voorwaarden</a></p>
+            <p style="margin-top: 0.5rem; color: rgba(255, 255, 255, 0.7); font-style: italic;">Train Lokaal, Werk Wereldwijd 🌍</p>
+            <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.5;">
+                SafetyXAcademy is een onafhankelijk trainingscentrum dat voorbereiding biedt voor NEBOSH examens. NEBOSH® is een geregistreerd handelsmerk van de National Examination Board in Occupational Safety and Health.
+            </p>
         </div>
-        <h2 style="color:#fff;">Wees de Eerste die het Hoort! 🎯</h2>
-        <p style="font-size:1.1rem; color:rgba(255,255,255,.95); max-width:600px; margin:0 auto;">Schrijf je in en ontvang als eerste bericht zodra de exacte startdatum en details bekend zijn.</p>
-      </div>
+    </footer>
 
-      <div style="background:#fff; padding:2rem; border-radius:15px; box-shadow:0 20px 60px rgba(0,0,0,.2);">
-        <h3 style="color:var(--primary-color); text-align:center; margin-bottom:.5rem;">✉️ Blijf Op de Hoogte</h3>
-        <p style="text-align:center; color:#666; margin-bottom:1.5rem; font-size:.95rem;">Geen verplichtingen – alleen updates over startdata en cursusdetails</p>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
 
-        <form id="waitlistForm" style="display:grid; gap:1rem;">
-          <div>
-            <label for="name" style="display:block; color:var(--primary-color); font-weight:600; margin-bottom:.5rem; font-size:.95rem;">Volledige Naam *</label>
-            <input type="text" id="name" name="name" required placeholder="Bijv. Jan de Vries"
-                   style="width:100%; padding:.9rem; border:2px solid #e9ecef; border-radius:8px; font-size:1rem;">
-          </div>
-          <div>
-            <label for="email" style="display:block; color:var(--primary-color); font-weight:600; margin-bottom:.5rem; font-size:.95rem;">E-mailadres *</label>
-            <input type="email" id="email" name="email" required placeholder="jouw.naam@email.nl"
-                   style="width:100%; padding:.9rem; border:2px solid #e9ecef; border-radius:8px; font-size:1rem;">
-          </div>
-          <div>
-            <label for="phone" style="display:block; color:var(--primary-color); font-weight:600; margin-bottom:.5rem; font-size:.95rem;">Telefoonnummer <span style="color:#999; font-weight:normal;">(optioneel)</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="06 12345678"
-                   style="width:100%; padding:.9rem; border:2px solid #e9ecef; border-radius:8px; font-size:1rem;">
-          </div>
-          <div>
-            <label for="interest" style="display:block; color:var(--primary-color); font-weight:600; margin-bottom:.5rem; font-size:.95rem;">Interesse niveau</label>
-            <select id="interest" name="interest"
-                    style="width:100%; padding:.9rem; border:2px solid #e9ecef; border-radius:8px; font-size:1rem; background:#fff;">
-              <option value="zeer-geinteresseerd">🔥 Zeer geïnteresseerd - wil direct starten</option>
-              <option value="geinteresseerd">✅ Geïnteresseerd - meer info gewenst</option>
-              <option value="orienterend">🤔 Nog aan het oriënteren</option>
-            </select>
-          </div>
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
-          <div style="background:#f8f9fa; padding:1rem; border-radius:8px; border-left:4px solid #FF7F11;">
-            <p style="font-size:.85rem; color:#666; margin:0;">🔒 <strong>Privacy:</strong> we gebruiken je gegevens alleen voor cursusupdates. Uitschrijven kan altijd.</p>
-          </div>
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
 
-          <button type="submit"
-                  style="background:linear-gradient(135deg, #FF7F11, #FF9F40); color:#fff; padding:1.1rem 2rem; border:none; border-radius:50px; font-size:1.05rem; font-weight:bold; cursor:pointer; box-shadow:0 5px 15px rgba(255,127,17,.3); width:100%;">
-            🚀 Schrijf Me In voor Updates
-          </button>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-          <div id="successMessage" style="display:none; background:#06D6A0; color:#fff; padding:1.2rem; border-radius:10px; text-align:center;">
-            <p style="margin:0; font-size:1.05rem; font-weight:600;">✅ Bedankt voor je interesse!</p>
-            <p style="margin:.4rem 0 0 0; font-size:.95rem;">Je hoort van ons zodra de startdatum bekend is.</p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Training Section -->
-  <section id="training">
-    <h2>NEBOSH IGC Opleiding Rotterdam</h2>
-    <p class="section-intro">Behaal je internationaal erkende NEBOSH International General Certificate met ons complete programma. Geaccepteerd in 120+ landen.</p>
-    <div class="cards-grid">
-      <div class="card" style="border:3px solid var(--secondary-color); position:relative;">
-        <div style="position:absolute; top:-15px; left:20px; background:var(--secondary-color); color:#fff; padding:5px 20px; border-radius:20px; font-weight:bold; font-size:.9rem;">⭐ MEEST GEKOZEN</div>
-        <h3 style="font-size:1.6rem; color:var(--secondary-color);">NEBOSH IGC</h3>
-        <p style="font-size:1.05rem; font-weight:600; color:var(--primary-color); margin:1rem 0;">De wereldstandaard in arbeidsveiligheid</p>
-        <p>Erkend in 120+ landen. Nederlandse begeleiding voor professionals in o.a. Rotterdam, Amsterdam, Antwerpen en Zeebrugge.</p>
-        <div style="background:var(--light-color); padding:1.2rem; border-radius:8px; margin:1.2rem 0;">
-          <p style="margin-bottom:.6rem;"><strong>✅ Duur:</strong> 10–12 weken</p>
-          <p style="margin-bottom:.6rem;"><strong>✅ Taal:</strong> Engels met NL-ondersteuning</p>
-          <p style="margin-bottom:.6rem;"><strong>✅ Erkenning:</strong> 120+ landen</p>
-          <p style="margin:0;"><strong>✅ Inclusief:</strong> Jobplacement-ondersteuning</p>
-        </div>
-        <p style="font-size:1.2rem; font-weight:bold; color:var(--secondary-color); margin-top:1rem;">€3.500 all‑inclusive</p>
-      </div>
-      <div class="card"><h3>Risico Beoordeling</h3><p>Identificeer, evalueer en beheers werkplekgevaren volgens internationale best practices.</p></div>
-      <div class="card"><h3>Veiligheidsmanagement</h3><p>Ontwikkel, implementeer en onderhoud effectieve veiligheids- en gezondheidsmanagementsystemen.</p></div>
-    </div>
-  </section>
-
-  <!-- Simple Contact Section to satisfy nav -->
-  <section id="contact" style="background:var(--light-color);">
-    <h2>Contact</h2>
-    <p class="section-intro">Vragen over NEBOSH of inschrijven? Neem contact op.</p>
-    <div style="max-width:800px; margin:0 auto; text-align:center;">
-      <p><strong>E-mail:</strong> <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a></p>
-      <p><strong>Telefoon:</strong> <a href="tel:+31101234567">+31 10 123 4567</a></p>
-      <p><strong>Adres:</strong> Westplein 12, 3016 BM Rotterdam</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div style="max-width:1400px; margin:0 auto;">
-      <p>&copy; <span id="year"></span> SafetyXAcademy. Alle rechten voorbehouden.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile nav toggle
-    document.getElementById('mobileMenu').addEventListener('click', function(){
-      document.getElementById('navLinks').classList.toggle('active');
-    });
-
-    // Waitlist form handler + GA4 event
-    document.getElementById('waitlistForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        interest: document.getElementById('interest').value,
-        timestamp: new Date().toISOString()
-      };
-      console.log('Waitlist signup:', formData);
-      // Trigger GA4 event
-      if (typeof gtag === 'function') {
-        gtag('event', 'lead_submit', { event_category: 'lead', event_label: 'waitlist' });
-      }
-      // Show success
-      document.getElementById('successMessage').style.display = 'block';
-      this.style.display = 'none';
-    });
-
-    // Current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+        // Job filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                // Here you would add actual filtering logic
+            });
+        });
+    </script>
 </body>
 </html>
-"""
-# Write the updated file
-with open('/mnt/data/index.updated.html', 'w', encoding='utf-8') as f:
-    f.write(updated_html)
-
-'/mnt/data/index.updated.html'
