@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>NEBOSH IGC Opleiding Rotterdam – Goedkoper & Internationaal Alternatief voor MKV | SafetyXAcademy</title>
-    <meta name="description" content="NEBOSH IGC opleiding in Rotterdam. Goedkoper dan MKV VCA + wereldwijd erkend. Werk in Dubai, Noorwegen, UK, Singapore. €1.395 all-in. ISO 45001 basis. Start nu!">
+    <title>NEBOSH IGC Rotterdam Westplein 12 | SafetyXAcademy - Train Lokaal, Werk Wereldwijd</title>
+    <meta name="description" content="NEBOSH IGC opleiding Rotterdam Westplein 12, Veerhaven District. Train in Scheepvaartkwartier, werk wereldwijd. €1.395 all-in, Nederlandse begeleiding, jobplacement.">
+    <meta name="keywords" content="NEBOSH Rotterdam, NEBOSH IGC, Westplein 12, Veerhaven, MKV alternatief, HSE training Rotterdam, offshore training">
+    
+    <!-- Canonical & Open Graph -->
+    <link rel="canonical" href="https://www.safetyxacademy.nl/">
+    <meta property="og:title" content="NEBOSH IGC Rotterdam | SafetyXAcademy">
+    <meta property="og:description" content="Train lokaal Rotterdam, werk wereldwijd. NEBOSH IGC €1.395 all-in.">
+    <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
+    <meta property="og:url" content="https://www.safetyxacademy.nl/">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
@@ -72,31 +80,82 @@
             font-weight: 500;
         }
 
-        /* Hero */
+        /* Hero Section WITH Background Image */
         .hero {
-            background: linear-gradient(135deg, var(--primary), var(--dark));
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            background-image: url('nebosh-igc-training-rotterdam-students.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
             padding: 2rem 4%;
             text-align: center;
+            margin-top: 3.5rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(10, 40, 75, 0.85) 0%, rgba(47, 62, 70, 0.85) 100%);
+            z-index: 1;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image-main {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-image-main img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
         .hero h1 {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             line-height: 1.3;
             margin-bottom: 0.75rem;
         }
 
-        .hero .subtitle {
-            font-size: 0.95rem;
-            color: #e0e7ff;
-            margin-bottom: 1rem;
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
 
-        .hero .tagline {
-            font-size: 0.9rem;
+        .hero-stats {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
             color: var(--secondary);
-            font-weight: 600;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
         }
 
         .cta-buttons {
@@ -104,73 +163,50 @@
             gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 0.7rem 1.25rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
             text-align: center;
             white-space: nowrap;
-            line-height: 1.4;
         }
 
         .btn-primary {
             background: var(--secondary);
             color: white !important;
-            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.2);
+            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.3);
         }
         
         .btn-primary:hover {
             background: #ff9533;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.3);
+            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.4);
         }
 
         .btn-secondary {
-            background: white;
-            color: var(--primary) !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: transparent;
+            color: white !important;
+            border: 2px solid white;
         }
         
         .btn-secondary:hover {
-            background: var(--light-bg);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        /* USP Banner */
-        .usp-banner {
-            background: var(--secondary);
-            color: white;
-            padding: 1rem 4%;
-        }
-
-        .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 600;
+            background: white;
+            color: var(--primary) !important;
         }
 
         /* Sections */
         section {
             padding: 2.5rem 4%;
         }
-
-        .comparison { background: var(--light-bg); }
-        .benefits { background: var(--light-bg); }
-        .contact { background: var(--light-bg); }
 
         .container {
             max-width: 1200px;
@@ -180,20 +216,36 @@
         .section-title {
             text-align: center;
             color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 0.75rem;
             line-height: 1.3;
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #666;
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
 
-        /* Comparison Table - Scrollable on Mobile */
+        /* Training Image Section */
+        .training-image {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .training-image img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Comparison Table */
+        .comparison { background: var(--light-bg); }
+
         .comparison-table {
             background: white;
             border-radius: 10px;
@@ -244,22 +296,15 @@
             margin-bottom: 0.75rem;
         }
 
-        .highlight-box p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
         /* Grids */
-        .training-grid,
-        .benefits-grid {
+        .training-grid, .benefits-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.25rem;
             margin-top: 1.5rem;
         }
 
-        .training-card,
-        .benefit-card {
+        .training-card, .benefit-card {
             background: white;
             border-radius: 10px;
             padding: 1.5rem;
@@ -317,16 +362,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .benefit-card p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        /* FAQ Section Header */
-        .faq .container {
-            background: white;
-        }
-
         /* Jobs CTA */
         .jobs-cta {
             background: linear-gradient(135deg, var(--primary), var(--dark));
@@ -338,12 +373,6 @@
             font-size: 1.5rem;
             margin-bottom: 0.75rem;
             line-height: 1.3;
-        }
-
-        .jobs-cta p {
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
         }
 
         /* FAQ - Mooiere Styling */
@@ -374,7 +403,6 @@
             background: linear-gradient(to right, #f8f9fa 0%, white 100%);
         }
         
-        /* FAQ Icon */
         .faq-item summary:before {
             content: "❓";
             position: absolute;
@@ -388,7 +416,6 @@
             color: var(--success);
         }
         
-        /* Arrow indicator */
         .faq-item summary:after {
             content: "▼";
             position: absolute;
@@ -428,26 +455,9 @@
             color: var(--primary);
         }
 
-        .faq-content ul {
-            margin: 0.75rem 0;
-            padding-left: 1.5rem;
-        }
-        
-        .faq-content li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .faq-content a {
-            color: var(--secondary);
-            font-weight: 600;
-            text-decoration: none;
-        }
-        
-        .faq-content a:hover {
-            text-decoration: underline;
-        }
+        /* Contact */
+        .contact { background: var(--light-bg); }
 
-        /* Contact - Verbeterde Styling */
         .contact-info {
             background: linear-gradient(135deg, white, #f8f9fa);
             padding: 2rem 1.5rem;
@@ -464,30 +474,49 @@
             font-size: 1.3rem;
         }
 
-        .contact-info p {
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
         .contact-info a {
             color: var(--secondary);
             text-decoration: none;
             font-weight: 600;
-            word-break: break-word;
-            transition: color 0.3s ease;
         }
-        
-        .contact-info a:hover {
-            color: #ff9533;
-            text-decoration: underline;
+
+        /* Founder Section */
+        .founder-section {
+            background: var(--light-bg);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
         }
-        
-        /* Contact Button Special */
-        .contact-info .btn {
-            margin-top: 1rem;
-            display: inline-block;
-            min-width: 200px;
+
+        .founder-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Location Section */
+        .location-map img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Mission Section */
+        .mission-section {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            text-align: center;
+        }
+
+        .mission-image img {
+            width: 100%;
+            max-width: 1400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
         }
 
         /* Footer */
@@ -508,20 +537,14 @@
         @media (min-width: 600px) {
             .logo { font-size: 1.3rem; }
             nav a { font-size: 0.95rem; }
-            .hero h1 { font-size: 2rem; }
+            .hero h1 { font-size: 2.2rem; }
             .section-title { font-size: 2rem; }
-            .usp-grid { grid-template-columns: repeat(4, 1fr); }
             .training-grid { grid-template-columns: repeat(2, 1fr); }
             .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-            
-            /* Tablet FAQ */
+            .founder-section { grid-template-columns: 1fr 1.5fr; }
             .faq-item summary { 
                 font-size: 1rem;
                 padding: 1.25rem 1.25rem 1.25rem 3.25rem;
-            }
-            .faq-item summary:before { 
-                font-size: 1.4rem;
-                left: 1.1rem;
             }
         }
 
@@ -530,44 +553,19 @@
             .logo { font-size: 1.5rem; }
             nav { gap: 2rem; }
             nav a { font-size: 1rem; }
-            .hero { padding: 4rem 5%; }
-            .hero h1 { font-size: 2.8rem; }
-            .hero .subtitle { font-size: 1.3rem; }
-            .hero .tagline { font-size: 1.1rem; }
-            .btn { padding: 0.9rem 2rem; font-size: 1.05rem; }
+            .hero { padding: 4rem 5%; margin-top: 4.5rem; }
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.2rem; }
+            .btn { padding: 1rem 2rem; font-size: 1.1rem; }
             section { padding: 4rem 5%; }
-            .section-title { font-size: 2.3rem; }
-            .section-subtitle { font-size: 1.2rem; }
+            .section-title { font-size: 2.5rem; }
             .training-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
             .benefits-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
             .comparison-table th,
             .comparison-table td { padding: 1rem; font-size: 1rem; }
-            .jobs-cta h2 { font-size: 2.5rem; }
-            .jobs-cta p { font-size: 1.2rem; }
-            
-            /* Desktop FAQ improvements */
             .faq-item summary { 
                 font-size: 1.1rem; 
                 padding: 1.5rem 1.5rem 1.5rem 3.5rem;
-            }
-            .faq-item summary:before { 
-                font-size: 1.5rem;
-                left: 1.25rem;
-            }
-            .faq-content { 
-                padding: 1.5rem; 
-                font-size: 1rem; 
-            }
-            
-            /* Desktop contact */
-            .contact-info {
-                padding: 2.5rem 2rem;
-            }
-            .contact-info h3 {
-                font-size: 1.5rem;
-            }
-            .contact-info p {
-                font-size: 1.05rem;
             }
         }
     </style>
@@ -584,31 +582,46 @@
         </div>
     </header>
 
+    <!-- Hero Section WITH Image -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>NEBOSH IGC – Het Slimme Alternatief voor MKV</h1>
-            <p class="subtitle">Goedkoper, Internationaal Erkend & Meer Carrièrekansen</p>
-            <p class="tagline">🌍 Train Lokaal in Rotterdam, Werk Wereldwijd</p>
-            <div class="cta-buttons">
-                <a href="#training" class="btn btn-primary">Bekijk Opleiding</a>
-                <a href="jobs.html" class="btn btn-secondary">Zie Vacatures</a>
+        <!-- Hero Main Image -->
+        <div class="hero-image-main">
+            <img src="nebosh-igc-training-rotterdam-students.webp" 
+                 alt="NEBOSH IGC training studenten Rotterdam SafetyXAcademy"
+                 width="1920"
+                 height="1280"
+                 loading="eager">
+        </div>
+
+        <h1>Train Lokaal in Rotterdam.<br>Werk Wereldwijd.</h1>
+        <p>Word NEBOSH IGC gecertificeerd met Nederlandse begeleiding en open de deur naar carrières in 120+ landen.</p>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">€1.395</div>
+                <div class="stat-label">All-Inclusive</div>
             </div>
+            <div class="stat">
+                <div class="stat-number">120+</div>
+                <div class="stat-label">Landen</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">10-12</div>
+                <div class="stat-label">Weken</div>
+            </div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="#training" class="btn btn-primary">Start Je NEBOSH Opleiding</a>
+            <a href="jobs.html" class="btn btn-secondary">Bekijk Vacatures</a>
         </div>
     </section>
 
-    <div class="usp-banner">
-        <div class="usp-grid">
-            <div>✓ €1.395 All-In</div>
-            <div>✓ Wereldwijd</div>
-            <div>✓ 100+ Landen</div>
-            <div>✓ vs MKV</div>
-        </div>
-    </div>
-
-    <section class="comparison" id="vergelijking">
+    <!-- NEBOSH vs MKV Comparison -->
+    <section class="comparison">
         <div class="container">
             <h2 class="section-title">Waarom NEBOSH IGC in plaats van MKV?</h2>
-            <p class="section-subtitle">In Nederland is MKV wel bekend, maar NEBOSH biedt meer mogelijkheden voor minder geld – vooral als je internationaal wilt werken.</p>
+            <p class="section-subtitle">In Nederland is MKV wel bekend, maar NEBOSH biedt meer mogelijkheden voor minder geld.</p>
             
             <div class="comparison-table">
                 <table>
@@ -627,7 +640,7 @@
                         </tr>
                         <tr>
                             <td class="feature">🌍 Internationaal</td>
-                            <td><span class="check">✓</span> 100+ landen</td>
+                            <td><span class="check">✓</span> 120+ landen</td>
                             <td><span class="cross">✗</span> Alleen NL</td>
                         </tr>
                         <tr>
@@ -640,78 +653,72 @@
                             <td><span class="check">✓</span> Wereldwijd</td>
                             <td>Beperkt NL</td>
                         </tr>
-                        <tr>
-                            <td class="feature">📚 ISO 45001</td>
-                            <td><span class="check">✓</span> Volledig</td>
-                            <td>Beperkt</td>
-                        </tr>
-                        <tr>
-                            <td class="feature">🏢 Erkend NL</td>
-                            <td><span class="check">✓</span> Ja</td>
-                            <td><span class="check">✓</span> Ja</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="highlight-box">
                 <h3>💡 De Conclusie</h3>
-                <p>
-                    <strong>NEBOSH IGC is €1.000+ goedkoper dan MKV</strong> én opent wereldwijde deuren. 
-                    Perfect voor wie verder wil kijken dan alleen Nederland.
-                </p>
+                <p><strong>NEBOSH IGC is €1.000+ goedkoper dan MKV</strong> én opent wereldwijde deuren.</p>
             </div>
         </div>
     </section>
 
-    <section class="training" id="training">
+    <!-- Training Section WITH Image -->
+    <section id="training">
         <div class="container">
             <h2 class="section-title">NEBOSH IGC Opleiding Rotterdam</h2>
-            <p class="section-subtitle">Start je wereldwijde HSE carrière met de meest erkende safety certificering</p>
+            <p class="section-subtitle">Moderne training faciliteiten in het hart van Rotterdam's Scheepvaartkwartier.</p>
+            
+            <!-- Klaslokaal Image -->
+            <div class="training-image">
+                <img src="nebosh-klaslokaal-studenten-rotterdam-safetyxacademy.webp" 
+                     alt="NEBOSH IGC klaslokaal training studenten Rotterdam SafetyXAcademy"
+                     width="1920"
+                     height="1080"
+                     loading="lazy">
+            </div>
             
             <div class="training-grid">
                 <div class="training-card">
                     <h3>NEBOSH IGC</h3>
                     <div class="price">€1.395</div>
-                    <p><strong>International General Certificate</strong></p>
                     <ul>
                         <li>80 uur blended learning</li>
                         <li>Nederlands & Engels</li>
                         <li>Examen inclusief</li>
-                        <li>Studiemateriaal inclusief</li>
-                        <li>Certificaat inclusief</li>
+                        <li>Studiemateriaal</li>
+                        <li>Certificaat</li>
                         <li>Jobplacement support</li>
                         <li>ISO 45001 basis</li>
-                        <li>100+ landen erkend</li>
+                        <li>120+ landen erkend</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary">Schrijf Je In</a>
                 </div>
 
                 <div class="training-card">
                     <h3>Wat Leer Je?</h3>
-                    <ul style="margin-top: 1.5rem;">
-                        <li>Risk Assessment & Control</li>
-                        <li>HSE Management (ISO 45001)</li>
+                    <ul style="margin-top:1.5rem;">
+                        <li>Risk Assessment</li>
+                        <li>HSE Management</li>
                         <li>Workplace Hazards</li>
-                        <li>Fire Safety & Emergency</li>
+                        <li>Fire Safety</li>
                         <li>Construction Safety</li>
-                        <li>Permit to Work (PTW)</li>
+                        <li>Permit to Work</li>
                         <li>Incident Investigation</li>
                         <li>Legal Compliance</li>
-                        <li>Safety Leadership</li>
                     </ul>
                 </div>
 
                 <div class="training-card">
                     <h3>Na Je Opleiding</h3>
-                    <ul style="margin-top: 1.5rem;">
-                        <li>Wereldwijd werken in HSE</li>
+                    <ul style="margin-top:1.5rem;">
+                        <li>Wereldwijd werken</li>
                         <li>Internationale vacatures</li>
-                        <li>Hoger salaris potentieel</li>
                         <li>Haven Rotterdam</li>
                         <li>Offshore Noorwegen</li>
                         <li>Dubai / Middle East</li>
-                        <li>UK & EU opportunities</li>
+                        <li>UK & EU</li>
                         <li>Singapore & Azië</li>
                         <li>Jobplacement support</li>
                     </ul>
@@ -720,6 +727,7 @@
         </div>
     </section>
 
+    <!-- Benefits -->
     <section class="benefits">
         <div class="container">
             <h2 class="section-title">Waarom SafetyXAcademy?</h2>
@@ -728,17 +736,17 @@
                 <div class="benefit-card">
                     <div class="icon">🏆</div>
                     <h3>NEBOSH Gold Partner</h3>
-                    <p>Erkende kwaliteit, bewezen succesrate</p>
+                    <p>Erkende kwaliteit</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">🎯</div>
                     <h3>Lokaal Rotterdam</h3>
-                    <p>Train dichtbij huis, werk wereldwijd</p>
+                    <p>Westplein 12, Veerhaven</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">💼</div>
                     <h3>Jobplacement</h3>
-                    <p>Directe toegang tot HSE vacatures</p>
+                    <p>Directe toegang vacatures</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">🌐</div>
@@ -748,28 +756,45 @@
                 <div class="benefit-card">
                     <div class="icon">💶</div>
                     <h3>Beste Prijs</h3>
-                    <p>€1.395 all-in, goedkoper dan MKV</p>
+                    <p>€1.395 all-in</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">📅</div>
-                    <h3>Flexibel Leren</h3>
-                    <p>Blended: online + praktijk</p>
+                    <h3>Flexibel</h3>
+                    <p>Blended learning</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Founder Section WITH Image -->
+    <section class="founder-section">
+        <div class="container" style="display:grid; grid-template-columns:1fr; gap:2rem;">
+            <div class="founder-image" style="text-align:center;">
+                <img src="nando-breure-founder.webp" 
+                     alt="Nando Breure oprichter SafetyXAcademy Rotterdam"
+                     width="500"
+                     height="500"
+                     loading="lazy">
+            </div>
+            <div>
+                <h2 class="section-title">Ontmoet Nando Breure</h2>
+                <p style="font-size:1.1rem; margin-bottom:1rem;">Nando Breure is de visionaire oprichter van SafetyXAcademy, met tientallen jaren ervaring in de veiligheids- en maritieme sector.</p>
+                <p><em>"Veiligheid gaat niet alleen over naleving—het gaat om het creëren van een cultuur waarin elke werknemer elke dag veilig thuiskomt."</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs CTA -->
     <section class="jobs-cta">
         <div class="container">
             <h2>🌍 Internationale HSE Vacatures</h2>
-            <p>
-                Met NEBOSH IGC open je deuren naar wereldwijde carrières. Bekijk actuele vacatures in 
-                <strong>Rotterdam, Dubai, Noorwegen, UK, Saudi, Singapore</strong> en meer.
-            </p>
+            <p>Met NEBOSH IGC open je deuren naar wereldwijde carrières in <strong>Rotterdam, Dubai, Noorwegen, UK, Saudi, Singapore</strong>.</p>
             <a href="jobs.html" class="btn btn-primary">Bekijk Alle Vacatures →</a>
         </div>
     </section>
 
+    <!-- FAQ -->
     <section class="faq">
         <div class="container">
             <h2 class="section-title">Veelgestelde Vragen</h2>
@@ -777,44 +802,47 @@
             <details class="faq-item">
                 <summary>Is NEBOSH beter dan MKV?</summary>
                 <div class="faq-content">
-                    <p><strong>Ja, vooral internationaal.</strong> NEBOSH is erkend in 100+ landen, MKV alleen in NL. NEBOSH is €1.000+ goedkoper en opent deuren naar Dubai, Noorwegen, UK, Singapore, Saudi én Nederland.</p>
+                    <p><strong>Ja, vooral internationaal.</strong> NEBOSH is erkend in 120+ landen, MKV alleen in NL. NEBOSH is €1.000+ goedkoper en opent deuren naar Dubai, Noorwegen, UK én Nederland.</p>
                 </div>
             </details>
 
             <details class="faq-item">
                 <summary>Wordt NEBOSH erkend in Nederland?</summary>
                 <div class="faq-content">
-                    <p><strong>Ja!</strong> Erkend door Haven Rotterdam, Shell, BP, offshore bedrijven. Basis voor ISO 45001. Steeds meer Nederlandse bedrijven kiezen voor NEBOSH.</p>
+                    <p><strong>Ja!</strong> Erkend door Haven Rotterdam, Shell, BP, offshore bedrijven. Basis voor ISO 45001.</p>
                 </div>
             </details>
 
             <details class="faq-item">
                 <summary>Hoeveel kost NEBOSH IGC?</summary>
                 <div class="faq-content">
-                    <p><strong>€1.395 all-in.</strong> Inclusief 80u training, materiaal, examen, certificaat en jobplacement. Significant goedkoper dan MKV (€2.500-€3.500).</p>
+                    <p><strong>€1.395 all-in.</strong> Inclusief 80u training, materiaal, examen, certificaat en jobplacement.</p>
                 </div>
             </details>
 
             <details class="faq-item">
                 <summary>Waar kan ik werken met NEBOSH?</summary>
                 <div class="faq-content">
-                    <p><strong>Wereldwijd in 100+ landen:</strong> Nederland (Rotterdam haven), Dubai, Noorwegen (offshore), UK, Saudi (NEOM), Singapore, Duitsland. <a href="jobs.html">Bekijk vacatures →</a></p>
-                </div>
-            </details>
-
-            <details class="faq-item">
-                <summary>Is de opleiding in Nederlands of Engels?</summary>
-                <div class="faq-content">
-                    <p><strong>Training Nederlands, examen Engels.</strong> Zo begrijp je de stof goed en krijg je een internationaal certificaat. Basisbegrip Engels is voldoende.</p>
+                    <p><strong>Wereldwijd in 120+ landen:</strong> Nederland (Rotterdam haven), Dubai, Noorwegen (offshore), UK, Saudi (NEOM), Singapore, Duitsland. <a href="jobs.html">Bekijk vacatures →</a></p>
                 </div>
             </details>
         </div>
     </section>
 
+    <!-- Contact WITH Location Map -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Start Je HSE Carrière</h2>
-            <p class="section-subtitle">Klaar om wereldwijd te werken? Neem contact op voor een vrijblijvend gesprek.</p>
+            <p class="section-subtitle">Westplein 12, 3016 BM Rotterdam - Veerhaven District</p>
+            
+            <!-- Location Map Image -->
+            <div class="location-map" style="margin:2rem 0;">
+                <img src="location-map-fixed.png" 
+                     alt="SafetyXAcademy locatie kaart Westplein 12 Rotterdam"
+                     width="631"
+                     height="831"
+                     loading="lazy">
+            </div>
             
             <div class="contact-info">
                 <h3>SafetyXAcademy Rotterdam</h3>
@@ -822,16 +850,29 @@
                 <p><strong>📞</strong> <a href="tel:+31101234567">+31 (0)10 123 4567</a></p>
                 <p><strong>📍</strong> Westplein 12, 3016 BM Rotterdam</p>
                 <p><strong>🕒</strong> Ma-Vr 09:00-17:00</p>
-                <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie" class="btn btn-primary" style="margin-top:1rem;">Vraag Informatie →</a>
-                <p style="margin-top:1.5rem; font-size:0.8rem; color:#666;">SafetyXAcademy - ABshops.nl (KVK 72037628) - Nando Breure (MD)</p>
+                <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie" class="btn btn-primary" style="margin-top:1.5rem;">Vraag Informatie →</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Mission Section WITH Team Image -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-image">
+                <img src="nebosh-safety-team-mission-together-safer-world-rotterdam.webp" 
+                     alt="NEBOSH safety professionals team SafetyXAcademy Rotterdam"
+                     width="1920"
+                     height="1080"
+                     loading="lazy">
+            </div>
+            <h2 style="color:white; margin-top:2rem;">Samen Bouwen We Een Veiligere Wereld</h2>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 SafetyXAcademy - ABshops.nl (KVK 72037628)</p>
         <p><a href="index.html">Home</a> | <a href="jobs.html">Vacatures</a> | <a href="privacy.html">Privacy</a> | <a href="#contact">Contact</a></p>
-        <p style="margin-top:0.75rem; font-style:italic; color:#999;">🌍 Train Lokaal, Werk Wereldwijd</p>
+        <p style="margin-top:0.75rem; font-style:italic;">🌍 Train Lokaal, Werk Wereldwijd</p>
     </footer>
 </body>
 </html>
