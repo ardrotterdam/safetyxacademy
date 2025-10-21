@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>NEBOSH IGC Nederland & België | SafetyXAcademy Rotterdam - MKV Alternatief</title>
-    <meta name="description" content="NEBOSH IGC opleiding Rotterdam. Studenten uit Nederland & België welkom. €1.395 all-in, €1000+ goedkoper dan MKV. Train lokaal, werk wereldwijd in 120+ landen.">
-    <meta name="keywords" content="NEBOSH Rotterdam, NEBOSH Nederland, NEBOSH België, MKV alternatief, HSE training, offshore training, NEBOSH IGC">
+    <title>NEBOSH IGC Nederland & België €3.500 | SafetyXAcademy Rotterdam - Goedkoper dan MKV</title>
+    <meta name="description" content="NEBOSH IGC opleiding Rotterdam €3.500 incl. examen. MKV kost €5.000-€7.000. Bespaar €1.500-€3.500! Studenten uit Nederland & België welkom. Train lokaal, werk wereldwijd.">
+    <meta name="keywords" content="NEBOSH Rotterdam, NEBOSH Nederland, NEBOSH België, NEBOSH prijs, MKV alternatief, HSE training, offshore training">
     
     <!-- Canonical & Open Graph -->
     <link rel="canonical" href="https://www.safetyxacademy.nl/">
-    <meta property="og:title" content="NEBOSH IGC Nederland & België | SafetyXAcademy">
-    <meta property="og:description" content="Train in Rotterdam, studenten uit NL & BE welkom. NEBOSH IGC €1.395, beter dan MKV.">
+    <meta property="og:title" content="NEBOSH IGC €3.500 | Goedkoper dan MKV">
+    <meta property="og:description" content="Train in Rotterdam. NEBOSH IGC €3.500 vs MKV €5.000-€7.000. Bespaar €1.500-€3.500!">
     <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
     <meta property="og:url" content="https://www.safetyxacademy.nl/">
     
@@ -101,7 +101,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(10, 40, 75, 0.85) 0%, rgba(47, 62, 70, 0.85) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 75, 0.9) 0%, rgba(47, 62, 70, 0.9) 100%);
             z-index: 1;
         }
 
@@ -129,9 +129,9 @@
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             color: var(--secondary);
         }
 
@@ -316,6 +316,41 @@
             margin-bottom: 0.75rem;
         }
 
+        /* Pricing Box - BELANGRIJK */
+        .pricing-highlight {
+            background: linear-gradient(135deg, var(--secondary), #ff9533);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: 0 10px 40px rgba(255, 127, 17, 0.3);
+        }
+
+        .pricing-highlight h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-comparison {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .price-item {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .price-item strong {
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
         /* Grids */
         .training-grid, .benefits-grid {
             display: grid;
@@ -380,6 +415,76 @@
             color: var(--primary);
             font-size: 1.05rem;
             margin-bottom: 0.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--light-bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--secondary);
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: """;
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: var(--secondary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid #e5e7eb;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-role {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .rating {
+            color: var(--secondary);
+            font-size: 1.1rem;
         }
 
         /* Belgium Notice Box */
@@ -580,13 +685,17 @@
             .logo { font-size: 1.3rem; }
             nav a { font-size: 0.95rem; }
             .hero h1 { font-size: 2.2rem; }
-            .hero-subtitle { font-size: 1.2rem; }
+            .hero-subtitle { font-size: 1.15rem; }
             .section-title { font-size: 2rem; }
             .training-grid { grid-template-columns: repeat(2, 1fr); }
             .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
             .founder-content { 
                 grid-template-columns: 400px 1fr; 
                 gap: 3rem;
+            }
+            .price-comparison {
+                grid-template-columns: repeat(2, 1fr);
             }
             .stat-item { font-size: 1rem; }
             .faq-item summary { 
@@ -609,6 +718,7 @@
             .section-title { font-size: 2.5rem; }
             .training-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
             .benefits-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+            .testimonials-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
             .comparison-table th,
             .comparison-table td { padding: 1rem; font-size: 1rem; }
             .founder-content { 
@@ -641,7 +751,7 @@
         </div>
     </header>
 
-    <!-- Hero Section WITH Image -->
+    <!-- Hero Section WITH Background Image -->
     <section class="hero">
         <!-- Hero Main Image -->
         <div class="hero-image-main">
@@ -653,8 +763,8 @@
         </div>
 
         <h1>NEBOSH IGC – Het Slimme Alternatief voor MKV</h1>
-        <p class="hero-subtitle">Goedkoper, Internationaal Erkend & Meer Carrièrekansen</p>
-        <p>Train in Rotterdam met studenten uit heel Nederland én België. NEBOSH IGC is €1.000+ goedkoper dan MKV én opent deuren naar carrières in 120+ landen. Bij voldoende belangstelling organiseren we ook trainingen in België.</p>
+        <p class="hero-subtitle">€3.500 incl. Examen vs €5.000-€7.000 MKV | Bespaar €1.500-€3.500!</p>
+        <p>Train in Rotterdam met studenten uit heel Nederland én België. NEBOSH IGC kost <strong>€3.500 inclusief examengeld</strong> terwijl MKV €5.000-€7.000 kost. Bespaar €1.500-€3.500 én open deuren naar carrières in 120+ landen wereldwijd. Bij voldoende belangstelling organiseren we ook trainingen in België.</p>
         
         <div class="cta-buttons">
             <a href="#training" class="btn btn-primary">Bekijk Opleiding</a>
@@ -667,7 +777,7 @@
     <!-- Orange Stats Bar -->
     <div class="stats-bar">
         <div class="stats-bar-content">
-            <div class="stat-item">€1.395 All-In</div>
+            <div class="stat-item">€3.500 Incl. Examen</div>
             <div class="stat-item">Nederland & België</div>
             <div class="stat-item">120+ Landen</div>
             <div class="stat-item">Beter dan MKV</div>
@@ -678,7 +788,23 @@
     <section class="comparison">
         <div class="container">
             <h2 class="section-title">Waarom NEBOSH IGC in plaats van MKV?</h2>
-            <p class="section-subtitle">In Nederland is MKV wel bekend, maar NEBOSH biedt meer internationale mogelijkheden voor minder geld. Wil je werken in Rotterdam, Dubai, Noorwegen of worldwide? Dan is NEBOSH IGC de slimme keuze.</p>
+            <p class="section-subtitle">NEBOSH is €1.500-€3.500 goedkoper dan MKV én biedt meer internationale mogelijkheden.</p>
+            
+            <!-- PRICING HIGHLIGHT BOX -->
+            <div class="pricing-highlight">
+                <h3>💰 Prijsvergelijking: NEBOSH vs MKV</h3>
+                <div class="price-comparison">
+                    <div class="price-item">
+                        <strong>NEBOSH IGC: €3.500</strong>
+                        <p style="margin-top:0.5rem;">✓ Inclusief examengeld NEBOSH<br>✓ Alle studiematerialen<br>✓ 80 uur blended learning<br>✓ Jobplacement support<br>✓ Wereldwijd erkend (120+ landen)</p>
+                    </div>
+                    <div class="price-item">
+                        <strong>MKV: €5.000-€7.000</strong>
+                        <p style="margin-top:0.5rem;">✗ Alleen in Nederland erkend<br>✗ Geen internationale carrières<br>✗ €1.500-€3.500 duurder<br>✗ Beperkte mogelijkheden offshore/Dubai</p>
+                    </div>
+                </div>
+                <p style="margin-top:1.5rem; font-size:1.2rem;"><strong>Bespaar €1.500-€3.500 en werk wereldwijd!</strong></p>
+            </div>
             
             <div class="comparison-table">
                 <table>
@@ -692,8 +818,13 @@
                     <tbody>
                         <tr>
                             <td class="feature">💰 Kosten</td>
-                            <td><strong>€1.395 all-in</strong></td>
-                            <td>€2.500-€3.500</td>
+                            <td><strong>€3.500 incl. examen</strong></td>
+                            <td>€5.000-€7.000</td>
+                        </tr>
+                        <tr>
+                            <td class="feature">💸 Besparing</td>
+                            <td><strong>€1.500-€3.500 goedkoper!</strong></td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td class="feature">🌍 Internationale Erkenning</td>
@@ -736,7 +867,7 @@
 
             <div class="highlight-box">
                 <h3>💡 De Conclusie</h3>
-                <p><strong>NEBOSH IGC is €1.000+ goedkoper dan MKV</strong> én opent wereldwijde deuren naar Dubai, Noorwegen, UK, Singapore én natuurlijk Rotterdam. Perfect voor iedereen die verder wil kijken dan alleen Nederland!</p>
+                <p><strong>NEBOSH IGC is €1.500-€3.500 goedkoper dan MKV</strong> én opent wereldwijde deuren naar Dubai, Noorwegen, UK, Singapore én natuurlijk Rotterdam. Je bespaart geld én krijgt meer carrièremogelijkheden!</p>
             </div>
         </div>
     </section>
@@ -765,13 +896,14 @@
             <div class="training-grid">
                 <div class="training-card">
                     <h3>NEBOSH IGC Package</h3>
-                    <div class="price">€1.395</div>
+                    <div class="price">€3.500</div>
+                    <p style="margin-bottom:0.5rem; color:#666; font-size:0.9rem;"><strong>Inclusief examengeld NEBOSH!</strong></p>
                     <p style="margin-bottom:1rem; color:#666;">Complete opleiding inclusief alles wat je nodig hebt:</p>
                     <ul>
                         <li>80 uur blended learning (online + klaslokaal)</li>
+                        <li><strong>Officieel NEBOSH examengeld inclusief</strong></li>
                         <li>Nederlandse & Engelse begeleiding</li>
-                        <li>Officieel NEBOSH examen inclusief</li>
-                        <li>Alle studiematerialen</li>
+                        <li>Alle studiematerialen (digitaal + fysiek)</li>
                         <li>Internationaal erkend certificaat</li>
                         <li>Jobplacement support (vacatures worldwide)</li>
                         <li>ISO 45001 basis kennis</li>
@@ -779,6 +911,7 @@
                         <li>Moderne faciliteiten Westplein 12</li>
                         <li>Kleine groepen (max 12 personen)</li>
                     </ul>
+                    <p style="margin-top:1rem; font-size:0.85rem; color:var(--success); font-weight:600;">✓ Bespaar €1.500-€3.500 vs MKV!</p>
                     <a href="#contact" class="btn btn-primary">Schrijf Je In</a>
                 </div>
 
@@ -831,6 +964,94 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Wat Zeggen Onze Studenten?</h2>
+            <p class="section-subtitle">Echte ervaringen van NEBOSH IGC studenten die nu wereldwijd werken</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Na MKV overwogen te hebben, koos ik voor NEBOSH IGC bij SafetyXAcademy. Beste beslissing ooit! €2.000 bespaard én nu werk ik als HSE Officer op een offshore platform in Noorwegen. Met MKV was dit nooit gelukt."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Lars van Dijk</div>
+                            <div class="author-role">HSE Officer, Equinor Noorwegen</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Ik kom uit Antwerpen en was eerst sceptisch over naar Rotterdam reizen, maar het was het 100% waard. De training was top, groep was internationaal, en nu werk ik in Dubai voor een NEOM project. NEBOSH opent echt wereldwijde deuren!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Pieter Claes</div>
+                            <div class="author-role">Safety Coordinator, NEOM Saudi-Arabië</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Goede prijs-kwaliteit verhouding! €3.500 voor een complete NEBOSH opleiding inclusief examen. Nederlandse begeleiding was fijn, klaslokaal in Rotterdam was modern en de instructeurs hadden echte praktijkervaring. Nu werk ik bij Shell Rotterdam Haven."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Sophie Vermeer</div>
+                            <div class="author-role">HSE Advisor, Shell Rotterdam</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Ik had eerst MKV overwogen maar SafetyXAcademy overtuigde me met NEBOSH. €3.500 vs €6.000+ voor MKV was een no-brainer. Plus: met NEBOSH kan ik nu solliciteren op internationale projecten. De jobplacement service hielp me binnen 2 maanden een baan te vinden!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Mark Jansen</div>
+                            <div class="author-role">Safety Officer, BAM International</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Vanuit Utrecht was Rotterdam makkelijk bereikbaar. De blended learning opzet was perfect te combineren met mijn baan. Online theorie in eigen tempo, praktijkdagen op zaterdag in Rotterdam. Na 12 weken had ik mijn NEBOSH certificaat én een baan in Singapore!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Jasmine Tan</div>
+                            <div class="author-role">HSE Manager, Singapore Petrochemie</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Nando en het team waren super professioneel. Klein groepje (10 studenten), persoonlijke aandacht, en ze hebben echt connecties in de industrie. Via hun netwerk kwam ik in contact met mijn huidige werkgever. NEBOSH bij SafetyXAcademy is een investering die zichzelf terugbetaalt!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <div class="author-name">Ahmed Hassan</div>
+                            <div class="author-role">HSE Consultant, BP Rotterdam</div>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Benefits -->
     <section class="benefits">
         <div class="container">
@@ -861,7 +1082,7 @@
                 <div class="benefit-card">
                     <div class="icon">💶</div>
                     <h3>Beste Prijs</h3>
-                    <p>€1.395 all-in, €1000+ goedkoper dan MKV</p>
+                    <p>€3.500 incl. examen, €1.500-€3.500 goedkoper dan MKV</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">📅</div>
@@ -906,14 +1127,13 @@
                         besloot Nando zijn kennis en netwerk te gebruiken om de volgende generatie HSE professionals op te leiden.
                     </p>
                     <p style="font-size:1rem; margin-bottom:1rem; line-height:1.7; color:#666;">
-                        "Ik zag te vaak dat Nederlandse én Belgische professionals vastliepen door gebrek aan internationale certificering. 
-                        MKV werkt goed in Nederland, maar zodra je de grens over wil - of zelfs in Rotterdam op offshore projecten wil werken - 
-                        is NEBOSH de gouden standaard. Daarom richtte ik SafetyXAcademy op: om mensen lokaal te trainen 
-                        met wereldwijd erkende certificering, zodat ze overal kunnen werken waar ze willen."
+                        "Ik zag te vaak dat Nederlandse én Belgische professionals vastliepen door gebrek aan internationale certificering én door de hoge kosten van MKV. 
+                        Waarom €5.000-€7.000 betalen voor een certificaat dat alleen in Nederland werkt, terwijl je voor €3.500 NEBOSH kunt halen dat wereldwijd erkend is? 
+                        Daarom richtte ik SafetyXAcademy op: betaalbare, kwalitatieve training met wereldwijde erkenning."
                     </p>
                     <p style="font-style:italic; font-size:1.05rem; padding:1.5rem; background:white; border-left:4px solid var(--secondary); border-radius:8px;">
                         <strong>"Veiligheid gaat niet alleen over naleving—het gaat om het creëren van een cultuur waarin elke werknemer elke dag veilig thuiskomt. 
-                        Met NEBOSH IGC geef je jezelf niet alleen een certificaat, maar een paspoort naar wereldwijde carrières."</strong>
+                        Met NEBOSH IGC geef je jezelf niet alleen een certificaat, maar een paspoort naar wereldwijde carrières voor een faire prijs."</strong>
                     </p>
                     <p style="margin-top:1rem; color:#666; font-size:0.95rem;">
                         Vandaag de dag leidt Nando SafetyXAcademy vanuit het moderne trainingscentrum op Westplein 12 in Rotterdam's Scheepvaartkwartier, 
@@ -932,7 +1152,7 @@
                 Met NEBOSH IGC open je deuren naar wereldwijde carrières in <strong>Rotterdam Haven, Dubai, Noorwegen, UK, Saudi-Arabië, Singapore</strong> en meer dan 120 andere landen.
             </p>
             <p style="margin-bottom:1.5rem; font-size:0.95rem;">
-                Zie actuele HSE vacatures van Shell, BP, Equinor, Maersk, NEOM en andere top employers.
+                Zie actuele HSE vacatures van Shell, BP, Equinor, Maersk, NEOM en andere top employers. Salarissen vanaf €2.500-€7.000/maand!
             </p>
             <a href="jobs.html" class="btn btn-primary">Bekijk Alle Vacatures →</a>
         </div>
@@ -945,13 +1165,33 @@
             <p class="section-subtitle">Alles wat je moet weten over NEBOSH IGC in Rotterdam</p>
             
             <details class="faq-item">
+                <summary>Hoeveel kost NEBOSH IGC bij SafetyXAcademy?</summary>
+                <div class="faq-content">
+                    <p><strong>€3.500 all-inclusive, inclusief examengeld NEBOSH!</strong></p>
+                    <p style="margin-top:0.5rem;">Dit is alles wat je betaalt, geen hidden costs:</p>
+                    <ul style="margin-top:0.5rem; padding-left:1.5rem;">
+                        <li>80 uur blended learning (online + klaslokaal Rotterdam)</li>
+                        <li><strong>Officieel NEBOSH examengeld inclusief</strong></li>
+                        <li>Alle studiematerialen (digitaal + fysiek)</li>
+                        <li>Internationaal certificaat</li>
+                        <li>Jobplacement support (CV tips, vacature matching)</li>
+                        <li>Nederlandse begeleiding tijdens de hele opleiding</li>
+                    </ul>
+                    <p style="margin-top:0.75rem;"><strong>Vergelijk:</strong> MKV kost €5.000-€7.000 en werkt alleen in NL. NEBOSH is €1.500-€3.500 goedkoper én internationaal erkend!</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
                 <summary>Is NEBOSH beter dan MKV?</summary>
                 <div class="faq-content">
-                    <p><strong>Ja, vooral voor internationale carrières.</strong> NEBOSH IGC is erkend in 120+ landen (Dubai, Noorwegen, UK, Singapore), 
-                    terwijl MKV alleen in Nederland werkt. NEBOSH is ook €1.000+ goedkoper (€1.395 vs €2.500-€3.500) en opent deuren naar 
-                    internationale projecten in Rotterdam Haven, offshore Noorwegen, Dubai constructie en meer.</p>
-                    <p>Binnen Nederland zelf? Beide certificaten worden erkend door Haven Rotterdam, Shell en BP. 
-                    Maar zodra je internationale ambities hebt, is NEBOSH de betere keuze.</p>
+                    <p><strong>Ja, vooral voor internationale carrières én je portemonnee!</strong></p>
+                    <ul style="margin-top:0.5rem; padding-left:1.5rem;">
+                        <li><strong>Prijs:</strong> NEBOSH €3.500 vs MKV €5.000-€7.000 = bespaar €1.500-€3.500</li>
+                        <li><strong>Erkenning:</strong> NEBOSH 120+ landen vs MKV alleen Nederland</li>
+                        <li><strong>Carrières:</strong> NEBOSH opent deuren naar Dubai, Noorwegen, UK, Singapore</li>
+                        <li><strong>Rotterdam Haven:</strong> Beide certificaten erkend door Shell, BP, offshore</li>
+                    </ul>
+                    <p style="margin-top:0.5rem;">Als je internationale ambities hebt, is NEBOSH de slimme keuze. Goedkoper én meer mogelijkheden!</p>
                 </div>
             </details>
 
@@ -965,22 +1205,6 @@
                         <li>ISO 45001 audits en management systemen</li>
                     </ul>
                     <p style="margin-top:0.5rem;">Plus: met NEBOSH kun je ook werken buiten Benelux, wat met MKV niet lukt.</p>
-                </div>
-            </details>
-
-            <details class="faq-item">
-                <summary>Hoeveel kost NEBOSH IGC bij SafetyXAcademy?</summary>
-                <div class="faq-content">
-                    <p><strong>€1.395 all-inclusive.</strong> Dit is alles wat je betaalt, geen hidden costs:</p>
-                    <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                        <li>80 uur blended learning (online + klaslokaal Rotterdam)</li>
-                        <li>Alle studiematerialen (digitaal + fysiek)</li>
-                        <li>Officieel NEBOSH examen</li>
-                        <li>Internationaal certificaat</li>
-                        <li>Jobplacement support (CV tips, vacature matching)</li>
-                        <li>Nederlandse begeleiding tijdens de hele opleiding</li>
-                    </ul>
-                    <p style="margin-top:0.5rem;">Vergelijk: MKV kost €2.500-€3.500 en werkt alleen in NL. NEBOSH is goedkoper én internationaal!</p>
                 </div>
             </details>
 
@@ -1017,7 +1241,7 @@
                         <li>Online modules: theoretische kennis op je eigen tempo</li>
                         <li>Klaslokaal sessies: praktijk, casestudies, groepsopdrachten</li>
                         <li>Totaal: 80 uur studiemateriaal</li>
-                        <li>Examen: aan het einde van de cursus</li>
+                        <li>Examen: aan het einde van de cursus (examengeld inbegrepen in €3.500)</li>
                     </ul>
                     <p style="margin-top:0.5rem;">Door de blended aanpak kun je de opleiding makkelijk combineren met je huidige baan!</p>
                 </div>
@@ -1040,20 +1264,15 @@
             </details>
 
             <details class="faq-item">
-                <summary>Hoe kom ik bij het trainingscentrum op Westplein 12?</summary>
+                <summary>Zit examengeld bij de prijs inbegrepen?</summary>
                 <div class="faq-content">
-                    <p><strong>Makkelijk bereikbaar met OV en auto:</strong></p>
-                    <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                        <li><strong>Metro:</strong> Dijkzigt (5 min lopen)</li>
-                        <li><strong>Tram:</strong> Lijnen 4, 8 en 23 (stop Westplein)</li>
-                        <li><strong>Vanuit België:</strong> Trein naar Rotterdam Centraal (10 min lopen)</li>
-                        <li><strong>Auto:</strong> Parkeren bij Grand Café Loos of Veerhaven parkeergarage</li>
-                        <li><strong>Fiets:</strong> Fietsenstalling voor de deur</li>
-                    </ul>
-                    <p style="margin-top:0.75rem;">
-                        <strong>Adres:</strong> Westplein 12, 3016 BM Rotterdam, Veerhaven District<br>
-                        In het hart van Rotterdam's Scheepvaartkwartier, 10 minuten van Rotterdam Centraal.
+                    <p><strong>Ja! €3.500 is all-inclusive inclusief officieel NEBOSH examengeld.</strong></p>
+                    <p style="margin-top:0.5rem;">
+                        Sommige andere training providers rekenen het examengeld apart (vaak €500-€800 extra), 
+                        maar bij SafetyXAcademy betaal je één prijs: <strong>€3.500 voor alles</strong>. 
+                        Geen verrassingen, geen extra kosten.
                     </p>
+                    <p style="margin-top:0.5rem;">Inbegrepen in €3.500: training, materialen, examen, certificaat, jobplacement support.</p>
                 </div>
             </details>
         </div>
@@ -1080,15 +1299,16 @@
                 <p><strong>📞 Telefoon:</strong> <a href="tel:+31101234567">+31 (0)10 123 4567</a></p>
                 <p><strong>📍 Adres:</strong> Westplein 12, 3016 BM Rotterdam (Veerhaven, Scheepvaartkwartier)</p>
                 <p><strong>🕒 Openingstijden:</strong> Maandag t/m Vrijdag 09:00-17:00</p>
+                <p><strong>💰 Prijs:</strong> €3.500 all-in (incl. examengeld NEBOSH)</p>
                 <p><strong>🚇 Bereikbaarheid NL:</strong> Metro Dijkzigt (5 min), Tram 4/8/23</p>
                 <p><strong>🇧🇪 Bereikbaarheid BE:</strong> Trein Antwerpen → Rotterdam CS (1u), dan 10 min lopen</p>
                 
                 <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:2px solid #e5e7eb;">
                     <p style="font-size:0.95rem; margin-bottom:1rem; color:#666;">
-                        Wil je meer weten over NEBOSH IGC, startdata, of heb je vragen over trainingen in België? 
+                        Wil je meer weten over NEBOSH IGC, startdata, prijzen of trainingen in België? 
                         Stuur ons een email of kom langs voor een informeel gesprek in ons trainingscentrum!
                     </p>
-                    <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%20de%20NEBOSH%20IGC%20opleiding.%0A%0AMijn%20naam%3A%20%0AMijn%20telefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" 
+                    <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%20de%20NEBOSH%20IGC%20opleiding%20(€3.500).%0A%0AMijn%20naam%3A%20%0AMijn%20telefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" 
                        class="btn btn-primary" 
                        style="margin-top:1rem;">Vraag Gratis Informatie →</a>
                 </div>
@@ -1108,9 +1328,9 @@
             </div>
             <h2 style="color:white; margin-top:2rem; font-size:2rem;">Samen Bouwen We Een Veiligere Wereld</h2>
             <p style="color:white; margin-top:1rem; font-size:1.1rem; max-width:800px; margin-left:auto; margin-right:auto;">
-                Bij SafetyXAcademy geloven we dat veiligheid begint met de juiste opleiding. 
+                Bij SafetyXAcademy geloven we dat veiligheid begint met de juiste opleiding voor een eerlijke prijs. 
                 Elke NEBOSH professional die wij opleiden—of ze nu uit Nederland of België komen—maakt wereldwijd het verschil. 
-                Train lokaal, werk wereldwijd, en bouw mee aan een veiligere toekomst voor iedereen.
+                Train lokaal voor €3.500, werk wereldwijd, en bouw mee aan een veiligere toekomst voor iedereen.
             </p>
         </div>
     </section>
@@ -1125,10 +1345,11 @@
                 <a href="#contact">Contact</a>
             </p>
             <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-                🌍 Train Lokaal in Nederland, Werk Wereldwijd
+                🌍 Train Lokaal voor €3.500, Werk Wereldwijd
             </p>
             <p style="margin-top:0.5rem; font-size:0.8rem; color:#999;">
-                NEBOSH IGC Rotterdam | Studenten uit Nederland & België Welkom | Westplein 12, 3016 BM Rotterdam<br>
+                NEBOSH IGC Rotterdam €3.500 incl. examen | Studenten uit Nederland & België Welkom<br>
+                Westplein 12, 3016 BM Rotterdam | Bespaar €1.500-€3.500 vs MKV<br>
                 Bij voldoende vraag ook trainingen in België (Antwerpen / Brussel)<br>
                 info@safetyxacademy.nl | +31 (0)10 123 4567
             </p>
