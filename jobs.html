@@ -1,87 +1,291 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vacatures | SafetyXAcademy</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-        }
-        header {
-            background: #0A284B;
-            color: white;
-            padding: 1.5rem 5%;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 5%;
-        }
-        h1 {
-            color: #0A284B;
-            margin: 0;
-        }
-        .job {
-            background: #f8f9fa;
-            padding: 1.2rem;
-            margin: 1rem 0;
-            border-left: 4px solid #FF7F11;
-        }
-        footer {
-            background: #2F3E46;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-        }
-        a {
-            color: #FF7F11;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEBOSH & HSE Jobs – Rotterdam • Dubai • Norway • UK | SafetyXAcademy</title>
+  <meta name="description" content="Wereldwijde HSE/NEBOSH vacatures en carrières: Rotterdam, Dubai (VAE), Noorwegen offshore, UK, Saudi (NEOM), Singapore, Duitsland. Schrijf je in voor updates & jobplacement.">
+
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://www.safetyxacademy.nl/jobs">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.safetyxacademy.nl/jobs">
+  <meta property="og:title" content="NEBOSH & HSE Jobs – Rotterdam • Dubai • Norway • UK | SafetyXAcademy">
+  <meta property="og:description" content="Global HSE/NEBOSH kansen: Rotterdam, Dubai, Noorwegen, UK, Saudi, Singapore, Duitsland. Meld je aan voor updates.">
+  <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.safetyxacademy.nl/jobs">
+  <meta property="twitter:title" content="NEBOSH & HSE Jobs – Rotterdam • Dubai • Norway • UK | SafetyXAcademy">
+  <meta property="twitter:description" content="HSE/NEBOSH vacatures in Rotterdam en wereldwijd.">
+  <meta property="twitter:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
+
+  <!-- Small perf wins -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Styles (matcht je huisstijl) -->
+  <style>
+    :root{
+      --primary:#0A284B; --secondary:#FF7F11; --dark:#2F3E46; --light:#F5F6F8; --muted:#667085;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif; line-height:1.6; color:#333;}
+    header{background:var(--primary); color:#fff; padding:1.25rem 5%;}
+    header a{color:#fff; text-decoration:none}
+    .wrap{max-width:1000px; margin:0 auto; padding:0 5%;}
+    nav.breadcrumbs{font-size:.9rem; color:#cdd6e1; margin:.25rem 0 .5rem}
+    nav.breadcrumbs a{color:#cdd6e1; text-decoration:none}
+    h1{color:#fff; margin:.25rem 0 0}
+    .lead{color:#e9eef7; margin:.5rem 0 1.25rem}
+    .filters{display:flex; gap:.5rem; flex-wrap:wrap; margin:1rem 0 1.5rem}
+    .chip{border:1px solid #d0d5dd; background:#fff; color:#344054; padding:.4rem .8rem; border-radius:999px; font-size:.9rem; cursor:pointer}
+    .chip.active{background:var(--primary); color:#fff; border-color:var(--primary)}
+    .notice{background:var(--light); padding:1rem; border-left:4px solid var(--primary); border-radius:8px; margin:1.5rem 0}
+    .notice h2{margin:.25rem 0 0; color:var(--primary)}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem}
+    .card{background:#fff; border-left:4px solid var(--secondary); border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,.08); padding:1.1rem}
+    .card h3{margin:.25rem 0 .25rem; color:var(--primary)}
+    .meta{color:#667085; font-size:.92rem; display:flex; gap:1rem; flex-wrap:wrap}
+    .meta span{display:inline-flex; align-items:center; gap:.35rem}
+    .cta{margin-top:.75rem}
+    .btn{display:inline-block; padding:.6rem 1rem; border-radius:999px; text-decoration:none; font-weight:600; transition:.2s}
+    .btn-primary{background:var(--secondary); color:#fff}
+    .btn-primary:hover{filter:brightness(1.05); transform:translateY(-1px)}
+    .btn-link{color:#fff; text-decoration:none}
+    .faq{margin:2rem 0}
+    .faq h2{color:var(--primary); margin:0 0 .5rem}
+    .faq details{background:#fff; border:1px solid #EAECF0; border-radius:10px; padding:1rem 1.1rem; margin-bottom:.75rem}
+    footer{background:var(--dark); color:#fff; text-align:center; padding:2rem 5%; margin-top:2rem}
+    footer a{color:#fff}
+  </style>
+
+  <!-- Schema.org: WebPage + CollectionPage + ItemList (safe pre-live) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":["WebPage","CollectionPage"],
+    "name":"NEBOSH & HSE Vacatures – Wereldwijd",
+    "url":"https://www.safetyxacademy.nl/jobs",
+    "breadcrumb":{
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.safetyxacademy.nl/"},
+        {"@type":"ListItem","position":2,"name":"Vacatures","item":"https://www.safetyxacademy.nl/jobs"}
+      ]
+    },
+    "about":[
+      {"@type":"Thing","name":"NEBOSH"},
+      {"@type":"Thing","name":"HSE careers"},
+      {"@type":"Thing","name":"Offshore safety"},
+      {"@type":"Thing","name":"Dubai jobs"},
+      {"@type":"Thing","name":"Norway offshore jobs"},
+      {"@type":"Thing","name":"UK HSE jobs"},
+      {"@type":"Thing","name":"Singapore port jobs"},
+      {"@type":"Thing","name":"Germany chemical industry jobs"},
+      {"@type":"Thing","name":"Rotterdam port jobs"}
+    ],
+    "mainEntity":{
+      "@type":"ItemList",
+      "itemListOrder":"http://schema.org/ItemListOrderDescending",
+      "name":"Vacaturecategorieën",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Haven & Terminal Veiligheid"},
+        {"@type":"ListItem","position":2,"name":"Offshore Safety"},
+        {"@type":"ListItem","position":3,"name":"Industrie & Bouwveiligheid"}
+      ]
+    }
+  }
+  </script>
+
+  <!-- (OPT-IN LATER) Real JobPosting JSON-LD per echte vacature
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"JobPosting",
+    "title":"Offshore Safety Officer",
+    "description":"HTML omschrijving ...",
+    "datePosted":"2025-10-21",
+    "employmentType":"FULL_TIME",
+    "hiringOrganization":{"@type":"Organization","name":"Partnerbedrijf"},
+    "jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Rotterdam","addressRegion":"Zuid-Holland","addressCountry":"NL"}},
+    "applicantLocationRequirements":{"@type":"Country","name":"Netherlands"},
+    "baseSalary":{"@type":"MonetaryAmount","currency":"EUR","value":{"@type":"QuantitativeValue","minValue":5200,"maxValue":6500,"unitText":"MONTH"}},
+    "validThrough":"2025-12-31T23:59"
+  }
+  </script>
+  -->
 </head>
 <body>
-    <header>
-        <h1>Vacatures via SafetyXAcademy</h1>
-        <p><a href="index.html" style="color: white; text-decoration: none;">← Terug naar home</a></p>
-    </header>
-    <div class="container">
-        <p><strong>Ben jij NEBOSH-gecertificeerd en klaar voor de wereldhaven?</strong> Wij koppelen jou aan topbedrijven-vacatures komen online, volg ons!</p>
-        <div class="job-list">
-            <div class="job">
-                <h3>Haveninspecteur – Europoort</h3>
-                <p><strong>Eisen:</strong> NEBOSH IGC, Nederlands/Engels, VCA-VOL.<br>
-                <strong>Salaris:</strong> €3.800–€4.500 bruto.<br>
-                <strong>Werktijden:</strong> Ploegendienst, 3-plaats.<br>
-                <a href="mailto:ard@safetyxacademy.nl?subject=Interesse%20Haveninspecteur">Interesse? →</a></p>
-            </div>
-            <div class="job">
-                <h3>Veiligheidscoördinator – Maasvlakte</h3>
-                <p><strong>Eisen:</strong> NEBOSH + 2+ jaar ervaring, eigen transport.<br>
-                <strong>Salaris:</strong> €4.200–€5.000 + bonussen.<br>
-                <strong>Extra:</strong> Auto van de zaak, laptop.<br>
-                <a href="mailto:ard@safetyxacademy.nl?subject=Interesse%20Veiligheidsco%C3%B6rdinator">Interesse? →</a></p>
-            </div>
-            <div class="job">
-                <h3>Offshore Safety Officer – Noordzee</h3>
-                <p><strong>Eisen:</strong> NEBOSH + BOSIET, Engels vloeiend.<br>
-                <strong>Salaris:</strong> €5.200–€6.500 + overuren.<br>
-                <strong>Rotatie:</strong> 2 weken op / 2 weken thuis.<br>
-                <a href="mailto:ard@safetyxacademy.nl?subject=Interesse%20Offshore%20Officer">Interesse? →</a></p>
-            </div>
-        </div>
-        <p style="font-style: italic;">Vacatures volgen snel. Stuur alvast je CV naar <a href="mailto:ard@safetyxacademy.nl">ard@safetyxacademy.nl</a>.</p>
+
+  <header>
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="/">Home</a> &nbsp;›&nbsp; Vacatures
+      </nav>
+      <h1>NEBOSH & HSE Vacatures – Rotterdam & Wereldwijd</h1>
+      <p class="lead">
+        World-class safety careers. <strong>Rotterdam</strong>, <strong>Dubai</strong>, <strong>Norway Offshore</strong>,
+        <strong>UK</strong>, <strong>Saudi (NEOM)</strong>, <strong>Singapore</strong>, <strong>Germany</strong>.
+        Schrijf je in voor updates & jobplacement-support.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="mailto:info@safetyxacademy.nl?subject=Inschrijven%20Vacature%20Updates">Inschrijven voor updates</a>
+        &nbsp; <a class="btn btn-link" href="/#training">NEBOSH opleiding bekijken →</a>
+      </p>
     </div>
-    <footer>
-        <p>&copy; 2025 SafetyXAcademy | Rotterdam | <a href="privacy.html">Privacy</a></p>
-    </footer>
+  </header>
+
+  <main class="wrap" id="content">
+
+    <!-- Filters -->
+    <div class="filters" aria-label="Filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="rotterdam">Rotterdam</button>
+      <button class="chip" data-filter="dubai">Dubai / UAE</button>
+      <button class="chip" data-filter="norway">Norway Offshore</button>
+      <button class="chip" data-filter="uk">United Kingdom</button>
+      <button class="chip" data-filter="saudi">Saudi / NEOM</button>
+      <button class="chip" data-filter="singapore">Singapore Ports</button>
+      <button class="chip" data-filter="germany">Germany Industry</button>
+    </div>
+
+    <!-- Hotspots (story) -->
+    <section aria-labelledby="hotspots" class="notice">
+      <h2 id="hotspots">🌍 Wereldwijde HSE Hotspots</h2>
+      <p class="lead" style="color:#475467;margin:.5rem 0 0;">
+        <strong>Waar is het “hot” nu?</strong><br>
+        • <em>Dubai / VAE</em> – mega-projecten & industrie (oil & gas, construction)<br>
+        • <em>Saudi (NEOM)</em> – giga-builds, strenge HSE-standaarden<br>
+        • <em>Noorwegen Offshore</em> – olie & gas + wind op zee, sterke veiligheidscultuur<br>
+        • <em>UK</em> – mature HSE-markt, veel compliance-rollen<br>
+        • <em>Singapore</em> – havens & logistiek hub voor Azië<br>
+        • <em>Duitsland</em> – chemie & zware industrie<br>
+        • <em>Rotterdam</em> – Europa’s grootste haven, terminals & raffinage
+      </p>
+    </section>
+
+    <!-- Vacancy cards (placeholders nu; echte content later) -->
+    <section aria-labelledby="results-heading" class="grid">
+      <h2 id="results-heading" class="sr-only" style="position:absolute;left:-9999px;">Vacature resultaten</h2>
+
+      <!-- Rotterdam -->
+      <article class="card" data-tags="rotterdam starter haven">
+        <h3>Haveninspecteur (Starter) — Europoort, Rotterdam</h3>
+        <p class="meta"><span>📍 Rotterdam</span><span>💼 Vast</span><span>💶 €3.800–€4.500</span></p>
+        <p>Kickstart je HSE-loopbaan: inspecties, toolbox, LMRA, rapportages. NL & EN.</p>
+        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=Haveninspecteur%20Rotterdam">Apply via e-mail</a></p>
+      </article>
+
+      <!-- Dubai / UAE -->
+      <article class="card" data-tags="dubai international">
+        <h3>HSE Advisor — Mega-Project (Dubai, UAE)</h3>
+        <p class="meta"><span>📍 Dubai</span><span>💼 Full-time</span><span>🌐 Visa support</span></p>
+        <p>NEBOSH IGC, sterke PTW & incident-investigation skills. Bouw/oil&gas. Internationale teams.</p>
+        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Advisor%20Dubai">Apply via e-mail</a></p>
+      </article>
+
+      <!-- Norway Offshore -->
+      <article class="card" data-tags="norway offshore international">
+        <h3>Offshore Safety Officer — North Sea (Norway)</h3>
+        <p class="meta"><span>📍 Offshore Norway</span><span>🔁 2/2 rotation</span><span>🏷️ BOSIET</span></p>
+        <p>Rig audits, PTW, emergency drills. Engels vereist; Scandinavische safety-cultuur.</p>
+        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=Offshore%20Safety%20Officer%20Norway">Apply via e-mail</a></p>
+      </article>
+
+      <!-- United Kingdom -->
+      <article class="card" data-tags="uk">
+        <h3>HSE Manager — Manufacturing (UK)</h3>
+        <p class="meta"><span>📍 Midlands/UK</span><span>💼 Permanent</span><span>📈 ISO 45001</span></p>
+        <p>Leid HSE-strategie, audits, training. Ervaring met ISO-systemen en change management.</p>
+        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20UK">Apply via e-mail</a></p>
+      </article>
+
+      <!-- Saudi / NEOM -->
+      <article class="card" data-tags="saudi international">
+        <h3>HSE Specialist — NEOM (Saudi Arabia)</h3>
+        <p class="meta"><span>📍 NEOM</span><span>💼 Full-time</span><span>🏗️ Giga-project</span></p>
+        <p>Site HSE governance op schaal: contractor management, high-risk controls, LOTO, confined space.</p>
+        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Specialist%20NEOM">Apply via e-mail</a></p>
+      </article>
+
+      <!-- Singapore Ports -->
+      <article class="card" data-tags="singapore ports international">
+        <h3>Port Safety Supervisor — PSA / Logistics (Singapore)</h3>
+        <p class="meta"><span>📍 Singapore</span><span>⏱️ Shifts</span><span>🚢 Terminals</span></p>
+        <p>Operations safety bij ’s werelds top-havenhub: yard safety, traffic management, incident response.</p>
+        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=Port%20Safety%20Supervisor%20Singapore">Apply via e-mail</a></p>
+      </article>
+
+      <!-- Germany Industry -->
+      <article class="card" data-tags="germany industry international">
+        <h3>HSE Engineer — Chemical Plant (Germany)</h3>
+        <p class="meta"><span>📍 NRW / DE</span><span>💼 Permanent</span><span>🧪 Chemie</span></p>
+        <p>Procesveiligheid, MOC, ATEX, PSM. Duits/Engels. Samenwerking met operations & maintenance.</p>
+        <p class="cta"><a class="btn btn-primary apply-mail" href="mailto:info@safetyxacademy.nl?subject=HSE%20Engineer%20Germany">Apply via e-mail</a></p>
+      </article>
+    </section>
+
+    <!-- Notice -->
+    <div class="notice" role="status">
+      <strong>Heads-up:</strong> Live vacatures worden gefaseerd toegevoegd. Schrijf je in voor vroege toegang en koppeling aan partnerbedrijven.
+    </div>
+
+    <!-- FAQ internationaal -->
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">FAQ: Werken met NEBOSH – internationaal</h2>
+
+      <details>
+        <summary>Kan ik met NEBOSH IGC internationaal werken?</summary>
+        <p>Ja. IGC is wereldwijd bekend (o.a. VAE, Noorwegen, UK, Singapore). Vereist vaak: goed Engels en soms extra certificaten (bijv. BOSIET offshore).</p>
+      </details>
+
+      <details>
+        <summary>Regelen jullie visa of relocatie?</summary>
+        <p>Wij begeleiden richting partnerbedrijven. Visa/relocatie verschilt per land en werkgever; we adviseren per case.</p>
+      </details>
+
+      <details>
+        <summary>Welke markt is nu “hot”?</summary>
+        <p>Veel vraag in Dubai/VAE (mega-projecten), Saudi (NEOM), Noorwegen (offshore), Singapore (havens), en natuurlijk Rotterdam (haven/raffinage).</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> SafetyXAcademy · Rotterdam · <a href="/privacy.html">Privacy</a></p>
+  </footer>
+
+  <script>
+    // Jaar in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simpele filter-UX
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.card');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const tag = chip.dataset.filter;
+        cards.forEach(card => {
+          if(tag === 'all' || card.dataset.tags.includes(tag)){
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // GA4 event op mailto clicks (werkt als gtag op de site staat)
+    document.querySelectorAll('.apply-mail').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        if (typeof gtag === 'function') {
+          gtag('event', 'job_apply_click', { event_category:'jobs', event_label:a.getAttribute('href') });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
