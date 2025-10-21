@@ -483,10 +483,17 @@
         /* Founder Section */
         .founder-section {
             background: var(--light-bg);
+        }
+
+        .founder-content {
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
             align-items: center;
+        }
+
+        .founder-image {
+            text-align: center;
         }
 
         .founder-image img {
@@ -495,6 +502,10 @@
             height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .founder-text {
+            /* Text styling handled in content */
         }
 
         /* Location Section */
@@ -541,7 +552,10 @@
             .section-title { font-size: 2rem; }
             .training-grid { grid-template-columns: repeat(2, 1fr); }
             .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-            .founder-section { grid-template-columns: 1fr 1.5fr; }
+            .founder-content { 
+                grid-template-columns: 400px 1fr; 
+                gap: 3rem;
+            }
             .faq-item summary { 
                 font-size: 1rem;
                 padding: 1.25rem 1.25rem 1.25rem 3.25rem;
@@ -563,6 +577,16 @@
             .benefits-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
             .comparison-table th,
             .comparison-table td { padding: 1rem; font-size: 1rem; }
+            .founder-content { 
+                grid-template-columns: 400px 1fr; 
+                gap: 4rem;
+            }
+            .founder-text .section-title {
+                text-align: left;
+            }
+            .founder-image img {
+                max-width: 380px;
+            }
             .faq-item summary { 
                 font-size: 1.1rem; 
                 padding: 1.5rem 1.5rem 1.5rem 3.5rem;
@@ -825,35 +849,37 @@
 
     <!-- Founder Section WITH Image -->
     <section class="founder-section">
-        <div class="container" style="display:grid; grid-template-columns:1fr; gap:2rem;">
-            <div class="founder-image" style="text-align:center;">
-                <img src="nando-breure-founder.webp" 
-                     alt="Nando Breure oprichter SafetyXAcademy Rotterdam"
-                     width="500"
-                     height="500"
-                     loading="lazy">
-            </div>
-            <div>
-                <h2 class="section-title">Ontmoet Nando Breure</h2>
-                <p style="font-size:1.1rem; margin-bottom:1rem; line-height:1.8;">
-                    Nando Breure is de visionaire oprichter van SafetyXAcademy, met tientallen jaren ervaring in de veiligheids- en maritieme sector. 
-                    Na een succesvolle internationale carrière in HSE management bij Shell, BP en offshore bedrijven in Rotterdam, Dubai en Noorwegen, 
-                    besloot Nando zijn kennis en netwerk te gebruiken om de volgende generatie HSE professionals op te leiden.
-                </p>
-                <p style="font-size:1rem; margin-bottom:1rem; line-height:1.7; color:#666;">
-                    "Ik zag te vaak dat Nederlandse professionals vastliepen door gebrek aan internationale certificering. 
-                    MKV werkt goed in Nederland, maar zodra je de grens over wil - of zelfs in Rotterdam op offshore projecten wil werken - 
-                    is NEBOSH de gouden standaard. Daarom richtte ik SafetyXAcademy op: om mensen lokaal in Rotterdam te trainen 
-                    met wereldwijd erkende certificering, zodat ze overal kunnen werken waar ze willen."
-                </p>
-                <p style="font-style:italic; font-size:1.05rem; padding:1.5rem; background:white; border-left:4px solid var(--secondary); border-radius:8px;">
-                    <strong>"Veiligheid gaat niet alleen over naleving—het gaat om het creëren van een cultuur waarin elke werknemer elke dag veilig thuiskomt. 
-                    Met NEBOSH IGC geef je jezelf niet alleen een certificaat, maar een paspoort naar wereldwijde carrières."</strong>
-                </p>
-                <p style="margin-top:1rem; color:#666; font-size:0.95rem;">
-                    Vandaag de dag leidt Nando SafetyXAcademy vanuit het moderne trainingscentrum op Westplein 12 in Rotterdam's Scheepvaartkwartier, 
-                    waar hij samen met ervaren instructeurs honderden studenten per jaar opleidt tot NEBOSH IGC gecertificeerde HSE professionals.
-                </p>
+        <div class="container">
+            <div class="founder-content">
+                <div class="founder-image">
+                    <img src="nando-breure-founder.webp" 
+                         alt="Nando Breure oprichter SafetyXAcademy Rotterdam"
+                         width="500"
+                         height="500"
+                         loading="lazy">
+                </div>
+                <div class="founder-text">
+                    <h2 class="section-title">Ontmoet Nando Breure</h2>
+                    <p style="font-size:1.1rem; margin-bottom:1rem; line-height:1.8;">
+                        Nando Breure is de visionaire oprichter van SafetyXAcademy, met tientallen jaren ervaring in de veiligheids- en maritieme sector. 
+                        Na een succesvolle internationale carrière in HSE management bij Shell, BP en offshore bedrijven in Rotterdam, Dubai en Noorwegen, 
+                        besloot Nando zijn kennis en netwerk te gebruiken om de volgende generatie HSE professionals op te leiden.
+                    </p>
+                    <p style="font-size:1rem; margin-bottom:1rem; line-height:1.7; color:#666;">
+                        "Ik zag te vaak dat Nederlandse professionals vastliepen door gebrek aan internationale certificering. 
+                        MKV werkt goed in Nederland, maar zodra je de grens over wil - of zelfs in Rotterdam op offshore projecten wil werken - 
+                        is NEBOSH de gouden standaard. Daarom richtte ik SafetyXAcademy op: om mensen lokaal in Rotterdam te trainen 
+                        met wereldwijd erkende certificering, zodat ze overal kunnen werken waar ze willen."
+                    </p>
+                    <p style="font-style:italic; font-size:1.05rem; padding:1.5rem; background:white; border-left:4px solid var(--secondary); border-radius:8px;">
+                        <strong>"Veiligheid gaat niet alleen over naleving—het gaat om het creëren van een cultuur waarin elke werknemer elke dag veilig thuiskomt. 
+                        Met NEBOSH IGC geef je jezelf niet alleen een certificaat, maar een paspoort naar wereldwijde carrières."</strong>
+                    </p>
+                    <p style="margin-top:1rem; color:#666; font-size:0.95rem;">
+                        Vandaag de dag leidt Nando SafetyXAcademy vanuit het moderne trainingscentrum op Westplein 12 in Rotterdam's Scheepvaartkwartier, 
+                        waar hij samen met ervaren instructeurs honderden studenten per jaar opleidt tot NEBOSH IGC gecertificeerde HSE professionals.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
