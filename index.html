@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>NEBOSH IGC Rotterdam Westplein 12 | SafetyXAcademy - Train Lokaal, Werk Wereldwijd</title>
-    <meta name="description" content="NEBOSH IGC opleiding Rotterdam Westplein 12, Veerhaven District. Train in Scheepvaartkwartier, werk wereldwijd. €1.395 all-in, Nederlandse begeleiding, jobplacement.">
-    <meta name="keywords" content="NEBOSH Rotterdam, NEBOSH IGC, Westplein 12, Veerhaven, MKV alternatief, HSE training Rotterdam, offshore training">
+    <title>NEBOSH IGC Nederland & België | SafetyXAcademy Rotterdam - MKV Alternatief</title>
+    <meta name="description" content="NEBOSH IGC opleiding Rotterdam. Studenten uit Nederland & België welkom. €1.395 all-in, €1000+ goedkoper dan MKV. Train lokaal, werk wereldwijd in 120+ landen.">
+    <meta name="keywords" content="NEBOSH Rotterdam, NEBOSH Nederland, NEBOSH België, MKV alternatief, HSE training, offshore training, NEBOSH IGC">
     
     <!-- Canonical & Open Graph -->
     <link rel="canonical" href="https://www.safetyxacademy.nl/">
-    <meta property="og:title" content="NEBOSH IGC Rotterdam | SafetyXAcademy">
-    <meta property="og:description" content="Train lokaal Rotterdam, werk wereldwijd. NEBOSH IGC €1.395 all-in.">
+    <meta property="og:title" content="NEBOSH IGC Nederland & België | SafetyXAcademy">
+    <meta property="og:description" content="Train in Rotterdam, studenten uit NL & BE welkom. NEBOSH IGC €1.395, beter dan MKV.">
     <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
     <meta property="og:url" content="https://www.safetyxacademy.nl/">
     
@@ -128,34 +128,54 @@
             margin-bottom: 0.75rem;
         }
 
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
         .hero p {
             font-size: 1rem;
             margin-bottom: 1.5rem;
             line-height: 1.7;
         }
 
-        .hero-stats {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-
-        .stat {
-            text-align: center;
-            min-width: 120px;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
+        .hero-tagline {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
             color: var(--secondary);
-            margin-bottom: 0.25rem;
         }
 
-        .stat-label {
+        /* Orange Stats Bar */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--secondary), #ff9533);
+            padding: 1rem 4%;
+            margin-top: 2rem;
+        }
+
+        .stats-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .stat-item {
+            color: white;
+            font-weight: 600;
             font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .stat-item:before {
+            content: "✓";
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
         }
 
         .cta-buttons {
@@ -362,6 +382,21 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Belgium Notice Box */
+        .belgium-notice {
+            background: linear-gradient(135deg, #fee, #fdd);
+            border-left: 4px solid #c00;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .belgium-notice h4 {
+            color: #c00;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
         /* Jobs CTA */
         .jobs-cta {
             background: linear-gradient(135deg, var(--primary), var(--dark));
@@ -504,10 +539,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
-        .founder-text {
-            /* Text styling handled in content */
-        }
-
         /* Location Section */
         .location-map img {
             width: 100%;
@@ -549,6 +580,7 @@
             .logo { font-size: 1.3rem; }
             nav a { font-size: 0.95rem; }
             .hero h1 { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1.2rem; }
             .section-title { font-size: 2rem; }
             .training-grid { grid-template-columns: repeat(2, 1fr); }
             .benefits-grid { grid-template-columns: repeat(2, 1fr); }
@@ -556,6 +588,7 @@
                 grid-template-columns: 400px 1fr; 
                 gap: 3rem;
             }
+            .stat-item { font-size: 1rem; }
             .faq-item summary { 
                 font-size: 1rem;
                 padding: 1.25rem 1.25rem 1.25rem 3.25rem;
@@ -569,6 +602,7 @@
             nav a { font-size: 1rem; }
             .hero { padding: 4rem 5%; margin-top: 4.5rem; }
             .hero h1 { font-size: 3rem; }
+            .hero-subtitle { font-size: 1.3rem; }
             .hero p { font-size: 1.2rem; }
             .btn { padding: 1rem 2rem; font-size: 1.1rem; }
             section { padding: 4rem 5%; }
@@ -587,6 +621,7 @@
             .founder-image img {
                 max-width: 380px;
             }
+            .stat-item { font-size: 1.1rem; }
             .faq-item summary { 
                 font-size: 1.1rem; 
                 padding: 1.5rem 1.5rem 1.5rem 3.5rem;
@@ -611,35 +646,33 @@
         <!-- Hero Main Image -->
         <div class="hero-image-main">
             <img src="nebosh-igc-training-rotterdam-students.webp" 
-                 alt="NEBOSH IGC training studenten Rotterdam SafetyXAcademy"
+                 alt="NEBOSH IGC training studenten Rotterdam SafetyXAcademy Nederland België"
                  width="1920"
                  height="1280"
                  loading="eager">
         </div>
 
-        <h1>Train Lokaal in Rotterdam.<br>Werk Wereldwijd.</h1>
-        <p>Word NEBOSH IGC gecertificeerd met Nederlandse begeleiding en open de deur naar carrières in 120+ landen. Train in ons moderne klaslokaal op Westplein 12 in het hart van Rotterdam's Scheepvaartkwartier, vlakbij Veerhaven, en begin aan een wereldwijde carrière in Health, Safety & Environment.</p>
+        <h1>NEBOSH IGC – Het Slimme Alternatief voor MKV</h1>
+        <p class="hero-subtitle">Goedkoper, Internationaal Erkend & Meer Carrièrekansen</p>
+        <p>Train in Rotterdam met studenten uit heel Nederland én België. NEBOSH IGC is €1.000+ goedkoper dan MKV én opent deuren naar carrières in 120+ landen. Bij voldoende belangstelling organiseren we ook trainingen in België.</p>
         
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-number">€1.395</div>
-                <div class="stat-label">All-Inclusive</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">120+</div>
-                <div class="stat-label">Landen</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">10-12</div>
-                <div class="stat-label">Weken</div>
-            </div>
+        <div class="cta-buttons">
+            <a href="#training" class="btn btn-primary">Bekijk Opleiding</a>
+            <a href="jobs.html" class="btn btn-secondary">Zie Vacatures</a>
         </div>
 
-        <div class="cta-buttons">
-            <a href="#training" class="btn btn-primary">Start Je NEBOSH Opleiding</a>
-            <a href="jobs.html" class="btn btn-secondary">Bekijk Vacatures</a>
-        </div>
+        <p class="hero-tagline">🌍 Train Lokaal in Nederland, Werk Wereldwijd</p>
     </section>
+
+    <!-- Orange Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-bar-content">
+            <div class="stat-item">€1.395 All-In</div>
+            <div class="stat-item">Nederland & België</div>
+            <div class="stat-item">120+ Landen</div>
+            <div class="stat-item">Beter dan MKV</div>
+        </div>
+    </div>
 
     <!-- NEBOSH vs MKV Comparison -->
     <section class="comparison">
@@ -712,7 +745,13 @@
     <section id="training">
         <div class="container">
             <h2 class="section-title">NEBOSH IGC Opleiding Rotterdam</h2>
-            <p class="section-subtitle">Moderne training faciliteiten op Westplein 12 in het hart van Rotterdam's Scheepvaartkwartier. Makkelijk bereikbaar met metro (Dijkzigt), tram en bus. Parkeren mogelijk bij Grand Café Loos of in de buurt van Veerhaven.</p>
+            <p class="section-subtitle">Moderne training faciliteiten op Westplein 12 in het hart van Rotterdam's Scheepvaartkwartier. Makkelijk bereikbaar voor studenten uit heel Nederland.</p>
+            
+            <!-- Belgium Notice -->
+            <div class="belgium-notice">
+                <h4>🇧🇪 Belgische Studenten Welkom!</h4>
+                <p>Woon je in Vlaanderen of Brussel? Je bent welkom in Rotterdam voor onze NEBOSH IGC training. Bij voldoende belangstelling (minimaal 8-10 studenten) organiseren we ook groepen in <strong>Antwerpen</strong> of <strong>Brussel</strong>. Interesse? Laat het ons weten via <a href="mailto:info@safetyxacademy.nl" style="color:#c00; text-decoration:underline;">info@safetyxacademy.nl</a></p>
+            </div>
             
             <!-- Klaslokaal Image -->
             <div class="training-image">
@@ -785,7 +824,8 @@
                 <p style="text-align:center; color:#666; font-size:0.95rem;">
                     Ons moderne trainingscentrum ligt in het hart van Rotterdam's maritieme district, 
                     omringd door de haven, scheepvaartbedrijven en internationale HSE kantoren. 
-                    Perfect bereikbaar met openbaar vervoer en vlakbij de A20.
+                    Perfect bereikbaar met openbaar vervoer vanuit heel Nederland en België. 
+                    Vanuit Antwerpen ben je er in 1 uur met de trein!
                 </p>
             </div>
         </div>
@@ -806,7 +846,7 @@
                 <div class="benefit-card">
                     <div class="icon">🎯</div>
                     <h3>Lokaal Rotterdam</h3>
-                    <p>Westplein 12, Veerhaven District, Scheepvaartkwartier</p>
+                    <p>Westplein 12, 1u vanuit Antwerpen</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">💼</div>
@@ -820,7 +860,7 @@
                 </div>
                 <div class="benefit-card">
                     <div class="icon">💶</div>
-                    <h3>Beste Prijs Nederland</h3>
+                    <h3>Beste Prijs</h3>
                     <p>€1.395 all-in, €1000+ goedkoper dan MKV</p>
                 </div>
                 <div class="benefit-card">
@@ -839,9 +879,9 @@
                     <p>Dubai, Noorwegen, UK, Saudi, Singapore, EU</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="icon">🎓</div>
-                    <h3>ISO 45001 Basis</h3>
-                    <p>Internationale HSE management kennis</p>
+                    <div class="icon">🇧🇪</div>
+                    <h3>België Studenten Welkom</h3>
+                    <p>Bij vraag ook trainingen in België</p>
                 </div>
             </div>
         </div>
@@ -866,9 +906,9 @@
                         besloot Nando zijn kennis en netwerk te gebruiken om de volgende generatie HSE professionals op te leiden.
                     </p>
                     <p style="font-size:1rem; margin-bottom:1rem; line-height:1.7; color:#666;">
-                        "Ik zag te vaak dat Nederlandse professionals vastliepen door gebrek aan internationale certificering. 
+                        "Ik zag te vaak dat Nederlandse én Belgische professionals vastliepen door gebrek aan internationale certificering. 
                         MKV werkt goed in Nederland, maar zodra je de grens over wil - of zelfs in Rotterdam op offshore projecten wil werken - 
-                        is NEBOSH de gouden standaard. Daarom richtte ik SafetyXAcademy op: om mensen lokaal in Rotterdam te trainen 
+                        is NEBOSH de gouden standaard. Daarom richtte ik SafetyXAcademy op: om mensen lokaal te trainen 
                         met wereldwijd erkende certificering, zodat ze overal kunnen werken waar ze willen."
                     </p>
                     <p style="font-style:italic; font-size:1.05rem; padding:1.5rem; background:white; border-left:4px solid var(--secondary); border-radius:8px;">
@@ -877,7 +917,7 @@
                     </p>
                     <p style="margin-top:1rem; color:#666; font-size:0.95rem;">
                         Vandaag de dag leidt Nando SafetyXAcademy vanuit het moderne trainingscentrum op Westplein 12 in Rotterdam's Scheepvaartkwartier, 
-                        waar hij samen met ervaren instructeurs honderden studenten per jaar opleidt tot NEBOSH IGC gecertificeerde HSE professionals.
+                        waar hij samen met ervaren instructeurs honderden studenten per jaar uit Nederland én België opleidt tot NEBOSH IGC gecertificeerde HSE professionals.
                     </p>
                 </div>
             </div>
@@ -916,16 +956,15 @@
             </details>
 
             <details class="faq-item">
-                <summary>Wordt NEBOSH erkend in Nederland?</summary>
+                <summary>Wordt NEBOSH erkend in Nederland & België?</summary>
                 <div class="faq-content">
-                    <p><strong>Ja, absoluut!</strong> NEBOSH IGC wordt erkend door alle grote werkgevers in Nederland:</p>
+                    <p><strong>Ja, absoluut! In beide landen.</strong> NEBOSH IGC wordt erkend door alle grote werkgevers:</p>
                     <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                        <li>Haven Rotterdam (Shell, BP, ExxonMobil, Vopak)</li>
-                        <li>Offshore bedrijven (SBM Offshore, Heerema)</li>
-                        <li>Internationale constructie (BAM, Ballast Nedam op buitenlandse projecten)</li>
+                        <li><strong>Nederland:</strong> Haven Rotterdam (Shell, BP), offshore, constructie</li>
+                        <li><strong>België:</strong> Haven Antwerpen, petrochemie, internationale bedrijven</li>
                         <li>ISO 45001 audits en management systemen</li>
                     </ul>
-                    <p style="margin-top:0.5rem;">Plus: met NEBOSH kun je ook werken buiten Nederland, wat met MKV niet lukt.</p>
+                    <p style="margin-top:0.5rem;">Plus: met NEBOSH kun je ook werken buiten Benelux, wat met MKV niet lukt.</p>
                 </div>
             </details>
 
@@ -946,17 +985,25 @@
             </details>
 
             <details class="faq-item">
+                <summary>Kan ik als Belgische student meedoen?</summary>
+                <div class="faq-content">
+                    <p><strong>Ja, absoluut!</strong> Belgische studenten zijn van harte welkom in Rotterdam. De training is in het Nederlands, dus perfect voor Vlamingen.</p>
+                    <p style="margin-top:0.5rem;"><strong>Reizen naar Rotterdam:</strong> Vanuit Antwerpen ben je er in 1 uur met de trein. Ons trainingscentrum ligt op 10 minuten lopen van Rotterdam Centraal.</p>
+                    <p style="margin-top:0.5rem;"><strong>Training in België:</strong> Bij voldoende belangstelling (8-10 studenten) organiseren we ook groepen in Antwerpen of Brussel. Interesse? Mail naar info@safetyxacademy.nl</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
                 <summary>Waar kan ik werken met NEBOSH IGC?</summary>
                 <div class="faq-content">
                     <p><strong>Wereldwijd in 120+ landen.</strong> Populaire bestemmingen voor NEBOSH professionals:</p>
                     <ul style="margin-top:0.5rem; padding-left:1.5rem;">
                         <li><strong>Nederland:</strong> Haven Rotterdam (Shell, BP), offshore, constructie</li>
+                        <li><strong>België:</strong> Haven Antwerpen, petrochemie, Brussel</li>
                         <li><strong>Dubai & Middle East:</strong> NEOM (Saudi), Expo projecten, oil & gas</li>
                         <li><strong>Noorwegen:</strong> Offshore platforms (Equinor, Aker Solutions)</li>
                         <li><strong>UK:</strong> Londense constructie, HSE consultancy</li>
                         <li><strong>Singapore:</strong> Petrochemie, shipping, international projects</li>
-                        <li><strong>Duitsland:</strong> Manufacturing, automotive safety</li>
-                        <li><strong>Canada & Australië:</strong> Mining, oil & gas</li>
                     </ul>
                     <p style="margin-top:0.75rem;"><a href="jobs.html" style="color:var(--secondary); text-decoration:underline; font-weight:600;">→ Bekijk actuele internationale HSE vacatures</a></p>
                 </div>
@@ -977,16 +1024,6 @@
             </details>
 
             <details class="faq-item">
-                <summary>Wat is het verschil tussen NEBOSH IGC en ISO 45001?</summary>
-                <div class="faq-content">
-                    <p><strong>NEBOSH IGC is een opleiding, ISO 45001 is een management systeem.</strong></p>
-                    <p style="margin-top:0.5rem;">NEBOSH IGC leert je de fundamenten van HSE management, inclusief de basis van ISO 45001. 
-                    Veel bedrijven zoeken HSE professionals met NEBOSH certificering om hun ISO 45001 systemen te implementeren en auditen.</p>
-                    <p style="margin-top:0.5rem;">Met NEBOSH IGC heb je de kennis om te werken met ISO 45001, OHSAS 18001 en andere internationale safety standards.</p>
-                </div>
-            </details>
-
-            <details class="faq-item">
                 <summary>Is de training in het Nederlands of Engels?</summary>
                 <div class="faq-content">
                     <p><strong>Training in Nederlands, examen in Engels.</strong></p>
@@ -1003,42 +1040,13 @@
             </details>
 
             <details class="faq-item">
-                <summary>Kan ik de opleiding combineren met mijn baan?</summary>
-                <div class="faq-content">
-                    <p><strong>Ja, dat is juist het voordeel van blended learning!</strong></p>
-                    <p style="margin-top:0.5rem;">
-                        De online modules kun je doen wanneer het jou uitkomt—'s avonds, in het weekend, of tijdens pauzes op werk. 
-                        De klaslokaal sessies plannen we meestal op zaterdagen of avonden in Rotterdam.
-                    </p>
-                    <p style="margin-top:0.5rem;">
-                        De meeste studenten werken fulltime tijdens de NEBOSH opleiding. 
-                        Rekening houden met ongeveer 8-10 uur per week aan studie.
-                    </p>
-                </div>
-            </details>
-
-            <details class="faq-item">
-                <summary>Wat voor banen kan ik krijgen na NEBOSH IGC?</summary>
-                <div class="faq-content">
-                    <p><strong>HSE Officer, Safety Coordinator, Safety Advisor, HSE Manager.</strong> Typische startposities:</p>
-                    <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                        <li><strong>HSE Officer:</strong> €2.500-€3.500/maand (starter)</li>
-                        <li><strong>Safety Coordinator:</strong> €3.000-€4.500/maand</li>
-                        <li><strong>HSE Advisor:</strong> €3.500-€5.000/maand</li>
-                        <li><strong>HSE Manager:</strong> €4.500-€7.000/maand (met ervaring)</li>
-                    </ul>
-                    <p style="margin-top:0.5rem;">In Dubai en Noorwegen liggen salarissen vaak 30-50% hoger, met tax-free opties!</p>
-                </div>
-            </details>
-
-            <details class="faq-item">
                 <summary>Hoe kom ik bij het trainingscentrum op Westplein 12?</summary>
                 <div class="faq-content">
                     <p><strong>Makkelijk bereikbaar met OV en auto:</strong></p>
                     <ul style="margin-top:0.5rem; padding-left:1.5rem;">
                         <li><strong>Metro:</strong> Dijkzigt (5 min lopen)</li>
                         <li><strong>Tram:</strong> Lijnen 4, 8 en 23 (stop Westplein)</li>
-                        <li><strong>Bus:</strong> Meerdere lijnen stoppen bij Coolsingel</li>
+                        <li><strong>Vanuit België:</strong> Trein naar Rotterdam Centraal (10 min lopen)</li>
                         <li><strong>Auto:</strong> Parkeren bij Grand Café Loos of Veerhaven parkeergarage</li>
                         <li><strong>Fiets:</strong> Fietsenstalling voor de deur</li>
                     </ul>
@@ -1055,7 +1063,7 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Start Je HSE Carrière</h2>
-            <p class="section-subtitle">Westplein 12, 3016 BM Rotterdam - Veerhaven District, Scheepvaartkwartier</p>
+            <p class="section-subtitle">Westplein 12, 3016 BM Rotterdam - Studenten uit Nederland & België Welkom</p>
             
             <!-- Location Map Image -->
             <div class="location-map" style="margin:2rem 0;">
@@ -1072,15 +1080,15 @@
                 <p><strong>📞 Telefoon:</strong> <a href="tel:+31101234567">+31 (0)10 123 4567</a></p>
                 <p><strong>📍 Adres:</strong> Westplein 12, 3016 BM Rotterdam (Veerhaven, Scheepvaartkwartier)</p>
                 <p><strong>🕒 Openingstijden:</strong> Maandag t/m Vrijdag 09:00-17:00</p>
-                <p><strong>🚇 Bereikbaarheid:</strong> Metro Dijkzigt (5 min), Tram 4/8/23, Bus meerdere lijnen</p>
-                <p><strong>🅿️ Parkeren:</strong> Grand Café Loos, Veerhaven parkeergarage</p>
+                <p><strong>🚇 Bereikbaarheid NL:</strong> Metro Dijkzigt (5 min), Tram 4/8/23</p>
+                <p><strong>🇧🇪 Bereikbaarheid BE:</strong> Trein Antwerpen → Rotterdam CS (1u), dan 10 min lopen</p>
                 
                 <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:2px solid #e5e7eb;">
                     <p style="font-size:0.95rem; margin-bottom:1rem; color:#666;">
-                        Wil je meer weten over NEBOSH IGC, startdata, of heb je vragen over je carrièremogelijkheden? 
+                        Wil je meer weten over NEBOSH IGC, startdata, of heb je vragen over trainingen in België? 
                         Stuur ons een email of kom langs voor een informeel gesprek in ons trainingscentrum!
                     </p>
-                    <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%20de%20NEBOSH%20IGC%20opleiding%20in%20Rotterdam.%0A%0AMijn%20naam%3A%20%0AMijn%20telefoon%3A%20%0A%0AGroet%2C" 
+                    <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%20de%20NEBOSH%20IGC%20opleiding.%0A%0AMijn%20naam%3A%20%0AMijn%20telefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" 
                        class="btn btn-primary" 
                        style="margin-top:1rem;">Vraag Gratis Informatie →</a>
                 </div>
@@ -1101,8 +1109,8 @@
             <h2 style="color:white; margin-top:2rem; font-size:2rem;">Samen Bouwen We Een Veiligere Wereld</h2>
             <p style="color:white; margin-top:1rem; font-size:1.1rem; max-width:800px; margin-left:auto; margin-right:auto;">
                 Bij SafetyXAcademy geloven we dat veiligheid begint met de juiste opleiding. 
-                Elke NEBOSH professional die wij opleiden, maakt wereldwijd het verschil—of dat nu in Rotterdam, Dubai, 
-                Noorwegen of Singapore is. Train lokaal, werk wereldwijd, en bouw mee aan een veiligere toekomst voor iedereen.
+                Elke NEBOSH professional die wij opleiden—of ze nu uit Nederland of België komen—maakt wereldwijd het verschil. 
+                Train lokaal, werk wereldwijd, en bouw mee aan een veiligere toekomst voor iedereen.
             </p>
         </div>
     </section>
@@ -1117,10 +1125,11 @@
                 <a href="#contact">Contact</a>
             </p>
             <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-                🌍 Train Lokaal in Rotterdam, Werk Wereldwijd
+                🌍 Train Lokaal in Nederland, Werk Wereldwijd
             </p>
             <p style="margin-top:0.5rem; font-size:0.8rem; color:#999;">
-                NEBOSH IGC Rotterdam | Westplein 12, 3016 BM Rotterdam | Veerhaven District, Scheepvaartkwartier<br>
+                NEBOSH IGC Rotterdam | Studenten uit Nederland & België Welkom | Westplein 12, 3016 BM Rotterdam<br>
+                Bij voldoende vraag ook trainingen in België (Antwerpen / Brussel)<br>
                 info@safetyxacademy.nl | +31 (0)10 123 4567
             </p>
         </div>
