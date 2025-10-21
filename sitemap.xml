@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <!-- Homepage - Highest Priority -->
   <url>
-    <loc>https://safetyxacademy.nl/</loc>
-    <lastmod>2025-10-18</lastmod>
+    <loc>https://www.safetyxacademy.nl/</loc>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Privacy Policy - Lower Priority -->
+  <!-- Jobs/Vacatures Page - High Priority (content page) -->
   <url>
-    <loc>https://safetyxacademy.nl/privacy.html</loc>
-    <lastmod>2025-10-17</lastmod>
+    <loc>https://www.safetyxacademy.nl/jobs</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Privacy Policy - Lower Priority (legal page) -->
+  <url>
+    <loc>https://www.safetyxacademy.nl/privacy.html</loc>
+    <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
