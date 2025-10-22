@@ -883,6 +883,51 @@
             box-shadow: 0 5px 20px rgba(255, 127, 17, 0.3);
         }
 
+    
+        /* Contact Section - Compact Layout Responsive */
+        .contact-compact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        /* Desktop: Maps + Info naast elkaar */
+        @media (min-width: 1024px) {
+            .contact-compact-grid {
+                grid-template-columns: 1.5fr 1fr; /* 60% / 40% */
+            }
+        }
+        
+        /* Tablet: Stack maar met betere spacing */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .contact-compact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .google-maps-wrapper {
+                height: 400px !important;
+            }
+        }
+        
+        /* Mobile: Stack alles */
+        @media (max-width: 767px) {
+            .google-maps-wrapper {
+                height: 350px !important;
+            }
+            
+            .contact-info-sidebar {
+                padding: 1.5rem !important;
+            }
+        }
+        
+        .office-photo-hero img {
+            transition: transform 0.3s ease;
+        }
+        
+        .office-photo-hero:hover img {
+            transform: scale(1.02);
+        }
+
     </style>
 
     <!-- JSON-LD Structured Data voor SEO -->
@@ -1647,13 +1692,13 @@
         </div>
     </section>
 
-        <!-- Contact Section - UPGRADED with Office Photo + Google Maps -->
+            <!-- Contact Section - COMPACT LAYOUT -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Start Je HSE Carrière in Rotterdam</h2>
             <p class="section-subtitle">Westplein 12, 3016 BM Rotterdam - Studenten uit Nederland & België Welkom</p>
             
-            <!-- Office Building Photo - Hero Style -->
+            <!-- Office Building Photo - Full Width Hero -->
             <div class="office-photo-hero" style="margin: 2rem 0; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
                 <img src="safetyxacademy-kantoor-westplein-rotterdam-nebosh-training.webp" 
                      alt="SafetyXAcademy NEBOSH trainingscentrum Westplein 12 Rotterdam - Klassiek kantoorgebouw Veerhaven district"
@@ -1664,15 +1709,15 @@
                      loading="lazy">
             </div>
             
-            <!-- Contact Grid: Google Maps + Info + Static Map -->
-            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
+            <!-- COMPACT Grid: Google Maps (60%) + Contact Info (40%) -->
+            <div class="contact-compact-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
                 
                 <!-- Google Maps Iframe -->
-                <div class="google-maps-container" style="position: relative; width: 100%; height: 450px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <div class="google-maps-wrapper" style="position: relative; width: 100%; height: 500px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.866888888889!2d4.4660513!3d51.9126089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c433a3a7e7e8e7%3A0x1234567890abcdef!2sWestplein%2012%2C%203016%20BM%20Rotterdam%2C%20Nederland!5e0!3m2!1snl!2snl!4v1705930000000!5m2!1snl!2snl"
                         width="100%" 
-                        height="450" 
+                        height="500" 
                         style="border:0; display: block;" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -1681,84 +1726,95 @@
                         aria-label="Google Maps locatie SafetyXAcademy Rotterdam"></iframe>
                 </div>
                 
-                <!-- Contact Info + Static Map in 2 columns -->
-                <div class="contact-info-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start;">
+                <!-- Contact Info Sidebar -->
+                <div class="contact-info-sidebar" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.4rem;">SafetyXAcademy Rotterdam</h3>
                     
-                    <!-- Contact Information -->
-                    <div class="contact-info" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem;">SafetyXAcademy Rotterdam</h3>
-                        
-                        <div style="display: grid; gap: 1rem;">
-                            <p style="display: flex; align-items: start; gap: 0.75rem; line-height: 1.6;">
-                                <strong style="min-width: 100px; color: var(--primary);">📍 Adres:</strong>
-                                <span>Westplein 12, 3016 BM Rotterdam<br>
-                                <small style="color: #666;">(Veerhaven, Scheepvaartkwartier)</small></span>
-                            </p>
-                            
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <strong style="min-width: 100px; color: var(--primary);">📧 Email:</strong>
-                                <a href="mailto:info@safetyxacademy.nl" style="color: var(--secondary); text-decoration: none; font-weight: 600;">info@safetyxacademy.nl</a>
-                            </p>
-                            
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <strong style="min-width: 100px; color: var(--primary);">📞 Telefoon:</strong>
-                                <a href="tel:+31101234567" style="color: var(--secondary); text-decoration: none; font-weight: 600;">+31 (0)10 123 4567</a>
-                            </p>
-                            
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <strong style="min-width: 100px; color: var(--primary);">🕒 Openingstijden:</strong>
-                                <span>Ma-Vr 09:00-17:00</span>
-                            </p>
-                            
-                            <p style="display: flex; align-items: center; gap: 0.75rem;">
-                                <strong style="min-width: 100px; color: var(--primary);">💰 Prijs:</strong>
-                                <span style="color: var(--success); font-weight: 700; font-size: 1.1rem;">€3.500 all-in</span>
-                            </p>
+                    <div style="display: grid; gap: 1rem; margin-bottom: 2rem;">
+                        <div style="display: flex; align-items: start; gap: 0.5rem;">
+                            <span style="min-width: 24px; font-size: 1.2rem;">📍</span>
+                            <div>
+                                <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Adres</strong>
+                                <span style="font-size: 0.95rem;">Westplein 12, 3016 BM Rotterdam</span><br>
+                                <small style="color: #666; font-size: 0.85rem;">(Veerhaven, Scheepvaartkwartier)</small>
+                            </div>
                         </div>
                         
-                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #e5e7eb;">
-                            <p style="margin-bottom: 0.75rem; font-weight: 600; color: var(--primary);">🚊 Bereikbaarheid Nederland:</p>
-                            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: #555;">
-                                Rotterdam Centraal → Tram 4 of 23 (5 min)<br>
-                                Of: 10 minuten te voet
-                            </p>
-                            
-                            <p style="margin-bottom: 0.75rem; font-weight: 600; color: var(--primary);">🇧🇪 Bereikbaarheid België:</p>
-                            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: #555;">
-                                Trein Antwerpen → Rotterdam CS (1 uur)<br>
-                                Dan tram of 10 minuten lopen
-                            </p>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="min-width: 24px; font-size: 1.2rem;">📧</span>
+                            <div>
+                                <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Email</strong>
+                                <a href="mailto:info@safetyxacademy.nl" style="color: var(--secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">info@safetyxacademy.nl</a>
+                            </div>
                         </div>
                         
-                        <div style="margin-top: 2rem;">
-                            <p style="font-size: 0.95rem; margin-bottom: 1rem; color: #666; line-height: 1.6;">
-                                Wil je meer weten over NEBOSH IGC, startdata, prijzen of trainingen in België? 
-                                Stuur ons een email of kom langs voor een informeel gesprek in ons trainingscentrum!
-                            </p>
-                            <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%20de%20NEBOSH%20IGC%20opleiding%20(€3.500).%0A%0AMijn%20naam%3A%20%0AMijn%20telefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" 
-                               class="btn btn-primary" 
-                               style="display: inline-block; width: 100%; text-align: center; padding: 0.9rem 1.5rem; background: var(--secondary); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s;">
-                                📧 Vraag Gratis Informatie →
-                            </a>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="min-width: 24px; font-size: 1.2rem;">📞</span>
+                            <div>
+                                <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Telefoon</strong>
+                                <a href="tel:+31101234567" style="color: var(--secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">+31 (0)10 123 4567</a>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="min-width: 24px; font-size: 1.2rem;">🕒</span>
+                            <div>
+                                <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Openingstijden</strong>
+                                <span style="font-size: 0.95rem;">Ma-Vr 09:00-17:00</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 0.5rem; padding: 1rem; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-radius: 8px; border-left: 4px solid var(--success);">
+                            <span style="min-width: 24px; font-size: 1.3rem;">💰</span>
+                            <div>
+                                <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Prijs</strong>
+                                <span style="color: var(--success); font-weight: 700; font-size: 1.2rem;">€3.500 all-in</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Static Location Map (Smaller, as accent) -->
-                    <div class="location-map-static" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📍 Locatie Overzicht</h4>
+                    <!-- Bereikbaarheid Compact -->
+                    <div style="border-top: 2px solid #e5e7eb; padding-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <p style="margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); font-size: 0.95rem;">🚊 Bereikbaarheid NL</p>
+                            <p style="font-size: 0.9rem; color: #555; line-height: 1.5;">
+                                Rotterdam CS → Tram 4/23 (5 min) of 10 min te voet
+                            </p>
+                        </div>
+                        <div>
+                            <p style="margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); font-size: 0.95rem;">🇧🇪 Bereikbaarheid BE</p>
+                            <p style="font-size: 0.9rem; color: #555; line-height: 1.5;">
+                                Trein Antwerpen → Rotterdam CS (1u), dan tram
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Static Map Preview (Klein) -->
+                    <div style="margin-bottom: 1.5rem;">
                         <img src="location-map-fixed.png" 
-                             alt="SafetyXAcademy locatie kaart Westplein 12 Rotterdam Veerhaven - 10 minuten lopen vanaf Rotterdam Centraal"
-                             title="Locatie SafetyXAcademy Rotterdam - Naast Grand Café Loos"
+                             alt="SafetyXAcademy locatie kaart Westplein 12 Rotterdam - 10 minuten lopen vanaf Rotterdam Centraal"
+                             title="Locatie overzicht SafetyXAcademy"
                              width="631"
                              height="831"
                              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);"
                              loading="lazy">
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666; text-align: center;">
-                            <strong>10 minuten lopen</strong> vanaf Rotterdam Centraal<br>
+                        <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #666; text-align: center;">
+                            <strong>10 minuten</strong> vanaf Rotterdam Centraal<br>
                             Schuin tegenover <strong>Grand Café Loos</strong>
                         </p>
                     </div>
                     
+                    <!-- CTA Button -->
+                    <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%20de%20NEBOSH%20IGC%20opleiding%20(€3.500).%0A%0AMijn%20naam%3A%20%0AMijn%20telefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" 
+                       class="btn btn-primary" 
+                       style="display: block; width: 100%; text-align: center; padding: 0.9rem 1.5rem; background: var(--secondary); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 15px rgba(255, 127, 17, 0.2);">
+                        📧 Vraag Gratis Informatie →
+                    </a>
+                    
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #666; text-align: center; line-height: 1.5;">
+                        Vragen over NEBOSH, startdata of trainingen in België?<br>
+                        Stuur ons een email of kom langs!
+                    </p>
                 </div>
             </div>
         </div>
