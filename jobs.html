@@ -280,6 +280,227 @@
       .btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
     }
   </style>
+
+    <!-- JSON-LD Structured Data voor Jobs/Vacatures -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.safetyxacademy.nl/jobs#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.safetyxacademy.nl/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Vacatures",
+              "item": "https://www.safetyxacademy.nl/jobs"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.safetyxacademy.nl/jobs#webpage",
+          "url": "https://www.safetyxacademy.nl/jobs",
+          "name": "NEBOSH & HSE Vacatures - Wereldwijd",
+          "description": "Wereldwijde HSE/NEBOSH vacatures: Rotterdam, Dubai, Noorwegen, UK, Saudi, Singapore, Duitsland.",
+          "inLanguage": "nl",
+          "isPartOf": {
+            "@id": "https://www.safetyxacademy.nl/#website"
+          }
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "https://www.safetyxacademy.nl/jobs#rotterdam-haveninspecteur",
+          "title": "Haveninspecteur (Starter)",
+          "description": "Kickstart HSE: inspecties, toolbox, LMRA, rapportages. NL & EN.",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "SafetyXAcademy Partner - Rotterdam Haven",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Rotterdam",
+              "addressRegion": "Zuid-Holland",
+              "addressCountry": "NL"
+            }
+          },
+          "baseSalary": {
+            "@type": "MonetaryAmount",
+            "currency": "EUR",
+            "value": {
+              "@type": "QuantitativeValue",
+              "minValue": 3800,
+              "maxValue": 4500,
+              "unitText": "MONTH"
+            }
+          },
+          "employmentType": "FULL_TIME",
+          "datePosted": "2025-01-15",
+          "validThrough": "2025-06-30",
+          "applicantLocationRequirements": {
+            "@type": "Country",
+            "name": "NL"
+          },
+          "jobLocationType": "TELECOMMUTE"
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "https://www.safetyxacademy.nl/jobs#dubai-hse-advisor",
+          "title": "HSE Advisor - Mega-Project Dubai",
+          "description": "NEBOSH IGC, PTW & incident investigation. Bouw/oil&gas.",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "SafetyXAcademy Partner - Dubai",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Dubai",
+              "addressCountry": "AE"
+            }
+          },
+          "employmentType": "FULL_TIME",
+          "datePosted": "2025-01-15",
+          "validThrough": "2025-06-30",
+          "qualifications": "NEBOSH IGC certification required",
+          "responsibilities": "PTW, incident investigation, construction/oil&gas HSE"
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "https://www.safetyxacademy.nl/jobs#norway-offshore",
+          "title": "Offshore Safety Officer - North Sea, Norway",
+          "description": "Rig audits, PTW, emergency drills. Engels vereist.",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "SafetyXAcademy Partner - Norway Offshore",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "North Sea",
+              "addressCountry": "NO"
+            }
+          },
+          "employmentType": "FULL_TIME",
+          "datePosted": "2025-01-15",
+          "validThrough": "2025-06-30",
+          "workHours": "Rotation 2/2",
+          "qualifications": "NEBOSH, BOSIET certification"
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "https://www.safetyxacademy.nl/jobs#uk-hse-manager",
+          "title": "HSE Manager - Manufacturing, UK",
+          "description": "HSE-strategie, audits, training. ISO-systemen & change management.",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "SafetyXAcademy Partner - UK Manufacturing",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Midlands",
+              "addressCountry": "GB"
+            }
+          },
+          "employmentType": "FULL_TIME",
+          "datePosted": "2025-01-15",
+          "validThrough": "2025-06-30",
+          "qualifications": "NEBOSH, ISO 45001 experience"
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "https://www.safetyxacademy.nl/jobs#saudi-hse-specialist",
+          "title": "HSE Specialist - NEOM, Saudi Arabia",
+          "description": "Site HSE governance: contractor mgmt, high-risk controls, LOTO.",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "SafetyXAcademy Partner - NEOM",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "NEOM",
+              "addressCountry": "SA"
+            }
+          },
+          "employmentType": "FULL_TIME",
+          "datePosted": "2025-01-15",
+          "validThrough": "2025-06-30"
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "https://www.safetyxacademy.nl/jobs#singapore-port-safety",
+          "title": "Port Safety Supervisor - PSA Singapore",
+          "description": "Operations safety: yard safety, traffic, incident response.",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "SafetyXAcademy Partner - Singapore Ports",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Singapore",
+              "addressCountry": "SG"
+            }
+          },
+          "employmentType": "FULL_TIME",
+          "datePosted": "2025-01-15",
+          "validThrough": "2025-06-30",
+          "workHours": "Shift work"
+        },
+        {
+          "@type": "JobPosting",
+          "@id": "https://www.safetyxacademy.nl/jobs#germany-hse-engineer",
+          "title": "HSE Engineer - Chemical Plant, Germany",
+          "description": "Procesveiligheid, MOC, ATEX, PSM. Duits/Engels.",
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "SafetyXAcademy Partner - Germany Chemical",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "NRW",
+              "addressCountry": "DE"
+            }
+          },
+          "employmentType": "FULL_TIME",
+          "datePosted": "2025-01-15",
+          "validThrough": "2025-06-30",
+          "qualifications": "NEBOSH, ATEX knowledge"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Additional SEO Meta for Jobs page -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta name="robots" content="index, follow">
+
 </head>
 <body>
 
