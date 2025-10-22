@@ -1,0 +1,15 @@
+# Robots.txt voor SafetyXAcademy
+# https://www.safetyxacademy.nl/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap locatie
+Sitemap: https://www.safetyxacademy.nl/sitemap.xml
+
+# Blokkeer eventuele admin of private folders (indien van toepassing)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay voor bots (optioneel, voorkomt overbelasting)
+Crawl-delay: 1
