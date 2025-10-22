@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-91JCVXBQ0W');
+    </script>
+    
     <!-- SEO Meta Tags -->
     <title>NEBOSH IGC Nederland & België €3.500 | SafetyXAcademy Rotterdam - Goedkoper dan MKV</title>
     <meta name="description" content="NEBOSH IGC opleiding Rotterdam €3.500 incl. examen. MKV kost €5.000-€7.000. Bespaar €1.500-€3.500! Studenten uit Nederland & België welkom. Train lokaal, werk wereldwijd.">
@@ -277,31 +286,130 @@
 
         .comparison-table table {
             width: 100%;
-            min-width: 500px;
+            min-width: 400px;
             border-collapse: collapse;
         }
 
         .comparison-table th {
             background: var(--primary);
             color: white;
-            padding: 0.75rem 0.5rem;
+            padding: 0.6rem 0.4rem;
             text-align: left;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
         }
 
         .comparison-table td {
-            padding: 0.75rem 0.5rem;
+            padding: 0.6rem 0.4rem;
             border-bottom: 1px solid #e5e7eb;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
         }
 
         .comparison-table .feature {
             font-weight: 600;
             color: var(--primary);
+            font-size: 0.7rem;
         }
 
-        .comparison-table .check { color: var(--success); font-size: 1.2rem; }
-        .comparison-table .cross { color: #ef4444; font-size: 1.2rem; }
+        .comparison-table .check { color: var(--success); font-size: 1rem; }
+        .comparison-table .cross { color: #ef4444; font-size: 1rem; }
+
+        /* RESPONSIVE TABLE - MOBIEL */
+        @media (max-width: 768px) {
+            .comparison-table {
+                overflow-x: visible;
+            }
+
+            .comparison-table table {
+                min-width: 0;
+            }
+
+            /* Verberg thead op mobiel */
+            .comparison-table thead {
+                display: none;
+            }
+
+            /* Maak tbody een flex container */
+            .comparison-table tbody {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            /* Elke row wordt een kaart */
+            .comparison-table tr {
+                display: flex;
+                flex-direction: column;
+                background: white;
+                border: 2px solid #e5e7eb;
+                border-radius: 12px;
+                padding: 1rem;
+                margin-bottom: 0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            .comparison-table tr:hover {
+                border-color: var(--secondary);
+                box-shadow: 0 4px 15px rgba(255, 127, 17, 0.15);
+            }
+
+            /* Eerste td (feature naam) wordt header van kaart */
+            .comparison-table td.feature {
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--primary);
+                padding: 0 0 1rem 0;
+                margin-bottom: 0.75rem;
+                border-bottom: 2px solid #e5e7eb;
+                text-align: left;
+            }
+
+            /* Andere td's krijgen labels */
+            .comparison-table td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.5rem 0;
+                border-bottom: none;
+                font-size: 0.85rem;
+            }
+
+            /* Labels toevoegen via CSS */
+            .comparison-table td:nth-child(2)::before {
+                content: "NEBOSH IGC:";
+                font-weight: 600;
+                color: var(--success);
+                margin-right: 0.5rem;
+                min-width: 120px;
+            }
+
+            .comparison-table td:nth-child(3)::before {
+                content: "MKV:";
+                font-weight: 600;
+                color: #666;
+                margin-right: 0.5rem;
+                min-width: 120px;
+            }
+
+            /* Feature cel krijgt geen label */
+            .comparison-table td.feature::before {
+                content: none;
+            }
+        }
+
+        /* Extra kleine schermen */
+        @media (max-width: 480px) {
+            .comparison-table td {
+                font-size: 0.8rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .comparison-table td::before {
+                min-width: 0;
+                margin-bottom: 0.25rem;
+            }
+        }
 
         .highlight-box {
             background: linear-gradient(135deg, #10b981, #059669);
@@ -698,6 +806,12 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             .stat-item { font-size: 1rem; }
+            .comparison-table th,
+            .comparison-table td { 
+                padding: 0.75rem 0.6rem; 
+                font-size: 0.85rem; 
+            }
+            .comparison-table .feature { font-size: 0.85rem; }
             .faq-item summary { 
                 font-size: 1rem;
                 padding: 1.25rem 1.25rem 1.25rem 3.25rem;
@@ -778,8 +892,8 @@
     <div class="stats-bar">
         <div class="stats-bar-content">
             <div class="stat-item">€3.500 Incl. Examen</div>
-            <div class="stat-item">Nederland & België</div>
-            <div class="stat-item">120+ Landen</div>
+            <div class="stat-item">6 Benelux Havens</div>
+            <div class="stat-item">120+ Landen Wereldwijd</div>
             <div class="stat-item">Beter dan MKV</div>
         </div>
     </div>
@@ -796,7 +910,7 @@
                 <div class="price-comparison">
                     <div class="price-item">
                         <strong>NEBOSH IGC: €3.500</strong>
-                        <p style="margin-top:0.5rem;">✓ Inclusief examengeld NEBOSH<br>✓ Alle studiematerialen<br>✓ 80 uur blended learning<br>✓ Jobplacement support<br>✓ Wereldwijd erkend (120+ landen)</p>
+                        <p style="margin-top:0.5rem;">✓ Inclusief examengeld NEBOSH<br>✓ Alle studiematerialen<br>✓ 80 uur blended learning<br>✓ Jobplacement support<br>✓ <strong>Wereldwijd erkend - heel de wereld (120+ landen)</strong></p>
                     </div>
                     <div class="price-item">
                         <strong>MKV: €5.000-€7.000</strong>
@@ -838,7 +952,7 @@
                         </tr>
                         <tr>
                             <td class="feature">📈 Carrièremogelijkheden</td>
-                            <td><span class="check">✓</span> Haven Rotterdam, Dubai, Noorwegen, UK, Singapore</td>
+                            <td><span class="check">✓</span> <strong>Heel de wereld:</strong> Benelux havens (Rotterdam, Amsterdam, Vlissingen, Antwerpen, Gent, Zeebrugge) + Dubai, Noorwegen, UK, Singapore, 120+ landen</td>
                             <td>Beperkt tot Nederland</td>
                         </tr>
                         <tr>
@@ -852,9 +966,9 @@
                             <td>Nederlandse VCA basis</td>
                         </tr>
                         <tr>
-                            <td class="feature">💼 Haven Rotterdam</td>
-                            <td><span class="check">✓</span> Erkend (Shell, BP, offshore)</td>
-                            <td><span class="check">✓</span> Erkend</td>
+                            <td class="feature">🚢 Benelux Havens</td>
+                            <td><span class="check">✓</span> Erkend (Rotterdam, Amsterdam, Vlissingen, Antwerpen, Gent, Zeebrugge)</td>
+                            <td><span class="check">✓</span> Erkend in NL havens</td>
                         </tr>
                         <tr>
                             <td class="feature">🌐 Taal Training</td>
@@ -867,7 +981,7 @@
 
             <div class="highlight-box">
                 <h3>💡 De Conclusie</h3>
-                <p><strong>NEBOSH IGC is €1.500-€3.500 goedkoper dan MKV</strong> én opent wereldwijde deuren naar Dubai, Noorwegen, UK, Singapore én natuurlijk Rotterdam en Antwerpen. Je bespaart geld én krijgt meer carrièremogelijkheden!</p>
+                <p><strong>NEBOSH IGC is €1.500-€3.500 goedkoper dan MKV</strong> én opent deuren naar <strong>heel de wereld (120+ landen):</strong> Nederlandse en Belgische havens, Dubai, Noorwegen, UK, Singapore en verder. Je bespaart geld én krijgt wereldwijde carrièremogelijkheden!</p>
             </div>
         </div>
     </section>
@@ -934,7 +1048,7 @@
                     <h3>Na Je Opleiding</h3>
                     <p style="margin-bottom:1rem; color:#666;">Wereldwijde carrièremogelijkheden:</p>
                     <ul style="margin-top:1.5rem;">
-                        <li><strong>Rotterdam Haven:</strong> Shell, BP, Maersk, offshore</li>
+                        <li><strong>Benelux Havens:</strong> Rotterdam, Antwerpen en andere grote havens - Shell, BP, Maersk</li>
                         <li><strong>Internationale Vacatures:</strong> Dubai, Noorwegen, UK, Saudi</li>
                         <li><strong>Offshore Noorwegen:</strong> Equinor, Aker, oil & gas</li>
                         <li><strong>Dubai & Middle East:</strong> NEOM, construction, offshore</li>
@@ -1098,7 +1212,7 @@
                 <div class="benefit-card">
                     <div class="icon">🌍</div>
                     <h3>120+ Landen Erkend</h3>
-                    <p>Dubai, Noorwegen, UK, Saudi, Singapore, EU</p>
+                    <p>Benelux, Dubai, Noorwegen, UK, Saudi, Singapore</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">🇧🇪</div>
@@ -1150,7 +1264,7 @@
         <div class="container">
             <h2>🌍 Internationale HSE Vacatures</h2>
             <p style="font-size:1.1rem; margin-bottom:0.75rem;">
-                Met NEBOSH IGC open je deuren naar wereldwijde carrières in <strong>Rotterdam Haven, Dubai, Noorwegen, UK, Saudi-Arabië, Singapore</strong> en meer dan 120 andere landen.
+                Met NEBOSH IGC open je deuren naar wereldwijde carrières: <strong>van Nederlandse en Belgische havens tot Dubai, Noorwegen, UK, Saudi-Arabië en Singapore</strong> - 120+ landen.
             </p>
             <p style="margin-bottom:1.5rem; font-size:0.95rem;">
                 Zie actuele HSE vacatures van Shell, BP, Equinor, Maersk, NEOM en andere top employers. Salarissen vanaf €2.500-€7.000/maand!
@@ -1190,7 +1304,7 @@
                         <li><strong>Prijs:</strong> NEBOSH €3.500 vs MKV €5.000-€7.000 = bespaar €1.500-€3.500</li>
                         <li><strong>Erkenning:</strong> NEBOSH 120+ landen vs MKV alleen Nederland</li>
                         <li><strong>Carrières:</strong> NEBOSH opent deuren naar Dubai, Noorwegen, UK, Singapore</li>
-                        <li><strong>Rotterdam Haven:</strong> Beide certificaten erkend door Shell, BP, offshore</li>
+                        <li><strong>Benelux Havens:</strong> Beide certificaten erkend bij grote werkgevers (Shell, BP, offshore)</li>
                     </ul>
                     <p style="margin-top:0.5rem;">Als je internationale ambities hebt, is NEBOSH de slimme keuze. Goedkoper én meer mogelijkheden!</p>
                 </div>
@@ -1201,8 +1315,8 @@
                 <div class="faq-content">
                     <p><strong>Ja, absoluut! In beide landen.</strong> NEBOSH IGC wordt erkend door alle grote werkgevers:</p>
                     <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                        <li><strong>Nederland:</strong> Haven Rotterdam (Shell, BP), offshore, constructie</li>
-                        <li><strong>België:</strong> Haven Antwerpen, petrochemie, internationale bedrijven</li>
+                        <li><strong>Nederland:</strong> Havens Rotterdam, Amsterdam, Vlissingen - offshore, constructie, petrochemie</li>
+                        <li><strong>België:</strong> Havens Antwerpen, Gent, Zeebrugge - petrochemie, internationale bedrijven</li>
                         <li>ISO 45001 audits en management systemen</li>
                     </ul>
                     <p style="margin-top:0.5rem;">Plus: met NEBOSH kun je ook werken buiten Benelux, wat met MKV niet lukt.</p>
@@ -1221,14 +1335,14 @@
             <details class="faq-item">
                 <summary>Waar kan ik werken met NEBOSH IGC?</summary>
                 <div class="faq-content">
-                    <p><strong>Wereldwijd in 120+ landen.</strong> Populaire bestemmingen voor NEBOSH professionals:</p>
+                    <p><strong>Wereldwijd in 120+ landen - overal ter wereld!</strong> Populaire bestemmingen voor NEBOSH professionals:</p>
                     <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                        <li><strong>Nederland:</strong> Haven Rotterdam (Shell, BP), offshore, constructie</li>
-                        <li><strong>België:</strong> Haven Antwerpen, petrochemie, Brussel</li>
+                        <li><strong>Nederland & België:</strong> Havens Rotterdam, Antwerpen + andere grote havens</li>
                         <li><strong>Dubai & Middle East:</strong> NEOM (Saudi), Expo projecten, oil & gas</li>
                         <li><strong>Noorwegen:</strong> Offshore platforms (Equinor, Aker Solutions)</li>
                         <li><strong>UK:</strong> Londense constructie, HSE consultancy</li>
-                        <li><strong>Singapore:</strong> Petrochemie, shipping, international projects</li>
+                        <li><strong>Singapore & Azië:</strong> Petrochemie, shipping, international projects</li>
+                        <li><strong>+ 114 andere landen wereldwijd</strong></li>
                     </ul>
                     <p style="margin-top:0.75rem;"><a href="jobs.html" style="color:var(--secondary); text-decoration:underline; font-weight:600;">→ Bekijk actuele internationale HSE vacatures</a></p>
                 </div>
@@ -1350,8 +1464,8 @@
             </p>
             <p style="margin-top:0.5rem; font-size:0.8rem; color:#999;">
                 NEBOSH IGC Rotterdam €3.500 incl. examen | Studenten uit Nederland & België Welkom<br>
-                Westplein 12, 3016 BM Rotterdam | Bespaar €1.500-€3.500 vs MKV<br>
-                Bij voldoende vraag ook trainingen in België (Antwerpen / Brussel)<br>
+                Westplein 12, 3016 BM Rotterdam | Erkend in alle grote Benelux havens<br>
+                Bespaar €1.500-€3.500 vs MKV | Bij voldoende vraag ook trainingen in België<br>
                 info@safetyxacademy.nl | +31 (0)10 123 4567
             </p>
         </div>
