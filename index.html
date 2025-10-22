@@ -852,6 +852,228 @@
             }
         }
     </style>
+
+    <!-- JSON-LD Structured Data voor SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.safetyxacademy.nl/#organization",
+          "name": "SafetyXAcademy",
+          "url": "https://www.safetyxacademy.nl/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.safetyxacademy.nl/favicon-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "description": "NEBOSH IGC opleiding Rotterdam €3.500 incl. examen. Studenten uit Nederland & België welkom. Train lokaal, werk wereldwijd.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Westplein 12",
+            "addressLocality": "Rotterdam",
+            "addressRegion": "Zuid-Holland",
+            "postalCode": "3016 BM",
+            "addressCountry": "NL"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+31-10-123-4567",
+            "contactType": "customer service",
+            "email": "info@safetyxacademy.nl",
+            "availableLanguage": ["nl", "en"]
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/safetyxacademy"
+          ]
+        },
+        {
+          "@type": ["EducationalOrganization", "LocalBusiness"],
+          "@id": "https://www.safetyxacademy.nl/#localbusiness",
+          "name": "SafetyXAcademy Rotterdam",
+          "image": "https://www.safetyxacademy.nl/nebosh-klaslokaal-studenten-rotterdam-safetyxacademy.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Westplein 12",
+            "addressLocality": "Rotterdam",
+            "addressRegion": "Zuid-Holland",
+            "postalCode": "3016 BM",
+            "addressCountry": "NL"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "51.9126",
+            "longitude": "4.4686"
+          },
+          "url": "https://www.safetyxacademy.nl/",
+          "telephone": "+31-10-123-4567",
+          "email": "info@safetyxacademy.nl",
+          "priceRange": "€€",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "17:00"
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Nederland"
+            },
+            {
+              "@type": "Country",
+              "name": "België"
+            }
+          ]
+        },
+        {
+          "@type": "Course",
+          "@id": "https://www.safetyxacademy.nl/#nebosh-igc",
+          "name": "NEBOSH IGC - International General Certificate",
+          "description": "NEBOSH IGC opleiding in Rotterdam voor €3.500 all-inclusive. Wereldwijd erkende veiligheidscertificering met Nederlandse begeleiding en jobplacement support.",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "SafetyXAcademy",
+            "sameAs": "https://www.safetyxacademy.nl/"
+          },
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "blended",
+            "duration": "P12W",
+            "inLanguage": ["nl", "en"],
+            "location": {
+              "@type": "Place",
+              "name": "SafetyXAcademy Rotterdam",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Westplein 12",
+                "addressLocality": "Rotterdam",
+                "postalCode": "3016 BM",
+                "addressCountry": "NL"
+              }
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "3500",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.safetyxacademy.nl/",
+            "description": "All-inclusive prijs inclusief examengeld, studiemateriaal en jobplacement support"
+          },
+          "educationalLevel": "Professional",
+          "occupationalCategory": "Health and Safety",
+          "coursePrerequisites": "Basiskennis Engels",
+          "timeRequired": "PT80H",
+          "inLanguage": ["nl", "en"],
+          "teaches": [
+            "Health and Safety Management",
+            "Risk Assessment",
+            "Workplace Safety",
+            "Incident Investigation",
+            "HSE Compliance"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.safetyxacademy.nl/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Wat kost de NEBOSH IGC opleiding bij SafetyXAcademy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "€3.500 all-inclusive inclusief examengeld. Dit is €1.500-€3.500 goedkoper dan MKV (€5.000-€7.000). Geen verborgen kosten: alles zit erbij (training, materialen, examen, certificaat, jobplacement support)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kan ik als Belgische student meedoen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, absoluut! Belgische studenten zijn van harte welkom in Rotterdam. De training is in het Nederlands, dus perfect voor Vlamingen. Vanuit Antwerpen ben je er in 1 uur met de trein."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Wordt NEBOSH erkend in Nederland & België?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, absoluut! NEBOSH IGC wordt erkend door alle grote werkgevers in Nederland (havens Rotterdam, Amsterdam, Vlissingen) en België (Antwerpen, Gent, Zeebrugge). Plus: met NEBOSH kun je ook werken buiten Benelux."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Hoe lang duurt de NEBOSH IGC opleiding?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "10-12 weken blended learning. We combineren online theorie met praktijkdagen in ons trainingscentrum op Westplein 12, Rotterdam. Totaal 80 uur studiemateriaal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is de training in het Nederlands of Engels?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Training in Nederlands, examen in Engels. Alle lessen en uitleg krijg je in het Nederlands van onze Nederlandse instructeurs. Het examen doe je in het Engels, maar daar bereiden we je goed op voor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Zit examengeld bij de prijs inbegrepen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja! €3.500 is all-inclusive inclusief officieel NEBOSH examengeld. Sommige andere training providers rekenen het examengeld apart (vaak €500-€800 extra), maar bij SafetyXAcademy betaal je één prijs: €3.500 voor alles."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.safetyxacademy.nl/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.safetyxacademy.nl/"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.safetyxacademy.nl/#website",
+          "url": "https://www.safetyxacademy.nl/",
+          "name": "SafetyXAcademy",
+          "description": "NEBOSH IGC opleiding Rotterdam €3.500. Train lokaal, werk wereldwijd.",
+          "publisher": {
+            "@id": "https://www.safetyxacademy.nl/#organization"
+          },
+          "inLanguage": "nl"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NEBOSH IGC €3.500 | SafetyXAcademy Rotterdam">
+    <meta name="twitter:description" content="Train in Rotterdam. NEBOSH IGC €3.500 vs MKV €5.000-€7.000. Bespaar €1.500-€3.500!">
+    <meta name="twitter:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
+    
+    <!-- Additional SEO Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="SafetyXAcademy">
+    <meta name="author" content="SafetyXAcademy">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="alternate" hreflang="nl-nl" href="https://www.safetyxacademy.nl/">
+    <link rel="alternate" hreflang="nl-be" href="https://www.safetyxacademy.nl/">
+
 </head>
 <body>
     <header>
