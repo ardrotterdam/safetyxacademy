@@ -1,1530 +1,772 @@
+Top! Hier is je **volledig herschreven `jobs.html`** — met verbeterde SEO, aparte `JobPosting` nodes in een `@graph`, `WebPage` + `BreadcrumbList`, `FAQPage` rich results, accessibility tweaks en kleine copy updates (salarissen als *indicatief*).
+Copy–paste dit 1-op-1. Succes! 🚀
+
+```html
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-91JCVXBQ0W');
-    </script>
-    
-    <!-- SEO Meta Tags - AGGRESSIVE -->
-    <title>NEBOSH Jobs & HSE Vacatures Rotterdam → Antwerpen | €4.500-€130k Salaris 2025</title>
-    <meta name="description" content="12 HSE vacatures met NEBOSH IGC: Rotterdam €4.500-5.500, Antwerpen €4.200-5.000, Dubai $110k, Norway $120k, Singapore $95k. Train bij SafetyXAcademy €3.500 → werk wereldwijd.">
-    <meta name="keywords" content="NEBOSH jobs Rotterdam, HSE vacatures Nederland, Safety officer salaris, NEBOSH verdienen, HSE manager Dubai, Offshore jobs Norway, Veiligheidsfunctionaris Antwerpen">
-    
-    <!-- Canonical & Open Graph -->
-    <link rel="canonical" href="https://www.safetyxacademy.nl/jobs">
-    <meta property="og:title" content="NEBOSH Jobs €4.500-€130k | Rotterdam & Wereldwijd">
-    <meta property="og:description" content="12 HSE vacatures: Rotterdam, Antwerpen, Dubai, Norway. Train €3.500, verdien €55k-€130k wereldwijd.">
-    <meta property="og:image" content="https://www.safetyxacademy.nl/nebosh-jobs-worldwide-salaries.jpg">
-    <meta property="og:url" content="https://www.safetyxacademy.nl/jobs">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --primary: #0A284B;
-            --secondary: #FF7F11;
-            --dark: #2F3E46;
-            --light: #F5F6F8;
-            --muted: #667085;
-            --success: #10b981;
-            --gold: #FFB800;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-            background: #fafafa;
-        }
-        
-        /* Header - Consistent met homepage */
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 0.75rem 4%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .logo {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--secondary);
-            text-decoration: none;
-        }
-        
-        nav {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--secondary);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-            color: white;
-            padding: 3rem 4%;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .hero h1 {
-            font-size: 1.8rem;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-        
-        .hero h1 .salary-highlight {
-            color: var(--gold);
-            font-weight: 800;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: rgba(255,255,255,0.9);
-            line-height: 1.6;
-        }
-        
-        .hero-cta {
-            display: inline-flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.9rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background: var(--secondary);
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.3);
-        }
-        
-        .btn-primary:hover {
-            background: #E66D00;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.4);
-        }
-        
-        .btn-secondary {
-            background: white;
-            color: var(--primary);
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: transparent;
-            color: white;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 4%;
-        }
-        
-        /* Stats Bar - Orange */
-        .stats-bar {
-            background: linear-gradient(135deg, var(--secondary) 0%, #E66D00 100%);
-            color: white;
-            padding: 1.5rem 4%;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 20px rgba(255, 127, 17, 0.2);
-        }
-        
-        .stats-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        
-        .stat-item h3 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 0.25rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .stat-item p {
-            font-size: 0.9rem;
-            opacity: 0.95;
-        }
-        
-        /* Section Header */
-        .section-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-        
-        .section-header h2 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .section-header p {
-            color: var(--muted);
-            font-size: 1rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Filters */
-        .filters {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 0 0 2.5rem;
-            padding: 0 4%;
-        }
-        
-        .chip {
-            border: 2px solid #e5e7eb;
-            background: white;
-            color: var(--dark);
-            padding: 0.6rem 1.2rem;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-        
-        .chip:hover {
-            border-color: var(--secondary);
-            color: var(--secondary);
-        }
-        
-        .chip.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(10, 40, 75, 0.2);
-        }
-        
-        /* Job Grid */
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        
-        .job-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            padding: 1.75rem;
-            border-left: 5px solid var(--secondary);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        
-        .job-card.featured {
-            border-left-color: var(--gold);
-            background: linear-gradient(135deg, #fffbeb 0%, white 100%);
-        }
-        
-        .job-card.featured::before {
-            content: '⭐ LOKAAL';
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--gold);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-        
-        .job-header {
-            margin-bottom: 1rem;
-        }
-        
-        .job-title {
-            color: var(--primary);
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-        
-        .job-company {
-            color: var(--muted);
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-        
-        .job-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        
-        .meta-icon {
-            font-size: 1.1rem;
-        }
-        
-        .salary {
-            color: var(--success);
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-        
-        .job-description {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-        
-        .job-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.25rem;
-        }
-        
-        .tag {
-            background: var(--light);
-            color: var(--primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .job-actions {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-        
-        .btn-small {
-            padding: 0.6rem 1.3rem;
-            font-size: 0.9rem;
-        }
-        
-        /* Notice Box */
-        .notice {
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-            border-left: 4px solid var(--primary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .notice h3 {
-            color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .notice p {
-            color: #1e40af;
-            line-height: 1.7;
-            margin-bottom: 0.5rem;
-        }
-        
-        .notice strong {
-            color: var(--primary);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-            color: white;
-            padding: 3rem 4%;
-            text-align: center;
-            margin: 3rem 0;
-            border-radius: 15px;
-        }
-        
-        .cta-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-        }
-        
-        /* FAQ */
-        .faq-section {
-            margin: 3rem 0;
-        }
-        
-        .faq-section h2 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .faq-item {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-        
-        .faq-item details {
-            padding: 1.25rem;
-        }
-        
-        .faq-item summary {
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 1.05rem;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-        
-        .faq-item summary::after {
-            content: '+';
-            font-size: 1.5rem;
-            color: var(--secondary);
-            transition: transform 0.3s;
-        }
-        
-        .faq-item details[open] summary::after {
-            transform: rotate(45deg);
-        }
-        
-        .faq-item p {
-            margin-top: 1rem;
-            color: #555;
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 2rem 4%;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        footer a:hover {
-            color: var(--secondary);
-        }
-        
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Responsive */
-        @media (min-width: 600px) {
-            .logo { font-size: 1.3rem; }
-            .hero h1 { font-size: 2.2rem; }
-            .jobs-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        
-        @media (min-width: 900px) {
-            .logo { font-size: 1.5rem; }
-            nav { gap: 2rem; }
-            nav a { font-size: 0.95rem; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero-subtitle { font-size: 1.2rem; }
-        }
-    </style>
-    
-    <!-- JSON-LD Structured Data - Google Jobs -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#hse-officer-rotterdam",
-          "title": "HSE Officer Haven Rotterdam",
-          "description": "Kickstart je HSE carrière in de grootste haven van Europa. Dagelijkse inspecties, toolbox meetings, LMRA's, incident rapportages. Nederlands & Engels.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Rotterdam Port",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Rotterdam",
-              "addressRegion": "Zuid-Holland",
-              "addressCountry": "NL"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "EUR",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 4500,
-              "maxValue": 5500,
-              "unitText": "MONTH"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, Nederlands & Engels"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#safety-advisor-antwerpen",
-          "title": "Safety Advisor Petrochemie Antwerpen",
-          "description": "HSE-coördinatie in petrochemische cluster Antwerpen. PTW, contractor management, audits, training. Nederlands & Engels vereist.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Antwerpen Petrochemie",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Antwerpen",
-              "addressCountry": "BE"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "EUR",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 4200,
-              "maxValue": 5000,
-              "unitText": "MONTH"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, VCA VOL, Nederlands & Engels"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#hse-manager-dubai",
-          "title": "HSE Manager Construction Dubai",
-          "description": "Lead HSE program for mega construction project in Dubai. Site inspections, PTW systems, incident investigations, contractor management. NEBOSH IGC essential.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Dubai Construction",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dubai",
-              "addressCountry": "AE"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "USD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 85000,
-              "maxValue": 110000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, 5+ years construction HSE, English",
-          "benefits": "Tax-free, accommodation, flights, medical"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#offshore-hse-norway",
-          "title": "Offshore HSE Supervisor Norway",
-          "description": "Offshore oil & gas platform North Sea. Rig audits, PTW coordination, emergency drills, HSE meetings. NEBOSH + BOSIET required.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Norway Offshore",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "North Sea",
-              "addressCountry": "NO"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "USD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 95000,
-              "maxValue": 120000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "workHours": "2/2 rotation",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, BOSIET, offshore experience"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#port-safety-singapore",
-          "title": "Port Safety Manager Singapore",
-          "description": "Operations safety for major container terminal. Yard safety, traffic management, incident response, contractor HSE. NEBOSH + port experience.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Singapore Ports",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Singapore",
-              "addressCountry": "SG"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "SGD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 75000,
-              "maxValue": 95000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, port/logistics HSE experience"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#hse-lead-saudi",
-          "title": "HSE Lead NEOM Megaproject Saudi Arabia",
-          "description": "Strategic HSE leadership for NEOM giga-project. Contractor governance, high-risk controls, LOTO systems, HSE culture. Tax-free package.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - NEOM Saudi",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "NEOM",
-              "addressCountry": "SA"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "USD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 100000,
-              "maxValue": 130000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH Diploma preferred, 8+ years senior HSE",
-          "benefits": "Tax-free, accommodation, flights, medical"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#hse-manager-uk",
-          "title": "HSE Manager Manufacturing UK",
-          "description": "HSE strategy & implementation for UK manufacturing site. ISO 45001, audits, training programs, change management. NEBOSH Diploma advantage.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - UK Manufacturing",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Midlands",
-              "addressCountry": "GB"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "GBP",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 55000,
-              "maxValue": 75000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC minimum, ISO 45001 knowledge"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#mining-safety-australia",
-          "title": "Mining Safety Advisor Australia",
-          "description": "Mine site HSE leadership Western Australia. Risk assessments, underground/surface operations safety, fatigue management, emergency response.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Australia Mining",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Perth, WA",
-              "addressCountry": "AU"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "AUD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 120000,
-              "maxValue": 145000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "workHours": "FIFO rotation",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, mining HSE experience"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#oil-sands-canada",
-          "title": "HSE Coordinator Oil Sands Canada",
-          "description": "Field HSE support for oil sands operations Alberta. Daily inspections, JSAs, toolbox talks, incident investigations. NEBOSH recognized.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Canada Oil & Gas",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Fort McMurray, AB",
-              "addressCountry": "CA"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "CAD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 90000,
-              "maxValue": 115000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, oil & gas HSE experience"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#process-safety-germany",
-          "title": "Process Safety Engineer Germany",
-          "description": "Chemical plant process safety engineering. MOC, ATEX, PSM, HAZOP facilitation. German/English required. NEBOSH + engineering degree.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Germany Chemical",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "North Rhine-Westphalia",
-              "addressCountry": "DE"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "EUR",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 65000,
-              "maxValue": 85000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, ATEX, PSM knowledge, German/English"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#lng-safety-qatar",
-          "title": "LNG Safety Specialist Qatar",
-          "description": "LNG terminal operations safety. Cryogenic hazards, gas detection, emergency response, contractor HSE. Tax-free compensation.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - Qatar LNG",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Doha",
-              "addressCountry": "QA"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "USD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 95000,
-              "maxValue": 120000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, LNG/petrochemical experience",
-          "benefits": "Tax-free, accommodation, flights, medical"
-        },
-        {
-          "@type": "JobPosting",
-          "@id": "https://www.safetyxacademy.nl/jobs#hse-manager-refinery-usa",
-          "title": "HSE Manager Refinery USA",
-          "description": "Refinery HSE management Texas/Louisiana. PSM, OSHA compliance, behavior-based safety, process hazard analysis. NEBOSH + CSP preferred.",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "SafetyXAcademy Partner - USA Refining",
-            "sameAs": "https://www.safetyxacademy.nl/"
-          },
-          "jobLocation": {
-            "@type": "Place",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Gulf Coast",
-              "addressRegion": "TX/LA",
-              "addressCountry": "US"
-            }
-          },
-          "baseSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "USD",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 95000,
-              "maxValue": 130000,
-              "unitText": "YEAR"
-            }
-          },
-          "employmentType": "FULL_TIME",
-          "datePosted": "2025-01-20",
-          "validThrough": "2025-12-31",
-          "qualifications": "NEBOSH IGC, refinery/petrochemical HSE, PSM"
-        }
-      ]
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91JCVXBQ0W');
+  </script>
+
+  <!-- SEO Meta -->
+  <title>NEBOSH Jobs & HSE Vacatures Rotterdam → Antwerpen | €4.500-€130k Salaris 2025</title>
+  <meta name="description" content="12 HSE vacatures met NEBOSH IGC: Rotterdam €4.500-5.500, Antwerpen €4.200-5.000, Dubai $110k, Norway $120k, Singapore $95k. Train bij SafetyXAcademy €3.500 → werk wereldwijd." />
+  <meta name="keywords" content="NEBOSH jobs Rotterdam, HSE vacatures Nederland, Safety officer salaris, NEBOSH verdienen, HSE manager Dubai, Offshore jobs Norway, Veiligheidsfunctionaris Antwerpen" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://www.safetyxacademy.nl/jobs" />
+  <meta property="og:title" content="NEBOSH Jobs €4.500-€130k | Rotterdam & Wereldwijd" />
+  <meta property="og:description" content="12 HSE vacatures: Rotterdam, Antwerpen, Dubai, Norway. Train €3.500, verdien €55k-€130k wereldwijd (indicatief)." />
+  <meta property="og:image" content="https://www.safetyxacademy.nl/nebosh-jobs-worldwide-salaries.jpg" />
+  <meta property="og:url" content="https://www.safetyxacademy.nl/jobs" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta name="author" content="SafetyXAcademy Rotterdam" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon-svg.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #0A284B;
+      --secondary: #FF7F11;
+      --dark: #2F3E46;
+      --light: #F5F6F8;
+      --muted: #667085;
+      --success: #10b981;
+      --gold: #FFB800;
     }
-    </script>
-    
-    <!-- Additional SEO Meta -->
-    <meta name="robots" content="index, follow">
-    <meta property="og:locale" content="nl_NL">
-    <meta name="author" content="SafetyXAcademy Rotterdam">
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6; color: #333; overflow-x: hidden; background: #fafafa;
+    }
+    header {
+      background: var(--primary); color: #fff; padding: 0.75rem 4%;
+      position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    }
+    .header-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
+    .logo { font-weight: 700; color: var(--secondary); text-decoration: none; font-size: 1.1rem; }
+    nav { display: flex; gap: .75rem; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-size: .95rem; font-weight: 500; }
+    nav a:hover { color: var(--secondary); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+      color:#fff; padding: 3rem 4%; text-align:center; margin-bottom: 3rem;
+    }
+    .hero h1 { font-size: 2rem; line-height: 1.25; margin-bottom: .75rem; }
+    .hero .salary-highlight { color: var(--gold); font-weight: 800; }
+    .hero-subtitle { font-size: 1.05rem; opacity: .95; margin-bottom: 1.5rem; }
+    .hero-cta { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    .btn {
+      display: inline-block; padding: .9rem 1.6rem; border-radius: 50px;
+      text-decoration: none; font-weight: 700; font-size: .95rem; transition: .25s;
+    }
+    .btn-primary { background: var(--secondary); color: #fff; box-shadow: 0 4px 15px rgba(255,127,17,.3); }
+    .btn-primary:hover { background:#e66d00; transform: translateY(-2px); }
+    .btn-secondary { background: #fff; color: var(--primary); border: 2px solid #fff; }
+    .btn-secondary:hover { background: transparent; color: #fff; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 4%; }
+    .stats-bar {
+      background: linear-gradient(135deg, var(--secondary) 0%, #E66D00 100%);
+      color: #fff; padding: 1.5rem 4%; margin-bottom: 3rem; box-shadow: 0 4px 20px rgba(255,127,17,.2);
+    }
+    .stats-grid {
+      max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; text-align:center;
+    }
+    .stat-item h3 { font-size:2rem; font-weight:800; margin-bottom:.25rem; text-shadow:0 2px 4px rgba(0,0,0,.1);}
+    .stat-item p { font-size:.9rem; opacity:.95; }
+
+    .section-header { text-align:center; margin: 2.5rem 0; }
+    .section-header h2 { color:var(--primary); font-size:1.8rem; margin-bottom:.75rem; }
+    .section-header p { color:var(--muted); max-width:720px; margin:0 auto; }
+
+    .filters { display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; margin:0 0 2rem; }
+    .chip {
+      border:2px solid #e5e7eb; background:#fff; color:var(--dark);
+      padding:.6rem 1.2rem; border-radius:999px; font-weight:700; cursor:pointer; transition:.2s;
+    }
+    .chip:hover { border-color: var(--secondary); color: var(--secondary); }
+    .chip.active { background: var(--primary); color:#fff; border-color:var(--primary); box-shadow: 0 4px 12px rgba(10,40,75,.2); }
+
+    .jobs-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; margin-bottom:3rem; }
+    .job-card {
+      background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,.08);
+      padding:1.75rem; border-left:5px solid var(--secondary); transition:.25s; position:relative; overflow:hidden;
+    }
+    .job-card:hover { transform: translateY(-4px); box-shadow:0 8px 30px rgba(0,0,0,.12);}
+    .job-card.featured { border-left-color:var(--gold); background: linear-gradient(135deg,#fffbeb 0%, #fff 100%); }
+    .job-card.featured::before {
+      content:'⭐ LOKAAL'; position:absolute; top:1rem; right:1rem;
+      background:var(--gold); color:#fff; padding:.3rem .8rem; border-radius:20px; font-size:.75rem; font-weight:800; letter-spacing:.4px;
+    }
+    .job-title { color:var(--primary); font-size:1.25rem; font-weight:800; margin-bottom:.4rem; }
+    .job-company { color:var(--muted); font-weight:600; }
+    .job-meta { display:flex; flex-wrap:wrap; gap:1rem; margin:.8rem 0 1rem; padding-bottom:1rem; border-bottom:1px solid #e5e7eb; }
+    .meta-item { display:flex; align-items:center; gap:.4rem; color:#555; font-size:.95rem;}
+    .salary { color:var(--success); font-weight:800; }
+    .job-description { color:#555; line-height:1.7; margin-bottom:1rem; }
+    .job-tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.1rem; }
+    .tag { background:var(--light); color:var(--primary); padding:.28rem .75rem; border-radius:20px; font-size:.8rem; font-weight:700; }
+    .job-actions { display:flex; gap:.75rem; flex-wrap:wrap; }
+    .btn-small { padding:.6rem 1.2rem; font-size:.9rem; }
+
+    .notice {
+      background: linear-gradient(135deg,#dbeafe 0%, #bfdbfe 100%);
+      border-left:4px solid var(--primary); border-radius:12px; padding:1.5rem; margin:2rem 0;
+    }
+    .notice h3 { color:var(--primary); font-size:1.25rem; margin-bottom:.6rem; }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+      color:#fff; padding:3rem 4%; text-align:center; margin:3rem 0; border-radius:15px;
+    }
+    .cta-section h2 { font-size:1.8rem; margin-bottom:.8rem; }
+    .cta-section p { font-size:1.05rem; opacity:.95; margin-bottom:1.2rem; }
+
+    .faq-section { margin:3rem 0; }
+    .faq-section h2 { color:var(--primary); text-align:center; font-size:1.8rem; margin-bottom:1.25rem;}
+    .faq-item { background:#fff; border:1px solid #e5e7eb; border-radius:10px; margin-bottom:1rem; }
+    .faq-item details { padding:1.2rem; }
+    .faq-item summary { cursor:pointer; font-weight:800; color:var(--primary); list-style:none; display:flex; align-items:center; justify-content:space-between; }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item summary::after { content:'+'; font-size:1.5rem; color:var(--secondary); transition:.2s; }
+    .faq-item details[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin-top: .8rem; color:#555; }
+
+    footer { background:var(--dark); color:#fff; padding:2rem 4%; text-align:center; font-size:.95rem; }
+    footer a { color:#fff; text-decoration:none; }
+    footer a:hover { color: var(--secondary); }
+    footer p { margin-bottom:.5rem; }
+
+    @media (min-width:600px){ .logo{font-size:1.3rem;} .hero h1{font-size:2.2rem;} .jobs-grid{grid-template-columns:repeat(2,1fr);} }
+    @media (min-width:900px){ .logo{font-size:1.5rem;} nav{gap:2rem;} .hero h1{font-size:2.5rem;} .hero-subtitle{font-size:1.15rem;} }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">SafetyXAcademy</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#training">Training</a>
+        <a href="jobs.html" aria-current="page">Vacatures</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <div class="header-content">
-            <a href="index.html" class="logo">SafetyXAcademy</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="index.html#training">Training</a>
-                <a href="jobs.html">Vacatures</a>
-                <a href="index.html#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>NEBOSH Jobs & HSE Vacatures<br /><span class="salary-highlight">€4.500 – €130k Wereldwijd</span></h1>
+      <p class="hero-subtitle">
+        12 HSE carrières met top salarissen (indicatief): Rotterdam €4.500–5.500/maand, Antwerpen €4.200–5.000/maand,
+        Dubai $110k, Norway $120k, Australia $145k. <strong>Train bij SafetyXAcademy €3.500 → werk wereldwijd.</strong>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" aria-label="Start NEBOSH training e-mail"
+           href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20Training%20%E2%86%92%20Wereldwijde%20Carri%C3%A8re&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20weten%20over%3A%0A%E2%9C%85%20NEBOSH%20IGC%20training%20%E2%82%AC3.500%0A%E2%9C%85%20Job%20placement%20support%0A%E2%9C%85%20Carri%C3%A8remogelijkheden%20wereldwijd%0A%0AMijn%20naam%3A%20%0ATelefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C">
+          🎓 Start NEBOSH Training €3.500
+        </a>
+        <a class="btn btn-secondary" href="index.html#training" aria-label="Meer over NEBOSH IGC">
+          📖 Meer over NEBOSH IGC
+        </a>
+      </div>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>NEBOSH Jobs & HSE Vacatures<br><span class="salary-highlight">€4.500 - €130k Wereldwijd</span></h1>
-            <p class="hero-subtitle">
-                12 HSE carrières met top salarissen: Rotterdam €4.500-5.500/maand, Antwerpen €4.200-5.000/maand,<br>
-                Dubai $110k, Norway $120k, Australia $145k. <strong>Train bij SafetyXAcademy €3.500 → werk wereldwijd.</strong>
-            </p>
-            <div class="hero-cta">
-                <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20Training%20%E2%86%92%20Wereldwijde%20Carrière&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20weten%20over%3A%0A%E2%9C%85%20NEBOSH%20IGC%20training%20€3.500%0A%E2%9C%85%20Job%20placement%20support%0A%E2%9C%85%20Carrièremogelijkheden%20wereldwijd%0A%0AMijn%20naam%3A%20%0ATelefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" class="btn btn-primary">🎓 Start NEBOSH Training €3.500</a>
-                <a href="index.html#training" class="btn btn-secondary">📖 Meer over NEBOSH IGC</a>
-            </div>
-        </section>
+    <!-- Stats -->
+    <section class="stats-bar" aria-label="Key stats">
+      <div class="stats-grid">
+        <div class="stat-item"><h3>12</h3><p>HSE Vacatures Wereldwijd</p></div>
+        <div class="stat-item"><h3>€4.500+</h3><p>Startsalaris NL/BE</p></div>
+        <div class="stat-item"><h3>$145k</h3><p>Top Salaris Internationaal</p></div>
+        <div class="stat-item"><h3>€3.500</h3><p>NEBOSH Training All-In</p></div>
+      </div>
+    </section>
 
-        <!-- Stats Bar -->
-        <section class="stats-bar">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>12</h3>
-                    <p>HSE Vacatures Wereldwijd</p>
-                </div>
-                <div class="stat-item">
-                    <h3>€4.500+</h3>
-                    <p>Startsalaris NL/BE</p>
-                </div>
-                <div class="stat-item">
-                    <h3>$145k</h3>
-                    <p>Top Salaris Internationaal</p>
-                </div>
-                <div class="stat-item">
-                    <h3>€3.500</h3>
-                    <p>NEBOSH Training All-In</p>
-                </div>
-            </div>
-        </section>
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>🌍 HSE Jobs Met NEBOSH IGC Certificaat</h2>
+        <p>Van Rotterdam tot Dubai, van Antwerpen tot Australia. Deze jobs tonen de waarde van jouw NEBOSH investering. Train lokaal voor €3.500, verdien wereldwijd (salarissen indicatief).</p>
+      </div>
 
-        <div class="container">
-            <!-- Section Header -->
-            <div class="section-header">
-                <h2>🌍 HSE Jobs Met NEBOSH IGC Certificaat</h2>
-                <p>Van Rotterdam tot Dubai, van Antwerpen tot Australia. Deze jobs tonen de waarde van jouw NEBOSH investering. Train lokaal voor €3.500, verdien wereldwijd.</p>
-            </div>
+      <!-- Filters -->
+      <div class="filters" role="tablist" aria-label="Vacature filters">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">🌐 Alle Jobs (12)</button>
+        <button class="chip" data-filter="nederland" role="tab" aria-selected="false">🇳🇱 Nederland</button>
+        <button class="chip" data-filter="belgie" role="tab" aria-selected="false">🇧🇪 België</button>
+        <button class="chip" data-filter="middle-east" role="tab" aria-selected="false">🏜️ Middle East</button>
+        <button class="chip" data-filter="europe" role="tab" aria-selected="false">🇪🇺 Europa</button>
+        <button class="chip" data-filter="offshore" role="tab" aria-selected="false">🛢️ Offshore</button>
+        <button class="chip" data-filter="mining" role="tab" aria-selected="false">⛏️ Mining</button>
+      </div>
 
-            <!-- Filters -->
-            <div class="filters">
-                <button class="chip active" data-filter="all">🌐 Alle Jobs (12)</button>
-                <button class="chip" data-filter="nederland">🇳🇱 Nederland</button>
-                <button class="chip" data-filter="belgie">🇧🇪 België</button>
-                <button class="chip" data-filter="middle-east">🏜️ Middle East</button>
-                <button class="chip" data-filter="europe">🇪🇺 Europa</button>
-                <button class="chip" data-filter="offshore">🛢️ Offshore</button>
-                <button class="chip" data-filter="mining">⛏️ Mining</button>
-            </div>
+      <!-- Jobs -->
+      <section class="jobs-grid" aria-label="Vacaturelijst">
+        <!-- 1 NL -->
+        <article class="job-card featured" data-tags="nederland benelux haven starter">
+          <h3 class="job-title">HSE Officer Haven Rotterdam</h3>
+          <p class="job-company">Grootste Haven van Europa</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Rotterdam, NL</span>
+            <span class="meta-item">💼 Vast Contract</span>
+            <span class="meta-item salary">💰 €4.500–5.500/maand</span>
+          </div>
+          <p class="job-description">Dagelijkse inspecties, toolbox meetings, LMRA's, incidentrapportages. Internationaal scheepvaart/chemie. Perfect voor NEBOSH starters (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">Nederlands & Engels</span><span class="tag">Haven</span><span class="tag">Starter</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" aria-label="Solliciteer HSE Officer Rotterdam"
+               href="mailto:info@safetyxacademy.nl?subject=HSE%20Officer%20Haven%20Rotterdam&body=Interesse%20in%20HSE%20Officer%20Rotterdam%20%E2%82%AC4.500-5.500%2Fmaand%20(Indicatief)">
+              ✉️ Solliciteer
+            </a>
+            <a class="btn btn-secondary btn-small" href="index.html#training" aria-label="Train eerst NEBOSH IGC">🎓 Train Eerst</a>
+            <a class="btn btn-secondary btn-small" href="tel:+31101234567" aria-label="Bel SafetyXAcademy">☎️ Bel ons</a>
+          </div>
+        </article>
 
-            <!-- Jobs Grid -->
-            <section class="jobs-grid">
-                
-                <!-- JOB 1: Rotterdam - FEATURED -->
-                <article class="job-card featured" data-tags="nederland benelux haven starter">
-                    <div class="job-header">
-                        <h3 class="job-title">HSE Officer Haven Rotterdam</h3>
-                        <p class="job-company">Grootste Haven van Europa</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Rotterdam, NL</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Vast Contract</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> €4.500-5.500/maand</span>
-                    </div>
-                    <p class="job-description">
-                        Kickstart je HSE carrière in de grootste haven van Europa. Dagelijkse inspecties, toolbox meetings, LMRA's, incident rapportages. 
-                        Werk met internationale scheepvaart, logistiek en petrochemie. Perfect voor NEBOSH starters!
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">Nederlands & Engels</span>
-                        <span class="tag">Haven/Logistiek</span>
-                        <span class="tag">Starter-Friendly</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=HSE%20Officer%20Haven%20Rotterdam&body=Interesse%20in%20HSE%20Officer%20Rotterdam%20€4.500-5.500" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 2 BE -->
+        <article class="job-card featured" data-tags="belgie benelux petrochemie">
+          <h3 class="job-title">Safety Advisor Petrochemie Antwerpen</h3>
+          <p class="job-company">Petrochemisch Cluster Antwerpen</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Antwerpen, BE</span>
+            <span class="meta-item">💼 Vast Contract</span>
+            <span class="meta-item salary">💰 €4.200–5.000/maand</span>
+          </div>
+          <p class="job-description">PTW, contractor management, audits, training. Werken met BASF/Exxon/Total partners. VCA VOL + NEBOSH wenselijk (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">VCA VOL</span><span class="tag">Petrochemie</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=Safety%20Advisor%20Antwerpen&body=Interesse%20in%20Safety%20Advisor%20Antwerpen%20%E2%82%AC4.200-5.000%2Fmaand%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+            <a class="btn btn-secondary btn-small" href="tel:+31101234567">☎️ Bel ons</a>
+          </div>
+        </article>
 
-                <!-- JOB 2: Antwerpen - FEATURED -->
-                <article class="job-card featured" data-tags="belgie benelux petrochemie">
-                    <div class="job-header">
-                        <h3 class="job-title">Safety Advisor Petrochemie Antwerpen</h3>
-                        <p class="job-company">Petrochemisch Cluster Antwerpen</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Antwerpen, BE</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Vast Contract</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> €4.200-5.000/maand</span>
-                    </div>
-                    <p class="job-description">
-                        HSE-coördinatie in petrochemische cluster Antwerpen. Permit-to-Work systemen, contractor management, audits, veiligheidstraining. 
-                        Werk samen met BASF, ExxonMobil, Total partners. VCA VOL + NEBOSH IGC gewenst.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">VCA VOL</span>
-                        <span class="tag">Nederlands & Engels</span>
-                        <span class="tag">Petrochemie</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=Safety%20Advisor%20Antwerpen&body=Interesse%20in%20Safety%20Advisor%20Antwerpen%20€4.200-5.000" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 3 Dubai -->
+        <article class="job-card" data-tags="middle-east dubai international high-salary">
+          <h3 class="job-title">HSE Manager Construction Dubai</h3>
+          <p class="job-company">Mega Construction Project UAE</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Dubai, UAE</span>
+            <span class="meta-item">💼 Full-time</span>
+            <span class="meta-item salary">💰 $85k–110k/jaar (tax-free)</span>
+          </div>
+          <p class="job-description">Leid HSE-programma: site-inspecties, PTW, incidentonderzoek, contractor management. Accommodatie & vluchten (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">Construction</span><span class="tag">Tax-Free</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20Dubai&body=Interesse%20in%20HSE%20Manager%20Dubai%20$85k-110k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 3: Dubai -->
-                <article class="job-card" data-tags="middle-east dubai international high-salary">
-                    <div class="job-header">
-                        <h3 class="job-title">HSE Manager Construction Dubai</h3>
-                        <p class="job-company">Mega Construction Project UAE</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Dubai, UAE</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Full-time</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> $85k-110k/jaar tax-free</span>
-                    </div>
-                    <p class="job-description">
-                        Lead HSE program voor mega-bouwproject Dubai. Site inspecties, PTW systemen, incident investigations, contractor management. 
-                        Tax-free salaris, accommodatie, vluchten, zorgverzekering. NEBOSH IGC essentieel.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">Construction</span>
-                        <span class="tag">English</span>
-                        <span class="tag">Tax-Free</span>
-                        <span class="tag">Visa Support</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20Dubai&body=Interesse%20in%20HSE%20Manager%20Dubai%20$85k-110k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 4 Norway Offshore -->
+        <article class="job-card" data-tags="offshore norway international high-salary">
+          <h3 class="job-title">Offshore HSE Supervisor Norway</h3>
+          <p class="job-company">Oil & Gas Platform North Sea</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 North Sea, NO</span>
+            <span class="meta-item">🔁 2/2 Rotation</span>
+            <span class="meta-item salary">💰 $95k–120k/jaar</span>
+          </div>
+          <p class="job-description">Rig audits, PTW coördinatie, emergency drills, HSE meetings. NEBOSH + BOSIET (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">BOSIET</span><span class="tag">Offshore</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=Offshore%20HSE%20Norway&body=Interesse%20in%20Offshore%20HSE%20Norway%20$95k-120k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 4: Norway Offshore -->
-                <article class="job-card" data-tags="offshore norway international high-salary">
-                    <div class="job-header">
-                        <h3 class="job-title">Offshore HSE Supervisor Norway</h3>
-                        <p class="job-company">Oil & Gas Platform North Sea</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> North Sea, Norway</span>
-                        <span class="meta-item"><span class="meta-icon">🔁</span> 2/2 Rotation</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> $95k-120k/jaar</span>
-                    </div>
-                    <p class="job-description">
-                        Offshore oil & gas platform North Sea. Rig audits, PTW coördinatie, emergency drills, HSE meetings. 
-                        NEBOSH IGC + BOSIET vereist. Uitstekende work-life balance met 2/2 rotation (2 weken on, 2 weken off).
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">BOSIET</span>
-                        <span class="tag">Offshore</span>
-                        <span class="tag">Oil & Gas</span>
-                        <span class="tag">English</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=Offshore%20HSE%20Norway&body=Interesse%20in%20Offshore%20HSE%20Norway%20$95k-120k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 5 Singapore -->
+        <article class="job-card" data-tags="singapore international haven high-salary">
+          <h3 class="job-title">Port Safety Manager Singapore</h3>
+          <p class="job-company">Major Container Terminal PSA</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Singapore, SG</span>
+            <span class="meta-item">💼 Full-time</span>
+            <span class="meta-item salary">💰 SGD 75k–95k/jaar</span>
+          </div>
+          <p class="job-description">Yard safety, traffic management, incident response, contractor HSE. Expat-friendly (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">Port/Logistics</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=Port%20Safety%20Singapore&body=Interesse%20in%20Port%20Safety%20Singapore%20SGD75k-95k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 5: Singapore -->
-                <article class="job-card" data-tags="singapore international haven high-salary">
-                    <div class="job-header">
-                        <h3 class="job-title">Port Safety Manager Singapore</h3>
-                        <p class="job-company">Major Container Terminal PSA</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Singapore</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Full-time</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> SGD 75k-95k/jaar</span>
-                    </div>
-                    <p class="job-description">
-                        Operations safety voor major container terminal. Yard safety, traffic management, incident response, contractor HSE. 
-                        Singapore is wereldwijd logistiek hub. NEBOSH + port experience. Expat-friendly omgeving.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">Port/Logistics</span>
-                        <span class="tag">English</span>
-                        <span class="tag">Expat Package</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=Port%20Safety%20Singapore&body=Interesse%20in%20Port%20Safety%20Singapore%20SGD75k-95k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 6 Saudi NEOM -->
+        <article class="job-card" data-tags="middle-east saudi international high-salary">
+          <h3 class="job-title">HSE Lead NEOM Megaproject Saudi Arabia</h3>
+          <p class="job-company">NEOM Giga-Project</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 NEOM, SA</span>
+            <span class="meta-item">💼 Senior Role</span>
+            <span class="meta-item salary">💰 $100k–130k/jaar (tax-free)</span>
+          </div>
+          <p class="job-description">Contractor governance, high-risk controls, LOTO, HSE cultuur. NEBOSH Diploma voorkeur (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH Diploma</span><span class="tag">Megaproject</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=HSE%20Lead%20NEOM&body=Interesse%20in%20HSE%20Lead%20NEOM%20$100k-130k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 6: Saudi NEOM -->
-                <article class="job-card" data-tags="middle-east saudi international high-salary">
-                    <div class="job-header">
-                        <h3 class="job-title">HSE Lead NEOM Megaproject Saudi Arabia</h3>
-                        <p class="job-company">NEOM Giga-Project</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> NEOM, Saudi Arabia</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Senior Role</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> $100k-130k/jaar tax-free</span>
-                    </div>
-                    <p class="job-description">
-                        Strategische HSE leadership voor NEOM giga-project ($500B+ investment). Contractor governance, high-risk controls, 
-                        LOTO systemen, HSE cultuur. Tax-free package, accommodatie, vluchten. NEBOSH Diploma voorkeur.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH Diploma</span>
-                        <span class="tag">Megaproject</span>
-                        <span class="tag">English</span>
-                        <span class="tag">Tax-Free</span>
-                        <span class="tag">Senior Level</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=HSE%20Lead%20NEOM&body=Interesse%20in%20HSE%20Lead%20NEOM%20$100k-130k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 7 UK -->
+        <article class="job-card" data-tags="europe uk international">
+          <h3 class="job-title">HSE Manager Manufacturing UK</h3>
+          <p class="job-company">UK Manufacturing Site</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Midlands, GB</span>
+            <span class="meta-item">💼 Permanent</span>
+            <span class="meta-item salary">💰 £55k–75k/jaar</span>
+          </div>
+          <p class="job-description">ISO 45001, audits, training programs, change management. NEBOSH Diploma voordeel (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">ISO 45001</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20UK&body=Interesse%20in%20HSE%20Manager%20UK%20%C2%A355k-75k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 7: UK -->
-                <article class="job-card" data-tags="europe uk international">
-                    <div class="job-header">
-                        <h3 class="job-title">HSE Manager Manufacturing UK</h3>
-                        <p class="job-company">UK Manufacturing Site</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Midlands, UK</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Permanent</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> £55k-75k/jaar</span>
-                    </div>
-                    <p class="job-description">
-                        HSE strategie & implementatie voor UK manufacturing site. ISO 45001, audits, training programs, change management. 
-                        Mature HSE cultuur. NEBOSH Diploma voordeel. Britse arbeidsmarkt waardeert NEBOSH zeer.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">ISO 45001</span>
-                        <span class="tag">Manufacturing</span>
-                        <span class="tag">English</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20UK&body=Interesse%20in%20HSE%20Manager%20UK%20£55k-75k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 8 Australia Mining -->
+        <article class="job-card" data-tags="mining australia international high-salary">
+          <h3 class="job-title">Mining Safety Advisor Australia</h3>
+          <p class="job-company">Mine Site Western Australia</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Perth, WA, AU</span>
+            <span class="meta-item">🔁 FIFO Rotation</span>
+            <span class="meta-item salary">💰 AUD 120k–145k/jaar</span>
+          </div>
+          <p class="job-description">Risk assessments, operations safety, emergency response. FIFO. NEBOSH + mining ervaring (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">Mining</span><span class="tag">FIFO</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=Mining%20Safety%20Australia&body=Interesse%20in%20Mining%20Safety%20Australia%20AUD120k-145k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 8: Australia Mining -->
-                <article class="job-card" data-tags="mining australia international high-salary">
-                    <div class="job-header">
-                        <h3 class="job-title">Mining Safety Advisor Australia</h3>
-                        <p class="job-company">Mine Site Western Australia</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Perth, WA, Australia</span>
-                        <span class="meta-item"><span class="meta-icon">🔁</span> FIFO Rotation</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> AUD 120k-145k/jaar</span>
-                    </div>
-                    <p class="job-description">
-                        Mine site HSE leadership Western Australia. Risk assessments, underground/surface operations safety, 
-                        fatigue management, emergency response. FIFO (fly-in-fly-out). NEBOSH + mining experience. Top salaris!
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">Mining</span>
-                        <span class="tag">FIFO</span>
-                        <span class="tag">English</span>
-                        <span class="tag">High Salary</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=Mining%20Safety%20Australia&body=Interesse%20in%20Mining%20Safety%20Australia%20AUD120k-145k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 9 Canada Oil Sands -->
+        <article class="job-card" data-tags="canada international high-salary oil-gas">
+          <h3 class="job-title">HSE Coordinator Oil Sands Canada</h3>
+          <p class="job-company">Oil Sands Operations Alberta</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Fort McMurray, AB, CA</span>
+            <span class="meta-item">💼 Full-time</span>
+            <span class="meta-item salary">💰 CAD 90k–115k/jaar</span>
+          </div>
+          <p class="job-description">Daily inspections, JSAs, toolbox talks, incident investigations. NEBOSH erkend (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">Oil & Gas</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=HSE%20Coordinator%20Canada&body=Interesse%20in%20HSE%20Canada%20CAD90k-115k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 9: Canada Oil Sands -->
-                <article class="job-card" data-tags="canada international high-salary oil-gas">
-                    <div class="job-header">
-                        <h3 class="job-title">HSE Coordinator Oil Sands Canada</h3>
-                        <p class="job-company">Oil Sands Operations Alberta</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Fort McMurray, AB, Canada</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Full-time</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> CAD 90k-115k/jaar</span>
-                    </div>
-                    <p class="job-description">
-                        Field HSE support voor oil sands operations Alberta. Dagelijkse inspecties, JSAs, toolbox talks, incident investigations. 
-                        NEBOSH erkend. Canadese arbeidsmarkt zoekt HSE professionals. Immigratie-friendly.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">Oil & Gas</span>
-                        <span class="tag">Field Work</span>
-                        <span class="tag">English</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=HSE%20Coordinator%20Canada&body=Interesse%20in%20HSE%20Canada%20CAD90k-115k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 10 Germany Chemical -->
+        <article class="job-card" data-tags="europe germany petrochemie">
+          <h3 class="job-title">Process Safety Engineer Germany</h3>
+          <p class="job-company">Chemical Plant North Rhine-Westphalia</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 NRW, DE</span>
+            <span class="meta-item">💼 Permanent</span>
+            <span class="meta-item salary">💰 €65k–85k/jaar</span>
+          </div>
+          <p class="job-description">MOC, ATEX, PSM, HAZOP facilitation. Duits/Engels vereist. NEBOSH + engineering (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">ATEX</span><span class="tag">PSM</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=Process%20Safety%20Germany&body=Interesse%20in%20Process%20Safety%20Germany%20%E2%82%AC65k-85k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 10: Germany Chemical -->
-                <article class="job-card" data-tags="europe germany petrochemie">
-                    <div class="job-header">
-                        <h3 class="job-title">Process Safety Engineer Germany</h3>
-                        <p class="job-company">Chemical Plant North Rhine-Westphalia</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> NRW, Germany</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Permanent</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> €65k-85k/jaar</span>
-                    </div>
-                    <p class="job-description">
-                        Chemical plant process safety engineering. MOC, ATEX, PSM, HAZOP facilitation. Duits/Engels vereist. 
-                        NEBOSH + engineering degree. Duits chemische industrie = top kwaliteit HSE.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">ATEX</span>
-                        <span class="tag">PSM</span>
-                        <span class="tag">German/English</span>
-                        <span class="tag">Engineering</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=Process%20Safety%20Germany&body=Interesse%20in%20Process%20Safety%20Germany%20€65k-85k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 11 Qatar LNG -->
+        <article class="job-card" data-tags="middle-east qatar international high-salary">
+          <h3 class="job-title">LNG Safety Specialist Qatar</h3>
+          <p class="job-company">LNG Terminal Operations</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Doha, QA</span>
+            <span class="meta-item">💼 Full-time</span>
+            <span class="meta-item salary">💰 $95k–120k/jaar (tax-free)</span>
+          </div>
+          <p class="job-description">Cryogenic hazards, gas detection, emergency response, contractor HSE. Tax-free package (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">LNG</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=LNG%20Safety%20Qatar&body=Interesse%20in%20LNG%20Safety%20Qatar%20$95k-120k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
 
-                <!-- JOB 11: Qatar LNG -->
-                <article class="job-card" data-tags="middle-east qatar international high-salary">
-                    <div class="job-header">
-                        <h3 class="job-title">LNG Safety Specialist Qatar</h3>
-                        <p class="job-company">LNG Terminal Operations</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Doha, Qatar</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Full-time</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> $95k-120k/jaar tax-free</span>
-                    </div>
-                    <p class="job-description">
-                        LNG terminal operations safety. Cryogenic hazards, gas detection, emergency response, contractor HSE. 
-                        Tax-free compensatie, accommodatie, vluchten, zorgverzekering. NEBOSH + LNG/petrochemical ervaring.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">LNG</span>
-                        <span class="tag">Petrochemical</span>
-                        <span class="tag">Tax-Free</span>
-                        <span class="tag">English</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=LNG%20Safety%20Qatar&body=Interesse%20in%20LNG%20Safety%20Qatar%20$95k-120k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+        <!-- 12 USA Refinery -->
+        <article class="job-card" data-tags="usa international high-salary oil-gas">
+          <h3 class="job-title">HSE Manager Refinery USA</h3>
+          <p class="job-company">Refinery Operations Texas/Louisiana</p>
+          <div class="job-meta">
+            <span class="meta-item">📍 Gulf Coast, TX/LA, US</span>
+            <span class="meta-item">💼 Senior Role</span>
+            <span class="meta-item salary">💰 $95k–130k/jaar</span>
+          </div>
+          <p class="job-description">PSM, OSHA compliance, BBS, PHA. NEBOSH + CSP preferred (salaris indicatief).</p>
+          <div class="job-tags"><span class="tag">NEBOSH IGC</span><span class="tag">PSM</span><span class="tag">OSHA</span></div>
+          <div class="job-actions">
+            <a class="btn btn-primary btn-small" href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20USA&body=Interesse%20in%20HSE%20Manager%20USA%20$95k-130k%20(Indicatief)">✉️ Solliciteer</a>
+            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
+          </div>
+        </article>
+      </section>
 
-                <!-- JOB 12: USA Refinery -->
-                <article class="job-card" data-tags="usa international high-salary oil-gas">
-                    <div class="job-header">
-                        <h3 class="job-title">HSE Manager Refinery USA</h3>
-                        <p class="job-company">Refinery Operations Texas/Louisiana</p>
-                    </div>
-                    <div class="job-meta">
-                        <span class="meta-item"><span class="meta-icon">📍</span> Gulf Coast, TX/LA</span>
-                        <span class="meta-item"><span class="meta-icon">💼</span> Senior Role</span>
-                        <span class="meta-item salary"><span class="meta-icon">💰</span> $95k-130k/jaar</span>
-                    </div>
-                    <p class="job-description">
-                        Refinery HSE management Texas/Louisiana. PSM, OSHA compliance, behavior-based safety, process hazard analysis. 
-                        NEBOSH + CSP preferred. Amerikaanse raffinage industrie betaalt top salarissen voor HSE.
-                    </p>
-                    <div class="job-tags">
-                        <span class="tag">NEBOSH IGC</span>
-                        <span class="tag">PSM</span>
-                        <span class="tag">OSHA</span>
-                        <span class="tag">Refinery</span>
-                        <span class="tag">English</span>
-                    </div>
-                    <div class="job-actions">
-                        <a href="mailto:info@safetyxacademy.nl?subject=HSE%20Manager%20USA&body=Interesse%20in%20HSE%20Manager%20USA%20$95k-130k" class="btn btn-primary btn-small">✉️ Solliciteer</a>
-                        <a href="index.html#training" class="btn btn-secondary btn-small">🎓 Train Eerst</a>
-                    </div>
-                </article>
+      <!-- Notice -->
+      <div class="notice">
+        <h3>💡 Waarom Deze Jobs Op SafetyXAcademy.nl?</h3>
+        <p><strong>Dit zijn voorbeeldprofielen van typische NEBOSH carrières.</strong> Ze illustreren de wereldwijde vraag naar NEBOSH-gecertificeerde HSE professionals en tonen realistische, <strong>indicatieve</strong> salarissen.</p>
+        <p>Wij helpen met <strong>NEBOSH IGC (€3.500)</strong>, CV/LinkedIn, voorbereiding en matching via partnernetwerk (NL/BE & wereldwijd).</p>
+      </div>
 
-            </section>
+      <!-- CTA -->
+      <div class="cta-section">
+        <h2>🎓 Train Nu, Werk Wereldwijd</h2>
+        <p>Investeer €3.500 in NEBOSH IGC bij SafetyXAcademy Rotterdam. Verdien €4.500+/maand lokaal, of $145k internationaal (indicatief).</p>
+        <a class="btn btn-primary" aria-label="Vraag gratis informatie per e-mail"
+           href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Training%20%E2%82%AC3.500%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%3A%0A%E2%9C%85%20NEBOSH%20IGC%20training%20%E2%82%AC3.500%20all-in%0A%E2%9C%85%20Startdata%0A%E2%9C%85%20Job%20placement%20support%0A%0AMijn%20naam%3A%20%0ATelefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C">
+          📧 Vraag Gratis Informatie →
+        </a>
+      </div>
 
-            <!-- Notice Box -->
-            <div class="notice">
-                <h3>💡 Waarom Deze Jobs Op SafetyXAcademy.nl?</h3>
-                <p>
-                    <strong>Dit zijn voorbeelden van typische NEBOSH carrières.</strong> Deze jobs illustreren de wereldwijde vraag naar 
-                    NEBOSH-gecertificeerde HSE professionals en tonen realistische salarissen in verschillende sectoren en landen.
-                </p>
-                <p>
-                    Wij helpen je niet alleen met de <strong>NEBOSH IGC opleiding (€3.500)</strong>, maar begeleiden je ook richting 
-                    job placement en carrière-advies. Vacatures worden geüpdatet via partners en job boards wereldwijd.
-                </p>
-                <p style="margin-top:1rem;">
-                    <strong>💬 Interesse?</strong> Stuur een email naar <a href="mailto:info@safetyxacademy.nl" style="color:var(--primary); font-weight:700;">info@safetyxacademy.nl</a> 
-                    en we helpen je op weg naar jouw HSE carrière.
-                </p>
-            </div>
+      <!-- FAQ -->
+      <section class="faq-section" aria-label="Veelgestelde vragen">
+        <h2>❓ Veelgestelde Vragen Over NEBOSH Carrières</h2>
 
-            <!-- CTA Section -->
-            <div class="cta-section">
-                <h2>🎓 Train Nu, Werk Wereldwijd</h2>
-                <p>
-                    Investeer €3.500 in NEBOSH IGC bij SafetyXAcademy Rotterdam.<br>
-                    Verdien €4.500+ per maand lokaal, of $145k internationaal. Begin januari 2026.
-                </p>
-                <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Training%20€3.500%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%3A%0A%E2%9C%85%20NEBOSH%20IGC%20training%20€3.500%20all-in%0A%E2%9C%85%20Start%20januari%202026%0A%E2%9C%85%20Job%20placement%20support%0A%0AMijn%20naam%3A%20%0ATelefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" class="btn btn-primary">📧 Vraag Gratis Informatie →</a>
-            </div>
+        <div class="faq-item"><details>
+          <summary>Hoeveel verdien ik met NEBOSH IGC in Nederland/België?</summary>
+          <p><strong>Starter (0–2 jaar):</strong> €3.800–5.500/mnd • <strong>Medior (3–5 jaar):</strong> €5.000–7.000/mnd • <strong>Senior (5+):</strong> €7.000–10.000+/mnd. Bedragen zijn <em>indicatief</em> en afhankelijk van sector/ploegen.</p>
+        </details></div>
 
-            <!-- FAQ Section -->
-            <section class="faq-section">
-                <h2>❓ Veelgestelde Vragen Over NEBOSH Carrières</h2>
+        <div class="faq-item"><details>
+          <summary>Welke landen betalen het beste voor HSE professionals?</summary>
+          <p><strong>Australia</strong> (mining), <strong>Saudi/UAE/Qatar</strong> (tax-free), <strong>Norway</strong> (offshore), <strong>USA</strong> (refining), <strong>Canada</strong> (oil sands). Salarissen zijn <em>indicatief</em>.</p>
+        </details></div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Hoeveel verdien ik met NEBOSH IGC in Nederland/België?</summary>
-                        <p>
-                            <strong>Starter (0-2 jaar):</strong> €3.800-5.500/maand (€45k-66k/jaar)<br>
-                            <strong>Medior (3-5 jaar):</strong> €5.000-7.000/maand (€60k-84k/jaar)<br>
-                            <strong>Senior (5+ jaar):</strong> €7.000-10.000+/maand (€84k-120k+/jaar)<br><br>
-                            In Rotterdam/Antwerpen havens en petrochemie betaal je vaak 10-20% meer dan gemiddeld vanwege shift work en risico-opslag.
-                        </p>
-                    </details>
-                </div>
+        <div class="faq-item"><details>
+          <summary>Kan ik direct na NEBOSH IGC internationaal werken?</summary>
+          <p>Vaak 2–5 jaar ervaring + NEBOSH IGC vereist. Strategie: <strong>lokaal starten</strong> in NL/BE → daarna internationaal doorgroeien. Uitzonderingen bestaan (bv. Dubai construction).</p>
+        </details></div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Welke landen betalen het beste voor HSE professionals?</summary>
-                        <p>
-                            <strong>Top 5 landen voor HSE salarissen:</strong><br>
-                            1. <strong>Australia</strong> - AUD 120k-145k ($80k-95k) mining sector<br>
-                            2. <strong>Saudi/UAE/Qatar</strong> - $85k-130k tax-free + benefits<br>
-                            3. <strong>Norway</strong> - $95k-120k offshore oil & gas<br>
-                            4. <strong>USA</strong> - $95k-130k refining/petrochemical<br>
-                            5. <strong>Canada</strong> - CAD 90k-115k ($67k-85k) oil sands<br><br>
-                            Tax-free landen (UAE, Saudi, Qatar) zijn vaak het aantrekkelijkst vanwege netto inkomen.
-                        </p>
-                    </details>
-                </div>
+        <div class="faq-item"><details>
+          <summary>Helpt SafetyXAcademy met job placement?</summary>
+          <p>Ja: CV/LinkedIn, interview prep, job boards, netwerk in haven/petrochemie/offshore, en advies lokaal vs. internationaal.</p>
+        </details></div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Kan ik direct na NEBOSH IGC internationaal werken?</summary>
-                        <p>
-                            <strong>Ja, maar:</strong> Meeste internationale jobs vereisen 2-5 jaar HSE ervaring + NEBOSH IGC. 
-                            Strategie: <strong>(1)</strong> Start lokaal in NL/BE voor €4.500+/maand om ervaring op te bouwen, 
-                            <strong>(2)</strong> Na 2-3 jaar apply voor internationale posities met salaris $85k-145k.<br><br>
-                            <strong>Uitzondering:</strong> Dubai construction heeft soms entry-level NEBOSH jobs voor €3.500-4.500/maand. 
-                            Goede springplank naar hogere posities.
-                        </p>
-                    </details>
-                </div>
+        <div class="faq-item"><details>
+          <summary>Is NEBOSH IGC genoeg of heb ik NEBOSH Diploma nodig?</summary>
+          <p><strong>IGC (€3.500):</strong> uitstekend voor junior/medior tot ~€7.000/mnd. <strong>Diploma:</strong> nuttig voor senior/management (€10k+/mnd). Veel werkgevers sponsoren Diploma na ervaring.</p>
+        </details></div>
+      </section>
+    </div>
+  </main>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Helpt SafetyXAcademy met job placement?</summary>
-                        <p>
-                            <strong>Ja!</strong> Onze NEBOSH IGC training (€3.500) bevat:<br>
-                            ✅ CV/LinkedIn optimalisatie voor HSE<br>
-                            ✅ Interview voorbereiding<br>
-                            ✅ Job board toegang (Rotterdam, Antwerpen, internationaal)<br>
-                            ✅ Netwerk met werkgevers in haven, petrochemie, offshore<br>
-                            ✅ Carrière advies: lokaal starten vs direct internationaal<br><br>
-                            We matchen NEBOSH graduates met vacatures via ons partner netwerk in NL, BE, en wereldwijd.
-                        </p>
-                    </details>
-                </div>
+  <footer>
+    <div style="max-width:1200px; margin:0 auto;">
+      <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+      <p style="margin-top:.5rem;">
+        <a href="index.html">Home</a> |
+        <a href="jobs.html">Vacatures</a> |
+        <a href="privacy.html">Privacy</a> |
+        <a href="index.html#contact">Contact</a>
+      </p>
+      <p style="margin-top:.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
+        🌍 Train Lokaal voor €3.500, Werk Wereldwijd
+      </p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:#ddd;">
+        NEBOSH Jobs Rotterdam €4.500–5.500 | Antwerpen €4.200–5.000 | Dubai $110k | Norway $120k | Australia $145k (indicatief)
+      </p>
+    </div>
+  </footer>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Wat is het verschil tussen HSE Officer, Advisor, Manager?</summary>
-                        <p>
-                            <strong>HSE Officer (Junior):</strong> €3.800-5.500/maand - dagelijkse inspecties, toolbox, rapportages<br>
-                            <strong>HSE Advisor (Medior):</strong> €5.000-7.000/maand - audits, training, PTW, contractor management<br>
-                            <strong>HSE Manager (Senior):</strong> €7.000-10.000+/maand - strategie, teams leiden, ISO systemen, board reporting<br><br>
-                            Met NEBOSH IGC start je als Officer/Advisor. Na 5+ jaar en eventueel NEBOSH Diploma kun je Manager worden.
-                        </p>
-                    </details>
-                </div>
+  <!-- JSON-LD: WebPage + Breadcrumbs + 12x JobPosting + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.safetyxacademy.nl/jobs",
+        "url": "https://www.safetyxacademy.nl/jobs",
+        "name": "NEBOSH Jobs & HSE Vacatures | SafetyXAcademy",
+        "isPartOf": { "@type": "WebSite", "url": "https://www.safetyxacademy.nl/" },
+        "breadcrumb": { "@id": "https://www.safetyxacademy.nl/jobs#breadcrumb" },
+        "inLanguage": "nl"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.safetyxacademy.nl/jobs#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.safetyxacademy.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Vacatures", "item": "https://www.safetyxacademy.nl/jobs" }
+        ]
+      },
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Welke sectoren hebben de meeste HSE jobs?</summary>
-                        <p>
-                            <strong>Top sectoren voor NEBOSH professionals:</strong><br>
-                            🏗️ <strong>Construction</strong> - Dubai, Saudi, UK - veel vraag<br>
-                            🛢️ <strong>Oil & Gas</strong> - Norway, Canada, USA, Middle East - top salarissen<br>
-                            🚢 <strong>Havens/Logistiek</strong> - Rotterdam, Antwerpen, Singapore - stabiel<br>
-                            🏭 <strong>Petrochemie</strong> - NL, BE, DE, USA - technisch uitdagend<br>
-                            ⛏️ <strong>Mining</strong> - Australia, Canada - hoogste salarissen<br>
-                            🏭 <strong>Manufacturing</strong> - Europa, UK - mature HSE cultuur<br><br>
-                            Nederland/België: haven en petrochemie. Internationaal: construction en oil & gas.
-                        </p>
-                    </details>
-                </div>
+      /* 1 NL */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#hse-officer-rotterdam",
+        "title": "HSE Officer Haven Rotterdam",
+        "description": "Dagelijkse inspecties, toolbox meetings, LMRA's en incidentrapportages in de grootste haven van Europa. Nederlands & Engels. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Rotterdam Port", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Rotterdam", "addressRegion": "ZH", "addressCountry": "NL" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "EUR", "value": { "@type": "QuantitativeValue", "minValue": 4500, "maxValue": 5500, "unitText": "MONTH" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "hse-officer-rotterdam" }
+      },
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Is NEBOSH IGC genoeg of heb ik NEBOSH Diploma nodig?</summary>
-                        <p>
-                            <strong>NEBOSH IGC (€3.500):</strong> Perfect voor 90% van HSE jobs tot €7.000/maand (Junior-Medior).<br>
-                            <strong>NEBOSH Diploma (€6.000-8.000):</strong> Nodig voor Senior Manager roles €10.000+/maand en strategische posities.<br><br>
-                            <strong>Advies:</strong> Start met IGC → werk 3-5 jaar → overweeg Diploma voor senior progression. 
-                            IGC opent internationale deuren, Diploma maximaliseert salaris long-term. Veel werkgevers sponsoren Diploma na 2-3 jaar.
-                        </p>
-                    </details>
-                </div>
+      /* 2 BE */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#safety-advisor-antwerpen",
+        "title": "Safety Advisor Petrochemie Antwerpen",
+        "description": "PTW, contractor management, audits en training in de petrochemische cluster. Nederlands & Engels. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Antwerpen Petrochemie", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Antwerpen", "addressCountry": "BE" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "EUR", "value": { "@type": "QuantitativeValue", "minValue": 4200, "maxValue": 5000, "unitText": "MONTH" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "safety-advisor-antwerpen" }
+      },
 
-            </section>
+      /* 3 Dubai */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#hse-manager-dubai",
+        "title": "HSE Manager Construction Dubai",
+        "description": "Leid HSE programma voor megaproject: site-inspecties, PTW, incidentonderzoek, contractor management. Tax-free. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Dubai Construction", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "minValue": 85000, "maxValue": 110000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "hse-manager-dubai" }
+      },
 
-        </div>
-    </main>
+      /* 4 Norway Offshore */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#offshore-hse-norway",
+        "title": "Offshore HSE Supervisor Norway",
+        "description": "Rig audits, PTW coördinatie, emergency drills en HSE meetings op een offshore platform. NEBOSH + BOSIET. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Norway Offshore", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "North Sea", "addressCountry": "NO" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "minValue": 95000, "maxValue": 120000, "unitText": "YEAR" } },
+        "workHours": "2/2 rotation",
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "offshore-hse-norway" }
+      },
 
-    <footer>
-        <div style="max-width:1200px; margin:0 auto;">
-            <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
-            <p style="margin-top:0.5rem;">
-                <a href="index.html">Home</a> | 
-                <a href="jobs.html">Vacatures</a> | 
-                <a href="privacy.html">Privacy</a> | 
-                <a href="index.html#contact">Contact</a>
-            </p>
-            <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-                🌍 Train Lokaal voor €3.500, Werk Wereldwijd
-            </p>
-            <p style="margin-top:0.5rem; font-size:0.8rem; color:#ccc;">
-                NEBOSH Jobs Rotterdam €4.500-5.500 | Antwerpen €4.200-5.000 | Dubai $110k | Norway $120k | Australia $145k<br>
-                HSE Vacatures Wereldwijd | Train bij SafetyXAcademy €3.500 All-In | Westplein 12, Rotterdam<br>
-                info@safetyxacademy.nl | +31 (0)10 123 4567
-            </p>
-        </div>
-    </footer>
+      /* 5 Singapore */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#port-safety-singapore",
+        "title": "Port Safety Manager Singapore",
+        "description": "Operations safety voor container terminal: yard safety, traffic management, incident response, contractor HSE. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Singapore Ports", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Singapore", "addressCountry": "SG" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "SGD", "value": { "@type": "QuantitativeValue", "minValue": 75000, "maxValue": 95000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "port-safety-singapore" }
+      },
 
-    <script>
-        // Filter Functionality
-        const chips = document.querySelectorAll('.chip');
-        const jobCards = document.querySelectorAll('.job-card');
-        
-        chips.forEach(chip => {
-            chip.addEventListener('click', () => {
-                // Remove active from all chips
-                chips.forEach(c => c.classList.remove('active'));
-                // Add active to clicked chip
-                chip.classList.add('active');
-                
-                const filter = chip.dataset.filter;
-                
-                jobCards.forEach(card => {
-                    const tags = card.dataset.tags;
-                    
-                    if (filter === 'all') {
-                        card.style.display = '';
-                    } else {
-                        // Match filter with tags
-                        if (tags.includes(filter)) {
-                            card.style.display = '';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
-            });
+      /* 6 Saudi NEOM */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#hse-lead-saudi",
+        "title": "HSE Lead NEOM Megaproject Saudi Arabia",
+        "description": "Strategische HSE-leiderschap: contractor governance, high-risk controls, LOTO-systemen, HSE-cultuur. NEBOSH Diploma voorkeur. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - NEOM Saudi", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "NEOM", "addressCountry": "SA" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "minValue": 100000, "maxValue": 130000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "hse-lead-saudi" }
+      },
+
+      /* 7 UK */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#hse-manager-uk",
+        "title": "HSE Manager Manufacturing UK",
+        "description": "HSE strategie en implementatie: ISO 45001, audits, training, change management. NEBOSH Diploma voordeel. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - UK Manufacturing", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Midlands", "addressCountry": "GB" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "GBP", "value": { "@type": "QuantitativeValue", "minValue": 55000, "maxValue": 75000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "hse-manager-uk" }
+      },
+
+      /* 8 Australia Mining */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#mining-safety-australia",
+        "title": "Mining Safety Advisor Australia",
+        "description": "Mine site HSE leadership: risk assessments, UG/surface operations, emergency response. FIFO. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Australia Mining", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Perth, WA", "addressCountry": "AU" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "AUD", "value": { "@type": "QuantitativeValue", "minValue": 120000, "maxValue": 145000, "unitText": "YEAR" } },
+        "workHours": "FIFO rotation",
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "mining-safety-australia" }
+      },
+
+      /* 9 Canada Oil Sands */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#oil-sands-canada",
+        "title": "HSE Coordinator Oil Sands Canada",
+        "description": "Field HSE support: dagelijkse inspecties, JSAs, toolbox talks, incidentonderzoek. NEBOSH erkend. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Canada Oil & Gas", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Fort McMurray, AB", "addressCountry": "CA" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "CAD", "value": { "@type": "QuantitativeValue", "minValue": 90000, "maxValue": 115000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "oil-sands-canada" }
+      },
+
+      /* 10 Germany Chemical */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#process-safety-germany",
+        "title": "Process Safety Engineer Germany",
+        "description": "Chemical plant process safety: MOC, ATEX, PSM, HAZOP. Duits/Engels vereist. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Germany Chemical", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "North Rhine-Westphalia", "addressCountry": "DE" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "EUR", "value": { "@type": "QuantitativeValue", "minValue": 65000, "maxValue": 85000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "process-safety-germany" }
+      },
+
+      /* 11 Qatar LNG */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#lng-safety-qatar",
+        "title": "LNG Safety Specialist Qatar",
+        "description": "LNG terminal operations: cryogenic hazards, gas detection, emergency response, contractor HSE. Tax-free. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - Qatar LNG", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Doha", "addressCountry": "QA" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "minValue": 95000, "maxValue": 120000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "lng-safety-qatar" }
+      },
+
+      /* 12 USA Refinery */
+      {
+        "@type": "JobPosting",
+        "@id": "https://www.safetyxacademy.nl/jobs#hse-manager-refinery-usa",
+        "title": "HSE Manager Refinery USA",
+        "description": "Refinery HSE management: PSM, OSHA compliance, BBS, PHA. NEBOSH + CSP preferred. Salaris indicatief.",
+        "datePosted": "2025-10-26",
+        "validThrough": "2026-03-31",
+        "employmentType": "FULL_TIME",
+        "directApply": true,
+        "hiringOrganization": { "@type": "Organization", "name": "SafetyXAcademy Partner - USA Refining", "sameAs": "https://www.safetyxacademy.nl/" },
+        "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Gulf Coast", "addressRegion": "TX/LA", "addressCountry": "US" } },
+        "baseSalary": { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "minValue": 95000, "maxValue": 130000, "unitText": "YEAR" } },
+        "identifier": { "@type": "PropertyValue", "name": "SafetyXAcademy", "value": "hse-manager-refinery-usa" }
+      },
+
+      /* FAQPage */
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.safetyxacademy.nl/jobs#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Hoeveel verdien ik met NEBOSH IGC in NL/BE?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter €3.800–5.500/mnd, Medior €5.000–7.000/mnd, Senior €7.000–10.000+/mnd. Bedragen zijn indicatief en afhankelijk van sector/ploegen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welke landen betalen het beste voor HSE professionals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Australia (mining), Saudi/UAE/Qatar (tax-free), Norway (offshore), USA (refining), Canada (oil sands) scoren hoog. Salarissen zijn indicatief."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan ik direct na NEBOSH IGC internationaal werken?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Meestal 2–5 jaar ervaring + NEBOSH IGC. Strategie: lokaal starten in NL/BE en daarna internationaal doorgroeien. Uitzonderingen bestaan (bijv. Dubai construction)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Filters JS -->
+  <script>
+    const chips = document.querySelectorAll('.chip');
+    const jobCards = document.querySelectorAll('.job-card');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const filter = chip.dataset.filter;
+        jobCards.forEach(card => {
+          const tags = card.dataset.tags || '';
+          card.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
         });
-    </script>
-
+      });
+    });
+  </script>
 </body>
 </html>
+```
+
+Wil je dat ik ook je **index.html** subtiel afstem (interne links, aria-labels, kleine SEO-opschoning) zodat alles 100% consistent is?
