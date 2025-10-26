@@ -18,6 +18,7 @@
   <!-- Styling -->
   <style>
     :root { --tx:#1a1a1a; --muted:#5c6773; --brand:#00811F; --brand-light:#e6f7ed; --accent:#0ea5e9; --bg:#ffffff; --border:#e5e7eb; --warning:#fef3c7; --warning-border:#fbbf24; }
+    html{scroll-behavior:smooth;}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.65;color:var(--tx);background:var(--bg);margin:0;padding:0;}
     .wrap{max-width:980px;margin:0 auto;padding:24px;}
     h1{font-size:2.25rem;line-height:1.2;margin:0 0 12px;font-weight:700;}
@@ -27,27 +28,34 @@
     p{margin:0 0 16px;line-height:1.7;}
     .lead{font-size:1.2rem;line-height:1.65;color:var(--muted);margin-bottom:24px;}
     .highlight{background:var(--brand-light);border-left:4px solid var(--brand);padding:16px 18px;margin:20px 0;border-radius:8px;}
-    .card{border:1px solid var(--border);border-radius:14px;padding:20px;margin:20px 0;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
+    .card{border:1px solid var(--border);border-radius:14px;padding:20px;margin:20px 0;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.05);transition:box-shadow 0.2s;}
+    .card:hover{box-shadow:0 4px 12px rgba(0,0,0,0.08);}
     .table-wrap{overflow-x:auto;margin:20px 0;}
     .table{width:100%;border-collapse:collapse;border:1px solid var(--border);}
     .table th,.table td{border:1px solid var(--border);padding:12px 14px;vertical-align:top;text-align:left;}
     .table th{background:#f8fafc;font-weight:600;}
     .table tr:hover{background:#f9fafb;}
-    .badge{display:inline-block;font-size:.85rem;background:#ecfeff;color:#0369a1;border:1px solid #bae6fd;border-radius:999px;padding:4px 10px;margin:0 6px 6px 0;font-weight:500;}
+    .badge{display:inline-block;font-size:.85rem;background:#ecfeff;color:#0369a1;border:1px solid #bae6fd;border-radius:999px;padding:4px 10px;margin:0 6px 6px 0;font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,0.05);}
     .badge-green{background:var(--brand-light);color:#065f46;border-color:#86efac;}
     .badge-orange{background:#fff7ed;color:#c2410c;border-color:#fed7aa;}
-    .cta{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:14px 24px;border-radius:10px;font-weight:600;border:2px solid #00691a;margin:8px 8px 8px 0;transition:all 0.2s;}
-    .cta:hover{background:#00691a;transform:translateY(-1px);}
-    .cta-secondary{background:#fff;color:var(--brand);border:2px solid var(--brand);}
-    .cta-secondary:hover{background:var(--brand-light);}
+    .cta{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:14px 24px;border-radius:10px;font-weight:600;border:2px solid #00691a;margin:8px 8px 8px 0;transition:all 0.3s ease;box-shadow:0 2px 6px rgba(0,129,31,0.2);}
+    .cta:hover{background:#00691a;transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,129,31,0.3);}
+    .cta-secondary{background:#fff;color:var(--brand);border:2px solid var(--brand);box-shadow:0 2px 6px rgba(0,129,31,0.1);}
+    .cta-secondary:hover{background:var(--brand-light);box-shadow:0 4px 12px rgba(0,129,31,0.2);}
     .muted{color:var(--muted);font-size:.95rem;}
     .list{padding-left:22px;margin:12px 0 18px;}
     .list li{margin:8px 0;line-height:1.6;}
-    .faq dl{margin:0;}
-    .faq dt{font-weight:700;font-size:1.05rem;margin-top:18px;color:#1e293b;}
-    .faq dd{margin:8px 0 16px 0;line-height:1.65;}
-    .toc{background:#f9fafb;padding:18px 22px;border-radius:10px;}
-    .toc a{color:inherit;text-decoration:none;text-underline-offset:3px;}
+    .faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:12px;overflow:hidden;transition:all 0.2s;}
+    .faq-item:hover{box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+    .faq-question{font-weight:700;font-size:1.05rem;color:#1e293b;padding:18px 50px 18px 20px;margin:0;cursor:pointer;user-select:none;position:relative;background:#fff;transition:background 0.2s;}
+    .faq-question:hover{background:#f9fafb;}
+    .faq-question::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.8rem;font-weight:300;color:var(--brand);transition:transform 0.3s ease;}
+    .faq-item.active .faq-question::after{transform:translateY(-50%) rotate(45deg);}
+    .faq-item.active .faq-question{background:#f0fdf4;color:var(--brand);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;padding:0 20px;line-height:1.65;color:#374151;}
+    .faq-item.active .faq-answer{max-height:500px;padding:0 20px 20px 20px;}
+    .toc{background:#f9fafb;padding:18px 22px;border-radius:10px;border:1px solid var(--border);}
+    .toc a{color:inherit;text-decoration:none;text-underline-offset:3px;transition:color 0.2s;}
     .toc a:hover{text-decoration:underline;color:var(--brand);}
     .note{font-size:.95rem;color:#374151;background:var(--warning);border:1px solid var(--warning-border);padding:14px 16px;border-radius:10px;margin:18px 0;}
     .note strong{color:#92400e;}
@@ -680,41 +688,62 @@
 
     <section id="faq" class="card faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Veelgestelde vragen over veiligheidskundige opleidingen</h2>
+      <p class="muted" style="margin-bottom:24px;">Klik op een vraag om het antwoord te zien</p>
       
-      <dl>
-        <dt>Welke veiligheidskundige opleiding is de beste?</dt>
-        <dd>Voor internationale carrières en zzp'ers is <strong>NEBOSH IGC</strong> vaak de beste keuze: €3.500 all-in, erkend in 120+ landen, en ideaal voor opdrachten in Nederland, België en wereldwijd. MKV (€5.000-€7.000) is primair voor vaste banen binnen Nederland. Als je twijfelt: kies NEBOSH - je houdt alle opties open.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Welke veiligheidskundige opleiding is de beste?</div>
+        <div class="faq-answer">Voor internationale carrières en zzp'ers is <strong>NEBOSH IGC</strong> vaak de beste keuze: €3.500 all-in, erkend in 120+ landen, en ideaal voor opdrachten in Nederland, België en wereldwijd. MKV (€5.000-€7.000) is primair voor vaste banen binnen Nederland. Als je twijfelt: kies NEBOSH - je houdt alle opties open.</div>
+      </div>
 
-        <dt>Wat kost een veiligheidskundige opleiding in Nederland?</dt>
-        <dd>NEBOSH IGC kost <strong>€3.500 inclusief examen</strong> bij SafetyXAcademy. MKV-opleidingen kosten €5.000-€7.000. VCA kost €200-€500 maar is basis-niveau. NEBOSH biedt de beste prijs-kwaliteit verhouding voor professionele, internationale carrières.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Wat kost een veiligheidskundige opleiding in Nederland?</div>
+        <div class="faq-answer">NEBOSH IGC kost <strong>€3.500 inclusief examen</strong> bij SafetyXAcademy. MKV-opleidingen kosten €5.000-€7.000. VCA kost €200-€500 maar is basis-niveau. NEBOSH biedt de beste prijs-kwaliteit verhouding voor professionele, internationale carrières.</div>
+      </div>
 
-        <dt>Wat verdient een veiligheidskundige in Nederland?</dt>
-        <dd>Starters verdienen <strong>€2.500-€3.500 per maand</strong> in vast dienstverband. Ervaren veiligheidskundigen €3.500-€5.000. Seniors en specialisten €5.000-€7.000+. Als <strong>zzp'er</strong> kun je rekenen op €350-€750 per dag, afhankelijk van ervaring. Internationale opdrachten (offshore, Dubai) betalen €600-€1.200 per dag.</dd>
+      <div class="faq-item active">
+        <div class="faq-question">Wat verdient een veiligheidskundige in Nederland?</div>
+        <div class="faq-answer">Starters verdienen <strong>€2.500-€3.500 per maand</strong> in vast dienstverband. Ervaren veiligheidskundigen €3.500-€5.000. Seniors en specialisten €5.000-€7.000+. Als <strong>zzp'er</strong> kun je rekenen op €350-€750 per dag, afhankelijk van ervaring. Internationale opdrachten (offshore, Dubai) betalen €600-€1.200 per dag.</div>
+      </div>
 
-        <dt>Is NEBOSH beter dan MKV?</dt>
-        <dd>NEBOSH is <strong>goedkoper</strong> (€3.500 vs €5.000-€7.000), <strong>internationaal erkend</strong> (120+ landen), en ideaal voor zzp'ers die flexibiliteit willen. MKV is alleen relevant voor de Nederlandse markt en wordt steeds minder vaak specifiek geëist. Voor internationale ambities, zzp-werk of Belgische markt is NEBOSH de slimmere investering.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Is NEBOSH beter dan MKV?</div>
+        <div class="faq-answer">NEBOSH is <strong>goedkoper</strong> (€3.500 vs €5.000-€7.000), <strong>internationaal erkend</strong> (120+ landen), en ideaal voor zzp'ers die flexibiliteit willen. MKV is alleen relevant voor de Nederlandse markt en wordt steeds minder vaak specifiek geëist. Voor internationale ambities, zzp-werk of Belgische markt is NEBOSH de slimmere investering.</div>
+      </div>
 
-        <dt>Kan ik als veiligheidskundige zzp'er werken?</dt>
-        <dd>Ja, absoluut! Met NEBOSH IGC kun je direct starten als <strong>HSE zzp'er</strong>. De vraag naar freelance veiligheidskundigen is hoog: havens, offshore, bouw, industrie zoeken constant. Tarieven liggen tussen €350-€750 per dag binnen Nederland, met internationale projecten tot €1.000+ per dag. Veel zzp'ers verdienen substantieel meer dan in vast dienst.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Kan ik als veiligheidskundige zzp'er werken?</div>
+        <div class="faq-answer">Ja, absoluut! Met NEBOSH IGC kun je direct starten als <strong>HSE zzp'er</strong>. De vraag naar freelance veiligheidskundigen is hoog: havens, offshore, bouw, industrie zoeken constant. Tarieven liggen tussen €350-€750 per dag binnen Nederland, met internationale projecten tot €1.000+ per dag. Veel zzp'ers verdienen substantieel meer dan in vast dienst.</div>
+      </div>
 
-        <dt>Hoelang duurt een NEBOSH opleiding?</dt>
-        <dd><strong>10-12 weken blended learning</strong> bij SafetyXAcademy. Je combineert online theorie (6-8 uur/week in eigen tempo) met praktijkdagen in Rotterdam, waardoor je de opleiding naast je huidige baan kunt volgen. Fulltime optie is ook mogelijk (6-8 weken).</dd>
+      <div class="faq-item">
+        <div class="faq-question">Hoelang duurt een NEBOSH opleiding?</div>
+        <div class="faq-answer"><strong>10-12 weken blended learning</strong> bij SafetyXAcademy. Je combineert online theorie (6-8 uur/week in eigen tempo) met praktijkdagen in Rotterdam, waardoor je de opleiding naast je huidige baan kunt volgen. Fulltime optie is ook mogelijk (6-8 weken).</div>
+      </div>
 
-        <dt>Zijn er veel veiligheidskundige vacatures?</dt>
-        <dd>Ja, de vraag is <strong>structureel hoog en groeiend</strong>. Havens (Rotterdam, Antwerpen), offshore, bouw, industrie en petrochemie zoeken constant gekwalificeerde HSE professionals. Met NEBOSH heb je toegang tot vacatures in Nederland, België én internationaal. LinkedIn toont dagelijks 50-100+ nieuwe HSE vacatures alleen al in Nederland.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Zijn er veel veiligheidskundige vacatures?</div>
+        <div class="faq-answer">Ja, de vraag is <strong>structureel hoog en groeiend</strong>. Havens (Rotterdam, Antwerpen), offshore, bouw, industrie en petrochemie zoeken constant gekwalificeerde HSE professionals. Met NEBOSH heb je toegang tot vacatures in Nederland, België én internationaal. LinkedIn toont dagelijks 50-100+ nieuwe HSE vacatures alleen al in Nederland.</div>
+      </div>
 
-        <dt>Wat is het verschil tussen VCA, MKV en NEBOSH?</dt>
-        <dd><strong>VCA</strong> is basis-niveau voor uitvoerend werk (€200-€500), geschikt voor werknemers op de werkvloer. <strong>MKV</strong> is management-niveau voor Nederland (€5.000-€7.000), vooral voor vaste posities. <strong>NEBOSH IGC</strong> is internationaal management-niveau (€3.500), erkend in 120+ landen en het meest veelzijdig voor diverse carrièrepaden - zowel vast als zzp, nationaal als internationaal.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Wat is het verschil tussen VCA, MKV en NEBOSH?</div>
+        <div class="faq-answer"><strong>VCA</strong> is basis-niveau voor uitvoerend werk (€200-€500), geschikt voor werknemers op de werkvloer. <strong>MKV</strong> is management-niveau voor Nederland (€5.000-€7.000), vooral voor vaste posities. <strong>NEBOSH IGC</strong> is internationaal management-niveau (€3.500), erkend in 120+ landen en het meest veelzijdig voor diverse carrièrepaden - zowel vast als zzp, nationaal als internationaal.</div>
+      </div>
 
-        <dt>Is het examen moeilijk? Heb ik perfect Engels nodig?</dt>
-        <dd>Het NEBOSH examen is uitdagend maar <strong>zeer haalbaar</strong> met goede voorbereiding. Je hoeft geen perfect Engels te spreken - <strong>basiskennis is voldoende</strong>. Bij SafetyXAcademy krijg je de training in het Nederlands uitgelegd, én specifieke voorbereiding op de Engelse terminologie. Slagingspercentage: 87%. De meerderheid van Nederlandse studenten slaagt in één keer.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Is het examen moeilijk? Heb ik perfect Engels nodig?</div>
+        <div class="faq-answer">Het NEBOSH examen is uitdagend maar <strong>zeer haalbaar</strong> met goede voorbereiding. Je hoeft geen perfect Engels te spreken - <strong>basiskennis is voldoende</strong>. Bij SafetyXAcademy krijg je de training in het Nederlands uitgelegd, én specifieke voorbereiding op de Engelse terminologie. Slagingspercentage: 87%. De meerderheid van Nederlandse studenten slaagt in één keer.</div>
+      </div>
 
-        <dt>Kan ik NEBOSH volgen vanuit België (Vlaanderen)?</dt>
-        <dd>Ja! Belgische studenten zijn van harte welkom in Rotterdam. Vanuit <strong>Antwerpen ben je er in 1 uur</strong> met de trein naar Rotterdam Centraal. Ons trainingscentrum ligt op 10 minuten lopen. De training is in het Nederlands, dus perfect voor Vlamingen. Bij voldoende belangstelling (8-10 studenten) organiseren we ook groepen in Antwerpen of Brussel.</dd>
+      <div class="faq-item">
+        <div class="faq-question">Kan ik NEBOSH volgen vanuit België (Vlaanderen)?</div>
+        <div class="faq-answer">Ja! Belgische studenten zijn van harte welkom in Rotterdam. Vanuit <strong>Antwerpen ben je er in 1 uur</strong> met de trein naar Rotterdam Centraal. Ons trainingscentrum ligt op 10 minuten lopen. De training is in het Nederlands, dus perfect voor Vlamingen. Bij voldoende belangstelling (8-10 studenten) organiseren we ook groepen in Antwerpen of Brussel.</div>
+      </div>
 
-        <dt>Helpt SafetyXAcademy met het vinden van werk na de opleiding?</dt>
-        <dd>Ja, absoluut. We bieden <strong>jobplacement support</strong>: CV en LinkedIn optimalisatie, toegang tot ons vacaturenetwerk, matching met partners (Shell, Maersk, BAM, etc.), en coaching voor sollicitatiegesprekken. Gemiddeld vinden onze studenten binnen 6 weken na certificering hun eerste positie. Voor zzp'ers helpen we met de eerste opdracht via ons netwerk.</dd>
-      </dl>
+      <div class="faq-item">
+        <div class="faq-question">Helpt SafetyXAcademy met het vinden van werk na de opleiding?</div>
+        <div class="faq-answer">Ja, absoluut. We bieden <strong>jobplacement support</strong>: CV en LinkedIn optimalisatie, toegang tot ons vacaturenetwerk, matching met partners (Shell, Maersk, BAM, etc.), en coaching voor sollicitatiegesprekken. Gemiddeld vinden onze studenten binnen 6 weken na certificering hun eerste positie. Voor zzp'ers helpen we met de eerste opdracht via ons netwerk.</div>
+      </div>
     </section>
 
     <section class="card" style="background:var(--brand-light);border-color:var(--brand);">
@@ -735,5 +764,52 @@
       <p class="muted" style="margin:0;"><strong>Over de auteur:</strong> Nando Breure is oprichter van SafetyXAcademy met 8+ jaar internationale HSE-ervaring bij Shell, BP en offshore projecten in Rotterdam, Dubai en Noorwegen. Hij leidt honderden studenten per jaar op tot gecertificeerde NEBOSH professionals.</p>
     </footer>
   </article>
+
+  <script>
+    // FAQ Accordion functionaliteit
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        // Make keyboard accessible
+        question.setAttribute('tabindex', '0');
+        question.setAttribute('role', 'button');
+        question.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+        
+        question.addEventListener('click', function() {
+          toggleFAQ(item, question);
+        });
+        
+        // Keyboard support (Enter or Space)
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFAQ(item, question);
+          }
+        });
+      });
+      
+      function toggleFAQ(item, question) {
+        const isActive = item.classList.contains('active');
+        
+        // Optional: Close other items (uncomment to allow only one open at a time)
+        // faqItems.forEach(i => {
+        //   i.classList.remove('active');
+        //   i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        // });
+        
+        // Toggle clicked item
+        if (isActive) {
+          item.classList.remove('active');
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      }
+    });
+  </script>
 </body>
 </html>
