@@ -428,39 +428,72 @@
             margin-bottom: 0.75rem;
         }
 
-        /* Pricing Box - BELANGRIJK */
+        /* Pricing Box - VERBETERD DESIGN */
         .pricing-highlight {
-            background: linear-gradient(135deg, var(--secondary), #ff9533);
-            color: white;
-            padding: 2rem;
+            background: white;
+            padding: 2.5rem 2rem;
             border-radius: 15px;
             text-align: center;
             margin: 2rem 0;
-            box-shadow: 0 10px 40px rgba(255, 127, 17, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--secondary);
         }
 
         .pricing-highlight h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
+            color: var(--primary);
         }
 
         .price-comparison {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1rem;
+            gap: 1.5rem;
             margin: 1.5rem 0;
         }
 
         .price-item {
-            background: rgba(255,255,255,0.2);
-            padding: 1rem;
-            border-radius: 10px;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .price-item:first-child {
+            border-color: var(--success);
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+        }
+
+        .price-item:last-child {
+            border-color: #dc2626;
+            background: linear-gradient(135deg, #fef2f2, #fee2e2);
+        }
+
+        .price-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         .price-item strong {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             display: block;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .price-item:first-child strong {
+            color: var(--success);
+        }
+
+        .price-item:last-child strong {
+            color: #dc2626;
+        }
+
+        .price-item p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 0.95rem;
         }
 
         /* Grids */
