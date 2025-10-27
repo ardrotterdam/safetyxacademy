@@ -90,9 +90,9 @@
     
     /* Calculator Section */
     .calculator-section {
-      background: linear-gradient(135deg, #FF7F11, #ff9533);
+      background: linear-gradient(135deg, #0A284B, #2F3E46);
       color: #fff; padding: 3rem 4%; margin-bottom: 3rem;
-      box-shadow: 0 10px 40px rgba(255,127,17,.3);
+      box-shadow: 0 10px 40px rgba(10,40,75,.3);
     }
     .calculator-content {
       max-width: 900px; margin: 0 auto; text-align: center;
@@ -103,25 +103,38 @@
       gap: 2rem; margin: 2rem 0;
     }
     .calc-card {
-      background: rgba(255,255,255,.15); backdrop-filter: blur(10px);
-      border-radius: 15px; padding: 2rem; border: 2px solid rgba(255,255,255,.3);
+      background: white;
+      border-radius: 15px; padding: 2rem; 
+      border: 3px solid #FF7F11;
+      box-shadow: 0 5px 20px rgba(255,127,17,.2);
+      color: #0A284B;
     }
-    .calc-card h3 { font-size: 1.1rem; margin-bottom: .5rem; opacity: .9; }
+    .calc-card h3 { font-size: 1.1rem; margin-bottom: .5rem; color: #666; }
     .calc-number {
       font-size: 2.5rem; font-weight: 800; margin: .5rem 0;
-      text-shadow: 0 2px 4px rgba(0,0,0,.2);
+      color: #FF7F11;
+      text-shadow: none;
     }
-    .calc-label { font-size: .9rem; opacity: .85; }
+    .calc-label { font-size: .9rem; color: #666; }
     .calc-breakdown {
-      background: rgba(255,255,255,.1); border-radius: 10px; padding: 1.5rem;
+      background: white;
+      border-radius: 10px; padding: 1.5rem;
       margin-top: 2rem; text-align: left;
+      border: 2px solid #e5e7eb;
+      color: #0A284B;
     }
+    .calc-breakdown h3 { color: #0A284B; }
     .calc-breakdown ul { list-style: none; }
     .calc-breakdown li {
-      padding: .5rem 0; border-bottom: 1px solid rgba(255,255,255,.2);
+      padding: .5rem 0; border-bottom: 1px solid #e5e7eb;
       display: flex; justify-content: space-between;
+      color: #333;
     }
-    .calc-breakdown li:last-child { border: none; font-weight: 700; font-size: 1.2rem; }
+    .calc-breakdown li:last-child { 
+      border: none; font-weight: 700; font-size: 1.2rem;
+      padding-top: 1rem; margin-top: 1rem;
+      border-top: 2px solid #FF7F11;
+    }
 
     .stats-bar {
       background: linear-gradient(135deg, var(--secondary) 0%, #E66D00 100%);
@@ -369,8 +382,8 @@
             <h3>Junior ZZP'er (0-2 jaar)</h3>
             <div class="calc-number">€400-600</div>
             <div class="calc-label">per dag</div>
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.3);">
-              <strong style="font-size: 1.5rem;">€88k-132k</strong>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
+              <strong style="font-size: 1.5rem; color: #FF7F11;">€88k-132k</strong>
               <div class="calc-label">per jaar (220 dagen)</div>
             </div>
           </div>
@@ -379,8 +392,8 @@
             <h3>Medior ZZP'er (3-5 jaar)</h3>
             <div class="calc-number">€700-900</div>
             <div class="calc-label">per dag</div>
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.3);">
-              <strong style="font-size: 1.5rem;">€154k-198k</strong>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
+              <strong style="font-size: 1.5rem; color: #FF7F11;">€154k-198k</strong>
               <div class="calc-label">per jaar (220 dagen)</div>
             </div>
           </div>
@@ -389,8 +402,8 @@
             <h3>Senior ZZP'er (5+ jaar)</h3>
             <div class="calc-number">€1.000-1.500</div>
             <div class="calc-label">per dag</div>
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.3);">
-              <strong style="font-size: 1.5rem;">€220k-330k</strong>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
+              <strong style="font-size: 1.5rem; color: #FF7F11;">€220k-330k</strong>
               <div class="calc-label">per jaar (220 dagen)</div>
             </div>
           </div>
@@ -415,12 +428,12 @@
               <span>Min IB/VPB (~25%)</span>
               <strong>- €32.000</strong>
             </li>
-            <li style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid rgba(255,255,255,.5);">
+            <li style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
               <span><strong>Netto overgehouden</strong></span>
-              <strong style="color: var(--gold); font-size: 1.4rem;">€95.600</strong>
+              <strong style="color: #FF7F11; font-size: 1.4rem;">€95.600</strong>
             </li>
           </ul>
-          <p style="margin-top: 1rem; opacity: .85; font-size: .9rem;">
+          <p style="margin-top: 1rem; color: #666; font-size: .9rem;">
             * Schatting, werkelijke bedragen variëren per situatie. Altijd adviseren met accountant.
           </p>
         </div>
