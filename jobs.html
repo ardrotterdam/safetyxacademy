@@ -282,33 +282,103 @@
       max-width: 700px; margin-left: auto; margin-right: auto;
     }
 
+    /* FAQ - Mooiere Styling zoals index.html */
     .faq-section { margin:3rem 0; }
     .faq-section h2 { 
       color:var(--primary); text-align:center; 
       font-size:1.8rem; margin-bottom:1.25rem;
     }
-    .faq-item { 
-      background:#fff; border:2px solid #e5e7eb; 
-      border-radius:10px; margin-bottom:1rem; 
-      transition: .2s;
+    
+    .faq-item {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      overflow: hidden;
     }
-    .faq-item:hover { border-color: var(--secondary); }
-    .faq-item details { padding:1.2rem; }
-    .faq-item summary { 
-      cursor:pointer; font-weight:800; color:var(--primary); 
-      list-style:none; display:flex; align-items:center; 
-      justify-content:space-between; 
+    
+    .faq-item:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 5px 20px rgba(255, 127, 17, 0.15);
+      transform: translateY(-2px);
     }
-    .faq-item summary::-webkit-details-marker { display:none; }
-    .faq-item summary::after { 
-      content:'+'; font-size:1.5rem; color:var(--secondary); 
-      transition:.2s; 
+
+    .faq-item summary {
+      padding: 1.25rem 1.25rem 1.25rem 3rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+      list-style: none;
+      position: relative;
+      transition: all 0.3s ease;
+      background: linear-gradient(to right, #f8f9fa 0%, white 100%);
     }
-    .faq-item details[open] summary::after { transform: rotate(45deg); }
-    .faq-item p { margin-top: .8rem; color:#555; line-height: 1.8; }
-    .faq-item ul { 
-      margin-top: .5rem; padding-left: 1.5rem; 
-      color: #555; line-height: 1.8;
+    
+    .faq-item summary:before {
+      content: "❓";
+      position: absolute;
+      left: 1rem;
+      font-size: 1.3rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item[open] summary:before {
+      content: "✓";
+      color: var(--success);
+    }
+    
+    .faq-item summary:after {
+      content: "▼";
+      position: absolute;
+      right: 1.25rem;
+      font-size: 0.7rem;
+      color: var(--secondary);
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item[open] summary:after {
+      transform: rotate(180deg);
+    }
+
+    .faq-item summary::-webkit-details-marker { 
+      display: none; 
+    }
+
+    .faq-item[open] summary {
+      background: linear-gradient(135deg, var(--secondary), #ff9533);
+      color: white;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    
+    .faq-item[open] summary:after {
+      color: white;
+    }
+
+    .faq-content {
+      padding: 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      background: #fafbfc;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .faq-content strong {
+      color: var(--primary);
+    }
+    
+    .faq-content p { 
+      margin-bottom: .8rem; 
+      color:#555; 
+      line-height: 1.8; 
+    }
+    
+    .faq-content ul { 
+      margin-top: .5rem; 
+      padding-left: 1.5rem; 
+      color: #555; 
+      line-height: 1.8;
     }
 
     footer { 
@@ -379,7 +449,7 @@
     </section>
 
     <!-- Calculator Section -->
-    <section class="calculator-section">
+    <section class="calculator-section" id="calculator">
       <div class="calculator-content">
         <h2>🧮 Bereken Jouw ZZP Potentie als Veiligheidskundige</h2>
         <p style="margin-bottom: 2rem; opacity: .9;">
@@ -1008,139 +1078,153 @@
         </a>
       </div>
 
-      <!-- FAQ -->
+      <!-- FAQ met mooie styling -->
       <section class="faq-section">
         <h2>❓ Veelgestelde Vragen Over HSE ZZP Tarieven</h2>
 
         <div class="faq-item">
           <details>
             <summary>Hoeveel kan ik verdienen als veiligheidskundige ZZP'er?</summary>
-            <p><strong>Dagtarieven variëren per niveau:</strong></p>
-            <ul>
-              <li><strong>Junior (0-2 jaar):</strong> €400-600/dag → €88k-132k/jaar omzet</li>
-              <li><strong>Medior (3-5 jaar):</strong> €700-900/dag → €154k-198k/jaar omzet</li>
-              <li><strong>Senior (5+ jaar):</strong> €1.000-1.500/dag → €220k-330k/jaar omzet</li>
-            </ul>
-            <p style="margin-top: .75rem;">
-              <strong>Let op:</strong> Dit is omzet (bruto). Na BTW (21%), bedrijfskosten (~10%), 
-              en inkomstenbelasting (~25-40%) hou je netto ongeveer 50-70% over. 
-              Dus als medior ZZP'er (€800/dag) verdien je netto ~€95k-110k per jaar.
-            </p>
+            <div class="faq-content">
+              <p><strong>Dagtarieven variëren per niveau:</strong></p>
+              <ul>
+                <li><strong>Junior (0-2 jaar):</strong> €400-600/dag → €88k-132k/jaar omzet</li>
+                <li><strong>Medior (3-5 jaar):</strong> €700-900/dag → €154k-198k/jaar omzet</li>
+                <li><strong>Senior (5+ jaar):</strong> €1.000-1.500/dag → €220k-330k/jaar omzet</li>
+              </ul>
+              <p style="margin-top: .75rem;">
+                <strong>Let op:</strong> Dit is omzet (bruto). Na BTW (21%), bedrijfskosten (~10%), 
+                en inkomstenbelasting (~25-40%) hou je netto ongeveer 50-70% over. 
+                Dus als medior ZZP'er (€800/dag) verdien je netto ~€95k-110k per jaar.
+              </p>
+            </div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>Is ZZP echt zoveel beter dan loondienst?</summary>
-            <p><strong>Ja, ZZP'ers verdienen 2-3× zoveel als werknemers:</strong></p>
-            <ul>
-              <li><strong>Loondienst medior:</strong> €5.000/maand = €60k/jaar bruto → ~€42k netto</li>
-              <li><strong>ZZP medior:</strong> €700/dag = €154k/jaar omzet → ~€95k-110k netto</li>
-            </ul>
-            <p style="margin-top: .75rem;">
-              Dus als ZZP'er verdien je ruim <strong>2× zoveel netto</strong>. 
-              Ja, je moet zelf administratie doen en je hebt geen vakantiegeld/pensioen, 
-              maar met een goede accountant (€150/maand) regel je dat makkelijk. 
-              De extra €50k-60k/jaar netto maakt dat meer dan goed!
-            </p>
+            <div class="faq-content">
+              <p><strong>Ja, ZZP'ers verdienen 2-3× zoveel als werknemers:</strong></p>
+              <ul>
+                <li><strong>Loondienst medior:</strong> €5.000/maand = €60k/jaar bruto → ~€42k netto</li>
+                <li><strong>ZZP medior:</strong> €700/dag = €154k/jaar omzet → ~€95k-110k netto</li>
+              </ul>
+              <p style="margin-top: .75rem;">
+                Dus als ZZP'er verdien je ruim <strong>2× zoveel netto</strong>. 
+                Ja, je moet zelf administratie doen en je hebt geen vakantiegeld/pensioen, 
+                maar met een goede accountant (€150/maand) regel je dat makkelijk. 
+                De extra €50k-60k/jaar netto maakt dat meer dan goed!
+              </p>
+            </div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>Hoe start ik als HSE ZZP'er in Nederland?</summary>
-            <p><strong>5 Stappen om te starten als veiligheidskundige ZZP'er:</strong></p>
-            <ul>
-              <li><strong>1. Haal NEBOSH IGC</strong> - <a href="index.html#training" style="color:var(--secondary); text-decoration:none; font-weight:600;">Train bij SafetyXAcademy</a> (€3.500)</li>
-              <li><strong>2. Inschrijven bij KVK</strong> - Eenmanszaak starten (~€50)</li>
-              <li><strong>3. BTW nummer aanvragen</strong> - Bij Belastingdienst (gratis)</li>
-              <li><strong>4. Verzekeringen regelen</strong> - AVB, WIA (€100-200/maand)</li>
-              <li><strong>5. Opdrachten vinden</strong> - LinkedIn, netwerk, bureaus</li>
-            </ul>
-            <p style="margin-top: .75rem;">
-              SafetyXAcademy helpt je met stap 1 (<a href="index.html#training" style="color:var(--secondary); text-decoration:none;">NEBOSH training Rotterdam</a>) en stap 5 (opdrachten vinden). 
-              Voor de andere stappen kan je een ZZP accountant inhuren (~€150/maand).
-            </p>
+            <div class="faq-content">
+              <p><strong>5 Stappen om te starten als veiligheidskundige ZZP'er:</strong></p>
+              <ul>
+                <li><strong>1. Haal NEBOSH IGC</strong> - <a href="index.html#training" style="color:var(--secondary); text-decoration:none; font-weight:600;">Train bij SafetyXAcademy</a> (€3.500)</li>
+                <li><strong>2. Inschrijven bij KVK</strong> - Eenmanszaak starten (~€50)</li>
+                <li><strong>3. BTW nummer aanvragen</strong> - Bij Belastingdienst (gratis)</li>
+                <li><strong>4. Verzekeringen regelen</strong> - AVB, WIA (€100-200/maand)</li>
+                <li><strong>5. Opdrachten vinden</strong> - LinkedIn, netwerk, bureaus</li>
+              </ul>
+              <p style="margin-top: .75rem;">
+                SafetyXAcademy helpt je met stap 1 (<a href="index.html#training" style="color:var(--secondary); text-decoration:none;">NEBOSH training Rotterdam</a>) en stap 5 (opdrachten vinden). 
+                Voor de andere stappen kan je een ZZP accountant inhuren (~€150/maand).
+              </p>
+            </div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>Wat zijn realistische dagtarieven voor HSE ZZP'ers in Nederland?</summary>
-            <p><strong>Realistische dagtarieven in 2025:</strong></p>
-            <ul>
-              <li><strong>Junior HSE Officer (0-2 jaar):</strong> €400-550/dag</li>
-              <li><strong>Medior HSE Advisor (3-5 jaar):</strong> €600-850/dag</li>
-              <li><strong>Senior HSE Manager (5-10 jaar):</strong> €900-1.200/dag</li>
-              <li><strong>Expert HSE Consultant (10+ jaar):</strong> €1.200-1.500/dag</li>
-            </ul>
-            <p style="margin-top: .75rem;">
-              Deze tarieven zijn <strong>exclusief BTW</strong>. Tarieven variëren per sector: 
-              petrochemie betaalt meer dan bouw, offshore meer dan kantoor, internationaal meer dan lokaal.
-            </p>
+            <div class="faq-content">
+              <p><strong>Realistische dagtarieven in 2025:</strong></p>
+              <ul>
+                <li><strong>Junior HSE Officer (0-2 jaar):</strong> €400-550/dag</li>
+                <li><strong>Medior HSE Advisor (3-5 jaar):</strong> €600-850/dag</li>
+                <li><strong>Senior HSE Manager (5-10 jaar):</strong> €900-1.200/dag</li>
+                <li><strong>Expert HSE Consultant (10+ jaar):</strong> €1.200-1.500/dag</li>
+              </ul>
+              <p style="margin-top: .75rem;">
+                Deze tarieven zijn <strong>exclusief BTW</strong>. Tarieven variëren per sector: 
+                petrochemie betaalt meer dan bouw, offshore meer dan kantoor, internationaal meer dan lokaal.
+              </p>
+            </div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>Kan ik direct na NEBOSH IGC als ZZP'er starten?</summary>
-            <p>
-              <strong>Ja, maar met realistische verwachtingen:</strong> 
-              Met alleen NEBOSH IGC (zonder ervaring) kan je starten als junior HSE Officer ZZP'er 
-              voor €400-500/dag. Veel opdrachtgevers willen wel 1-3 jaar ervaring zien.
-            </p>
-            <p style="margin-top: .75rem;">
-              <strong>Aanbevolen route voor beginners:</strong>
-            </p>
-            <ul>
-              <li>Eerst 1-2 jaar ervaring opdoen in loondienst (€3.800-5.000/maand)</li>
-              <li>Dan switchen naar ZZP met je NEBOSH + ervaring (€600-700/dag)</li>
-              <li>Na 3-5 jaar ervaring als ZZP'er: €900-1.200/dag</li>
-            </ul>
-            <p style="margin-top: .75rem;">
-              Of: direct ZZP starten bij €400-500/dag (nog steeds beter dan loondienst €3.800/maand!) 
-              en snel ervaring opdoen.
-            </p>
+            <div class="faq-content">
+              <p>
+                <strong>Ja, maar met realistische verwachtingen:</strong> 
+                Met alleen NEBOSH IGC (zonder ervaring) kan je starten als junior HSE Officer ZZP'er 
+                voor €400-500/dag. Veel opdrachtgevers willen wel 1-3 jaar ervaring zien.
+              </p>
+              <p style="margin-top: .75rem;">
+                <strong>Aanbevolen route voor beginners:</strong>
+              </p>
+              <ul>
+                <li>Eerst 1-2 jaar ervaring opdoen in loondienst (€3.800-5.000/maand)</li>
+                <li>Dan switchen naar ZZP met je NEBOSH + ervaring (€600-700/dag)</li>
+                <li>Na 3-5 jaar ervaring als ZZP'er: €900-1.200/dag</li>
+              </ul>
+              <p style="margin-top: .75rem;">
+                Of: direct ZZP starten bij €400-500/dag (nog steeds beter dan loondienst €3.800/maand!) 
+                en snel ervaring opdoen.
+              </p>
+            </div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>Helpt SafetyXAcademy met het vinden van ZZP opdrachten?</summary>
-            <p><strong>Ja! We helpen op meerdere manieren:</strong></p>
-            <ul>
-              <li><strong>Netwerk:</strong> Connecties met HSE bureaus, opdrachtgevers (haven, petrochemie, offshore)</li>
-              <li><strong>LinkedIn profiel:</strong> Hoe je zichtbaar wordt als HSE ZZP'er</li>
-              <li><strong>CV optimalisatie:</strong> Voor freelance opdrachten (anders dan loondienst CV)</li>
-              <li><strong>Tariefonderhandeling:</strong> Hoe je €500-1.500/dag vraagt en krijgt</li>
-              <li><strong>Contract templates:</strong> Veilige ZZP contracten (NL wet- en regelgeving)</li>
-              <li><strong>Internationale opdrachten:</strong> Dubai, Noorwegen, UK, etc.</li>
-            </ul>
-            <p style="margin-top: .75rem;">
-              Na je <a href="index.html#training" style="color:var(--secondary); text-decoration:none; font-weight:600;">NEBOSH training in Rotterdam</a> krijg je toegang tot ons alumni netwerk en jobboard. 
-              Veel van onze studenten vinden hun eerste ZZP opdracht via ons netwerk! 
-              <a href="index.html#contact" style="color:var(--primary); text-decoration:none; font-weight:600;">Neem contact op</a> voor meer info.
-            </p>
+            <div class="faq-content">
+              <p><strong>Ja! We helpen op meerdere manieren:</strong></p>
+              <ul>
+                <li><strong>Netwerk:</strong> Connecties met HSE bureaus, opdrachtgevers (haven, petrochemie, offshore)</li>
+                <li><strong>LinkedIn profiel:</strong> Hoe je zichtbaar wordt als HSE ZZP'er</li>
+                <li><strong>CV optimalisatie:</strong> Voor freelance opdrachten (anders dan loondienst CV)</li>
+                <li><strong>Tariefonderhandeling:</strong> Hoe je €500-1.500/dag vraagt en krijgt</li>
+                <li><strong>Contract templates:</strong> Veilige ZZP contracten (NL wet- en regelgeving)</li>
+                <li><strong>Internationale opdrachten:</strong> Dubai, Noorwegen, UK, etc.</li>
+              </ul>
+              <p style="margin-top: .75rem;">
+                Na je <a href="index.html#training" style="color:var(--secondary); text-decoration:none; font-weight:600;">NEBOSH training in Rotterdam</a> krijg je toegang tot ons alumni netwerk en jobboard. 
+                Veel van onze studenten vinden hun eerste ZZP opdracht via ons netwerk! 
+                <a href="index.html#contact" style="color:var(--primary); text-decoration:none; font-weight:600;">Neem contact op</a> voor meer info.
+              </p>
+            </div>
           </details>
         </div>
 
         <div class="faq-item">
           <details>
             <summary>Wat zijn de kosten van ZZP (BTW, belasting, verzekeringen)?</summary>
-            <p><strong>Overzicht van ZZP kosten per jaar:</strong></p>
-            <ul>
-              <li><strong>BTW:</strong> 21% van je omzet (factuur je door aan klant)</li>
-              <li><strong>Inkomstenbelasting:</strong> ~25-40% van je winst (progressief)</li>
-              <li><strong>Accountant:</strong> €150/maand = €1.800/jaar</li>
-              <li><strong>AVB verzekering:</strong> €100/maand = €1.200/jaar</li>
-              <li><strong>WIA verzekering:</strong> €50/maand = €600/jaar</li>
-              <li><strong>KVK inschrijving:</strong> €50 eenmalig</li>
-              <li><strong>Zakelijke verzekering:</strong> €200-400/jaar</li>
-            </ul>
-            <p style="margin-top: .75rem;">
-              <strong>Totale kosten:</strong> ~€4.000-5.000/jaar vaste kosten + 40-50% van omzet aan belastingen. 
-              Als je €154k omzet maakt, hou je netto ~€95k-110k over (50-70%).
-            </p>
+            <div class="faq-content">
+              <p><strong>Overzicht van ZZP kosten per jaar:</strong></p>
+              <ul>
+                <li><strong>BTW:</strong> 21% van je omzet (factuur je door aan klant)</li>
+                <li><strong>Inkomstenbelasting:</strong> ~25-40% van je winst (progressief)</li>
+                <li><strong>Accountant:</strong> €150/maand = €1.800/jaar</li>
+                <li><strong>AVB verzekering:</strong> €100/maand = €1.200/jaar</li>
+                <li><strong>WIA verzekering:</strong> €50/maand = €600/jaar</li>
+                <li><strong>KVK inschrijving:</strong> €50 eenmalig</li>
+                <li><strong>Zakelijke verzekering:</strong> €200-400/jaar</li>
+              </ul>
+              <p style="margin-top: .75rem;">
+                <strong>Totale kosten:</strong> ~€4.000-5.000/jaar vaste kosten + 40-50% van omzet aan belastingen. 
+                Als je €154k omzet maakt, hou je netto ~€95k-110k over (50-70%).
+              </p>
+            </div>
           </details>
         </div>
 
