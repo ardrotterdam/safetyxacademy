@@ -1,28 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <!-- Homepage - Hoogste prioriteit -->
   <url>
     <loc>https://www.safetyxacademy.nl/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Jobs/Vacatures pagina -->
+  <!-- Jobs/ZZP Opdrachten pagina - Zeer belangrijk -->
   <url>
     <loc>https://www.safetyxacademy.nl/jobs.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog index - Als je die hebt -->
+  <url>
+    <loc>https://www.safetyxacademy.nl/blog/index.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   <!-- Privacy pagina -->
   <url>
     <loc>https://www.safetyxacademy.nl/privacy.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+  
+  <!-- Belangrijke ankers op homepage voor SEO -->
+  <url>
+    <loc>https://www.safetyxacademy.nl/#training</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.safetyxacademy.nl/#contact</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.safetyxacademy.nl/#testimonials</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
