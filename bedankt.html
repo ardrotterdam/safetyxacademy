@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-91JCVXBQ0W');
+      // Track conversion
+      gtag('event', 'conversion', {
+        'send_to': 'G-91JCVXBQ0W',
+        'event_category': 'form',
+        'event_label': 'interesse_registratie_nebosh'
+      });
+    </script>
+    
+    <title>Interesse Geregistreerd - We Houden Je Op De Hoogte! | SafetyXAcademy</title>
+    <meta name="robots" content="noindex,nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon-svg.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0A284B;
+            --secondary: #FF7F11;
+            --dark: #2F3E46;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .success-container {
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--success);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 0.6s ease-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .checkmark svg {
+            width: 50px;
+            height: 50px;
+            stroke: white;
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: draw 0.6s ease-out 0.3s forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: #065f46;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box li {
+            padding: 0.5rem 0;
+            color: #065f46;
+            font-size: 0.95rem;
+        }
+
+        .info-box li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #e66d00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0a3a6b;
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e5e7eb;
+        }
+
+        .social-links p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: white;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .success-container {
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .lead {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="checkmark">
+            <svg viewBox="0 0 52 52">
+                <path d="M14 27l7 7 16-16"/>
+            </svg>
+        </div>
+
+        <h1>🎉 Je interesse is geregistreerd!</h1>
+        
+        <p class="lead">
+            Bedankt voor je interesse in SafetyXAcademy! Je hoort van ons zodra we de laatste details hebben afgerond en we officieel van start kunnen met de <strong>NEBOSH IGC training in januari 2026</strong>.
+        </p>
+
+        <div class="info-box">
+            <h3>📋 Wat gebeurt er nu?</h3>
+            <ul>
+                <li><strong>Je interesse is geregistreerd:</strong> Je bent bij de eerste groep mensen die we informeren!</li>
+                <li><strong>Laatste details afronden:</strong> We ronden de laatste administratieve puntjes af</li>
+                <li><strong>Update ontvangen:</strong> Zodra alles 100% rond is, krijg je als eerste bericht</li>
+                <li><strong>Officiële inschrijving:</strong> Dan kun je je officieel inschrijven voor januari 2026</li>
+                <li><strong>Bij 8-12 personen starten we:</strong> Voor optimale groepsdynamiek en persoonlijke aandacht</li>
+            </ul>
+        </div>
+
+        <div style="margin: 2rem 0;">
+            <a href="index.html" class="btn btn-primary">🏠 Terug naar Home</a>
+            <a href="blog/index.html" class="btn btn-secondary">📚 Lees onze Blog</a>
+        </div>
+
+        <div class="social-links">
+            <p><strong>Volg ons op social media voor HSE tips & vacatures:</strong></p>
+            <a href="https://www.linkedin.com/company/safetyxacademy" 
+               target="_blank" 
+               class="btn btn-secondary" 
+               style="font-size: 0.9rem; padding: 0.7rem 1.5rem;">
+                💼 LinkedIn - SafetyXAcademy
+            </a>
+        </div>
+
+        <p style="margin-top: 2rem; color: #666; font-size: 0.9rem;">
+            <strong>Vragen over NEBOSH, carrièremogelijkheden of onze planning?</strong><br>
+            📞 <a href="tel:+31101234567" style="color: var(--secondary); text-decoration: none; font-weight: 600;">+31 (0)10 123 4567</a> | 
+            📧 <a href="mailto:info@safetyxacademy.nl" style="color: var(--secondary); text-decoration: none; font-weight: 600;">info@safetyxacademy.nl</a>
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SafetyXAcademy - Train Lokaal, Werk Wereldwijd 🌍</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="index.html">Home</a> | 
+            <a href="privacy.html">Privacy</a> | 
+            <a href="index.html#contact">Contact</a>
+        </p>
+    </footer>
+</body>
+</html>
