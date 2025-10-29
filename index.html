@@ -314,6 +314,64 @@
             transform: translateX(5px);
         }
 
+        /* === Pill Orange CTA === */
+        .btn-pill-orange {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .6rem;
+            padding: 1rem 1.75rem;
+            border-radius: 14px;
+            background: #FF7F11;
+            color: #0B0B0B;
+            font-weight: 800;
+            font-size: 1.15rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 0 rgba(0,0,0,.12), 0 10px 22px rgba(0,0,0,.18);
+            transition: transform .08s ease, box-shadow .08s ease, background .08s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-pill-orange:hover {
+            transform: translateY(-1px);
+            background: #ff8f2f;
+            box-shadow: 0 5px 0 rgba(0,0,0,.12), 0 14px 26px rgba(0,0,0,.2);
+        }
+
+        .btn-pill-orange:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 0 rgba(0,0,0,.14), 0 8px 18px rgba(0,0,0,.18);
+        }
+
+        .btn-pill-orange:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(255,127,17,.5), 0 10px 22px rgba(0,0,0,.18);
+            border-radius: 14px;
+        }
+
+        .btn-pill-orange .arrow {
+            font-weight: 900;
+            transform: translateX(0);
+            transition: transform .08s ease;
+        }
+
+        .btn-pill-orange:hover .arrow {
+            transform: translateX(3px);
+        }
+
+        /* Mobiel: full width */
+        @media (max-width: 768px) {
+            .btn-pill-orange {
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
+                padding: .95rem 1.25rem;
+            }
+        }
+
         /* Orange Stats Bar */
         .stats-bar {
             background: linear-gradient(135deg, var(--secondary), #ff9533);
@@ -1392,11 +1450,9 @@
         <p>Train in Rotterdam met studenten uit heel Nederland én België. NEBOSH IGC kost <strong>€3.500 inclusief examengeld</strong> terwijl MKV €5.000-€7.000 kost. Bespaar €1.500-€3.500 én open deuren naar carrières in 120+ landen wereldwijd. Bij voldoende belangstelling organiseren we ook trainingen in België.</p>
         
         <div class="cta-buttons">
-            <a href="aanmelden.html"
-   class="btn btn-waitlist"
-   aria-label="Plaats mij op de wachtlijst – Gratis">
-  📋 Plaats mij op de wachtlijst – Gratis
-</a>
+            <a href="aanmelden.html" class="btn-pill-orange" aria-label="Plaats mij op de wachtlijst – Gratis">
+                <span aria-hidden="true">📋</span> Plaats mij op de wachtlijst – Gratis <span class="arrow" aria-hidden="true">→</span>
+            </a>
 
             <a href="jobs.html" class="btn btn-secondary">💰 ZZP Tarieven €500-1.500/dag</a>
         </div>
@@ -1554,7 +1610,9 @@
                         <li>Kleine groepen (max 10 personen)</li>
                     </ul>
                     <p style="margin-top:1rem; font-size:0.85rem; color:var(--success); font-weight:600;">✓ Bespaar €1.500-€3.500 vs MKV!</p>
-                    <a href="aanmelden.html" class="btn btn-cta-special">📋 Toon Interesse - Gratis</a>
+                    <a href="aanmelden.html" class="btn-pill-orange" aria-label="Plaats mij op de wachtlijst – Gratis">
+                        <span aria-hidden="true">📋</span> Plaats mij op de wachtlijst – Gratis <span class="arrow" aria-hidden="true">→</span>
+                    </a>
                 </div>
 
                 <div class="training-card">
@@ -2056,10 +2114,8 @@
                     </div>
                     
                     <!-- CTA Button -->
-                    <a href="aanmelden.html" 
-                       class="btn btn-primary" 
-                       style="display: block; width: 100%; text-align: center; padding: 0.9rem 1.5rem; background: var(--secondary); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 15px rgba(255, 127, 17, 0.2);">
-                        📋 Toon Interesse - Gratis →
+                    <a href="aanmelden.html" class="btn-pill-orange" style="display:block; width:100%;" aria-label="Plaats mij op de wachtlijst – Gratis">
+                        <span aria-hidden="true">📋</span> Plaats mij op de wachtlijst – Gratis <span class="arrow" aria-hidden="true">→</span>
                     </a>
                     
                     <p style="margin-top: 1rem; font-size: 0.85rem; color: #666; text-align: center; line-height: 1.5;">
