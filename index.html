@@ -161,6 +161,144 @@
             color: var(--secondary);
         }
 
+        /* ========================================
+           🚀 SUPER PROFESSIONAL ANIMATED BUTTONS
+        ======================================== */
+        
+        /* Keyframe Animations */
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 127, 17, 0.4),
+                            0 0 40px rgba(255, 127, 17, 0.2),
+                            0 6px 20px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 127, 17, 0.6),
+                            0 0 60px rgba(255, 127, 17, 0.3),
+                            0 8px 25px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        @keyframes subtle-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* CTA Buttons Container */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Base Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* PRIMARY BUTTON - SUPER EYE-CATCHING! */
+        .btn-primary {
+            background: linear-gradient(135deg, #FF7F11 0%, #FF9533 50%, #FFAA44 100%);
+            background-size: 200% 200%;
+            color: white !important;
+            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.4),
+                        0 0 30px rgba(255, 127, 17, 0.2);
+            animation: pulse-glow 2s ease-in-out infinite;
+            font-size: 1.15rem;
+            padding: 1.1rem 2.8rem;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 35px rgba(255, 127, 17, 0.6),
+                        0 0 50px rgba(255, 127, 17, 0.4),
+                        0 15px 30px rgba(0, 0, 0, 0.3);
+            animation: pulse-glow 1s ease-in-out infinite;
+        }
+
+        .btn-primary:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        /* Add shine effect on hover */
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        /* SECONDARY BUTTON - Clean Style */
+        .btn-secondary {
+            background: transparent;
+            color: white !important;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary) !important;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Extra emphasis for specific CTA buttons in training section */
+        .btn-cta-special {
+            background: linear-gradient(135deg, #FF7F11 0%, #FF9533 50%, #FFAA44 100%);
+            background-size: 200% 200%;
+            animation: gradient-shift 3s ease infinite, subtle-bounce 2s ease-in-out infinite;
+            box-shadow: 0 8px 30px rgba(255, 127, 17, 0.5),
+                        0 0 40px rgba(255, 127, 17, 0.3);
+            font-size: 1.2rem;
+            padding: 1.2rem 3rem;
+            position: relative;
+        }
+
+        .btn-cta-special:hover {
+            transform: translateY(-6px) scale(1.08);
+            box-shadow: 0 12px 40px rgba(255, 127, 17, 0.7),
+                        0 0 60px rgba(255, 127, 17, 0.5);
+            animation: gradient-shift 1.5s ease infinite;
+        }
+
+        /* Add emoji icon animation */
+        .btn-cta-special::after {
+            content: ' →';
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .btn-cta-special:hover::after {
+            transform: translateX(5px);
+        }
+
         /* Orange Stats Bar */
         .stats-bar {
             background: linear-gradient(135deg, var(--secondary), #ff9533);
@@ -189,51 +327,6 @@
             content: "✓";
             margin-right: 0.5rem;
             font-size: 1.2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        .btn-primary {
-            background: var(--secondary);
-            color: white !important;
-            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.3);
-        }
-        
-        .btn-primary:hover {
-            background: #ff9533;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white !important;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary) !important;
         }
 
         /* Sections */
@@ -913,13 +1006,6 @@
                 grid-template-columns: 1fr;
             }
         }
-        
-        .btn-primary:hover {
-            background: #ff9533;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 127, 17, 0.3);
-        }
-
     
         /* Contact Section - Compact Layout Responsive */
         .contact-compact-grid {
@@ -1221,7 +1307,7 @@
         <p>Train in Rotterdam met studenten uit heel Nederland én België. NEBOSH IGC kost <strong>€3.500 inclusief examengeld</strong> terwijl MKV €5.000-€7.000 kost. Bespaar €1.500-€3.500 én open deuren naar carrières in 120+ landen wereldwijd. Bij voldoende belangstelling organiseren we ook trainingen in België.</p>
         
         <div class="cta-buttons">
-            <a href="#training" class="btn btn-primary">Bekijk Opleiding</a>
+            <a href="aanmelden.html" class="btn btn-primary">🎓 Toon Je Interesse</a>
             <a href="jobs.html" class="btn btn-secondary">💰 Verdien €500-1.500/dag als ZZP'er</a>
         </div>
 
@@ -1324,7 +1410,7 @@
                 <p><strong>NEBOSH IGC is €1.500-€3.500 goedkoper dan MKV</strong> én opent deuren naar <strong>heel de wereld (120+ landen):</strong> Nederlandse en Belgische havens, Dubai, Noorwegen, UK, Singapore en verder. Je bespaart geld én krijgt wereldwijde carrièremogelijkheden!</p>
             </div>
 
-            <!-- ✅ AANPASSING 2: Nieuwe Earnings CTA Box NA comparison table -->
+            <!-- Earnings CTA Box NA comparison table -->
             <div style="background:linear-gradient(135deg, #FF7F11, #ff9533); color:white; padding:2rem; border-radius:15px; margin-top:2rem; text-align:center;">
                 <h3 style="font-size:1.5rem; margin-bottom:1rem;">💰 Hoeveel Kan Je Verdienen Met NEBOSH?</h3>
                 <p style="font-size:1.1rem; margin-bottom:1.5rem;">
@@ -1375,10 +1461,10 @@
                         <li>ISO 45001 basis kennis</li>
                         <li>Erkend in 120+ landen</li>
                         <li>Moderne faciliteiten Westplein 12</li>
-                        <li>Kleine groepen (max 12 personen)</li>
+                        <li>Kleine groepen (max 10 personen)</li>
                     </ul>
                     <p style="margin-top:1rem; font-size:0.85rem; color:var(--success); font-weight:600;">✓ Bespaar €1.500-€3.500 vs MKV!</p>
-                    <a href="#contact" class="btn btn-primary">Schrijf Je In</a>
+                    <a href="aanmelden.html" class="btn btn-cta-special">Toon Je Interesse</a>
                 </div>
 
                 <div class="training-card">
@@ -1517,7 +1603,7 @@
                 </div>
             </div>
 
-            <!-- ✅ AANPASSING 4: Testimonials CTA -->
+            <!-- Testimonials CTA -->
             <div style="text-align:center; margin-top:2.5rem; padding:2rem; background:#f8f9fa; border-radius:10px;">
                 <h3 style="color:var(--primary); font-size:1.3rem; margin-bottom:1rem;">
                     🚀 Klaar om €100k+ te Verdienen als HSE ZZP'er?
@@ -1573,7 +1659,7 @@
                 <div class="benefit-card">
                     <div class="icon">🚀</div>
                     <h3>Kleine Groepen</h3>
-                    <p>Maximum 12 personen, persoonlijke aandacht</p>
+                    <p>Maximum 10 personen, persoonlijke aandacht</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">🌍</div>
@@ -1625,7 +1711,7 @@
         </div>
     </section>
 
-    <!-- ✅ AANPASSING 5: Jobs CTA Sectie Verbeteren -->
+    <!-- Jobs CTA Sectie -->
     <section class="jobs-cta">
         <div class="container">
             <h2>💰 Veiligheidskundige ZZP Tarief: €400-1.500/dag</h2>
@@ -1759,7 +1845,6 @@
                 </div>
             </details>
 
-            <!-- ✅ AANPASSING 6: Nieuwe FAQ over HSE ZZP verdiensten -->
             <details class="faq-item">
                 <summary>Hoeveel verdien ik als HSE ZZP'er met NEBOSH IGC?</summary>
                 <div class="faq-content">
@@ -1881,10 +1966,10 @@
                     </div>
                     
                     <!-- CTA Button -->
-                    <a href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Informatie%20Aanvraag&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%20de%20NEBOSH%20IGC%20opleiding%20(€3.500).%0A%0AMijn%20naam%3A%20%0AMijn%20telefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C" 
+                    <a href="aanmelden.html" 
                        class="btn btn-primary" 
                        style="display: block; width: 100%; text-align: center; padding: 0.9rem 1.5rem; background: var(--secondary); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; box-shadow: 0 4px 15px rgba(255, 127, 17, 0.2);">
-                        📧 Vraag Gratis Informatie →
+                        🎓 Toon Je Interesse →
                     </a>
                     
                     <p style="margin-top: 1rem; font-size: 0.85rem; color: #666; text-align: center; line-height: 1.5;">
@@ -1919,7 +2004,6 @@
     <footer>
         <div style="max-width:1200px; margin:0 auto;">
             <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
-            <!-- ✅ AANPASSING 7: Footer Links Uitbreiden -->
             <p style="margin-top:0.5rem;">
                 <a href="index.html">Home</a> | 
                 <a href="index.html#training">NEBOSH IGC Training</a> |
