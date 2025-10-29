@@ -36,6 +36,13 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
+        /* FIX: Prevent horizontal scroll on mobile */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+            position: relative;
+        }
+        
         :root {
             --primary: #0A284B;
             --secondary: #FF7F11;
@@ -49,7 +56,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text);
-            overflow-x: hidden;
+            width: 100%;
         }
 
         /* Header - Mobile First */
@@ -332,11 +339,14 @@
         /* Sections */
         section {
             padding: 2.5rem 4%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .section-title {
