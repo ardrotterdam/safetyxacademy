@@ -88,6 +88,22 @@
     footer a{color:var(--accent);}
     @media (min-width:768px){.hero h1{font-size:3rem}.landmark-grid{grid-template-columns:repeat(2,1fr)}.logo{font-size:1.3rem}nav a{font-size:.95rem}}
     @media (min-width:900px){.logo{font-size:1.5rem}nav{gap:2rem}nav a{font-size:1rem}}
+
+/* ==== Mobile overflow fixes ==== */
+html, body { max-width: 100%; overflow-x: hidden; }
+.wrap, header, .hero, footer { overflow-x: hidden; }
+
+img, svg, video { max-width: 100%; height: auto; display: block; }
+
+/* Zorg dat flex/grids niet forceren tot breedte */
+.landmark-grid, .header-content, nav { min-width: 0; }
+
+/* Tabel op mobiel: horizontaal scrollbaar ipv pagina breder maken */
+table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* Lange woorden/URL’s mogen afbreken */
+h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
+    
   </style>
 
   <!-- Schema.org Structured Data -->
