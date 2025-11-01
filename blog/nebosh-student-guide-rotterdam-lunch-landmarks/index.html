@@ -89,24 +89,16 @@
     @media (min-width:768px){.hero h1{font-size:3rem}.landmark-grid{grid-template-columns:repeat(2,1fr)}.logo{font-size:1.3rem}nav a{font-size:.95rem}}
     @media (min-width:900px){.logo{font-size:1.5rem}nav{gap:2rem}nav a{font-size:1rem}}
 
-/* ==== Mobile overflow fixes ==== */
-html, body { max-width: 100%; overflow-x: hidden; }
-.wrap, header, .hero, footer { overflow-x: hidden; }
-
-img, svg, video { max-width: 100%; height: auto; display: block; }
-
-/* Zorg dat flex/grids niet forceren tot breedte */
-.landmark-grid, .header-content, nav { min-width: 0; }
-
-/* Tabel op mobiel: horizontaal scrollbaar ipv pagina breder maken */
-table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-
-/* Lange woorden/URL’s mogen afbreken */
-h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
-    
+    /* ==== Mobile overflow fixes ==== */
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .wrap, header, .hero, footer { overflow-x: hidden; }
+    img, svg, video { max-width: 100%; height: auto; display: block; }
+    .landmark-grid, .header-content, nav { min-width: 0; }
+    table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
   </style>
 
-  <!-- Schema.org Structured Data -->
+  <!-- Schema.org Structured Data: BlogPosting -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -115,11 +107,64 @@ h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
     "description": "Complete gids voor NEBOSH studenten over lunch spots, landmarks en praktische tips rondom Erasmusbrug en Westplein 12 Rotterdam.",
     "image": "https://www.safetyxacademy.nl/images/blog/nebosh-student-guide-rotterdam.jpg",
     "author": { "@type": "Organization", "name": "SafetyXAcademy" },
-    "publisher": { "@type": "Organization", "name": "SafetyXAcademy",
-      "logo": { "@type": "ImageObject", "url": "https://www.safetyxacademy.nl/favicon-512.png" } },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SafetyXAcademy",
+      "logo": { "@type": "ImageObject", "url": "https://www.safetyxacademy.nl/favicon-512.png" }
+    },
     "datePublished": "2025-01-27",
     "dateModified": "2025-01-27",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" }
+  }
+  </script>
+
+  <!-- Schema.org Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Voor wie is de NEBOSH IGC opleiding bij SafetyXAcademy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deze opleiding is geschikt voor iedereen die veiligheidskundige wil worden of al in HSE werkt en internationaal erkend wil worden — ongeacht leeftijd of achtergrond."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Waar vindt de training plaats?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Op Westplein 12, 3016 BM Rotterdam (Scheepvaartkwartier, Veerhaven), op 100 meter van de Erasmusbrug."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat is inbegrepen in de prijs van €3.500?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All-inclusive: NEBOSH examengeld, blended learning (online + praktijk), studiemateriaal, Nederlandse begeleiding en job-placement support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Regelen jullie ook netwerk & opdrachten na de opleiding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, we helpen met CV-optimalisatie, netwerkintroducties en toegang tot HSE-opdrachten. Veel alumni werken nu in de haven, offshore of internationaal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Trakteren jullie echt op een biertje bij De Ballentent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja — als je bij ons je NEBOSH succesvol afrondt, proosten we graag met je. De Ballentent ligt op loopafstand en is een Rotterdams icoon."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -141,7 +186,7 @@ h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
   <!-- Hero -->
   <section class="hero">
     <h1>🗺️ NEBOSH Student Guide:<br>Lunch, Landmarks & Life Rond Westplein 12</h1>
-    <p>Ontdek waarom onze trainingslocatie nabij de Erasmusbrug de perfecte plek is om je NEBOSH IGC te halen</p>
+    <p>Ontdek waarom onze trainingslocatie nabij de Erasmusbrug de perfecte plek is om je <a href="/#training">NEBOSH IGC</a> te halen.</p>
     <div class="hero-meta">
       <span>📅 27 januari 2025</span>
       <span>⏱ 6 min leestijd</span>
@@ -163,7 +208,7 @@ h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
 
     <h2>Waarom Onze Locatie Uniek is Voor NEBOSH Studenten</h2>
     <p>
-      Wanneer je start met je <strong>NEBOSH IGC training bij SafetyXAcademy</strong>, volg je niet zomaar een opleiding—
+      Wanneer je start met je <strong><a href="/#training">NEBOSH IGC training</a> bij SafetyXAcademy</strong>, volg je niet zomaar een opleiding—
       je wordt onderdeel van Rotterdam's meest inspirerende buurt. Onze trainingslocatie op <strong>Westplein 12 in het Scheepvaartkwartier</strong>
       ligt middenin het kloppende hart van de stad, omringd door iconische landmarks die Rotterdam wereldberoemd maken.
     </p>
@@ -197,47 +242,39 @@ h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
       <li><strong>Afstand vanaf Westplein 12:</strong> 100 meter (1 minuut lopen)</li>
       <li><strong>Beste tijd:</strong> Ochtend voor rustig uitzicht, avond voor zonsondergang</li>
       <li><strong>Foto spot:</strong> Vanaf het water bij Veerhaven of midden op de brug</li>
-      <li><strong>Parkeren:</strong> <a href="https://www.rotterdam.nl/parkeren-verkeer/parkeergarage-erasmusbrug/" target="_blank" rel="noopener">Parkeergarage Erasmusbrug</a> (2.900 parkeerplekken, 5 min lopen naar Westplein 12)</li>
+      <li><strong>Parkeren:</strong> <a href="https://www.rotterdam.nl/parkeren-verkeer/parkeergarage-erasmusbrug/" target="_blank" rel="noopener">Parkeergarage Erasmusbrug</a> (5 min lopen)</li>
     </ul>
 
     <h3>2. Zalmhaventoren: Hoogste Gebouw van de Benelux</h3>
     <p>
-      Met 215 meter is de <strong>Zalmhaventoren</strong> het hoogste woongebouw van de Benelux. Dit iconische gebouw
-      staat symbool voor Rotterdam's ambitieuze skyline en is vanaf onze locatie perfect zichtbaar. Hoewel de toren
-      zelf niet toegankelijk is voor publiek, is het omliggende Katendrecht district (op 15 minuten lopen)
-      een leuke wijk om te verkennen.
+      Met 215 meter is de <strong>Zalmhaventoren</strong> het hoogste woongebouw van de Benelux. Iconisch en vanaf onze locatie perfect zichtbaar.
     </p>
 
     <h3>3. Euromast: Het Uitkijkpunt van Rotterdam</h3>
     <p>
       De <strong>Euromast</strong> ligt op 10 minuten lopen van ons trainingscentrum en biedt vanaf 185 meter hoogte
-      het beste uitzicht over Rotterdam. Perfect voor een ontspannen middag na je NEBOSH examen, of om je familie
-      te laten zien waar je getraind hebt.
+      het beste uitzicht over Rotterdam. Perfect om je geslaagde examen te vieren.
     </p>
 
     <h4>Euromast: Wat Kun Je Er Doen?</h4>
     <ul>
-      <li><strong>Observatiedeck:</strong> 360° uitzicht over Rotterdam, haven en omgeving</li>
-      <li><strong>Restaurant:</strong> Brasserie Euromast voor lunch met uitzicht</li>
-      <li><strong>Abseilen:</strong> 100 meter abseilen voor de adrenaline junkies onder ons</li>
-      <li><strong>Entree:</strong> €11,50 (studenten vaak korting, check website)</li>
-      <li><strong>Afstand vanaf Westplein 12:</strong> 10 minuten lopen via Parkhaven</li>
+      <li><strong>Observatiedeck:</strong> 360° uitzicht over Rotterdam</li>
+      <li><strong>Restaurant:</strong> Brasserie Euromast</li>
+      <li><strong>Abseilen:</strong> 100 meter abseilen</li>
+      <li><strong>Afstand:</strong> 10 minuten lopen via Parkhaven</li>
     </ul>
 
     <div class="success-box">
       <h3>🎓 NEBOSH Success Tip</h3>
       <p>
-        Veel van onze studenten vieren hun <strong>geslaagde NEBOSH examen</strong> met een bezoek aan de Euromast.
-        Het is een mooie manier om het einde van je 10-12 weken intensieve training te markeren en te reflecteren
-        op wat je bereikt hebt. Vanuit de Euromast zie je letterlijk de hele haven—perfect voor wie daarna
-        offshore of in havens gaat werken!
+        Veel van onze studenten vieren hun <strong>geslaagde NEBOSH examen</strong> met een bezoek aan de Euromast —
+        mooi moment om je traject af te ronden.
       </p>
     </div>
 
     <h2>🍽️ De Beste Lunch Spots Voor NEBOSH Studenten</h2>
     <p>
-      Tussen je NEBOSH lessen door wil je goed eten, maar ook niet te ver hoeven lopen. Gelukkig zit je in een van
-      de beste eetbuurten van Rotterdam. Van casual lunch tot Michelin-ster—alles is binnen 5-10 minuten bereikbaar.
+      Van casual lunch tot Michelin-ster—alles is binnen 5–10 minuten bereikbaar.
     </p>
 
     <div class="landmark-grid">
@@ -245,33 +282,26 @@ h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
         <h3><span class="emoji">🍴</span> Grand Café Loos</h3>
         <div class="landmark-meta">
           <span>📍 Letterlijk naast de deur</span>
-          <span>💰 €12-20 lunch</span>
+          <span>💰 €12–20 lunch</span>
           <span>⏱ 1 min lopen</span>
         </div>
         <p>
-          <strong>Grand Café-Restaurant Loos</strong> is DE go-to lunch spot voor SafetyXAcademy studenten.
-          Dit klassieke grand café op het <strong>Westplein (naast Westplein 12)</strong> biedt uitstekende
-          lunch menu's, goede koffie en een gezellige ambiance. Perfect voor een snelle lunch tussen lessen
-          of een uitgebreid diner na je laatste trainingsdag.
+          <strong>Grand Café-Restaurant Loos</strong> op het <strong>Westplein</strong> is DE go-to lunch spot.
+          Perfect voor een snelle lunch tussen lessen of een diner na je trainingsdag.
         </p>
-        <p><strong>Favoriet bij studenten:</strong> Lunch deal (soep + broodje + koffie €14,50)</p>
-        <p><strong>Tip:</strong> Reserveer voor diner, vooral op donderdag/vrijdag avond.</p>
+        <p><strong>Favoriet:</strong> Lunch deal (soep + broodje + koffie).</p>
       </div>
 
       <div class="landmark-card">
         <h3><span class="emoji">🍸</span> River Bar</h3>
         <div class="landmark-meta">
           <span>📍 Westerkade (Veerhaven)</span>
-          <span>💰 €10-18 lunch</span>
+          <span>💰 €10–18 lunch</span>
           <span>⏱ 3 min lopen</span>
         </div>
         <p>
-          <strong>River Bar Rotterdam</strong> aan de Westerkade biedt een moderne lunch experience met
-          terras aan het water. De perfecte plek voor een langere lunchpauze of vrijdagmiddag borrel na
-          je laatste NEBOSH les van de week. Het uitzicht over de Maas en de Erasmusbrug is fenomenaal.
+          <strong>River Bar Rotterdam</strong> met terras aan het water — ideaal voor vrijdagmiddagborrel na je laatste les.
         </p>
-        <p><strong>Favoriet bij studenten:</strong> Lunch bowl + cappuccino (€15,-)</p>
-        <p><strong>Tip:</strong> In de zomer: claim een terras plek met uitzicht op de Erasmusbrug!</p>
       </div>
 
       <div class="landmark-card">
@@ -282,225 +312,166 @@ h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
           <span>⏱ 8 min lopen</span>
         </div>
         <p>
-          <strong>Restaurant Parkheuvel</strong> is HET fine dining adres van Rotterdam met 2 Michelin sterren.
-          Hoewel dit geen dagelijkse lunch spot is, vermelden veel studenten het als de plek waar ze hun
-          <strong>geslaagde NEBOSH certificaat vieren</strong> met familie. De locatie aan de Maas met
-          uitzicht op de Erasmusbrug is ongeëvenaard.
+          <strong>Restaurant Parkheuvel</strong> (2★) — vaak gekozen om een geslaagd examen te vieren.
         </p>
-        <p><strong>Voor speciale gelegenheden:</strong> NEBOSH examen gehaald? Dit is je celebration dinner!</p>
-        <p><strong>Reserveren verplicht:</strong> Maanden van tevoren boeken, zeer gewild.</p>
       </div>
 
       <div class="landmark-card">
         <h3><span class="emoji">🥪</span> Spido Havencafé</h3>
         <div class="landmark-meta">
-          <span>📍 Willemsplein (Spido vertrekpunt)</span>
-          <span>💰 €8-15 lunch</span>
+          <span>📍 Willemsplein</span>
+          <span>💰 €8–15 lunch</span>
           <span>⏱ 7 min lopen</span>
         </div>
         <p>
-          Bij het vertrekpunt van de <strong>Spido havenrondvaart</strong> vind je een gezellig havencafé
-          met snelle lunch opties. Perfect als je een korte pauze hebt en daarna direct terug wilt naar
-          je NEBOSH training. Ook leuk: na je opleiding een havenrondvaart maken om de industrie te zien
-          waar je straks als HSE professional gaat werken!
+          Snelle lunch bij het vertrekpunt van de <strong>Spido havenrondvaart</strong>. Authentiek Rotterdams.
         </p>
-        <p><strong>Favoriet bij studenten:</strong> Broodje haring + uitsmijter (authentiek Rotterdams!)</p>
       </div>
     </div>
 
     <h2>☕ Coffee Spots & Studieplekken</h2>
-    <p> Tussen lessen door wil je soms gewoon even zitten met een goede koffie en je NEBOSH aantekeningen doornemen.
-        Deze plekken zijn ideaal voor zelfstudie:
-    </p>
+    <p> Ideaal voor zelfstudie tussen je lessen door:</p>
 
     <table>
       <thead>
         <tr><th>Locatie</th><th>Afstand</th><th>WiFi</th><th>Best voor</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Grand Café Loos</strong></td><td>1 min</td><td>✓ Gratis</td><td>Snelle koffie tussen lessen</td></tr>
-        <tr><td><strong>River Bar</strong></td><td>3 min</td><td>✓ Gratis</td><td>Langere studie sessies</td></tr>
-        <tr><td><strong>Starbucks Blaak</strong></td><td>15 min</td><td>✓ Gratis</td><td>Studeren + shoppen combineren</td></tr>
-        <tr><td><strong>In ons gebouw</strong></td><td>0 min</td><td>✓ Gratis</td><td>Gebruik onze koffiehoek!</td></tr>
+        <tr><td><strong>Grand Café Loos</strong></td><td>1 min</td><td>✓ Gratis</td><td>Snelle koffie</td></tr>
+        <tr><td><strong>River Bar</strong></td><td>3 min</td><td>✓ Gratis</td><td>Langere sessies</td></tr>
+        <tr><td><strong>Starbucks Blaak</strong></td><td>15 min</td><td>✓ Gratis</td><td>Studeren + shoppen</td></tr>
+        <tr><td><strong>In ons gebouw</strong></td><td>0 min</td><td>✓ Gratis</td><td>Koffiehoek</td></tr>
       </tbody>
     </table>
 
     <div class="info-box">
       <h3>📚 Study Tip: Gebruik Je Omgeving</h3>
       <p>
-        Veel NEBOSH studenten vinden het helpt om <strong>verschillende studie locaties</strong> te gebruiken.
-        Maandag Grand Café Loos, woensdag River Bar, vrijdag Euromast Park. Door je omgeving te variëren,
-        blijft studeren fris en worden herinneringen aan specifieke onderwerpen gekoppeld aan plekken
-        (dit heet "context-afhankelijk geheugen" en werkt echt!).
+        Varieer je studieplek: maandag Loos, woensdag River Bar, vrijdag Euromast Park.
+        Context-afhankelijk leren helpt je stof beter te onthouden.
       </p>
     </div>
 
     <h2>🚗 Parkeren Nabij Westplein 12</h2>
-    <p>Kom je met de auto naar je NEBOSH training? Dit zijn de beste parkeeropties:</p>
+    <p>Beste opties:</p>
 
-    <h3>Beste Parkeergarages</h3>
     <h4>1. Parkeergarage Erasmusbrug (Aanbevolen)</h4>
     <ul>
-      <li><strong>Afstand:</strong> 5 minuten lopen naar Westplein 12</li>
-      <li><strong>Capaciteit:</strong> Zeer groot, bijna altijd plek</li>
-      <li><strong>Prijs:</strong> €2,50/uur, €20/dag max</li>
+      <li><strong>Afstand:</strong> 5 min lopen</li>
+      <li><strong>Capaciteit:</strong> Groot, bijna altijd plek</li>
       <li><strong>Adres:</strong> Wilhelminakade (onder de Erasmusbrug)</li>
-      <li><strong>Voordeel:</strong> Bewaakte garage, dicht bij landmarks</li>
     </ul>
 
-    <h4>2. Parkeren Veerhaven (Q-Park)</h4>
+    <h4>2. Q-Park Veerhaven</h4>
     <ul>
-      <li><strong>Afstand:</strong> 3 minuten lopen naar Westplein 12</li>
-      <li><strong>Prijs:</strong> €2,80/uur, €25/dag max</li>
+      <li><strong>Afstand:</strong> 3 min lopen</li>
       <li><strong>Adres:</strong> Veerhaven 1</li>
-      <li><strong>Voordeel:</strong> Dichterbij, maar soms vol in spits</li>
     </ul>
 
     <h4>3. Straatparkeren</h4>
     <p>
-      <strong>Betaald parkeren</strong> op straat rondom Westplein is mogelijk maar vaak vol.
-      Check de <a href="https://www.rotterdam.nl/parkeren-verkeer/" target="_blank" rel="noopener">Rotterdam.nl parkeren pagina</a>
-      voor actuele tarieven en beschikbaarheid. Onze tip: gebruik de parkeergarages voor zekerheid.
+      Betaald parkeren op straat is mogelijk maar vaak vol. Wij adviseren de garages.
     </p>
 
     <h2>🚊 Bereikbaarheid met Openbaar Vervoer</h2>
-    <p>De meeste NEBOSH studenten komen met het openbaar vervoer—dit is verreweg de makkelijkste optie:</p>
+    <p>Veruit de makkelijkste optie voor de meeste studenten.</p>
 
-    <h3>Vanaf Rotterdam Centraal Station</h3>
+    <h3>Vanaf Rotterdam Centraal</h3>
     <ul>
-      <li><strong>Tram 4 of 23</strong> richting Marconiplein → halte <strong>Parklaan</strong> (5 minuten)</li>
-      <li><strong>Of 10 minuten lopen</strong> via Schiedamsesingel → Veerhaven → Westplein</li>
+      <li><strong>Tram 4 of 23</strong> → halte <strong>Parklaan</strong> (±5 min)</li>
+      <li>Of <strong>10 min lopen</strong> via Schiedamsesingel → Veerhaven → Westplein</li>
     </ul>
 
     <h3>Vanuit Andere Steden</h3>
     <ul>
-      <li><strong>Antwerpen → Rotterdam CS:</strong> 1 uur (Fyra/IC trein)</li>
-      <li><strong>Amsterdam → Rotterdam CS:</strong> 40 minuten (IC/Intercity)</li>
-      <li><strong>Den Haag → Rotterdam CS:</strong> 20 minuten (Sprinter)</li>
-      <li><strong>Utrecht → Rotterdam CS:</strong> 35 minuten (IC)</li>
+      <li><strong>Antwerpen → Rotterdam CS:</strong> ±1 uur</li>
+      <li><strong>Amsterdam → Rotterdam CS:</strong> ±40 min</li>
+      <li><strong>Den Haag → Rotterdam CS:</strong> ±20 min</li>
+      <li><strong>Utrecht → Rotterdam CS:</strong> ±35 min</li>
     </ul>
 
-    <p><strong>Pro tip:</strong> Download de <strong>9292 app</strong> voor real-time OV reisadvies. Ons adres: Westplein 12, 3016 BM Rotterdam.</p>
+    <p><strong>Pro tip:</strong> Download de <strong>9292 app</strong>. Adres: Westplein 12, 3016 BM Rotterdam.</p>
 
     <h2>🏃 Wat Te Doen in Je Pauzes?</h2>
-    <p>
-      NEBOSH IGC is intensief—10-12 weken lang leer je alles over health, safety en risk management.
-      Maar tussen lessen door is het belangrijk om even je hoofd leeg te maken. Onze locatie biedt
-      talloze mogelijkheden om te ontspannen:
-    </p>
-
-    <h3>Korte Pauze (15-30 minuten)</h3>
+    <h3>Korte Pauze (15–30 min)</h3>
     <ul>
-      <li><strong>Wandeling Erasmusbrug:</strong> Frisse lucht + iconisch uitzicht</li>
-      <li><strong>Koffie bij Grand Café Loos:</strong> Letterlijk naast de deur</li>
-      <li><strong>Bankje bij Veerhaven:</strong> Rustig zitten met uitzicht op water</li>
+      <li><strong>Wandeling Erasmusbrug</strong></li>
+      <li><strong>Koffie bij Grand Café Loos</strong></li>
+      <li><strong>Bankje Veerhaven</strong></li>
     </ul>
 
-    <h3>Langere Pauze (1-2 uur)</h3>
+    <h3>Langere Pauze (1–2 uur)</h3>
     <ul>
-      <li><strong>Lunch bij River Bar:</strong> Eten + terras aan het water</li>
-      <li><strong>Winkelen Blaak/Lijnbaan:</strong> 15 min lopen, perfect voor boodschappen</li>
-      <li><strong>Park bij Euromast:</strong> Ontspannen in het groen</li>
+      <li><strong>Lunch River Bar</strong></li>
+      <li><strong>Winkelen Blaak/Lijnbaan</strong></li>
+      <li><strong>Park bij Euromast</strong></li>
     </ul>
 
-    <h3>Na de Training (avond/weekend)</h3>
+    <h3>Na de Training</h3>
     <ul>
-      <li><strong>Euromast beklimmen:</strong> Uitzicht over heel Rotterdam</li>
-      <li><strong>Spido havenrondvaart:</strong> Zie de industrie waar je gaat werken</li>
-      <li><strong>Dinner bij Parkheuvel:</strong> Michelin ervaring (geslaagd examen vieren!)</li>
-      <li><strong>SS Rotterdam:</strong> Historisch schip, nu hotel/museum (10 min lopen)</li>
+      <li><strong>Euromast</strong> beklimmen</li>
+      <li><strong>Spido</strong> havenrondvaart</li>
+      <li><strong>Parkheuvel</strong> (celebration dinner)</li>
+      <li><strong>SS Rotterdam</strong></li>
     </ul>
 
     <div class="highlight-box">
       <h3>🎯 Netwerk Tip voor NEBOSH Studenten</h3>
       <p>
-        Onze <strong>kleine groepen (max 10 personen)</strong> maken het makkelijk om te netwerken met
-        medestudenten. Veel studenten organiseren na de lessen informele borrels bij River Bar of Grand Café Loos.
-        Dit netwerk is waardevol—veel van onze alumni helpen elkaar later aan HSE opdrachten en vacatures!
+        Kleine groepen (max 10) maken netwerken makkelijk. Veel alumni helpen elkaar later aan HSE-opdrachten.
       </p>
     </div>
 
     <h2>📸 Foto-Inspiratie: Document Je NEBOSH Journey</h2>
-    <p>
-      Veel studenten maken foto's tijdens hun NEBOSH periode om hun professionele ontwikkeling te documenteren
-      voor LinkedIn. Dit zijn de beste foto spots rondom Westplein 12:
-    </p>
-
     <table>
       <thead>
         <tr><th>Locatie</th><th>Beste tijd</th><th>LinkedIn-waardig?</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Erasmusbrug vanaf Veerhaven</strong></td><td>Ochtend (zijlicht)</td><td>✓✓✓ Zeer professioneel</td></tr>
-        <tr><td><strong>Skyline vanaf Erasmusbrug</strong></td><td>Zonsondergang</td><td>✓✓✓ Iconisch Rotterdam</td></tr>
-        <tr><td><strong>Voor SafetyXAcademy gebouw</strong></td><td>Middag (goed licht)</td><td>✓✓ Perfect voor "First day of NEBOSH"</td></tr>
-        <tr><td><strong>Euromast observation deck</strong></td><td>Clear day</td><td>✓✓✓ "NEBOSH certified!" vieringspost</td></tr>
-        <tr><td><strong>Zalmhaventoren skyline</strong></td><td>Avond (lights)</td><td>✓✓ Mooi voor portfolio</td></tr>
+        <tr><td><strong>Erasmusbrug vanaf Veerhaven</strong></td><td>Ochtend</td><td>✓✓✓</td></tr>
+        <tr><td><strong>Skyline vanaf Erasmusbrug</strong></td><td>Zonsondergang</td><td>✓✓✓</td></tr>
+        <tr><td><strong>Voor ons gebouw</strong></td><td>Middag</td><td>✓✓</td></tr>
+        <tr><td><strong>Euromast deck</strong></td><td>Heldere dag</td><td>✓✓✓</td></tr>
+        <tr><td><strong>Zalmhaventoren skyline</strong></td><td>Avond</td><td>✓✓</td></tr>
       </tbody>
     </table>
 
     <h2>🌍 Waarom Deze Locatie Perfect is Voor Internationale HSE Carrières</h2>
-    <p>
-      Het is geen toeval dat SafetyXAcademy zich in het <strong>Scheepvaartkwartier</strong> heeft gevestigd.
-      Deze buurt ademt maritieme industrie, internationale handel en—ja—veiligheid. Je zit letterlijk in het
-      kloppende hart van een van Europa's grootste havens.
-    </p>
-
-    <h3>Waarom Dit Belangrijk is Voor NEBOSH Studenten</h3>
     <ul>
-      <li><strong>Netwerkwaarde:</strong> Veel HSE bedrijven, scheepvaartmaatschappijen en offshore bedrijven hebben kantoren in deze buurt.</li>
-      <li><strong>Industrie proximity:</strong> De haven van Rotterdam ligt op steenworp afstand.</li>
-      <li><strong>Internationale sfeer:</strong> Erasmusbrug als symbool van verbinding—precies wat NEBOSH IGC is.</li>
+      <li><strong>Netwerkwaarde:</strong> veel HSE-, scheepvaart- en offshorebedrijven in de buurt</li>
+      <li><strong>Industrie-nabijheid:</strong> haven op steenworp</li>
+      <li><strong>Internationale sfeer:</strong> Erasmusbrug als symbool van verbinding</li>
     </ul>
 
-    <div class="success-box">
-      <h3>💼 Van NEBOSH Student naar HSE Professional</h3>
-      <p>
-        Veel van onze alumni zijn nu werkzaam bij <strong>Shell, BP en offshore bedrijven in de haven van Rotterdam</strong>.
-        Ze begonnen hun carrière met NEBOSH IGC training op Westplein 12, en werken nu letterlijk in dezelfde buurt
-        waar ze studeerden. Locatie = strategisch voordeel.
-      </p>
-    </div>
+    <!-- ✅ FAQ SECTION (HTML for users) -->
+    <section class="info-box">
+      <h3>❓ Veelgestelde Vragen</h3>
+      <dl>
+        <dt>Voor wie is de NEBOSH IGC opleiding bij SafetyXAcademy?</dt>
+        <dd>Voor starters én ervaren HSE-professionals die internationaal erkend willen worden. Lees meer over de modules op onze <a href="/#training">training</a> pagina.</dd>
 
-    <h2>📋 Complete Checklist: Je Eerste Dag NEBOSH op Westplein 12</h2>
-    <p>Start je binnenkort met NEBOSH IGC bij SafetyXAcademy? Deze checklist helpt je voorbereiden:</p>
+        <dt>Waar vindt de training plaats?</dt>
+        <dd>Op <strong>Westplein 12, 3016 BM Rotterdam</strong> (Scheepvaartkwartier), 100 meter van de Erasmusbrug.</dd>
 
-    <h3>Voor je Eerste Les</h3>
-    <ul>
-      <li>✓ Download 9292 app voor OV reisplanner</li>
-      <li>✓ Check parkeeropties (wij raden Parkeergarage Erasmusbrug aan)</li>
-      <li>✓ Scout Grand Café Loos voor lunch (reserveer niet nodig voor lunch)</li>
-      <li>✓ Zorg voor goede walking shoes (veel studenten wandelen tussen lessen)</li>
-      <li>✓ Neem waterfles mee (gratis refill bij ons)</li>
-    </ul>
+        <dt>Wat is inbegrepen in de €3.500 all-inclusive prijs?</dt>
+        <dd>NEBOSH examengeld, blended learning (online + praktijk), studiemateriaal, NL-begeleiding en job-placement support.</dd>
 
-    <h3>Eerste Dag Routine</h3>
-    <ul>
-      <li>✓ Kom 10 minuten vroeg aan om koffie te pakken</li>
-      <li>✓ Netwerk met medestudenten (kleine groep = makkelijk contact)</li>
-      <li>✓ Lunch bij Grand Café Loos of River Bar (probeer beide!)</li>
-      <li>✓ Maak foto bij Erasmusbrug voor LinkedIn ("Day 1 of NEBOSH!")</li>
-      <li>✓ Download je NEBOSH materiaal tijdens lunch (gratis WiFi)</li>
-    </ul>
+        <dt>Helpen jullie ook na de opleiding met opdrachten?</dt>
+        <dd>Ja, via ons netwerk, alumni en vacature-updates. Check ook onze pagina <a href="/jobs.html">ZZP Opdrachten</a>.</dd>
 
-    <h3>Voor Belgische Studenten</h3>
-    <ul>
-      <li>✓ Trein Antwerpen → Rotterdam CS boeken (1 uur reizen)</li>
-      <li>✓ Overweeg hotel in Rotterdam centrum voor intensive weeks</li>
-      <li>✓ Probeer "broodje haring" bij Spido havencafé (typisch Rotterdams!)</li>
-      <li>✓ Verken Markthal tijdens vrije dag (15 min lopen van Westplein 12)</li>
-    </ul>
+        <dt>Trakteren jullie op een biertje bij De Ballentent?</dt>
+        <dd>Zeker — geslaagd? Dan proosten we graag met je bij De Ballentent. Het is op loopafstand en puur Rotterdams.</dd>
+
+        <dt>Hoe meld ik me aan of stel ik vragen?</dt>
+        <dd>Makkelijk: <a href="/aanmelden.html">registreer je interesse</a> of neem contact op via <a href="/#contact">contact</a>.</dd>
+      </dl>
+    </section>
 
     <h2>🎓 Waarom SafetyXAcademy + Deze Locatie = Succes</h2>
-    <p>
-      We kozen bewust voor <strong>Westplein 12 in het Scheepvaartkwartier</strong> omdat deze locatie
-      niet alleen praktisch is, maar ook inspirerend. Je studeert omringd door:
-    </p>
-
     <ul>
       <li>✓ <strong>Iconische landmarks</strong> (Erasmusbrug, Euromast, Zalmhaventoren)</li>
       <li>✓ <strong>Maritieme industrie</strong> waar veel HSE professionals werken</li>
-      <li>✓ <strong>Uitstekende lunch spots</strong> (Grand Café Loos, River Bar, Parkheuvel)</li>
+      <li>✓ <strong>Top lunch spots</strong> (Loos, River Bar, Parkheuvel)</li>
       <li>✓ <strong>Perfect bereikbaar</strong> met OV én auto</li>
       <li>✓ <strong>Inspirerende omgeving</strong> die motiveert om door te zetten</li>
     </ul>
@@ -515,13 +486,13 @@ h1, h2, h3, h4, p, li, a { word-break: break-word; overflow-wrap: anywhere; }
       <p>Train lokaal in Rotterdam's meest inspirerende buurt. Start januari 2026 op Westplein 12,
         nabij Erasmusbrug, Euromast en alle landmarks die je net hebt gelezen.</p>
       <a href="/aanmelden.html" class="btn btn-primary">📋 Registreer Je Interesse (Gratis & Vrijblijvend)</a>
-      <p style="margin-top:24px;font-size:.95rem;opacity:.9;">Of bel ons op <strong>010-800 9512</strong> voor meer info over de training</p>
+      <p style="margin-top:24px;font-size:.95rem;opacity:.9;">Of bel ons op <strong>010-800 9512</strong> — of stel je vraag via de <a href="/#contact">contact</a> pagina.</p>
+      <p style="margin-top:8px;font-size:.9rem;opacity:.85;">Meer lezen? Bekijk ons <a href="/blog/">blogoverzicht</a>.</p>
     </div>
 
     <div class="info-box" style="margin-top:48px;">
       <h3>📞 Heb je Vragen Over De Locatie?</h3>
-      <p><strong>We helpen je graag verder!</strong> Of je nu vragen hebt over parkeren, de beste lunch spots,
-        of hoe je vanaf Antwerpen komt—neem contact op:</p>
+      <p><strong>We helpen je graag verder!</strong> Vragen over parkeren, lunch of OV? Neem contact op:</p>
       <p style="margin-top:16px;">
         📧 <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br>
         📞 <a href="tel:+31108009512">010-800 9512</a><br>
