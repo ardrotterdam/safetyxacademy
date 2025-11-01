@@ -87,6 +87,23 @@
     tr:hover{background:#f9fafb;}
     footer{background:#1e293b;color:#cbd5e1;padding:40px 24px;text-align:center;margin-top:64px;}
     footer a{color:var(--accent);}
+    
+    /* ==== PROFESSIONAL ACCORDION FAQ STYLES ==== */
+    .faq-section{margin:64px 0;padding:48px 32px;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-radius:16px;}
+    .faq-section h2{margin-top:0;color:var(--primary);text-align:center;}
+    .faq-accordion{max-width:800px;margin:32px auto 0;}
+    .faq-item{background:#fff;border:2px solid #e0f2fe;border-radius:12px;margin-bottom:16px;overflow:hidden;transition:all .3s ease;}
+    .faq-item:hover{border-color:#0284c7;box-shadow:0 4px 12px rgba(2,132,199,.15);}
+    .faq-question{width:100%;padding:20px 24px;background:transparent;border:none;text-align:left;font-size:1.1rem;font-weight:600;color:var(--primary);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:all .3s;}
+    .faq-question:hover{background:#f0f9ff;}
+    .faq-question[aria-expanded="true"]{background:#f0f9ff;color:#0284c7;}
+    .faq-icon{transition:transform .3s ease;flex-shrink:0;margin-left:16px;color:#0284c7;}
+    .faq-question[aria-expanded="true"] .faq-icon{transform:rotate(180deg);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;}
+    .faq-answer.active{max-height:500px;padding:0 24px 24px;}
+    .faq-answer p{margin:0;line-height:1.7;color:var(--tx);}
+    .faq-answer a{color:var(--accent);font-weight:600;}
+    
     @media (min-width:768px){.hero h1{font-size:3rem}.landmark-grid{grid-template-columns:repeat(2,1fr)}.logo{font-size:1.3rem}nav a{font-size:.95rem}}
     @media (min-width:900px){.logo{font-size:1.5rem}nav{gap:2rem}nav a{font-size:1rem}}
 
@@ -452,28 +469,83 @@
       <li><strong>Internationale sfeer:</strong> Erasmusbrug als symbool van verbinding</li>
     </ul>
 
-    <!-- ✅ FAQ SECTION (HTML for users) -->
-    <section class="info-box">
-      <h3>❓ Veelgestelde Vragen</h3>
-      <dl>
-        <dt>Voor wie is de NEBOSH IGC opleiding bij SafetyXAcademy?</dt>
-        <dd>Voor starters én ervaren HSE-professionals die internationaal erkend willen worden. Lees meer over de modules op onze <a href="/#training">training</a> pagina.</dd>
+    <!-- ✅ PROFESSIONAL ACCORDION FAQ SECTION -->
+    <section class="faq-section">
+      <h2>❓ Veelgestelde Vragen</h2>
+      
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Voor wie is de NEBOSH IGC opleiding bij SafetyXAcademy?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Voor starters én ervaren HSE-professionals die internationaal erkend willen worden. Lees meer over de modules op onze <a href="/#training">training</a> pagina.</p>
+          </div>
+        </div>
 
-        <dt>Waar vindt de training plaats?</dt>
-        <dd>Op <strong>Westplein 12, 3016 BM Rotterdam</strong> (Scheepvaartkwartier), 100 meter van de Erasmusbrug.</dd>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Waar vindt de training plaats?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Op <strong>Westplein 12, 3016 BM Rotterdam</strong> (Scheepvaartkwartier), 100 meter van de Erasmusbrug.</p>
+          </div>
+        </div>
 
-        <dt>Wat is inbegrepen in de €3.500 all-inclusive prijs?</dt>
-        <dd>NEBOSH examengeld, blended learning (online + praktijk), studiemateriaal, NL-begeleiding en job-placement support.</dd>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Wat is inbegrepen in de €3.500 all-inclusive prijs?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>NEBOSH examengeld, blended learning (online + praktijk), studiemateriaal, NL-begeleiding en job-placement support.</p>
+          </div>
+        </div>
 
-        <dt>Helpen jullie ook na de opleiding met opdrachten?</dt>
-        <dd>Ja, via ons netwerk, alumni en vacature-updates. Check ook onze pagina <a href="/jobs.html">ZZP Opdrachten</a>.</dd>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Helpen jullie ook na de opleiding met opdrachten?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, via ons netwerk, alumni en vacature-updates. Check ook onze pagina <a href="/jobs.html">ZZP Opdrachten</a>.</p>
+          </div>
+        </div>
 
-        <dt>Trakteren jullie op een biertje bij De Ballentent?</dt>
-        <dd>Zeker — geslaagd? Dan proosten we graag met je bij De Ballentent. Het is op loopafstand en puur Rotterdams.</dd>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Trakteren jullie echt op een biertje bij De Ballentent?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Zeker — geslaagd? Dan proosten we graag met je bij De Ballentent. Het is op loopafstand en puur Rotterdams.</p>
+          </div>
+        </div>
 
-        <dt>Hoe meld ik me aan of stel ik vragen?</dt>
-        <dd>Makkelijk: <a href="/aanmelden.html">registreer je interesse</a> of neem contact op via <a href="/#contact">contact</a>.</dd>
-      </dl>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Hoe meld ik me aan of stel ik vragen?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Makkelijk: <a href="/aanmelden.html">registreer je interesse</a> of neem contact op via <a href="/#contact">contact</a>.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <h2>🎓 Waarom SafetyXAcademy + Deze Locatie = Succes</h2>
@@ -528,5 +600,31 @@
       </p>
     </div>
   </footer>
+
+  <!-- ✅ ACCORDION FAQ JAVASCRIPT -->
+  <script>
+    // Professional Accordion FAQ functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqButtons = document.querySelectorAll('.faq-question');
+      
+      faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const wasExpanded = this.getAttribute('aria-expanded') === 'true';
+          
+          // Close all other FAQ items
+          faqButtons.forEach(btn => {
+            btn.setAttribute('aria-expanded', 'false');
+            btn.nextElementSibling.classList.remove('active');
+          });
+          
+          // Toggle current FAQ item
+          if (!wasExpanded) {
+            this.setAttribute('aria-expanded', 'true');
+            this.nextElementSibling.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
