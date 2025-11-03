@@ -15,12 +15,19 @@
   <meta property="og:url" content="https://safetyxacademy.nl/blog/">
   <meta property="og:site_name" content="SafetyXAcademy">
   <meta property="og:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp">
+  <!-- Tweaks: locale + image dimensions -->
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog 2026: NEBOSH & HSE Carrièreadvies | SafetyXAcademy">
   <meta name="twitter:description" content="HSE & NEBOSH artikelen, salarissen en carrièreadvies voor 2026.">
   <meta name="twitter:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp">
+  <!-- Tweaks: twitter site/creator (optioneel, laat staan of vul aan) -->
+  <meta name="twitter:site" content="@safetyxacademy">
+  <meta name="twitter:creator" content="@safetyxacademy">
 
   <style>
     :root { --tx:#1a1a1a; --muted:#5c6773; --brand:#00811F; --accent:#f97316; --bg:#ffffff; --border:#e5e7eb; --primary:#0A284B; --secondary:#FF7F11; }
@@ -69,7 +76,8 @@
   <header aria-label="Hoofdnavigatie">
     <div class="header-content">
       <a href="/" class="logo">SafetyXAcademy</a>
-      <nav aria-label="Primaire navigatie">
+      <!-- Tweaks: expliciet role voor nav -->
+      <nav aria-label="Primaire navigatie" role="navigation">
         <a href="/">Home</a>
         <a href="/#training">Training</a>
         <a href="/jobs.html">Vacatures</a>
@@ -84,6 +92,13 @@
     <h1>Blog 2026: NEBOSH & HSE Carrièreadvies</h1>
     <p>Praktische tips, salarissen en voorbeelden voor Nederland, België en wereldwijd. Actueel voor 2026.</p>
   </section>
+
+  <!-- Tweaks: mini interne links onder hero -->
+  <p style="margin:0 24px 16px; text-align:center; color:#cbd5e1;">
+    Populaire gidsen:
+    <a href="/blog/veiligheidskundige-opleiding/" style="color:#86efac;">Veiligheidskundige opleiding 2026</a> ·
+    <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" style="color:#86efac;">NEBOSH Rotterdam guide</a>
+  </p>
 
   <!-- Grid -->
   <main class="wrap">
@@ -186,6 +201,21 @@
         "url": "https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-lunch-landmarks/"
       }
     ]
+  }
+  </script>
+
+  <!-- Tweaks: CollectionPage extra context -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blog 2026: NEBOSH & HSE Carrièreadvies",
+    "url": "https://safetyxacademy.nl/blog/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SafetyXAcademy",
+      "url": "https://safetyxacademy.nl/"
+    }
   }
   </script>
 </body>
