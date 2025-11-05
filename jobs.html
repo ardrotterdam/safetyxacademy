@@ -404,18 +404,14 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">SafetyXAcademy</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html#training">Training</a>
-        <a href="jobs.html">ZZP Opdrachten</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  
+  <!-- HEADER INCLUDE -->
+<div id="header-include"></div>
+<script>
+    fetch('/includes/header.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('header-include').outerHTML = html);
+</script>
 
   <!-- Breadcrumbs -->
   <div style="background:#f8f9fa; padding:0.75rem 4%; border-bottom:1px solid #e5e7eb;">
