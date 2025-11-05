@@ -7,7 +7,7 @@
             <a href="/index.html#training">Training</a>
             <a href="/jobs.html">Vacatures</a>
             
-            <!-- BLOG DROPDOWN MET 2 LINKS -->
+            <!-- BLOG DROPDOWN -->
             <div class="blog-dropdown">
                 <a href="/blog/index.html" style="color:white; text-decoration:none; font-weight:500;">Blog</a>
                 <div class="dropdown-content">
@@ -21,3 +21,74 @@
         </nav>
     </div>
 </header>
+
+<style>
+    /* STICKY HEADER */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #0A284B;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* HOVER EFFECT */
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 0.9rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    nav a:hover {
+        color: #FF7F11;
+        background: rgba(255, 127, 17, 0.15);
+        border: 1px solid #FF7F11;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(255, 127, 17, 0.2);
+    }
+
+    /* DROPDOWN */
+    .blog-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .blog-dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 12px;
+        width: 280px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        z-index: 999;
+    }
+    .dropdown-content p {
+        margin: 0 0 8px;
+        font-weight: 600;
+        color: #1a1a1a;
+        font-size: 0.9rem;
+    }
+    .dropdown-content a {
+        display: block;
+        color: #0A284B;
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin: 6px 0;
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+    }
+    .dropdown-content a:hover {
+        background: rgba(255, 127, 17, 0.1);
+        color: #FF7F11;
+    }
+</style>
