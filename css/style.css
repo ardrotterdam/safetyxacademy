@@ -1,0 +1,1178 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* FIX: Prevent horizontal scroll on mobile */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+}
+
+:root {
+    --primary: #0A284B;
+    --secondary: #FF7F11;
+    --dark: #2F3E46;
+    --text: #333;
+    --light-bg: #f8f9fa;
+    --success: #10b981;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    width: 100%;
+}
+
+/* Header - Mobile First */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Hero Section WITH Background Image */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+    background-image: url('nebosh-igc-training-rotterdam-students.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 2rem 4%;
+    text-align: center;
+    margin-top: 3.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(10, 40, 75, 0.9) 0%, rgba(47, 62, 70, 0.9) 100%);
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image-main {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    width: 100%;
+}
+
+.hero-image-main img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    display: block;
+}
+
+.hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--secondary);
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* NEW: Hero location badge */
+.hero-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    color: var(--secondary);
+}
+
+/* ========================================
+   SUPER PROFESSIONAL ANIMATED BUTTONS
+======================================== */
+
+/* Keyframe Animations */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 127, 17, 0.4),
+                    0 0 40px rgba(255, 127, 17, 0.2),
+                    0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 127, 17, 0.6),
+                    0 0 60px rgba(255, 127, 17, 0.3),
+                    0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes subtle-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* CTA Buttons Container */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Base Button Styling */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* PRIMARY BUTTON - SUPER EYE-CATCHING! */
+.btn-primary {
+    background: linear-gradient(135deg, #FF7F11 0%, #FF9533 50%, #FFAA44 100%);
+    background-size: 200% 200%;
+    color: white !important;
+    box-shadow: 0 6px 20px rgba(255, 127, 17, 0.4),
+                0 0 30px rgba(255, 127, 17, 0.2);
+    animation: pulse-glow 2s ease-in-out infinite;
+    font-size: 1.15rem;
+    padding: 1.1rem 2.8rem;
+}
+        
+.btn-primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 35px rgba(255, 127, 17, 0.6),
+                0 0 50px rgba(255, 127, 17, 0.4),
+                0 15px 30px rgba(0, 0, 0, 0.3);
+    animation: pulse-glow 1s ease-in-out infinite;
+}
+
+.btn-primary:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Add shine effect on hover */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* SECONDARY BUTTON - Clean Style */
+.btn-secondary {
+    background: transparent;
+    color: white !important;
+    border: 2px solid white;
+}
+        
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Extra emphasis for specific CTA buttons in training section */
+.btn-cta-special {
+    background: linear-gradient(135deg, #FF7F11 0%, #FF9533 50%, #FFAA44 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite, subtle-bounce 2s ease-in-out infinite;
+    box-shadow: 0 8px 30px rgba(255, 127, 17, 0.5),
+                0 0 40px rgba(255, 127, 17, 0.3);
+    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+    position: relative;
+}
+
+.btn-cta-special:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 12px 40px rgba(255, 127, 17, 0.7),
+                0 0 60px rgba(255, 127, 17, 0.5);
+    animation: gradient-shift 1.5s ease infinite;
+}
+
+/* Add emoji icon animation */
+.btn-cta-special::after {
+    content: ' →';
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.btn-cta-special:hover::after {
+    transform: translateX(5px);
+}
+
+/* === Pill Orange CTA === */
+.btn-pill-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    padding: 1rem 1.75rem;
+    border-radius: 14px;
+    background: #FF7F11;
+    color: #0B0B0B;
+    font-weight: 800;
+    font-size: 1.15rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(0,0,0,.12), 0 10px 22px rgba(0,0,0,.18);
+    transition: transform .08s ease, box-shadow .08s ease, background .08s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-pill-orange:hover {
+    transform: translateY(-1px);
+    background: #ff8f2f;
+    box-shadow: 0 5px 0 rgba(0,0,0,.12), 0 14px 26px rgba(0,0,0,.2);
+}
+
+.btn-pill-orange:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 0 rgba(0,0,0,.14), 0 8px 18px rgba(0,0,0,.18);
+}
+
+.btn-pill-orange:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255,127,17,.5), 0 10px 22px rgba(0,0,0,.18);
+    border-radius: 14px;
+}
+
+.btn-pill-orange .arrow {
+    font-weight: 900;
+    font-size: 2rem;
+    transform: translateX(0);
+    transition: transform .08s ease;
+    display: inline-block;
+    line-height: 1;
+    margin-left: 0.25rem;
+}
+
+.btn-pill-orange:hover .arrow {
+    transform: translateX(6px);
+}
+
+/* Mobiel: full width */
+@media (max-width: 768px) {
+    .btn-pill-orange {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding: .95rem 1.25rem;
+    }
+}
+
+/* Orange Stats Bar */
+.stats-bar {
+    background: linear-gradient(135deg, var(--secondary), #ff9533);
+    padding: 1rem 4%;
+    margin-top: 2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.stats-bar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.stat-item {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.stat-item:before {
+    content: "Checkmark";
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+    padding: 2.5rem 4%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Training Image Section */
+.training-image {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.training-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* Comparison Table */
+.comparison { background: var(--light-bg); }
+
+.comparison-table {
+    background: white;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table table {
+    width: 100%;
+    min-width: 400px;
+    border-collapse: collapse;
+}
+
+.comparison-table th {
+    background: var(--primary);
+    color: white;
+    padding: 0.6rem 0.4rem;
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+.comparison-table td {
+    padding: 0.6rem 0.4rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.75rem;
+}
+
+.comparison-table .feature {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.7rem;
+}
+
+.comparison-table .check { color: var(--success); font-size: 1rem; }
+.comparison-table .cross { color: #ef4444; font-size: 1rem; }
+
+/* RESPONSIVE TABLE - MOBIEL */
+@media (max-width: 768px) {
+    .comparison-table {
+        overflow-x: visible;
+    }
+
+    .comparison-table table {
+        min-width: 0;
+    }
+
+    /* Verberg thead op mobiel */
+    .comparison-table thead {
+        display: none;
+    }
+
+    /* Maak tbody een flex container */
+    .comparison-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Elke row wordt een kaart */
+    .comparison-table tr {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .comparison-table tr:hover {
+        border-color: var(--secondary);
+        box-shadow: 0 4px 15px rgba(255, 127, 17, 0.15);
+    }
+
+    /* Eerste td (feature naam) wordt header van kaart */
+    .comparison-table td.feature {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--primary);
+        padding: 0 0 1rem 0;
+        margin-bottom: 0.75rem;
+        border-bottom: 2px solid #e5e7eb;
+        text-align: left;
+    }
+
+    /* Andere td's krijgen labels */
+    .comparison-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-bottom: none;
+        font-size: 0.85rem;
+    }
+
+    /* Labels toevoegen via CSS */
+    .comparison-table td:nth-child(2)::before {
+        content: "NEBOSH IGC:";
+        font-weight: 600;
+        color: var(--success);
+        margin-right: 0.5rem;
+        min-width: 120px;
+    }
+
+    .comparison-table td:nth-child(3)::before {
+        content: "MKV:";
+        font-weight: 600;
+        color: #666;
+        margin-right: 0.5rem;
+        min-width: 120px;
+    }
+
+    /* Feature cel krijgt geen label */
+    .comparison-table td.feature::before {
+        content: none;
+    }
+}
+
+/* Extra kleine schermen */
+@media (max-width: 480px) {
+    .comparison-table td {
+        font-size: 0.8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .comparison-table td::before {
+        min-width: 0;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.highlight-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Pricing Box - VERBETERD DESIGN */
+.pricing-highlight {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 2rem 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--secondary);
+}
+
+.pricing-highlight h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.price-comparison {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.price-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.price-item:first-child {
+    border-color: var(--success);
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+
+.price-item:last-child {
+    border-color: #dc2626;
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+}
+
+.price-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.price-item strong {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.price-item:first-child strong {
+    color: var(--success);
+}
+
+.price-item:last-child strong {
+    color: #dc2626;
+}
+
+.price-item p {
+    color: #333;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* Grids */
+.training-grid, .benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+.training-card, .benefit-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.training-card {
+    border-left: 4px solid var(--secondary);
+}
+
+.training-card h3 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: var(--secondary);
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.training-card ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.training-card li {
+    padding: 0.35rem 0 0.35rem 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.training-card li:before {
+    content: "Checkmark";
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.benefit-card {
+    text-align: center;
+}
+
+.benefit-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card h3 {
+    color: var(--primary);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: var(--light-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--secondary);
+    position: relative;
+}
+
+.testimonial-card:before {
+    content: """;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 4rem;
+    color: var(--secondary);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #e5e7eb;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.author-role {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.rating {
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+/* Belgium Notice Box */
+.belgium-notice {
+    background: linear-gradient(135deg, #fee, #fdd);
+    border-left: 4px solid #c00;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.belgium-notice h4 {
+    color: #c00;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Jobs CTA */
+.jobs-cta {
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: white;
+    text-align: center;
+}
+
+.jobs-cta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+/* FAQ - Mooiere Styling */
+.faq-item {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+        
+.faq-item:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 5px 20px rgba(255, 127, 17, 0.15);
+    transform: translateY(-2px);
+}
+
+.faq-item summary {
+    padding: 1.25rem 1.25rem 1.25rem 3rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+    list-style: none;
+    position: relative;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, #f8f9fa 0%, white 100%);
+}
+        
+.faq-item summary:before {
+    content: "Question Mark";
+    position: absolute;
+    left: 1rem;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+        
+.faq-item[open] summary:before {
+    content: "Checkmark";
+    color: var(--success);
+}
+        
+.faq-item summary:after {
+    content: "Down Arrow";
+    position: absolute;
+    right: 1.25rem;
+    font-size: 0.7rem;
+    color: var(--secondary);
+    transition: transform 0.3s ease;
+}
+        
+.faq-item[open] summary:after {
+    transform: rotate(180deg);
+}
+
+.faq-item summary::-webkit-details-marker { 
+    display: none; 
+}
+
+.faq-item[open] summary {
+    background: linear-gradient(135deg, var(--secondary), #ff9533);
+    color: white;
+    border-bottom: 2px solid #e5e7eb;
+}
+        
+.faq-item[open] summary:after {
+    color: white;
+}
+
+.faq-content {
+    padding: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    background: #fafbfc;
+    border-top: 1px solid #e5e7eb;
+}
+        
+.faq-content strong {
+    color: var(--primary);
+}
+
+/* Contact */
+.contact { background: var(--light-bg); }
+
+.contact-info {
+    background: linear-gradient(135deg, white, #f8f9fa);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+    text-align: center;
+    border: 2px solid var(--secondary);
+}
+
+.contact-info h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.contact-info a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Founder Section */
+.founder-section {
+    background: var(--light-bg);
+}
+
+.founder-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.founder-image {
+    text-align: center;
+}
+
+.founder-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Location Section */
+.location-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Mission Section */
+.mission-section {
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+    text-align: center;
+}
+
+.mission-image img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 1.5rem 4%;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* Tablet+ (600px+) */
+@media (min-width: 600px) {
+    .logo { font-size: 1.3rem; }
+    nav a { font-size: 0.95rem; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1.15rem; }
+    .section-title { font-size: 2rem; }
+    .training-grid { grid-template-columns: repeat(2, 1fr); }
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .founder-content { 
+        grid-template-columns: 400px 1fr; 
+        gap: 3rem;
+    }
+    .price-comparison {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stat-item { font-size: 1rem; }
+    .comparison-table th,
+    .comparison-table td { 
+        padding: 0.75rem 0.6rem; 
+        font-size: 0.85rem; 
+    }
+    .comparison-table .feature { font-size: 0.85rem; }
+    .faq-item summary { 
+        font-size: 1rem;
+        padding: 1.25rem 1.25rem 1.25rem 3.25rem;
+    }
+}
+
+/* Desktop (900px+) */
+@media (min-width: 900px) {
+    .logo { font-size: 1.5rem; }
+    nav { gap: 2rem; }
+    nav a { font-size: 1rem; }
+    .hero { padding: 4rem 5%; margin-top: 4.5rem; }
+    .hero h1 { font-size: 3rem; }
+    .hero-subtitle { font-size: 1.3rem; }
+    .hero p { font-size: 1.2rem; }
+    .btn { padding: 1rem 2rem; font-size: 1.1rem; }
+    section { padding: 4rem 5%; }
+    .section-title { font-size: 2.5rem; }
+    .training-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .benefits-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .testimonials-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .comparison-table th,
+    .comparison-table td { padding: 1rem; font-size: 1rem; }
+    .founder-content { 
+        grid-template-columns: 400px 1fr; 
+        gap: 4rem;
+    }
+    .founder-text .section-title {
+        text-align: left;
+    }
+    .founder-image img {
+        max-width: 380px;
+    }
+    .stat-item { font-size: 1.1rem; }
+    .faq-item summary { 
+        font-size: 1.1rem; 
+        padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+    }
+}
+    
+/* Contact Section - Enhanced Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+        
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+        
+@media (min-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+        
+@media (min-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    
+/* Contact Section - Compact Layout Responsive */
+.contact-compact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+        
+/* Desktop: Maps + Info naast elkaar */
+@media (min-width: 1024px) {
+    .contact-compact-grid {
+        grid-template-columns: 1.5fr 1fr; /* 60% / 40% */
+    }
+}
+        
+/* Tablet: Stack maar met betere spacing */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact-compact-grid {
+        grid-template-columns: 1fr;
+    }
+            
+    .google-maps-wrapper {
+        height: 400px !important;
+    }
+}
+        
+/* Mobile: Stack alles */
+@media (max-width: 767px) {
+    .google-maps-wrapper {
+        height: 350px !important;
+    }
+            
+    .contact-info-sidebar {
+        padding: 1.5rem !important;
+    }
+}
+        
+.office-photo-hero img {
+    transition: transform 0.3s ease;
+}
+        
+.office-photo-hero:hover img {
+    transform: scale(1.02);
+}
+
+/* EXTRA MOBILE FIX: Prevent any horizontal scroll */
+@media (max-width: 768px) {
+    * {
+        max-width: 100%;
+    }
+            
+    .hero, .stats-bar, section, .container, 
+    .cta-buttons, .training-grid, .benefits-grid, 
+    .testimonials-grid, .comparison-table {
+        overflow-x: hidden !important;
+    }
+            
+    /* Make buttons full-width and stack on mobile */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+            
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.9rem 1.5rem;
+        white-space: normal;
+        width: 100%;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+            
+    .btn-primary {
+        font-size: 0.95rem;
+        padding: 1rem 1.5rem;
+    }
+            
+    .btn-secondary {
+        font-size: 0.85rem;
+        padding: 0.85rem 1.5rem;
+    }
+            
+    .btn-cta-special {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Extra small screens - even more compact */
+@media (max-width: 480px) {
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.85rem 1.25rem;
+    }
+            
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+            
+    .btn-secondary {
+        font-size: 0.8rem;
+    }
+}
