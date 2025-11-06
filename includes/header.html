@@ -89,7 +89,11 @@
 
 <style>
     /* ═══════════════════════════════════════════════
-       FLOATING SMART MENU - DESKTOP
+       SAFETYXACADEMY HEADER - OPTIE 4: ORANJE PRIMAIR + GROEN CTA
+       
+       🟠 ORANJE (#FF7F11) = Brand color (logo + menu hover)
+       🟢 GROEN (#00D9A3) = CTA conversie (aanmelden button)
+       🔵 BLAUW (#0A284B) = Base header color (trust)
        ═══════════════════════════════════════════════ */
     
     .main-header {
@@ -100,16 +104,21 @@
         z-index: 1000;
         padding: 1rem 0;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        background: transparent;
+        
+        /* Always-readable semi-transparent background */
+        background: rgba(10, 40, 75, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     }
 
-    /* SCROLL STATE - Compact + Blur */
+    /* SCROLL STATE - More solid + stronger blur */
     .main-header.scrolled {
         padding: 0.5rem 0;
-        background: rgba(10, 40, 75, 0.85);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+        background: rgba(10, 40, 75, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
     }
 
     .header-content {
@@ -121,7 +130,10 @@
         justify-content: space-between;
     }
 
-    /* LOGO */
+    /* ═══════════════════════════════════════════════
+       LOGO - ORANJE HOVER (BRAND COLOR)
+       ═══════════════════════════════════════════════ */
+    
     .logo {
         text-decoration: none;
         transition: transform 0.3s ease;
@@ -136,14 +148,22 @@
         font-weight: 700;
         color: white;
         letter-spacing: -0.5px;
-        transition: font-size 0.4s ease;
+        transition: color 0.3s ease, font-size 0.4s ease;
+    }
+
+    /* 🟠 ORANJE LOGO HOVER - BRAND */
+    .logo:hover .logo-text {
+        color: #FF7F11;
     }
 
     .main-header.scrolled .logo-text {
         font-size: 1.3rem;
     }
 
-    /* DESKTOP NAVIGATION */
+    /* ═══════════════════════════════════════════════
+       DESKTOP NAVIGATION - ORANJE HOVER (BRAND CONSISTENCY)
+       ═══════════════════════════════════════════════ */
+    
     .desktop-nav {
         display: flex;
         align-items: center;
@@ -170,7 +190,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 127, 17, 0.12);
         border-radius: 12px;
         opacity: 0;
         transform: scale(0.8);
@@ -183,12 +203,17 @@
         transform: scale(1);
     }
 
+    /* 🟠 ORANJE MENU HOVER - BRAND CONSISTENCY */
     .nav-link:hover {
-        color: #00D9A3;
+        color: #FF7F11;
         transform: translateY(-2px);
     }
 
-    /* CTA BUTTON - Green Highlight */
+    /* ═══════════════════════════════════════════════
+       CTA BUTTON - GROEN (CONVERSIE FOCUS)
+       ═══════════════════════════════════════════════ */
+    
+    /* 🟢 GROEN CTA - CONVERSIE & SAFETY APPROVED */
     .cta-button {
         color: white;
         background: linear-gradient(135deg, #00D9A3 0%, #00B386 100%);
@@ -209,7 +234,10 @@
         box-shadow: 0 6px 20px rgba(0, 217, 163, 0.4);
     }
 
-    /* BLOG DROPDOWN - Improved */
+    /* ═══════════════════════════════════════════════
+       BLOG DROPDOWN
+       ═══════════════════════════════════════════════ */
+    
     .blog-dropdown {
         position: relative;
         display: inline-block;
@@ -258,8 +286,9 @@
         background: #f8f9fa;
     }
 
+    /* 🟠 ORANJE DROPDOWN HOVER - BRAND CONSISTENCY */
     .dropdown-link:hover {
-        background: rgba(0, 217, 163, 0.1);
+        background: rgba(255, 127, 17, 0.1);
         transform: translateX(4px);
     }
 
@@ -277,7 +306,10 @@
         font-size: 0.85rem;
     }
 
-    /* MOBILE MENU TOGGLE */
+    /* ═══════════════════════════════════════════════
+       MOBILE MENU
+       ═══════════════════════════════════════════════ */
+    
     .mobile-menu-toggle {
         display: none;
         flex-direction: column;
@@ -372,9 +404,11 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* 🟠 ORANJE MOBILE LINKS HOVER */
         .mobile-nav-link:active {
             transform: scale(0.98);
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 127, 17, 0.15);
+            border-color: rgba(255, 127, 17, 0.3);
         }
 
         .mobile-nav-link svg {
@@ -382,6 +416,7 @@
             opacity: 0.9;
         }
 
+        /* 🟢 GROEN MOBILE CTA */
         .mobile-cta-button {
             margin-top: 1rem;
             padding: 1.25rem;
