@@ -77,3 +77,64 @@
     display: flex;
   }
 }
+
+/* ===== mobile menu extra ===== */
+
+/* het overlay-scherm */
+.mobile-menu-overlay {
+  display: none;              /* standaard weg */
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 40, 75, 0.98);
+  z-index: 999;
+  padding-top: 80px;
+}
+
+/* de knop (3 streepjes) */
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  gap: 5px;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0A284B;
+  border-radius: 2px;
+}
+
+/* menu binnenin */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.mobile-nav-link {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobile-cta-button {
+  background: linear-gradient(135deg, #00D9A3 0%, #00B386 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* alleen op mobiel tonen */
+@media (max-width: 768px) {
+  .mobile-menu-overlay.active {
+    display: block;
+  }
+}
+
