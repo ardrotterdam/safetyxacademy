@@ -20,15 +20,11 @@
   align-items: center;
 }
 
-/* ===== TEKST IN HEADER (bovenaan) ===== */
-.main-header .logo-text,
-.main-header .nav-link {
-  color: #0A284B !important;  /* belangrijk: overschrijft oude witte links */
-}
-
+/* ===== LOGO ===== */
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
+  color: #0A284B;
 }
 
 /* ===== DESKTOP NAV ===== */
@@ -43,6 +39,7 @@
   padding: 0.6rem 1rem;
   border-radius: 12px;
   font-weight: 500;
+  color: #0A284B;
   transition: 0.2s;
 }
 
@@ -62,7 +59,7 @@
   white-space: nowrap;
 }
 
-/* ===== SCROLLED STATE ===== */
+/* ===== SCROLLED STATE (als JS .scrolled toevoegt) ===== */
 .main-header.scrolled {
   background: rgba(10, 40, 75, 0.92);
   backdrop-filter: blur(10px);
@@ -79,6 +76,7 @@
   background: none;
   border: none;
   gap: 5px;
+  cursor: pointer;
 }
 
 .mobile-menu-toggle span {
@@ -86,6 +84,7 @@
   height: 3px;
   background: #0A284B;
   border-radius: 2px;
+  transition: 0.3s;
 }
 
 /* ===== MOBILE MENU OVERLAY ===== */
@@ -112,6 +111,7 @@
   border-radius: 14px;
   text-decoration: none;
   font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .mobile-cta-button {
@@ -122,29 +122,37 @@
   border-radius: 14px;
   text-align: center;
   font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* ===== ACTIVE STATE VAN MENU (wordt door JS gezet) ===== */
+.mobile-menu-overlay.active {
+  display: block;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  /* desktop menu verstoppen */
   .desktop-nav {
     display: none;
   }
 
+  /* hamburger laten zien */
   .mobile-menu-toggle {
     display: flex;
   }
 
-  /* als JS 'active' zet, laat overlay zien */
-  .mobile-menu-overlay.active {
-    display: block;
-  }
-
-  /* op mobiel is header zelf donker, dus tekst wit */
+  /* op mobiel: header donker maken zodat menu blendt */
   .main-header {
     background: rgba(10, 40, 75, 0.96);
   }
-  .main-header .logo-text,
-  .main-header .nav-link {
-    color: #fff !important;
+
+  .main-header .logo-text {
+    color: #fff;
+  }
+
+  /* hamburger wit maken op donker */
+  .mobile-menu-toggle span {
+    background: #fff;
   }
 }
