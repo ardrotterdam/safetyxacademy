@@ -1,0 +1,79 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  background: #ffffff; /* wit zodat je tekst zichtbaar is */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  transition: 0.3s;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0A284B;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #0A284B;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: rgba(10,40,75,0.06);
+  color: #00B386;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #00D9A3 0%, #00B386 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* als je scrolt: donker + witte tekst */
+.main-header.scrolled {
+  background: rgba(10, 40, 75, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.main-header.scrolled .logo-text,
+.main-header.scrolled .nav-link {
+  color: #fff;
+}
+
+/* mobile */
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
