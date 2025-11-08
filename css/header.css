@@ -156,3 +156,9 @@
     background: #fff;
   }
 }
+
+/* ruimte voor de vaste header */
+body {
+  padding-top: 80px;
+}
+
