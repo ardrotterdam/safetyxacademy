@@ -1,3 +1,4 @@
+/* ===== HEADER BASIS ===== */
 .main-header {
   position: fixed;
   top: 0;
@@ -5,7 +6,7 @@
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  background: #ffffff; /* wit zodat je tekst zichtbaar is */
+  background: #ffffff; /* wit zodat tekst zichtbaar is */
   box-shadow: 0 4px 24px rgba(0,0,0,0.04);
   transition: 0.3s;
 }
@@ -19,12 +20,18 @@
   align-items: center;
 }
 
+/* ===== TEKST IN HEADER (bovenaan) ===== */
+.main-header .logo-text,
+.main-header .nav-link {
+  color: #0A284B !important;  /* belangrijk: overschrijft oude witte links */
+}
+
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0A284B;
 }
 
+/* ===== DESKTOP NAV ===== */
 .desktop-nav {
   display: flex;
   gap: 0.5rem;
@@ -32,28 +39,30 @@
 }
 
 .nav-link {
-  color: #0A284B;
   text-decoration: none;
   padding: 0.6rem 1rem;
   border-radius: 12px;
   font-weight: 500;
+  transition: 0.2s;
 }
 
 .nav-link:hover {
   background: rgba(10,40,75,0.06);
-  color: #00B386;
+  color: #00B386 !important;
 }
 
+/* ===== CTA BUTTON ===== */
 .cta-button {
   background: linear-gradient(135deg, #00D9A3 0%, #00B386 100%);
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   padding: 0.6rem 1.3rem;
   border-radius: 12px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
-/* als je scrolt: donker + witte tekst */
+/* ===== SCROLLED STATE ===== */
 .main-header.scrolled {
   background: rgba(10, 40, 75, 0.92);
   backdrop-filter: blur(10px);
@@ -61,37 +70,12 @@
 
 .main-header.scrolled .logo-text,
 .main-header.scrolled .nav-link {
-  color: #fff;
+  color: #ffffff !important;
 }
 
-/* mobile */
+/* ===== MOBILE TOGGLE (hamburger) ===== */
 .mobile-menu-toggle {
   display: none;
-}
-
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-  .mobile-menu-toggle {
-    display: flex;
-  }
-}
-
-/* ===== mobile menu extra ===== */
-
-/* het overlay-scherm */
-.mobile-menu-overlay {
-  display: none;              /* standaard weg */
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 40, 75, 0.98);
-  z-index: 999;
-  padding-top: 80px;
-}
-
-/* de knop (3 streepjes) */
-.mobile-menu-toggle {
   background: none;
   border: none;
   gap: 5px;
@@ -104,7 +88,16 @@
   border-radius: 2px;
 }
 
-/* menu binnenin */
+/* ===== MOBILE MENU OVERLAY ===== */
+.mobile-menu-overlay {
+  display: none;              /* standaard weg */
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 40, 75, 0.98);
+  z-index: 999;
+  padding-top: 80px;
+}
+
 .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -131,10 +124,27 @@
   font-weight: 600;
 }
 
-/* alleen op mobiel tonen */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* als JS 'active' zet, laat overlay zien */
   .mobile-menu-overlay.active {
     display: block;
   }
-}
 
+  /* op mobiel is header zelf donker, dus tekst wit */
+  .main-header {
+    background: rgba(10, 40, 75, 0.96);
+  }
+  .main-header .logo-text,
+  .main-header .nav-link {
+    color: #fff !important;
+  }
+}
