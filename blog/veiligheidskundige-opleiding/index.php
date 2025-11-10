@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO basics -->
+  <title>Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV) | SafetyXAcademy</title>
+  <meta name="description" content="Wil je veiligheidskundige worden in 2026? Vergelijk NEBOSH IGC (€3.500) vs MKV (€5.000–€7.000), bekijk kosten, salaris, carrièrepaden en waarom 8/10 professionals kiest voor NEBOSH IGC." />
+  <link rel="canonical" href="https://safetyxacademy.nl/blog/veiligheidskundige-opleiding/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV)">
+  <meta property="og:description" content="Alles over veiligheidskundige worden in 2026: opleidingen, kosten, salaris, vacatures en de beste keuze tussen NEBOSH en MKV.">
+  <meta property="og:url" content="https://safetyxacademy.nl/blog/veiligheidskundige-opleiding/">
+  <meta property="og:site_name" content="SafetyXAcademy">
+  <meta property="og:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV)">
+  <meta name="twitter:description" content="NEBOSH vs MKV in 2026: kosten, salarissen, carrièrepaden en keuzehulp.">
+  <meta name="twitter:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp">
+
+  <!-- Styling -->
+  <style>
+    :root { --tx:#1a1a1a; --muted:#5c6773; --brand:#00811F; --brand-light:#e6f7ed; --accent:#f97316; --bg:#ffffff; --border:#e5e7eb; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; line-height:1.65; color:var(--tx); background:var(--bg); }
+
+    nav { background:#fff; border-bottom:1px solid var(--border); padding:20px 24px; position:sticky; top:0; z-index:100; }
+    nav .nav-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+    nav .logo { font-size:1.3rem; font-weight:700; color:var(--accent); text-decoration:none; }
+    nav .links a { margin-left:24px; color:var(--tx); text-decoration:none; font-weight:500; transition:color .2s; }
+    nav .links a:hover { color:var(--brand); }
+
+    .wrap { max-width:980px; margin:0 auto; padding:24px; }
+    header { margin:40px 0 32px; }
+
+    .badge { display:inline-block; font-size:.8rem; background:#ecfdf5; color:#065f46; border:1px solid #86efac; border-radius:999px; padding:4px 10px; margin:0 4px 8px 0; }
+
+    h1 { font-size:2.5rem; font-weight:700; margin:12px 0 16px; line-height:1.2; }
+    .lead { font-size:1.2rem; color:var(--muted); margin-bottom:16px; }
+
+    .meta { display:flex; gap:16px; font-size:.9rem; color:var(--muted); padding:16px 0; border-bottom:1px solid var(--border); margin-bottom:24px; }
+    .meta p { display:flex; align-items:center; gap:6px; }
+
+    article img { width:100%; max-width:1200px; height:auto; border-radius:14px; margin:24px auto; display:block; box-shadow:0 4px 16px rgba(0,0,0,0.1); }
+
+    .note { background:#f0f9ff; border-left:4px solid #0284c7; padding:16px 20px; margin:24px 0; border-radius:8px; }
+    .note strong { color:#0369a1; }
+
+    h2 { font-size:1.8rem; font-weight:700; margin:40px 0 16px; color:var(--tx); }
+    h3 { font-size:1.4rem; font-weight:600; margin:32px 0 12px; color:var(--tx); }
+    h4 { font-size:1.1rem; font-weight:600; margin:22px 0 8px; }
+    p { margin:0 0 16px; line-height:1.7; }
+    ul, ol { margin:0 0 16px 20px; line-height:1.7; }
+    li { margin:8px 0; }
+    strong { font-weight:600; color:var(--tx); }
+
+    /* Responsive Table Styling */
+    .table-wrap { margin:24px 0; }
+    
+    /* Desktop table view */
+    .comparison-table { 
+      width:100%; 
+      border-collapse:collapse; 
+      background:#fff; 
+      border-radius:12px; 
+      overflow:hidden; 
+      box-shadow:0 2px 8px rgba(0,0,0,0.08); 
+    }
+    .comparison-table th, 
+    .comparison-table td { 
+      padding:16px 20px; 
+      text-align:left; 
+      border-bottom:1px solid var(--border); 
+    }
+    .comparison-table th { 
+      background:#f9fafb; 
+      font-weight:600; 
+      font-size:.95rem; 
+      text-transform:uppercase; 
+      letter-spacing:.5px; 
+      color:var(--muted); 
+    }
+    .comparison-table tbody tr:hover { 
+      background:#f9fafb; 
+    }
+    .comparison-table tbody tr:last-child td {
+      border-bottom:none;
+    }
+
+    /* Mobile card view */
+    @media(max-width:768px) {
+      .comparison-table thead {
+        display:none;
+      }
+      .comparison-table,
+      .comparison-table tbody,
+      .comparison-table tr,
+      .comparison-table td {
+        display:block;
+        width:100%;
+      }
+      .comparison-table tr {
+        margin-bottom:20px;
+        border-radius:12px;
+        overflow:hidden;
+        box-shadow:0 2px 8px rgba(0,0,0,0.08);
+        background:#fff;
+      }
+      .comparison-table td {
+        padding:14px 20px;
+        border-bottom:1px solid #f3f4f6;
+        position:relative;
+        padding-left:45%;
+      }
+      .comparison-table td:last-child {
+        border-bottom:none;
+      }
+      .comparison-table td:before {
+        content:attr(data-label);
+        position:absolute;
+        left:20px;
+        font-weight:600;
+        color:var(--muted);
+        font-size:.85rem;
+        text-transform:uppercase;
+        letter-spacing:.5px;
+      }
+      .comparison-table td:first-child {
+        background:#f9fafb;
+        font-weight:700;
+        color:var(--brand);
+        padding-left:20px;
+        font-size:1.1rem;
+      }
+      .comparison-table td:first-child:before {
+        content:none;
+      }
+    }
+
+    /* FAQ Accordion Styling */
+    .faq-section {
+      margin:40px 0;
+    }
+    .faq-container {
+      max-width:100%;
+      margin:24px 0;
+    }
+    .faq-item {
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      margin-bottom:12px;
+      overflow:hidden;
+      transition:all 0.3s ease;
+    }
+    .faq-item:hover {
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+    .faq-question {
+      width:100%;
+      padding:20px 24px;
+      background:#fff;
+      border:none;
+      text-align:left;
+      font-size:1.1rem;
+      font-weight:600;
+      color:var(--tx);
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      transition:all 0.3s ease;
+    }
+    .faq-question:hover {
+      color:var(--brand);
+    }
+    .faq-icon {
+      font-size:1.5rem;
+      color:var(--brand);
+      transition:transform 0.3s ease;
+      flex-shrink:0;
+      margin-left:16px;
+    }
+    .faq-item.active .faq-icon {
+      transform:rotate(180deg);
+    }
+    .faq-answer {
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.4s ease, padding 0.4s ease;
+      padding:0 24px;
+    }
+    .faq-item.active .faq-answer {
+      max-height:500px;
+      padding:0 24px 20px 24px;
+    }
+    .faq-answer p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .card { background:var(--brand-light); border:1px solid #86efac; border-radius:14px; padding:28px; margin:28px 0; }
+    .card h3 { margin-top:0; color:var(--brand); }
+
+    .cta { background:#f9fafb; border-radius:12px; padding:40px 24px; text-align:center; margin:60px 0 40px; }
+    .cta h2 { margin:0 0 12px; }
+    .cta p { color:var(--muted); margin:0 0 24px; }
+    .cta a { display:inline-block; background:var(--brand); color:#fff; text-decoration:none; padding:14px 28px; border-radius:10px; font-weight:600; transition:opacity 0.2s; }
+    .cta a:hover { opacity:0.9; }
+
+    footer { background:#0f172a; color:#cbd5e1; padding:40px 24px; text-align:center; margin-top:60px; }
+    footer p { margin:0; }
+    footer a { color:#cbd5e1; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+
+    @media(max-width:768px) {
+      h1 { font-size:1.8rem; }
+      h2 { font-size:1.5rem; }
+      nav .links { display:none; }
+      .wrap { padding:16px; }
+      .meta { flex-direction:column; gap:8px; }
+      .faq-question { font-size:1rem; padding:16px 20px; }
+      .faq-icon { font-size:1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <?php include '../../includes/header.html'; ?>
+
+  <!-- Article -->
+  <article class="wrap">
+    <header>
+      <div>
+        <span class="badge">Complete Gids 2026</span>
+        <span class="badge">Voor zzp'ers & professionals</span>
+        <span class="badge">Carrière advies</span>
+      </div>
+      <h1>Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV)</h1>
+      <p class="lead">Geactualiseerd voor 2026: deze gids helpt je de beste keuze te maken tussen <strong>NEBOSH IGC</strong> en <strong>MKV</strong> — inclusief <strong>kosten, salaris en carrièrekansen</strong>.</p>
+      <div class="meta">
+        <p>📅 Laatst bijgewerkt: 3 november 2026 · ⏱ Leestijd: 8 minuten · ✍️ Door Nando Breure, HSE Expert</p>
+      </div>
+    </header>
+
+    <img src="/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp"
+         alt="Veiligheidskundige opleiding NEBOSH IGC: inspectie van industriële installatie"
+         width="1200" height="630" loading="eager">
+
+    <div class="note">
+      <p><strong>🔄 Update 2026:</strong> bedragen, salarissen en startdata geverifieerd en waar nodig aangepast. NEBOSH IGC blijft de snelste route (10–12 weken) met internationale erkenning.</p>
+    </div>
+
+    <h2>Wat is een Veiligheidskundige?</h2>
+    <p>Een veiligheidskundige (HSE Officer/Advisor) zorgt ervoor dat werknemers veilig kunnen werken. Ze maken risico-inventarisaties, stellen veiligheidsplannen op, geven toolbox-meetings en controleren naleving van veiligheidsregels.</p>
+
+    <h3>Taken van een Veiligheidskundige</h3>
+    <ul>
+      <li>Risico-inventarisaties (RI&amp;E) uitvoeren</li>
+      <li>Veiligheidsbeleid en procedures ontwikkelen</li>
+      <li>Toolbox-meetings en safety briefings geven</li>
+      <li>Inspecties en audits uitvoeren</li>
+      <li>Incidenten en bijna-ongevallen onderzoeken</li>
+      <li>Management adviseren over veiligheidsmaatregelen</li>
+      <li>Naleving van wetgeving borgen (Arbowet, BRL's)</li>
+    </ul>
+
+    <h2>Veiligheidskundige Opleiding Vergelijking: NEBOSH IGC vs MKV (2026)</h2>
+    <p>Er zijn twee hoofdroutes om veiligheidskundige te worden in Nederland: NEBOSH IGC en MKV. Beide zijn erkend, maar verschillen qua kosten, duur en toepassingsgebied.</p>
+
+    <div class="table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>NEBOSH IGC</th>
+            <th>MKV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Aspect"><strong>Kosten</strong></td>
+            <td data-label="NEBOSH IGC">€3.500 all-inclusive</td>
+            <td data-label="MKV">€5.000–€7.000</td>
+          </tr>
+          <tr>
+            <td data-label="Aspect"><strong>Duur</strong></td>
+            <td data-label="NEBOSH IGC">10–12 weken (deeltijd)</td>
+            <td data-label="MKV">6–12 maanden</td>
+          </tr>
+          <tr>
+            <td data-label="Aspect"><strong>Taal</strong></td>
+            <td data-label="NEBOSH IGC">Engels</td>
+            <td data-label="MKV">Nederlands</td>
+          </tr>
+          <tr>
+            <td data-label="Aspect"><strong>Erkenning</strong></td>
+            <td data-label="NEBOSH IGC">120+ landen wereldwijd</td>
+            <td data-label="MKV">Primair Nederland</td>
+          </tr>
+          <tr>
+            <td data-label="Aspect"><strong>Slagingspercentage</strong></td>
+            <td data-label="NEBOSH IGC">75–85% (met goede voorbereiding)</td>
+            <td data-label="MKV">60–70%</td>
+          </tr>
+          <tr>
+            <td data-label="Aspect"><strong>Carrièrepaden</strong></td>
+            <td data-label="NEBOSH IGC">Internationaal: offshore, petrochemie, maritiem</td>
+            <td data-label="MKV">Lokaal: bouw, industrie, overheid</td>
+          </tr>
+          <tr>
+            <td data-label="Aspect"><strong>Gemiddeld salaris</strong></td>
+            <td data-label="NEBOSH IGC">€3.500–€5.500 p/m (€42k–€66k/jaar)</td>
+            <td data-label="MKV">€3.000–€4.500 p/m (€36k–€54k/jaar)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Waarom 8 van de 10 professionals kiezen voor NEBOSH IGC</h3>
+      <ul>
+        <li><strong>Lagere kosten:</strong> €1.500–€3.500 besparing t.o.v. MKV</li>
+        <li><strong>Sneller klaar:</strong> 10–12 weken vs 6–12 maanden</li>
+        <li><strong>Internationale erkenning:</strong> Werk wereldwijd</li>
+        <li><strong>Hoger salaris:</strong> Gemiddeld €6k–€12k meer per jaar</li>
+        <li><strong>Meer vacatures:</strong> Offshore, petrochemie en internationale projecten</li>
+      </ul>
+    </div>
+
+    <h2>Veiligheidskundige Salaris 2026</h2>
+    <p>In 2026 varieert het salaris op basis van ervaring, certificering en sector.</p>
+
+    <h3>Salaris per Ervaringsniveau</h3>
+    <ul>
+      <li><strong>Starter (0–2 jaar):</strong> €2.800–€3.500 p/m (€34k–€42k/jaar)</li>
+      <li><strong>Medior (2–5 jaar):</strong> €3.500–€4.500 p/m (€42k–€54k/jaar)</li>
+      <li><strong>Senior (5+ jaar):</strong> €4.500–€6.000 p/m (€54k–€72k/jaar)</li>
+      <li><strong>HSE Manager:</strong> €5.500–€8.000 p/m (€66k–€96k/jaar)</li>
+    </ul>
+
+    <h3>ZZP-Tarieven Veiligheidskundige</h3>
+    <ul>
+      <li><strong>Junior ZZP'er:</strong> €50–€70/uur (€400–€560/dag)</li>
+      <li><strong>Ervaren ZZP'er:</strong> €70–€95/uur (€560–€760/dag)</li>
+      <li><strong>Senior/Specialist:</strong> €95–€125/uur (€760–€1.000/dag)</li>
+    </ul>
+
+    <h3>Sectoren met Hoogste Salarissen</h3>
+    <ul>
+      <li><strong>Offshore/Oil &amp; Gas:</strong> €5.000–€7.500 p/m + allowances</li>
+      <li><strong>Petrochemie:</strong> €4.500–€6.500 p/m</li>
+      <li><strong>Maritiem:</strong> €4.000–€6.000 p/m</li>
+      <li><strong>Bouw:</strong> €3.500–€5.000 p/m</li>
+      <li><strong>Productie/Industrie:</strong> €3.200–€4.800 p/m</li>
+    </ul>
+
+    <h2>Carrièrepad Veiligheidskundige</h2>
+    <p>Een typisch carrièrepad:</p>
+
+    <h3>1. HSE Officer / Junior Veiligheidskundige (0–2 jaar)</h3>
+    <ul>
+      <li>Start na je opleiding</li>
+      <li>Inspecties en risico-inventarisaties</li>
+      <li>Salaris: €2.800–€3.500 p/m</li>
+    </ul>
+
+    <h3>2. HSE Advisor (2–5 jaar)</h3>
+    <ul>
+      <li>Complexere vraagstukken en projectleiding</li>
+      <li>Salaris: €3.500–€4.500 p/m</li>
+    </ul>
+
+    <h3>3. Senior HSE Advisor (5–8 jaar)</h3>
+    <ul>
+      <li>Strategisch adviseur, teamlead</li>
+      <li>Salaris: €4.500–€6.000 p/m</li>
+    </ul>
+
+    <h3>4. HSE Manager (8+ jaar)</h3>
+    <ul>
+      <li>Verantwoordelijk voor HSE-beleid</li>
+      <li>Meerdere projecten/locaties</li>
+      <li>Salaris: €5.500–€8.000 p/m</li>
+    </ul>
+
+    <h2>Internationale Carrièrekansen</h2>
+    <p>Met NEBOSH IGC sta je sterk op de internationale arbeidsmarkt.</p>
+
+    <h3>🌍 Populaire landen voor HSE professionals</h3>
+    <ul>
+      <li><strong>Noorwegen:</strong> Offshore, ~€80k–€120k/jaar</li>
+      <li><strong>Dubai/Saoedi-Arabië:</strong> Petrochemie, ~€70k–€100k/jaar (vaak tax-free)</li>
+      <li><strong>VK (North Sea):</strong> Offshore Oil &amp; Gas, ~€75k–€110k/jaar</li>
+      <li><strong>Australië:</strong> Mining, ~€85k–€130k/jaar</li>
+      <li><strong>Singapore:</strong> Maritiem/petrochemie, ~€65k–€95k/jaar</li>
+    </ul>
+
+    <h3>Offshore HSE: salaris en werkomstandigheden</h3>
+    <ul>
+      <li><strong>Rotaties:</strong> 2/2 of 3/3 weken</li>
+      <li><strong>Salaris:</strong> €5.000–€7.500 p/m + €100–€200/dag allowance</li>
+      <li><strong>Totaal:</strong> ~€70k–€120k/jaar all-in</li>
+      <li><strong>Extra's:</strong> Accommodatie, eten, reizen vergoed</li>
+    </ul>
+
+    <h2>ZZP-tips &amp; Opdrachten vinden</h2>
+    <ul>
+      <li><strong>Netwerk:</strong> LinkedIn, NVVK/VVTA, events</li>
+      <li><strong>Detacheerders:</strong> HSE-specialistenbureaus</li>
+      <li><strong>Direct:</strong> Grote industriële bedrijven</li>
+      <li><strong>Platforms:</strong> Freelance.nl e.d.</li>
+    </ul>
+
+    <h2>Hoe word je Veiligheidskundige? Stappenplan</h2>
+    <h3>Stap 1: Kies je opleiding</h3>
+    <ul>
+      <li><strong>NEBOSH IGC:</strong> internationaal, snel, betaalbaar</li>
+      <li><strong>MKV:</strong> NL-gericht, Nederlandstalig</li>
+    </ul>
+
+    <h3>Stap 2: Volg de opleiding (SafetyXAcademy)</h3>
+    <ul>
+      <li><strong>Locatie:</strong> Rotterdam (Westplein 12)</li>
+      <li><strong>Duur:</strong> 10–12 weken, 1 dag p/w + zelfstudie</li>
+      <li><strong>All-in:</strong> Materialen, examen, begeleiding</li>
+      <li><strong>Start:</strong> januari 2026</li>
+    </ul>
+
+    <h3>Stap 3: Examen</h3>
+    <ul>
+      <li><strong>NG1 (Management):</strong> theorie-examen</li>
+      <li><strong>NG2 (Risk Assessment):</strong> praktijkopdracht</li>
+    </ul>
+
+    <h3>Stap 4: Eerste baan</h3>
+    <ul>
+      <li>LinkedIn updaten met NEBOSH</li>
+      <li>Solliciteren op HSE Officer/Veiligheidskundige</li>
+      <li>Netwerken en evt. stage</li>
+    </ul>
+
+    <!-- FAQ Section with Accordion -->
+    <section class="faq-section">
+      <h2>Veelgestelde vragen (FAQ)</h2>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Hoeveel verdient een veiligheidskundige?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Starter: €2.800–€3.500 p/m. Senior: €4.500–€6.000 p/m. ZZP: ~€50–€125/uur (afhankelijk van ervaring en sector). In sectoren zoals offshore en petrochemie liggen de salarissen vaak hoger, met totale pakketten tot €120k per jaar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Hoe lang duurt de opleiding?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>NEBOSH IGC: 10–12 weken deeltijd (1 dag per week + zelfstudie). MKV: 6–12 maanden. NEBOSH is daarom ideaal als je snel wilt starten in je nieuwe carrière.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is NEBOSH moeilijk?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Met goede voorbereiding slaagt 75–85% in één keer. De uitdaging zit vooral in de Engelse terminologie en het toepassen van theorie in praktijkcases. Bij SafetyXAcademy krijg je intensieve begeleiding en oefenexamens om je optimaal voor te bereiden.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Kan ik met NEBOSH in Nederland werken?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, absoluut! NEBOSH IGC wordt geaccepteerd door alle grote bedrijven in Nederland. De Engelse titel is geen probleem voor HSE-rollen. Sterker nog, veel Nederlandse bedrijven waarderen NEBOSH vanwege de internationale standaard en de brede toepasbaarheid.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Welke opleiding is beter: NEBOSH of MKV?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Dat hangt af van je doelen. NEBOSH is ideaal voor internationale carrières, snellere voltooiing en lagere kosten. MKV is meer gefocust op de Nederlandse markt. Als je internationaal wilt werken of sneller wilt starten, kies NEBOSH. Voor uitsluitend Nederlandse bouwprojecten kan MKV geschikter zijn.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Kan ik de opleiding naast mijn baan volgen?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Ja! NEBOSH IGC is ontworpen als deeltijdopleiding: 1 lesdag per week en circa 8-10 uur zelfstudie. Ideaal te combineren met een baan of andere verplichtingen. Bij SafetyXAcademy plannen we de lesdagen meestal op dezelfde dag in de week voor consistentie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h2>Conclusie: welke opleiding past bij jou?</h2>
+    <p>Wil je snel starten, internationaal erkend zijn en kosten beperken? Dan is <strong>NEBOSH IGC</strong> in 2026 de logische keuze. Primair NL en langer traject? Dan <strong>MKV</strong>.</p>
+    <p><strong>SafetyXAcademy</strong> biedt NEBOSH IGC training in Rotterdam voor €3.500 all-in. Train lokaal, werk wereldwijd. <strong>Startdatum: januari 2026.</strong></p>
+  </article>
+
+  <!-- CTA -->
+  <div class="wrap">
+    <div class="cta" aria-label="Aanmelden NEBOSH">
+      <h2>Klaar om te starten met NEBOSH?</h2>
+      <p>Train lokaal in Rotterdam, werk wereldwijd. <strong>Start januari 2026.</strong></p>
+      <a href="/#contact">Vraag gratis informatie aan</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 SafetyXAcademy • <a href="/#privacy">Privacy</a> • <a href="/blog/">Blog</a></p>
+  </footer>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://safetyxacademy.nl/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://safetyxacademy.nl/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Veiligheidskundige Opleiding 2026", "item": "https://safetyxacademy.nl/blog/veiligheidskundige-opleiding/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://safetyxacademy.nl/blog/veiligheidskundige-opleiding/"
+    },
+    "headline": "Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV)",
+    "description": "NEBOSH IGC vs MKV in 2026: kosten, salarissen, carrièrepaden en keuzehulp.",
+    "image": "https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp",
+    "author": { "@type": "Person", "name": "Nando Breure" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SafetyXAcademy",
+      "logo": { "@type": "ImageObject", "url": "https://safetyxacademy.nl/images/logo.png" }
+    },
+    "datePublished": "2025-01-27",
+    "dateModified": "2026-11-03"
+  }
+  </script>
+
+  <!-- FAQ Accordion JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          
+          // Close all other items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+              otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            }
+          });
+          
+          // Toggle current item
+          if (isActive) {
+            item.classList.remove('active');
+            question.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('active');
+            question.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

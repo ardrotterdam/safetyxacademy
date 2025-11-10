@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Blog 2026: NEBOSH & HSE Carrièreadvies | SafetyXAcademy</title>
+  <meta name="description" content="Praktische HSE- en NEBOSH-tips, salarissen en voorbeelden voor Nederland, België en internationaal. Ontdek opleidingen, carrièrepaden en zzp-kansen in 2026." />
+  <link rel="canonical" href="https://safetyxacademy.nl/blog/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog 2026: NEBOSH & HSE Carrièreadvies | SafetyXAcademy">
+  <meta property="og:description" content="Praktische HSE- en NEBOSH-tips, salarissen en voorbeelden. Ontdek opleidingen, carrièrepaden en zzp-kansen in 2026.">
+  <meta property="og:url" content="https://safetyxacademy.nl/blog/">
+  <meta property="og:site_name" content="SafetyXAcademy">
+  <meta property="og:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp">
+  <!-- Tweaks: locale + image dimensions -->
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog 2026: NEBOSH & HSE Carrièreadvies | SafetyXAcademy">
+  <meta name="twitter:description" content="HSE & NEBOSH artikelen, salarissen en carrièreadvies voor 2026.">
+  <meta name="twitter:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp">
+  <!-- Tweaks: twitter site/creator (optioneel, laat staan of vul aan) -->
+  <meta name="twitter:site" content="@safetyxacademy">
+  <meta name="twitter:creator" content="@safetyxacademy">
+
+  <style>
+    :root { --tx:#1a1a1a; --muted:#5c6773; --brand:#00811F; --accent:#f97316; --bg:#ffffff; --border:#e5e7eb; --primary:#0A284B; --secondary:#FF7F11; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.65;color:var(--tx);background:#0f172a;margin:0}
+    /* Header */
+    header{background:var(--primary);color:#fff;padding:.75rem 4%;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+    .header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap}
+    .logo{font-size:1.3rem;font-weight:700;color:var(--secondary);text-decoration:none}
+    nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+    nav a{color:#fff;text-decoration:none;font-weight:500}
+    nav a:hover{color:var(--secondary)}
+    /* Hero */
+    .hero{background:#0f172a;color:#fff;padding:60px 24px;text-align:center}
+    .hero h1{font-size:2.3rem;margin:0 0 12px;font-weight:800}
+    .hero p{font-size:1.1rem;color:#cbd5e1;max-width:740px;margin:0 auto}
+    /* Grid */
+    .wrap{max-width:1200px;margin:0 auto;padding:40px 24px;background:var(--bg)}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin:32px 0}
+    .blog-card{border:1px solid var(--border);border-radius:12px;padding:24px;background:#fff;transition:transform .2s, box-shadow .2s;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+    .blog-card:hover{box-shadow:0 6px 18px rgba(0,0,0,.12);transform:translateY(-2px)}
+    .blog-card img{width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:16px;background:#f3f4f6}
+    .blog-meta{font-size:.85rem;color:var(--muted);margin-bottom:12px}
+    .blog-title{font-size:1.35rem;font-weight:800;margin:0 0 10px;line-height:1.3}
+    .blog-title a{color:var(--tx);text-decoration:none}
+    .blog-title a:hover{color:var(--brand)}
+    .blog-excerpt{color:var(--muted);margin:0 0 16px}
+    .blog-btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:10px 20px;border-radius:8px;font-weight:700}
+    .blog-btn:hover{opacity:.92}
+    .badge{display:inline-block;font-size:.8rem;background:#ecfdf5;color:#065f46;border:1px solid #86efac;border-radius:999px;padding:4px 10px;margin:0 6px 8px 0}
+    .badge-popular{background:#fef3c7;color:#92400e;border-color:#fbbf24}
+    /* CTA */
+    .cta{text-align:center;margin:60px 0 40px;padding:40px 24px;background:#f9fafb;border-radius:12px}
+    .cta h2{margin:0 0 12px}
+    .cta p{color:var(--muted);margin:0 0 20px}
+    .cta a{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700}
+    .cta a:hover{opacity:.92}
+    /* Footer */
+    footer{background:#0f172a;color:#cbd5e1;padding:40px 24px;text-align:center}
+    footer a{color:#cbd5e1}
+    /* Responsive */
+    @media(max-width:768px){.hero h1{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+  <?php include '../includes/header.html'; ?>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Blog 2026: NEBOSH & HSE Carrièreadvies</h1>
+    <p>Praktische tips, salarissen en voorbeelden voor Nederland, België en wereldwijd. Actueel voor 2026.</p>
+  </section>
+
+  <!-- Tweaks: mini interne links onder hero -->
+  <p style="margin:0 24px 16px; text-align:center; color:#cbd5e1;">
+    Populaire gidsen:
+    <a href="/blog/veiligheidskundige-opleiding/" style="color:#86efac;">Veiligheidskundige opleiding 2026</a> ·
+    <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" style="color:#86efac;">NEBOSH Rotterdam guide</a>
+  </p>
+
+  <!-- Grid -->
+  <main class="wrap">
+    <div class="blog-grid" role="list">
+
+      <!-- Featured Blog Post (2026) -->
+      <article class="blog-card" role="listitem">
+        <img src="/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp"
+             alt="Inspectie op industriële installatie tijdens NEBOSH/HSE training" loading="lazy" width="960" height="540">
+        <div>
+          <span class="badge badge-popular">⭐ Populair</span>
+          <span class="badge">Complete Gids 2026</span>
+          <span class="badge">8 min leestijd</span>
+        </div>
+        <div class="blog-meta">26 okt 2026</div>
+        <h2 class="blog-title">
+          <a href="/blog/veiligheidskundige-opleiding/">Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV)</a>
+        </h2>
+        <p class="blog-excerpt">
+          Wil je veiligheidskundige worden? Deze gids helpt je kiezen tussen NEBOSH IGC en MKV, met up-to-date info over kosten, salaris en carrièrekansen in 2026.
+        </p>
+        <a href="/blog/veiligheidskundige-opleiding/" class="blog-btn" aria-label="Lees artikel: Veiligheidskundige Opleiding 2026">Lees artikel →</a>
+      </article>
+
+      <!-- NEBOSH Rotterdam gids -->
+      <article class="blog-card" role="listitem">
+        <img src="/images/blog/nebosh-student-erasmusbrug-rotterdam-westplein-veiligheidsopleiding.webp"
+             alt="NEBOSH student bij Erasmusbrug nabij Westplein 12 in Rotterdam" loading="lazy" width="960" height="540">
+        <div>
+          <span class="badge">Rotterdam</span>
+          <span class="badge">Lunch & Landmarks</span>
+          <span class="badge">6 min leestijd</span>
+        </div>
+        <div class="blog-meta">27 jan 2026</div>
+        <h2 class="blog-title">
+          <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/">
+            NEBOSH Student Guide: Lunch & Landmarks nabij Erasmusbrug (Westplein 12)
+          </a>
+        </h2>
+        <p class="blog-excerpt">
+          Beste lunchspots, parkeren en fotolocaties rond Westplein 12: Erasmusbrug, Euromast en Zalmhaventoren — handig voor jouw NEBOSH-lesdagen.
+        </p>
+        <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" class="blog-btn" aria-label="Lees artikel: NEBOSH Student Guide Rotterdam">Lees artikel →</a>
+      </article>
+
+      <!-- Placeholders (kunnen blijven voor planning) -->
+      <article class="blog-card" style="opacity:.65;border-style:dashed" role="listitem">
+        <div class="blog-meta">Binnenkort</div>
+        <h2 class="blog-title">HSE Salaris 2026: Wat verdien je als Veiligheidskundige?</h2>
+        <p class="blog-excerpt">Salaris van starter tot senior, vast en zzp. Inclusief internationale benchmarks en bonussen.</p>
+      </article>
+
+      <article class="blog-card" style="opacity:.65;border-style:dashed" role="listitem">
+        <div class="blog-meta">Binnenkort</div>
+        <h2 class="blog-title">NEBOSH Examen Tips: Zo slaag je in één keer</h2>
+        <p class="blog-excerpt">Praktische voorbereiding voor het NEBOSH IGC-examen. Studietips, valkuilen en Engelse terminologie.</p>
+      </article>
+
+      <article class="blog-card" style="opacity:.65;border-style:dashed" role="listitem">
+        <div class="blog-meta">Binnenkort</div>
+        <h2 class="blog-title">Van HSE Officer naar HSE Manager: jouw carrièrepad</h2>
+        <p class="blog-excerpt">Welke certificeringen wanneer? Realistische groeipaden en tijdslijnen in 2026.</p>
+      </article>
+
+      <article class="blog-card" style="opacity:.65;border-style:dashed" role="listitem">
+        <div class="blog-meta">Binnenkort</div>
+        <h2 class="blog-title">Offshore HSE Jobs: werken op een platform</h2>
+        <p class="blog-excerpt">Roosters, vergoedingen en hoe je opdrachten vindt in Noordzee/Noorwegen.</p>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta" aria-label="Aanmelden NEBOSH">
+      <h2>Klaar om te starten met NEBOSH?</h2>
+      <p>Train lokaal in Rotterdam, werk wereldwijd. <strong>Start januari 2026.</strong></p>
+      <a href="/#contact">Vraag gratis informatie aan</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 SafetyXAcademy • <a href="/#privacy">Privacy</a></p>
+  </footer>
+
+  <!-- JSON-LD ItemList (blog overzicht) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://safetyxacademy.nl/blog/veiligheidskundige-opleiding/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-lunch-landmarks/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tweaks: CollectionPage extra context -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blog 2026: NEBOSH & HSE Carrièreadvies",
+    "url": "https://safetyxacademy.nl/blog/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SafetyXAcademy",
+      "url": "https://safetyxacademy.nl/"
+    }
+  }
+  </script>
+</body>
+</html>

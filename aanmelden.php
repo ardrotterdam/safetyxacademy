@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-91JCVXBQ0W');
+    </script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Interesse Formulier NEBOSH IGC Rotterdam | SafetyXAcademy</title>
+    <meta name="description" content="Blijf op de hoogte van de NEBOSH IGC training in Rotterdam. Start gepland januari 2026, €3.500 all-inclusive. Laat je interesse achter en wij informeren je zodra we starten." />
+    <meta name="keywords" content="nebosh interesse, nebosh wachtlijst, nebosh rotterdam, hse opleiding interesse, veiligheidskundige opleiding" />
+    
+    <!-- Canonical & Open Graph -->
+    <link rel="canonical" href="https://www.safetyxacademy.nl/aanmelden" />
+    <meta property="og:title" content="NEBOSH IGC Rotterdam Start Januari 2026 - Toon Je Interesse" />
+    <meta property="og:description" content="SafetyXAcademy start januari 2026 in Rotterdam. €3.500 all-in, Westplein 12. Registreer je interesse voor de eerste groep!" />
+    <meta property="og:url" content="https://www.safetyxacademy.nl/aanmelden" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon-svg.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #0A284B;
+            --secondary: #FF7F11;
+            --dark: #2F3E46;
+            --text: #333;
+            --light-bg: #f8f9fa;
+            --success: #10b981;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light-bg);
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 4%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 3rem 4%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .price-highlight {
+            background: var(--secondary);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.3);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--secondary), #ff9533);
+            padding: 1rem 4%;
+            color: white;
+        }
+
+        .stats-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .stat-item:before {
+            content: "✓";
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Form Container */
+        .form-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 4%;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--secondary);
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .form-intro h2 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-intro p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Form Styling */
+        form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        label .required {
+            color: #dc2626;
+            margin-left: 0.25rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            padding: 0.9rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(255, 127, 17, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        /* Checkboxes */
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkbox-option:hover {
+            background: #e8f4ff;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-left: 4px solid #0284c7;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .info-box p {
+            color: #0369a1;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .info-box strong {
+            color: #0c4a6e;
+        }
+
+        /* Success Box */
+        .success-box {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-left: 4px solid var(--success);
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .success-box p {
+            color: #065f46;
+            line-height: 1.7;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 1.1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 127, 17, 0.3);
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background: #e66d00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 127, 17, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Privacy Notice */
+        .privacy-notice {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+            margin-top: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .privacy-notice a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .privacy-notice a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 4%;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (min-width: 600px) {
+            .logo { font-size: 1.3rem; }
+            nav a { font-size: 0.95rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .form-row { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (min-width: 900px) {
+            .logo { font-size: 1.5rem; }
+            nav { gap: 2rem; }
+            nav a { font-size: 1rem; }
+            .hero { padding: 4rem 5%; }
+            .form-card { padding: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <?php include 'includes/header.html'; ?>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>🎓 NEBOSH IGC Rotterdam - Start Januari 2026</h1>
+        <p>Registreer je interesse voor de eerste groep bij SafetyXAcademy</p>
+        <div class="price-highlight">€3.500 All-Inclusive | Westplein 12</div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-content">
+            <div class="stat-item">Start Januari 2026</div>
+            <div class="stat-item">€3.500 All-In</div>
+            <div class="stat-item">Locatie Bevestigd</div>
+            <div class="stat-item">Toon Je Interesse</div>
+        </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <!-- Important Notice Box -->
+        <div style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-left: 5px solid #10b981; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);">
+            <h3 style="color: #059669; margin-bottom: 0.75rem; font-size: 1.2rem;">🚀 SafetyXAcademy start januari 2026!</h3>
+            <p style="color: #065f46; margin-bottom: 0.5rem; line-height: 1.7;">
+                <strong>Goed nieuws:</strong> We hebben alles bijna rond! Locatie is bevestigd (Westplein 12, Rotterdam), programma staat klaar, prijs is definitief (€3.500 all-in). We ronden de laatste details af.
+            </p>
+            <p style="color: #065f46; line-height: 1.7; margin: 0;">
+                <strong>Registreer je interesse</strong> en wij informeren je zodra we 100% klaar zijn om officieel van start te gaan. We willen graag weten hoeveel interesse er is zodat we de eerste groep optimaal kunnen plannen!
+            </p>
+        </div>
+
+        <div class="form-card">
+            <div class="form-intro">
+                <h2>🎓 Toon Je Interesse Voor NEBOSH IGC</h2>
+                <p><strong>SafetyXAcademy start januari 2026 in Rotterdam!</strong> We hebben bijna alles rond en ronden de laatste puntjes op de i af. Registreer hieronder je interesse en wij houden je op de hoogte van de laatste updates!</p>
+                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 1rem 0; text-align: left;">
+                    <p style="margin: 0; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">✅ Al bekend:</p>
+                    <ul style="text-align: left; margin: 0.5rem 0; line-height: 1.8; color: #666; list-style: none; padding-left: 0;">
+                        <li>✓ <strong>Locatie:</strong> Westplein 12, Rotterdam (10 min van CS)</li>
+                        <li>✓ <strong>Prijs:</strong> €3.500 all-inclusive (incl. examengeld)</li>
+                        <li>✓ <strong>Start:</strong> Januari 2026</li>
+                        <li>✓ <strong>Programma:</strong> 10-12 weken blended learning</li>
+                        <li>✓ <strong>Groepsgrootte:</strong> Max 10 personen (kleine groepen!)</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 1rem;"><strong>Laatste stappen:</strong> We ronden administratieve details af en willen graag weten hoeveel interesse er is voor de planning van de eerste groep. Registreer je interesse vrijblijvend!</p>
+            </div>
+
+            <!-- ✅ FORMSUBMIT.CO - GECORRIGEERD NAAR info@safetyxacademy.nl -->
+            <form action="https://formsubmit.co/info@safetyxacademy.nl" method="POST">
+                
+                <!-- Anti-spam honeypot (blijf leeg!) -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Disable CAPTCHA (we use honeypot instead) -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Voornaam & Achternaam -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="voornaam">
+                            Voornaam <span class="required">*</span>
+                        </label>
+                        <input type="text" id="voornaam" name="voornaam" required 
+                               placeholder="Bijv. Jan">
+                    </div>
+                    <div class="form-group">
+                        <label for="achternaam">
+                            Achternaam <span class="required">*</span>
+                        </label>
+                        <input type="text" id="achternaam" name="achternaam" required 
+                               placeholder="Bijv. de Vries">
+                    </div>
+                </div>
+
+                <!-- Email & Telefoon -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">
+                            Email <span class="required">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="jan.devries@email.nl">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoon">
+                            Telefoonnummer <span class="required">*</span>
+                        </label>
+                        <input type="tel" id="telefoon" name="telefoon" required 
+                               placeholder="06 12345678">
+                    </div>
+                </div>
+
+                <!-- Woonplaats & Huidige Situatie -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="woonplaats">
+                            Woonplaats <span class="required">*</span>
+                        </label>
+                        <select id="woonplaats" name="woonplaats" required>
+                            <option value="">-- Kies je woonplaats --</option>
+                            <optgroup label="🇳🇱 Nederland">
+                                <option value="Rotterdam">Rotterdam</option>
+                                <option value="Amsterdam">Amsterdam</option>
+                                <option value="Den Haag">Den Haag</option>
+                                <option value="Utrecht">Utrecht</option>
+                                <option value="Eindhoven">Eindhoven</option>
+                                <option value="Groningen">Groningen</option>
+                                <option value="Andere NL">Andere in Nederland</option>
+                            </optgroup>
+                            <optgroup label="🇧🇪 België">
+                                <option value="Antwerpen">Antwerpen</option>
+                                <option value="Gent">Gent</option>
+                                <option value="Brussel">Brussel</option>
+                                <option value="Brugge">Brugge</option>
+                                <option value="Andere BE">Andere in België</option>
+                            </optgroup>
+                            <option value="Andere">Andere (buiten NL/BE)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="situatie">
+                            Huidige situatie <span class="required">*</span>
+                        </label>
+                        <select id="situatie" name="situatie" required>
+                            <option value="">-- Kies je situatie --</option>
+                            <option value="Werkend">Werkend (wil bijscholen)</option>
+                            <option value="Student">Student</option>
+                            <option value="Werkloos">Werkloos (zoekt werk)</option>
+                            <option value="Wil switchen">Wil switchen naar HSE</option>
+                            <option value="ZZP">Al ZZP (wil NEBOSH)</option>
+                            <option value="Anders">Anders</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Basiskennis Engels -->
+                <div class="form-group">
+                    <label>
+                        Heb je basiskennis Engels? <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="engels-ja" name="engels" value="Ja" required>
+                            <label for="engels-ja" style="margin: 0; font-weight: normal;">
+                                ✅ Ja, ik kan Engels lezen/schrijven
+                            </label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="engels-nee" name="engels" value="Nee">
+                            <label for="engels-nee" style="margin: 0; font-weight: normal;">
+                                ❌ Nee, maar wil het leren
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 Let op:</strong> De NEBOSH training is in het Nederlands, maar het examen is in het Engels. Basiskennis Engels is voldoende - wij helpen je met de Engelse terminologie!</p>
+                </div>
+
+                <!-- Interesse -->
+                <div class="form-group">
+                    <label>
+                        Waar ben je in geïnteresseerd? (meerdere opties mogelijk)
+                    </label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="interesse[]" value="NEBOSH IGC Training">
+                            <span>🎓 NEBOSH IGC Training (€3.500)</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="interesse[]" value="ZZP Carrière">
+                            <span>💼 ZZP Carrière als HSE'er (€500-1.500/dag)</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="interesse[]" value="Internationale Jobs">
+                            <span>🌍 Internationale HSE jobs (Dubai, Noorwegen, UK)</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="interesse[]" value="Offshore">
+                            <span>🛢️ Offshore werk (North Sea, platforms)</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="interesse[]" value="Benelux Havens">
+                            <span>🚢 Benelux havens (Rotterdam, Antwerpen)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Startdatum Voorkeur -->
+                <div class="form-group">
+                    <label for="startdatum">
+                        Wanneer wil je starten? <span class="required">*</span>
+                    </label>
+                    <select id="startdatum" name="startdatum" required>
+                        <option value="">-- Kies je voorkeur --</option>
+                        <option value="Januari 2026" selected>Januari 2026 (eerstvolgende groep)</option>
+                        <option value="April 2026">April 2026</option>
+                        <option value="September 2026">September 2026</option>
+                        <option value="2027">Later in 2027</option>
+                        <option value="Zo snel mogelijk">Zo snel mogelijk</option>
+                    </select>
+                </div>
+
+                <div class="success-box">
+                    <p>🚀 <strong>Januari 2026 groep:</strong> We starten zodra we voldoende interesse hebben voor een goede groepsdynamiek (8-10 personen). Help mee door je interesse te registreren en eventueel te delen met anderen in je netwerk!</p>
+                </div>
+
+                <!-- Extra Vragen -->
+                <div class="form-group">
+                    <label for="bericht">
+                        Extra vragen of opmerkingen
+                    </label>
+                    <textarea id="bericht" name="bericht" 
+                              placeholder="Heb je specifieke vragen over de opleiding, kosten, startdata, of carrièremogelijkheden? Laat het ons weten!"></textarea>
+                </div>
+
+                <!-- Hidden Fields (for tracking) -->
+                <input type="hidden" name="_subject" value="📋 Nieuwe Interesse Registratie NEBOSH - SafetyXAcademy">
+                <input type="hidden" name="_next" value="https://www.safetyxacademy.nl/bedankt.php">
+                <input type="hidden" name="_template" value="table">
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">
+                    ✅ Registreer Mijn Interesse
+                </button>
+
+                <!-- Privacy Notice -->
+                <div class="privacy-notice">
+                    Door dit formulier te versturen ga je akkoord met ons <a href="privacy.php">privacybeleid</a>. 
+                    We gebruiken je gegevens alleen om contact met je op te nemen over de NEBOSH training. 
+                    Je gegevens worden nooit gedeeld met derden.
+                </div>
+            </form>
+        </div>
+
+        <!-- Info Boxes Below Form -->
+        <div style="margin-top: 3rem;">
+            <div class="info-box">
+                <p>
+                    <strong>📞 Vragen over de NEBOSH IGC opleiding?</strong><br>
+                    We beantwoorden graag al je vragen over het programma, carrièremogelijkheden, de locatie in Rotterdam, en de planning!<br>
+                    Bel ons op <a href="tel:+31108009512" style="color:#0c4a6e; font-weight:700;">+31 10 800 9512</a> 
+                    of mail naar <a href="mailto:info@safetyxacademy.nl" style="color:#0c4a6e; font-weight:700;">info@safetyxacademy.nl</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width:1200px; margin:0 auto;">
+            <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+            <p style="margin-top:0.5rem;">
+                <a href="index.php">Home</a> | 
+                <a href="index.php#training">NEBOSH IGC Training</a> |
+                <a href="jobs.php">ZZP Opdrachten</a> | 
+                <a href="blog/index.php">Blog</a> |
+                <a href="privacy.php">Privacy</a> | 
+                <a href="index.php#contact">Contact Rotterdam</a>
+            </p>
+            <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
+                🌍 Train Lokaal voor €3.500, Werk Wereldwijd
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

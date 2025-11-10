@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy - SafetyXAcademy Rotterdam. Informatie over hoe wij uw persoonsgegevens verzamelen, gebruiken en beschermen.">
+    <title>Privacyverklaring | SafetyXAcademy.nl</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0A284B;
+            --secondary-color: #FF7F11;
+            --dark-color: #2F3E46;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+            overflow-x: hidden;
+        }
+
+        /* Header - Mobile First */
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 4%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 4%;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--dark-color);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: var(--light-bg);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .contact-box h3 {
+            color: var(--secondary-color);
+        }
+
+        .contact-box a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 2rem 5%;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .container {
+                padding: 2rem 4%;
+            }
+            
+            table {
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (min-width: 600px) {
+            .logo { font-size: 1.3rem; }
+            nav a { font-size: 0.95rem; }
+        }
+        
+        @media (min-width: 900px) {
+            .logo { font-size: 1.5rem; }
+            nav { gap: 2rem; }
+            nav a { font-size: 1rem; }
+            header { padding: 1rem 5%; }
+        }
+    </style>
+</head>
+<body>
+    <?php include 'includes/header.html'; ?>
+
+    <div class="container">
+        <h1>Privacyverklaring</h1>
+        <p class="last-updated">Laatst bijgewerkt: 18 oktober 2025</p>
+
+        <div class="highlight-box">
+            <p><strong>SafetyXAcademy</strong> hecht veel waarde aan de bescherming van uw persoonsgegevens. In deze privacyverklaring leggen we uit welke persoonsgegevens we verzamelen, waarom we deze verzamelen en hoe we deze gebruiken. We handelen volgens de Algemene Verordening Gegevensbescherming (AVG/GDPR).</p>
+        </div>
+
+        <h2>1. Wie zijn wij?</h2>
+        <p><strong>Verantwoordelijke voor de gegevensverwerking:</strong></p>
+        <ul>
+            <li><strong>Handelsnaam:</strong> SafetyXAcademy</li>
+            <li><strong>Onderdeel van:</strong> ABshops.nl</li>
+            <li><strong>KVK nummer:</strong> 72037628</li>
+            <li><strong>Adres:</strong> Westplein 12, 3016 BM Rotterdam, Nederland</li>
+            <li><strong>E-mail:</strong> info@safetyxacademy.nl</li>
+            <li><strong>Telefoon:</strong> +31 10 800 9512</li>
+            <li><strong>Website:</strong> www.safetyxacademy.nl</li>
+        </ul>
+        <p><em>SafetyXAcademy is operationeel geleid door Nando Breure (Managing Director) en is een handelsnaam van ABshops.nl.</em></p>
+
+        <h2>2. Welke persoonsgegevens verzamelen we?</h2>
+        <p>We kunnen de volgende persoonsgegevens van u verzamelen:</p>
+        
+        <h3>2.1 Contactgegevens</h3>
+        <ul>
+            <li>Voor- en achternaam</li>
+            <li>E-mailadres</li>
+            <li>Telefoonnummer</li>
+            <li>Adres (indien relevant voor training of certificering)</li>
+        </ul>
+
+        <h3>2.2 Opleidingsgerelateerde gegevens</h3>
+        <ul>
+            <li>Opleiding/training waar u interesse in heeft</li>
+            <li>Opleidingsniveau en werkervaring</li>
+            <li>CV en motivatiebrief (indien gedeeld voor jobplacement)</li>
+            <li>Certificeringen en diploma's</li>
+            <li>Voortgang en resultaten tijdens training</li>
+        </ul>
+
+        <h3>2.3 Betalingsinformatie</h3>
+        <ul>
+            <li>Facturatiegegevens</li>
+            <li>Betaalgeschiedenis (via externe betalingsproviders)</li>
+            <li>We bewaren GEEN creditcard- of bankgegevens zelf</li>
+        </ul>
+
+        <h3>2.4 Technische gegevens</h3>
+        <ul>
+            <li>IP-adres</li>
+            <li>Browsertype en versie</li>
+            <li>Apparaatinformatie</li>
+            <li>Paginabezoeken en klikgedrag (via cookies)</li>
+        </ul>
+
+        <h2>3. Waarom verzamelen we deze gegevens?</h2>
+        <p>We gebruiken uw persoonsgegevens voor de volgende doeleinden:</p>
+
+        <h3>3.1 Uitvoering van onze diensten</h3>
+        <ul>
+            <li>U aanmelden voor NEBOSH IGC of andere trainingen</li>
+            <li>Communicatie over uw opleiding</li>
+            <li>Studiemateriaal en examens verstrekken</li>
+            <li>Certificaten uitreiken</li>
+        </ul>
+
+        <h3>3.2 Jobplacement services</h3>
+        <ul>
+            <li>Uw profiel matchen met geschikte vacatures</li>
+            <li>CV en gegevens delen met potentiële werkgevers (met uw toestemming)</li>
+            <li>Ondersteuning bij sollicitatieproces</li>
+        </ul>
+
+        <h3>3.3 Marketing en communicatie</h3>
+        <ul>
+            <li>Nieuwsbrieven en updates versturen (met uw toestemming)</li>
+            <li>Informatie over nieuwe cursussen en vacatures</li>
+            <li>U kunt zich altijd afmelden voor marketing</li>
+        </ul>
+
+        <h3>3.4 Website verbetering</h3>
+        <ul>
+            <li>Analyse van websitegebruik (via Google Analytics)</li>
+            <li>Verbeteren van gebruikerservaring</li>
+            <li>Technische problemen oplossen</li>
+        </ul>
+
+        <h3>3.5 Wettelijke verplichtingen</h3>
+        <ul>
+            <li>Administratie voor belastingdoeleinden</li>
+            <li>Voldoen aan NEBOSH rapportagevereisten</li>
+        </ul>
+
+        <h2>4. Rechtsgrondslag voor verwerking</h2>
+        <p>We verwerken uw persoonsgegevens op basis van:</p>
+        <ul>
+            <li><strong>Overeenkomst:</strong> Om onze trainingen en services te leveren</li>
+            <li><strong>Toestemming:</strong> Voor marketing en delen van gegevens met werkgevers</li>
+            <li><strong>Gerechtvaardigd belang:</strong> Voor websiteanalyse en verbetering</li>
+            <li><strong>Wettelijke verplichting:</strong> Voor administratie en rapportage</li>
+        </ul>
+
+        <h2>5. Hoe lang bewaren we uw gegevens?</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: var(--light-bg);">
+                <td style="padding: 0.75rem; border: 1px solid #ddd;"><strong>Type gegevens</strong></td>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;"><strong>Bewaartermijn</strong></td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">Contactgegevens (geen opleiding gevolgd)</td>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">2 jaar na laatste contact</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">Opleidingsgegevens en certificaten</td>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">7 jaar (wettelijke verplichting)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">Facturatiegegevens</td>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">7 jaar (belastingwet)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">Marketing toestemming</td>
+                <td style="padding: 0.75rem; border: 1px solid #ddd;">Tot intrekking toestemming</td>
+            </tr>
+        </table>
+
+        <h2>6. Met wie delen we uw gegevens?</h2>
+        <p>We delen uw gegevens alleen wanneer noodzakelijk:</p>
+
+        <h3>6.1 NEBOSH</h3>
+        <ul>
+            <li>Voor examenregistratie en certificering</li>
+            <li>NEBOSH heeft eigen privacy policy</li>
+        </ul>
+
+        <h3>6.2 Potentiële werkgevers</h3>
+        <ul>
+            <li><strong>Alleen met uw expliciete toestemming</strong></li>
+            <li>Voor jobplacement services</li>
+            <li>U bepaalt welke informatie gedeeld wordt</li>
+        </ul>
+
+        <h3>6.3 Dienstverleners</h3>
+        <ul>
+            <li>Betalingsproviders (voor veilige betalingen)</li>
+            <li>E-mail service providers (voor communicatie)</li>
+            <li>Hosting providers (voor website)</li>
+            <li>Alle dienstverleners zijn contractueel verplicht tot geheimhouding</li>
+        </ul>
+
+        <h3>6.4 Wettelijke verplichtingen</h3>
+        <ul>
+            <li>Overheid (indien wettelijk verplicht)</li>
+            <li>Belastingdienst (voor administratie)</li>
+        </ul>
+
+        <p><strong>We verkopen NOOIT uw gegevens aan derden!</strong></p>
+
+        <h2>7. Cookies</h2>
+        <p>Onze website gebruikt cookies om de gebruikerservaring te verbeteren:</p>
+
+        <h3>7.1 Functionele cookies (noodzakelijk)</h3>
+        <ul>
+            <li>Voor het goed functioneren van de website</li>
+            <li>Onthouden van voorkeuren</li>
+            <li>Geen toestemming nodig</li>
+        </ul>
+
+        <h3>7.2 Analytische cookies</h3>
+        <ul>
+            <li>Google Analytics (geanonimiseerd)</li>
+            <li>Voor het analyseren van websitegebruik</li>
+            <li>Helpen ons de site te verbeteren</li>
+        </ul>
+
+        <h3>7.3 Marketing cookies</h3>
+        <ul>
+            <li>Voor gerichte advertenties (indien van toepassing)</li>
+            <li>Social media integratie</li>
+            <li>Alleen met uw toestemming</li>
+        </ul>
+
+        <p>U kunt cookies altijd uitschakelen in uw browserinstellingen.</p>
+
+        <h2>8. Uw rechten</h2>
+        <p>Onder de AVG/GDPR heeft u de volgende rechten:</p>
+
+        <div class="highlight-box">
+            <h3>8.1 Recht op inzage</h3>
+            <p>U kunt opvragen welke persoonsgegevens we van u hebben.</p>
+
+            <h3>8.2 Recht op rectificatie</h3>
+            <p>U kunt onjuiste of onvolledige gegevens laten corrigeren.</p>
+
+            <h3>8.3 Recht op verwijdering ("recht om vergeten te worden")</h3>
+            <p>U kunt vragen uw gegevens te verwijderen, tenzij we wettelijk verplicht zijn deze te bewaren.</p>
+
+            <h3>8.4 Recht op beperking van verwerking</h3>
+            <p>U kunt vragen de verwerking van uw gegevens te beperken.</p>
+
+            <h3>8.5 Recht op dataportabiliteit</h3>
+            <p>U kunt uw gegevens in een gestructureerd formaat opvragen.</p>
+
+            <h3>8.6 Recht van bezwaar</h3>
+            <p>U kunt bezwaar maken tegen verwerking op basis van gerechtvaardigd belang.</p>
+
+            <h3>8.7 Recht om toestemming in te trekken</h3>
+            <p>U kunt eerder gegeven toestemming altijd intrekken.</p>
+        </div>
+
+        <h2>9. Beveiliging van uw gegevens</h2>
+        <p>We nemen passende technische en organisatorische maatregelen om uw gegevens te beschermen:</p>
+        <ul>
+            <li>SSL-certificaat voor veilige verbinding (HTTPS)</li>
+            <li>Versleuteling van gevoelige gegevens</li>
+            <li>Beperkte toegang tot persoonsgegevens (need-to-know basis)</li>
+            <li>Regelmatige beveiligingsupdates</li>
+            <li>Back-ups van gegevens</li>
+            <li>Veilige opslag bij betrouwbare hosting providers</li>
+        </ul>
+
+        <h2>10. Internationale overdracht</h2>
+        <p>Uw gegevens worden binnen de Europese Economische Ruimte (EER) verwerkt. Als we gegevens buiten de EER moeten versturen (bijvoorbeeld naar NEBOSH UK), zorgen we voor:</p>
+        <ul>
+            <li>Adequaatheidsbesluiten van de Europese Commissie</li>
+            <li>Standaard contractuele clausules</li>
+            <li>Andere passende waarborgen volgens AVG</li>
+        </ul>
+
+        <h2>11. Gegevens van minderjarigen</h2>
+        <p>Onze diensten zijn gericht op personen van 18 jaar en ouder. We verzamelen niet bewust gegevens van personen jonger dan 16 jaar zonder toestemming van ouders/voogd.</p>
+
+        <h2>12. Wijzigingen in deze privacyverklaring</h2>
+        <p>We kunnen deze privacyverklaring van tijd tot tijd aanpassen. De meest recente versie vind je altijd op deze pagina. Bij grote wijzigingen informeren we u via e-mail.</p>
+
+        <h2>13. Klachten</h2>
+        <p>Als u niet tevreden bent over hoe we met uw gegevens omgaan, kunt u een klacht indienen bij:</p>
+        <ul>
+            <li><strong>Autoriteit Persoonsgegevens</strong></li>
+            <li>Website: <a href="https://autoriteitpersoonsgegevens.nl" target="_blank">www.autoriteitpersoonsgegevens.nl</a></li>
+            <li>Telefoon: 088 - 1805 250</li>
+        </ul>
+
+        <div class="contact-box">
+            <h3>14. Contact en vragen</h3>
+            <p>Heeft u vragen over deze privacyverklaring of wilt u gebruik maken van uw rechten? Neem dan contact met ons op:</p>
+            <p>
+                <strong>SafetyXAcademy (ABshops.nl)</strong><br>
+                Westplein 12<br>
+                3016 BM Rotterdam<br>
+                Nederland<br>
+                KVK: 72037628
+            </p>
+            <p>
+                📧 E-mail: <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br>
+                📞 Telefoon: <a href="tel:+31108009512">+31 10 800 9512</a>
+            </p>
+            <p><strong>We reageren binnen 1 maand op uw verzoek.</strong></p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Laatste update:</strong> 18 oktober 2025</p>
+            <p><strong>Versie:</strong> 1.0</p>
+            <p>SafetyXAcademy behoudt zich het recht voor deze privacyverklaring te wijzigen. Controleer deze pagina regelmatig voor updates.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+        <p>
+            <a href="index.php">Home</a> | 
+            <a href="jobs.php">Vacatures</a> | 
+            <a href="privacy.php">Privacy</a> | 
+            <a href="index.php#contact">Contact</a>
+        </p>
+        <p style="margin-top: 1rem; font-style: italic; color: #999;">Train Lokaal, Werk Wereldwijd 🌍</p>
+    </footer>
+</body>
+</html>
