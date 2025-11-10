@@ -1,4 +1,4 @@
-// header donker maken bij scrollen
+// Header scroll behavior
 window.addEventListener('scroll', function () {
   const header = document.querySelector('.main-header');
   if (!header) return;
@@ -10,12 +10,13 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// mobiel menu open/dicht
+// Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const overlay = document.querySelector('.mobile-menu-overlay');
+  const mobileNav = document.querySelector('.mobile-nav');
 
-  if (!toggle || !overlay) return;
+  if (!toggle || !overlay || !mobileNav) return;
 
   function openMenu() {
     toggle.classList.add('active');
@@ -29,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.style.overflow = '';
   }
 
-  toggle.addEventListener('click', function () {
+  // Toggle menu on button click
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
     if (overlay.classList.contains('active')) {
       closeMenu();
     } else {
@@ -37,14 +40,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // menu dicht als je op link klikt
-  overlay.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  // klik naast het menu = dicht
+  // Close menu when clicking on overlay (outside nav)
   overlay.addEventListener('click', function (e) {
     if (e.target === overlay) {
+      closeMenu();
+    }
+  });
+
+  // Prevent clicks inside nav from closing menu
+  mobileNav.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
+
+  // Close menu when clicking on any link
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+      closeMenu();
+    });
+  });
+
+  // Close menu on escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
       closeMenu();
     }
   });

@@ -6,7 +6,7 @@
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  background: #ffffff; /* wit zodat tekst zichtbaar is */
+  background: #ffffff;
   box-shadow: 0 4px 24px rgba(0,0,0,0.04);
   transition: 0.3s;
 }
@@ -21,6 +21,10 @@
 }
 
 /* ===== LOGO ===== */
+.logo {
+  text-decoration: none;
+}
+
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
@@ -57,12 +61,19 @@
   border-radius: 12px;
   font-weight: 600;
   white-space: nowrap;
+  transition: 0.2s;
 }
 
-/* ===== SCROLLED STATE (als JS .scrolled toevoegt) ===== */
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 179, 134, 0.3);
+}
+
+/* ===== SCROLLED STATE ===== */
 .main-header.scrolled {
   background: rgba(10, 40, 75, 0.92);
   backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
 }
 
 .main-header.scrolled .logo-text,
@@ -70,13 +81,21 @@
   color: #ffffff !important;
 }
 
+.main-header.scrolled .mobile-menu-toggle span {
+  background: #ffffff;
+}
+
 /* ===== MOBILE TOGGLE (hamburger) ===== */
 .mobile-menu-toggle {
   display: none;
+  flex-direction: column;
+  gap: 5px;
   background: none;
   border: none;
-  gap: 5px;
   cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  position: relative;
 }
 
 .mobile-menu-toggle span {
@@ -85,33 +104,80 @@
   background: #0A284B;
   border-radius: 2px;
   transition: 0.3s;
+  display: block;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
 }
 
 /* ===== MOBILE MENU OVERLAY ===== */
 .mobile-menu-overlay {
-  display: none;              /* standaard weg */
+  display: none;
   position: fixed;
-  inset: 0;
-  background: rgba(10, 40, 75, 0.98);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
   z-index: 999;
-  padding-top: 80px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  display: block;
+  opacity: 1;
 }
 
 .mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 340px;
+  background: rgba(10, 40, 75, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 5rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.mobile-menu-overlay.active .mobile-nav {
+  transform: translateX(0);
 }
 
 .mobile-nav-link {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
   padding: 1rem 1.2rem;
   border-radius: 14px;
   text-decoration: none;
   font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.2s;
+  display: block;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #00D9A3;
 }
 
 .mobile-cta-button {
@@ -123,41 +189,52 @@
   text-align: center;
   font-weight: 600;
   margin-top: 0.5rem;
+  transition: 0.2s;
+  display: block;
 }
 
-/* ===== ACTIVE STATE VAN MENU (wordt door JS gezet) ===== */
-.mobile-menu-overlay.active {
-  display: block;
+.mobile-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 179, 134, 0.4);
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  /* desktop menu verstoppen */
   .desktop-nav {
     display: none;
   }
 
-  /* hamburger laten zien */
   .mobile-menu-toggle {
     display: flex;
   }
 
-  /* op mobiel: header donker maken zodat menu blendt */
   .main-header {
-    background: rgba(10, 40, 75, 0.96);
+    background: #ffffff;
   }
 
   .main-header .logo-text {
-    color: #fff;
+    color: #0A284B;
   }
 
-  /* hamburger wit maken op donker */
   .mobile-menu-toggle span {
-    background: #fff;
+    background: #0A284B;
+  }
+
+  .main-header.scrolled {
+    background: rgba(10, 40, 75, 0.92);
+    backdrop-filter: blur(10px);
+  }
+
+  .main-header.scrolled .logo-text {
+    color: #ffffff;
+  }
+
+  .main-header.scrolled .mobile-menu-toggle span {
+    background: #ffffff;
   }
 }
 
-/* ruimte voor de vaste header */
+/* ===== BODY PADDING FOR FIXED HEADER ===== */
 body {
   padding-top: 80px;
 }
