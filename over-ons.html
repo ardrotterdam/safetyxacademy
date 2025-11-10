@@ -398,15 +398,9 @@
     <!-- HEADER INCLUDE -->
     <div id="header-include"></div>
     <script>
-        fetch('/includes/header.html')
-            .then(r => r.text())
-            .then(html => {
-                document.getElementById('header-include').outerHTML = html;
-                // Initialize mobile menu after header is loaded
-                if (window.initMobileMenu) {
-                    window.initMobileMenu();
-                }
-            });
+      fetch('/includes/header.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('header-include').outerHTML = html);
     </script>
 
     <!-- Hero Section -->

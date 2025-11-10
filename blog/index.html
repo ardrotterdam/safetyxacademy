@@ -72,20 +72,15 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header aria-label="Hoofdnavigatie">
-    <div class="header-content">
-      <a href="/" class="logo">SafetyXAcademy</a>
-      <!-- Tweaks: expliciet role voor nav -->
-      <nav aria-label="Primaire navigatie" role="navigation">
-        <a href="/">Home</a>
-        <a href="/#training">Training</a>
-        <a href="/jobs.html">Vacatures</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+
+<!-- HEADER INCLUDE -->
+<div id="header-include"></div>
+<script>
+  fetch('/includes/header.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('header-include').outerHTML = html);
+</script>
+
 
   <!-- Hero -->
   <section class="hero">
