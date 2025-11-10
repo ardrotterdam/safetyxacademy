@@ -10,13 +10,18 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function () {
+// Mobile menu initialization function
+function initMobileMenu() {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const overlay = document.querySelector('.mobile-menu-overlay');
   const mobileNav = document.querySelector('.mobile-nav');
 
-  if (!toggle || !overlay || !mobileNav) return;
+  // Return if elements don't exist or menu is already initialized
+  if (!toggle || !overlay || !mobileNav) return false;
+  if (toggle.dataset.initialized === 'true') return true;
+
+  // Mark as initialized to prevent duplicate event listeners
+  toggle.dataset.initialized = 'true';
 
   function openMenu() {
     toggle.classList.add('active');
@@ -32,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle menu on button click
   toggle.addEventListener('click', function (e) {
+    e.preventDefault();
     e.stopPropagation();
     if (overlay.classList.contains('active')) {
       closeMenu();
@@ -65,4 +71,58 @@ document.addEventListener('DOMContentLoaded', function () {
       closeMenu();
     }
   });
-});
+
+  return true;
+}
+
+// Try to initialize immediately if DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function () {
+    initMobileMenu();
+    // Also try again after delays in case header loads asynchronously
+    setTimeout(initMobileMenu, 100);
+    setTimeout(initMobileMenu, 500);
+  });
+} else {
+  // DOM is already ready
+  initMobileMenu();
+  // Try again after delays in case header loads asynchronously
+  setTimeout(initMobileMenu, 100);
+  setTimeout(initMobileMenu, 500);
+}
+
+// Use MutationObserver to watch for when header elements are added to DOM
+let observer = null;
+const startObserver = function() {
+  if (observer) return; // Already observing
+  
+  observer = new MutationObserver(function(mutations) {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    if (toggle && !toggle.dataset.initialized) {
+      if (initMobileMenu()) {
+        // Menu initialized successfully, stop observing
+        observer.disconnect();
+        observer = null;
+      }
+    }
+  });
+
+  if (document.body) {
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+};
+
+// Start observing when DOM is ready
+if (document.body) {
+  startObserver();
+} else {
+  document.addEventListener('DOMContentLoaded', function() {
+    startObserver();
+  });
+}
+
+// Expose init function globally so it can be called after async header load
+window.initMobileMenu = initMobileMenu;

@@ -129,14 +129,16 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.75);
-  z-index: 999;
+  z-index: 1002;
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .mobile-menu-overlay.active {
   display: block;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .mobile-nav {
@@ -156,7 +158,8 @@
   transition: transform 0.3s ease;
   overflow-y: auto;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 1003;
+  pointer-events: auto;
 }
 
 .mobile-menu-overlay.active .mobile-nav {
