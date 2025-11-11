@@ -45,7 +45,12 @@
 <script>
   fetch('/includes/header.html')
     .then(r => r.text())
-    .then(html => document.getElementById('header-include').outerHTML = html);
+    .then(html => {
+      const el = document.getElementById('header-include');
+      el.outerHTML = html;
+      setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
+    })
+    .catch(() => console.error('Header failed'));
 </script>
 
   <!-- Hero Section -->
@@ -480,7 +485,7 @@
   </footer>
 
   <!-- JS -->
-  <script src="/js/header.js?v=4" defer></script>
+  <script src="/js/header.js" defer></script>
 
 </body>
 </html>
