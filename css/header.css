@@ -1,10 +1,18 @@
+/* ===== Z-INDEX LADDER ===== */
+:root {
+  --z-header: 12000;     /* vaste header */
+  --z-overlay: 13000;    /* donkere laag achter menu */
+  --z-nav: 13001;        /* uitschuifmenu zelf */
+  --z-toggle: 13002;     /* hamburger/cross icoon */
+}
+
 /* ===== HEADER BASIS ===== */
 .main-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9993; /* hoger gemaakt */
+  z-index: var(--z-header);
   padding: 1rem 0;
   background: #ffffff;
   box-shadow: 0 4px 24px rgba(0,0,0,0.04);
@@ -95,7 +103,7 @@
   cursor: pointer;
   padding: 0.5rem;
   position: relative;
-  z-index: 9994; /* boven header */
+  z-index: var(--z-toggle);
 }
 
 .mobile-menu-toggle span {
@@ -124,12 +132,9 @@
 .mobile-menu-overlay {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.75);
-  z-index: 9990; /* boven alle page-content */
+  z-index: var(--z-overlay);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -159,7 +164,7 @@
   transition: transform 0.3s ease;
   overflow-y: auto;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
-  z-index: 9991; /* boven overlay-body */
+  z-index: var(--z-nav);
   pointer-events: auto;
 }
 
@@ -241,4 +246,30 @@
 /* ===== BODY PADDING FOR FIXED HEADER ===== */
 body {
   padding-top: 80px;
+}
+
+/* ===== HEADER STICKY & ALWAYS VISIBLE ===== */
+.main-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: var(--z-header) !important;
+  background: #ffffff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.main-header.scrolled {
+  background: rgba(10, 40, 75, 0.92) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+
+/* Zorg dat hamburger altijd zichtbaar is */
+.mobile-menu-toggle {
+  display: none; /* standaard uit op desktop */
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex !important; /* ALTIJD zichtbaar op mobiel */
+  }
 }
