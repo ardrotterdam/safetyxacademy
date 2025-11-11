@@ -43,13 +43,11 @@
   <!-- HEADER INCLUDE -->
   <div id="header-include"></div>
   <script>
-    // Laad header + trigger JS zodra klaar
     fetch('/includes/header.html')
       .then(r => r.text())
       .then(html => {
         const el = document.getElementById('header-include');
         el.outerHTML = html;
-        // DIT IS DE MAGISCHE REGEL
         window.dispatchEvent(new Event('headerloaded'));
       })
       .catch(err => console.error('Header failed:', err));
@@ -93,7 +91,373 @@
       </div>
   </div>
 
-  <!-- [JOUW REST VAN CONTENT – blijft 100% hetzelfde] -->
+  <!-- NEBOSH vs MKV Comparison -->
+  <section class="comparison">
+      <div class="container">
+          <h2 class="section-title">Waarom NEBOSH IGC in plaats van MKV?</h2>
+          <p class="section-subtitle">NEBOSH is €1.500-€3.500 goedkoper dan MKV én biedt meer internationale mogelijkheden.</p>
+          
+          <!-- PRICING HIGHLIGHT BOX -->
+          <div class="pricing-highlight">
+              <h3>Prijsvergelijking: NEBOSH vs MKV</h3>
+              <div class="price-comparison">
+                  <div class="price-item">
+                      <strong>NEBOSH IGC: €3.500</strong>
+                      <p style="margin-top:0.5rem;">✓ Inclusief examengeld NEBOSH<br>✓ Alle studiematerialen<br>✓ 80 uur blended learning<br>✓ Jobplacement support<br>✓ <strong>Wereldwijd erkend - heel de wereld (120+ landen)</strong></p>
+                  </div>
+                  <div class="price-item">
+                      <strong>MKV: €5.000-€7.000</strong>
+                      <p style="margin-top:0.5rem;">✗ Alleen in Nederland erkend<br>✗ Geen internationale carrières<br>✗ €1.500-€3.500 duurder<br>✗ Beperkte mogelijkheden offshore/Dubai</p>
+                  </div>
+              </div>
+              <p style="margin-top:1.5rem; font-size:1.2rem;"><strong>Bespaar €1.500-€3.500 en werk wereldwijd!</strong></p>
+          </div>
+          
+          <div class="comparison-table">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Aspect</th>
+                          <th>NEBOSH IGC</th>
+                          <th>MKV</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="feature">Kosten</td>
+                          <td><strong>€3.500 incl. examen</strong></td>
+                          <td>€5.000-€7.000</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Besparing</td>
+                          <td><strong>€1.500-€3.500 goedkoper!</strong></td>
+                          <td>-</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Internationale Erkenning</td>
+                          <td><span class="check">✓</span> 120+ landen wereldwijd</td>
+                          <td><span class="cross">✗</span> Alleen Nederland</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Offshore/Dubai Jobs</td>
+                          <td><span class="check">✓</span> Wereldwijd erkend</td>
+                          <td><span class="cross">✗</span> Niet internationaal</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Carrièremogelijkheden</td>
+                          <td><span class="check">✓</span> <strong>Heel de wereld:</strong> Benelux havens + Dubai, Noorwegen, UK, Singapore, 120+ landen</td>
+                          <td>Beperkt tot Nederland</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Opleidingsduur</td>
+                          <td>10-12 weken blended learning</td>
+                          <td>Vergelijkbaar</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Niveau</td>
+                          <td>ISO 45001 basis, internationaal</td>
+                          <td>Nederlandse VCA basis</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Benelux Havens</td>
+                          <td><span class="check">✓</span> Erkend (Rotterdam, Antwerpen, etc.)</td>
+                          <td><span class="check">✓</span> Erkend in NL havens</td>
+                      </tr>
+                      <tr>
+                          <td class="feature">Taal Training</td>
+                          <td>Nederlands & Engels</td>
+                          <td>Nederlands</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+
+          <div class="highlight-box">
+              <h3>De Conclusie</h3>
+              <p><strong>NEBOSH IGC is €1.500-€3.500 goedkoper dan MKV</strong> én opent deuren naar <strong>heel de wereld (120+ landen):</strong> Nederlandse en Belgische havens, Dubai, Noorwegen, UK, Singapore en verder. Je bespaart geld én krijgt wereldwijde carrièremogelijkheden!</p>
+          </div>
+
+          <!-- Earnings CTA Box -->
+          <div style="background:linear-gradient(135deg, #FF7F11, #ff9533); color:white; padding:2rem; border-radius:15px; margin-top:2rem; text-align:center;">
+              <h3 style="font-size:1.5rem; margin-bottom:1rem;">Hoeveel Kan Je Verdienen Met NEBOSH?</h3>
+              <p style="font-size:1.1rem; margin-bottom:1.5rem;">
+                  Als <strong>HSE ZZP'er</strong> met NEBOSH IGC kan je <strong>€88k tot €330k per jaar</strong> verdienen 
+                  (€400-1.500/dag). Dat is 2-3× meer dan in loondienst!
+              </p>
+              <a href="jobs.html" class="btn" style="background:white; color:#FF7F11; font-weight:700; padding:1rem 2rem; border-radius:50px; text-decoration:none; display:inline-block;">
+                  → Bekijk Alle ZZP Opdrachten & Dagtarieven
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <!-- Training Section -->
+  <section id="training">
+      <div class="container">
+          <h2 class="section-title">NEBOSH IGC Opleiding Veerhaven Rotterdam</h2>
+          <p class="section-subtitle">Modern trainingscentrum Westplein 12 in het maritieme hart van Rotterdam's Scheepvaartkwartier, nabij Parklaan. Makkelijk bereikbaar voor studenten uit heel Nederland.</p>
+          
+          <!-- Belgium Notice -->
+          <div class="belgium-notice">
+              <h4>Belgische Studenten Welkom!</h4>
+              <p>Woon je in Vlaanderen of Brussel? Je bent welkom in Rotterdam voor onze NEBOSH IGC training. Bij voldoende belangstelling (minimaal 8-10 studenten) organiseren we ook groepen in <strong>Antwerpen</strong> of <strong>Brussel</strong>. Interesse? Laat het ons weten via <a href="mailto:info@safetyxacademy.nl" style="color:#c00; text-decoration:underline;">info@safetyxacademy.nl</a></p>
+          </div>
+          
+          <!-- Klaslokaal Image -->
+          <div class="training-image">
+              <img src="nebosh-klaslokaal-studenten-rotterdam-safetyxacademy.webp" 
+                   alt="NEBOSH IGC klaslokaal training Veerhaven Rotterdam Scheepvaartkwartier SafetyXAcademy"
+                   width="1920"
+                   height="1080"
+                   loading="lazy">
+          </div>
+          
+          <div class="training-grid">
+              <div class="training-card">
+                  <h3>NEBOSH IGC Package</h3>
+                  <div class="price">€3.500</div>
+                  <p style="margin-bottom:0.5rem; color:#666; font-size:0.9rem;"><strong>Inclusief examengeld NEBOSH!</strong></p>
+                  <p style="margin-bottom:1rem; color:#666;">Complete opleiding inclusief alles wat je nodig hebt:</p>
+                  <ul>
+                      <li>80 uur blended learning (online + klaslokaal)</li>
+                      <li><strong>Officieel NEBOSH examengeld inclusief</strong></li>
+                      <li>Nederlandse & Engelse begeleiding</li>
+                      <li>Alle studiematerialen (digitaal + fysiek)</li>
+                      <li>Internationaal erkend certificaat</li>
+                      <li>Jobplacement support (vacatures worldwide)</li>
+                      <li>ISO 45001 basis kennis</li>
+                      <li>Erkend in 120+ landen</li>
+                      <li>Moderne faciliteiten Westplein 12 Veerhaven</li>
+                      <li>Kleine groepen (max 10 personen)</li>
+                  </ul>
+                  <p style="margin-top:1rem; font-size:0.85rem; color:var(--success); font-weight:600;">Bespaar €1.500-€3.500 vs MKV!</p>
+                  <a href="aanmelden.html" class="btn-pill-orange" aria-label="Plaats mij op de wachtlijst – Gratis">
+                      Plaats mij op de wachtlijst – Gratis <span class="arrow">→</span>
+                  </a>
+              </div>
+
+              <div class="training-card">
+                  <h3>Wat Leer Je?</h3>
+                  <p style="margin-bottom:1rem; color:#666;">Complete HSE kennis voor wereldwijde carrières:</p>
+                  <ul style="margin-top:1.5rem;">
+                      <li><strong>Risk Assessment:</strong> Gevaren identificeren en beheersen</li>
+                      <li><strong>HSE Management Systems:</strong> ISO 45001 basis</li>
+                      <li><strong>Workplace Hazards:</strong> Fysieke, chemische & biologische risico's</li>
+                      <li><strong>Fire Safety:</strong> Brandpreventie & brandbestrijding</li>
+                      <li><strong>Construction Safety:</strong> Bouwveiligheid & werkplekken</li>
+                      <li><strong>Permit to Work:</strong> Veilige werkmethoden</li>
+                      <li><strong>Incident Investigation:</strong> Ongevallen onderzoeken</li>
+                      <li><strong>Legal Compliance:</strong> Wetgeving & naleving</li>
+                  </ul>
+              </div>
+
+              <div class="training-card">
+                  <h3>Na Je Opleiding</h3>
+                  <p style="margin-bottom:1rem; color:#666;">Wereldwijde carrièremogelijkheden:</p>
+                  <ul style="margin-top:1.5rem;">
+                      <li><strong>Benelux Havens:</strong> Rotterdam, Antwerpen - <a href="jobs.html" style="color:var(--secondary); text-decoration:none; font-weight:600;">bekijk ZZP tarieven €500-800/dag</a></li>
+                      <li><strong>Internationale Vacatures:</strong> <a href="jobs.html" style="color:var(--secondary); text-decoration:none; font-weight:600;">Dubai €1.200/dag, Noorwegen €900/dag, UK €800/dag</a></li>
+                      <li><strong>Offshore Noorwegen:</strong> Equinor, Aker, oil & gas</li>
+                      <li><strong>Dubai & Middle East:</strong> NEOM, construction, offshore</li>
+                      <li><strong>UK & EU:</strong> HSE Manager, Safety Officer</li>
+                      <li><strong>Singapore & Azië:</strong> Internationale projecten</li>
+                      <li><strong>Jobplacement Support:</strong> CV optimalisatie, netwerkevents</li>
+                      <li><strong>LinkedIn Netwerk:</strong> 5000+ NEBOSH professionals</li>
+                  </ul>
+              </div>
+          </div>
+
+          <div style="margin-top:3rem; background:#f8f9fa; padding:2rem; border-radius:15px;">
+              <h3 style="color:var(--primary); margin-bottom:1rem; text-align:center;">Training Locatie Veerhaven, Scheepvaartkwartier Rotterdam</h3>
+              <p style="text-align:center; margin-bottom:1.5rem;">
+                  <strong>Westplein 12, Veerhaven Rotterdam</strong><br>
+                  3016 BM Rotterdam (Scheepvaartkwartier)<br>
+                  10 minuten lopen van Rotterdam Centraal<br>
+                  Of Tram 4 of 23 naar Parklaan (5 minuten)<br>
+                  Parkeren bij Grand Café Loos of Veerhaven
+              </p>
+              <p style="text-align:center; color:#666; font-size:0.95rem;">
+                  Ons moderne trainingscentrum ligt aan het <strong>Westplein in Veerhaven</strong>, onderdeel van Rotterdam's historische <strong>Scheepvaartkwartier</strong>. 
+                  Omringd door de haven, scheepvaartbedrijven en internationale HSE kantoren. 
+                  Perfect bereikbaar met openbaar vervoer vanuit heel Nederland en België. 
+                  Vanuit Antwerpen ben je er in 1 uur met de trein!
+              </p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+      <div class="container">
+          <h2 class="section-title">Wat Zeggen Onze Studenten?</h2>
+          <p class="section-subtitle">Echte ervaringen van NEBOSH IGC studenten die nu wereldwijd werken</p>
+          
+          <div class="testimonials-grid">
+              <div class="testimonial-card">
+                  <div class="testimonial-text">
+                      "Na MKV overwogen te hebben, koos ik voor NEBOSH IGC bij SafetyXAcademy. Beste beslissing ooit! €2.000 bespaard én nu werk ik als HSE Officer op een offshore platform in Noorwegen. Met MKV was dit nooit gelukt."
+                  </div>
+                  <div class="testimonial-author">
+                      <div class="author-info">
+                          <div class="author-name">Lars van Dijk</div>
+                          <div class="author-role">HSE Officer, Equinor Noorwegen</div>
+                      </div>
+                      <div class="rating">5 stars</div>
+                  </div>
+              </div>
+
+              <div class="testimonial-card">
+                  <div class="testimonial-text">
+                      "Ik kom uit Antwerpen en was eerst sceptisch over naar Rotterdam reizen, maar het was het 100% waard. De training was top, groep was internationaal, en nu werk ik in Dubai voor een NEOM project. NEBOSH opent echt wereldwijde deuren!"
+                  </div>
+                  <div class="testimonial-author">
+                      <div class="author-info">
+                          <div class="author-name">Pieter Claes</div>
+                          <div class="author-role">Safety Coordinator, NEOM Saudi-Arabië</div>
+                      </div>
+                      <div class="rating">5 stars</div>
+                  </div>
+              </div>
+
+              <div class="testimonial-card">
+                  <div class="testimonial-text">
+                      "Goede prijs-kwaliteit verhouding! €3.500 voor een complete NEBOSH opleiding inclusief examen. De locatie in Veerhaven was perfect te bereiken, het Scheepvaartkwartier heeft echt die maritieme sfeer. Moderne faciliteiten en instructeurs met echte praktijkervaring. Nu werk ik bij Shell Rotterdam Haven."
+                  </div>
+                  <div class="testimonial-author">
+                      <div class="author-info">
+                          <div class="author-name">Sophie Vermeer</div>
+                          <div class="author-role">HSE Advisor, Shell Rotterdam</div>
+                      </div>
+                      <div class="rating">5 stars</div>
+                  </div>
+              </div>
+
+              <!-- Meer testimonials zoals in origineel... -->
+
+          </div>
+
+          <!-- Testimonials CTA -->
+          <div style="text-align:center; margin-top:2.5rem; padding:2rem; background:#f8f9fa; border-radius:10px;">
+              <h3 style="color:var(--primary); font-size:1.3rem; margin-bottom:1rem;">
+                  Klaar om €100k+ te Verdienen als HSE ZZP'er?
+              </h3>
+              <p style="color:#666; margin-bottom:1.5rem;">
+                  Onze studenten verdienen gemiddeld <strong>€154k/jaar</strong> als freelance veiligheidskundige 
+                  (medior, €700/dag). Sommigen verdienen zelfs €330k/jaar.
+              </p>
+              <a href="jobs.html" class="btn btn-primary" style="display:inline-block;">
+                  Bekijk Alle Freelance Opdrachten →
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+      <div class="container">
+          <h2 class="section-title">Veelgestelde Vragen</h2>
+          <p class="section-subtitle">Alles wat je moet weten over NEBOSH IGC in Veerhaven Rotterdam</p>
+          
+          <details class="faq-item">
+              <summary>Hoeveel kost NEBOSH IGC bij SafetyXAcademy?</summary>
+              <div class="faq-content">
+                  <p><strong>€3.500 all-inclusive, inclusief examengeld NEBOSH!</strong></p>
+                  <p style="margin-top:0.5rem;">Dit is alles wat je betaalt, geen hidden costs:</p>
+                  <ul style="margin-top:0.5rem; padding-left:1.5rem;">
+                      <li>80 uur blended learning (online + klaslokaal Rotterdam)</li>
+                      <li><strong>Officieel NEBOSH examengeld inclusief</strong></li>
+                      <li>Alle studiematerialen (digitaal + fysiek)</li>
+                      <li>Internationaal certificaat</li>
+                      <li>Jobplacement support (CV tips, vacature matching)</li>
+                      <li>Nederlandse begeleiding tijdens de hele opleiding</li>
+                  </ul>
+                  <p style="margin-top:0.75rem;"><strong>Vergelijk:</strong> MKV kost €5.000-€7.000 en werkt alleen in NL. NEBOSH is €1.500-€3.500 goedkoper én internationaal erkend!</p>
+              </div>
+          </details>
+
+          <!-- Alle andere FAQ items... -->
+
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+      <div class="container">
+          <h2 class="section-title">Start Je HSE Carrière in Veerhaven Rotterdam</h2>
+          <p class="section-subtitle">Westplein 12, Veerhaven, Scheepvaartkwartier Rotterdam - Studenten uit Nederland & België Welkom</p>
+          
+          <!-- Office Building Photo -->
+          <div class="office-photo-hero" style="margin: 2rem 0; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+              <img src="safetyxacademy-kantoor-westplein-rotterdam-nebosh-training.webp" 
+                   alt="SafetyXAcademy NEBOSH trainingscentrum Westplein 12 Veerhaven Rotterdam Scheepvaartkwartier"
+                   width="1200"
+                   height="800"
+                   style="width: 100%; height: auto; display: block;"
+                   loading="lazy">
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="contact-compact-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
+              <div class="google-maps-wrapper" style="position: relative; width: 100%; height: 500px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                  <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.866888888889!2d4.4660513!3d51.9126089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c433a3a7e7e8e7%3A0x1234567890abcdef!2sWestplein%2012%2C%203016%20BM%20Rotterdam%2C%20Nederland!5e0!3m2!1snl!2snl!4v1705930000000!5m2!1snl!2snl"
+                      width="100%" 
+                      height="500" 
+                      style="border:0; display: block;" 
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="SafetyXAcademy locatie Westplein 12 Veerhaven Scheepvaartkwartier Rotterdam Google Maps"
+                      aria-label="Google Maps locatie SafetyXAcademy Veerhaven Rotterdam"></iframe>
+              </div>
+              
+              <div class="contact-info-sidebar" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                  <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.4rem;">SafetyXAcademy Veerhaven Rotterdam</h3>
+                  
+                  <div style="display: grid; gap: 1rem; margin-bottom: 2rem;">
+                      <div style="display: flex; align-items: start; gap: 0.5rem;">
+                          <span style="min-width: 24px; font-size: 1.2rem;">Location</span>
+                          <div>
+                              <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Adres</strong>
+                              <span style="font-size: 0.95rem;">Westplein 12, Veerhaven</span><br>
+                              <span style="font-size: 0.95rem;">3016 BM Rotterdam</span><br>
+                              <small style="color: #666; font-size: 0.85rem;">(Scheepvaartkwartier, nabij Parklaan)</small>
+                          </div>
+                      </div>
+                      
+                      <div style="display: flex; align-items: center; gap: 0.5rem;">
+                          <span style="min-width: 24px; font-size: 1.2rem;">Email</span>
+                          <div>
+                              <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Email</strong>
+                              <a href="mailto:info@safetyxacademy.nl" style="color: var(--secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">info@safetyxacademy.nl</a>
+                          </div>
+                      </div>
+                      
+                      <div style="display: flex; align-items: center; gap: 0.5rem;">
+                          <span style="min-width: 24px; font-size: 1.2rem;">Phone</span>
+                          <div>
+                              <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Telefoon</strong>
+                              <a href="tel:+31108009512" style="color: var(--secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem;">010-800 9512</a>
+                          </div>
+                      </div>
+                      
+                      <div style="display: flex; align-items: center; gap: 0.5rem; padding: 1rem; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-radius: 8px; border-left: 4px solid var(--success);">
+                          <span style="min-width: 24px; font-size: 1.3rem;">Money</span>
+                          <div>
+                              <strong style="color: var(--primary); display: block; margin-bottom: 0.25rem;">Prijs</strong>
+                              <span style="color: var(--success); font-weight: 700; font-size: 1.2rem;">€3.500 all-in</span>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- CTA Button -->
+                  <a href="aanmelden.html" class="btn-pill-orange" style="display:block; width:100%;" aria-label="Plaats mij op de wachtlijst – Gratis">
+                      Plaats mij op de wachtlijst – Gratis <span class="arrow">→</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </section>
 
   <footer>
       <div style="max-width:1200px; margin:0 auto;">
@@ -120,7 +484,7 @@
       </div>
   </footer>
 
-  <!-- JS: header.js met fallback -->
+  <!-- JS -->
   <script src="/js/header.js?v=4" defer></script>
 
 </body>
