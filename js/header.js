@@ -1,15 +1,25 @@
-// header.js - Werkt met fetch-include
+// header.js - Werkt PERFECT met fetch-include
 
 (function () {
   // Voorkom dubbele init
-  if (window.__headerInit) return;
-  window.__headerInit = true;
+  if (window.__headerJS) return;
+  window.__headerJS = true;
+
+  // Wacht tot header is ingeladen
+  function waitForHeader(callback) {
+    const check = () => {
+      const header = document.querySelector('#header-include .main-header');
+      if (header) {
+        callback(header);
+      } else {
+        requestAnimationFrame(check);
+      }
+    };
+    check();
+  }
 
   // Scroll effect
-  function initScroll() {
-    const header = document.querySelector('.main-header');
-    if (!header) return;
-
+  function initScroll(header) {
     const onScroll = () => {
       if (window.scrollY > 50) {
         header.classList.add('scrolled');
@@ -22,15 +32,18 @@
   }
 
   // Mobile menu
-  function initMobileMenu() {
-    const toggle = document.querySelector('.mobile-menu-toggle');
-    const overlay = document.querySelector('.mobile-menu-overlay');
-    const nav = document.querySelector('.mobile-nav');
+  function initMobileMenu(header) {
+    const toggle = header.querySelector('.mobile-menu-toggle');
+    const overlay = header.querySelector('.mobile-menu-overlay');
+    const nav = header.querySelector('.mobile-nav');
+    const desktopNav = header.querySelector('.desktop-nav');
 
-    if (!toggle || !overlay || !nav) return false;
-    if (toggle.dataset.init === 'true') return true;
+    if (!toggle || !overlay || !nav) return;
 
-    toggle.dataset.init = 'true';
+    // Verberg desktop menu op mobiel
+    if (window.innerWidth <= 768) {
+      if (desktopNav) desktopNav.style.display = 'none';
+    }
 
     function open() {
       toggle.classList.add('active');
@@ -54,38 +67,22 @@
     });
 
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-
-    return true;
   }
 
-  // Wacht op header (via fetch)
-  function waitForHeader() {
-    const check = () => {
-      if (document.querySelector('.main-header')) {
-        initScroll();
-        initMobileMenu();
-      } else {
-        requestAnimationFrame(check);
-      }
-    };
-    check();
-  }
-
-  // Start
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', waitForHeader);
-  } else {
-    waitForHeader();
-  }
-
-  // Fallback: observer
-  const observer = new MutationObserver(() => {
-    if (document.querySelector('.main-header') && !window.__headerInitDone) {
-      window.__headerInitDone = true;
-      initScroll();
-      initMobileMenu();
-      observer.disconnect();
-    }
+  // Start alles
+  waitForHeader((header) => {
+    initScroll(header);
+    initMobileMenu(header);
   });
-  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Herinitialiseer bij resize (mobiel ↔ desktop)
+  window.addEventListener('resize', () => {
+    const header = document.querySelector('#header-include .main-header');
+    if (header) {
+      const desktopNav = header.querySelector('.desktop-nav');
+      if (desktopNav) {
+        desktopNav.style.display = window.innerWidth <= 768 ? 'none' : 'flex';
+    }
+      }
+  });
 })();
