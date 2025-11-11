@@ -23,17 +23,14 @@
   <meta name="twitter:description" content="NEBOSH vs MKV in 2026: kosten, salarissen, carrièrepaden en keuzehulp.">
   <meta name="twitter:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp">
 
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="/css/header.css">
+
   <!-- Styling -->
   <style>
     :root { --tx:#1a1a1a; --muted:#5c6773; --brand:#00811F; --brand-light:#e6f7ed; --accent:#f97316; --bg:#ffffff; --border:#e5e7eb; }
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; line-height:1.65; color:var(--tx); background:var(--bg); }
-
-    nav { background:#fff; border-bottom:1px solid var(--border); padding:20px 24px; position:sticky; top:0; z-index:100; }
-    nav .nav-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
-    nav .logo { font-size:1.3rem; font-weight:700; color:var(--accent); text-decoration:none; }
-    nav .links a { margin-left:24px; color:var(--tx); text-decoration:none; font-weight:500; transition:color .2s; }
-    nav .links a:hover { color:var(--brand); }
 
     .wrap { max-width:980px; margin:0 auto; padding:24px; }
     header { margin:40px 0 32px; }
@@ -222,7 +219,6 @@
     @media(max-width:768px) {
       h1 { font-size:1.8rem; }
       h2 { font-size:1.5rem; }
-      nav .links { display:none; }
       .wrap { padding:16px; }
       .meta { flex-direction:column; gap:8px; }
       .faq-question { font-size:1rem; padding:16px 20px; }
@@ -231,18 +227,14 @@
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav aria-label="Hoofdnavigatie">
-    <div class="nav-inner">
-      <a href="/" class="logo">SafetyXAcademy</a>
-      <div class="links" role="navigation" aria-label="Primaire navigatie">
-        <a href="/">Home</a>
-        <a href="/#training">Training</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+
+<!-- HEADER INCLUDE -->
+<div id="header-include"></div>
+<script>
+  fetch('/includes/header.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('header-include').outerHTML = html);
+</script>
 
   <!-- Article -->
   <article class="wrap">
@@ -608,5 +600,7 @@
       });
     });
   </script>
+
+  <script src="/js/header.js"></script>
 </body>
 </html>
