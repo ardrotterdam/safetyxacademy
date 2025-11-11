@@ -248,28 +248,40 @@ body {
   padding-top: 80px;
 }
 
-/* ===== HEADER STICKY & ALWAYS VISIBLE ===== */
-.main-header {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: var(--z-header) !important;
-  background: #ffffff;
-  transition: background 0.3s, box-shadow 0.3s;
+/* ===== MOBIEL MENU ALTIJD BOVEN ALLES ===== */
+.mobile-menu-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999999 !important; /* ALTIJD bovenaan */
+  background: rgba(0, 0, 0, 0.85) !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.main-header.scrolled {
-  background: rgba(10, 40, 75, 0.92) !important;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+.mobile-menu-overlay.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
-/* Zorg dat hamburger altijd zichtbaar is */
+.mobile-nav {
+  position: fixed !important;
+  top: 0; right: 0; bottom: 0;
+  width: 100%;
+  max-width: 340px;
+  z-index: 9999999 !important; /* Nog hoger */
+  background: #0A284B;
+  padding: 5rem 2rem 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.mobile-menu-overlay.active .mobile-nav {
+  transform: translateX(0) !important;
+}
+
+/* Hamburger altijd zichtbaar */
 .mobile-menu-toggle {
-  display: none; /* standaard uit op desktop */
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: flex !important; /* ALTIJD zichtbaar op mobiel */
-  }
-}
+  z-index: 99999999 !important; /* ALTIJD klikbaar */
+}        
