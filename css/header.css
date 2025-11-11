@@ -130,20 +130,15 @@
 
 /* ===== MOBILE MENU OVERLAY ===== */
 .mobile-menu-overlay {
-  display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: var(--z-overlay);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+  display: none;
+  background: rgba(0,0,0,.55);
+  z-index: 9999;
 }
 
 .mobile-menu-overlay.active {
   display: block;
-  opacity: 1;
-  pointer-events: auto;
 }
 
 /* ===== MOBIEL MENU ===== */
@@ -164,7 +159,7 @@
   transition: transform 0.3s ease;
   overflow-y: auto;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
-  z-index: var(--z-nav);
+  z-index: 10000;
   pointer-events: auto;
 }
 
@@ -247,41 +242,3 @@
 body {
   padding-top: 80px;
 }
-
-/* ===== MOBIEL MENU ALTIJD BOVEN ALLES ===== */
-.mobile-menu-overlay {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 999999 !important; /* ALTIJD bovenaan */
-  background: rgba(0, 0, 0, 0.85) !important;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.mobile-menu-overlay.active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-.mobile-nav {
-  position: fixed !important;
-  top: 0; right: 0; bottom: 0;
-  width: 100%;
-  max-width: 340px;
-  z-index: 9999999 !important; /* Nog hoger */
-  background: #0A284B;
-  padding: 5rem 2rem 2rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  overflow-y: auto;
-}
-
-.mobile-menu-overlay.active .mobile-nav {
-  transform: translateX(0) !important;
-}
-
-/* Hamburger altijd zichtbaar */
-.mobile-menu-toggle {
-  z-index: 99999999 !important; /* ALTIJD klikbaar */
-}        
