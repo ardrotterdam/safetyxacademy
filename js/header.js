@@ -41,9 +41,12 @@
     if (!toggle || !overlay || !nav) return;
 
     // Verberg desktop menu op mobiel
-    if (window.innerWidth <= 768) {
-      if (desktopNav) desktopNav.style.display = 'none';
+    function updateNavDisplay() {
+      if (desktopNav) {
+        desktopNav.style.display = window.innerWidth <= 768 ? 'none' : 'flex';
+      }
     }
+    updateNavDisplay(); // init
 
     function open() {
       toggle.classList.add('active');
@@ -67,6 +70,9 @@
     });
 
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+
+    // Update bij resize
+    window.addEventListener('resize', updateNavDisplay);
   }
 
   // Start alles
@@ -75,14 +81,14 @@
     initMobileMenu(header);
   });
 
-  // Herinitialiseer bij resize (mobiel ↔ desktop)
-  window.addEventListener('resize', () => {
+  // Fallback: als header later komt (bijv. via AJAX)
+  const observer = new MutationObserver(() => {
     const header = document.querySelector('#header-include .main-header');
-    if (header) {
-      const desktopNav = header.querySelector('.desktop-nav');
-      if (desktopNav) {
-        desktopNav.style.display = window.innerWidth <= 768 ? 'none' : 'flex';
+    if (header && !window.__headerInitDone) {
+      window.__headerInitDone = true;
+      initScroll(header);
+      initMobileMenu(header);
     }
-      }
   });
+  observer.observe(document.body, { childList: true, subtree: true });
 })();
