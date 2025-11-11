@@ -242,3 +242,27 @@
 body {
   padding-top: 80px;
 }
+
+/* === Mobile hamburger visibility === */
+@media (max-width: 768px){
+  .desktop-nav{ display: none; }         /* verberg desktop menu op mobiel */
+  .mobile-menu-toggle{ display: inline-flex; cursor: pointer; }
+}
+
+/* === Desktop: geen hamburger nodig === */
+@media (min-width: 769px){
+  .mobile-menu-toggle{ display: none; }
+}
+
+/* === Overlay basis & zichtbaar als active === */
+.mobile-menu-overlay{
+  position: fixed;
+  inset: 0;
+  display: none;
+  background: rgba(0,0,0,.55);
+  z-index: 9999;               /* boven de content */
+}
+.mobile-menu-overlay.active{
+  display: block;
+}
+
