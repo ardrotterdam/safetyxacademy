@@ -41,17 +41,18 @@
 <body>
 
   <!-- HEADER INCLUDE -->
-  <div id="header-include"></div>
-  <script>
-    fetch('/includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        const el = document.getElementById('header-include');
-        el.outerHTML = html;
-        window.dispatchEvent(new Event('headerloaded'));
-      })
-      .catch(err => console.error('Header failed:', err));
-  </script>
+<div id="header-include"></div>
+<script>
+  fetch('/includes/header.html')
+    .then(r => r.text())
+    .then(html => {
+      const el = document.getElementById('header-include');
+      el.outerHTML = html;
+      // DIT IS DE ENIGE REGEL DIE NODIG IS
+      window.dispatchEvent(new Event('headerloaded'));
+    })
+    .catch(() => console.error('Header failed to load'));
+</script>
 
   <!-- Hero Section -->
   <section class="hero">
