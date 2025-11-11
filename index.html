@@ -19,7 +19,7 @@
 
   <!-- 3. SEO -->
   <title>NEBOSH IGC Nederland €3.500 | Start Jan 2026 Rotterdam | SafetyXAcademy</title>
-  <meta name="description" content="NEBOSH IGC training Rotterdam. All-inclusive €3.500 inclusief examen. Erkende diploma. Train Lokaal, Werk Wereldwijd. Start Januari 2026 - Plaatsen beperkt!">
+  <meta name="description" content="NEBOSH IGC training Rotterdam. All-inclusive €3.500 inclusief examen. Erkend diploma. Train Lokaal, Werk Wereldwijd. Start Januari 2026 - Plaatsen beperkt!">
   <meta name="keywords" content="NEBOSH Rotterdam, NEBOSH Veerhaven, NEBOSH Scheepvaartkwartier, Westplein Rotterdam, NEBOSH Nederland, NEBOSH België, NEBOSH prijs, MKV alternatief, HSE training Rotterdam, offshore training">
 
   <!-- 4. Social -->
@@ -49,12 +49,8 @@
       .then(html => {
         const el = document.getElementById('header-include');
         el.outerHTML = html;
-        // Forceer JS herinitialisatie
-        setTimeout(() => {
-          if (typeof window.initHeader === 'function') {
-            window.initHeader();
-          }
-        }, 100);
+        // DIT IS DE MAGISCHE REGEL
+        window.dispatchEvent(new Event('headerloaded'));
       })
       .catch(err => console.error('Header failed:', err));
   </script>
