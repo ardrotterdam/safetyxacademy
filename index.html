@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 1. jouw css-bestanden -->
+  <!-- 1. CSS -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/header.css?v=4">
 
-  <!-- 2. google analytics -->
+  <!-- 2. Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,19 +17,19 @@
     gtag('config', 'G-91JCVXBQ0W');
   </script>
 
-  <!-- 3. seo -->
+  <!-- 3. SEO -->
   <title>NEBOSH IGC Nederland €3.500 | Start Jan 2026 Rotterdam | SafetyXAcademy</title>
-  <meta name="description" content="NEBOSH IGC training Rotterdam. All-inclusive €3.500 inclusief examen. Erkend diploma. Train Lokaal, Werk Wereldwijd. Start Januari 2026 - Plaatsen beperkt!">
+  <meta name="description" content="NEBOSH IGC training Rotterdam. All-inclusive €3.500 inclusief examen. Erkende diploma. Train Lokaal, Werk Wereldwijd. Start Januari 2026 - Plaatsen beperkt!">
   <meta name="keywords" content="NEBOSH Rotterdam, NEBOSH Veerhaven, NEBOSH Scheepvaartkwartier, Westplein Rotterdam, NEBOSH Nederland, NEBOSH België, NEBOSH prijs, MKV alternatief, HSE training Rotterdam, offshore training">
 
-  <!-- 4. social -->
+  <!-- 4. Social -->
   <link rel="canonical" href="https://www.safetyxacademy.nl/">
   <meta property="og:title" content="NEBOSH IGC €3.500 Veerhaven Rotterdam | Goedkoper dan MKV">
   <meta property="og:description" content="Train in Veerhaven, Scheepvaartkwartier Rotterdam. NEBOSH IGC €3.500 vs MKV €5.000-€7.000. Bespaar €1.500-€3.500!">
   <meta property="og:image" content="https://www.safetyxacademy.nl/safetyxacademy-og-image.png">
   <meta property="og:url" content="https://www.safetyxacademy.nl/">
 
-  <!-- 5. favicon -->
+  <!-- 5. Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
@@ -43,14 +43,24 @@
   <!-- HEADER INCLUDE -->
   <div id="header-include"></div>
   <script>
+    // Laad header + trigger JS zodra klaar
     fetch('/includes/header.html')
       .then(r => r.text())
-      .then(html => document.getElementById('header-include').outerHTML = html);
+      .then(html => {
+        const el = document.getElementById('header-include');
+        el.outerHTML = html;
+        // Forceer JS herinitialisatie
+        setTimeout(() => {
+          if (typeof window.initHeader === 'function') {
+            window.initHeader();
+          }
+        }, 100);
+      })
+      .catch(err => console.error('Header failed:', err));
   </script>
 
-  <!-- Hero Section WITH Background Image -->
+  <!-- Hero Section -->
   <section class="hero">
-      <!-- Hero Main Image -->
       <div class="hero-image-main">
           <img src="nebosh-igc-training-rotterdam-students.webp" 
                alt="NEBOSH IGC training Veerhaven Rotterdam studenten SafetyXAcademy Scheepvaartkwartier"
@@ -63,7 +73,6 @@
       <p class="hero-subtitle">€3.500 incl. Examen vs €5.000-€7.000 MKV | Bespaar €1.500-€3.500!</p>
       <p>Train in Rotterdam met studenten uit heel Nederland én België. NEBOSH IGC kost <strong>€3.500 inclusief examengeld</strong> terwijl MKV €5.000-€7.000 kost. Bespaar €1.500-€3.500 én open deuren naar carrières in 120+ landen wereldwijd. Bij voldoende belangstelling organiseren we ook trainingen in België.</p>
       
-      <!-- NEW: Location Badge -->
       <div class="hero-location">
           Trainingscentrum Veerhaven Rotterdam, Scheepvaartkwartier | Westplein 12
       </div>
@@ -72,7 +81,6 @@
           <a href="aanmelden.html" class="btn-pill-orange" aria-label="Plaats mij op de wachtlijst – Gratis">
               Plaats mij op de wachtlijst – Gratis <span class="arrow">→</span>
           </a>
-
           <a href="jobs.html" class="btn btn-secondary">ZZP Tarieven €500-1.500/dag</a>
       </div>
 
@@ -89,8 +97,7 @@
       </div>
   </div>
 
-  <!-- [REST VAN JE CONTENT – blijft 100% hetzelfde] -->
-  <!-- ... (alles wat je al had: comparison, training, testimonials, etc.) ... -->
+  <!-- [JOUW REST VAN CONTENT – blijft 100% hetzelfde] -->
 
   <footer>
       <div style="max-width:1200px; margin:0 auto;">
@@ -117,7 +124,7 @@
       </div>
   </footer>
 
-  <!-- JS: header gedrag (scroll + mobiel menu) -->
+  <!-- JS: header.js met fallback -->
   <script src="/js/header.js?v=4" defer></script>
 
 </body>
