@@ -20,217 +20,297 @@
 </head>
 
 <body>
-  <!-- HEADER WORDT HIER INGELADEN -->
-  <div id="header-include"></div>
-
-  <!-- HERO SECTIE – SEO + Conversie -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>NEBOSH Opleiding Nederland – In Je Eigen Taal</h1>
-      <p>
-        Van <strong>MVK</strong> naar <strong>NEBOSH diploma Nederland</strong>:
-        wij trainen jou in het Nederlands, met Engelse examenvoorbereiding.
-        De shortcut naar topbanen in oil &amp; gas, construction en HSE wereldwijd.
-      </p>
-      <a href="aanmelden.html" class="btn">Aanmelden NEBOSH IGC</a>
-      <p class="hero-sub">Rotterdam | Online | Praktijkgericht</p>
-    </div>
-  </section>
-
-  <!-- QUIZ TEASER – Verlaagt bounce, verhoogt engagement -->
-  <section class="quiz-teaser">
-    <h2>Test Je Kennis: Gratis NEBOSH Voorbeeldvragen</h2>
-    <div class="quiz-grid">
-      <div class="quiz-question">
-        <p>1. Wat is de eerste stap bij een chemische lekkage?</p>
-        <label><input type="radio" name="q1"> A) Wachten op hulp</label><br />
-        <label><input type="radio" name="q1"> B) Alarm slaan &amp; evacueren</label><br />
-        <label><input type="radio" name="q1"> C) Spoelen met water</label>
-        <button onclick="alert('Juist: B')">Antwoord</button>
+    <!-- HEADER INCLUDE -->
+    <div id="header-include"></div>
+    <script>
+      fetch('/includes/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const el = document.getElementById('header-include');
+          el.outerHTML = html;
+          setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
+        })
+        .catch(() => console.error('Header failed'));
+    </script>
+  
+    <main>
+  
+      <!-- 1. Hero: Wie zijn we + 2 hoofd-CTA's -->
+      <section class="hero home-hero">
+        <div class="hero-image-main">
+          <img src="nebosh-igc-training-rotterdam-students.webp"
+               alt="NEBOSH IGC training bij SafetyXAcademy in Rotterdam met studenten uit Nederland en België"
+               width="1920"
+               height="1280"
+               loading="lazy">
+        </div>
+  
+        <h1>SafetyXAcademy – NEBOSH Opleiding &amp; HSE Jobs voor Nederland &amp; België</h1>
+        <p class="hero-subtitle">
+          Train lokaal in Rotterdam, werk wereldwijd als HSE-professional.
+          Nederlands gesproken, internationaal erkend.
+        </p>
+        <p>
+          SafetyXAcademy helpt Nederlandstalige veiligheidskundigen aan een
+          <strong>NEBOSH IGC certificaat</strong> én betere banen of freelance opdrachten
+          in de Benelux-havens, offshore en in landen als Noorwegen, UK en Dubai.
+        </p>
+  
+        <div class="cta-buttons">
+          <a href="nebosh-opleiding.html" class="btn-pill-orange" aria-label="Bekijk NEBOSH opleiding">
+            Bekijk NEBOSH Opleiding <span class="arrow">→</span>
+          </a>
+          <a href="jobs.html" class="btn btn-secondary" aria-label="Bekijk HSE jobs en ZZP opdrachten">
+            Jobs &amp; ZZP opdrachten
+          </a>
+        </div>
+  
+        <p class="hero-tagline">Train lokaal in Veerhaven Rotterdam – Verdien wereldwijd als HSE professional</p>
+      </section>
+  
+      <!-- 2. Drie pijlers -->
+      <section class="home-pillars">
+        <div class="container">
+          <h2 class="section-title">Onze 3 pijlers voor jouw HSE-carrière</h2>
+          <p class="section-subtitle">
+            We combineren opleiding, carrièrebegeleiding en verdienen als ZZP’er in één Academy.
+          </p>
+  
+          <div class="pillars-grid">
+            <article class="pillar-card">
+              <h3>1. NEBOSH IGC Opleiding</h3>
+              <p>
+                Internationale <strong>NEBOSH IGC training</strong> in Rotterdam
+                voor Nederlandstalige studenten uit Nederland &amp; België.
+                Lokaal trainen, examen én certificaat in één pakket.
+              </p>
+              <a href="nebosh-opleiding.html" class="text-link">Meer over NEBOSH IGC →</a>
+            </article>
+  
+            <article class="pillar-card">
+              <h3>2. Jobs &amp; ZZP Opdrachten</h3>
+              <p>
+                We helpen je na je opleiding met <strong>freelance opdrachten</strong> en
+                vaste banen als veiligheidskundige in Benelux-havens en internationale projecten.
+              </p>
+              <a href="jobs.html" class="text-link">Bekijk HSE jobs &amp; dagtarieven →</a>
+            </article>
+  
+            <article class="pillar-card">
+              <h3>3. Leren &amp; Groeien</h3>
+              <p>
+                Via onze <strong>blog</strong>, oefenvragen en NEBOSH-quiz blijf je groeien als HSE-professional.
+                Praktische kennis, in klare taal, voor het echte werkveld.
+              </p>
+              <a href="blog/index.html" class="text-link">Lees de laatste artikelen →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+  
+      <!-- 3. NEBOSH-highlight -->
+      <section class="home-nebosh-highlight">
+        <div class="container">
+          <h2 class="section-title">NEBOSH IGC – Slimmer dan MKV voor internationale carrières</h2>
+          <p class="section-subtitle">
+            Bespaar €1.500–€3.500 vergeleken met MKV én werk in 120+ landen wereldwijd.
+          </p>
+  
+          <div class="highlight-box">
+            <p>
+              Onze <strong>NEBOSH IGC opleiding in Veerhaven Rotterdam</strong> kost
+              <strong>€3.500 all-in inclusief examengeld</strong>.
+              MKV-trajecten kosten vaak <strong>€5.000–€7.000</strong> en zijn vooral in Nederland bekend.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Met NEBOSH IGC kan je werken in <strong>Benelux-havens</strong> (Rotterdam, Antwerpen, Zeebrugge, Amsterdam)
+              én in internationale hubs zoals <strong>Dubai, Noorwegen, UK en Singapore</strong>.
+            </p>
+            <a href="nebosh-opleiding.html" class="btn btn-primary" aria-label="Lees meer over NEBOSH versus MKV">
+              Lees de volledige NEBOSH vs MKV vergelijking →
+            </a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- 4. Jobs & ZZP highlight -->
+      <section class="home-jobs-highlight">
+        <div class="container">
+          <h2 class="section-title">Wat kan je verdienen als HSE ZZP’er met NEBOSH?</h2>
+          <p class="section-subtitle">
+            Dagtarieven van <strong>€400–€1.500</strong> zijn normaal voor ervaren veiligheidskundigen.
+          </p>
+  
+          <div class="jobs-summary-grid">
+            <div class="jobs-card">
+              <h3>Benelux Havens</h3>
+              <p>
+                In de havens van <strong>Rotterdam, Antwerpen, Zeebrugge en Amsterdam</strong>
+                liggen dagtarieven vaak tussen <strong>€500–€800 per dag</strong> voor HSE ZZP’ers.
+              </p>
+            </div>
+            <div class="jobs-card">
+              <h3>Internationale Projecten</h3>
+              <p>
+                Offshore en internationale opdrachten (Noorwegen, UK, Dubai) kunnen oplopen tot
+                <strong>€900–€1.500 per dag</strong>, afhankelijk van ervaring en project.
+              </p>
+            </div>
+            <div class="jobs-card">
+              <h3>Van opleiding naar opdracht</h3>
+              <p>
+                Na jouw NEBOSH-opleiding helpen we je met
+                <strong>CV-optimalisatie, LinkedIn-profiel</strong> en het vinden van
+                passende opdrachten of banen.
+              </p>
+            </div>
+          </div>
+  
+          <div class="jobs-cta-center">
+            <a href="jobs.html" class="btn-pill-orange">
+              Bekijk HSE jobs, ZZP-opdrachten &amp; dagtarieven <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- 5. NEBOSH-quiz / training teaser -->
+      <section id="quiz-teaser" class="home-quiz">
+        <div class="container">
+          <h2 class="section-title">Test jezelf met de NEBOSH-quiz</h2>
+          <p class="section-subtitle">
+            Ontdek in 10–15 vragen of de NEBOSH IGC opleiding bij je past en hoe sterk je basiskennis HSE al is.
+          </p>
+  
+          <div class="quiz-box">
+            <p>
+              De quiz is speciaal gemaakt voor Nederlandstalige kandidaten in Nederland &amp; België.
+              Je krijgt direct feedback op je antwoorden en praktische tips om je voor te bereiden op de echte NEBOSH-examens.
+            </p>
+            <a href="training.html#nebosh-quiz" class="btn btn-primary">
+              Start de NEBOSH-quiz →
+            </a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- 6. Testimonials (kort, 2 highlights) -->
+      <section class="home-testimonials">
+        <div class="container">
+          <h2 class="section-title">Ervaringen van HSE-professionals</h2>
+          <p class="section-subtitle">
+            Een selectie van verhalen van studenten die via NEBOSH de stap maakten naar internationale projecten.
+          </p>
+  
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <div class="testimonial-text">
+                “Dankzij NEBOSH IGC verdien ik nu als HSE Officer op een offshore platform in Noorwegen
+                2–3× zoveel als in mijn oude baan in Nederland. De training in Rotterdam was de perfecte opstap.”
+              </div>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <div class="author-name">Lars van Dijk</div>
+                  <div class="author-role">HSE Officer, offshore Noorwegen</div>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </article>
+  
+            <article class="testimonial-card">
+              <div class="testimonial-text">
+                “Als Belgische veiligheidskundige twijfelde ik tussen MVK en NEBOSH.
+                Via SafetyXAcademy koos ik voor NEBOSH IGC in Rotterdam. Nu werk ik in Dubai –
+                zonder NEBOSH was dat praktisch onmogelijk geweest.”
+              </div>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <div class="author-name">Pieter Claes</div>
+                  <div class="author-role">Safety Coordinator, Dubai</div>
+                </div>
+                <div class="rating">★★★★★</div>
+              </div>
+            </article>
+          </div>
+  
+          <div class="testimonials-cta-center">
+            <a href="nebosh-opleiding.html#testimonials" class="text-link">
+              Lees meer ervaringen van onze studenten →
+            </a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- 7. Contact / locatie teaser -->
+      <section id="contact" class="home-contact">
+        <div class="container">
+          <h2 class="section-title">Train in Veerhaven Rotterdam, Werk Wereldwijd</h2>
+          <p class="section-subtitle">
+            Westplein 12, Scheepvaartkwartier – ideaal bereikbaar vanuit heel Nederland en Vlaanderen.
+          </p>
+  
+          <div class="contact-summary-grid">
+            <div class="contact-text">
+              <p>
+                Ons trainingscentrum ligt in het <strong>maritieme hart van Rotterdam</strong>,
+                omringd door scheepvaartbedrijven, terminals en internationale HSE-kantoren.
+              </p>
+              <p>
+                Vanuit Antwerpen en Brussel reis je in ongeveer één uur met de trein.
+                Studenten uit heel Nederland &amp; België zijn welkom.
+              </p>
+              <p>
+                Wil je weten of NEBOSH bij jou past of heb je vragen over startdata, betaling of
+                combinatie met je huidige baan? Stuur ons gerust een bericht.
+              </p>
+  
+              <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a></li>
+                <li><strong>Telefoon:</strong> <a href="tel:+31108009512">010-800 9512</a></li>
+                <li><strong>Adres:</strong> Westplein 12, 3016 BM Rotterdam (Veerhaven, Scheepvaartkwartier)</li>
+              </ul>
+  
+              <a href="aanmelden.html" class="btn-pill-orange">
+                Plaats mij op de wachtlijst – Gratis <span class="arrow">→</span>
+              </a>
+            </div>
+  
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.866888888889!2d4.4660513!3d51.9126089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c433a3a7e7e8e7%3A0x1234567890abcdef!2sWestplein%2012%2C%203016%20BM%20Rotterdam%2C%20Nederland!5e0!3m2!1snl!2snl!4v1705930000000!5m2!1snl!2snl"
+                width="100%"
+                height="350"
+                style="border:0;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="SafetyXAcademy locatie Westplein 12 Veerhaven Rotterdam"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+    </main>
+  
+    <footer>
+      <div style="max-width:1200px; margin:0 auto;">
+        <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+        <p style="margin-top:0.5rem;">
+          <a href="index.html">Home</a> |
+          <a href="nebosh-opleiding.html">NEBOSH Opleiding</a> |
+          <a href="jobs.html">Jobs &amp; ZZP Opdrachten</a> |
+          <a href="blog/index.html">Blog</a> |
+          <a href="over-ons.html">Over Ons</a> |
+          <a href="privacy.html">Privacy</a> |
+          <a href="#contact">Contact</a>
+        </p>
+        <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
+          Train lokaal voor €3.500, werk wereldwijd als HSE professional.
+        </p>
       </div>
-    </div>
-    <a href="#quiz" class="btn-secondary">Bekijk alle 15 vragen →</a>
-  </section>
-
-  <!-- VOLLEDIGE NEBOSH QUIZ – 15 VRAGEN -->
-  <section class="quiz-full" id="quiz">
-    <div class="container">
-      <h2>Test Je NEBOSH Kennis – 15 Vragen</h2>
-      <p class="quiz-intro">
-        Beantwoord de vragen. Scoor je <strong>12 of meer</strong>? Dan ben je klaar voor NEBOSH IGC.
-      </p>
-
-      <!-- Voortgang -->
-      <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
-      <p class="progress-text"><span id="questionCounter">1</span> / 15</p>
-
-      <!-- Vraag container -->
-      <div class="quiz-question-active" id="quizQuestion">
-        <!-- Vragen worden hier geladen via JS -->
-      </div>
-
-      <!-- Knoppen -->
-      <div class="quiz-buttons">
-        <button id="nextBtn" class="btn" onclick="nextQuestion()" disabled>Volgende vraag</button>
-      </div>
-
-      <!-- Resultaat -->
-      <div class="quiz-result" id="quizResult" style="display:none;">
-        <h3>Jouw resultaat: <span id="finalScore">0</span>/15</h3>
-        <p id="resultMessage"></p>
-        <a href="aanmelden.html" class="btn" id="aanmeldenBtn" style="display:none;">
-          Direct aanmelden voor NEBOSH IGC →
-        </a>
-        <button class="btn-secondary" onclick="restartQuiz()">Opnieuw proberen</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOUNDER SECTIE – Vertrouwen & SEO -->
-  <section class="founder">
-    <img
-      src="images/nando-breure-founder.webp"
-      alt="Nando Breure - oprichter SafetyX Academy - NEBOSH trainer Rotterdam"
-      class="founder-img"
-    />
-    <div class="founder-text">
-      <h3>Ik ben Nando Breure</h3>
-      <p>
-        Al meer dan 10 jaar help ik Nederlanders en Belgen van MVK naar
-        <strong>NEBOSH diploma Nederland</strong>. Geen droge theorie, maar
-        praktijkcases, vertaling en directe aansluiting op internationale HSE-banen.
-      </p>
-      <a href="over-ons.html" class="btn-outline">Meer over ons →</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      © 2025 SafetyX Academy – NEBOSH Opleiding Rotterdam |
-      <a href="privacy.html">Privacy</a>
-    </p>
-  </footer>
-
-  <!-- HEADER LADEN VIA INCLUDE -->
-  <script>
-    fetch('includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        const el = document.getElementById('header-include');
-        el.outerHTML = html;
-        setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
-      })
-      .catch(() => console.error('Header laden mislukt'));
-  </script>
-
-  <!-- HEADER MOBILE MENU FUNCTIONALITY -->
-  <script src="../js/header.js"></script>
-
-  <!-- QUIZ LOGICA -->
-  <script>
-    const questions = [
-      { question: "Wat is de eerste stap bij een chemische lekkage?", options: ["A) Wachten op hulp", "B) Alarm slaan & evacueren", "C) Spoelen met water"], answer: 1 },
-      { question: "Welke kleur heeft een waarschuwingsbord voor giftige stoffen?", options: ["A) Geel", "B) Blauw", "C) Rood"], answer: 0 },
-      { question: "Wat betekent R.A.M.S.?", options: ["A) Risk Assessment Method Statement", "B) Routine Activity Management System", "C) Repair And Maintenance Schedule"], answer: 0 },
-      { question: "Hoe vaak moet een brandblusser minimaal gecontroleerd worden?", options: ["A) Elk kwartaal", "B) Jaarlijks", "C) Elke 5 jaar"], answer: 1 },
-      { question: "Wat is de maximale werkhoogte zonder valbeveiliging?", options: ["A) 1 meter", "B) 2 meter", "C) Geen limiet"], answer: 1 },
-      { question: "Welke PBM is verplicht bij laswerk?", options: ["A) Veiligheidsschoenen", "B) Lashandschoenen + laskap", "C) Oorkappen"], answer: 1 },
-      { question: "Wat is een 'near miss'?", options: ["A) Een klein ongeluk", "B) Een incident zonder letsel maar met risico", "C) Een administratieve fout"], answer: 1 },
-      { question: "Wie is verantwoordelijk voor een veilige werkplek?", options: ["A) Alleen de werkgever", "B) Alleen de werknemer", "C) Iedereen"], answer: 2 },
-      { question: "Wat is de juiste volgorde bij brand: R.A.C.E.?", options: ["A) Redden → Alarmeren → Blussen → Evacueren", "B) Redden → Alarmeren → Confine → Evacueren", "C) Redden → Alarmeren → Contain → Extinguish"], answer: 1 },
-      { question: "Hoe lang moet een EHBO-kit bewaard worden?", options: ["A) 1 jaar", "B) Tot vervaldatum", "C) 5 jaar"], answer: 1 },
-      { question: "Wat betekent COSHH?", options: ["A) Control of Substances Hazardous to Health", "B) Company Safety Health Handbook", "C) Construction Site Health Oversight"], answer: 0 },
-      { question: "Welke frequentie voor trillingen is het schadelijkst?", options: ["A) 5–10 Hz", "B) 50–100 Hz", "C) >500 Hz"], answer: 0 },
-      { question: "Waarvoor is een 'permit to work' verplicht?", options: ["A) Kantoorwerk", "B) Werk in besloten ruimtes", "C) Koffie halen"], answer: 1 },
-      { question: "Hoeveel decibel is het maximum zonder gehoorbescherming (8 uur)?", options: ["A) 80 dB", "B) 85 dB", "C) 90 dB"], answer: 1 },
-      { question: "Wat is de minimale breedte van een nooduitgang?", options: ["A) 60 cm", "B) 80 cm", "C) 100 cm"], answer: 1 }
-    ];
-
-    let currentQuestion = 0;
-    let score = 0;
-    let selectedAnswer = null;
-
-    const quizQuestion = document.getElementById('quizQuestion');
-    const nextBtn = document.getElementById('nextBtn');
-    const progressBar = document.getElementById('progressBar');
-    const questionCounter = document.getElementById('questionCounter');
-    const quizResult = document.getElementById('quizResult');
-    const finalScore = document.getElementById('finalScore');
-    const resultMessage = document.getElementById('resultMessage');
-    const aanmeldenBtn = document.getElementById('aanmeldenBtn');
-
-    function loadQuestion() {
-      const q = questions[currentQuestion];
-      quizQuestion.innerHTML = `
-        <p class="question-text">${q.question}</p>
-        ${q.options.map((opt, i) => `
-          <label class="quiz-option">
-            <input type="radio" name="answer" value="${i}" onchange="selectAnswer(${i})">
-            ${opt}
-          </label><br>
-        `).join('')}
-      `;
-      nextBtn.disabled = true;
-      selectedAnswer = null;
-      updateProgress();
-    }
-
-    function selectAnswer(answer) {
-      selectedAnswer = answer;
-      nextBtn.disabled = false;
-    }
-
-    function nextQuestion() {
-      if (selectedAnswer === questions[currentQuestion].answer) {
-        score++;
-      }
-      currentQuestion++;
-      if (currentQuestion < questions.length) {
-        loadQuestion();
-      } else {
-        showResult();
-      }
-    }
-
-    function updateProgress() {
-      const progress = ((currentQuestion + 1) / questions.length) * 100;
-      progressBar.style.width = progress + '%';
-      questionCounter.textContent = currentQuestion + 1;
-    }
-
-    function showResult() {
-      document.querySelector('.quiz-buttons').style.display = 'none';
-      quizQuestion.style.display = 'none';
-      quizResult.style.display = 'block';
-      finalScore.textContent = score;
-
-      if (score >= 12) {
-        resultMessage.textContent = "Uitstekend! Je bent klaar voor de NEBOSH IGC opleiding.";
-        aanmeldenBtn.style.display = 'inline-block';
-      } else if (score >= 8) {
-        resultMessage.textContent = "Goed gedaan! Nog een beetje oefenen en je bent er.";
-      } else {
-        resultMessage.textContent = "Meer studie nodig. Maar geen zorgen – wij helpen je.";
-      }
-    }
-
-    function restartQuiz() {
-      currentQuestion = 0;
-      score = 0;
-      quizResult.style.display = 'none';
-      document.querySelector('.quiz-buttons').style.display = 'block';
-      quizQuestion.style.display = 'block';
-      loadQuestion();
-    }
-
-    // Start quiz
-    loadQuestion();
-  </script>
-
-  <!-- Kleine extra JS (scroll-effect) komt uit js/nav.js -->
-  <script src="js/nav.js"></script>
+    </footer>
+  
+    <!-- JS -->
+    <script src="/js/header.js" defer></script>
+  
 </body>
 </html>
