@@ -23,7 +23,7 @@
     <!-- HEADER INCLUDE -->
     <div id="header-include"></div>
     <script>
-      fetch('/includes/header.html')
+      fetch('includes/header.html')
         .then(r => r.text())
         .then(html => {
           const el = document.getElementById('header-include');
@@ -37,73 +37,129 @@
   
       <!-- 1. Hero: Wie zijn we + 2 hoofd-CTA's -->
       <section class="hero home-hero">
-        <div class="hero-image-main">
-          <img src="nebosh-igc-training-rotterdam-students.webp"
-               alt="NEBOSH IGC training bij SafetyXAcademy in Rotterdam met studenten uit Nederland en België"
-               width="1920"
-               height="1280"
-               loading="lazy">
+        <div class="hero-inner">
+          <div class="hero-image-main">
+            <img src="../nebosh-igc-training-rotterdam-students.webp"
+                 alt="NEBOSH IGC training bij SafetyXAcademy in Rotterdam met studenten uit Nederland en België"
+                 width="1920"
+                 height="1280"
+                 loading="lazy">
+          </div>
+
+          <h1>SafetyXAcademy – NEBOSH Opleiding &amp; HSE Jobs voor Nederland &amp; België</h1>
+          <p class="hero-subtitle">
+            Train lokaal in Rotterdam, werk wereldwijd als HSE-professional.
+            Nederlands gesproken, internationaal erkend.
+          </p>
+          <p>
+            SafetyXAcademy helpt Nederlandstalige veiligheidskundigen aan een
+            <strong>NEBOSH IGC certificaat</strong> én betere banen of freelance opdrachten
+            in de Benelux-havens, offshore en in landen als Noorwegen, UK en Dubai.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="nebosh-opleiding.html" class="btn-pill-orange" aria-label="Bekijk NEBOSH opleiding">
+              Bekijk NEBOSH Opleiding <span class="arrow">→</span>
+            </a>
+            <a href="jobs.html" class="btn btn-secondary" aria-label="Bekijk HSE jobs en ZZP opdrachten">
+              Jobs &amp; ZZP opdrachten
+            </a>
+          </div>
+
+          <p class="hero-tagline">Train lokaal in Veerhaven Rotterdam – Verdien wereldwijd als HSE professional</p>
         </div>
-  
-        <h1>SafetyXAcademy – NEBOSH Opleiding &amp; HSE Jobs voor Nederland &amp; België</h1>
-        <p class="hero-subtitle">
-          Train lokaal in Rotterdam, werk wereldwijd als HSE-professional.
-          Nederlands gesproken, internationaal erkend.
-        </p>
-        <p>
-          SafetyXAcademy helpt Nederlandstalige veiligheidskundigen aan een
-          <strong>NEBOSH IGC certificaat</strong> én betere banen of freelance opdrachten
-          in de Benelux-havens, offshore en in landen als Noorwegen, UK en Dubai.
-        </p>
-  
-        <div class="cta-buttons">
-          <a href="nebosh-opleiding.html" class="btn-pill-orange" aria-label="Bekijk NEBOSH opleiding">
-            Bekijk NEBOSH Opleiding <span class="arrow">→</span>
-          </a>
-          <a href="jobs.html" class="btn btn-secondary" aria-label="Bekijk HSE jobs en ZZP opdrachten">
-            Jobs &amp; ZZP opdrachten
-          </a>
-        </div>
-  
-        <p class="hero-tagline">Train lokaal in Veerhaven Rotterdam – Verdien wereldwijd als HSE professional</p>
       </section>
   
       <!-- 2. Drie pijlers -->
       <section class="home-pillars">
         <div class="container">
-          <h2 class="section-title">Onze 3 pijlers voor jouw HSE-carrière</h2>
+          <h2>Onze 3 pijlers voor jouw HSE-carrière</h2>
           <p class="section-subtitle">
-            We combineren opleiding, carrièrebegeleiding en verdienen als ZZP’er in één Academy.
+            SafetyXAcademy helpt je niet alleen aan je NEBOSH IGC diploma,
+            maar ook aan échte opdrachten in de Benelux-havens en daarbuiten.
           </p>
-  
+
           <div class="pillars-grid">
             <article class="pillar-card">
-              <h3>1. NEBOSH IGC Opleiding</h3>
+              <h3>NEBOSH IGC Opleiding</h3>
               <p>
-                Internationale <strong>NEBOSH IGC training</strong> in Rotterdam
-                voor Nederlandstalige studenten uit Nederland &amp; België.
-                Lokaal trainen, examen én certificaat in één pakket.
+                Klassikale en blended training in Veerhaven Rotterdam.
+                €3.500 all-in inclusief examengeld, kleine groepen en
+                Nederlandstalige begeleiding.
               </p>
-              <a href="nebosh-opleiding.html" class="text-link">Meer over NEBOSH IGC →</a>
             </article>
-  
+
             <article class="pillar-card">
-              <h3>2. Jobs &amp; ZZP Opdrachten</h3>
+              <h3>Jobs &amp; ZZP opdrachten</h3>
               <p>
-                We helpen je na je opleiding met <strong>freelance opdrachten</strong> en
-                vaste banen als veiligheidskundige in Benelux-havens en internationale projecten.
+                Inzicht in dagtarieven (€500–€1.500/dag) en toegang tot
+                opdrachten in Rotterdam, Antwerpen en internationale havens.
               </p>
-              <a href="jobs.html" class="text-link">Bekijk HSE jobs &amp; dagtarieven →</a>
+              <a href="jobs.html" class="pillar-link">
+                Bekijk ZZP opdrachten →
+              </a>
             </article>
-  
+
             <article class="pillar-card">
-              <h3>3. Leren &amp; Groeien</h3>
+              <h3>Jobplacement &amp; Support</h3>
               <p>
-                Via onze <strong>blog</strong>, oefenvragen en NEBOSH-quiz blijf je groeien als HSE-professional.
-                Praktische kennis, in klare taal, voor het echte werkveld.
+                Hulp bij CV, LinkedIn en voorbereiding op gesprekken.
+                We denken met je mee hoe je je NEBOSH diploma omzet
+                in echte opdrachten.
               </p>
-              <a href="blog/index.html" class="text-link">Lees de laatste artikelen →</a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Waarom SafetyXAcademy -->
+      <section class="home-why">
+        <div class="container">
+          <div class="home-why-grid">
+            <div class="home-why-text">
+              <h2>Waarom SafetyXAcademy?</h2>
+              <p class="section-subtitle">
+                We combineren een internationale NEBOSH kwalificatie met
+                lokale havenkennis in Rotterdam en Antwerpen. Dat maakt jou
+                interessant voor werkgevers én opdrachtgevers.
+              </p>
+
+              <ul class="home-why-list">
+                <li>
+                  <strong>Internationaal erkend diploma</strong>
+                  – NEBOSH IGC wordt erkend in 120+ landen.
+                </li>
+                <li>
+                  <strong>Focussed op havens &amp; offshore</strong>
+                  – Benelux-havens, Noorwegen, UK, Middle East.
+                </li>
+                <li>
+                  <strong>Kleine groepen, veel aandacht</strong>
+                  – max 10 studenten per groep, Nederlandstalige begeleiding.
+                </li>
+                <li>
+                  <strong>Support na je examen</strong>
+                  – CV-check, LinkedIn tips en toegang tot opdrachten.
+                </li>
+              </ul>
+            </div>
+
+            <div class="home-why-highlights">
+              <div class="why-card">
+                <span class="why-label">Vanaf</span>
+                <span class="why-value">€3.500</span>
+                <span class="why-note">All-in NEBOSH IGC</span>
+              </div>
+              <div class="why-card">
+                <span class="why-label">Tot</span>
+                <span class="why-value">€1.500</span>
+                <span class="why-note">per dag als ZZP'er</span>
+              </div>
+              <div class="why-card">
+                <span class="why-label">120+</span>
+                <span class="why-note">Landen waar NEBOSH erkend is</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

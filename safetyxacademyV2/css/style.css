@@ -36,13 +36,14 @@ body {
    HEADER & NAVIGATIE
    =================================== */
 .site-header {
-  background: #0a1d37;
-  color: white;
-  padding: 1rem 0;
+  background: #ffffff;
+  color: #0a1d37;
+  padding: 1.25rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(10, 29, 55, 0.08);
+  border-bottom: 1px solid rgba(10, 29, 55, 0.1);
 }
 
 .header-container {
@@ -54,42 +55,84 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ff6b35;
+  color: #0a1d37;
   text-decoration: none;
+  display: inline-block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.3s;
 }
 
 .logo strong {
-  color: white;
+  color: #ff6b35;
+  transition: filter 0.25s ease, text-shadow 0.25s ease;
+}
+
+.logo:hover,
+.logo:focus-visible {
+  color: #0a1d37;
+  transform: scale(1.015);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo:hover strong,
+.logo:focus-visible strong {
+  filter: brightness(1.03);
+  text-shadow: 0 0 6px rgba(255, 107, 53, 0.2);
+}
+
+.logo:active {
+  transform: scale(0.99);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
   gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  color: white;
+  display: inline-block;
+  color: #0a1d37;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  position: relative;
 }
 
 .nav-link:hover,
+.nav-link:focus-visible,
 .nav-link.active {
-  color: #ff6b35;
+  background-color: #ff6b35;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
+  transform: translateY(-1px);
 }
 
 .cta-nav {
-  background: #ff6b35;
-  color: white !important;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  display: inline-block;
+  background-color: #ff6b35;
+  color: #ffffff !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
   font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
 }
 
-.cta-nav:hover {
-  background: #e55a2b;
+.cta-nav:hover,
+.cta-nav:focus-visible {
+  background-color: #ff7a4a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
 }
 
 /* ===================================
@@ -408,18 +451,29 @@ footer a:hover {
   .header-container {
     flex-direction: column;
     text-align: center;
+    gap: 1.25rem;
   }
 
   .nav-list {
-    margin-top: 1rem;
+    margin-top: 0;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    width: 100%;
   }
 
   .nav-link {
-    padding: 0.5rem 0;
+    padding: 0.5rem 1.25rem;
     width: 100%;
     max-width: 200px;
+    text-align: center;
+  }
+
+  .cta-nav {
+    padding: 0.5rem 1.25rem;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
   }
 
   .hero {
@@ -463,5 +517,522 @@ footer a:hover {
 
   .hero h1 {
     font-size: 1.8rem;
+  }
+}
+
+
+
+/* ===========================
+   HOMEPAGE V2 – LAYOUT & STYLING
+   (werkt alleen voor <section class="hero home-hero"> etc.)
+   =========================== */
+
+/* Override algemene .hero voor de homepage */
+.hero.home-hero {
+  display: block;
+  min-height: auto;
+  padding: 4rem 1.5rem 5rem;
+  background: linear-gradient(135deg, #0a1d37 0%, #1a3a5f 100%);
+  color: #ffffff;
+  width: 100%;
+}
+
+/* Centered container for hero content */
+.hero.home-hero .hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Hero image card - large, centered, with rounded corners and shadow */
+.hero.home-hero .hero-image-main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero.home-hero .hero-image-main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+/* Hero heading - responsive with clamp */
+.hero.home-hero h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+  max-width: 800px;
+}
+
+/* Hero subtitle and paragraph - centered, max-width for readability */
+.hero.home-hero .hero-subtitle {
+  max-width: 750px;
+  margin: 0 auto 1rem;
+  text-align: center;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.3rem);
+  line-height: 1.6;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+.hero.home-hero p:not(.hero-subtitle):not(.hero-tagline) {
+  max-width: 750px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.15rem);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* CTA buttons - centered */
+.hero.home-hero .cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero tagline */
+.hero.home-hero .hero-tagline {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.85;
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1rem);
+  max-width: 700px;
+}
+
+/* Button styles - orange pill button */
+.btn-pill-orange {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #ff6b35;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-pill-orange:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-pill-orange .arrow {
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .hero.home-hero {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .hero.home-hero .hero-inner {
+    gap: 1.5rem;
+  }
+
+  .hero.home-hero .hero-image-main {
+    max-width: 100%;
+  }
+
+  .hero.home-hero .hero-image-main img {
+    border-radius: 16px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .hero.home-hero .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .btn-pill-orange,
+  .hero.home-hero .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Pijlers-sectie (NEBOSH / Jobs / Support) */
+.home-pillars {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.home-pillars h2 {
+  text-align: center;
+}
+
+.home-pillars .section-subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  color: #555;
+}
+
+.home-pillars .pillars-grid {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: 1fr;
+}
+
+.home-pillars .pillar-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(10,29,55,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.home-pillars .pillar-card h3 {
+  font-size: 1.25rem;
+  color: #0a1d37;
+  margin-bottom: 0.25rem;
+}
+
+.home-pillars .pillar-card p {
+  font-size: 0.98rem;
+  color: #555;
+}
+
+.home-pillars .pillar-link {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #ff6b35;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease, transform 0.18s ease;
+}
+
+.home-pillars .pillar-link:hover {
+  color: #e45825;
+  transform: translateX(2px);
+}
+
+/* Medium screens: 2 columns */
+@media (min-width: 600px) {
+  .home-pillars .pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 900px) {
+  .home-pillars .pillars-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .home-pillars {
+    padding: 2.5rem 0;
+  }
+}
+
+/* Waarom SafetyXAcademy section */
+.home-why {
+  background: #ffffff;
+  padding: 4rem 0;
+}
+
+.home-why-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+}
+
+.home-why-text {
+  max-width: 700px;
+}
+
+.home-why-text h2 {
+  text-align: left;
+}
+
+.home-why-text .section-subtitle {
+  text-align: left;
+  margin: 0 0 1.5rem;
+  color: #555;
+}
+
+.home-why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.home-why-list li {
+  font-size: 0.98rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.home-why-list strong {
+  color: #0a1d37;
+}
+
+.home-why-highlights {
+  display: grid;
+  gap: 1rem;
+  align-content: flex-start;
+  grid-template-columns: 1fr;
+}
+
+.why-card {
+  background: #0a1d37;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.why-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.why-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff6b35;
+}
+
+.why-note {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Desktop: 2 columns for home-why-grid */
+@media (min-width: 900px) {
+  .home-why-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .home-why-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .home-why {
+    padding: 2.5rem 0;
+  }
+
+  .home-why-text h2 {
+    text-align: center;
+  }
+
+  .home-why-text .section-subtitle {
+    text-align: center;
+  }
+}
+
+/* NEBOSH highlight box */
+.home-nebosh-highlight {
+  padding: 3.5rem 1.5rem;
+}
+
+.home-nebosh-highlight .section-subtitle {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-nebosh-highlight .highlight-box {
+  background: #0a1d37;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 980px;
+  margin: 2rem auto 0 auto;
+}
+
+.home-nebosh-highlight .btn {
+  margin-top: 1rem;
+}
+
+/* Jobs highlight */
+.home-jobs-highlight {
+  padding: 3.5rem 1.5rem;
+  background: #f8fafc;
+}
+
+.home-jobs-highlight .jobs-summary-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.home-jobs-highlight .jobs-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+.home-jobs-highlight .jobs-card h3 {
+  margin-bottom: 0.75rem;
+  color: #0a1d37;
+}
+
+.home-jobs-highlight .jobs-cta-center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* grotere schermen: 3 kolommen */
+@media (min-width: 900px) {
+  .home-jobs-highlight .jobs-summary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Quiz blok op homepage */
+.home-quiz {
+  padding: 3.5rem 1.5rem;
+}
+
+.home-quiz .section-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-quiz .quiz-box {
+  max-width: 800px;
+  margin: 2rem auto 0 auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* Testimonials kort */
+.home-testimonials {
+  padding: 3.5rem 1.5rem;
+  background: #f7f7f9;
+}
+
+.home-testimonials .section-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-testimonials .testimonials-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.home-testimonials .testimonial-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.home-testimonials .testimonial-text {
+  margin-bottom: 1rem;
+}
+
+.home-testimonials .testimonial-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-testimonials .rating {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.home-testimonials .testimonials-cta-center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 2 kolommen op brede schermen */
+@media (min-width: 900px) {
+  .home-testimonials .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Contact teaser */
+.home-contact {
+  padding: 3.5rem 1.5rem 4.5rem;
+  background: #ffffff;
+}
+
+.home-contact .section-subtitle {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-contact .contact-summary-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.home-contact .contact-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.home-contact .contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 1.5rem;
+}
+
+.home-contact .contact-list li {
+  margin-bottom: 0.5rem;
+}
+
+.home-contact .contact-map iframe {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* 2 kolommen op brede schermen */
+@media (min-width: 900px) {
+  .home-contact .contact-summary-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+    align-items: flex-start;
   }
 }
