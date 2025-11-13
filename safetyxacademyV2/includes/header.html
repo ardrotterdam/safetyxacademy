@@ -3,7 +3,10 @@
     <a href="/index.html" class="logo" aria-label="SafetyXAcademy Home">
       <strong>SafetyX</strong>Academy
     </a>
-    <nav aria-label="Hoofdnavigatie">
+    <button class="nav-toggle" aria-expanded="false" aria-label="Open navigatie">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav aria-label="Hoofdnavigatie" class="desktop-nav">
       <ul class="nav-list">
         <li><a href="/nebosh-opleiding.html" class="nav-link">NEBOSH</a></li>
         <li><a href="/blog/index.html" class="nav-link">Blog</a></li>
@@ -11,6 +14,57 @@
         <li><a href="/over-ons.html" class="nav-link">Over Ons</a></li>
         <li><a href="/aanmelden.html" class="nav-link cta-nav">Aanmelden</a></li>
       </ul>
+    </nav>
+  </div>
+  
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay">
+    <nav class="mobile-nav-panel" aria-label="Hoofdmenu">
+      <span class="mobile-nav-label">Navigatie</span>
+      
+      <ul class="mobile-nav-main">
+        <li>
+          <a href="/nebosh-opleiding.html" class="mobile-nav-main-link">
+            <span class="mobile-nav-icon">🎓</span>
+            <div class="mobile-nav-text">
+              <span class="mobile-nav-primary-title">NEBOSH Opleiding</span>
+              <span class="mobile-nav-primary-subtitle">Complete IGC training in Rotterdam</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/jobs.html" class="mobile-nav-main-link">
+            <span class="mobile-nav-icon">💼</span>
+            <div class="mobile-nav-text">
+              <span class="mobile-nav-primary-title">HSE Jobs & ZZP</span>
+              <span class="mobile-nav-primary-subtitle">Dagtarieven & opdrachten</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/over-ons.html" class="mobile-nav-main-link">
+            <span class="mobile-nav-icon">👥</span>
+            <div class="mobile-nav-text">
+              <span class="mobile-nav-primary-title">Over SafetyXAcademy</span>
+              <span class="mobile-nav-primary-subtitle">Wie wij zijn & missie</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+      
+      <ul class="mobile-nav-secondary">
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-nav-cta">
+        <a href="/aanmelden.html" class="btn-pill-orange">
+          Aanmelden NEBOSH (gratis & vrijblijvend)
+        </a>
+        <a href="tel:+31108009512" class="mobile-nav-phone">
+          <span>📞</span> Bel 010-800 9512
+        </a>
+      </div>
     </nav>
   </div>
 </header>
