@@ -1483,3 +1483,309 @@ footer a:hover {
     padding: 2.5rem 1.5rem;
   }
 }
+
+/* ===================================
+   BEDANKT PAGINA – INTERESSE GEREGISTREERD
+   =================================== */
+
+.thankyou-main {
+  background: linear-gradient(135deg, #0a1d37 0%, #1a3a5f 100%);
+  min-height: calc(100vh - 200px);
+  padding: 3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-section {
+  width: 100%;
+}
+
+.thankyou-section .container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.thankyou-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: thankyouSlideIn 0.6s ease-out;
+}
+
+@keyframes thankyouSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.thankyou-checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #10b981;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: thankyouPulse 0.6s ease-out;
+}
+
+@keyframes thankyouPulse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.thankyou-checkmark svg {
+  width: 50px;
+  height: 50px;
+  stroke: #ffffff;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: thankyouDraw 0.6s ease-out 0.3s forwards;
+}
+
+@keyframes thankyouDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.thankyou-card h1 {
+  color: #0a1d37;
+  font-size: clamp(1.8rem, 4vw + 1rem, 2.5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.thankyou-lead {
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.15rem);
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thankyou-lead strong {
+  color: #0a1d37;
+  font-weight: 600;
+}
+
+.thankyou-info-box {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-left: 4px solid #10b981;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  text-align: left;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thankyou-info-box h3 {
+  color: #065f46;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.thankyou-info-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.thankyou-info-box li {
+  padding: 0.5rem 0;
+  color: #065f46;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.thankyou-info-box li::before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.thankyou-info-box strong {
+  color: #047857;
+}
+
+.thankyou-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.thankyou-actions .btn-pill-orange,
+.thankyou-actions .btn {
+  margin: 0;
+}
+
+.thankyou-actions .btn-secondary {
+  background: #0a1d37;
+  color: #ffffff;
+  border: 2px solid #0a1d37;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(10, 29, 55, 0.2);
+}
+
+.thankyou-actions .btn-secondary:hover {
+  background: #1a3a5f;
+  border-color: #1a3a5f;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 29, 55, 0.3);
+}
+
+.thankyou-social {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.thankyou-social p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.thankyou-social-link {
+  display: inline-block;
+  background: #0a1d37;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(10, 29, 55, 0.2);
+}
+
+.thankyou-social-link:hover {
+  background: #1a3a5f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 29, 55, 0.3);
+}
+
+.thankyou-contact {
+  margin-top: 2rem;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.thankyou-contact strong {
+  color: #0a1d37;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.thankyou-contact a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.thankyou-contact a:hover {
+  color: #e55a2b;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .thankyou-main {
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 150px);
+  }
+
+  .thankyou-card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .thankyou-checkmark {
+    width: 70px;
+    height: 70px;
+  }
+
+  .thankyou-checkmark svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .thankyou-lead {
+    font-size: 1rem;
+  }
+
+  .thankyou-info-box {
+    padding: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .thankyou-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .thankyou-actions .btn-pill-orange,
+  .thankyou-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .thankyou-social-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankyou-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .thankyou-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .thankyou-info-box h3 {
+    font-size: 1rem;
+  }
+
+  .thankyou-info-box li {
+    font-size: 0.85rem;
+  }
+}

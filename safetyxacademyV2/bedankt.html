@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- 1. Basis & SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interesse Geregistreerd - Bedankt! | SafetyXAcademy</title>
+  <meta name="robots" content="noindex,nofollow" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91JCVXBQ0W');
+    // Track conversion
+    gtag('event', 'conversion', {
+      'send_to': 'G-91JCVXBQ0W',
+      'event_category': 'form',
+      'event_label': 'interesse_registratie_nebosh'
+    });
+  </script>
+
+  <!-- 2. CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- 3. Favicons -->
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon-192.png" />
+  <meta name="msapplication-TileImage" content="../favicon-512.png" />
+</head>
+
+<body>
+  <!-- HEADER INCLUDE -->
+  <div id="header-include"></div>
+  <script>
+    fetch('includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        const el = document.getElementById('header-include');
+        el.outerHTML = html;
+        setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
+      })
+      .catch(() => console.error('Header failed'));
+  </script>
+
+  <main class="thankyou-main">
+    <section class="thankyou-section">
+      <div class="container">
+        <div class="thankyou-card">
+          <div class="thankyou-checkmark">
+            <svg viewBox="0 0 52 52">
+              <path d="M14 27l7 7 16-16"/>
+            </svg>
+          </div>
+
+          <h1>🎉 Je interesse is geregistreerd!</h1>
+          
+          <p class="thankyou-lead">
+            Bedankt voor je interesse in SafetyXAcademy! Je hoort van ons zodra we de laatste details hebben afgerond en we officieel van start kunnen met de <strong>NEBOSH IGC training in januari 2026</strong>.
+          </p>
+
+          <div class="thankyou-info-box">
+            <h3>📋 Wat gebeurt er nu?</h3>
+            <ul>
+              <li><strong>Je interesse is geregistreerd:</strong> Je bent bij de eerste groep mensen die we informeren!</li>
+              <li><strong>Laatste details afronden:</strong> We ronden de laatste administratieve puntjes af</li>
+              <li><strong>Update ontvangen:</strong> Zodra alles 100% rond is, krijg je als eerste bericht</li>
+              <li><strong>Officiële inschrijving:</strong> Dan kun je je officieel inschrijven voor januari 2026</li>
+              <li><strong>Bij 8-12 personen starten we:</strong> Voor optimale groepsdynamiek en persoonlijke aandacht</li>
+            </ul>
+          </div>
+
+          <div class="thankyou-actions">
+            <a href="index.html" class="btn-pill-orange">🏠 Terug naar Home</a>
+            <a href="blog/index.html" class="btn btn-secondary">📚 Lees onze Blog</a>
+          </div>
+
+          <div class="thankyou-social">
+            <p><strong>Volg ons op social media voor HSE tips & vacatures:</strong></p>
+            <a href="https://www.linkedin.com/company/safetyxacademy" 
+               target="_blank" 
+               class="thankyou-social-link"
+               rel="noopener noreferrer">
+              💼 LinkedIn - SafetyXAcademy
+            </a>
+          </div>
+
+          <p class="thankyou-contact">
+            <strong>Vragen over NEBOSH, carrièremogelijkheden of onze planning?</strong><br>
+            📞 <a href="tel:+31108009512">010-800 9512</a> | 
+            📧 <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:1200px; margin:0 auto;">
+      <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+      <p style="margin-top:0.5rem;">
+        <a href="index.html">Home</a> |
+        <a href="nebosh-opleiding.html">NEBOSH Opleiding</a> |
+        <a href="jobs.html">Jobs &amp; ZZP Opdrachten</a> |
+        <a href="blog/index.html">Blog</a> |
+        <a href="over-ons.html">Over Ons</a> |
+        <a href="../privacy.html">Privacy</a> |
+        <a href="index.html#contact">Contact</a>
+      </p>
+      <p style="margin-top:0.75rem; font-style:italic; color:#ff6b35; font-weight:600;">
+        Train lokaal voor €3.500, werk wereldwijd als HSE professional.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/js/header.js" defer></script>
+
+</body>
+</html>
+
