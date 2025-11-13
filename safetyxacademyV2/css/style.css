@@ -3225,16 +3225,31 @@ body.nav-open .nav-toggle:hover {
   transform: translateY(0);
 }
 
-.mobile-nav-icon {
-  font-size: 1.8rem;
-  flex-shrink: 0;
+.mobile-nav-card-icon {
   width: 40px;
   height: 40px;
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 107, 53, 0.15);
-  border-radius: 12px;
+  background: rgba(10, 29, 55, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.mobile-nav-card-icon .nav-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #ff6b35;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Subtle variation per icon if needed */
+.nav-icon-cap path:nth-child(1) {
+  fill: rgba(255, 107, 53, 0.08);
 }
 
 .mobile-nav-text {
