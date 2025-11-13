@@ -2673,3 +2673,256 @@ footer a:hover {
     padding: 3rem 0;
   }
 }
+
+/* ===================================
+   BLOG PAGINA'S
+   =================================== */
+
+/* Blog Hero Section */
+.blog-hero {
+  background: linear-gradient(135deg, #0a1d37 0%, #1a3a5f 100%);
+  color: #ffffff;
+  padding: 4rem 1.5rem 5rem;
+  text-align: center;
+}
+
+.blog-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blog-hero h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.blog-hero-intro {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.3rem);
+  line-height: 1.7;
+  margin-bottom: 0;
+  opacity: 0.95;
+  font-weight: 500;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Blog List Section */
+.blog-list-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.blog-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(10,29,55,0.06);
+  border-left: 4px solid #ff6b35;
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  border-left-color: #e55a2b;
+}
+
+.blog-card h2 {
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.blog-card h2::after {
+  display: none;
+}
+
+.blog-card h2 a {
+  color: #0a1d37;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.blog-card h2 a:hover {
+  color: #ff6b35;
+}
+
+.blog-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card-excerpt {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.blog-card-link {
+  display: inline-block;
+  color: #ff6b35;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.blog-card-link:hover {
+  color: #e55a2b;
+  transform: translateX(4px);
+}
+
+@media (min-width: 600px) {
+  .blog-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .blog-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Blog Article Header */
+.blog-article-header {
+  background: linear-gradient(135deg, #0a1d37 0%, #1a3a5f 100%);
+  color: #ffffff;
+  padding: 4rem 1.5rem 5rem;
+  text-align: center;
+}
+
+.blog-article-header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blog-article-header h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.blog-article-header .blog-meta {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+/* Blog Article Content */
+.blog-article {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.blog-article-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.blog-intro {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.blog-article-content h2 {
+  font-size: 2rem;
+  color: #0a1d37;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.blog-article-content h2::after {
+  display: none;
+}
+
+.blog-article-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.blog-article-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.blog-article-content li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.blog-article-content a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.blog-article-content a:hover {
+  color: #e55a2b;
+  text-decoration: underline;
+}
+
+.blog-article-content strong {
+  color: #0a1d37;
+}
+
+/* Mobile adjustments for Blog */
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .blog-article-header {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .blog-list-section {
+    padding: 3rem 0;
+  }
+
+  .blog-article {
+    padding: 3rem 0;
+  }
+
+  .blog-article-content {
+    padding: 0 1rem;
+  }
+
+  .blog-article-content h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+
+  .blog-intro {
+    font-size: 1.1rem;
+  }
+
+  .blog-card h2 a {
+    font-size: 1.3rem;
+  }
+}

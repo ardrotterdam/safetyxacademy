@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- 1. Basis & SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog over NEBOSH, HSE jobs & ZZP | SafetyXAcademy</title>
+  <meta name="description" content="Lees artikelen over NEBOSH IGC, het verschil tussen NEBOSH en MVK en HSE ZZP dagtarieven in Rotterdam en Antwerpen. Voor Nederlandstalige HSE-professionals." />
+  <link rel="canonical" href="https://safetyxacademy.nl/blog/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog over NEBOSH, HSE jobs & ZZP | SafetyXAcademy">
+  <meta property="og:description" content="Lees artikelen over NEBOSH IGC, het verschil tussen NEBOSH en MVK en HSE ZZP dagtarieven in Rotterdam en Antwerpen. Voor Nederlandstalige HSE-professionals.">
+  <meta property="og:url" content="https://safetyxacademy.nl/blog/">
+  <meta property="og:image" content="https://safetyxacademy.nl/images/nebosh-igc-training-rotterdam-students.webp">
+  <meta property="og:locale" content="nl_NL">
+
+  <!-- 2. CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- 3. Favicons -->
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon-192.png" />
+  <meta name="msapplication-TileImage" content="../favicon-512.png" />
+</head>
+
+<body>
+  <!-- HEADER INCLUDE -->
+  <div id="header-include"></div>
+  <script>
+    fetch('../includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        const el = document.getElementById('header-include');
+        el.outerHTML = html;
+        setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
+      })
+      .catch(() => console.error('Header failed'));
+  </script>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+      <div class="blog-hero-inner">
+        <h1>Blog over NEBOSH, HSE jobs &amp; ZZP</h1>
+        <p class="blog-hero-intro">
+          Welkom op het kenniscentrum van SafetyXAcademy. Hier delen we praktische inzichten over NEBOSH opleidingen, 
+          HSE carrières, ZZP-opdrachten en dagtarieven voor Nederlandstalige veiligheidskundigen. Of je nu net begint 
+          met je HSE-carrière of al ervaring hebt: hier vind je nuttige tips en inzichten.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog List -->
+    <section class="blog-list-section">
+      <div class="container">
+        <div class="blog-list">
+          
+          <article class="blog-card">
+            <h2><a href="wat-is-nebosh-igc.html">Wat is NEBOSH IGC? Uitleg voor Nederlandstalige HSE'ers</a></h2>
+            <p class="blog-meta">
+              <time datetime="2025-01-20">20 januari 2025</time>
+            </p>
+            <p class="blog-card-excerpt">
+              Wat is NEBOSH IGC precies, voor wie is deze opleiding bedoeld en waarom is het interessant voor 
+              Nederlandstalige veiligheidskundigen die willen werken in havens, offshore of internationale projecten? 
+              In dit artikel leggen we alles uit over de NEBOSH International General Certificate.
+            </p>
+            <a href="wat-is-nebosh-igc.html" class="blog-card-link">Lees meer →</a>
+          </article>
+
+          <article class="blog-card">
+            <h2><a href="nebosh-vs-mkv.html">NEBOSH vs MVK: wat is beter voor jouw carrière?</a></h2>
+            <p class="blog-meta">
+              <time datetime="2025-01-18">18 januari 2025</time>
+            </p>
+            <p class="blog-card-excerpt">
+              Vergelijk NEBOSH IGC met de Nederlandse MVK-opleiding. Wat zijn de kostenverschillen? Waar wordt elk 
+              diploma erkend? En wat past beter bij jouw ambities? Een eerlijke vergelijking om je te helpen de juiste 
+              keuze te maken voor je HSE-carrière.
+            </p>
+            <a href="nebosh-vs-mkv.html" class="blog-card-link">Lees meer →</a>
+          </article>
+
+          <article class="blog-card">
+            <h2><a href="hse-zzp-dagtarieven-rotterdam-antwerpen.html">HSE ZZP dagtarieven in havens: Rotterdam &amp; Antwerpen</a></h2>
+            <p class="blog-meta">
+              <time datetime="2025-01-15">15 januari 2025</time>
+            </p>
+            <p class="blog-card-excerpt">
+              Een praktisch overzicht van HSE ZZP dagtarieven in de havens van Rotterdam en Antwerpen. Wat verdienen 
+              veiligheidskundigen met NEBOSH in de Benelux-havens? Welke factoren bepalen je dagtarief en hoe kun je 
+              je marktwaarde verhogen?
+            </p>
+            <a href="hse-zzp-dagtarieven-rotterdam-antwerpen.html" class="blog-card-link">Lees meer →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div style="max-width:1200px; margin:0 auto;">
+      <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
+      <p style="margin-top:0.5rem;">
+        <a href="../index.html">Home</a> |
+        <a href="../nebosh-opleiding.html">NEBOSH Opleiding</a> |
+        <a href="../jobs.html">Jobs &amp; ZZP Opdrachten</a> |
+        <a href="index.html">Blog</a> |
+        <a href="../over-ons.html">Over Ons</a> |
+        <a href="../privacy.html">Privacy</a> |
+        <a href="../index.html#contact">Contact</a>
+      </p>
+      <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
+        Train lokaal voor €3.500, werk wereldwijd als HSE professional.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/header.js" defer></script>
+
+</body>
+</html>
+
