@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- 1. Basis & SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEBOSH Opleiding Nederland | SafetyX Academy Rotterdam</title>
+  <meta name="description" content="NEBOSH IGC opleiding in het Nederlands. Van MVK naar NEBOSH diploma Nederland. Veiligheidskundige training in Rotterdam en online." />
+  <meta name="keywords" content="NEBOSH opleiding, NEBOSH diploma Nederland, veiligheidskundige opleiding, NEBOSH Rotterdam, HSE training" />
+  <link rel="canonical" href="https://safetyxacademy.nl/" />
+
+  <!-- 2. CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- 3. Favicons (optioneel, mag je zo laten) -->
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png" />
+  <meta name="msapplication-TileImage" content="favicon-512.png" />
+</head>
+
+<body>
+  <!-- HEADER WORDT HIER INGELADEN -->
+  <div id="header-include"></div>
+
+  <!-- HERO SECTIE – SEO + Conversie -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>NEBOSH Opleiding Nederland – In Je Eigen Taal</h1>
+      <p>
+        Van <strong>MVK</strong> naar <strong>NEBOSH diploma Nederland</strong>:
+        wij trainen jou in het Nederlands, met Engelse examenvoorbereiding.
+        De shortcut naar topbanen in oil &amp; gas, construction en HSE wereldwijd.
+      </p>
+      <a href="aanmelden.html" class="btn">Aanmelden NEBOSH IGC</a>
+      <p class="hero-sub">Rotterdam | Online | Praktijkgericht</p>
+    </div>
+  </section>
+
+  <!-- QUIZ TEASER – Verlaagt bounce, verhoogt engagement -->
+  <section class="quiz-teaser">
+    <h2>Test Je Kennis: Gratis NEBOSH Voorbeeldvragen</h2>
+    <div class="quiz-grid">
+      <div class="quiz-question">
+        <p>1. Wat is de eerste stap bij een chemische lekkage?</p>
+        <label><input type="radio" name="q1"> A) Wachten op hulp</label><br />
+        <label><input type="radio" name="q1"> B) Alarm slaan &amp; evacueren</label><br />
+        <label><input type="radio" name="q1"> C) Spoelen met water</label>
+        <button onclick="alert('Juist: B')">Antwoord</button>
+      </div>
+    </div>
+    <a href="#quiz" class="btn-secondary">Bekijk alle 15 vragen →</a>
+  </section>
+
+  <!-- VOLLEDIGE NEBOSH QUIZ – 15 VRAGEN -->
+  <section class="quiz-full" id="quiz">
+    <div class="container">
+      <h2>Test Je NEBOSH Kennis – 15 Vragen</h2>
+      <p class="quiz-intro">
+        Beantwoord de vragen. Scoor je <strong>12 of meer</strong>? Dan ben je klaar voor NEBOSH IGC.
+      </p>
+
+      <!-- Voortgang -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <p class="progress-text"><span id="questionCounter">1</span> / 15</p>
+
+      <!-- Vraag container -->
+      <div class="quiz-question-active" id="quizQuestion">
+        <!-- Vragen worden hier geladen via JS -->
+      </div>
+
+      <!-- Knoppen -->
+      <div class="quiz-buttons">
+        <button id="nextBtn" class="btn" onclick="nextQuestion()" disabled>Volgende vraag</button>
+      </div>
+
+      <!-- Resultaat -->
+      <div class="quiz-result" id="quizResult" style="display:none;">
+        <h3>Jouw resultaat: <span id="finalScore">0</span>/15</h3>
+        <p id="resultMessage"></p>
+        <a href="aanmelden.html" class="btn" id="aanmeldenBtn" style="display:none;">
+          Direct aanmelden voor NEBOSH IGC →
+        </a>
+        <button class="btn-secondary" onclick="restartQuiz()">Opnieuw proberen</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER SECTIE – Vertrouwen & SEO -->
+  <section class="founder">
+    <img
+      src="images/nando-breure-founder.webp"
+      alt="Nando Breure - oprichter SafetyX Academy - NEBOSH trainer Rotterdam"
+      class="founder-img"
+    />
+    <div class="founder-text">
+      <h3>Ik ben Nando Breure</h3>
+      <p>
+        Al meer dan 10 jaar help ik Nederlanders en Belgen van MVK naar
+        <strong>NEBOSH diploma Nederland</strong>. Geen droge theorie, maar
+        praktijkcases, vertaling en directe aansluiting op internationale HSE-banen.
+      </p>
+      <a href="over-ons.html" class="btn-outline">Meer over ons →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2025 SafetyX Academy – NEBOSH Opleiding Rotterdam |
+      <a href="privacy.html">Privacy</a>
+    </p>
+  </footer>
+
+  <!-- HEADER LADEN VIA INCLUDE -->
+  <script>
+    fetch('includes/header.html')
+      .then(r => r.text())
+      .then(html => {
+        const el = document.getElementById('header-include');
+        el.outerHTML = html;
+        setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
+      })
+      .catch(() => console.error('Header laden mislukt'));
+  </script>
+
+  <!-- HEADER MOBILE MENU FUNCTIONALITY -->
+  <script src="../js/header.js"></script>
+
+  <!-- QUIZ LOGICA -->
+  <script>
+    const questions = [
+      { question: "Wat is de eerste stap bij een chemische lekkage?", options: ["A) Wachten op hulp", "B) Alarm slaan & evacueren", "C) Spoelen met water"], answer: 1 },
+      { question: "Welke kleur heeft een waarschuwingsbord voor giftige stoffen?", options: ["A) Geel", "B) Blauw", "C) Rood"], answer: 0 },
+      { question: "Wat betekent R.A.M.S.?", options: ["A) Risk Assessment Method Statement", "B) Routine Activity Management System", "C) Repair And Maintenance Schedule"], answer: 0 },
+      { question: "Hoe vaak moet een brandblusser minimaal gecontroleerd worden?", options: ["A) Elk kwartaal", "B) Jaarlijks", "C) Elke 5 jaar"], answer: 1 },
+      { question: "Wat is de maximale werkhoogte zonder valbeveiliging?", options: ["A) 1 meter", "B) 2 meter", "C) Geen limiet"], answer: 1 },
+      { question: "Welke PBM is verplicht bij laswerk?", options: ["A) Veiligheidsschoenen", "B) Lashandschoenen + laskap", "C) Oorkappen"], answer: 1 },
+      { question: "Wat is een 'near miss'?", options: ["A) Een klein ongeluk", "B) Een incident zonder letsel maar met risico", "C) Een administratieve fout"], answer: 1 },
+      { question: "Wie is verantwoordelijk voor een veilige werkplek?", options: ["A) Alleen de werkgever", "B) Alleen de werknemer", "C) Iedereen"], answer: 2 },
+      { question: "Wat is de juiste volgorde bij brand: R.A.C.E.?", options: ["A) Redden → Alarmeren → Blussen → Evacueren", "B) Redden → Alarmeren → Confine → Evacueren", "C) Redden → Alarmeren → Contain → Extinguish"], answer: 1 },
+      { question: "Hoe lang moet een EHBO-kit bewaard worden?", options: ["A) 1 jaar", "B) Tot vervaldatum", "C) 5 jaar"], answer: 1 },
+      { question: "Wat betekent COSHH?", options: ["A) Control of Substances Hazardous to Health", "B) Company Safety Health Handbook", "C) Construction Site Health Oversight"], answer: 0 },
+      { question: "Welke frequentie voor trillingen is het schadelijkst?", options: ["A) 5–10 Hz", "B) 50–100 Hz", "C) >500 Hz"], answer: 0 },
+      { question: "Waarvoor is een 'permit to work' verplicht?", options: ["A) Kantoorwerk", "B) Werk in besloten ruimtes", "C) Koffie halen"], answer: 1 },
+      { question: "Hoeveel decibel is het maximum zonder gehoorbescherming (8 uur)?", options: ["A) 80 dB", "B) 85 dB", "C) 90 dB"], answer: 1 },
+      { question: "Wat is de minimale breedte van een nooduitgang?", options: ["A) 60 cm", "B) 80 cm", "C) 100 cm"], answer: 1 }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let selectedAnswer = null;
+
+    const quizQuestion = document.getElementById('quizQuestion');
+    const nextBtn = document.getElementById('nextBtn');
+    const progressBar = document.getElementById('progressBar');
+    const questionCounter = document.getElementById('questionCounter');
+    const quizResult = document.getElementById('quizResult');
+    const finalScore = document.getElementById('finalScore');
+    const resultMessage = document.getElementById('resultMessage');
+    const aanmeldenBtn = document.getElementById('aanmeldenBtn');
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      quizQuestion.innerHTML = `
+        <p class="question-text">${q.question}</p>
+        ${q.options.map((opt, i) => `
+          <label class="quiz-option">
+            <input type="radio" name="answer" value="${i}" onchange="selectAnswer(${i})">
+            ${opt}
+          </label><br>
+        `).join('')}
+      `;
+      nextBtn.disabled = true;
+      selectedAnswer = null;
+      updateProgress();
+    }
+
+    function selectAnswer(answer) {
+      selectedAnswer = answer;
+      nextBtn.disabled = false;
+    }
+
+    function nextQuestion() {
+      if (selectedAnswer === questions[currentQuestion].answer) {
+        score++;
+      }
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function updateProgress() {
+      const progress = ((currentQuestion + 1) / questions.length) * 100;
+      progressBar.style.width = progress + '%';
+      questionCounter.textContent = currentQuestion + 1;
+    }
+
+    function showResult() {
+      document.querySelector('.quiz-buttons').style.display = 'none';
+      quizQuestion.style.display = 'none';
+      quizResult.style.display = 'block';
+      finalScore.textContent = score;
+
+      if (score >= 12) {
+        resultMessage.textContent = "Uitstekend! Je bent klaar voor de NEBOSH IGC opleiding.";
+        aanmeldenBtn.style.display = 'inline-block';
+      } else if (score >= 8) {
+        resultMessage.textContent = "Goed gedaan! Nog een beetje oefenen en je bent er.";
+      } else {
+        resultMessage.textContent = "Meer studie nodig. Maar geen zorgen – wij helpen je.";
+      }
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      score = 0;
+      quizResult.style.display = 'none';
+      document.querySelector('.quiz-buttons').style.display = 'block';
+      quizQuestion.style.display = 'block';
+      loadQuestion();
+    }
+
+    // Start quiz
+    loadQuestion();
+  </script>
+
+  <!-- Kleine extra JS (scroll-effect) komt uit js/nav.js -->
+  <script src="js/nav.js"></script>
+</body>
+</html>
