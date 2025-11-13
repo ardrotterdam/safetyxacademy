@@ -626,21 +626,25 @@ footer a:hover {
 }
 
 /* Button styles - orange pill button */
-.btn-pill-orange {
+.btn-pill-orange,
+.btn-pill-orange:visited {
   display: inline-block;
   padding: 1rem 2rem;
   background: #ff6b35;
   color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.05rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
-.btn-pill-orange:hover {
+.btn-pill-orange:hover,
+.btn-pill-orange:focus-visible {
   background: #e55a2b;
+  color: #ffffff;
+  text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
@@ -2887,6 +2891,15 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Ensure orange pill buttons in blog articles always have white text */
+.blog-article-content .btn-pill-orange,
+.blog-article-content .btn-pill-orange:visited,
+.blog-article-content .btn-pill-orange:hover,
+.blog-article-content .btn-pill-orange:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .blog-article-content strong {
   color: #0a1d37;
 }
@@ -2924,5 +2937,85 @@ footer a:hover {
 
   .blog-card h2 a {
     font-size: 1.3rem;
+  }
+}
+
+/* Blog – FAQ section (Veerhaven guide) */
+.blog-faq {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.blog-faq details {
+  margin-bottom: 1rem;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.blog-faq details:hover {
+  border-color: #ff6b35;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1);
+}
+
+.blog-faq summary {
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  color: #0a1d37;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.blog-faq summary::after {
+  content: "▼";
+  font-size: 0.75rem;
+  color: #ff6b35;
+  transition: transform 0.3s ease;
+}
+
+.blog-faq details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.blog-faq details p {
+  padding: 0 1.5rem 1.5rem;
+  margin: 0;
+  color: #444;
+  line-height: 1.8;
+}
+
+.blog-faq details a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blog-faq details a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .blog-faq {
+    padding: 1.5rem;
+  }
+
+  .blog-faq summary {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .blog-faq details p {
+    padding: 0 1rem 1rem;
   }
 }
