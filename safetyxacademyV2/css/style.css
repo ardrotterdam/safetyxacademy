@@ -52,6 +52,13 @@ body {
   align-items: center;
 }
 
+/* Header inner wrapper for mobile logo + hamburger alignment */
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
@@ -458,9 +465,14 @@ footer a:hover {
   }
 
   .header-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header-inner {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-list {
@@ -3033,87 +3045,89 @@ body.nav-open {
 /* Hamburger button - hidden on desktop, visible on mobile */
 .nav-toggle {
   display: none;
-  background: transparent;
-  border: 2px solid rgba(10, 29, 55, 0.2);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  background: #ff6b35;
+  border: none;
+  border-radius: 999px;
+  width: 42px;
+  height: 42px;
   padding: 0;
   cursor: pointer;
   position: relative;
   z-index: 1001;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
 }
 
 .nav-toggle:hover,
 .nav-toggle:focus-visible {
-  border-color: #ff6b35;
-  background: rgba(255, 107, 53, 0.1);
+  background: #e55a2b;
   outline: none;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+  transform: scale(1.05);
+}
+
+.nav-toggle:active {
+  transform: scale(0.95);
 }
 
 .nav-toggle-icon {
   display: block;
-  width: 24px;
-  height: 20px;
+  width: 18px;
+  height: 12px;
   position: relative;
-  margin: 0 auto;
 }
 
-.nav-toggle-icon::before,
-.nav-toggle-icon::after,
-.nav-toggle-icon {
-  background: #0a1d37;
-  transition: all 0.3s ease;
-}
-
-.nav-toggle-icon::before,
-.nav-toggle-icon::after {
-  content: '';
+.nav-toggle-line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 999px;
+  transition: all 0.25s ease;
   position: absolute;
   left: 0;
-  width: 100%;
-  height: 3px;
-  border-radius: 2px;
 }
 
-.nav-toggle-icon::before {
+.nav-toggle-line:nth-child(1) {
   top: 0;
 }
 
-.nav-toggle-icon::after {
+.nav-toggle-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-toggle-line:nth-child(3) {
   bottom: 0;
 }
 
-.nav-toggle-icon {
-  height: 3px;
+/* Hamburger animation when menu is open - X formation */
+body.nav-open .nav-toggle-line:nth-child(1) {
   top: 50%;
-  transform: translateY(-50%);
-  border-radius: 2px;
+  transform: translateY(-50%) rotate(45deg);
 }
 
-/* Hamburger animation when menu is open */
-body.nav-open .nav-toggle-icon {
-  background: transparent;
+body.nav-open .nav-toggle-line:nth-child(2) {
+  opacity: 0;
+  transform: translateY(-50%) scale(0);
 }
 
-body.nav-open .nav-toggle-icon::before {
-  transform: rotate(45deg) translate(6px, 6px);
-  background: #ffffff;
-}
-
-body.nav-open .nav-toggle-icon::after {
-  transform: rotate(-45deg) translate(6px, -6px);
-  background: #ffffff;
+body.nav-open .nav-toggle-line:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 body.nav-open .nav-toggle {
-  border-color: rgba(255, 255, 255, 0.3);
+  background: #ff6b35;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.35);
 }
 
 body.nav-open .nav-toggle:hover {
-  border-color: rgba(255, 255, 255, 0.5);
+  background: #e55a2b;
 }
 
 /* Mobile Navigation Overlay */
@@ -3347,8 +3361,6 @@ body.nav-open .nav-toggle:hover {
 @media (max-width: 900px) {
   .nav-toggle {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .desktop-nav {
@@ -3356,7 +3368,14 @@ body.nav-open .nav-toggle:hover {
   }
 
   .header-container {
+    justify-content: flex-start;
+  }
+
+  .header-inner {
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    padding: 0;
   }
 }
 
@@ -3372,5 +3391,13 @@ body.nav-open .nav-toggle:hover {
 
   .desktop-nav {
     display: block;
+  }
+
+  .header-inner {
+    flex: 0 1 auto;
+  }
+
+  .header-container {
+    justify-content: space-between;
   }
 }
