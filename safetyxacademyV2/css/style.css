@@ -2876,6 +2876,17 @@ footer a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.blog-hero-image img[src=""],
+.blog-hero-image img:not([src]) {
+  display: none;
+}
+
+/* Fallback if image fails to load */
+.blog-hero-image::before {
+  content: '';
+  display: none;
+}
+
 /* Blog Article Content */
 .blog-article {
   padding: 4rem 0;
