@@ -2817,6 +2817,25 @@ footer a:hover {
   transform: translateX(4px);
 }
 
+.blog-thumbnail-link {
+  display: block;
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.blog-thumbnail {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
 @media (min-width: 600px) {
   .blog-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
