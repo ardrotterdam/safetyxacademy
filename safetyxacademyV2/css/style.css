@@ -2766,6 +2766,10 @@ footer a:hover {
   transition: transform 0.3s ease;
 }
 
+.blog-card-image--nebosh-student {
+  object-position: 70% 40%;
+}
+
 .blog-card:hover .blog-card-image {
   transform: scale(1.02);
 }
