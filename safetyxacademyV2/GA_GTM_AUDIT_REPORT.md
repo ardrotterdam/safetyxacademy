@@ -226,3 +226,4 @@ Add this code to each page's `<head>` section (before `</head>`):
 **Pages with Tracking:** 2 (18%)  
 **Pages Missing Tracking:** 9 (82%)
 
+

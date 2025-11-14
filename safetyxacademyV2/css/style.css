@@ -2747,12 +2747,27 @@ footer a:hover {
   border: 1px solid rgba(10,29,55,0.06);
   border-left: 4px solid #ff6b35;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .blog-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
   border-left-color: #e55a2b;
+}
+
+.blog-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px 16px 0 0;
+  margin: -2rem -2rem 1.5rem -2rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image {
+  transform: scale(1.02);
 }
 
 .blog-card h2 {
