@@ -3830,3 +3830,15 @@ header nav ul a.active {
     border-radius: 8px;
   }
 }
+
+/* === MENU SPACING === */
+
+header .nav-menu {
+  gap: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  header .nav-menu {
+    gap: 1.5rem;
+  }
+}
