@@ -349,6 +349,108 @@
       </div>
     </section>
 
+    <!-- 6b. NEBOSH Quiz -->
+    <section id="nebosh-quiz" class="nebosh-quiz">
+      <div class="container">
+        <header class="nebosh-quiz__header">
+          <h2>Test jezelf met de NEBOSH-quiz</h2>
+          <p class="nebosh-quiz__intro">
+            Ontdek in een paar vragen of de NEBOSH IGC-opleiding bij je past en hoe sterk je basiskennis HSE al is.
+          </p>
+          <p class="nebosh-quiz__intro nebosh-quiz__intro--en">
+            Answer a few questions to see if the NEBOSH IGC course fits your goals and how strong your basic HSE knowledge is.
+          </p>
+        </header>
+        <div class="nebosh-quiz__accordion">
+          <!-- Vraag 1 -->
+          <article class="quiz-item">
+            <button class="quiz-item__header" type="button" aria-expanded="false">
+              <span class="quiz-item__label">Vraag 1 / Question 1</span>
+              <span class="quiz-item__question">
+                Wat is het belangrijkste doel van een RI&amp;E?<br>
+                <span class="quiz-item__question-en">
+                  What is the main purpose of a risk assessment?
+                </span>
+              </span>
+              <span class="quiz-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="quiz-item__body" hidden>
+              <p><strong>Antwoord (NL):</strong> Het belangrijkste doel is om gevaren te identificeren en het risico voor mensen, milieu en materieel te verkleinen door passende beheersmaatregelen te nemen.</p>
+              <p><strong>Answer (EN):</strong> The main purpose is to identify hazards and reduce the risk to people, the environment and assets by implementing suitable control measures.</p>
+            </div>
+          </article>
+          <!-- Vraag 2 -->
+          <article class="quiz-item">
+            <button class="quiz-item__header" type="button" aria-expanded="false">
+              <span class="quiz-item__label">Vraag 2 / Question 2</span>
+              <span class="quiz-item__question">
+                Voor wie is NEBOSH IGC vooral interessant?<br>
+                <span class="quiz-item__question-en">
+                  Who is the NEBOSH IGC mainly designed for?
+                </span>
+              </span>
+              <span class="quiz-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="quiz-item__body" hidden>
+              <p><strong>Antwoord (NL):</strong> Voor (aankomende) HSE- en veiligheidskundigen, supervisors en managers die verantwoordelijk zijn voor veiligheid, gezondheid en milieu – vooral in sectoren zoals havens, offshore, industrie en construction.</p>
+              <p><strong>Answer (EN):</strong> It is aimed at current and aspiring HSE professionals, supervisors and managers who are responsible for health, safety and environment – especially in high-risk sectors like ports, offshore, industry and construction.</p>
+            </div>
+          </article>
+          <!-- Vraag 3 -->
+          <article class="quiz-item">
+            <button class="quiz-item__header" type="button" aria-expanded="false">
+              <span class="quiz-item__label">Vraag 3 / Question 3</span>
+              <span class="quiz-item__question">
+                Hoe wordt NEBOSH IGC meestal geëxamineerd?<br>
+                <span class="quiz-item__question-en">
+                  How is the NEBOSH IGC usually assessed?
+                </span>
+              </span>
+              <span class="quiz-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="quiz-item__body" hidden>
+              <p><strong>Antwoord (NL):</strong> Via een open-book examen met scenario's en korte/uitgebreide schriftelijke antwoorden, plus een praktijkopdracht waarin je een werkplek beoordeelt en verbetervoorstellen doet.</p>
+              <p><strong>Answer (EN):</strong> Through an open-book exam based on scenarios with short and longer written answers, combined with a practical assignment where you assess a workplace and propose improvements.</p>
+            </div>
+          </article>
+          <!-- Vraag 4 -->
+          <article class="quiz-item">
+            <button class="quiz-item__header" type="button" aria-expanded="false">
+              <span class="quiz-item__label">Vraag 4 / Question 4</span>
+              <span class="quiz-item__question">
+                Wat is een typisch voordeel van NEBOSH ten opzichte van een nationaal diploma zoals MVK?<br>
+                <span class="quiz-item__question-en">
+                  What is a typical advantage of NEBOSH compared to a national diploma?
+                </span>
+              </span>
+              <span class="quiz-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="quiz-item__body" hidden>
+              <p><strong>Antwoord (NL):</strong> NEBOSH IGC is internationaal erkend in meer dan 120 landen, waardoor je makkelijker kunt solliciteren op internationale functies of projecten in het buitenland.</p>
+              <p><strong>Answer (EN):</strong> The NEBOSH IGC is internationally recognised in over 120 countries, which makes it easier to apply for international roles or projects abroad.</p>
+            </div>
+          </article>
+          <!-- Vraag 5 -->
+          <article class="quiz-item">
+            <button class="quiz-item__header" type="button" aria-expanded="false">
+              <span class="quiz-item__label">Vraag 5 / Question 5</span>
+              <span class="quiz-item__question">
+                Welke taalvaardigheid heb je minimaal nodig voor NEBOSH IGC?<br>
+                <span class="quiz-item__question-en">
+                  What is the minimum language level recommended for NEBOSH IGC?
+                </span>
+              </span>
+              <span class="quiz-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="quiz-item__body" hidden>
+              <p><strong>Antwoord (NL):</strong> NEBOSH adviseert ongeveer B2-niveau Engels, omdat de examens en officiële materialen in het Engels zijn. In de klas kunnen we veel in het Nederlands toelichten, maar je moet examen-vragen in het Engels kunnen lezen en beantwoorden.</p>
+              <p><strong>Answer (EN):</strong> NEBOSH recommends around B2 level English, because the exams and official materials are in English. In class we can explain a lot in Dutch, but you still need to read and answer exam questions in English.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- 7. CTA -->
     <section class="nebosh-section nebosh-cta">
       <div class="container">
@@ -387,6 +489,35 @@
 
   <!-- JS -->
   <script src="/js/header.js" defer></script>
+  
+  <!-- Quiz Accordion JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headers = document.querySelectorAll(".quiz-item__header");
+
+      headers.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+          // Optioneel: andere items sluiten voor echte "accordion"
+          headers.forEach((other) => {
+            if (other !== btn) {
+              other.setAttribute("aria-expanded", "false");
+              const otherBody = other.nextElementSibling;
+              if (otherBody) otherBody.hidden = true;
+            }
+          });
+
+          // Deze togglen
+          btn.setAttribute("aria-expanded", String(!isExpanded));
+          const body = btn.nextElementSibling;
+          if (body) {
+            body.hidden = isExpanded;
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
