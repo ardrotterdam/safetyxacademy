@@ -3789,3 +3789,46 @@ header nav ul a {
     text-align: center;
   }
 }
+
+/* === MENU HOVER & ACTIVE – FINAL FIX === */
+
+header .nav-menu a,
+header nav ul a {
+  color: #333 !important;
+  transition: all 0.3s ease !important;
+  display: inline-block;
+}
+
+/* HOVER */
+header .nav-menu a:hover,
+header nav ul a:hover {
+  background-color: #FF6B35 !important;
+  color: white !important;
+  border-radius: 8px;
+  padding: 0.5rem 1rem !important;
+}
+
+/* ACTIVE PAGE – BLIJFT BIJ SCROLL */
+header .nav-menu a.active,
+header nav ul a.active,
+header .nav-menu a[aria-current="page"],
+header nav ul a[aria-current="page"] {
+  background-color: #FF6B35 !important;
+  color: white !important;
+  border-radius: 8px;
+  padding: 0.5rem 1rem !important;
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  header .nav-menu a:hover,
+  header .nav-menu a.active,
+  header nav ul a:hover,
+  header nav ul a.active {
+    background-color: #FF6B35 !important;
+    color: white !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 8px;
+  }
+}

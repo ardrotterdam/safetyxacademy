@@ -107,6 +107,7 @@
     // Remove active class from all nav links first
     navLinks.forEach(link => {
       link.classList.remove('nav-link--active');
+      link.classList.remove('active'); // Also remove 'active' class
     });
 
     // Map pathnames to their corresponding nav links
@@ -115,6 +116,7 @@
       '/': '/index.html',
       '/nebosh-opleiding.html': '/nebosh-opleiding.html',
       '/nebosh-quiz.html': '/nebosh-quiz.html',
+      '/nebosh-benelux-ports.html': '/nebosh-benelux-ports.html',
       '/blog/index.html': '/blog/index.html',
       '/jobs.html': '/jobs.html',
       '/over-ons.html': '/over-ons.html',
@@ -143,6 +145,7 @@
         const href = link.getAttribute('href');
         if (href === activePath || (activePath === '/index.html' && (href === '/index.html' || href === '/'))) {
           link.classList.add('nav-link--active');
+          link.classList.add('active'); // Also add 'active' class for new CSS
         }
       });
     }
