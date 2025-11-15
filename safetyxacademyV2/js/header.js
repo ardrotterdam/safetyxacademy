@@ -98,5 +98,77 @@
 
   // Also listen for headerloaded event (in case header is loaded via fetch)
   window.addEventListener('headerloaded', initMobileNav, { once: true });
+
+  // Set active navigation link based on current pathname
+  function setActiveNavLink() {
+    const pathname = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Remove active class from all nav links first
+    navLinks.forEach(link => {
+      link.classList.remove('nav-link--active');
+    });
+
+    // Map pathnames to their corresponding nav links
+    const pathMap = {
+      '/index.html': '/index.html',
+      '/': '/index.html',
+      '/nebosh-opleiding.html': '/nebosh-opleiding.html',
+      '/nebosh-quiz.html': '/nebosh-quiz.html',
+      '/blog/index.html': '/blog/index.html',
+      '/jobs.html': '/jobs.html',
+      '/over-ons.html': '/over-ons.html',
+      '/aanmelden.html': '/aanmelden.html'
+    };
+
+    // Determine which link should be active
+    let activePath = null;
+
+    // Check exact matches first
+    if (pathMap[pathname]) {
+      activePath = pathMap[pathname];
+    }
+    // Check for blog pages (any path starting with /blog/)
+    else if (pathname.startsWith('/blog/')) {
+      activePath = '/blog/index.html';
+    }
+    // Check for home page (index.html or root)
+    else if (pathname === '/index.html' || pathname === '/' || pathname === '') {
+      activePath = '/index.html';
+    }
+
+    // Find and activate the matching nav link
+    if (activePath) {
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === activePath || (activePath === '/index.html' && (href === '/index.html' || href === '/'))) {
+          link.classList.add('nav-link--active');
+        }
+      });
+    }
+  }
+
+  // Initialize active nav link when DOM is ready
+  function initActiveNav() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (navLinks.length === 0) {
+      // Header might not be loaded yet, wait for headerloaded event
+      window.addEventListener('headerloaded', initActiveNav, { once: true });
+      return;
+    }
+
+    setActiveNavLink();
+  }
+
+  // Run on DOMContentLoaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initActiveNav);
+  } else {
+    initActiveNav();
+  }
+
+  // Also listen for headerloaded event (in case header is loaded via fetch)
+  window.addEventListener('headerloaded', setActiveNavLink, { once: false });
 })();
 

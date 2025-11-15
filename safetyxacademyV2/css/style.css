@@ -115,8 +115,14 @@ body {
 }
 
 .nav-link:hover,
-.nav-link:focus-visible,
-.nav-link.active {
+.nav-link:focus-visible {
+  background-color: #ff6b35;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
+  transform: translateY(-1px);
+}
+
+.nav-link--active {
   background-color: #ff6b35;
   color: #ffffff;
   box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
