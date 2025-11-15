@@ -3790,16 +3790,18 @@ header nav ul a {
   }
 }
 
-/* === MENU HOVER & ACTIVE – FINAL FIX === */
+/* === MENU: HOVER FLASH + SCROLL-LOCK ONLY === */
 
 header .nav-menu a,
 header nav ul a {
   color: #333 !important;
-  transition: all 0.3s ease !important;
+  transition: all 0.25s ease !important;
   display: inline-block;
+  position: relative;
+  z-index: 10;
 }
 
-/* HOVER */
+/* HOVER: flash oranje + wit */
 header .nav-menu a:hover,
 header nav ul a:hover {
   background-color: #FF6B35 !important;
@@ -3808,11 +3810,9 @@ header nav ul a:hover {
   padding: 0.5rem 1rem !important;
 }
 
-/* ACTIVE PAGE – BLIJFT BIJ SCROLL */
+/* ACTIVE: blijft alleen bij scroll (via JS) */
 header .nav-menu a.active,
-header nav ul a.active,
-header .nav-menu a[aria-current="page"],
-header nav ul a[aria-current="page"] {
+header nav ul a.active {
   background-color: #FF6B35 !important;
   color: white !important;
   border-radius: 8px;
@@ -3820,12 +3820,10 @@ header nav ul a[aria-current="page"] {
   font-weight: 600;
 }
 
-/* MOBILE */
+/* MOBILE: zelfde regels */
 @media (max-width: 768px) {
   header .nav-menu a:hover,
-  header .nav-menu a.active,
-  header nav ul a:hover,
-  header nav ul a.active {
+  header .nav-menu a.active {
     background-color: #FF6B35 !important;
     color: white !important;
     padding: 0.75rem 1rem !important;
