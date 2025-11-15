@@ -4,14 +4,14 @@
   <!-- 1. Basis & SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NEBOSH Oefenquiz (20 vragen) | Test je HSE-kennis – SafetyXAcademy Rotterdam</title>
-  <meta name="description" content="Gratis NEBOSH oefenquiz met 20 exam style vragen (NL & EN) voor veiligheidskundigen, HSE ZZP'ers en safety officers in Nederland en België. Test je kennis over RI&E, havens, offshore en NEBOSH opleiding." />
+  <title>NEBOSH Oefentest Nederland | Gratis 20 Oefenvragen IGC - SafetyXAcademy Rotterdam</title>
+  <meta name="description" content="Gratis NEBOSH oefentest voor HSE ZZP'ers in Rotterdam, Antwerp, Ghent, Zeebrugge, Amsterdam, Groningen. Test je kennis over RI&E, havens & offshore." />
   <link rel="canonical" href="https://safetyxacademy.nl/nebosh-quiz.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="NEBOSH Oefenquiz (20 vragen) | Test je HSE-kennis – SafetyXAcademy Rotterdam">
-  <meta property="og:description" content="Gratis NEBOSH oefenquiz met 20 exam style vragen (NL & EN) voor veiligheidskundigen, HSE ZZP'ers en safety officers in Nederland en België. Test je kennis over RI&E, havens, offshore en NEBOSH opleiding.">
+  <meta property="og:title" content="NEBOSH Oefentest Nederland | Gratis 20 Oefenvragen IGC - SafetyXAcademy">
+  <meta property="og:description" content="Gratis NEBOSH oefentest met 20 examenvragen. Test je kennis over RI&E, havens, offshore & ZZP. SafetyXAcademy Rotterdam – jouw start naar internationaal HSE werk.">
   <meta property="og:url" content="https://safetyxacademy.nl/nebosh-quiz.html">
   <meta property="og:image" content="https://safetyxacademy.nl/images/nebosh-igc-training-rotterdam-students.webp">
   <meta property="og:locale" content="nl_NL">
@@ -25,18 +25,92 @@
     gtag('config', 'G-91JCVXBQ0W');
   </script>
 
-  <!-- 2. CSS -->
+  <!-- CSS & Favicons -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Favicons -->
-  <!-- Favicon files are located in the repo root (safetyxacademyV2/) and deployed to https://safetyxacademy.nl/
-       Test URLs: https://safetyxacademy.nl/favicon-32.png, https://safetyxacademy.nl/favicon-192.png, etc. -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
   <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png">
   <meta name="msapplication-TileImage" content="/favicon-512.png">
+
+  <!-- JSON-LD: Quiz + Course Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "@id": "https://safetyxacademy.nl/nebosh-quiz.html#quiz",
+    "name": "NEBOSH Oefentest",
+    "description": "Gratis 20 NEBOSH IGC oefenvragen in Nederlands en Engels voor veiligheidskundigen en HSE ZZP'ers",
+    "url": "https://safetyxacademy.nl/nebosh-quiz.html",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "@id": "https://safetyxacademy.nl/#organization",
+      "name": "SafetyXAcademy",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westplein 12",
+        "addressLocality": "Rotterdam",
+        "postalCode": "3016 BM",
+        "addressCountry": "NL"
+      }
+    },
+    "educationalLevel": "Vocational",
+    "inLanguage": ["nl", "en"],
+    "numberOfQuestions": 20,
+    "about": {
+      "@type": "Thing",
+      "name": "NEBOSH International General Certificate"
+    },
+    "hasPart": {
+      "@type": "Question",
+      "text": "Wat is het verschil tussen een gevaar en een risico?",
+      "educationalAlignment": {
+        "@type": "AlignmentObject",
+        "alignmentType": "educationalSubject",
+        "targetName": "NEBOSH IGC Element 1"
+      }
+    }
+  }
+  </script>
+
+  <!-- Course Schema (versterk bestaande) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": "https://safetyxacademy.nl/#nebosh-igc",
+    "name": "NEBOSH IGC Opleiding Rotterdam & Groningen",
+    "description": "Nederlandstalige NEBOSH IGC opleiding in Veerhaven Rotterdam. €3.500 all-in. Start jan 2026. Ook bereikbaar vanuit Groningen, Amsterdam, Antwerpen.",
+    "provider": { "@id": "https://safetyxacademy.nl/#organization" },
+    "offers": {
+      "@type": "Offer",
+      "price": "3500",
+      "priceCurrency": "EUR",
+      "availability": "InStock",
+      "url": "https://safetyxacademy.nl/nebosh-opleiding.html"
+    },
+    "coursePrerequisites": "B2 Engels aanbevolen",
+    "hasCourseInstance": [
+      {
+        "@type": "CourseInstance",
+        "courseMode": "blended",
+        "location": {
+          "@type": "Place",
+          "name": "Veerhaven Rotterdam",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Westplein 12",
+            "addressLocality": "Rotterdam",
+            "postalCode": "3016 BM"
+          }
+        },
+        "startDate": "2026-01-15",
+        "endDate": "2026-01-19"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -448,7 +522,7 @@
 
     <section class="quiz-cta">
       <div class="container">
-        <h2>Volgende stap na de NEBOSH-quiz</h2>
+        <h2>Volgende stap na de NEBOSH oefentest</h2>
         <p>
           Scoor je goed op deze oefenvragen en wil je serieus werk maken van je HSE-carrière?
           Bekijk dan onze Nederlandstalige <strong>NEBOSH IGC opleiding in Rotterdam</strong>.
