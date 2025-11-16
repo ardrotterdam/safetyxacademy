@@ -56,15 +56,6 @@ body {
   border-bottom: 1px solid rgba(10, 29, 55, 0.1);
 }
 
-/* Sticky header op desktop */
-@media (min-width: 901px) {
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: var(--z-header);
-  }
-}
-
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -4155,10 +4146,20 @@ body.nav-open .nav-toggle:hover,
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     line-height: 1.5;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  /* Remove active state from mobile menu links - only show on hover/click */
+  .mobile-nav-overlay.is-open .desktop-nav .nav-link:not(.nav-link--parent).nav-link--active,
+  .mobile-nav-overlay.is-open .desktop-nav .nav-link:not(.nav-link--parent).active {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-link:not(.nav-link--parent):hover,
-  .mobile-nav-overlay.is-open .desktop-nav .nav-link:not(.nav-link--parent):focus-visible {
+  .mobile-nav-overlay.is-open .desktop-nav .nav-link:not(.nav-link--parent):focus-visible,
+  .mobile-nav-overlay.is-open .desktop-nav .nav-link:not(.nav-link--parent):active {
     background: rgba(255, 107, 53, 0.3);
     color: #ffffff !important;
     border-color: rgba(255, 107, 53, 0.5);

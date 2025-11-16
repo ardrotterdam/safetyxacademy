@@ -33,6 +33,12 @@
       // Save current scroll position
       scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
       
+      // Remove active states from all mobile menu links when opening
+      mobileNav.querySelectorAll('.nav-link').forEach(navLink => {
+        navLink.classList.remove('nav-link--active');
+        navLink.classList.remove('active');
+      });
+      
       overlay.classList.add('is-open');
       toggle.classList.add('active');
       body.classList.add('nav-open');
@@ -97,9 +103,19 @@
       }
     });
 
-    // Klik op link in mobile-nav = sluiten
+    // Klik op link in mobile-nav = sluiten en remove active states
     mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function() {
+      link.addEventListener('click', function(e) {
+        // Remove active class from all mobile nav links
+        mobileNav.querySelectorAll('.nav-link').forEach(navLink => {
+          navLink.classList.remove('nav-link--active');
+          navLink.classList.remove('active');
+        });
+        
+        // Add active class to clicked link temporarily (will be removed when menu closes)
+        this.classList.add('nav-link--active');
+        this.classList.add('active');
+        
         closeMenu();
       });
     });
@@ -223,7 +239,8 @@
   function setActiveNavLink() {
     const pathname = window.location.pathname;
     // Only select actual anchor links, not buttons
-    const navLinks = document.querySelectorAll('.nav-link[href]');
+    // Exclude mobile menu links - they should not have persistent active state
+    const navLinks = document.querySelectorAll('.header-container .desktop-nav .nav-link[href], .desktop-nav:not(.mobile-nav-panel .desktop-nav) .nav-link[href]');
     
     // Remove active class from all nav links first
     navLinks.forEach(link => {
@@ -261,13 +278,16 @@
       activePath = '/index.html';
     }
 
-    // Find and activate the matching nav link (only anchor tags)
+    // Find and activate the matching nav link (only anchor tags, and only in desktop nav, not mobile)
     if (activePath) {
       navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === activePath || (activePath === '/index.html' && (href === '/index.html' || href === '/'))) {
-          link.classList.add('nav-link--active');
-          link.classList.add('active'); // Also add 'active' class for new CSS
+        // Only apply to desktop nav, not mobile menu
+        if (!link.closest('.mobile-nav-panel')) {
+          const href = link.getAttribute('href');
+          if (href === activePath || (activePath === '/index.html' && (href === '/index.html' || href === '/'))) {
+            link.classList.add('nav-link--active');
+            link.classList.add('active'); // Also add 'active' class for new CSS
+          }
         }
       });
     }
