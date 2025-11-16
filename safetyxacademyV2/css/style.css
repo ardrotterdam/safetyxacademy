@@ -3942,8 +3942,16 @@ body.nav-open .nav-toggle:hover {
   /* Show desktop nav in mobile overlay when menu is open */
   .mobile-nav-overlay.is-open .desktop-nav {
     display: block;
-    padding: 1rem 0 0;
+    padding: 1.5rem 0 0;
     width: 100%;
+  }
+
+  .mobile-nav-overlay.is-open .mobile-nav-main {
+    display: none;
+  }
+
+  .mobile-nav-overlay.is-open .mobile-nav-secondary {
+    display: none;
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-list {
@@ -3974,15 +3982,27 @@ body.nav-open .nav-toggle:hover {
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown {
     position: static;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transform: none;
     box-shadow: none;
-    margin-top: 0.5rem;
+    margin-top: 0;
     padding-left: 1rem;
+    padding-top: 0;
     background: rgba(255, 255, 255, 0.05);
     border-left: 2px solid rgba(255, 107, 53, 0.3);
     border-radius: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease, max-height 0.3s ease, padding-top 0.3s ease, margin-top 0.3s ease;
+  }
+
+  .mobile-nav-overlay.is-open .desktop-nav .nav-item--open .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    max-height: 500px;
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown .nav-link {
