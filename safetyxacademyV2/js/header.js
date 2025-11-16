@@ -78,20 +78,37 @@
     });
   }
 
-  // Header init als include klaar is
-  document.addEventListener('headerloaded', initHeaderNav);
-
-  // Fallback als header al in DOM staat
-  if (document.querySelector('.nav-toggle')) {
-    document.dispatchEvent(new Event('headerloaded'));
+  // Initialize when DOM is ready
+  function tryInit() {
+    const toggle = document.querySelector('.nav-toggle');
+    const overlay = document.querySelector('.mobile-nav-overlay');
+    const mobileNav = document.querySelector('.mobile-nav-panel');
+    
+    if (toggle && overlay && mobileNav) {
+      initHeaderNav();
+      return true;
+    }
+    return false;
   }
 
-  // Initialize when DOM is ready (fallback)
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHeaderNav);
-  } else {
-    initHeaderNav();
+  // Try immediately
+  if (!tryInit()) {
+    // Wait for DOMContentLoaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        if (!tryInit()) {
+          // Wait for headerloaded event (in case header is loaded via fetch)
+          document.addEventListener('headerloaded', initHeaderNav, { once: true });
+        }
+      });
+    } else {
+      // DOM already loaded, wait for headerloaded
+      document.addEventListener('headerloaded', initHeaderNav, { once: true });
+    }
   }
+
+  // Also listen for headerloaded event (in case header is loaded via fetch)
+  document.addEventListener('headerloaded', initHeaderNav, { once: true });
 
   /**
    * Desktop Navigation Dropdown Handler

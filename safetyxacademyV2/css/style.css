@@ -74,6 +74,8 @@ body {
 
 /* Header inner wrapper for mobile logo + hamburger alignment */
 .header-inner {
+  position: relative;
+  z-index: var(--z-toggle);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -3591,6 +3593,7 @@ body.nav-open {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
+  pointer-events: auto;
 }
 
 .nav-toggle:hover,
@@ -3678,12 +3681,14 @@ body.nav-open .nav-toggle:hover,
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .mobile-nav-overlay.is-open {
   display: block;
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 /* Mobile Navigation Panel */
