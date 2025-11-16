@@ -95,7 +95,10 @@
         .then(html => {
           const el = document.getElementById('header-include');
           el.outerHTML = html;
-          setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
+          setTimeout(() => {
+            document.dispatchEvent(new Event('headerloaded'));
+            window.dispatchEvent(new Event('headerloaded'));
+          }, 200);
         })
         .catch(() => console.error('Header failed'));
     </script>

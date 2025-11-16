@@ -3959,7 +3959,11 @@ body.nav-open .nav-toggle:hover,
 /* Mobile Styles - Show hamburger, hide desktop nav in header */
 @media (max-width: 900px) {
   .nav-toggle {
-    display: flex;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    z-index: var(--z-toggle) !important;
   }
 
   /* Hide desktop nav in header, but show it in mobile overlay */

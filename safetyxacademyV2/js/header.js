@@ -17,10 +17,14 @@
     const body = document.body;
 
     if (!toggle || !overlay || !mobileNav) {
-      // Header might not be loaded yet, wait for headerloaded event
-      document.addEventListener('headerloaded', initHeaderNav, { once: true });
-      return;
+      return false;
     }
+
+    // Prevent double initialization
+    if (toggle.hasAttribute('data-nav-initialized')) {
+      return true;
+    }
+    toggle.setAttribute('data-nav-initialized', 'true');
 
     function openMenu() {
       overlay.classList.add('is-open');
@@ -44,12 +48,16 @@
     toggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
+      console.log('Toggle clicked, overlay is-open:', overlay.classList.contains('is-open'));
       if (overlay.classList.contains('is-open')) {
         closeMenu();
       } else {
         openMenu();
       }
     });
+    
+    // Debug: log when initialized
+    console.log('Mobile nav initialized successfully');
 
     // Klik op donkere overlay buiten panel = sluiten
     overlay.addEventListener('click', function(e) {
@@ -76,39 +84,51 @@
         closeMenu();
       });
     });
+
+    return true;
   }
 
-  // Initialize when DOM is ready
+  // Initialize function with retry logic
   function tryInit() {
-    const toggle = document.querySelector('.nav-toggle');
-    const overlay = document.querySelector('.mobile-nav-overlay');
-    const mobileNav = document.querySelector('.mobile-nav-panel');
-    
-    if (toggle && overlay && mobileNav) {
-      initHeaderNav();
-      return true;
-    }
-    return false;
+    return initHeaderNav();
   }
 
-  // Try immediately
-  if (!tryInit()) {
-    // Wait for DOMContentLoaded
+  // Function to setup initialization with multiple attempts
+  function setupInit() {
+    // Try immediately
+    if (tryInit()) {
+      return;
+    }
+
+    // Try after a short delay (for fetch-loaded headers)
+    setTimeout(() => {
+      if (!tryInit()) {
+        // Try again after longer delay
+        setTimeout(() => tryInit(), 500);
+      }
+    }, 100);
+
+    // Listen for headerloaded events
+    const handler = function() {
+      setTimeout(() => tryInit(), 50);
+    };
+    
+    document.addEventListener('headerloaded', handler);
+    window.addEventListener('headerloaded', handler);
+
+    // Also try on DOMContentLoaded
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
-        if (!tryInit()) {
-          // Wait for headerloaded event (in case header is loaded via fetch)
-          document.addEventListener('headerloaded', initHeaderNav, { once: true });
-        }
+        setTimeout(() => tryInit(), 100);
       });
     } else {
-      // DOM already loaded, wait for headerloaded
-      document.addEventListener('headerloaded', initHeaderNav, { once: true });
+      // DOM already loaded, try after a short delay
+      setTimeout(() => tryInit(), 100);
     }
   }
 
-  // Also listen for headerloaded event (in case header is loaded via fetch)
-  document.addEventListener('headerloaded', initHeaderNav, { once: true });
+  // Start initialization
+  setupInit();
 
   /**
    * Desktop Navigation Dropdown Handler
