@@ -4007,6 +4007,7 @@ body.nav-open .nav-toggle:hover,
     border-color: rgba(255, 107, 53, 0.5);
   }
 
+  /* Mobile submenu readability fix – high contrast for NEBOSH/Carrière/Resources dropdowns */
   .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown {
     position: static;
     opacity: 0;
@@ -4014,43 +4015,59 @@ body.nav-open .nav-toggle:hover,
     transform: none;
     box-shadow: none;
     margin-top: 0;
-    padding-left: 1.5rem;
+    padding-left: 0;
     padding-top: 0;
-    background: rgba(255, 255, 255, 0.08);
-    border-left: 3px solid rgba(255, 107, 53, 0.5);
-    border-radius: 0;
+    padding-right: 0;
+    background: rgba(4, 18, 35, 0.98);
+    border-left: none;
+    border-radius: 16px;
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.2s ease, visibility 0.2s ease, max-height 0.3s ease, padding-top 0.3s ease, margin-top 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-item--open .nav-dropdown {
     opacity: 1;
     visibility: visible;
     margin-top: 0.75rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.75rem;
     max-height: 500px;
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown .nav-link {
-    color: #ffffff !important;
+    display: block;
+    color: #F9FBFF !important;
+    background: rgba(14, 32, 58, 0.96);
     font-size: 0.95rem;
     font-weight: 500;
-    padding: 0.75rem 1.25rem;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 14px;
+    text-decoration: none;
     line-height: 1.5;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  }
+
+  .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown .nav-link:last-child {
+    margin-bottom: 0;
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown .nav-link:hover,
   .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown .nav-link:focus-visible {
     background: rgba(255, 107, 53, 0.25);
     color: #ffffff !important;
+    border-color: rgba(255, 107, 53, 0.3);
+    transform: translateY(-1px);
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-dropdown .nav-link--active {
-    background: rgba(255, 107, 53, 0.4);
+    background: rgba(255, 107, 53, 0.35);
     color: #ffffff !important;
     font-weight: 600;
+    border-color: rgba(255, 107, 53, 0.4);
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-link:not(.nav-link--parent) {
