@@ -965,6 +965,19 @@ footer a:hover {
 
 .home-nebosh-highlight .btn {
   margin-top: 1rem;
+  color: #ffffff !important;
+}
+
+.home-nebosh-highlight .highlight-box .btn,
+.home-nebosh-highlight .highlight-box .btn-primary {
+  color: #ffffff !important;
+}
+
+.home-nebosh-highlight .highlight-box .btn:hover,
+.home-nebosh-highlight .highlight-box .btn:focus,
+.home-nebosh-highlight .highlight-box .btn-primary:hover,
+.home-nebosh-highlight .highlight-box .btn-primary:focus {
+  color: #ffffff !important;
 }
 
 /* Jobs highlight */
