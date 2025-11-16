@@ -1281,6 +1281,22 @@ footer a:hover {
   text-align: center;
 }
 
+.home-contact .contact-office-image {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.home-contact .contact-office-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
 .home-contact .contact-summary-grid {
   display: grid;
   gap: 2rem;
