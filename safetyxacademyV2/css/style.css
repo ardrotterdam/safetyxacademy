@@ -46,6 +46,15 @@ body {
   border-bottom: 1px solid rgba(10, 29, 55, 0.1);
 }
 
+/* Sticky header op desktop */
+@media (min-width: 901px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -3625,12 +3634,13 @@ body.nav-open .nav-toggle:hover {
 
 .mobile-nav-secondary a {
   display: block;
-  color: #cbd5e1;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
   padding: 8px 0;
   transition: all 0.2s ease;
   position: relative;
+  font-weight: 500;
 }
 
 .mobile-nav-secondary a::after {
@@ -3646,7 +3656,7 @@ body.nav-open .nav-toggle:hover {
 
 .mobile-nav-secondary a:hover,
 .mobile-nav-secondary a:focus-visible {
-  color: #ffffff;
+  color: #ff6b35;
   outline: none;
 }
 
