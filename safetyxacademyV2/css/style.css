@@ -953,6 +953,16 @@ footer a:hover {
   margin: 2rem auto 0 auto;
 }
 
+.home-nebosh-highlight .highlight-box a {
+  color: #ff6b35;
+  text-decoration: underline;
+}
+
+.home-nebosh-highlight .highlight-box a:hover {
+  color: #ff7a4a;
+  text-decoration: none;
+}
+
 .home-nebosh-highlight .btn {
   margin-top: 1rem;
 }
