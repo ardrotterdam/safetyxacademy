@@ -6,98 +6,92 @@
 (function() {
   'use strict';
 
-  // Wait for DOM and header to be loaded
-  function initMobileNav() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+  /**
+   * Initialize mobile navigation
+   * Robuuste init functie met alle features
+   */
+  function initHeaderNav() {
+    const toggle = document.querySelector('.nav-toggle');
+    const overlay = document.querySelector('.mobile-nav-overlay');
+    const mobileNav = document.querySelector('.mobile-nav-panel');
     const body = document.body;
-    
-    if (!navToggle || !mobileOverlay) {
+
+    if (!toggle || !overlay || !mobileNav) {
       // Header might not be loaded yet, wait for headerloaded event
-      window.addEventListener('headerloaded', initMobileNav, { once: true });
+      document.addEventListener('headerloaded', initHeaderNav, { once: true });
       return;
     }
 
-    // Get first focusable element in mobile menu
-    const firstMobileLink = mobileOverlay.querySelector('.mobile-nav-main-link');
-    
-    // Toggle menu function
-    function toggleMenu(isOpen) {
-      const isCurrentlyOpen = body.classList.contains('nav-open');
-      
-      if (isOpen === undefined) {
-        isOpen = !isCurrentlyOpen;
-      }
-      
-      if (isOpen) {
-        body.classList.add('nav-open');
-        navToggle.setAttribute('aria-expanded', 'true');
-        navToggle.setAttribute('aria-label', 'Sluit navigatie');
-        mobileOverlay.classList.add('is-open');
-        
-        // Focus first link when opening
-        if (firstMobileLink) {
-          setTimeout(() => firstMobileLink.focus(), 100);
-        }
-      } else {
-        body.classList.remove('nav-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Open navigatie');
-        mobileOverlay.classList.remove('is-open');
-        
-        // Return focus to toggle button when closing
-        navToggle.focus();
-      }
+    function openMenu() {
+      overlay.classList.add('is-open');
+      toggle.classList.add('active');
+      body.classList.add('nav-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Sluit navigatie');
     }
 
-    // Toggle button click
-    navToggle.addEventListener('click', function(e) {
+    function closeMenu() {
+      overlay.classList.remove('is-open');
+      toggle.classList.remove('active');
+      body.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigatie');
+      // Return focus to toggle button when closing
+      toggle.focus();
+    }
+
+    // Toggle via hamburger
+    toggle.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      toggleMenu();
+      if (overlay.classList.contains('is-open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
-    // Close menu when clicking overlay (outside panel)
-    mobileOverlay.addEventListener('click', function(e) {
-      if (e.target === mobileOverlay) {
-        toggleMenu(false);
+    // Klik op donkere overlay buiten panel = sluiten
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        closeMenu();
       }
     });
 
     // Prevent panel clicks from closing menu
-    const mobilePanel = mobileOverlay.querySelector('.mobile-nav-panel');
-    if (mobilePanel) {
-      mobilePanel.addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
-    }
+    mobileNav.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
 
-    // ESC key to close menu
+    // ESC = sluiten
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
-        toggleMenu(false);
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closeMenu();
       }
     });
 
-    // Close menu when clicking any link inside (optional - for better UX)
-    const mobileLinks = mobileOverlay.querySelectorAll('a');
-    mobileLinks.forEach(link => {
+    // Klik op link in mobile-nav = sluiten
+    mobileNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', function() {
-        // Small delay to allow navigation, then close
-        setTimeout(() => toggleMenu(false), 100);
+        closeMenu();
       });
     });
   }
 
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMobileNav);
-  } else {
-    initMobileNav();
+  // Header init als include klaar is
+  document.addEventListener('headerloaded', initHeaderNav);
+
+  // Fallback als header al in DOM staat
+  if (document.querySelector('.nav-toggle')) {
+    document.dispatchEvent(new Event('headerloaded'));
   }
 
-  // Also listen for headerloaded event (in case header is loaded via fetch)
-  window.addEventListener('headerloaded', initMobileNav, { once: true });
+  // Initialize when DOM is ready (fallback)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeaderNav);
+  } else {
+    initHeaderNav();
+  }
 
   /**
    * Desktop Navigation Dropdown Handler
