@@ -4109,3 +4109,82 @@ html, body {
   }
 }
 
+/* ===== PAGES: OVER ONS & OFFSHORE ===== */
+
+.page-about,
+.page-offshore {
+  padding: 4rem 0 5rem;
+}
+
+.about-hero,
+.offshore-hero {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.page-about .lead,
+.page-offshore .lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.about-section,
+.offshore-section {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+}
+
+.about-section h2,
+.offshore-section h2 {
+  margin-bottom: 1rem;
+}
+
+.about-section h3,
+.offshore-section h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.offshore-location {
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.offshore-location ul {
+  margin-bottom: 0;
+}
+
+.about-cta .btn,
+.offshore-cta .btn {
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.offshore-faq .faq-item {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.offshore-final-cta {
+  text-align: left;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page-about,
+  .page-offshore {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .about-hero,
+  .offshore-hero,
+  .about-section,
+  .offshore-section {
+    padding: 0 1rem;
+  }
+}
+
