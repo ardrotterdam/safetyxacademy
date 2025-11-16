@@ -114,11 +114,6 @@ body {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Logo in mobile menu - maak "Academy" leesbaar op donkere achtergrond */
-.mobile-nav-overlay.is-open .logo {
-  color: #ffffff;
-}
-
 .nav-list {
   display: flex;
   list-style: none;
