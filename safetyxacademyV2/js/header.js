@@ -117,6 +117,7 @@
       '/nebosh-opleiding.html': '/nebosh-opleiding.html',
       '/nebosh-quiz.html': '/nebosh-quiz.html',
       '/nebosh-benelux-ports.html': '/nebosh-benelux-ports.html',
+      '/nebosh-offshore.html': '/nebosh-offshore.html',
       '/blog/index.html': '/blog/index.html',
       '/jobs.html': '/jobs.html',
       '/over-ons.html': '/over-ons.html',
