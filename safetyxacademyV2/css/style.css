@@ -3877,3 +3877,37 @@ html, body {
     padding: 0 1rem;
   }
 }
+
+/* === MOBILE HEADER & HERO FIX === */
+@media (max-width: 768px) {
+  header .nav-container {
+    padding: 0 1rem;
+  }
+  
+  header .logo {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+  
+  header .nav-menu {
+    gap: 1rem;
+  }
+  
+  header .nav-menu a {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero {
+    padding: 2rem 1rem !important;
+  }
+  
+  .hero h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1.1rem !important;
+  }
+}
