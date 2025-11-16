@@ -26,10 +26,22 @@
     }
     toggle.setAttribute('data-nav-initialized', 'true');
 
+    // Store scroll position
+    let scrollPosition = 0;
+
     function openMenu() {
+      // Save current scroll position
+      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      
       overlay.classList.add('is-open');
       toggle.classList.add('active');
       body.classList.add('nav-open');
+      
+      // Prevent body scroll and restore scroll position
+      body.style.top = `-${scrollPosition}px`;
+      body.style.position = 'fixed';
+      body.style.width = '100%';
+      
       toggle.setAttribute('aria-expanded', 'true');
       toggle.setAttribute('aria-label', 'Sluit navigatie');
     }
@@ -38,6 +50,13 @@
       overlay.classList.remove('is-open');
       toggle.classList.remove('active');
       body.classList.remove('nav-open');
+      
+      // Restore scroll position
+      body.style.top = '';
+      body.style.position = '';
+      body.style.width = '';
+      window.scrollTo(0, scrollPosition);
+      
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Open navigatie');
       // Return focus to toggle button when closing

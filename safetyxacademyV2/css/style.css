@@ -3627,9 +3627,9 @@ footer a:hover {
    Premium full-screen mobile menu
    =================================== */
 
-/* Body scroll lock when menu is open */
+/* Body scroll lock when menu is open - handled by JS with inline styles */
 body.nav-open {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 /* Hamburger button - hidden on desktop, visible on mobile */
@@ -3757,10 +3757,9 @@ body.nav-open .nav-toggle:hover,
   max-width: 340px;
   background: #0a2847;
   backdrop-filter: blur(10px);
-  padding: 5rem 2rem 2rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
   transform: translateX(100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
@@ -4035,16 +4034,18 @@ body.nav-open .nav-toggle:hover,
   .mobile-nav-overlay.is-open .desktop-nav {
     display: block;
     width: 100%;
-    padding: 2rem 1.5rem 1.5rem;
-    overflow-y: visible;
-    min-height: auto;
+    padding: 5rem 2rem 2rem;
+    min-height: min-content;
   }
 
   .mobile-nav-overlay.is-open .mobile-nav-panel {
-    padding: 5rem 2rem 2rem;
+    padding: 0;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    /* Ensure panel itself scrolls */
+    display: flex;
+    flex-direction: column;
   }
 
   .mobile-nav-overlay.is-open .mobile-nav-label {
@@ -4056,6 +4057,7 @@ body.nav-open .nav-toggle:hover,
     gap: 0.75rem;
     align-items: stretch;
     width: 100%;
+    min-height: min-content;
   }
 
   .mobile-nav-overlay.is-open .desktop-nav .nav-item {
