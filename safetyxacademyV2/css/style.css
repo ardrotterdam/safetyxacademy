@@ -95,6 +95,19 @@ body {
   transition: filter 0.25s ease, text-shadow 0.25s ease;
 }
 
+/* Make "Academy" white with shadow for readability */
+.logo .logo-academy {
+  color: #ffffff;
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.5),
+    1px -1px 0 rgba(0, 0, 0, 0.5),
+    -1px 1px 0 rgba(0, 0, 0, 0.5),
+    1px 1px 0 rgba(0, 0, 0, 0.5),
+    0 0 4px rgba(0, 0, 0, 0.4),
+    0 0 8px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
 .logo:hover,
 .logo:focus-visible {
   color: #0a1d37;
@@ -106,6 +119,18 @@ body {
 .logo:focus-visible strong {
   filter: brightness(1.03);
   text-shadow: 0 0 6px rgba(255, 107, 53, 0.2);
+}
+
+.logo:hover .logo-academy,
+.logo:focus-visible .logo-academy {
+  color: #ffffff;
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.6),
+    1px -1px 0 rgba(0, 0, 0, 0.6),
+    -1px 1px 0 rgba(0, 0, 0, 0.6),
+    1px 1px 0 rgba(0, 0, 0, 0.6),
+    0 0 6px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .logo:active {
@@ -3739,9 +3764,13 @@ body.nav-open .nav-toggle:hover,
   transform: translateX(100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
   z-index: var(--z-nav);
   pointer-events: auto;
+  height: 100vh;
+  max-height: 100vh;
 }
 
 .mobile-nav-overlay.is-open .mobile-nav-panel {
@@ -4007,10 +4036,15 @@ body.nav-open .nav-toggle:hover,
     display: block;
     width: 100%;
     padding: 2rem 1.5rem 1.5rem;
+    overflow-y: visible;
+    min-height: auto;
   }
 
   .mobile-nav-overlay.is-open .mobile-nav-panel {
     padding: 5rem 2rem 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .mobile-nav-overlay.is-open .mobile-nav-label {
