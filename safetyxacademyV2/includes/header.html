@@ -14,14 +14,69 @@
     </div>
     <nav aria-label="Hoofdnavigatie" class="desktop-nav">
       <ul class="nav-list">
-        <li><a href="/nebosh-opleiding.html" class="nav-link">NEBOSH</a></li>
-        <li><a href="/nebosh-quiz.html" class="nav-link" title="Gratis NEBOSH oefentest met 20 vragen">NEBOSH Oefentest</a></li>
-        <li><a href="/nebosh-benelux-ports.html" class="nav-link">Benelux Havens</a></li>
-        <li><a href="/nebosh-offshore.html" class="nav-link">Offshore</a></li>
-        <li><a href="/blog/index.html" class="nav-link">Blog</a></li>
-        <li><a href="/jobs.html" class="nav-link">Jobs</a></li>
-        <li><a href="/over-ons.html" class="nav-link">Over Ons</a></li>
-        <li><a href="/aanmelden.html" class="nav-link cta-nav">Aanmelden</a></li>
+        <!-- NEBOSH dropdown -->
+        <li class="nav-item nav-item--has-dropdown">
+          <button class="nav-link nav-link--parent" type="button" aria-haspopup="true" aria-expanded="false">
+            NEBOSH
+            <svg class="nav-dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="/nebosh-opleiding.html" class="nav-link">NEBOSH Opleiding</a>
+            </li>
+            <li>
+              <a href="/nebosh-quiz.html" class="nav-link" title="Gratis NEBOSH oefentest met 20 vragen">NEBOSH Oefentest</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Carrière dropdown -->
+        <li class="nav-item nav-item--has-dropdown">
+          <button class="nav-link nav-link--parent" type="button" aria-haspopup="true" aria-expanded="false">
+            Carrière
+            <svg class="nav-dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="/nebosh-benelux-ports.html" class="nav-link">Benelux Havens</a>
+            </li>
+            <li>
+              <a href="/nebosh-offshore.html" class="nav-link">Offshore &amp; Buitenland</a>
+            </li>
+            <li>
+              <a href="/jobs.html" class="nav-link">HSE Jobs &amp; ZZP</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Resources dropdown -->
+        <li class="nav-item nav-item--has-dropdown">
+          <button class="nav-link nav-link--parent" type="button" aria-haspopup="true" aria-expanded="false">
+            Resources
+            <svg class="nav-dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="/blog/index.html" class="nav-link">Blog</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Over Ons -->
+        <li class="nav-item">
+          <a href="/over-ons.html" class="nav-link">Over Ons</a>
+        </li>
+
+        <!-- Aanmelden CTA -->
+        <li class="nav-item nav-item--cta">
+          <a href="/aanmelden.html" class="nav-link cta-nav">Aanmelden</a>
+        </li>
       </ul>
     </nav>
   </div>

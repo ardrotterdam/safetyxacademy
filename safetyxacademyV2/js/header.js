@@ -99,10 +99,81 @@
   // Also listen for headerloaded event (in case header is loaded via fetch)
   window.addEventListener('headerloaded', initMobileNav, { once: true });
 
+  /**
+   * Desktop Navigation Dropdown Handler
+   * Handles dropdown toggle for desktop navigation
+   */
+  function initDropdownNav() {
+    const dropdownButtons = document.querySelectorAll('.nav-link--parent');
+    const dropdownItems = document.querySelectorAll('.nav-item--has-dropdown');
+    
+    if (dropdownButtons.length === 0) {
+      // Header might not be loaded yet, wait for headerloaded event
+      window.addEventListener('headerloaded', initDropdownNav, { once: true });
+      return;
+    }
+
+    // Close all dropdowns
+    function closeAllDropdowns() {
+      dropdownItems.forEach(item => {
+        item.classList.remove('nav-item--open');
+        const button = item.querySelector('.nav-link--parent');
+        if (button) {
+          button.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Toggle dropdown
+    dropdownButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const parentItem = button.closest('.nav-item--has-dropdown');
+        const isOpen = parentItem.classList.contains('nav-item--open');
+        
+        // Close all dropdowns first
+        closeAllDropdowns();
+        
+        // Toggle this dropdown
+        if (!isOpen) {
+          parentItem.classList.add('nav-item--open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-item--has-dropdown')) {
+        closeAllDropdowns();
+      }
+    });
+
+    // Close dropdowns on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeAllDropdowns();
+      }
+    });
+  }
+
+  // Initialize dropdown nav when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDropdownNav);
+  } else {
+    initDropdownNav();
+  }
+
+  // Also listen for headerloaded event (in case header is loaded via fetch)
+  window.addEventListener('headerloaded', initDropdownNav, { once: true });
+
   // Set active navigation link based on current pathname
   function setActiveNavLink() {
     const pathname = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Only select actual anchor links, not buttons
+    const navLinks = document.querySelectorAll('.nav-link[href]');
     
     // Remove active class from all nav links first
     navLinks.forEach(link => {
@@ -140,7 +211,7 @@
       activePath = '/index.html';
     }
 
-    // Find and activate the matching nav link
+    // Find and activate the matching nav link (only anchor tags)
     if (activePath) {
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
@@ -154,7 +225,8 @@
 
   // Initialize active nav link when DOM is ready
   function initActiveNav() {
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Only select actual anchor links, not buttons
+    const navLinks = document.querySelectorAll('.nav-link[href]');
     
     if (navLinks.length === 0) {
       // Header might not be loaded yet, wait for headerloaded event

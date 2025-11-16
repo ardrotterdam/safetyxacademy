@@ -159,6 +159,160 @@ body {
 }
 
 /* ===================================
+   NAVIGATION DROPDOWNS
+   =================================== */
+
+.nav-item {
+  position: relative;
+  list-style: none;
+}
+
+/* Parent links (buttons) voor dropdown-titels */
+.nav-link--parent {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #0a1d37;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-dropdown-icon {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.nav-item--open .nav-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.nav-link--parent:hover,
+.nav-link--parent:focus-visible {
+  background-color: #ff6b35;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Dropdown basis */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  margin-top: 0.5rem;
+  padding: 0.75rem 0;
+  list-style: none;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+  z-index: 9994;
+  margin: 0;
+}
+
+.nav-dropdown li {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-dropdown .nav-link {
+  width: 100%;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  border-radius: 0;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.nav-dropdown .nav-link:hover,
+.nav-dropdown .nav-link:focus-visible {
+  background-color: #f5f5f7;
+  color: #0a1d37;
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-dropdown .nav-link--active {
+  background-color: #ff6b35;
+  color: #ffffff;
+}
+
+.nav-dropdown .nav-link--active:hover {
+  background-color: #ff7a4a;
+  color: #ffffff;
+}
+
+/* Toon dropdown als item open is (JS voegt nav-item--open toe) */
+.nav-item--has-dropdown.nav-item--open > .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* CTA in nav */
+.nav-item--cta {
+  margin-left: 0.5rem;
+}
+
+.nav-item--cta .nav-cta {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+}
+
+/* Mobile: dropdowns onder elkaar */
+@media (max-width: 900px) {
+  .nav-item--has-dropdown {
+    width: 100%;
+  }
+
+  .nav-link--parent {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-dropdown {
+    position: static;
+    box-shadow: none;
+    margin-top: 0;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    padding-left: 0.75rem;
+    padding-top: 0.5rem;
+    background: transparent;
+    border-radius: 0;
+    border-left: 2px solid rgba(10, 29, 55, 0.1);
+  }
+
+  .nav-dropdown .nav-link {
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .nav-item--has-dropdown.nav-item--open > .nav-dropdown {
+    display: block;
+  }
+}
+
+/* ===================================
    MENU SPACING - DESKTOP & MOBILE
    =================================== */
 
