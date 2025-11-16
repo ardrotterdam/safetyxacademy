@@ -3942,15 +3942,15 @@ body.nav-open .nav-toggle:hover {
   /* Show desktop nav in mobile overlay when menu is open */
   .mobile-nav-overlay.is-open .desktop-nav {
     display: block;
-    padding: 1.5rem 0 0;
     width: 100%;
+    padding: 2rem 1.5rem 1.5rem;
   }
 
-  .mobile-nav-overlay.is-open .mobile-nav-main {
-    display: none;
+  .mobile-nav-overlay.is-open .mobile-nav-panel {
+    padding: 0;
   }
 
-  .mobile-nav-overlay.is-open .mobile-nav-secondary {
+  .mobile-nav-overlay.is-open .mobile-nav-label {
     display: none;
   }
 
