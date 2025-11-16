@@ -3842,3 +3842,38 @@ header .nav-menu {
     gap: 1.5rem;
   }
 }
+
+/* === NO HORIZONTAL SCROLL === */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Container fix */
+.container,
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero fix */
+.hero {
+  padding: 4rem 1.5rem !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem !important;
+  }
+  .container,
+  .nav-container {
+    padding: 0 1rem;
+  }
+}
