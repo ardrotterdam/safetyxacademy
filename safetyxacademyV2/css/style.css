@@ -2176,6 +2176,12 @@ footer a:hover {
   background: #f8f9fa;
 }
 
+@media (min-width: 900px) {
+  .nebosh-section {
+    padding: 5rem 0;
+  }
+}
+
 .nebosh-section h2 {
   text-align: center;
   color: #0a1d37;
@@ -2196,6 +2202,8 @@ footer a:hover {
   display: grid;
   gap: 2.5rem;
   grid-template-columns: 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .nebosh-what-text {
@@ -2212,6 +2220,17 @@ footer a:hover {
   line-height: 1.7;
   color: #444;
   font-size: 1rem;
+}
+
+@media (min-width: 900px) {
+  .nebosh-what-text {
+    padding-right: 2rem;
+  }
+  
+  .nebosh-what-text p {
+    font-size: 1.05rem;
+    max-width: none;
+  }
 }
 
 .nebosh-what-highlight {
@@ -2251,8 +2270,15 @@ footer a:hover {
 
 @media (min-width: 900px) {
   .nebosh-what-grid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
     align-items: flex-start;
+    gap: 3rem;
+  }
+  
+  .nebosh-what-highlight {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
   }
 }
 
@@ -3547,6 +3573,18 @@ footer a:hover {
   display: block;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop: images binnen nebosh-what-text zijn smaller */
+@media (min-width: 900px) {
+  .nebosh-what-text .content-image {
+    max-width: 800px;
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .nebosh-what-text .content-image img {
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 768px) {
