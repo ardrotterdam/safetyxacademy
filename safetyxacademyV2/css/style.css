@@ -3533,6 +3533,32 @@ footer a:hover {
   }
 }
 
+/* Content images in articles */
+.content-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .content-image {
+    margin: 1.5rem auto;
+  }
+
+  .content-image img {
+    border-radius: 8px;
+  }
+}
+
 /* Blog – FAQ section (Veerhaven guide) */
 .blog-faq {
   margin: 3rem 0;
