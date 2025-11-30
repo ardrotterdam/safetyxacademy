@@ -3678,7 +3678,7 @@ footer a:hover {
 }
 
 /* ===================================
-   MOBILE NAV 2025 REDESIGN (<= 900px)
+   MOBILE NAV 2025 REDESIGN (<= 768px)
    Premium full-screen mobile menu
    =================================== */
 
@@ -4071,7 +4071,7 @@ body.nav-open .nav-toggle:hover,
 }
 
 /* Mobile Styles - Show hamburger, hide desktop nav in header */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .nav-toggle {
     display: flex !important;
     visibility: visible !important;
@@ -4269,7 +4269,7 @@ body.nav-open .nav-toggle:hover,
 }
 
 /* Desktop - Hide mobile overlay, show desktop nav */
-@media (min-width: 901px) {
+@media (min-width: 769px) {
   .mobile-nav-overlay {
     display: none !important;
   }
