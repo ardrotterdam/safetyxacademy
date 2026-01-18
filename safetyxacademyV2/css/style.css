@@ -4673,3 +4673,111 @@ html, body {
   }
 }
 
+/* ===================================
+   September 2026 Launch Hero
+   =================================== */
+.sx-hero {
+  background: #ffffff;
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+
+.sx-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sx-hero-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+}
+
+.sx-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.sx-hero-title {
+  color: #111111;
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin-bottom: 0.9rem;
+}
+
+.sx-hero-text {
+  color: #111111;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.sx-hero-reassurance {
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sx-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.6rem;
+  border-radius: 14px;
+  background: #A61C2B;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 8px 20px rgba(166, 28, 43, 0.2);
+}
+
+.sx-hero-cta:hover {
+  background: #8F1825;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(166, 28, 43, 0.25);
+}
+
+.sx-hero-cta:focus-visible {
+  outline: 3px solid rgba(166, 28, 43, 0.35);
+  outline-offset: 2px;
+}
+
+@media (min-width: 600px) {
+  .sx-hero-card {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .sx-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .sx-hero-text {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .sx-hero {
+    padding: 3.5rem 1.5rem 2rem;
+  }
+
+  .sx-hero-card {
+    padding: 3rem 3.5rem;
+  }
+
+  .sx-hero-title {
+    font-size: 2.6rem;
+  }
+
+  .sx-hero-text {
+    font-size: 1.1rem;
+  }
+}
