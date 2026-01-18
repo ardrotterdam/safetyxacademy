@@ -4731,22 +4731,22 @@ html, body {
   justify-content: center;
   padding: 0.95rem 1.6rem;
   border-radius: 14px;
-  background: #A61C2B;
+  background: #F97316;
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  box-shadow: 0 8px 20px rgba(166, 28, 43, 0.2);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.2);
 }
 
 .sx-hero-cta:hover {
-  background: #8F1825;
+  background: #E56414;
   transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(166, 28, 43, 0.25);
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.25);
 }
 
 .sx-hero-cta:focus-visible {
-  outline: 3px solid rgba(166, 28, 43, 0.35);
+  outline: 3px solid rgba(249, 115, 22, 0.4);
   outline-offset: 2px;
 }
 
