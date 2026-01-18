@@ -4684,6 +4684,7 @@ html, body {
 .sx-hero-inner {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .sx-hero-card {
@@ -4779,5 +4780,11 @@ html, body {
 
   .sx-hero-text {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sx-hero-inner {
+    padding: 0 16px;
   }
 }
