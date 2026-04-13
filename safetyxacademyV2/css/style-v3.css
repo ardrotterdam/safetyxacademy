@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap");
 
-/* SafetyXAcademy — homepage v3 (index only)
-   Palette: single deep canvas (#0A0F1C), warm white copy, ANSI safety orange accents. */
+/* SafetyXAcademy — site v3 (homepage + key subpages)
+   Canvas #0A0F1C, warm white copy, ANSI orange CTAs, gold labels. */
 
 :root {
   /* Canonical tokens (use these in new rules) */
@@ -9,7 +9,8 @@
   --secondary: #0a0f1c;
   --text-primary: #f5f0eb;
   --text-muted: #8b95a5;
-  --accent-gold: #ff6600; /* ANSI Safety Orange */
+  --accent-gold: #ff6600; /* ANSI Safety Orange — CTAs, focus */
+  --label-gold: #d4a853; /* warm gold — labels / eyebrows */
   --accent-blue: #2563eb;
   --accent-success: #10b981;
 
@@ -379,7 +380,7 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--sx-gold);
+  color: var(--label-gold);
   margin-bottom: 1.75rem;
 }
 
@@ -388,11 +389,11 @@ a:hover {
   content: "";
   height: 1px;
   width: 40px;
-  background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.7));
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.75));
 }
 
 .sx-hero__label::after {
-  background: linear-gradient(270deg, transparent, rgba(255, 102, 0, 0.7));
+  background: linear-gradient(270deg, transparent, rgba(212, 168, 83, 0.75));
 }
 
 .sx-hero h1 {
@@ -573,7 +574,7 @@ a.sx-btn--gold:hover,
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent-gold);
+  color: var(--label-gold);
   margin-bottom: 1rem;
 }
 
@@ -897,7 +898,7 @@ a.sx-btn--gold:hover,
 }
 
 .sx-stars {
-  color: var(--sx-gold);
+  color: var(--label-gold);
   letter-spacing: 0.15em;
   font-size: 15px;
 }
@@ -1091,7 +1092,7 @@ a.sx-btn--gold:hover,
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--sx-gold);
+  color: var(--label-gold);
   margin-bottom: 1.25rem;
 }
 
@@ -1221,6 +1222,281 @@ a.sx-btn--gold:hover,
 
 .sx-social a:hover {
   color: var(--accent-gold);
+}
+
+/* —— Interior pages (NEBOSH opleiding, etc.) —— */
+.sx-page-hero {
+  padding: 7.25rem clamp(1.25rem, 4vw, 2rem) clamp(2.5rem, 5vw, 3.5rem);
+  background: var(--primary);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sx-page-hero__inner {
+  max-width: var(--sx-max);
+  margin: 0 auto;
+}
+
+.sx-page-hero h1 {
+  margin: 0 0 1.25rem;
+  font-family: var(--sx-display);
+  font-weight: 800;
+  font-size: clamp(1.85rem, 4.5vw, 3.15rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.sx-prose {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.sx-prose p {
+  margin: 0 0 1rem;
+}
+
+.sx-prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.sx-prose li {
+  margin-bottom: 0.35rem;
+}
+
+.sx-prose strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.sx-benefit-list {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.sx-benefit-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.sx-benefit-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+
+.sx-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .sx-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sx-content-img {
+  margin: 1.25rem 0;
+  border-radius: var(--sx-radius);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.sx-module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.sx-price-card {
+  padding: 2rem;
+  border-radius: var(--sx-radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: grid;
+  gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .sx-price-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sx-price-head {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sx-price-amount {
+  font-family: var(--sx-display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.sx-price-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--label-gold);
+}
+
+.sx-price-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sx-price-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.sx-price-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.sx-compare-wrap {
+  border-radius: var(--sx-radius);
+  border: 1px solid var(--glass-border);
+  overflow-x: auto;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-compare-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.9fr) repeat(3, 1fr);
+  gap: 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sx-compare-row:last-child {
+  border-bottom: 0;
+}
+
+.sx-compare-cell {
+  padding: 0.85rem 1rem;
+  font-size: 14px;
+  color: var(--text-muted);
+  border-right: 1px solid var(--glass-border);
+}
+
+.sx-compare-cell:last-child {
+  border-right: 0;
+}
+
+.sx-compare-row--head .sx-compare-cell {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.sx-compare-conclude {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--sx-radius);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 102, 0, 0.06);
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.sx-compare-conclude strong {
+  color: var(--text-primary);
+}
+
+.sx-faq details {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--sx-radius);
+  margin-bottom: 0.75rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.sx-faq summary {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-primary);
+  list-style: none;
+}
+
+.sx-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.sx-faq summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent-gold);
+  font-weight: 400;
+}
+
+.sx-faq details[open] summary::after {
+  content: "\2212";
+}
+
+.sx-faq .sx-faq-body {
+  padding: 0 1.25rem 1.1rem;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.sx-cta-band {
+  text-align: center;
+  padding: clamp(3rem, 8vw, 4.5rem) 1.25rem;
+  border-top: 1px solid var(--glass-border);
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 0%, rgba(255, 102, 0, 0.08), transparent 55%),
+    var(--primary);
+}
+
+.sx-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .visually-hidden {
