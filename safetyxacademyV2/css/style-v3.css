@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap");
 
 /* SafetyXAcademy — homepage v3 (index only)
-   Palette: single deep canvas (#0A0F1C), warm white copy, gold accents. */
+   Palette: single deep canvas (#0A0F1C), warm white copy, ANSI safety orange accents. */
 
 :root {
   /* Canonical tokens (use these in new rules) */
@@ -9,7 +9,7 @@
   --secondary: #0a0f1c;
   --text-primary: #f5f0eb;
   --text-muted: #8b95a5;
-  --accent-gold: #d4a853;
+  --accent-gold: #ff6600; /* ANSI Safety Orange */
   --accent-blue: #2563eb;
   --accent-success: #10b981;
 
@@ -88,7 +88,7 @@ a {
 }
 
 a:hover {
-  color: #e8c778;
+  color: #ff8533;
 }
 
 .sx-grain {
@@ -185,13 +185,13 @@ a:hover {
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.02em;
-  border: 1px solid rgba(212, 168, 83, 0.35);
+  border: 1px solid rgba(255, 102, 0, 0.35);
   transition: transform 0.3s var(--sx-ease), box-shadow 0.3s var(--sx-ease);
 }
 
 .sx-nav-cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 40px rgba(212, 168, 83, 0.25);
+  box-shadow: 0 12px 40px rgba(255, 102, 0, 0.25);
   color: var(--primary) !important;
 }
 
@@ -313,7 +313,7 @@ a:hover {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 55% 45% at 50% 35%, rgba(212, 168, 83, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 50% 35%, rgba(255, 102, 0, 0.07) 0%, transparent 55%),
     radial-gradient(ellipse 80% 60% at 50% 100%, rgba(10, 15, 28, 0.9) 0%, transparent 50%);
   opacity: 1;
 }
@@ -388,11 +388,11 @@ a:hover {
   content: "";
   height: 1px;
   width: 40px;
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.7));
+  background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.7));
 }
 
 .sx-hero__label::after {
-  background: linear-gradient(270deg, transparent, rgba(212, 168, 83, 0.7));
+  background: linear-gradient(270deg, transparent, rgba(255, 102, 0, 0.7));
 }
 
 .sx-hero h1 {
@@ -443,12 +443,12 @@ a:hover {
 .sx-btn--gold {
   background: var(--sx-gold);
   color: #0a0f1c;
-  border-color: rgba(212, 168, 83, 0.4);
+  border-color: rgba(255, 102, 0, 0.4);
 }
 
 .sx-btn--gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 48px rgba(212, 168, 83, 0.28);
+  box-shadow: 0 16px 48px rgba(255, 102, 0, 0.28);
   color: #0a0f1c;
 }
 
@@ -639,8 +639,8 @@ a:hover {
 
 .sx-glass:hover {
   transform: translateY(-6px);
-  border-color: rgba(212, 168, 83, 0.45);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(212, 168, 83, 0.12);
+  border-color: rgba(255, 102, 0, 0.45);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 102, 0, 0.12);
 }
 
 .sx-glass__icon {
@@ -672,7 +672,7 @@ a:hover {
 }
 
 .sx-glass__link:hover {
-  color: #e8c778;
+  color: #ff8533;
 }
 
 /* —— Split NEBOSH —— */
@@ -776,7 +776,7 @@ a:hover {
 }
 
 .sx-sector:hover {
-  border-color: rgba(212, 168, 83, 0.35);
+  border-color: rgba(255, 102, 0, 0.35);
   transform: translateY(-3px);
 }
 
@@ -806,7 +806,7 @@ a:hover {
 /* —— Testimonials —— */
 .sx-testimonials {
   background:
-    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212, 168, 83, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 102, 0, 0.06) 0%, transparent 55%),
     var(--primary);
   border-block: 1px solid var(--glass-border);
 }
@@ -862,7 +862,7 @@ a:hover {
   font-family: Georgia, serif;
   font-size: 4rem;
   line-height: 1;
-  color: rgba(212, 168, 83, 0.2);
+  color: rgba(255, 102, 0, 0.2);
   pointer-events: none;
 }
 
@@ -918,7 +918,7 @@ a:hover {
 }
 
 .sx-t__dots label:hover {
-  background: rgba(212, 168, 83, 0.35);
+  background: rgba(255, 102, 0, 0.35);
 }
 
 #sx-t1:checked ~ .sx-t__dots label[for="sx-t1"],
@@ -969,7 +969,7 @@ a:hover {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(212, 168, 83, 0.35), var(--sx-gold));
+  background: linear-gradient(90deg, rgba(255, 102, 0, 0.35), var(--sx-gold));
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 1.1s var(--sx-ease);
@@ -994,7 +994,7 @@ a:hover {
   padding: clamp(3.5rem, 8vw, 5rem) clamp(1.25rem, 4vw, 2rem);
   text-align: center;
   background:
-    radial-gradient(ellipse 80% 120% at 80% 50%, rgba(212, 168, 83, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse 80% 120% at 80% 50%, rgba(255, 102, 0, 0.08) 0%, transparent 45%),
     radial-gradient(ellipse 60% 100% at 10% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
     var(--primary);
   border-block: 1px solid var(--glass-border);
@@ -1066,7 +1066,7 @@ a:hover {
 }
 
 .sx-loc__card a:hover {
-  color: #e8c778;
+  color: #ff8533;
 }
 
 /* —— Final CTA —— */
@@ -1079,7 +1079,7 @@ a:hover {
   text-align: center;
   padding: 4rem 1.25rem;
   background:
-    radial-gradient(ellipse 65% 55% at 50% 100%, rgba(212, 168, 83, 0.09) 0%, transparent 58%),
+    radial-gradient(ellipse 65% 55% at 50% 100%, rgba(255, 102, 0, 0.09) 0%, transparent 58%),
     var(--primary);
 }
 
@@ -1189,7 +1189,7 @@ a:hover {
 }
 
 .sx-footer__contact a:hover {
-  color: #e8c778;
+  color: #ff8533;
 }
 
 .sx-footer__bottom {
