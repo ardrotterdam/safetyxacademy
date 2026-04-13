@@ -440,16 +440,18 @@ a:hover {
     border-color 0.3s var(--sx-ease), background 0.3s var(--sx-ease);
 }
 
+a.sx-btn--gold,
 .sx-btn--gold {
   background: var(--sx-gold);
-  color: #0a0f1c;
+  color: var(--primary);
   border-color: rgba(255, 102, 0, 0.4);
 }
 
+a.sx-btn--gold:hover,
 .sx-btn--gold:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 48px rgba(255, 102, 0, 0.28);
-  color: #0a0f1c;
+  color: var(--primary);
 }
 
 .sx-btn--ghost {
@@ -1061,11 +1063,12 @@ a:hover {
   line-height: 1.7;
 }
 
-.sx-loc__card a {
+/* Geen accent-kleur op CTA-knoppen (anders oranje tekst op oranje knop). */
+.sx-loc__card a:not(.sx-btn) {
   color: var(--accent-gold);
 }
 
-.sx-loc__card a:hover {
+.sx-loc__card a:not(.sx-btn):hover {
   color: #ff8533;
 }
 
