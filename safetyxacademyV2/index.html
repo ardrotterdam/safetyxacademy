@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <!-- 1. Basis & SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F1C" />
   <title>NEBOSH Opleiding Nederland | SafetyX Academy Rotterdam</title>
-  <meta name="description" content="NEBOSH IGC opleiding in het Nederlands. Van MVK naar NEBOSH diploma Nederland. Veiligheidskundige training in Rotterdam en online." />
+  <meta name="description" content="NEBOSH IGC opleiding in het Nederlands. Train lokaal in Rotterdam, werk wereldwijd. Veiligheidskundige training, kleine groepen, september 2026." />
   <link rel="canonical" href="https://safetyxacademy.nl/" />
   <link rel="sitemap" type="application/xml" href="https://safetyxacademy.nl/sitemap.xml" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="NEBOSH Opleiding Nederland | SafetyXAcademy Rotterdam">
-  <meta property="og:description" content="NEBOSH IGC opleiding in het Nederlands. Van MVK naar NEBOSH diploma Nederland. Veiligheidskundige training in Rotterdam en online.">
+  <meta property="og:description" content="Nederlandstalige NEBOSH IGC in Rotterdam. Internationaal erkend, €3.500 all-in, max. 10 studenten. Start september 2026.">
   <meta property="og:url" content="https://safetyxacademy.nl/">
   <meta property="og:image" content="https://safetyxacademy.nl/images/nebosh-igc-training-rotterdam-students.webp">
   <meta property="og:locale" content="nl_NL">
 
-  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,12 +24,8 @@
     gtag('config', 'G-91JCVXBQ0W');
   </script>
 
-  <!-- 2. CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-v3.css" />
 
-  <!-- Favicons -->
-  <!-- Favicon files are located in the repo root (safetyxacademyV2/) and deployed to https://safetyxacademy.nl/
-       Test URLs: https://safetyxacademy.nl/favicon-32.png, https://safetyxacademy.nl/favicon-192.png, etc. -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
@@ -39,7 +33,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png">
   <meta name="msapplication-TileImage" content="/favicon-512.png">
 
-  <!-- JSON-LD Schema.org -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +43,7 @@
       "name": "SafetyXAcademy",
       "url": "https://safetyxacademy.nl/",
       "logo": "https://safetyxacademy.nl/favicon-512.png",
-      "description": "SafetyXAcademy biedt Nederlandstalige NEBOSH IGC opleidingen in Rotterdam en helpt HSE-professionals uit Nederland en België aan internationale carrières en ZZP-opdrachten.",
+      "description": "SafetyXAcademy biedt Nederlandstalige NEBOSH IGC opleidingen in Rotterdam en helpt HSE-professionals uit Nederland en België aan internationale carrières en ZZP-opdrachten in havens, offshore wind, energietransitie en internationale projecten.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Westplein 12",
@@ -76,7 +69,7 @@
       "@type": "Course",
       "@id": "https://safetyxacademy.nl/#nebosh-igc",
       "name": "NEBOSH IGC Opleiding Rotterdam",
-      "description": "Nederlandstalige NEBOSH IGC opleiding in Veerhaven Rotterdam. Train lokaal voor €3.500 all-in en werk wereldwijd als HSE professional in Nederland, België en internationale havens.",
+      "description": "Nederlandstalige NEBOSH IGC opleiding in Veerhaven Rotterdam. €3.500 all-in, maximaal 10 studenten. Internationaal erkend voor HSE-rollen in Benelux-havens, offshore wind, energietransitie en internationale projecten.",
       "provider": {
         "@id": "https://safetyxacademy.nl/#organization"
       }
@@ -85,395 +78,445 @@
 }
   </script>
 </head>
-
 <body>
-    <!-- HEADER INCLUDE -->
-    <div id="header-include"></div>
-    <script>
-      fetch('includes/header.html')
-        .then(r => r.text())
-        .then(html => {
-          const el = document.getElementById('header-include');
-          el.outerHTML = html;
-          setTimeout(() => {
-            document.dispatchEvent(new Event('headerloaded'));
-            window.dispatchEvent(new Event('headerloaded'));
-          }, 200);
-        })
-        .catch(() => console.error('Header failed'));
-    </script>
-  
-    <main>
-  
-      <!-- September 2026 Launch Hero -->
-      <section class="sx-hero" aria-labelledby="sx-hero-title">
-        <div class="sx-hero-inner">
-          <div class="sx-hero-card">
-            <span class="sx-hero-eyebrow">Belangrijk bericht</span>
-            <h2 id="sx-hero-title" class="sx-hero-title">SafetyX Academy start in september 2026</h2>
-            <p class="sx-hero-text">
-              We kiezen voor kwaliteit boven snelheid. Meld je gratis en vrijblijvend aan voor de wachtlijst.
-              Vroege aanmelders krijgen voorrang en exclusieve prep content (quizzes, tips, job alerts).
-            </p>
-            <p class="sx-hero-reassurance">Gratis, vrijblijvend en zonder verplichting</p>
-            <a href="aanmelden.html" class="sx-hero-cta">Plaats me op de wachtlijst</a>
-          </div>
-        </div>
-      </section>
+  <div class="sx-grain" aria-hidden="true"></div>
 
-      <!-- 1. Hero: Wie zijn we + 2 hoofd-CTA's -->
-      <section class="hero home-hero">
-        <div class="hero-inner">
-          <div class="hero-image-main">
-            <img src="/images/nebosh-igc-training-rotterdam-students.webp"
-                 alt="NEBOSH IGC training bij SafetyXAcademy in Rotterdam met studenten uit Nederland en België"
-                 width="1920"
-                 height="1280">
-          </div>
+  <header id="sx-header">
+    <div class="sx-header__inner">
+      <a class="sx-logo" href="index.html" aria-label="SafetyXAcademy Home">SafetyX<span>Academy</span></a>
 
-          <h1>SafetyXAcademy – NEBOSH Opleiding &amp; HSE Jobs voor Nederland &amp; België</h1>
-          <p class="hero-subtitle">
-            Train lokaal in Rotterdam, werk wereldwijd als HSE-professional.
-            Nederlands gesproken, internationaal erkend.
-          </p>
-          <p>
-            SafetyXAcademy helpt Nederlandstalige veiligheidskundigen aan een
-            <strong>NEBOSH IGC certificaat</strong> én betere banen of freelance opdrachten
-            in de Benelux-havens, offshore en in landen als Noorwegen, UK en Dubai.
-          </p>
+      <nav class="sx-nav-desktop" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+          <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </nav>
 
-          <div class="cta-buttons">
-            <a href="nebosh-opleiding.html" class="btn-pill-orange" aria-label="Bekijk NEBOSH opleiding">
-              Bekijk NEBOSH Opleiding <span class="arrow">→</span>
-            </a>
-            <a href="jobs.html" class="btn btn-secondary" aria-label="Bekijk HSE jobs en ZZP opdrachten">
-              Jobs &amp; ZZP opdrachten
-            </a>
-          </div>
+      <div class="sx-nav-cta-wrap">
+        <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
+      </div>
 
-          <p class="hero-tagline">Train lokaal in Veerhaven Rotterdam – Verdien wereldwijd als HSE professional</p>
-        </div>
-      </section>
-  
-      <!-- 2. Drie pijlers -->
-      <section class="home-pillars">
-        <div class="container">
-          <h2>Onze 3 pijlers voor jouw HSE-carrière</h2>
-          <p class="section-subtitle">
-            SafetyXAcademy helpt je niet alleen aan je NEBOSH IGC diploma,
-            maar ook aan échte opdrachten in de Benelux-havens en daarbuiten.
-          </p>
+      <button type="button" id="sx-nav-toggle" aria-expanded="false" aria-controls="sx-nav-panel" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
-          <div class="pillars-grid">
-            <article class="pillar-card">
-              <h3>NEBOSH IGC Opleiding</h3>
-              <p>
-                Klassikale en blended training in Veerhaven Rotterdam.
-                €3.500 all-in inclusief examengeld, kleine groepen en
-                Nederlandstalige begeleiding.
-              </p>
-            </article>
+    <div id="sx-nav-panel">
+      <ul>
+        <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+        <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+        <li><a href="over-ons.html">Over Ons</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+      </ul>
+      <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
+    </div>
+  </header>
 
-            <article class="pillar-card">
-              <h3>Jobs &amp; ZZP opdrachten</h3>
-              <p>
-                Inzicht in dagtarieven (€500–€1.500/dag) en toegang tot
-                opdrachten in Rotterdam, Antwerpen en internationale havens.
-              </p>
-              <a href="jobs.html" class="pillar-link">
-                Bekijk ZZP opdrachten →
-              </a>
-            </article>
+  <main id="main">
+    <section class="sx-hero" id="top" aria-labelledby="sx-hero-heading">
+      <div class="sx-hero__media" id="sx-hero-media">
+        <video
+          id="sx-hero-video"
+          src="images/hero-video.mp4"
+          poster="/images/nebosh-igc-training-rotterdam-students.webp"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-hidden="true"></video>
+      </div>
 
-            <article class="pillar-card">
-              <h3>Jobplacement &amp; Support</h3>
-              <p>
-                Hulp bij CV, LinkedIn en voorbereiding op gesprekken.
-                We denken met je mee hoe je je NEBOSH diploma omzet
-                in echte opdrachten.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. Waarom SafetyXAcademy -->
-      <section class="home-why">
-        <div class="container">
-          <div class="home-why-grid">
-            <div class="home-why-text">
-              <h2>Waarom SafetyXAcademy?</h2>
-              <p class="section-subtitle">
-                We combineren een internationale NEBOSH kwalificatie met
-                lokale havenkennis in Rotterdam en Antwerpen. Dat maakt jou
-                interessant voor werkgevers én opdrachtgevers.
-              </p>
-
-              <ul class="home-why-list">
-                <li>
-                  <strong>Internationaal erkend diploma</strong>
-                  – NEBOSH IGC wordt erkend in 120+ landen.
-                </li>
-                <li>
-                  <strong>Focussed op havens &amp; offshore</strong>
-                  – Benelux-havens, Noorwegen, UK, Middle East.
-                </li>
-                <li>
-                  <strong>Kleine groepen, veel aandacht</strong>
-                  – max 10 studenten per groep, Nederlandstalige begeleiding.
-                </li>
-                <li>
-                  <strong>Support na je examen</strong>
-                  – CV-check, LinkedIn tips en toegang tot opdrachten.
-                </li>
-              </ul>
-            </div>
-
-            <div class="home-why-highlights">
-              <div class="why-card">
-                <span class="why-label">Vanaf</span>
-                <span class="why-value">€3.500</span>
-                <span class="why-note">All-in NEBOSH IGC</span>
-              </div>
-              <div class="why-card">
-                <span class="why-label">Tot</span>
-                <span class="why-value">€1.500</span>
-                <span class="why-note">per dag als ZZP'er</span>
-              </div>
-              <div class="why-card">
-                <span class="why-label">120+</span>
-                <span class="why-note">Landen waar NEBOSH erkend is</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- 3. NEBOSH-highlight -->
-      <section class="home-nebosh-highlight">
-        <div class="container">
-          <div class="nebosh-highlight-image">
-            <img src="/images/nebosh-klaslokaal-studenten-rotterdam-safetyxacademy.webp"
-                 alt="NEBOSH IGC training klaslokaal SafetyXAcademy Rotterdam"
-                 width="1920"
-                 height="1280"
-                 loading="eager">
-          </div>
-          <h2 class="section-title">NEBOSH IGC – Slimmer dan MKV voor internationale carrières</h2>
-          <p class="section-subtitle">
-            Bespaar €1.500–€3.500 vergeleken met MKV én werk in 120+ landen wereldwijd.
-          </p>
-  
-          <div class="highlight-box">
-            <p>
-              Onze <strong>NEBOSH IGC opleiding in Veerhaven Rotterdam</strong> kost
-              <strong>€3.500 all-in inclusief examengeld</strong>.
-              MKV-trajecten kosten vaak <strong>€5.000–€7.000</strong> en zijn vooral in Nederland bekend.
-            </p>
-            <p style="margin-top:0.75rem;">
-              Met NEBOSH IGC kan je werken in <strong>Benelux-havens</strong> (Rotterdam, Antwerpen, Zeebrugge, Amsterdam)
-              én in internationale hubs zoals <strong>Dubai, Noorwegen, UK en Singapore</strong>.
-            </p>
-            <p style="margin-top:1rem;">
-              <strong>Werk je in Antwerp, Ghent, Zeebrugge, Amsterdam of Groningen?</strong> 
-              Onze NEBOSH IGC opleiding in Rotterdam is binnen 1-2 uur bereikbaar. 
-              <a href="nebosh-benelux-ports.html"><strong>Bekijk reistijden per haven →</strong></a>
-            </p>
-            <a href="nebosh-opleiding.html" class="btn btn-primary" aria-label="Lees meer over NEBOSH versus MKV">
-              Lees de volledige NEBOSH vs MKV vergelijking →
-            </a>
-          </div>
-        </div>
-      </section>
-  
-      <!-- 4. Jobs & ZZP highlight -->
-      <section class="home-jobs-highlight">
-        <div class="container">
-          <h2 class="section-title">Wat kan je verdienen als HSE ZZP’er met NEBOSH?</h2>
-          <p class="section-subtitle">
-            Dagtarieven van <strong>€400–€1.500</strong> zijn normaal voor ervaren veiligheidskundigen.
-          </p>
-  
-          <div class="jobs-summary-grid">
-            <div class="jobs-card">
-              <h3>Benelux Havens</h3>
-              <p>
-                In de havens van <strong>Rotterdam, Antwerpen, Zeebrugge en Amsterdam</strong>
-                liggen dagtarieven vaak tussen <strong>€500–€800 per dag</strong> voor HSE ZZP’ers.
-              </p>
-            </div>
-            <div class="jobs-card">
-              <h3>Internationale Projecten</h3>
-              <p>
-                Offshore en internationale opdrachten (Noorwegen, UK, Dubai) kunnen oplopen tot
-                <strong>€900–€1.500 per dag</strong>, afhankelijk van ervaring en project.
-              </p>
-            </div>
-            <div class="jobs-card">
-              <h3>Van opleiding naar opdracht</h3>
-              <p>
-                Na jouw NEBOSH-opleiding helpen we je met
-                <strong>CV-optimalisatie, LinkedIn-profiel</strong> en het vinden van
-                passende opdrachten of banen.
-              </p>
-            </div>
-          </div>
-  
-          <div class="jobs-cta-center">
-            <a href="jobs.html" class="btn-pill-orange">
-              Bekijk HSE jobs, ZZP-opdrachten &amp; dagtarieven <span class="arrow">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-  
-      <!-- 5. NEBOSH oefentest / training teaser -->
-      <section id="quiz-teaser" class="home-quiz">
-        <div class="container">
-          <h2 class="section-title">Test jezelf met de NEBOSH oefentest</h2>
-          <p class="section-subtitle">
-            Ontdek in 10–15 vragen of de NEBOSH IGC opleiding bij je past en hoe sterk je basiskennis HSE al is.
-          </p>
-  
-          <div class="quiz-box">
-            <p>
-              De quiz is speciaal gemaakt voor Nederlandstalige kandidaten in Nederland &amp; België.
-              Je krijgt direct feedback op je antwoorden en praktische tips om je voor te bereiden op de echte NEBOSH-examens.
-            </p>
-            <a href="nebosh-quiz.html" class="btn btn-primary" title="Gratis NEBOSH oefentest met 20 vragen">
-              Start de NEBOSH Oefentest (Gratis) →
-            </a>
-          </div>
-        </div>
-      </section>
-  
-      <!-- 6. Testimonials (kort, 2 highlights) -->
-      <section class="home-testimonials">
-        <div class="container">
-          <h2 class="section-title">Ervaringen van HSE-professionals</h2>
-          <p class="section-subtitle">
-            Een selectie van verhalen van studenten die via NEBOSH de stap maakten naar internationale projecten.
-          </p>
-  
-          <div class="testimonials-grid">
-            <article class="testimonial-card">
-              <div class="testimonial-text">
-                “Dankzij NEBOSH IGC verdien ik nu als HSE Officer op een offshore platform in Noorwegen
-                2–3× zoveel als in mijn oude baan in Nederland. De training in Rotterdam was de perfecte opstap.”
-              </div>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <div class="author-name">Lars van Dijk</div>
-                  <div class="author-role">HSE Officer, offshore Noorwegen</div>
-                </div>
-                <div class="rating">★★★★★</div>
-              </div>
-            </article>
-  
-            <article class="testimonial-card">
-              <div class="testimonial-text">
-                “Als Belgische veiligheidskundige twijfelde ik tussen MVK en NEBOSH.
-                Via SafetyXAcademy koos ik voor NEBOSH IGC in Rotterdam. Nu werk ik in Dubai –
-                zonder NEBOSH was dat praktisch onmogelijk geweest.”
-              </div>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <div class="author-name">Pieter Claes</div>
-                  <div class="author-role">Safety Coordinator, Dubai</div>
-                </div>
-                <div class="rating">★★★★★</div>
-              </div>
-            </article>
-          </div>
-  
-          <div class="testimonials-cta-center">
-            <a href="nebosh-opleiding.html#testimonials" class="text-link">
-              Lees meer ervaringen van onze studenten →
-            </a>
-          </div>
-        </div>
-      </section>
-  
-      <!-- 7. Contact / locatie teaser -->
-      <section id="contact" class="home-contact">
-        <div class="container">
-          <h2 class="section-title">Train in Veerhaven Rotterdam, Werk Wereldwijd</h2>
-          <p class="section-subtitle">
-            Westplein 12, Scheepvaartkwartier – ideaal bereikbaar vanuit heel Nederland en Vlaanderen.
-          </p>
-
-          <div class="contact-office-image">
-            <img src="/images/safetyxacademy-kantoor-westplein-rotterdam-nebosh-training.webp"
-                 alt="SafetyXAcademy kantoor Westplein Rotterdam NEBOSH training locatie"
-                 width="1920"
-                 height="1280"
-                 loading="lazy">
-          </div>
-
-          <div class="contact-summary-grid">
-            <div class="contact-text">
-              <p>
-                Ons trainingscentrum ligt in het <strong>maritieme hart van Rotterdam</strong>,
-                omringd door scheepvaartbedrijven, terminals en internationale HSE-kantoren.
-              </p>
-              <p>
-                Vanuit Antwerpen en Brussel reis je in ongeveer één uur met de trein.
-                Studenten uit heel Nederland &amp; België zijn welkom.
-              </p>
-              <p>
-                Wil je weten of NEBOSH bij jou past of heb je vragen over startdata, betaling of
-                combinatie met je huidige baan? Stuur ons gerust een bericht.
-              </p>
-  
-              <address>
-                <ul class="contact-list">
-                  <li><strong>Email:</strong> <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a></li>
-                  <li><strong>Telefoon:</strong> <a href="tel:+31108009512">010-800 9512</a></li>
-                  <li><strong>Adres:</strong> Westplein 12, 3016 BM Rotterdam (Veerhaven, Scheepvaartkwartier)</li>
-                </ul>
-              </address>
-  
-              <a href="aanmelden.html" class="btn-pill-orange">
-                Plaats mij op de wachtlijst – Gratis <span class="arrow">→</span>
-              </a>
-            </div>
-  
-            <div class="contact-map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.866888888889!2d4.4660513!3d51.9126089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c433a3a7e7e8e7%3A0x1234567890abcdef!2sWestplein%2012%2C%203016%20BM%20Rotterdam%2C%20Nederland!5e0!3m2!1snl!2snl!4v1705930000000!5m2!1snl!2snl"
-                width="100%"
-                height="350"
-                style="border:0;"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="SafetyXAcademy locatie Westplein 12 Veerhaven Rotterdam"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-    </main>
-  
-    <footer>
-      <div style="max-width:1200px; margin:0 auto;">
-        <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
-        <p style="margin-top:0.5rem;">
-          <a href="index.html">Home</a> |
-          <a href="nebosh-opleiding.html">NEBOSH Opleiding</a> |
-          <a href="jobs.html">Jobs &amp; ZZP Opdrachten</a> |
-          <a href="blog/index.html">Blog</a> |
-          <a href="over-ons.html">Over Ons</a> |
-          <a href="privacy.html">Privacy</a> |
-          <a href="#contact">Contact</a>
+      <div class="sx-hero__inner">
+        <p class="sx-hero__label">NEBOSH IGC — Rotterdam</p>
+        <h1 id="sx-hero-heading">Train lokaal.
+Werk wereldwijd.</h1>
+        <p class="sx-hero__sub">
+          Nederlandstalige NEBOSH IGC opleiding in Rotterdam. Internationaal erkend in 120+ landen.
+          Voor HSE-professionals die meer willen.
         </p>
-        <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-          Train lokaal voor €3.500, werk wereldwijd als HSE professional.
+        <div class="sx-hero__actions">
+          <a class="sx-btn sx-btn--gold" href="nebosh-opleiding.html">Bekijk Opleiding →</a>
+          <a class="sx-btn sx-btn--ghost" href="nebosh-quiz.html">Gratis Oefentest</a>
+        </div>
+      </div>
+
+      <div class="sx-scroll-hint" aria-hidden="true">
+        <span class="sx-scroll-hint__line"></span>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <section class="sx-trust sx-reveal" id="sx-trust-bar" aria-label="Kerncijfers">
+      <div class="sx-trust__grid">
+        <div>
+          <span class="sx-trust__num"><span data-target="120" data-suffix="+">0</span></span>
+          <span class="sx-trust__label">Landen erkend</span>
+        </div>
+        <div>
+          <span class="sx-trust__num"><span data-prefix="€" data-target="3500">0</span></span>
+          <span class="sx-trust__label">All-in prijs</span>
+        </div>
+        <div>
+          <span class="sx-trust__num"><span data-prefix="Max " data-target="10">0</span></span>
+          <span class="sx-trust__label">Studenten per groep</span>
+        </div>
+        <div>
+          <span class="sx-trust__num">€500–€1.500</span>
+          <span class="sx-trust__label">Dagtarief als ZZP'er</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sx-section" id="pijlers" aria-labelledby="sx-pillars-heading">
+      <div class="sx-section__inner">
+        <span class="sx-eyebrow sx-reveal">Onze pijlers</span>
+        <h2 class="sx-h2 sx-reveal" id="sx-pillars-heading">Alles voor jouw HSE-carrière</h2>
+        <p class="sx-lead sx-reveal">
+          Opleiding, opdrachten en begeleiding — één lijn van klaslokaal naar internationale projecten.
+        </p>
+
+        <div class="sx-pillars__grid">
+          <article class="sx-glass sx-reveal" data-stagger="1">
+            <svg class="sx-glass__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M4 19V5M4 19H20M4 19H2M4 5H2M4 5L12 2L20 5M20 5H22M20 5V19M20 19H22M20 19H4M9 9.5H15M9 13H15" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>NEBOSH IGC Opleiding</h3>
+            <p>
+              Klassikale training in Veerhaven Rotterdam. €3.500 all-in, kleine groepen,
+              Nederlandstalige begeleiding.
+            </p>
+            <a class="sx-glass__link" href="nebosh-opleiding.html">Meer info →</a>
+          </article>
+
+          <article class="sx-glass sx-reveal" data-stagger="2">
+            <svg class="sx-glass__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="7" width="18" height="14" rx="2"/>
+              <path d="M8 7V5a4 4 0 0 1 8 0v2" stroke-linecap="round"/>
+            </svg>
+            <h3>Jobs &amp; ZZP Opdrachten</h3>
+            <p>
+              Dagtarieven €500–€1.500. Opdrachten in Benelux-havens, offshore wind, terminals en internationale projecten.
+            </p>
+            <a class="sx-glass__link" href="jobs.html">Bekijk opdrachten →</a>
+          </article>
+
+          <article class="sx-glass sx-reveal" data-stagger="3">
+            <svg class="sx-glass__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 3v3M5.64 5.64l2.12 2.12M3 12h3M5.64 18.36l2.12-2.12M12 21v-3M18.36 18.36l-2.12-2.12M21 12h-3M18.36 5.64l-2.12 2.12" stroke-linecap="round"/>
+              <path d="M12 8l4 6H8l4-6z" stroke-linejoin="round"/>
+            </svg>
+            <h3>Career Support</h3>
+            <p>
+              CV-optimalisatie, LinkedIn-profiel en voorbereiding op gesprekken. Van diploma naar opdracht.
+            </p>
+            <a class="sx-glass__link" href="over-ons.html">Meer info →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sx-section" id="waarom-nebosh" aria-labelledby="sx-why-heading">
+      <div class="sx-section__inner sx-split">
+        <div class="sx-reveal">
+          <span class="sx-eyebrow">Waarom NEBOSH IGC</span>
+          <h2 class="sx-h2" id="sx-why-heading">Slimmer dan MVK voor internationale carrières</h2>
+          <p class="sx-lead" style="margin-bottom:1.25rem;">
+            MVK is sterk lokaal. <strong style="color:var(--sx-text);font-weight:600;">NEBOSH IGC</strong> opent havens,
+            offshore wind en internationale projecten — met een erkend diploma en lagere instapkosten.
+          </p>
+          <p style="margin:0 0 1.75rem;font-size:16px;">
+            Voor <strong style="color:var(--sx-text);font-weight:600;">€3.500 all-in</strong> (inclusief examengeld) train je bij ons in Rotterdam.
+            Typische MVK-trajecten liggen vaak tussen <strong style="color:var(--sx-text);font-weight:600;">€5.000 en €7.000</strong>.
+            Het examen is Engels; de lesstof en begeleiding zijn Nederlands.
+          </p>
+
+          <ul class="sx-check-list">
+            <li>Internationaal erkend in 120+ landen</li>
+            <li>Goedkoper dan MVK (€3.500 vs €5.000–€7.000)</li>
+            <li>Werk in havens, offshore wind, bouw en terminals</li>
+            <li>Nederlands gesproken, Engels examen</li>
+          </ul>
+
+          <a class="sx-btn sx-btn--ghost" href="nebosh-opleiding.html">Bekijk de volledige vergelijking →</a>
+        </div>
+
+        <div class="sx-split__img sx-reveal" data-stagger="1">
+          <img
+            src="/images/nebosh-klaslokaal-studenten-rotterdam-safetyxacademy.webp"
+            alt="NEBOSH IGC training klaslokaal SafetyXAcademy Rotterdam"
+            width="1920"
+            height="1280"
+            loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="sx-section sx-sectors" id="sectoren" aria-labelledby="sx-sectors-heading">
+      <div class="sx-section__inner">
+        <span class="sx-eyebrow sx-reveal">Sectoren</span>
+        <h2 class="sx-h2 sx-reveal" id="sx-sectors-heading">Waar NEBOSH-professionals werken</h2>
+        <p class="sx-lead sx-reveal">Van Rotterdam tot internationale bouwlocaties — jouw certificaat reist mee.</p>
+
+        <div class="sx-sectors__grid">
+          <article class="sx-sector sx-reveal" data-stagger="1">
+            <svg class="sx-sector__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Havens &amp; Terminals</h3>
+            <p>Rotterdam, Antwerpen, Amsterdam — HSE op overslag, steigers en logistieke knooppunten.</p>
+          </article>
+          <article class="sx-sector sx-reveal" data-stagger="2">
+            <svg class="sx-sector__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 3v18M8 8l4-4 4 4M8 16l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Offshore Wind &amp; Energy Transition</h3>
+            <p>Windparken op zee en energie-infrastructuur — steeds vaker dé groeimarkt voor HSE.</p>
+          </article>
+          <article class="sx-sector sx-reveal" data-stagger="3">
+            <svg class="sx-sector__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="7"/>
+              <path d="M12 5v3M12 16v3M5 12h3M16 12h3" stroke-linecap="round"/>
+            </svg>
+            <h3>Olie &amp; Gas</h3>
+            <p>Noordzee en Noord-Europa — waar ervaringswet nog kansen biedt naast wind en transitie.</p>
+          </article>
+          <article class="sx-sector sx-reveal" data-stagger="1">
+            <svg class="sx-sector__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M4 20h16M6 20V10l6-6 6 6v10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Bouw &amp; Infrastructuur</h3>
+            <p>Grote civiele en industriële projecten met strikte internationale HSE-normen.</p>
+          </article>
+          <article class="sx-sector sx-reveal" data-stagger="2">
+            <svg class="sx-sector__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M4 7h16v10H4zM8 17v3M16 17v3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Logistiek &amp; Warehousing</h3>
+            <p>DC’s, cold chain en haven-gebonden distributie — risico’s en compliance op schaal.</p>
+          </article>
+          <article class="sx-sector sx-reveal" data-stagger="3">
+            <svg class="sx-sector__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" stroke-linecap="round"/>
+            </svg>
+            <h3>Internationale Projecten</h3>
+            <p>UK, Noorwegen, Middle East (o.a. Dubai, Abu Dhabi) — één diploma, wereldwijde mobiliteit.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sx-section sx-testimonials" id="ervaringen" aria-labelledby="sx-test-heading">
+      <div class="sx-section__inner">
+        <span class="sx-eyebrow sx-reveal">Ervaringen</span>
+        <h2 class="sx-h2 sx-reveal" id="sx-test-heading">Wat onze studenten zeggen</h2>
+        <p class="sx-lead sx-reveal">Echte verhalen van professionals die de sprong waagden.</p>
+
+        <div class="sx-t sx-reveal" data-stagger="1">
+          <input class="sx-t__input" type="radio" name="sx_testi_home" id="sx-t1" checked>
+          <input class="sx-t__input" type="radio" name="sx_testi_home" id="sx-t2">
+          <div class="sx-t__viewport">
+            <div class="sx-t__track">
+              <div class="sx-t__slide">
+                <article class="sx-quote">
+                  <blockquote>
+                    Dankzij NEBOSH IGC verdien ik nu als HSE Officer op een offshore platform in Noorwegen
+                    2–3× zoveel als in mijn oude baan in Nederland. De training in Rotterdam was de perfecte opstap.
+                  </blockquote>
+                  <div class="sx-quote__meta">
+                    <div>
+                      <div class="sx-quote__name">Lars van Dijk</div>
+                      <div class="sx-quote__role">HSE Officer, offshore Noorwegen</div>
+                    </div>
+                    <div class="sx-stars" aria-label="5 van 5 sterren">★★★★★</div>
+                  </div>
+                </article>
+              </div>
+              <div class="sx-t__slide">
+                <article class="sx-quote">
+                  <blockquote>
+                    Als Belgische veiligheidskundige twijfelde ik tussen MVK en NEBOSH.
+                    Via SafetyXAcademy koos ik voor NEBOSH IGC in Rotterdam. Nu werk ik aan internationale HSE-projecten —
+                    onder andere in de Middle East — iets wat zonder NEBOSH een stuk moeilijker was geweest.
+                  </blockquote>
+                  <div class="sx-quote__meta">
+                    <div>
+                      <div class="sx-quote__name">Pieter Claes</div>
+                      <div class="sx-quote__role">Safety Coordinator, internationale projecten</div>
+                    </div>
+                    <div class="sx-stars" aria-label="5 van 5 sterren">★★★★★</div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="sx-t__dots">
+            <label for="sx-t1"><span class="visually-hidden">Testimonial 1</span></label>
+            <label for="sx-t2"><span class="visually-hidden">Testimonial 2</span></label>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin-top:2rem;" class="sx-reveal">
+          <a class="sx-glass__link" href="nebosh-opleiding.html#testimonials">Meer ervaringen →</a>
         </p>
       </div>
-    </footer>
-  
-  <!-- JS -->
-  <script src="/js/header.js" defer></script>
+    </section>
 
+    <section class="sx-section sx-reveal" id="dagtarieven" aria-labelledby="sx-salary-heading">
+      <div class="sx-section__inner">
+        <span class="sx-eyebrow">Verdien meer</span>
+        <h2 class="sx-h2" id="sx-salary-heading">Wat kan je verdienen met NEBOSH?</h2>
+        <p class="sx-lead">Indicatieve dagtarieven voor ervaren ZZP’ers — afhankelijk van sector, risico en contractvorm.</p>
+
+        <div class="sx-bar-row" data-w="55">
+          <div class="sx-bar-row__head">
+            <strong>Benelux Havens</strong>
+            <span>€500–€800/dag</span>
+          </div>
+          <div class="sx-bar"><span></span></div>
+        </div>
+        <div class="sx-bar-row" data-w="78">
+          <div class="sx-bar-row__head">
+            <strong>Offshore &amp; Wind</strong>
+            <span>€800–€1.200/dag</span>
+          </div>
+          <div class="sx-bar"><span></span></div>
+        </div>
+        <div class="sx-bar-row" data-w="92">
+          <div class="sx-bar-row__head">
+            <strong>Internationale Projecten</strong>
+            <span>€900–€1.500/dag</span>
+          </div>
+          <div class="sx-bar"><span></span></div>
+        </div>
+
+        <p class="sx-salary__note">
+          Tarieven zijn indicatief en afhankelijk van ervaring en project.
+        </p>
+        <a class="sx-btn sx-btn--gold" href="nebosh-opleiding.html">Start je NEBOSH opleiding →</a>
+      </div>
+    </section>
+
+    <section class="sx-quiz-banner sx-reveal" id="quiz-cta" aria-labelledby="sx-quiz-heading">
+      <h2 id="sx-quiz-heading">Test jezelf met de gratis NEBOSH oefentest</h2>
+      <p>20 vragen. 15 minuten. Ontdek of NEBOSH bij je past.</p>
+      <a class="sx-btn sx-btn--gold" href="nebosh-quiz.html">Start Oefentest →</a>
+    </section>
+
+    <section class="sx-section sx-loc" id="locatie" aria-labelledby="sx-loc-heading">
+      <div class="sx-section__inner">
+        <span class="sx-eyebrow sx-reveal">Trainingslocatie</span>
+        <h2 class="sx-h2 sx-reveal" id="sx-loc-heading">Veerhaven Rotterdam</h2>
+        <p class="sx-lead sx-reveal">
+          Westplein 12, Scheepvaartkwartier — bereikbaar vanuit heel Nederland en Vlaanderen.
+          <a href="nebosh-benelux-ports.html">Reistijden per haven →</a>
+        </p>
+
+        <div class="sx-loc__grid">
+          <div class="sx-map sx-reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.866888888889!2d4.4660513!3d51.9126089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c433a3a7e7e8e7%3A0x1234567890abcdef!2sWestplein%2012%2C%203016%20BM%20Rotterdam%2C%20Nederland!5e0!3m2!1snl!2snl!4v1705930000000!5m2!1snl!2snl"
+              width="600"
+              height="360"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="SafetyXAcademy locatie Westplein 12 Veerhaven Rotterdam"></iframe>
+          </div>
+          <div class="sx-loc__card sx-reveal" data-stagger="1">
+            <p style="margin:0 0 1rem;font-size:16px;">
+              Ons trainingscentrum ligt in het <strong style="color:var(--sx-text);">maritieme hart van Rotterdam</strong>,
+              omringd door terminals en internationale HSE-kantoren.
+            </p>
+            <p style="margin:0 0 1rem;font-size:16px;">
+              Vanuit <strong style="color:var(--sx-text);">Antwerpen en Brussel</strong> reis je in ongeveer één uur met de trein.
+              Studenten uit Nederland en België zijn welkom.
+            </p>
+            <address>
+              <strong style="color:var(--sx-text);">Adres</strong><br>
+              Westplein 12, 3016 BM Rotterdam (Veerhaven)<br><br>
+              <strong style="color:var(--sx-text);">Contact</strong><br>
+              E-mail: <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br>
+              Tel: <a href="tel:+31108009512">010-800 9512</a>
+            </address>
+            <a class="sx-btn sx-btn--gold" href="aanmelden.html" style="margin-top:0.5rem;">Aanmelden →</a>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;border-radius:var(--sx-radius);overflow:hidden;border:1px solid var(--sx-card-border);" class="sx-reveal">
+          <img
+            src="/images/safetyxacademy-kantoor-westplein-rotterdam-nebosh-training.webp"
+            alt="SafetyXAcademy kantoor Westplein Rotterdam NEBOSH training locatie"
+            width="1920"
+            height="1280"
+            loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="sx-final sx-reveal" id="aanmelden" aria-labelledby="sx-final-heading">
+      <div>
+        <p class="sx-final__label">Klaar om te beginnen?</p>
+        <h2 id="sx-final-heading">Je HSE-carrière
+begint hier.</h2>
+        <p class="sx-final__sub">Meld je aan voor de wachtlijst. Gratis en vrijblijvend.</p>
+        <a class="sx-btn sx-btn--gold" href="aanmelden.html">Aanmelden →</a>
+        <p class="sx-final__fine">Start september 2026 · €3.500 all-in · Max 10 studenten</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sx-footer">
+    <div class="sx-footer__grid">
+      <div class="sx-footer__brand">
+        <a class="sx-logo" href="index.html">SafetyX<span>Academy</span></a>
+        <p>Train lokaal, werk wereldwijd.</p>
+      </div>
+      <div>
+        <h3>Opleiding</h3>
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH IGC</a></li>
+          <li><a href="nebosh-quiz.html">Oefentest</a></li>
+          <li><a href="nebosh-benelux-ports.html">Benelux havens</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Carrière</h3>
+        <ul>
+          <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+          <li><a href="nebosh-offshore.html">Offshore</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Content</h3>
+        <ul>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Juridisch</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="index.html#locatie">Contact</a></li>
+        </ul>
+      </div>
+      <div class="sx-footer__contact">
+        <h3>Direct</h3>
+        <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br>
+        <a href="tel:+31108009512">010-800 9512</a><br>
+        Westplein 12, Rotterdam
+      </div>
+    </div>
+    <div class="sx-footer__bottom">
+      <span>© 2026 SafetyXAcademy · KVK 72037628 · ABshops.nl</span>
+      <div class="sx-social">
+        <a href="https://www.linkedin.com/company/safetyxacademy" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main-v3.js" defer></script>
 </body>
 </html>
