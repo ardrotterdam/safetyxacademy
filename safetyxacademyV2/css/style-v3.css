@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap");
 
 /* SafetyXAcademy — site v3 (homepage + key subpages)
-   Canvas #0A0F1C, warm white copy, ANSI orange CTAs, gold labels. */
+   Canvas #0A0F1C, warm white copy, ANSI Safety Orange #FF6600 voor alle accenten. */
 
 :root {
   /* Canonical tokens (use these in new rules) */
@@ -9,8 +9,7 @@
   --secondary: #0a0f1c;
   --text-primary: #f5f0eb;
   --text-muted: #8b95a5;
-  --accent-gold: #ff6600; /* ANSI Safety Orange — CTAs, focus */
-  --label-gold: #d4a853; /* warm gold — labels / eyebrows */
+  --accent-gold: #ff6600; /* ANSI Safety Orange — alle accenten / labels / CTAs */
   --accent-blue: #2563eb;
   --accent-success: #10b981;
 
@@ -89,7 +88,15 @@ a {
 }
 
 a:hover {
-  color: #ff8533;
+  color: var(--accent-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a.sx-btn:hover,
+a.sx-nav-cta:hover,
+.sx-logo:hover {
+  text-decoration: none;
 }
 
 .sx-grain {
@@ -380,7 +387,7 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--label-gold);
+  color: var(--accent-gold);
   margin-bottom: 1.75rem;
 }
 
@@ -389,11 +396,11 @@ a:hover {
   content: "";
   height: 1px;
   width: 40px;
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.75));
+  background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.75));
 }
 
 .sx-hero__label::after {
-  background: linear-gradient(270deg, transparent, rgba(212, 168, 83, 0.75));
+  background: linear-gradient(270deg, transparent, rgba(255, 102, 0, 0.75));
 }
 
 .sx-hero h1 {
@@ -574,7 +581,7 @@ a.sx-btn--gold:hover,
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--label-gold);
+  color: var(--accent-gold);
   margin-bottom: 1rem;
 }
 
@@ -675,7 +682,7 @@ a.sx-btn--gold:hover,
 }
 
 .sx-glass__link:hover {
-  color: #ff8533;
+  color: var(--accent-gold);
 }
 
 /* —— Split NEBOSH —— */
@@ -898,7 +905,7 @@ a.sx-btn--gold:hover,
 }
 
 .sx-stars {
-  color: var(--label-gold);
+  color: var(--accent-gold);
   letter-spacing: 0.15em;
   font-size: 15px;
 }
@@ -1070,7 +1077,7 @@ a.sx-btn--gold:hover,
 }
 
 .sx-loc__card a:not(.sx-btn):hover {
-  color: #ff8533;
+  color: var(--accent-gold);
 }
 
 /* —— Final CTA —— */
@@ -1092,7 +1099,7 @@ a.sx-btn--gold:hover,
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--label-gold);
+  color: var(--accent-gold);
   margin-bottom: 1.25rem;
 }
 
@@ -1193,7 +1200,7 @@ a.sx-btn--gold:hover,
 }
 
 .sx-footer__contact a:hover {
-  color: #ff8533;
+  color: var(--accent-gold);
 }
 
 .sx-footer__bottom {
@@ -1362,7 +1369,7 @@ a.sx-btn--gold:hover,
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-weight: 600;
-  color: var(--label-gold);
+  color: var(--accent-gold);
 }
 
 .sx-price-card h3 {
