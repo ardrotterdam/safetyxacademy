@@ -1253,6 +1253,10 @@ a.sx-btn--gold:hover,
   color: var(--text-primary);
 }
 
+.sx-page-hero .sx-lead strong {
+  color: var(--text-primary);
+}
+
 .sx-prose {
   color: var(--text-muted);
   font-size: 17px;
@@ -1504,6 +1508,272 @@ a.sx-btn--gold:hover,
   gap: 1rem;
   justify-content: center;
   margin-top: 1.5rem;
+}
+
+/* —— Aanmelden / wachtlijst —— */
+.sx-signup-hero-badge {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  background: rgba(255, 102, 0, 0.1);
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.sx-signup-stats {
+  background: var(--primary);
+  border-block: 1px solid var(--glass-border);
+  padding: clamp(1.25rem, 3vw, 1.75rem) 1.25rem;
+}
+
+.sx-signup-stats__grid {
+  max-width: var(--sx-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem 1.5rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .sx-signup-stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sx-signup-layout {
+  max-width: var(--sx-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .sx-signup-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sx-signup-card {
+  padding: clamp(1.75rem, 4vw, 2.25rem);
+  border-radius: var(--sx-radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  border-top: 3px solid var(--accent-gold);
+}
+
+.sx-signup .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 560px) {
+  .sx-signup .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sx-signup .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.sx-signup .form-group > label:first-child {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sx-signup .required {
+  color: var(--accent-gold);
+}
+
+.sx-signup input[type="text"],
+.sx-signup input[type="email"],
+.sx-signup input[type="tel"],
+.sx-signup select,
+.sx-signup textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.28);
+  color: var(--text-primary);
+  font-family: var(--sx-font);
+  font-size: 16px;
+  transition: border-color 0.25s var(--sx-ease), box-shadow 0.25s var(--sx-ease);
+}
+
+.sx-signup select option,
+.sx-signup select optgroup {
+  background: #0f141f;
+  color: var(--text-primary);
+}
+
+.sx-signup input::placeholder,
+.sx-signup textarea::placeholder {
+  color: rgba(139, 149, 165, 0.9);
+}
+
+.sx-signup input:focus,
+.sx-signup select:focus,
+.sx-signup textarea:focus {
+  outline: none;
+  border-color: rgba(255, 102, 0, 0.55);
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.12);
+}
+
+.sx-signup input[type="radio"],
+.sx-signup input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--accent-gold);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.sx-signup .radio-group,
+.sx-signup .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
+.sx-signup .radio-option,
+.sx-signup .checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  transition: border-color 0.25s var(--sx-ease);
+}
+
+.sx-signup .radio-option:hover,
+.sx-signup .checkbox-option:hover {
+  border-color: rgba(255, 102, 0, 0.35);
+}
+
+.sx-signup .radio-label,
+.sx-signup .checkbox-option span {
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.sx-signup-aside .sx-signup-info {
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--sx-radius);
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  margin: 1.5rem 0;
+}
+
+.sx-signup-aside .sx-signup-info h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sx-signup-aside .sx-signup-info ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.sx-signup .form-info-box,
+.sx-signup .form-success-box {
+  padding: 1.1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 102, 0, 0.2);
+  background: rgba(255, 102, 0, 0.06);
+  margin: 1rem 0 1.25rem;
+}
+
+.sx-signup .form-info-box p,
+.sx-signup .form-success-box p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.sx-signup .form-info-box strong,
+.sx-signup .form-success-box strong {
+  color: var(--text-primary);
+}
+
+button.sx-btn {
+  font-family: var(--sx-font);
+  appearance: none;
+}
+
+.sx-signup-submit {
+  width: 100%;
+  margin-top: 0.35rem;
+  cursor: pointer;
+}
+
+.sx-signup .privacy-notice {
+  margin-top: 1.35rem;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.sx-signup .privacy-notice a {
+  color: var(--accent-gold);
+}
+
+.sx-signup-extra {
+  padding: 2.5rem clamp(1.25rem, 4vw, 2rem) 4rem;
+  border-top: 1px solid var(--glass-border);
+  background: var(--primary);
+}
+
+.sx-signup-extra-box {
+  max-width: var(--sx-max);
+  margin: 0 auto;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--sx-radius);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-signup-extra-box p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+.sx-signup-extra-box strong {
+  color: var(--text-primary);
 }
 
 .visually-hidden {
