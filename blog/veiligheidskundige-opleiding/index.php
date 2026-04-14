@@ -244,7 +244,7 @@
       <h1>Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV)</h1>
       <p class="lead">Geactualiseerd voor 2026: deze gids helpt je de beste keuze te maken tussen <strong>NEBOSH IGC</strong> en <strong>MKV</strong> — inclusief <strong>kosten, salaris en carrièrekansen</strong>.</p>
       <div class="meta">
-        <p>📅 Laatst bijgewerkt: 3 november 2026 · ⏱ Leestijd: 8 minuten · ✍️ Door Nando Breure, HSE Expert</p>
+        <p>📅 Laatst bijgewerkt: 3 november 2026 · ⏱ Leestijd: 8 minuten · ✍️ Door SafetyXAcademy</p>
       </div>
     </header>
 
@@ -555,7 +555,7 @@
     "headline": "Veiligheidskundige Opleiding: Complete Gids 2026 (NEBOSH vs MKV)",
     "description": "NEBOSH IGC vs MKV in 2026: kosten, salarissen, carrièrepaden en keuzehulp.",
     "image": "https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp",
-    "author": { "@type": "Person", "name": "Nando Breure" },
+    "author": { "@type": "Organization", "name": "SafetyXAcademy" },
     "publisher": {
       "@type": "Organization",
       "name": "SafetyXAcademy",
