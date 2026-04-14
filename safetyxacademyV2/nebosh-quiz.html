@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <!-- 1. Basis & SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F1C" />
   <title>NEBOSH Oefentest Nederland | Gratis 20 Oefenvragen IGC - SafetyXAcademy</title>
   <meta name="description" content="Gratis NEBOSH oefentest voor HSE ZZP'ers in Rotterdam, Antwerp, Ghent, Zeebrugge, Amsterdam, Groningen. Test je kennis over RI&E, havens & offshore." />
   <link rel="canonical" href="https://safetyxacademy.nl/nebosh-quiz.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="NEBOSH Oefentest Nederland | Gratis 20 Oefenvragen IGC - SafetyXAcademy">
-  <meta property="og:description" content="Gratis NEBOSH oefentest met 20 examenvragen. Test je kennis over RI&E, havens, offshore & ZZP. SafetyXAcademy Rotterdam – jouw start naar internationaal HSE werk.">
-  <meta property="og:url" content="https://safetyxacademy.nl/nebosh-quiz.html">
-  <meta property="og:image" content="https://safetyxacademy.nl/images/nebosh-igc-training-rotterdam-students.webp">
-  <meta property="og:locale" content="nl_NL">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NEBOSH Oefentest Nederland | Gratis 20 Oefenvragen IGC - SafetyXAcademy" />
+  <meta property="og:description" content="Gratis NEBOSH oefentest met 20 examenvragen. Test je kennis over RI&E, havens, offshore & ZZP. SafetyXAcademy Rotterdam – jouw start naar internationaal HSE werk." />
+  <meta property="og:url" content="https://safetyxacademy.nl/nebosh-quiz.html" />
+  <meta property="og:image" content="https://safetyxacademy.nl/images/nebosh-igc-training-rotterdam-students.webp" />
+  <meta property="og:locale" content="nl_NL" />
 
-  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -25,14 +23,17 @@
     gtag('config', 'G-91JCVXBQ0W');
   </script>
 
-  <!-- CSS & Favicons -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-  <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png">
-  <meta name="msapplication-TileImage" content="/favicon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style-v3.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png" />
+  <meta name="msapplication-TileImage" content="/favicon-512.png" />
 
   <!-- JSON-LD: Quiz Schema -->
   <script type="application/ld+json">
@@ -85,49 +86,63 @@
   </script>
 </head>
 
-<body>
-  <!-- HEADER INCLUDE -->
-  <div id="header-include"></div>
-  <script>
-    fetch('includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        const el = document.getElementById('header-include');
-        el.outerHTML = html;
-        setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
-      })
-      .catch(() => console.error('Header failed'));
-  </script>
+<body class="sx-page-quiz">
+  <div class="sx-grain" aria-hidden="true"></div>
 
-  <main>
-
-    <section class="hero quiz-hero">
-      <div class="hero-inner">
-        <h1>NEBOSH Oefenquiz – 20 exam style vragen (NL &amp; EN)</h1>
-        <p class="hero-subtitle">
-          Gratis NEBOSH IGC oefenquiz voor veiligheidskundigen in Nederland &amp; België.
-          Test je HSE-kennis over RI&amp;E, havens, offshore, ZZP en internationale veiligheid.
-        </p>
-        <p>
-          Deze quiz is bedoeld als teaser voor de NEBOSH opleiding van SafetyXAcademy in Rotterdam.
-          De vragen zijn tweetalig (Nederlands &amp; Engels) en sluiten aan op onderwerpen zoals
-          <strong>veiligheidskundige opleiding</strong>, <strong>NEBOSH diploma Nederland</strong>,
-          <strong>HSE freelance / ZZP veiligheidskundige</strong> en internationale safety officer jobs.
-        </p>
+  <header id="sx-header">
+    <div class="sx-header__inner">
+      <a class="sx-logo" href="index.html" aria-label="SafetyXAcademy Home">SafetyX<span>Academy</span></a>
+      <nav class="sx-nav-desktop" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+          <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="sx-nav-cta-wrap">
+        <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
       </div>
+      <button type="button" id="sx-nav-toggle" aria-expanded="false" aria-controls="sx-nav-panel" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="sx-nav-panel">
+      <ul>
+        <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+        <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+        <li><a href="over-ons.html">Over Ons</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+      </ul>
+      <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="sx-quiz-hero sx-reveal" aria-labelledby="quiz-hero-title">
+      <span class="sx-eyebrow">Gratis oefentest</span>
+      <h1 id="quiz-hero-title">NEBOSH Oefenquiz – 20 exam style vragen (NL &amp; EN)</h1>
+      <p class="sx-quiz-hero__lead">
+        Gratis NEBOSH IGC oefenquiz voor veiligheidskundigen in Nederland &amp; België.
+        Test je HSE-kennis over RI&amp;E, havens, offshore, ZZP en internationale veiligheid.
+      </p>
+      <p class="sx-quiz-hero__note">
+        Deze quiz is bedoeld als teaser voor de NEBOSH opleiding van SafetyXAcademy in Rotterdam.
+        De vragen zijn tweetalig (Nederlands &amp; Engels) en sluiten aan op onderwerpen zoals
+        <strong>veiligheidskundige opleiding</strong>, <strong>NEBOSH diploma Nederland</strong>,
+        <strong>HSE freelance / ZZP veiligheidskundige</strong> en internationale safety officer jobs.
+      </p>
     </section>
 
-    <section class="nebosh-quiz">
-      <div class="container">
-        <header class="nebosh-quiz__header">
-          <h2>20 NEBOSH IGC oefenvragen met uitleg</h2>
-          <p class="nebosh-quiz__intro">
-            Klik op een vraag om het antwoord te bekijken. Eerst zie je de Nederlandse uitleg,
-            daarna de Engelse uitleg zoals je die ongeveer op een NEBOSH examen zou kunnen gebruiken.
-          </p>
-        </header>
+    <section class="sx-quiz-body sx-reveal" aria-labelledby="quiz-list-title">
+      <div class="sx-section__inner">
+        <h2 class="sx-h2" id="quiz-list-title">20 NEBOSH IGC oefenvragen met uitleg</h2>
+        <p class="sx-quiz-intro">
+          Klik op een vraag om het antwoord te bekijken. Eerst zie je de Nederlandse uitleg,
+          daarna de Engelse uitleg zoals je die ongeveer op een NEBOSH examen zou kunnen gebruiken.
+        </p>
 
-        <div class="nebosh-quiz__accordion">
+        <div class="sx-quiz-accordion">
           <!-- Vraag 1 -->
           <article class="quiz-item">
             <button class="quiz-item__header" type="button" aria-expanded="false">
@@ -492,41 +507,73 @@
       </div>
     </section>
 
-    <section class="quiz-cta">
-      <div class="container">
-        <h2>Volgende stap na de NEBOSH oefentest</h2>
-        <p>
+    <section class="sx-cta-band sx-reveal" aria-labelledby="quiz-cta-title">
+      <div class="sx-section__inner">
+        <h2 class="sx-h2" id="quiz-cta-title">Volgende stap na de NEBOSH oefentest</h2>
+        <p class="sx-lead" style="margin-left: auto; margin-right: auto; max-width: 520px;">
           Scoor je goed op deze oefenvragen en wil je serieus werk maken van je HSE-carrière?
           Bekijk dan onze Nederlandstalige <strong>NEBOSH IGC opleiding in Rotterdam</strong>.
         </p>
-        <a href="nebosh-opleiding.html" class="btn-pill-orange">
-          Bekijk de NEBOSH opleiding in Rotterdam <span class="arrow">→</span>
-        </a>
+        <div class="sx-cta-buttons">
+          <a class="sx-btn sx-btn--gold" href="nebosh-opleiding.html">Bekijk de NEBOSH opleiding in Rotterdam →</a>
+          <a class="sx-btn sx-btn--ghost" href="aanmelden.html">Aanmelden wachtlijst</a>
+        </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
-    <div style="max-width:1200px; margin:0 auto;">
-      <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
-      <p style="margin-top:0.5rem;">
-        <a href="index.html">Home</a> |
-        <a href="nebosh-opleiding.html">NEBOSH Opleiding</a> |
-        <a href="jobs.html">Jobs &amp; ZZP Opdrachten</a> |
-        <a href="blog/index.html">Blog</a> |
-        <a href="over-ons.html">Over Ons</a> |
-        <a href="privacy.html">Privacy</a> |
-        <a href="#contact">Contact</a>
-      </p>
-      <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-        Train lokaal voor €3.500, werk wereldwijd als HSE professional.
-      </p>
+  <footer class="sx-footer">
+    <div class="sx-footer__grid">
+      <div class="sx-footer__brand">
+        <a class="sx-logo" href="index.html">SafetyX<span>Academy</span></a>
+        <p>Train lokaal, werk wereldwijd.</p>
+      </div>
+      <div>
+        <h3>Opleiding</h3>
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH IGC</a></li>
+          <li><a href="nebosh-quiz.html" aria-current="page">Oefentest</a></li>
+          <li><a href="nebosh-benelux-ports.html">Benelux havens</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Carrière</h3>
+        <ul>
+          <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+          <li><a href="werken-bij.html">Werken bij</a></li>
+          <li><a href="nebosh-offshore.html">Offshore</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Content</h3>
+        <ul>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Juridisch</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="index.html#locatie">Contact</a></li>
+        </ul>
+      </div>
+      <div class="sx-footer__contact">
+        <h3>Direct</h3>
+        <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br />
+        <a href="tel:+31108009512">010-800 9512</a><br />
+        Westplein 12, Rotterdam
+      </div>
+    </div>
+    <div class="sx-footer__bottom">
+      <span>© 2026 SafetyXAcademy · KVK 72037628 · ABshops.nl</span>
+      <div class="sx-social">
+        <a href="https://www.linkedin.com/company/safetyxacademy" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </footer>
 
-  <!-- JS -->
-  <script src="/js/header.js" defer></script>
+  <script src="js/main-v3.js" defer></script>
   
   <!-- Quiz Accordion JS -->
   <script>
