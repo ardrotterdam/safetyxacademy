@@ -1776,6 +1776,370 @@ button.sx-btn {
   color: var(--text-primary);
 }
 
+/* —— Werken bij / talent pool (werken-bij.html) —— */
+body.sx-page-werken {
+  font-family: "DM Sans", var(--sx-font), system-ui, sans-serif;
+}
+
+body.sx-page-werken main {
+  font-family: "DM Sans", var(--sx-font), system-ui, sans-serif;
+}
+
+.sx-wj-hero {
+  padding: 7.5rem clamp(1.25rem, 4vw, 1.5rem) 4.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--primary);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sx-wj-hero::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(800px, 140vw);
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(255, 102, 0, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sx-wj-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sx-wj-eyebrow {
+  display: inline-block;
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  border: 1px solid rgba(255, 102, 0, 0.35);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 1.75rem;
+}
+
+.sx-wj-hero h1 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: clamp(2.125rem, 6vw, 3.875rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.sx-wj-hero h1 em {
+  color: var(--accent-gold);
+  font-style: normal;
+}
+
+.sx-wj-hero > p {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto 1.5rem;
+}
+
+.sx-wj-honest {
+  display: inline-block;
+  background: rgba(255, 102, 0, 0.06);
+  border: 1px solid rgba(255, 102, 0, 0.22);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.sx-wj-honest strong {
+  color: var(--text-primary);
+}
+
+.sx-wj-countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.sx-wj-countdown__block {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  text-align: center;
+  min-width: 5.5rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-wj-countdown__num {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
+.sx-wj-countdown__label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sx-wj-roles {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 5rem) clamp(1.25rem, 4vw, 1.5rem);
+  background: var(--primary);
+}
+
+.sx-wj-roles h2 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.sx-wj-roles > p {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  font-size: 15px;
+}
+
+.sx-wj-roles__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.sx-wj-role {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 1.75rem;
+  transition: border-color 0.3s var(--sx-ease), transform 0.3s var(--sx-ease), background 0.3s var(--sx-ease);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-wj-role:hover {
+  border-color: rgba(255, 102, 0, 0.35);
+  background: rgba(255, 102, 0, 0.05);
+  transform: translateY(-3px);
+}
+
+.sx-wj-role__icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.sx-wj-role h3 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.sx-wj-role p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+
+.sx-wj-role__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: rgba(255, 102, 0, 0.1);
+  color: var(--accent-gold);
+  border: 1px solid rgba(255, 102, 0, 0.22);
+}
+
+.sx-wj-signup {
+  background: #0f1628;
+  border-block: 1px solid var(--glass-border);
+  padding: clamp(3.5rem, 8vw, 5rem) clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.sx-wj-signup__inner {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sx-wj-signup h2 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 0.65rem;
+  color: var(--text-primary);
+}
+
+.sx-wj-signup > .sx-wj-signup__inner > p {
+  color: var(--text-muted);
+  margin-bottom: 2.25rem;
+  font-size: 15px;
+}
+
+.sx-wj-fgroup {
+  margin-bottom: 0.9rem;
+  text-align: left;
+}
+
+.sx-wj-fgroup label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.sx-wj-fgroup input,
+.sx-wj-fgroup select,
+.sx-wj-fgroup textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-family: "DM Sans", var(--sx-font), sans-serif;
+  font-size: 15px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.sx-wj-fgroup input:focus,
+.sx-wj-fgroup select:focus,
+.sx-wj-fgroup textarea:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.12);
+}
+
+.sx-wj-fgroup select option {
+  background: #0f1628;
+  color: var(--text-primary);
+}
+
+.sx-wj-fgroup textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.sx-wj-frow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 580px) {
+  .sx-wj-frow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sx-wj-submit {
+  width: 100%;
+  background: var(--accent-gold);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.sx-wj-submit:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.sx-wj-form-privacy {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.85rem;
+}
+
+.sx-wj-why {
+  padding: clamp(3.5rem, 8vw, 5rem) clamp(1.25rem, 4vw, 1.5rem);
+  background: var(--primary);
+}
+
+.sx-wj-why__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sx-wj-why h2 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+.sx-wj-why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.sx-wj-why-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-wj-why-card__icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.sx-wj-why-card h4 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.sx-wj-why-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
