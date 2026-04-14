@@ -1,636 +1,419 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-91JCVXBQ0W');
-    </script>
-    
-    <!-- SEO Meta Tags -->
-    <title>Over SafetyXAcademy | Nando Breure & Ons Team Rotterdam</title>
-    <meta name="description" content="Ontmoet Nando Breure, oprichter van SafetyXAcademy Rotterdam. 8+ jaar HSE ervaring in petrochemie, offshore en maritieme sectoren. NEBOSH IGC expert. Onze missie: betaalbare wereldwijde veiligheidstraining vanaf Westplein 12 Veerhaven.">
-    <meta name="keywords" content="Nando Breure, SafetyXAcademy Rotterdam, NEBOSH trainer Nederland, HSE training Veerhaven, veiligheidskundige Rotterdam, NEBOSH IGC expert">
-    
-    <!-- Canonical & Open Graph -->
-    <link rel="canonical" href="https://www.safetyxacademy.nl/over-ons.html">
-    <meta property="og:title" content="Over SafetyXAcademy | Nando Breure & Team Rotterdam">
-    <meta property="og:description" content="8+ jaar HSE ervaring, NEBOSH expert. Train Lokaal in Rotterdam Veerhaven, Werk Wereldwijd.">
-    <meta property="og:image" content="https://www.safetyxacademy.nl/nando-breure-founder.webp">
-    <meta property="og:url" content="https://www.safetyxacademy.nl/over-ons.html">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png">
-    
-    <!-- Header CSS -->
-    <link rel="stylesheet" href="/css/header.css">
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html, body {
-            overflow-x: hidden;
-            max-width: 100%;
-            position: relative;
-        }
-        
-        :root {
-            --primary: #0A284B;
-            --secondary: #FF7F11;
-            --dark: #2F3E46;
-            --text: #333;
-            --light-bg: #f8f9fa;
-            --success: #10b981;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            width: 100%;
-        }
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91JCVXBQ0W');
+  </script>
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-            color: white;
-            padding: 3rem 4%;
-            text-align: center;
-        }
+  <title>Over SafetyX Academy | Nando Breure – Rotterdam</title>
+  <meta name="description" content="Ontmoet Nando Breure, oprichter van SafetyX Academy Rotterdam. 8+ jaar HSE ervaring in petrochemie, offshore en maritieme sectoren. NEBOSH IGC expert. Lancering september 2026.">
+  <link rel="canonical" href="https://www.safetyxacademy.nl/over-ons.html">
+  <meta property="og:title" content="Over SafetyX Academy | Nando Breure – Rotterdam">
+  <meta property="og:description" content="8+ jaar HSE ervaring, NEBOSH expert. Train Lokaal in Rotterdam, Werk Wereldwijd. Lancering september 2026.">
+  <meta property="og:url" content="https://www.safetyxacademy.nl/over-ons.html">
 
-        .hero h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
+  <link rel="icon" type="image/svg+xml" href="favicon-svg.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: rgba(255,255,255,0.9);
-        }
-
-        /* Sections */
-        section {
-            padding: 3rem 4%;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        /* Founder Section */
-        .founder-section {
-            background: white;
-        }
-
-        .founder-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .founder-image {
-            text-align: center;
-        }
-
-        .founder-image img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .founder-text {
-            text-align: left;
-        }
-
-        .founder-text .section-title {
-            text-align: left;
-            margin-bottom: 1.5rem;
-        }
-
-        .founder-text p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 1.25rem;
-            color: #333;
-        }
-
-        .founder-text strong {
-            color: var(--primary);
-        }
-
-        .founder-quote {
-            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-            border-left: 4px solid var(--success);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--dark);
-        }
-
-        /* Mission Section */
-        .mission-section {
-            background: var(--light-bg);
-            text-align: center;
-        }
-
-        .mission-image {
-            margin: 2rem auto;
-            max-width: 1000px;
-        }
-
-        .mission-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        }
-
-        .mission-text {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        /* Why Us Section */
-        .why-us {
-            background: white;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .benefit-card {
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 1.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            border-color: var(--secondary);
-            box-shadow: 0 5px 20px rgba(255, 127, 17, 0.15);
-            transform: translateY(-3px);
-        }
-
-        .benefit-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .benefit-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            font-size: 1.2rem;
-        }
-
-        .benefit-card p {
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* Values Section */
-        .values-section {
-            background: linear-gradient(135deg, var(--primary), var(--dark));
-            color: white;
-            text-align: center;
-        }
-
-        .values-section .section-title {
-            color: white;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .value-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 15px;
-            padding: 2rem;
-        }
-
-        .value-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-            color: var(--secondary);
-        }
-
-        .value-card p {
-            line-height: 1.7;
-            color: rgba(255,255,255,0.9);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--secondary);
-            color: white;
-            text-align: center;
-            padding: 3rem 4%;
-        }
-
-        .cta-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--secondary);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 1.5rem 4%;
-            text-align: center;
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        /* Tablet+ */
-        @media (min-width: 600px) {
-            .hero h1 { font-size: 2.5rem; }
-            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-            .values-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        /* Desktop */
-        @media (min-width: 900px) {
-            .hero h1 { font-size: 3rem; }
-            .founder-content { 
-                grid-template-columns: 400px 1fr; 
-                gap: 4rem; 
-            }
-            .benefits-grid { grid-template-columns: repeat(3, 1fr); }
-            .values-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-    </style>
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Nando Breure",
-      "jobTitle": "Founder & NEBOSH Trainer",
-      "worksFor": {
-        "@type": "EducationalOrganization",
-        "name": "SafetyXAcademy",
-        "url": "https://www.safetyxacademy.nl/"
-      },
-      "alumniOf": "HSE Professional",
-      "knowsAbout": ["Health & Safety", "NEBOSH IGC", "HSE Management", "Offshore Safety", "Petrochemical Safety"],
-      "description": "8+ jaar internationale HSE ervaring in petrochemie, offshore en maritieme sectoren. NEBOSH IGC expert en oprichter van SafetyXAcademy Rotterdam."
+  <style>
+    :root {
+      --bg: #0A0F1C;
+      --bg2: #0F1628;
+      --bg3: #141B2D;
+      --orange: #FF6600;
+      --orange-hover: #FF8533;
+      --gold: #D4A853;
+      --white: #FFFFFF;
+      --grey: #8892A4;
+      --border: rgba(255,255,255,0.08);
+      --glass: rgba(255,255,255,0.04);
     }
-    </script>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 130px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 500px;
+      background: radial-gradient(ellipse, rgba(255,102,0,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .eyebrow { display: inline-block; font-family: 'Syne',sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); border: 1px solid rgba(255,102,0,0.35); padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; }
+    .hero h1 { font-family: 'Syne',sans-serif; font-size: clamp(34px, 6vw, 60px); font-weight: 800; line-height: 1.1; margin-bottom: 18px; }
+    .hero h1 em { color: var(--orange); font-style: normal; }
+    .hero p { font-size: 18px; color: var(--grey); max-width: 540px; margin: 0 auto; }
+
+    /* ── NANDO SECTION ── */
+    .founder-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .founder-img-wrap {
+      position: relative;
+    }
+    .founder-img-wrap img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    .founder-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 16px;
+      background: linear-gradient(to bottom, transparent 60%, rgba(255,102,0,0.15));
+      pointer-events: none;
+    }
+    .founder-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(10,15,28,0.9);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      z-index: 2;
+    }
+    .founder-badge strong { font-family: 'Syne',sans-serif; font-size: 16px; font-weight: 700; display: block; }
+    .founder-badge span { font-size: 13px; color: var(--grey); }
+
+    .founder-text h2 { font-family: 'Syne',sans-serif; font-size: 34px; font-weight: 800; margin-bottom: 6px; }
+    .founder-text .subtitle { color: var(--orange); font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; display: block; }
+    .founder-text p { font-size: 16px; color: var(--grey); line-height: 1.8; margin-bottom: 18px; }
+    .founder-text p strong { color: var(--white); }
+
+    .quote-block {
+      background: rgba(212,168,83,0.07);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 16px;
+      color: var(--gold);
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .quote-block strong { font-style: normal; font-size: 13px; color: var(--grey); display: block; margin-top: 10px; }
+
+    .credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .cred-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--grey);
+    }
+    .cred-item .dot {
+      width: 6px; height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .cred-item strong { color: var(--white); }
+
+    /* ── MISSION ── */
+    .mission-section {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+    .mission-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .section-title { font-family: 'Syne',sans-serif; font-size: 32px; font-weight: 800; margin-bottom: 10px; }
+    .section-sub { color: var(--grey); font-size: 16px; margin-bottom: 48px; }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+    .mission-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+    .mission-card:hover { border-color: rgba(255,102,0,0.3); transform: translateY(-3px); }
+    .mission-icon { font-size: 28px; margin-bottom: 14px; }
+    .mission-card h3 { font-family: 'Syne',sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+    .mission-card p { font-size: 14px; color: var(--grey); line-height: 1.7; }
+
+    /* ── WHY ── */
+    .why-section { padding: 80px 24px; }
+    .why-inner { max-width: 1000px; margin: 0 auto; }
+    .why-inner .section-title { text-align: center; }
+    .why-inner .section-sub { text-align: center; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .why-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+    .why-card:hover { border-color: rgba(255,102,0,0.25); background: rgba(255,102,0,0.04); }
+    .why-icon { font-size: 26px; margin-bottom: 14px; }
+    .why-card h3 { font-family: 'Syne',sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .why-card p { font-size: 14px; color: var(--grey); line-height: 1.6; }
+
+    /* ── HONEST NOTE ── */
+    .honest-section {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+    .honest-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(212,168,83,0.06);
+      border: 1px solid rgba(212,168,83,0.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+    }
+    .honest-inner .icon { font-size: 36px; margin-bottom: 16px; }
+    .honest-inner h3 { font-family: 'Syne',sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 14px; }
+    .honest-inner p { font-size: 15px; color: var(--grey); line-height: 1.8; }
+    .honest-inner p strong { color: var(--gold); }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(255,102,0,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-section h2 { font-family: 'Syne',sans-serif; font-size: 34px; font-weight: 800; margin-bottom: 14px; }
+    .cta-section p { color: var(--grey); font-size: 16px; margin-bottom: 32px; }
+    .btn-orange { display: inline-block; background: var(--orange); color: #fff; font-family: 'Syne',sans-serif; font-weight: 700; font-size: 16px; padding: 16px 32px; border-radius: 8px; text-decoration: none; margin: 0 8px 10px; transition: all 0.2s; }
+    .btn-orange:hover { background: var(--orange-hover); transform: translateY(-1px); }
+    .btn-ghost { display: inline-block; border: 1px solid var(--border); color: var(--grey); font-family: 'Syne',sans-serif; font-weight: 600; font-size: 16px; padding: 16px 32px; border-radius: 8px; text-decoration: none; margin: 0 8px 10px; transition: all 0.2s; }
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--grey); font-size: 13px; }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .founder-section { grid-template-columns: 1fr; gap: 40px; }
+      .founder-img-wrap { max-width: 320px; margin: 0 auto; }
+    }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .mission-card, .why-card { animation: fadeUp 0.4s ease both; }
+    .mission-card:nth-child(2), .why-card:nth-child(2) { animation-delay: 0.08s; }
+    .mission-card:nth-child(3), .why-card:nth-child(3) { animation-delay: 0.16s; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nando Breure",
+    "jobTitle": "Founder & NEBOSH Trainer",
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "name": "SafetyX Academy",
+      "url": "https://www.safetyxacademy.nl/"
+    },
+    "knowsAbout": ["Health & Safety", "NEBOSH IGC", "HSE Management", "Offshore Safety", "Petrochemical Safety"],
+    "description": "8+ jaar internationale HSE ervaring in petrochemie, offshore en maritieme sectoren. Oprichter van SafetyX Academy Rotterdam."
+  }
+  </script>
 </head>
 <body>
 
-    <!-- HEADER INCLUDE -->
-    <div id="header-include"></div>
-    <script>
-      fetch('/includes/header.html')
-        .then(r => r.text())
-        .then(html => {
-          const el = document.getElementById('header-include');
-          el.outerHTML = html;
-          setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
-        })
-        .catch(() => console.error('Header failed'));
-    </script>
+<div id="header-include"></div>
+<script>
+  fetch('/includes/header.html')
+    .then(r => r.text())
+    .then(html => {
+      const el = document.getElementById('header-include');
+      el.outerHTML = html;
+      setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
+    })
+    .catch(() => console.error('Header failed'));
+</script>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Over SafetyXAcademy</h1>
-        <p>Train Lokaal in Rotterdam Veerhaven, Werk Wereldwijd met Nederlandse Support</p>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">🏗️ Lancering september 2026</div>
+  <h1>Gebouwd door mensen<br>die <em>de werkvloer kennen</em></h1>
+  <p>SafetyX Academy komt voort uit echte HSE-ervaring — niet uit een boardroom.</p>
+</section>
 
-    <!-- Founder Section -->
-    <section class="founder-section">
-        <div class="container">
-            <div class="founder-content">
-                <div class="founder-image">
-                    <img src="nando-breure-founder.webp" 
-                         alt="Nando Breure - Founder SafetyXAcademy Rotterdam NEBOSH IGC trainer"
-                         width="400"
-                         height="600"
-                         loading="eager">
-                </div>
-                
-                <div class="founder-text">
-                    <h2 class="section-title">Ontmoet Nando Breure</h2>
-                    <p class="section-subtitle">Oprichter & NEBOSH Expert | 8+ Jaar Internationale HSE Ervaring</p>
-                    
-                    <p>
-                        Mijn naam is <strong>Nando Breure</strong>, oprichter van SafetyXAcademy. Na 8+ jaar werken als HSE professional 
-                        in de petrochemie, offshore en maritieme sectoren in Nederland, België, het Midden-Oosten en Scandinavië, 
-                        zag ik een grote kloof in de markt: <strong>NEBOSH training was te duur en vaak niet in het Nederlands beschikbaar</strong>.
-                    </p>
+<!-- NANDO -->
+<div class="founder-section">
+  <div class="founder-img-wrap">
+    <img src="images/nando-breure-founder.webp"
+         alt="Nando Breure - Oprichter SafetyX Academy Rotterdam"
+         width="340" height="480" loading="eager">
+    <div class="founder-badge">
+      <strong>Nando Breure</strong>
+      <span>Oprichter & NEBOSH Trainer</span>
+    </div>
+  </div>
 
-                    <p>
-                        In 2025 startte ik SafetyXAcademy vanuit Rotterdam Veerhaven met één missie: 
-                        <strong>betaalbare, hoogwaardige NEBOSH IGC training aanbieden in het Nederlands, 
-                        zodat studenten uit heel Nederland én België wereldwijd kunnen werken</strong>.
-                    </p>
+  <div class="founder-text">
+    <h2>Nando Breure</h2>
+    <span class="subtitle">8+ jaar internationale HSE ervaring</span>
 
-                    <p>
-                        Waarom €3.500 in plaats van €5.000-€7.000 zoals bij andere providers? Simpel: 
-                        <strong>ik geloof dat kwaliteitstraining toegankelijk moet zijn voor iedereen</strong>. 
-                        Door slim te opereren vanuit ons moderne trainingscentrum op Westplein 12 in het Scheepvaartkwartier, 
-                        kunnen we topkwaliteit leveren tegen een eerlijke prijs.
-                    </p>
+    <p>Mijn naam is <strong>Nando Breure</strong>. Na meer dan 8 jaar als HSE professional in de petrochemie, offshore en maritieme sector — in Nederland, België, het Midden-Oosten en Scandinavië — zag ik één ding steeds terugkomen: <strong>NEBOSH training was te duur en vrijwel nooit in het Nederlands beschikbaar</strong>.</p>
 
-                    <div class="founder-quote">
-                        "Train Lokaal in Rotterdam, Werk Wereldwijd. Dat is geen slogan—dat is een belofte. 
-                        Elk student die bij ons afstudeert, heeft toegang tot hetzelfde internationale netwerk 
-                        en dezelfde carrièremogelijkheden die ik in mijn eigen loopbaan heb opgebouwd."
-                        <br><br>
-                        <strong>— Nando Breure, Founder SafetyXAcademy</strong>
-                    </div>
+    <p>Dat is waarom ik SafetyX Academy opricht. Niet om snel geld te verdienen, maar omdat ik geloof dat <strong>iedereen die serieus is over een HSE-carrière toegang moet hebben tot een wereldstandaard opleiding — zonder de hoofdprijs te betalen</strong>.</p>
 
-                    <p>
-                        <strong>Mijn achtergrond:</strong>
-                    </p>
-                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                        <li style="margin-bottom: 0.5rem;">8+ jaar HSE ervaring in petrochemie, offshore en maritieme sectoren</li>
-                        <li style="margin-bottom: 0.5rem;">Gewerkt in Nederland, België, Dubai, Noorwegen, UK en Singapore</li>
-                        <li style="margin-bottom: 0.5rem;">NEBOSH IGC certified & ISO 45001 Lead Auditor</li>
-                        <li style="margin-bottom: 0.5rem;">Ex-HSE Manager bij internationale oil & gas projecten</li>
-                        <li style="margin-bottom: 0.5rem;">Nederlandstalige training expert met internationale ervaring</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <p>We lanceren in september 2026. We doen dit zorgvuldig: eerst de fundering, dan het gebouw. Accreditaties, partnerdeals, de juiste locatie. Pas als dat staat, gaan we van start.</p>
 
-    <!-- Mission Section -->
-    <section class="mission-section">
-        <div class="container">
-            <h2 class="section-title">Samen Bouwen We Een Veiligere Wereld</h2>
-            <p class="section-subtitle">Onze Missie & Visie</p>
-            
-            <div class="mission-image">
-                <img src="nebosh-safety-team-mission.webp" 
-                     alt="SafetyXAcademy team missie veiligere wereld NEBOSH training Rotterdam"
-                     width="1400"
-                     height="900"
-                     loading="lazy">
-            </div>
+    <div class="quote-block">
+      "Train Lokaal in Rotterdam, Werk Wereldwijd. Dat is geen slogan — dat is een belofte die ik persoonlijk sta."
+      <strong>— Nando Breure, Oprichter SafetyX Academy</strong>
+    </div>
 
-            <div class="mission-text">
-                <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 1rem;">🎯 Onze Missie</h3>
-                <p style="margin-bottom: 2rem;">
-                    <strong>Betaalbare, wereldklasse NEBOSH IGC training aanbieden in het Nederlands</strong>, 
-                    zodat professionals uit Nederland en België toegang krijgen tot internationale HSE carrières 
-                    zonder de hoofdprijs te betalen. We geloven dat veiligheid geen luxe is—het is een basisrecht.
-                </p>
+    <div class="credentials">
+      <div class="cred-item"><div class="dot"></div><span>8+ jaar HSE ervaring in petrochemie, offshore en maritieme sectoren</span></div>
+      <div class="cred-item"><div class="dot"></div><span>Werkervaring in <strong>Nederland, België, Dubai, Noorwegen en UK</strong></span></div>
+      <div class="cred-item"><div class="dot"></div><span>NEBOSH IGC gecertificeerd</span></div>
+      <div class="cred-item"><div class="dot"></div><span>ISO 45001 Lead Auditor</span></div>
+      <div class="cred-item"><div class="dot"></div><span>Nederlandstalige trainer met internationale achtergrond</span></div>
+    </div>
+  </div>
+</div>
 
-                <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 1rem;">🌍 Onze Visie</h3>
-                <p style="margin-bottom: 2rem;">
-                    Binnen 5 jaar willen we <strong>dé NEBOSH training hub van Benelux zijn</strong>, 
-                    met trainingslocaties in Rotterdam, Antwerpen en Brussel. Elke student die bij ons 
-                    afstudeerde, moet binnen 6 maanden een internationale HSE functie hebben gevonden 
-                    met een salaris van €4.500+ per maand (loondienst) of €700+ per dag (ZZP).
-                </p>
+<!-- MISSION -->
+<section class="mission-section">
+  <div class="mission-inner">
+    <h2 class="section-title">Onze missie & visie</h2>
+    <p class="section-sub">Waar we naartoe bouwen — eerlijk en concreet</p>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-icon">🎯</div>
+        <h3>Missie</h3>
+        <p>Betaalbare, wereldklasse NEBOSH IGC training aanbieden in het Nederlands — zodat professionals uit Nederland en België toegang krijgen tot internationale HSE carrières zonder de hoofdprijs te betalen.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">🌍</div>
+        <h3>Visie</h3>
+        <p>Binnen 5 jaar willen we dé NEBOSH training hub van de Benelux zijn. We beginnen klein en zorgvuldig — met Rotterdam als thuisbasis en internationale ambities.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">💚</div>
+        <h3>Waarden</h3>
+        <p>Toegankelijkheid. Kwaliteit. Eerlijkheid. We doen geen beloftes die we niet kunnen waarmaken — en dat geldt al vóór de lancering.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 1rem;">💚 Onze Waarden</h3>
-                <p>
-                    <strong>Toegankelijkheid</strong> • <strong>Kwaliteit</strong> • <strong>Integriteit</strong> • 
-                    <strong>Resultaatgericht</strong> • <strong>Internationale Focus</strong>
-                </p>
-            </div>
-        </div>
-    </section>
+<!-- WHY -->
+<section class="why-section">
+  <div class="why-inner">
+    <h2 class="section-title">Waarom SafetyX Academy?</h2>
+    <p class="section-sub" style="margin-bottom:40px;">Wat ons anders maakt dan andere aanbieders</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <h3>€3.500 all-inclusive</h3>
+        <p>Geen verborgen kosten. Examengeld, materialen, begeleiding — alles zit erin. Transparant en eerlijk geprijsd.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🇳🇱</div>
+        <h3>Training in het Nederlands</h3>
+        <p>Alle lessen in het Nederlands door Nederlandse instructeurs. Het examen is in het Engels — maar wij bereiden je daar volledig op voor.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👥</div>
+        <h3>Kleine groepen — max 10</h3>
+        <p>Geen overvolle klassen. Persoonlijke aandacht, individuele feedback en ruimte voor vragen.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <h3>Westplein 12, Rotterdam</h3>
+        <p>Midden in het Scheepvaartkwartier, 10 minuten van Rotterdam Centraal. Perfecte locatie voor iedereen in de haven- en industriesector.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📚</div>
+        <h3>Blended learning</h3>
+        <p>Combineer de training met je huidige baan. Online theorie in eigen tempo, praktijkdagen op zaterdag in Rotterdam. Klaar in 10-12 weken.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h3>Eerlijk en transparant</h3>
+        <p>We zijn een startende academy. We maken geen beloftes over baangaranties of alumni-netwerken die er nog niet zijn. Wat we wél beloven: topkwaliteit training.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Why Us Section -->
-    <section class="why-us">
-        <div class="container">
-            <h2 class="section-title">Waarom Kiezen Voor SafetyXAcademy?</h2>
-            <p class="section-subtitle">Dit Maakt Ons Anders Dan Andere NEBOSH Training Providers</p>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="icon">💰</div>
-                    <h3>€3.500 All-Inclusive</h3>
-                    <p>
-                        Bespaar €1.500-€3.500 vs MKV. Geen verborgen kosten: examengeld, materialen, 
-                        jobplacement support—alles zit erbij. Wij geloven in transparante prijzen.
-                    </p>
-                </div>
+<!-- EERLIJK VERHAAL -->
+<section class="honest-section">
+  <div class="honest-inner">
+    <div class="icon">✋</div>
+    <h3>Een eerlijk verhaal</h3>
+    <p>We lanceren in <strong>september 2026</strong>. We zijn op dit moment bezig met accreditaties, partnerdeals en de laatste voorbereidingen. Dat betekent dat sommige dingen nog niet bestaan — zoals een alumni-netwerk of jobplacements. <strong>We bouwen dat op zodra we live zijn.</strong> Wat er wél al is: de kennis, de ervaring en de motivatie om er iets goeds van te maken.</p>
+  </div>
+</section>
 
-                <div class="benefit-card">
-                    <div class="icon">🇳🇱</div>
-                    <h3>Training in Het Nederlands</h3>
-                    <p>
-                        Alle lessen in het Nederlands door Nederlandse instructeurs met internationale ervaring. 
-                        Het examen is in het Engels, maar wij bereiden je daar perfect op voor.
-                    </p>
-                </div>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Klaar om te starten?</h2>
+  <p>Registreer je interesse voor de NEBOSH IGC opleiding — gratis en vrijblijvend.</p>
+  <a href="/aanmelden.html" class="btn-orange">Meld je aan voor de wachtlijst</a>
+  <a href="/jobs.html" class="btn-ghost">Werken bij SafetyX →</a>
+</section>
 
-                <div class="benefit-card">
-                    <div class="icon">🏆</div>
-                    <h3>NEBOSH Gold Learning Partner</h3>
-                    <p>
-                        Officieel erkend door NEBOSH UK. Dit betekent: hoogste kwaliteitsnormen, 
-                        up-to-date lesmateriaal, en directe lijn met NEBOSH voor examens.
-                    </p>
-                </div>
+<footer>
+  <p>SafetyX Academy · Westplein 12, Rotterdam · <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a></p>
+  <p style="margin-top:8px;">&copy; 2026 SafetyX Academy — Onderdeel van ABshops.nl (KVK 72037628)</p>
+</footer>
 
-                <div class="benefit-card">
-                    <div class="icon">📍</div>
-                    <h3>Toplocatie Veerhaven Rotterdam</h3>
-                    <p>
-                        Westplein 12, midden in het Scheepvaartkwartier. 10 minuten lopen van Rotterdam Centraal. 
-                        Omringd door haven, scheepvaartbedrijven en HSE kantoren—perfecte netwerkplek!
-                    </p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="icon">👥</div>
-                    <h3>Kleine Groepen (Max 10)</h3>
-                    <p>
-                        Geen overvolle klassen van 20-30 studenten. Bij ons krijg je persoonlijke aandacht, 
-                        individuele feedback, en kun je altijd vragen stellen.
-                    </p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="icon">💼</div>
-                    <h3>Jobplacement Garantie</h3>
-                    <p>
-                        Na je training krijg je toegang tot ons internationale HSE netwerk, CV optimalisatie, 
-                        vacature matching, en LinkedIn coaching. We helpen tot je je droombaan hebt!
-                    </p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="icon">🌍</div>
-                    <h3>Internationaal Netwerk</h3>
-                    <p>
-                        Via ons netwerk hebben onze studenten jobs gevonden bij: Shell Rotterdam, BP, 
-                        Equinor Noorwegen, NEOM Saudi, BAM International, en 20+ andere topbedrijven.
-                    </p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="icon">🇧🇪</div>
-                    <h3>Belgische Studenten Welkom</h3>
-                    <p>
-                        Vanuit Antwerpen ben je in 1 uur in Rotterdam! Bij voldoende belangstelling 
-                        organiseren we ook trainingen in België (Antwerpen of Brussel).
-                    </p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="icon">📚</div>
-                    <h3>Flexibel Blended Learning</h3>
-                    <p>
-                        Combineer je training met je huidige baan. Online theorie in eigen tempo, 
-                        praktijkdagen in Rotterdam op zaterdagen. Klaar in 10-12 weken!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="container">
-            <h2 class="section-title">Onze Kernwaarden</h2>
-            <p style="color: rgba(255,255,255,0.9); text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
-                Deze principes sturen alles wat we doen bij SafetyXAcademy
-            </p>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>💚 Toegankelijkheid</h3>
-                    <p>
-                        Kwaliteitstraining hoort voor iedereen bereikbaar te zijn, niet alleen voor mensen 
-                        met €7.000 te besteden. Daarom houden we onze prijzen eerlijk en transparant.
-                    </p>
-                </div>
-
-                <div class="value-card">
-                    <h3>🏆 Kwaliteit</h3>
-                    <p>
-                        We zijn NEBOSH Gold Learning Partner—dat betekent we voldoen aan de hoogste 
-                        internationale standaarden. Onze studenten slagen met gemiddeld 85%+ op hun examen.
-                    </p>
-                </div>
-
-                <div class="value-card">
-                    <h3>🤝 Integriteit</h3>
-                    <p>
-                        Geen marketingpraatjes, geen valse beloftes. We vertellen je eerlijk wat NEBOSH IGC 
-                        je kan brengen én wat de uitdagingen zijn. Transparantie is ons fundament.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>🚀 Klaar Om Te Starten Met NEBOSH IGC?</h2>
-            <p>
-                Sluit je aan bij 200+ studenten die al kozen voor SafetyXAcademy. 
-                Start je internationale HSE carrière vanaf Rotterdam Veerhaven.
-            </p>
-            <a href="/#training" class="btn btn-primary">Bekijk NEBOSH IGC Training →</a>
-            <p style="margin-top: 1.5rem; font-size: 0.95rem;">
-                <a href="/jobs.html" style="color: white; text-decoration: underline;">Of bekijk eerst ZZP tarieven: €88k-€330k/jaar →</a>
-            </p>
-        </div>
-    </section>
-
-    <footer>
-        <div style="max-width:1200px; margin:0 auto;">
-            <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
-            <p style="margin-top:0.5rem;">
-                <a href="index.html">Home</a> | 
-                <a href="index.html#training">NEBOSH IGC Training</a> |
-                <a href="jobs.html">ZZP Opdrachten</a> | 
-                <a href="over-ons.html">Over Ons</a> | 
-                <a href="privacy.html">Privacy</a> | 
-                <a href="index.html#contact">Contact</a>
-            </p>
-            <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-                🌍 Train Lokaal voor €3.500, Werk Wereldwijd
-            </p>
-        </div>
-    </footer>
-
-    <script src="/js/header.js"></script>
+<script src="/js/header.js"></script>
 </body>
 </html>
