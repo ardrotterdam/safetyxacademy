@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Werken bij SafetyX Academy | Lancering September 2026</title>
+  <meta name="description" content="SafetyX Academy lanceert in september 2026. Schrijf je in als geïnteresseerde HSE-professional en wees er als eerste bij.">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
@@ -13,389 +15,109 @@
     gtag('config', 'G-91JCVXBQ0W');
   </script>
 
-  <!-- SEO Meta - ZZP Focus -->
-  <title>Veiligheidskundige ZZP Tarief €400-1.500/Dag | NEBOSH Freelance Opdrachten 2025</title>
-  <meta name="description" content="Veiligheidskundige ZZP salaris: €400-1.500/dag (€88k-€330k/jaar). 12 HSE freelance opdrachten wereldwijd. NEBOSH IGC training €3.500 → verdien als ZZP'er." />
-  <meta name="keywords" content="veiligheidskundige zzp, hse freelance, veiligheidskundige salaris, safety officer salaris, hse vacatures, veiligheidskundige vacatures, offshore jobs nederland, werken in noorwegen offshore, dubai hse jobs, nebosh igc, nebosh nederland" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-
-  <!-- Canonical & Open Graph -->
- <link rel="canonical" href="https://www.safetyxacademy.nl/jobs.html" />
-  <meta property="og:title" content="Veiligheidskundige ZZP: €400-1.500/Dag | NEBOSH Freelance" />
-  <meta property="og:description" content="Verdien €88k-€330k/jaar als HSE ZZP'er. 12 freelance opdrachten: Rotterdam €500/dag, Dubai €1.200/dag, Noorwegen €900/dag. Train €3.500." />
-  <meta property="og:image" content="https://www.safetyxacademy.nl/nebosh-zzp-freelance-verdienen.jpg" />
-  <meta property="og:url" content="https://www.safetyxacademy.nl/jobs" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="nl_NL" />
-  <meta name="author" content="SafetyXAcademy Rotterdam" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon-svg.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png" />
-
-  <!-- Header CSS -->
   <link rel="stylesheet" href="/css/header.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --primary: #0A284B;
-      --secondary: #FF7F11;
-      --dark: #2F3E46;
-      --light: #F5F6F8;
-      --muted: #667085;
-      --success: #10b981;
-      --gold: #FFB800;
-      --red: #dc2626;
+      --bg: #0A0F1C;
+      --bg2: #0F1628;
+      --orange: #FF6600;
+      --orange-hover: #FF8533;
+      --gold: #D4A853;
+      --white: #FFFFFF;
+      --grey: #8892A4;
+      --border: rgba(255,255,255,0.08);
+      --glass: rgba(255,255,255,0.04);
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6; color: #333; overflow-x: hidden; background: #fafafa;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--white); font-family: 'DM Sans', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-    .hero {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-      color:#fff; padding: 3rem 4%; text-align:center; margin-bottom: 3rem;
-    }
-    .hero h1 { font-size: 2rem; line-height: 1.25; margin-bottom: .75rem; }
-    .hero .salary-highlight { 
-      color: var(--gold); font-weight: 800; 
-      font-size: 2.5rem; display: block; margin: 1rem 0;
-      text-shadow: 0 2px 8px rgba(255,184,0,.4);
-    }
-    .hero-subtitle { font-size: 1.05rem; opacity: .95; margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; }
-    .hero-cta { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    /* HERO */
+    .hero { padding: 120px 24px 72px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 800px; height: 500px; background: radial-gradient(ellipse, rgba(255,102,0,0.1) 0%, transparent 70%); pointer-events: none; }
+    .eyebrow { display: inline-block; font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); border: 1px solid rgba(255,102,0,0.35); padding: 6px 16px; border-radius: 20px; margin-bottom: 28px; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(34px, 6vw, 62px); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+    .hero h1 em { color: var(--orange); font-style: normal; }
+    .hero p { font-size: 18px; color: var(--grey); max-width: 540px; margin: 0 auto 24px; }
+    .honest-note { display: inline-block; background: rgba(212,168,83,0.07); border: 1px solid rgba(212,168,83,0.25); border-radius: 10px; padding: 16px 24px; font-size: 14px; color: var(--gold); max-width: 580px; margin: 0 auto 48px; line-height: 1.7; text-align: left; }
 
-    .btn {
-      display: inline-block; padding: .9rem 1.6rem; border-radius: 50px;
-      text-decoration: none; font-weight: 700; font-size: .95rem; transition: .25s;
-    }
-    .btn-primary { background: var(--secondary); color: #fff; box-shadow: 0 4px 15px rgba(255,127,17,.3); }
-    .btn-primary:hover { background:#e66d00; transform: translateY(-2px); }
-    .btn-secondary { background: #fff; color: var(--primary); border: 2px solid #fff; }
-    .btn-secondary:hover { background: transparent; color: #fff; }
+    /* COUNTDOWN */
+    .countdown-wrap { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 72px; }
+    .countdown-block { background: var(--glass); border: 1px solid var(--border); border-radius: 12px; padding: 20px 28px; text-align: center; min-width: 88px; }
+    .countdown-num { font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800; color: var(--orange); line-height: 1; }
+    .countdown-label { font-size: 11px; color: var(--grey); margin-top: 6px; letter-spacing: 1.5px; text-transform: uppercase; }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 4%; }
-    
-    /* Calculator Section */
-    .calculator-section {
-      background: linear-gradient(135deg, #0A284B, #2F3E46);
-      color: #fff; padding: 3rem 4%; margin-bottom: 3rem;
-      box-shadow: 0 10px 40px rgba(10,40,75,.3);
-    }
-    .calculator-content {
-      max-width: 900px; margin: 0 auto; text-align: center;
-    }
-    .calculator-content h2 { font-size: 2rem; margin-bottom: 1rem; }
-    .calculator-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem; margin: 2rem 0;
-    }
-    .calc-card {
-      background: white;
-      border-radius: 15px; padding: 2rem; 
-      border: 3px solid #FF7F11;
-      box-shadow: 0 5px 20px rgba(255,127,17,.2);
-      color: #0A284B;
-    }
-    .calc-card h3 { font-size: 1.1rem; margin-bottom: .5rem; color: #666; }
-    .calc-number {
-      font-size: 2.5rem; font-weight: 800; margin: .5rem 0;
-      color: #FF7F11;
-      text-shadow: none;
-    }
-    .calc-label { font-size: .9rem; color: #666; }
-    .calc-breakdown {
-      background: white;
-      border-radius: 10px; padding: 1.5rem;
-      margin-top: 2rem; text-align: left;
-      border: 2px solid #e5e7eb;
-      color: #0A284B;
-    }
-    .calc-breakdown h3 { color: #0A284B; }
-    .calc-breakdown ul { list-style: none; }
-    .calc-breakdown li {
-      padding: .5rem 0; border-bottom: 1px solid #e5e7eb;
-      display: flex; justify-content: space-between;
-      color: #333;
-    }
-    .calc-breakdown li:last-child { 
-      border: none; font-weight: 700; font-size: 1.2rem;
-      padding-top: 1rem; margin-top: 1rem;
-      border-top: 2px solid #FF7F11;
-    }
+    /* ROLES */
+    .roles-section { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 8px; text-align: center; }
+    .section-sub { text-align: center; color: var(--grey); margin-bottom: 40px; font-size: 15px; }
+    .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .role-card { background: var(--glass); border: 1px solid var(--border); border-radius: 14px; padding: 28px; transition: all 0.3s ease; }
+    .role-card:hover { border-color: rgba(255,102,0,0.3); background: rgba(255,102,0,0.05); transform: translateY(-3px); }
+    .role-icon { font-size: 28px; margin-bottom: 14px; }
+    .role-title { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .role-desc { font-size: 14px; color: var(--grey); line-height: 1.6; margin-bottom: 14px; }
+    .role-tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 8px; background: rgba(255,102,0,0.1); color: var(--orange); border: 1px solid rgba(255,102,0,0.2); }
 
-    .stats-bar {
-      background: linear-gradient(135deg, var(--secondary) 0%, #E66D00 100%);
-      color: #fff; padding: 1.5rem 4%; margin-bottom: 3rem; 
-      box-shadow: 0 4px 20px rgba(255,127,17,.2);
-    }
-    .stats-grid {
-      max-width:1200px; margin:0 auto; 
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); 
-      gap:2rem; text-align:center;
-    }
-    .stat-item h3 { 
-      font-size:2rem; font-weight:800; margin-bottom:.25rem; 
-      text-shadow:0 2px 4px rgba(0,0,0,.1);
-    }
-    .stat-item p { font-size:.9rem; opacity:.95; }
+    /* FORM SECTION */
+    .signup-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 24px; }
+    .signup-inner { max-width: 620px; margin: 0 auto; text-align: center; }
+    .signup-inner h2 { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; margin-bottom: 10px; }
+    .signup-inner > p { color: var(--grey); margin-bottom: 36px; font-size: 15px; }
 
-    .section-header { text-align:center; margin: 2.5rem 0; }
-    .section-header h2 { color:var(--primary); font-size:1.8rem; margin-bottom:.75rem; }
-    .section-header p { color:var(--muted); max-width:720px; margin:0 auto; }
+    /* FORM ELEMENTS */
+    .fgroup { margin-bottom: 14px; text-align: left; }
+    .fgroup label { display: block; font-size: 13px; color: var(--grey); margin-bottom: 6px; font-weight: 500; }
+    .fgroup input, .fgroup select, .fgroup textarea {
+      width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; color: #fff;
+      font-family: 'DM Sans', sans-serif; font-size: 15px;
+      transition: border-color 0.2s; outline: none;
+    }
+    .fgroup input:focus, .fgroup select:focus, .fgroup textarea:focus { border-color: var(--orange); }
+    .fgroup select option { background: #1a2035; color: #fff; }
+    .fgroup textarea { resize: vertical; min-height: 90px; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-    .filters { 
-      display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; 
-      margin:0 0 2rem; 
+    .submit-btn {
+      width: 100%; background: var(--orange); color: #fff; border: none;
+      border-radius: 8px; padding: 16px; font-family: 'Syne', sans-serif;
+      font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px;
+      transition: all 0.2s;
     }
-    .chip {
-      border:2px solid #e5e7eb; background:#fff; color:var(--dark);
-      padding:.6rem 1.2rem; border-radius:999px; font-weight:700; 
-      cursor:pointer; transition:.2s; font-size: .9rem;
-    }
-    .chip:hover { border-color: var(--secondary); color: var(--secondary); }
-    .chip.active { 
-      background: var(--primary); color:#fff; border-color:var(--primary); 
-      box-shadow: 0 4px 12px rgba(10,40,75,.2); 
-    }
+    .submit-btn:hover { background: var(--orange-hover); transform: translateY(-1px); }
+    .form-privacy { font-size: 12px; color: var(--grey); text-align: center; margin-top: 12px; }
 
-    .jobs-grid { 
-      display:grid; grid-template-columns:1fr; gap:1.5rem; margin-bottom:3rem; 
-    }
-    .job-card {
-      background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,.08);
-      padding:1.75rem; border-left:5px solid var(--secondary); 
-      transition:.25s; position:relative; overflow:hidden;
-    }
-    .job-card:hover { 
-      transform: translateY(-4px); 
-      box-shadow:0 8px 30px rgba(0,0,0,.12);
-    }
-    .job-card.featured { 
-      border-left-color:var(--gold); 
-      background: linear-gradient(135deg,#fffbeb 0%, #fff 100%); 
-    }
-    .job-card.featured::before {
-      content:'⭐ NL/BE'; position:absolute; top:1rem; right:1rem;
-      background:var(--gold); color:#fff; padding:.3rem .8rem; 
-      border-radius:20px; font-size:.75rem; font-weight:800; 
-      letter-spacing:.4px;
-    }
-    .job-title { 
-      color:var(--primary); font-size:1.25rem; font-weight:800; 
-      margin-bottom:.4rem; 
-    }
-    .job-company { color:var(--muted); font-weight:600; }
-    .job-meta { 
-      display:flex; flex-wrap:wrap; gap:1rem; margin:.8rem 0 1rem; 
-      padding-bottom:1rem; border-bottom:1px solid #e5e7eb; 
-    }
-    .meta-item { 
-      display:flex; align-items:center; gap:.4rem; 
-      color:#555; font-size:.95rem;
-    }
-    .day-rate { 
-      color:#FF7F11; font-weight:800; font-size: 1.1rem;
-      padding: .5rem 1rem; background: #fff5e6; border-radius: 8px;
-      border: 2px solid #FFB800;
-    }
-    .year-estimate {
-      color: #666; font-size: .85rem; margin-top: .25rem;
-    }
-    .job-description { 
-      color:#555; line-height:1.7; margin-bottom:1rem; 
-    }
-    .job-tags { 
-      display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.1rem; 
-    }
-    .tag { 
-      background:var(--light); color:var(--primary); 
-      padding:.28rem .75rem; border-radius:20px; 
-      font-size:.8rem; font-weight:700; 
-    }
-    .job-actions { display:flex; gap:.75rem; flex-wrap:wrap; }
-    .btn-small { padding:.6rem 1.2rem; font-size:.9rem; }
+    /* WHY */
+    .why-section { padding: 80px 24px; }
+    .why-inner { max-width: 860px; margin: 0 auto; }
+    .why-inner h2 { font-family: 'Syne',sans-serif; font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 40px; }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .why-card { background: var(--glass); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+    .why-icon { font-size: 26px; margin-bottom: 14px; }
+    .why-card h4 { font-family: 'Syne',sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .why-card p { font-size: 13px; color: var(--grey); line-height: 1.6; }
 
-    .notice {
-      background: linear-gradient(135deg,#dbeafe 0%, #bfdbfe 100%);
-      border-left:4px solid var(--primary); border-radius:12px; 
-      padding:1.5rem; margin:2rem 0;
-    }
-    .notice h3 { 
-      color:var(--primary); font-size:1.25rem; margin-bottom:.6rem; 
-    }
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--grey); font-size: 13px; }
+    footer a { color: var(--orange); text-decoration: none; }
 
-    .comparison-section {
-      background: var(--light); padding: 3rem 4%; margin: 3rem 0;
-    }
-    .comparison-grid {
-      max-width: 1000px; margin: 2rem auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .comparison-card {
-      background: #fff; border-radius: 12px; padding: 2rem;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-      border-top: 4px solid #ccc;
-    }
-    .comparison-card.zzp { border-top-color: #FF7F11; }
-    .comparison-card.loondienst { border-top-color: var(--red); }
-    .comparison-card h3 { 
-      font-size: 1.3rem; margin-bottom: 1rem; 
-    }
-    .comparison-card.zzp h3 { color: #FF7F11; }
-    .comparison-card.loondienst h3 { color: var(--red); }
-    .big-number {
-      font-size: 2.5rem; font-weight: 800; margin: 1rem 0;
-    }
-    .comparison-list {
-      list-style: none; margin-top: 1rem;
-    }
-    .comparison-list li {
-      padding: .5rem 0; border-bottom: 1px solid #e5e7eb;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .comparison-list li:last-child { border: none; }
-    .orange-check { color: #FF7F11; font-weight: 700; }
-    .red-cross { color: var(--red); font-weight: 700; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .role-card { animation: fadeUp 0.4s ease both; }
+    .role-card:nth-child(2) { animation-delay: 0.08s; }
+    .role-card:nth-child(3) { animation-delay: 0.16s; }
+    .role-card:nth-child(4) { animation-delay: 0.24s; }
 
-    .cta-section {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-      color:#fff; padding:3rem 4%; text-align:center; 
-      margin:3rem 0; border-radius:15px;
-    }
-    .cta-section h2 { font-size:1.8rem; margin-bottom:.8rem; }
-    .cta-section p { 
-      font-size:1.05rem; opacity:.95; margin-bottom:1.2rem; 
-      max-width: 700px; margin-left: auto; margin-right: auto;
-    }
-
-    /* FAQ - Mooiere Styling zoals index.html */
-    .faq-section { margin:3rem 0; }
-    .faq-section h2 { 
-      color:var(--primary); text-align:center; 
-      font-size:1.8rem; margin-bottom:1.25rem;
-    }
-    
-    .faq-item {
-      background: white;
-      border: 2px solid #e5e7eb;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      transition: all 0.3s ease;
-      overflow: hidden;
-    }
-    
-    .faq-item:hover {
-      border-color: var(--secondary);
-      box-shadow: 0 5px 20px rgba(255, 127, 17, 0.15);
-      transform: translateY(-2px);
-    }
-
-    .faq-item summary {
-      padding: 1.25rem 1.25rem 1.25rem 3rem;
-      cursor: pointer;
-      font-weight: 600;
-      color: var(--primary);
-      font-size: 0.95rem;
-      list-style: none;
-      position: relative;
-      transition: all 0.3s ease;
-      background: linear-gradient(to right, #f8f9fa 0%, white 100%);
-    }
-    
-    .faq-item summary:before {
-      content: "❓";
-      position: absolute;
-      left: 1rem;
-      font-size: 1.3rem;
-      transition: transform 0.3s ease;
-    }
-    
-    .faq-item[open] summary:before {
-      content: "✓";
-      color: var(--success);
-    }
-    
-    .faq-item summary:after {
-      content: "▼";
-      position: absolute;
-      right: 1.25rem;
-      font-size: 0.7rem;
-      color: var(--secondary);
-      transition: transform 0.3s ease;
-    }
-    
-    .faq-item[open] summary:after {
-      transform: rotate(180deg);
-    }
-
-    .faq-item summary::-webkit-details-marker { 
-      display: none; 
-    }
-
-    .faq-item[open] summary {
-      background: linear-gradient(135deg, var(--secondary), #ff9533);
-      color: white;
-      border-bottom: 2px solid #e5e7eb;
-    }
-    
-    .faq-item[open] summary:after {
-      color: white;
-    }
-
-    .faq-content {
-      padding: 1.25rem;
-      font-size: 0.9rem;
-      line-height: 1.7;
-      background: #fafbfc;
-      border-top: 1px solid #e5e7eb;
-    }
-    
-    .faq-content strong {
-      color: var(--primary);
-    }
-    
-    .faq-content p { 
-      margin-bottom: .8rem; 
-      color:#555; 
-      line-height: 1.8; 
-    }
-    
-    .faq-content ul { 
-      margin-top: .5rem; 
-      padding-left: 1.5rem; 
-      color: #555; 
-      line-height: 1.8;
-    }
-
-    footer { 
-      background:var(--dark); color:#fff; padding:2rem 4%; 
-      text-align:center; font-size:.95rem; 
-    }
-    footer a { color:#fff; text-decoration:none; }
-    footer a:hover { color: var(--secondary); }
-    footer p { margin-bottom:.5rem; }
-
-    @media (min-width:600px){ 
-      .logo{font-size:1.3rem;} 
-      .hero h1{font-size:2.2rem;} 
-      .jobs-grid{grid-template-columns:repeat(2,1fr);} 
-    }
-    @media (min-width:900px){ 
-      .logo{font-size:1.5rem;} 
-      nav{gap:2rem;} 
-      .hero h1{font-size:2.5rem;} 
-      .hero .salary-highlight { font-size: 3rem; }
-      .hero-subtitle{font-size:1.15rem;} 
+    @media (max-width: 580px) {
+      .frow { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- HEADER INCLUDE -->
+<!-- HEADER -->
 <div id="header-include"></div>
 <script>
   fetch('/includes/header.html')
@@ -408,864 +130,167 @@
     .catch(() => console.error('Header failed'));
 </script>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">🚀 Lancering september 2026</div>
+  <h1>Werken bij<br><em>SafetyX Academy</em></h1>
+  <p>We bouwen iets serieus. En dat betekent dat we ook serieus zijn over wie we aan boord halen.</p>
+  <div class="honest-note">
+    ✋ <strong>Eerlijk verhaal:</strong> We hebben op dit moment nog geen openstaande vacatures. We leggen eerst het fundament — accreditaties, partnerdeals, structuur. Pas als dat staat, bouwen we het team. Schrijf je in en wij nemen contact op zodra de tijd rijp is.
+  </div>
+  <div class="countdown-wrap">
+    <div class="countdown-block"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">Dagen</div></div>
+    <div class="countdown-block"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-label">Uren</div></div>
+    <div class="countdown-block"><div class="countdown-num" id="cd-min">--</div><div class="countdown-label">Min</div></div>
+    <div class="countdown-block"><div class="countdown-num" id="cd-sec">--</div><div class="countdown-label">Sec</div></div>
+  </div>
+</section>
 
-  <!-- Breadcrumbs -->
-  <div style="background:#f8f9fa; padding:0.75rem 4%; border-bottom:1px solid #e5e7eb;">
-    <div style="max-width:1200px; margin:0 auto; font-size:0.9rem; color:#666;">
-      <a href="index.html" style="color:var(--primary); text-decoration:none; font-weight:500;">🏠 Home</a>
-      <span style="margin:0 0.5rem; color:#ccc;">›</span>
-      <span style="color:#666;">ZZP Opdrachten & Dagtarieven</span>
+<!-- AANKOMENDE ROLLEN -->
+<section class="roles-section">
+  <h2 class="section-title">Dit zijn de rollen die komen</h2>
+  <p class="section-sub">Geen vacatures — wel een eerlijk beeld van waar we naartoe bouwen.</p>
+  <div class="roles-grid">
+    <div class="role-card">
+      <div class="role-icon">🎓</div>
+      <div class="role-title">HSE Trainer / NEBOSH Docent</div>
+      <p class="role-desc">De kern van de academy. Je geeft les aan professionals uit offshore, bouw en industrie. NEBOSH IGC kennis vereist, Engels is voertaal in de klas.</p>
+      <span class="role-tag">Fulltime · Rotterdam</span>
+    </div>
+    <div class="role-card">
+      <div class="role-icon">📋</div>
+      <div class="role-title">NEBOSH Assessor / Examinator</div>
+      <p class="role-desc">Je beoordeelt opdrachten en examens, geeft constructieve feedback en borgt de kwaliteitsstandaard. Flexibel en deels vanuit huis.</p>
+      <span class="role-tag">Parttime · Hybride</span>
+    </div>
+    <div class="role-card">
+      <div class="role-icon">🤝</div>
+      <div class="role-title">Business Development</div>
+      <p class="role-desc">Je bouwt relaties op met bedrijven in haven, bouw en industrie. Sluit opleidingsdeals en zet SafetyX op de kaart bij HR-directeuren.</p>
+      <span class="role-tag">Fulltime · Rotterdam</span>
+    </div>
+    <div class="role-card">
+      <div class="role-icon">🗂️</div>
+      <div class="role-title">Student & Office Coordinator</div>
+      <p class="role-desc">De spil van de operatie. Je regelt roosters, bent aanspreekpunt voor cursisten en zorgt dat alles op tijd klaarstaat.</p>
+      <span class="role-tag">Fulltime · Rotterdam</span>
     </div>
   </div>
+</section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <h1>💰 Veiligheidskundige ZZP Tarief<br />
-        <span class="salary-highlight">€400-1.500 per dag</span>
-      </h1>
-      <p class="hero-subtitle">
-        <strong>Verdien €88.000 - €330.000 per jaar als HSE ZZP'er</strong><br />
-        12 freelance opdrachten wereldwijd: Rotterdam €500/dag • Dubai €1.200/dag • Noorwegen €900/dag<br />
-        Train bij SafetyXAcademy voor €3.500 → start als NEBOSH-gecertificeerde ZZP'er
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" 
-           href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20Training%20%E2%86%92%20ZZP%20Carri%C3%A8re&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20weten%20over%3A%0A%E2%9C%85%20NEBOSH%20IGC%20training%20%E2%82%AC3.500%0A%E2%9C%85%20ZZP%20opdrachten%20en%20dagtarieven%0A%E2%9C%85%20Hoe%20ik%20%E2%82%AC100k%2B%20kan%20verdienen%0A%0AMijn%20naam%3A%20%0ATelefoon%3A%20%0AWoonplaats%3A%20%0A%0AGroet%2C">
-          🎓 Start NEBOSH Training €3.500
-        </a>
-        <a class="btn btn-secondary" href="index.html#training">
-          📖 Meer over NEBOSH IGC
-        </a>
-      </div>
-    </section>
+<!-- INSCHRIJFFORMULIER -->
+<section class="signup-section">
+  <div class="signup-inner">
+    <h2>Schrijf je in voor de talent pool</h2>
+    <p>Gratis en vrijblijvend. Wij nemen contact op zodra een rol bij jou past.</p>
 
-    <!-- Calculator Section -->
-    <section class="calculator-section" id="calculator">
-      <div class="calculator-content">
-        <h2>🧮 Bereken Jouw ZZP Potentie als Veiligheidskundige</h2>
-        <p style="margin-bottom: 2rem; opacity: .9;">
-          Zie wat je kan verdienen als NEBOSH-gecertificeerde HSE ZZP'er in Nederland of internationaal
-        </p>
-        
-        <div class="calculator-grid">
-          <div class="calc-card">
-            <h3>Junior ZZP'er (0-2 jaar)</h3>
-            <div class="calc-number">€400-600</div>
-            <div class="calc-label">per dag</div>
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
-              <strong style="font-size: 1.5rem; color: #FF7F11;">€88k-132k</strong>
-              <div class="calc-label">per jaar (220 dagen)</div>
-            </div>
-          </div>
+    <form action="https://formsubmit.co/info@safetyxacademy.nl" method="POST">
 
-          <div class="calc-card">
-            <h3>Medior ZZP'er (3-5 jaar)</h3>
-            <div class="calc-number">€700-900</div>
-            <div class="calc-label">per dag</div>
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
-              <strong style="font-size: 1.5rem; color: #FF7F11;">€154k-198k</strong>
-              <div class="calc-label">per jaar (220 dagen)</div>
-            </div>
-          </div>
+      <!-- FormSubmit instellingen -->
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="💼 Nieuwe Talent Pool Inschrijving – SafetyX Academy">
+      <input type="hidden" name="_next" value="https://www.safetyxacademy.nl/bedankt-jobs.html">
+      <input type="hidden" name="_template" value="table">
 
-          <div class="calc-card">
-            <h3>Senior ZZP'er (5+ jaar)</h3>
-            <div class="calc-number">€1.000-1.500</div>
-            <div class="calc-label">per dag</div>
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
-              <strong style="font-size: 1.5rem; color: #FF7F11;">€220k-330k</strong>
-              <div class="calc-label">per jaar (220 dagen)</div>
-            </div>
-          </div>
+      <div class="frow">
+        <div class="fgroup">
+          <label>Voornaam *</label>
+          <input type="text" name="voornaam" placeholder="Jan" required>
         </div>
-
-        <div class="calc-breakdown">
-          <h3 style="margin-bottom: 1rem;">💼 Voorbeeld: Medior ZZP'er (€800/dag)</h3>
-          <ul>
-            <li>
-              <span>220 werkdagen × €800</span>
-              <strong>€176.000</strong>
-            </li>
-            <li>
-              <span>Min BTW (21%)</span>
-              <strong>- €30.800</strong>
-            </li>
-            <li>
-              <span>Min bedrijfskosten (10%)</span>
-              <strong>- €17.600</strong>
-            </li>
-            <li>
-              <span>Min IB/VPB (~25%)</span>
-              <strong>- €32.000</strong>
-            </li>
-            <li style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #e5e7eb;">
-              <span><strong>Netto overgehouden</strong></span>
-              <strong style="color: #FF7F11; font-size: 1.4rem;">€95.600</strong>
-            </li>
-          </ul>
-          <p style="margin-top: 1rem; color: #666; font-size: .9rem;">
-            * Schatting, werkelijke bedragen variëren per situatie. Altijd adviseren met accountant.
-          </p>
+        <div class="fgroup">
+          <label>Achternaam *</label>
+          <input type="text" name="achternaam" placeholder="de Vries" required>
         </div>
       </div>
-    </section>
 
-    <!-- Stats -->
-    <section class="stats-bar">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <h3>12</h3>
-          <p>Freelance Opdrachten</p>
+      <div class="frow">
+        <div class="fgroup">
+          <label>E-mailadres *</label>
+          <input type="email" name="email" placeholder="jan@bedrijf.nl" required>
         </div>
-        <div class="stat-item">
-          <h3>€500+</h3>
-          <p>Dagtarief NL/BE</p>
-        </div>
-        <div class="stat-item">
-          <h3>€1.500</h3>
-          <p>Top Dagtarief Senior</p>
-        </div>
-        <div class="stat-item">
-          <h3>€3.500</h3>
-          <p>NEBOSH Training All-In</p>
+        <div class="fgroup">
+          <label>Telefoonnummer</label>
+          <input type="tel" name="telefoon" placeholder="06 12345678">
         </div>
       </div>
-    </section>
 
-    <div class="container">
-      <!-- Header -->
-      <div class="section-header">
-        <h2>🌍 HSE Freelance Opdrachten Met NEBOSH IGC</h2>
-        <p>
-          Van Rotterdam tot Dubai, van Antwerpen tot Noorwegen. Deze opdrachten tonen de waarde van jouw NEBOSH investering. 
-          <strong>Train lokaal voor €3.500, verdien wereldwijd als ZZP'er.</strong>
-        </p>
+      <div class="fgroup">
+        <label>LinkedIn profiel <span style="font-weight:400;color:var(--grey)">(optioneel)</span></label>
+        <input type="url" name="linkedin" placeholder="https://linkedin.com/in/...">
       </div>
 
-      <!-- Filters -->
-      <div class="filters">
-        <button class="chip active" data-filter="all">🌐 Alle Opdrachten (12)</button>
-        <button class="chip" data-filter="nederland">🇳🇱 Nederland</button>
-        <button class="chip" data-filter="belgie">🇧🇪 België</button>
-        <button class="chip" data-filter="middle-east">🏜️ Middle East</button>
-        <button class="chip" data-filter="europe">🇪🇺 Europa</button>
-        <button class="chip" data-filter="offshore">🛢️ Offshore</button>
-        <button class="chip" data-filter="mining">⛏️ Mining</button>
+      <div class="fgroup">
+        <label>Welke rol past bij jou? *</label>
+        <select name="rol" required>
+          <option value="">— Selecteer een rol —</option>
+          <option>HSE Trainer / NEBOSH Docent</option>
+          <option>NEBOSH Assessor / Examinator</option>
+          <option>Business Development</option>
+          <option>Student & Office Coordinator</option>
+          <option>Anders / Nog niet zeker</option>
+        </select>
       </div>
 
-      <!-- Jobs Grid -->
-      <section class="jobs-grid">
-        
-        <!-- 1. Rotterdam Haven -->
-        <article class="job-card featured" data-tags="nederland benelux haven starter">
-          <h3 class="job-title">HSE Officer Freelance - Haven Rotterdam</h3>
-          <p class="job-company">Petrochemie Terminal • Shell/BP Partners</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Rotterdam, NL</span>
-            <span class="meta-item">📅 6 maanden</span>
-            <div class="day-rate">
-              💰 €500-650/dag
-              <div class="year-estimate">€110k-143k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Dagelijkse inspecties, toolbox meetings, LMRA's, PTW coördinatie. 
-            Perfect voor junior ZZP'ers met NEBOSH IGC. 40 uur/week, flexibele indeling.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">Nederlands & Engels</span>
-            <span class="tag">Starter OK</span>
-            <span class="tag">Haven</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=HSE%20Freelance%20Rotterdam%20%E2%82%AC500-650%2Fdag&body=Interesse%20in%20HSE%20Freelance%20Rotterdam%20%E2%82%AC500-650%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 NEBOSH Opleiding €3.500</a>
-          </div>
-        </article>
-
-        <!-- 2. Antwerpen Petrochemie -->
-        <article class="job-card featured" data-tags="belgie benelux petrochemie">
-          <h3 class="job-title">Safety Advisor ZZP - Petrochemie Antwerpen</h3>
-          <p class="job-company">BASF/Total Cluster • Contractor Management</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Antwerpen, BE</span>
-            <span class="meta-item">📅 9 maanden</span>
-            <div class="day-rate">
-              💰 €550-700/dag
-              <div class="year-estimate">€121k-154k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            PTW systemen, contractor audits, HSE meetings, incidentonderzoek. 
-            VCA VOL + NEBOSH IGC. Belgische of Nederlandse ZZP'er welkom.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">VCA VOL</span>
-            <span class="tag">Petrochemie</span>
-            <span class="tag">Medior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=Safety%20ZZP%20Antwerpen%20%E2%82%AC550-700%2Fdag&body=Interesse%20in%20Safety%20ZZP%20Antwerpen%20%E2%82%AC550-700%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Start Training Rotterdam</a>
-          </div>
-        </article>
-
-        <!-- 3. Dubai Construction -->
-        <article class="job-card" data-tags="middle-east dubai international high-salary">
-          <h3 class="job-title">HSE Advisor Freelance - Dubai Megaproject</h3>
-          <p class="job-company">Construction/Infrastructure • Tax-Free</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Dubai, UAE</span>
-            <span class="meta-item">📅 12 maanden</span>
-            <div class="day-rate">
-              💰 €1.000-1.200/dag
-              <div class="year-estimate">€220k-264k/jaar (tax-free)</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Site safety management voor mega-infrastructure project. 
-            NEBOSH IGC + 3-5 jaar ervaring. Accommodatie + vluchten inbegrepen.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">Construction</span>
-            <span class="tag">Tax-Free</span>
-            <span class="tag">Senior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=HSE%20Dubai%20%E2%82%AC1.000-1.200%2Fdag&body=Interesse%20in%20HSE%20Dubai%20%E2%82%AC1.000-1.200%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Bekijk NEBOSH IGC</a>
-          </div>
-        </article>
-
-        <!-- 4. Norway Offshore -->
-        <article class="job-card" data-tags="offshore norway international high-salary europe">
-          <h3 class="job-title">Offshore HSE Supervisor - North Sea Norway</h3>
-          <p class="job-company">Oil & Gas Platform • Equinor/Aker</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 North Sea, NO</span>
-            <span class="meta-item">🔁 2/2 Rotation</span>
-            <div class="day-rate">
-              💰 €850-1.100/dag
-              <div class="year-estimate">€187k-242k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Offshore rig safety, PTW, emergency drills, HSE compliance. 
-            NEBOSH IGC + BOSIET + offshore ervaring. 2 weken on / 2 weken off.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">BOSIET</span>
-            <span class="tag">Offshore</span>
-            <span class="tag">Senior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=Offshore%20Norway%20%E2%82%AC850-1.100%2Fdag&body=Interesse%20in%20Offshore%20Norway%20%E2%82%AC850-1.100%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#contact">📞 Bel voor Advies</a>
-          </div>
-        </article>
-
-        <!-- 5. Amsterdam Schiphol -->
-        <article class="job-card featured" data-tags="nederland aviation">
-          <h3 class="job-title">HSE Coordinator Freelance - Schiphol Airport</h3>
-          <p class="job-company">Airport Operations • Bouwprojecten</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Amsterdam, NL</span>
-            <span class="meta-item">📅 6 maanden</span>
-            <div class="day-rate">
-              💰 €600-750/dag
-              <div class="year-estimate">€132k-165k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Luchthaven veiligheid, bouwveiligheid, contractor management. 
-            VCA VOL + NEBOSH IGC. Dag- en nachtdiensten.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">VCA VOL</span>
-            <span class="tag">Aviation</span>
-            <span class="tag">Medior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=HSE%20Schiphol%20%E2%82%AC600-750%2Fdag&body=Interesse%20in%20HSE%20Schiphol%20%E2%82%AC600-750%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-        <!-- 6. Saudi NEOM -->
-        <article class="job-card" data-tags="middle-east saudi international high-salary">
-          <h3 class="job-title">HSE Manager Freelance - NEOM Saudi Arabia</h3>
-          <p class="job-company">Giga-Project Infrastructure • NEOM</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 NEOM, SA</span>
-            <span class="meta-item">📅 18 maanden</span>
-            <div class="day-rate">
-              💰 €1.200-1.500/dag
-              <div class="year-estimate">€264k-330k/jaar (tax-free)</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Strategic HSE leadership voor megaproject. NEBOSH Diploma + 7+ jaar ervaring. 
-            Expatriate package met accommodatie.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH Diploma</span>
-            <span class="tag">Megaproject</span>
-            <span class="tag">Tax-Free</span>
-            <span class="tag">Senior+</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=HSE%20NEOM%20%E2%82%AC1.200-1.500%2Fdag&body=Interesse%20in%20HSE%20NEOM%20%E2%82%AC1.200-1.500%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-        <!-- 7. UK Manufacturing -->
-        <article class="job-card" data-tags="europe uk international">
-          <h3 class="job-title">HSE Advisor Contract - UK Manufacturing</h3>
-          <p class="job-company">Food/Pharma Manufacturing Plant</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Midlands, GB</span>
-            <span class="meta-item">📅 9 maanden</span>
-            <div class="day-rate">
-              💰 €700-850/dag
-              <div class="year-estimate">€154k-187k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            ISO 45001 implementation, site audits, training delivery. 
-            NEBOSH IGC + ISO ervaring. Engels vereist.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">ISO 45001</span>
-            <span class="tag">Manufacturing</span>
-            <span class="tag">Medior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=HSE%20UK%20%E2%82%AC700-850%2Fdag&body=Interesse%20in%20HSE%20UK%20%E2%82%AC700-850%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-        <!-- 8. Australia Mining -->
-        <article class="job-card" data-tags="mining australia international high-salary">
-          <h3 class="job-title">Mining HSE Superintendent - Western Australia</h3>
-          <p class="job-company">Gold/Iron Ore Mine Site • FIFO</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Perth, WA, AU</span>
-            <span class="meta-item">🔁 2/1 FIFO</span>
-            <div class="day-rate">
-              💰 €1.100-1.400/dag
-              <div class="year-estimate">€242k-308k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Mine site safety leadership, risk management, emergency response. 
-            NEBOSH + mining ervaring. Fly-in Fly-out (2 weeks on / 1 week off).
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">Mining</span>
-            <span class="tag">FIFO</span>
-            <span class="tag">Senior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=Mining%20Australia%20%E2%82%AC1.100-1.400%2Fdag&body=Interesse%20in%20Mining%20Australia%20%E2%82%AC1.100-1.400%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-        <!-- 9. Vlissingen Offshore Wind -->
-        <article class="job-card featured" data-tags="nederland offshore wind">
-          <h3 class="job-title">HSE Officer Freelance - Offshore Wind Vlissingen</h3>
-          <p class="job-company">Offshore Wind Farm • Ørsted/Vattenfall</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Vlissingen, NL</span>
-            <span class="meta-item">📅 12 maanden</span>
-            <div class="day-rate">
-              💰 €600-800/dag
-              <div class="year-estimate">€132k-176k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Offshore wind farm construction safety. Vessel-based work. 
-            NEBOSH IGC + GWO + offshore ervaring. 2/2 rotation mogelijk.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">GWO</span>
-            <span class="tag">Offshore Wind</span>
-            <span class="tag">Medior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=Offshore%20Wind%20Vlissingen%20%E2%82%AC600-800%2Fdag&body=Interesse%20in%20Offshore%20Wind%20Vlissingen%20%E2%82%AC600-800%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-        <!-- 10. Germany Chemical -->
-        <article class="job-card" data-tags="europe germany petrochemie">
-          <h3 class="job-title">Process Safety Engineer - Germany Chemical</h3>
-          <p class="job-company">Chemical Plant NRW • BASF/Bayer</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 NRW, DE</span>
-            <span class="meta-item">📅 9 maanden</span>
-            <div class="day-rate">
-              💰 €750-950/dag
-              <div class="year-estimate">€165k-209k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Process safety management, MOC, HAZOP, ATEX. 
-            NEBOSH + engineering background. Duits/Engels vereist.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">ATEX</span>
-            <span class="tag">PSM</span>
-            <span class="tag">Senior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=Process%20Safety%20Germany%20%E2%82%AC750-950%2Fdag&body=Interesse%20in%20Process%20Safety%20Germany%20%E2%82%AC750-950%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-        <!-- 11. Qatar LNG -->
-        <article class="job-card" data-tags="middle-east qatar international high-salary">
-          <h3 class="job-title">LNG Safety Specialist Freelance - Qatar</h3>
-          <p class="job-company">LNG Terminal Operations • QatarEnergy</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Doha, QA</span>
-            <span class="meta-item">📅 12 maanden</span>
-            <div class="day-rate">
-              💰 €950-1.200/dag
-              <div class="year-estimate">€209k-264k/jaar (tax-free)</div>
-            </div>
-          </div>
-          <p class="job-description">
-            LNG operations safety, cryogenic hazards, gas detection, emergency response. 
-            NEBOSH + LNG ervaring. Tax-free + expatriate benefits.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">LNG</span>
-            <span class="tag">Tax-Free</span>
-            <span class="tag">Senior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=LNG%20Qatar%20%E2%82%AC950-1.200%2Fdag&body=Interesse%20in%20LNG%20Qatar%20%E2%82%AC950-1.200%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-        <!-- 12. Belgium Logistics -->
-        <article class="job-card featured" data-tags="belgie logistics benelux">
-          <h3 class="job-title">HSE Manager ZZP - Logistics Hub Antwerpen</h3>
-          <p class="job-company">Warehouse/Distribution • DHL/Kuehne+Nagel</p>
-          <div class="job-meta">
-            <span class="meta-item">📍 Antwerpen, BE</span>
-            <span class="meta-item">📅 6 maanden</span>
-            <div class="day-rate">
-              💰 €650-800/dag
-              <div class="year-estimate">€143k-176k/jaar</div>
-            </div>
-          </div>
-          <p class="job-description">
-            Warehouse safety, traffic management, fork-lift operations, training. 
-            NEBOSH IGC + logistics ervaring. Nederlands/Engels.
-          </p>
-          <div class="job-tags">
-            <span class="tag">NEBOSH IGC</span>
-            <span class="tag">Logistics</span>
-            <span class="tag">Warehouse</span>
-            <span class="tag">Medior</span>
-          </div>
-          <div class="job-actions">
-            <a class="btn btn-primary btn-small" 
-               href="mailto:info@safetyxacademy.nl?subject=HSE%20Logistics%20Antwerpen%20%E2%82%AC650-800%2Fdag&body=Interesse%20in%20HSE%20Logistics%20Antwerpen%20%E2%82%AC650-800%2Fdag">
-              ✉️ Claim Opdracht
-            </a>
-            <a class="btn btn-secondary btn-small" href="index.html#training">🎓 Train Eerst</a>
-          </div>
-        </article>
-
-      </section>
-
-      <!-- ZZP vs Loondienst Comparison -->
-      <section class="comparison-section">
-        <div class="container">
-          <div class="section-header">
-            <h2>💰 ZZP vs Loondienst: Het Verschil</h2>
-            <p>Zie waarom onze studenten kiezen voor ZZP in plaats van loondienst</p>
-          </div>
-          
-          <div class="comparison-grid">
-            <!-- ZZP Card -->
-            <div class="comparison-card zzp">
-              <h3>✅ ZZP Veiligheidskundige</h3>
-              <div class="big-number" style="color: #FF7F11;">€154k/jaar</div>
-              <p style="margin-bottom: 1rem; color: #666;">
-                Medior HSE ZZP'er (€700/dag × 220 dagen)
-              </p>
-              <ul class="comparison-list">
-                <li>
-                  <span>Dagtarief</span>
-                  <strong class="orange-check">€500-1.500</strong>
-                </li>
-                <li>
-                  <span>Jaaromzet</span>
-                  <strong class="orange-check">€110k-330k</strong>
-                </li>
-                <li>
-                  <span>Flexibiliteit</span>
-                  <strong class="orange-check">Volledig</strong>
-                </li>
-                <li>
-                  <span>Internationale opdrachten</span>
-                  <strong class="orange-check">Ja</strong>
-                </li>
-                <li>
-                  <span>Projecten kiezen</span>
-                  <strong class="orange-check">Zelf bepalen</strong>
-                </li>
-                <li>
-                  <span>Netto ~65-70%</span>
-                  <strong class="orange-check">€71k-231k</strong>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Loondienst Card -->
-            <div class="comparison-card loondienst">
-              <h3>❌ Loondienst Veiligheidskundige</h3>
-              <div class="big-number" style="color: var(--red);">€60k/jaar</div>
-              <p style="margin-bottom: 1rem; color: #666;">
-                Medior HSE Officer (€5.000/maand × 12)
-              </p>
-              <ul class="comparison-list">
-                <li>
-                  <span>Maandsalaris</span>
-                  <strong>€4.000-7.000</strong>
-                </li>
-                <li>
-                  <span>Jaarsalaris</span>
-                  <strong>€48k-84k</strong>
-                </li>
-                <li>
-                  <span>Flexibiliteit</span>
-                  <strong class="red-cross">Beperkt</strong>
-                </li>
-                <li>
-                  <span>Internationale opdrachten</span>
-                  <strong class="red-cross">Moeilijk</strong>
-                </li>
-                <li>
-                  <span>Projecten kiezen</span>
-                  <strong class="red-cross">Geen keuze</strong>
-                </li>
-                <li>
-                  <span>Netto ~70%</span>
-                  <strong>€34k-59k</strong>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="notice" style="margin-top: 2rem;">
-            <h3>💡 Waarom Onze Studenten Voor ZZP Kiezen</h3>
-            <p>
-              <strong>ZZP'ers verdienen 2-3× zoveel</strong> als werknemers in loondienst. 
-              Als medior HSE ZZP'er kan je €154k/jaar verdienen vs €60k in loondienst. 
-              Plus: je hebt volledige controle over je projecten en werktijden.
-            </p>
-            <p style="margin-top: .5rem;">
-              Natuurlijk moet je als ZZP'er zelf je BTW, belasting, verzekeringen regelen - 
-              maar met een goede accountant hou je netto veel meer over dan in loondienst.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Notice -->
-      <div class="notice">
-        <h3>💡 Hoe Werken Deze Freelance Opdrachten?</h3>
-        <p>
-          <strong>Dit zijn voorbeeldopdrachten van typische HSE ZZP opdrachten.</strong> 
-          Ze illustreren de wereldwijde vraag naar NEBOSH-gecertificeerde freelance HSE professionals 
-          en tonen realistische dagtarieven.
-        </p>
-        <p style="margin-top: .75rem;">
-          SafetyXAcademy helpt je met:
-        </p>
-        <ul style="margin-top: .5rem; padding-left: 1.5rem;">
-          <li><strong><a href="index.html#training" style="color:var(--secondary); text-decoration:none; font-weight:600;">NEBOSH IGC training (€3.500)</a></strong> - Jouw ticket naar ZZP carrière</li>
-          <li><strong>ZZP opstarten</strong> - KVK, BTW, verzekeringen, administratie</li>
-          <li><strong>Tariefonderhandeling</strong> - Hoe je €500-1.500/dag vraagt</li>
-          <li><strong>Contract templates</strong> - Veilige ZZP contracten</li>
-          <li><strong>Netwerk</strong> - Connecties met opdrachtgevers NL/BE & wereldwijd</li>
-          <li><strong>LinkedIn profiel</strong> - Als HSE ZZP'er zichtbaar worden</li>
-        </ul>
-        <p style="margin-top:1rem; text-align:center;">
-          <a href="index.html#training" style="color:var(--primary); text-decoration:none; font-weight:700; padding:0.75rem 1.5rem; background:#f8f9fa; border-radius:50px; display:inline-block;">
-            → Start met de NEBOSH IGC opleiding in Rotterdam
-          </a>
-        </p>
+      <div class="fgroup">
+        <label>Korte motivatie <span style="font-weight:400;color:var(--grey)">(optioneel)</span></label>
+        <textarea name="motivatie" placeholder="Waarom spreekt SafetyX Academy jou aan?"></textarea>
       </div>
 
-      <!-- CTA -->
-      <div class="cta-section">
-        <h2>🚀 Start Als HSE ZZP'er - Verdien €100k-300k/Jaar</h2>
-        <p>
-          Investeer €3.500 in NEBOSH IGC bij SafetyXAcademy Rotterdam. 
-          Verdien daarna €500-1.500/dag als freelance veiligheidskundige - 
-          lokaal in Benelux of internationaal in Dubai, Noorwegen, UK, etc.
-        </p>
-        <p style="margin-top: 1rem;">
-          <strong>Reken het uit:</strong> €800/dag × 220 werkdagen = €176k omzet per jaar. 
-          Netto hou je ~€100k+ over. Dat is 2-3× zoveel als loondienst!
-        </p>
-        <a class="btn btn-primary" style="margin-top: 1.5rem;"
-           href="mailto:info@safetyxacademy.nl?subject=NEBOSH%20IGC%20Training%20%E2%86%92%20ZZP%20Start&body=Hoi%20SafetyXAcademy%2C%0A%0AIk%20wil%20graag%20meer%20informatie%20over%3A%0A%E2%9C%85%20NEBOSH%20IGC%20training%20%E2%82%AC3.500%20all-in%0A%E2%9C%85%20ZZP%20opstarten%20als%20veiligheidskundige%0A%E2%9C%85%20Freelance%20opdrachten%20%E2%82%AC500-1.500%2Fdag%0A%E2%9C%85%20Hoe%20ik%20%E2%82%AC100k%2B%20netto%20kan%20verdienen%0A%0AMijn%20naam%3A%20%0ATelefoon%3A%20%0AWoonplaats%3A%20%0AHuidige%20situatie%3A%20%5Bloondienst%2Fwerkloos%2Fstudent%2Fwil%20switchen%20naar%20ZZP%5D%0A%0AGroet%2C">
-          📧 Vraag Gratis Informatie Over ZZP Start →
-        </a>
+      <button type="submit" class="submit-btn">Inschrijven voor de talent pool →</button>
+      <p class="form-privacy">🔒 Je gegevens worden niet gedeeld met derden. Geen spam — alleen relevant contact.</p>
+    </form>
+  </div>
+</section>
+
+<!-- WAAROM -->
+<section class="why-section">
+  <div class="why-inner">
+    <h2>Waarom nu al inschrijven?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏗️</div>
+        <h4>Vanaf dag één erbij</h4>
+        <p>De academy wordt nu gebouwd. Wie vroeg inschrijft heeft de beste kans op een sleutelrol.</p>
       </div>
-
-      <!-- FAQ met mooie styling -->
-      <section class="faq-section">
-        <h2>❓ Veelgestelde Vragen Over HSE ZZP Tarieven</h2>
-
-        <div class="faq-item">
-          <details>
-            <summary>Hoeveel kan ik verdienen als veiligheidskundige ZZP'er?</summary>
-            <div class="faq-content">
-              <p><strong>Dagtarieven variëren per niveau:</strong></p>
-              <ul>
-                <li><strong>Junior (0-2 jaar):</strong> €400-600/dag → €88k-132k/jaar omzet</li>
-                <li><strong>Medior (3-5 jaar):</strong> €700-900/dag → €154k-198k/jaar omzet</li>
-                <li><strong>Senior (5+ jaar):</strong> €1.000-1.500/dag → €220k-330k/jaar omzet</li>
-              </ul>
-              <p style="margin-top: .75rem;">
-                <strong>Let op:</strong> Dit is omzet (bruto). Na BTW (21%), bedrijfskosten (~10%), 
-                en inkomstenbelasting (~25-40%) hou je netto ongeveer 50-70% over. 
-                Dus als medior ZZP'er (€800/dag) verdien je netto ~€95k-110k per jaar.
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>Is ZZP echt zoveel beter dan loondienst?</summary>
-            <div class="faq-content">
-              <p><strong>Ja, ZZP'ers verdienen 2-3× zoveel als werknemers:</strong></p>
-              <ul>
-                <li><strong>Loondienst medior:</strong> €5.000/maand = €60k/jaar bruto → ~€42k netto</li>
-                <li><strong>ZZP medior:</strong> €700/dag = €154k/jaar omzet → ~€95k-110k netto</li>
-              </ul>
-              <p style="margin-top: .75rem;">
-                Dus als ZZP'er verdien je ruim <strong>2× zoveel netto</strong>. 
-                Ja, je moet zelf administratie doen en je hebt geen vakantiegeld/pensioen, 
-                maar met een goede accountant (€150/maand) regel je dat makkelijk. 
-                De extra €50k-60k/jaar netto maakt dat meer dan goed!
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>Hoe start ik als HSE ZZP'er in Nederland?</summary>
-            <div class="faq-content">
-              <p><strong>5 Stappen om te starten als veiligheidskundige ZZP'er:</strong></p>
-              <ul>
-                <li><strong>1. Haal NEBOSH IGC</strong> - <a href="index.html#training" style="color:var(--secondary); text-decoration:none; font-weight:600;">Train bij SafetyXAcademy</a> (€3.500)</li>
-                <li><strong>2. Inschrijven bij KVK</strong> - Eenmanszaak starten (~€50)</li>
-                <li><strong>3. BTW nummer aanvragen</strong> - Bij Belastingdienst (gratis)</li>
-                <li><strong>4. Verzekeringen regelen</strong> - AVB, WIA (€100-200/maand)</li>
-                <li><strong>5. Opdrachten vinden</strong> - LinkedIn, netwerk, bureaus</li>
-              </ul>
-              <p style="margin-top: .75rem;">
-                SafetyXAcademy helpt je met stap 1 (<a href="index.html#training" style="color:var(--secondary); text-decoration:none;">NEBOSH training Rotterdam</a>) en stap 5 (opdrachten vinden). 
-                Voor de andere stappen kan je een ZZP accountant inhuren (~€150/maand).
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>Wat zijn realistische dagtarieven voor HSE ZZP'ers in Nederland?</summary>
-            <div class="faq-content">
-              <p><strong>Realistische dagtarieven in 2025:</strong></p>
-              <ul>
-                <li><strong>Junior HSE Officer (0-2 jaar):</strong> €400-550/dag</li>
-                <li><strong>Medior HSE Advisor (3-5 jaar):</strong> €600-850/dag</li>
-                <li><strong>Senior HSE Manager (5-10 jaar):</strong> €900-1.200/dag</li>
-                <li><strong>Expert HSE Consultant (10+ jaar):</strong> €1.200-1.500/dag</li>
-              </ul>
-              <p style="margin-top: .75rem;">
-                Deze tarieven zijn <strong>exclusief BTW</strong>. Tarieven variëren per sector: 
-                petrochemie betaalt meer dan bouw, offshore meer dan kantoor, internationaal meer dan lokaal.
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>Kan ik direct na NEBOSH IGC als ZZP'er starten?</summary>
-            <div class="faq-content">
-              <p>
-                <strong>Ja, maar met realistische verwachtingen:</strong> 
-                Met alleen NEBOSH IGC (zonder ervaring) kan je starten als junior HSE Officer ZZP'er 
-                voor €400-500/dag. Veel opdrachtgevers willen wel 1-3 jaar ervaring zien.
-              </p>
-              <p style="margin-top: .75rem;">
-                <strong>Aanbevolen route voor beginners:</strong>
-              </p>
-              <ul>
-                <li>Eerst 1-2 jaar ervaring opdoen in loondienst (€3.800-5.000/maand)</li>
-                <li>Dan switchen naar ZZP met je NEBOSH + ervaring (€600-700/dag)</li>
-                <li>Na 3-5 jaar ervaring als ZZP'er: €900-1.200/dag</li>
-              </ul>
-              <p style="margin-top: .75rem;">
-                Of: direct ZZP starten bij €400-500/dag (nog steeds beter dan loondienst €3.800/maand!) 
-                en snel ervaring opdoen.
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>Helpt SafetyXAcademy met het vinden van ZZP opdrachten?</summary>
-            <div class="faq-content">
-              <p><strong>Ja! We helpen op meerdere manieren:</strong></p>
-              <ul>
-                <li><strong>Netwerk:</strong> Connecties met HSE bureaus, opdrachtgevers (haven, petrochemie, offshore)</li>
-                <li><strong>LinkedIn profiel:</strong> Hoe je zichtbaar wordt als HSE ZZP'er</li>
-                <li><strong>CV optimalisatie:</strong> Voor freelance opdrachten (anders dan loondienst CV)</li>
-                <li><strong>Tariefonderhandeling:</strong> Hoe je €500-1.500/dag vraagt en krijgt</li>
-                <li><strong>Contract templates:</strong> Veilige ZZP contracten (NL wet- en regelgeving)</li>
-                <li><strong>Internationale opdrachten:</strong> Dubai, Noorwegen, UK, etc.</li>
-              </ul>
-              <p style="margin-top: .75rem;">
-                Na je <a href="index.html#training" style="color:var(--secondary); text-decoration:none; font-weight:600;">NEBOSH training in Rotterdam</a> krijg je toegang tot ons alumni netwerk en jobboard. 
-                Veel van onze studenten vinden hun eerste ZZP opdracht via ons netwerk! 
-                <a href="index.html#contact" style="color:var(--primary); text-decoration:none; font-weight:600;">Neem contact op</a> voor meer info.
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="faq-item">
-          <details>
-            <summary>Wat zijn de kosten van ZZP (BTW, belasting, verzekeringen)?</summary>
-            <div class="faq-content">
-              <p><strong>Overzicht van ZZP kosten per jaar:</strong></p>
-              <ul>
-                <li><strong>BTW:</strong> 21% van je omzet (factuur je door aan klant)</li>
-                <li><strong>Inkomstenbelasting:</strong> ~25-40% van je winst (progressief)</li>
-                <li><strong>Accountant:</strong> €150/maand = €1.800/jaar</li>
-                <li><strong>AVB verzekering:</strong> €100/maand = €1.200/jaar</li>
-                <li><strong>WIA verzekering:</strong> €50/maand = €600/jaar</li>
-                <li><strong>KVK inschrijving:</strong> €50 eenmalig</li>
-                <li><strong>Zakelijke verzekering:</strong> €200-400/jaar</li>
-              </ul>
-              <p style="margin-top: .75rem;">
-                <strong>Totale kosten:</strong> ~€4.000-5.000/jaar vaste kosten + 40-50% van omzet aan belastingen. 
-                Als je €154k omzet maakt, hou je netto ~€95k-110k over (50-70%).
-              </p>
-            </div>
-          </details>
-        </div>
-
-      </section>
+      <div class="why-card">
+        <div class="why-icon">🌍</div>
+        <h4>NEBOSH — wereldstandaard</h4>
+        <p>De meest erkende veiligheidskwalificatie ter wereld. Telt van Rotterdam tot Abu Dhabi.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <h4>Groeibedrijf</h4>
+        <p>We starten klein maar de markt is groot. Offshore, bouw, logistiek — HSE-professionals zijn overal gevraagd.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h4>Geen bullshit</h4>
+        <p>We zijn eerlijk over waar we staan. Dat is precies de cultuur die we willen neerzetten.</p>
+      </div>
     </div>
-  </main>
+  </div>
+</section>
 
-  <footer>
-    <div style="max-width:1200px; margin:0 auto;">
-      <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
-      <p style="margin-top:.5rem;">
-        <a href="index.html">Home</a> |
-        <a href="index.html#training">NEBOSH Training</a> |
-        <a href="jobs.html">ZZP Opdrachten</a> |
-        <a href="index.html#testimonials">Reviews</a> |
-        <a href="privacy.html">Privacy</a> |
-        <a href="index.html#contact">Contact Rotterdam</a>
-      </p>
-      <p style="margin-top:.75rem; font-size:.9rem;">
-        📞 <a href="tel:+31108009512" style="color:var(--secondary); text-decoration:none; font-weight:600;">+31 10 800 9512</a> | 
-        📧 <a href="mailto:info@safetyxacademy.nl" style="color:var(--secondary); text-decoration:none; font-weight:600;">info@safetyxacademy.nl</a>
-      </p>
-      <p style="margin-top:.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-        🌍 Train Lokaal €3.500, Verdien Wereldwijd €100k-300k/Jaar
-      </p>
-      <p style="margin-top:.5rem; font-size:.85rem; color:#ddd;">
-        Veiligheidskundige ZZP: €400-1.500/dag | HSE Freelance Opdrachten | NEBOSH IGC Rotterdam<br />
-        Rotterdam €500/dag • Antwerpen €600/dag • Dubai €1.200/dag • Norway €900/dag
-      </p>
-    </div>
-  </footer>
+<footer>
+  <p>SafetyX Academy · Westplein 12, Rotterdam · <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a></p>
+  <p style="margin-top:8px;">&copy; 2026 SafetyX Academy — Lancering september 2026</p>
+</footer>
 
-  <!-- Filters JS -->
-  <script>
-    const chips = document.querySelectorAll('.chip');
-    const jobCards = document.querySelectorAll('.job-card');
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        chips.forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-        const filter = chip.dataset.filter;
-        jobCards.forEach(card => {
-          const tags = card.dataset.tags || '';
-          card.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
-        });
-      });
-    });
-  </script>
+<script src="/js/header.js"></script>
 
-  <script src="/js/header.js"></script>
+<script>
+  function updateCountdown() {
+    const diff = new Date('2026-09-01T00:00:00') - new Date();
+    if (diff <= 0) return;
+    document.getElementById('cd-days').textContent = Math.floor(diff / 86400000);
+    document.getElementById('cd-hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
+    document.getElementById('cd-min').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+    document.getElementById('cd-sec').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
 </body>
 </html>
