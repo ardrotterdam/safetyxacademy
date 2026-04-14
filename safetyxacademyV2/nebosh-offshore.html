@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEBOSH Offshore | HSE-carrière in Dubai, Noorwegen & UK</title>
+  <meta name="theme-color" content="#0A0F1C" />
+  <title>NEBOSH Offshore | HSE-carrière in Dubai, Noorwegen &amp; UK</title>
   <meta name="description" content="Volg een Nederlandstalige NEBOSH IGC training in Rotterdam en werk offshore als HSE-professional in Dubai, Noorwegen of de UK met dagtarieven tot €1.500 per dag. SafetyXAcademy helpt je met opleiding én jobplacement.">
   <link rel="canonical" href="https://safetyxacademy.nl/nebosh-offshore.html">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/favicon-32.png">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,21 +15,53 @@
     gtag('js', new Date());
     gtag('config', 'G-91JCVXBQ0W');
   </script>
-</head>
-<body>
-  <div id="header-include"></div>
-  <script>
-    fetch('/includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        const el = document.getElementById('header-include');
-        el.outerHTML = html;
-        setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
-      })
-      .catch(() => console.error('Header failed'));
-  </script>
 
-  <main>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style-v3.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon-svg.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png" />
+  <meta name="msapplication-TileImage" content="favicon-512.png" />
+</head>
+<body class="sx-page-marketing">
+  <div class="sx-grain" aria-hidden="true"></div>
+
+  <header id="sx-header">
+    <div class="sx-header__inner">
+      <a class="sx-logo" href="index.html" aria-label="SafetyXAcademy Home">SafetyX<span>Academy</span></a>
+      <nav class="sx-nav-desktop" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+          <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="sx-nav-cta-wrap">
+        <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
+      </div>
+      <button type="button" id="sx-nav-toggle" aria-expanded="false" aria-controls="sx-nav-panel" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="sx-nav-panel">
+      <ul>
+        <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+        <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+        <li><a href="over-ons.html">Over Ons</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+      </ul>
+      <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
+    </div>
+  </header>
+
+  <main id="main">
     <section class="page-offshore">
       <div class="container">
         <header class="offshore-hero">
@@ -46,8 +78,8 @@
             en helpt je daarna richting <strong>offshore projecten en internationale opdrachten</strong>.
           </p>
           <p class="offshore-cta">
-            <a href="/nebosh-quiz.html" class="btn btn-primary">Start de gratis NEBOSH oefentest</a>
-            <a href="/aanmelden.html" class="btn btn-outline">Plaats je op de wachtlijst (2026)</a>
+            <a href="nebosh-quiz.html" class="btn btn-primary">Start de gratis NEBOSH oefentest</a>
+            <a href="aanmelden.html" class="btn btn-outline">Plaats je op de wachtlijst (2026)</a>
           </p>
         </header>
 
@@ -66,7 +98,7 @@
             <li><strong>Nederlandstalige training</strong> in Rotterdam – examen in het Engels</li>
           </ul>
           <p>
-            Onze <a href="/nebosh-opleiding.html">NEBOSH IGC opleiding in Rotterdam</a> kost
+            Onze <a href="nebosh-opleiding.html">NEBOSH IGC opleiding in Rotterdam</a> kost
             <strong>€3.500 all-in</strong> en is speciaal gemaakt voor Nederlandstalige HSE'ers die
             offshore of internationaal willen werken.
           </p>
@@ -157,7 +189,7 @@
             </li>
             <li>
               <strong>Introducties naar recruiters &amp; opdrachtgevers</strong><br>
-              Via onze <a href="/jobs.html">jobs &amp; ZZP-opdrachten</a> en netwerk
+              Via onze <a href="jobs.html">jobs &amp; ZZP-opdrachten</a> en netwerk
               helpen we je met de eerste gesprekken.
             </li>
           </ol>
@@ -183,7 +215,7 @@
             mits je de juiste certificeringen hebt en bereid bent om (tijdelijk) in het buitenland te werken.
           </p>
           <p>
-            In onze <a href="/blog/hse-zzp-dagtarieven-rotterdam-antwerpen.html">gids over HSE ZZP dagtarieven</a>
+            In onze <a href="blog/hse-zzp-dagtarieven-rotterdam-antwerpen.html">gids over HSE ZZP dagtarieven</a>
             leggen we uit hoe je je uurtarief en jaardoelen kunt plannen.
           </p>
         </section>
@@ -238,19 +270,66 @@
             Je traint lokaal in Rotterdam en werkt wereldwijd – van de Noordzee tot Dubai.
           </p>
           <p class="offshore-cta">
-            <a href="/nebosh-quiz.html" class="btn btn-primary">Doe de gratis NEBOSH offshore oefentest</a>
-            <a href="/aanmelden.html" class="btn btn-accent">Meld je aan voor de eerste groep in 2026</a>
+            <a href="nebosh-quiz.html" class="btn btn-primary">Doe de gratis NEBOSH offshore oefentest</a>
+            <a href="aanmelden.html" class="btn btn-accent">Meld je aan voor de eerste groep in 2026</a>
           </p>
         </section>
       </div>
     </section>
   </main>
 
-  <footer style="background:#2F3E46;color:white;padding:2rem 5%;text-align:center;">
-    <p>&copy; 2025 SafetyXAcademy – KVK 72037628</p>
+  <footer class="sx-footer">
+    <div class="sx-footer__grid">
+      <div class="sx-footer__brand">
+        <a class="sx-logo" href="index.html">SafetyX<span>Academy</span></a>
+        <p>Train lokaal, werk wereldwijd.</p>
+      </div>
+      <div>
+        <h3>Opleiding</h3>
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH IGC</a></li>
+          <li><a href="nebosh-quiz.html">Oefentest</a></li>
+          <li><a href="nebosh-benelux-ports.html">Benelux havens</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Carrière</h3>
+        <ul>
+          <li><a href="jobs.html">Jobs &amp; ZZP</a></li>
+          <li><a href="werken-bij.html">Werken bij</a></li>
+          <li><a href="nebosh-offshore.html" aria-current="page">Offshore</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Content</h3>
+        <ul>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Juridisch</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="index.html#locatie">Contact</a></li>
+        </ul>
+      </div>
+      <div class="sx-footer__contact">
+        <h3>Direct</h3>
+        <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br />
+        <a href="tel:+31108009512">010-800 9512</a><br />
+        Westplein 12, Rotterdam
+      </div>
+    </div>
+    <div class="sx-footer__bottom">
+      <span>© 2026 SafetyXAcademy · KVK 72037628 · ABshops.nl</span>
+      <div class="sx-social">
+        <a href="https://www.linkedin.com/company/safetyxacademy" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="/js/header.js" defer></script>
+  <script src="js/main-v3.js" defer></script>
 
   <script type="application/ld+json">
 {

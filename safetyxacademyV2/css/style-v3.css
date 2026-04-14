@@ -2682,6 +2682,652 @@ body.sx-page-blog .sx-blog-card h2 {
   text-underline-offset: 3px;
 }
 
+/* —— Blog artikelpagina's (legacy markup op v3-shell) —— */
+body.sx-page-blog-post {
+  font-family: "DM Sans", var(--sx-font), system-ui, sans-serif;
+}
+
+body.sx-page-blog-post .blog-article-header h1,
+body.sx-page-blog-post .blog-article-content h2 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+}
+
+body.sx-page-blog-post .blog-featured-image {
+  margin: 0;
+  padding: 0;
+  background: var(--primary);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+body.sx-page-blog-post .blog-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.sx-page-blog-post .blog-article-header {
+  background: linear-gradient(135deg, rgba(15, 22, 40, 0.98) 0%, rgba(10, 15, 28, 0.98) 100%);
+  color: var(--text-primary);
+  padding: 0;
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+body.sx-page-blog-post .blog-article-header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 3.5rem) 1.5rem 2.5rem;
+}
+
+/* Ruimte onder vaste header wanneer er géén aparte featured image boven de titel staat */
+body.sx-page-blog-post main > .blog-article-header:first-child .blog-article-header-inner {
+  padding-top: clamp(5.5rem, 12vw, 7rem);
+}
+
+body.sx-page-blog-post .blog-article-header h1 {
+  font-size: clamp(1.85rem, 4.5vw, 2.85rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  color: var(--text-primary);
+}
+
+body.sx-page-blog-post .blog-article-header .blog-meta {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+body.sx-page-blog-post .blog-article-header-inner img {
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--glass-border);
+}
+
+body.sx-page-blog-post .blog-article {
+  padding: clamp(2.5rem, 6vw, 3.5rem) 0 clamp(3.5rem, 8vw, 4.5rem);
+  background: var(--primary);
+}
+
+body.sx-page-blog-post .blog-article-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+body.sx-page-blog-post .blog-intro {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+body.sx-page-blog-post .blog-article-content h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 2.5rem 0 1rem;
+  text-align: left;
+}
+
+body.sx-page-blog-post .blog-article-content h2::after {
+  display: none;
+}
+
+body.sx-page-blog-post .blog-article-content p,
+body.sx-page-blog-post .blog-article-content li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+body.sx-page-blog-post .blog-article-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.35rem;
+}
+
+body.sx-page-blog-post .blog-article-content a:not(.btn-pill-orange) {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 102, 0, 0.35);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+body.sx-page-blog-post .blog-article-content a:not(.btn-pill-orange):hover {
+  color: #ff8533;
+  border-bottom-color: rgba(255, 102, 0, 0.6);
+}
+
+body.sx-page-blog-post .blog-article-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+body.sx-page-blog-post .btn-pill-orange,
+body.sx-page-blog-post .btn-pill-orange:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.75rem;
+  border-radius: 999px;
+  background: var(--accent-gold);
+  color: var(--primary) !important;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  transition: transform 0.3s var(--sx-ease), box-shadow 0.3s var(--sx-ease);
+  border-bottom: none !important;
+}
+
+body.sx-page-blog-post .btn-pill-orange:hover,
+body.sx-page-blog-post .btn-pill-orange:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(255, 102, 0, 0.28);
+  color: var(--primary) !important;
+}
+
+@media (max-width: 768px) {
+  body.sx-page-blog-post .blog-article-header-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.sx-page-blog-post .blog-article-content {
+    padding: 0 1rem;
+  }
+}
+
+/* —— Marketingpagina's (Benelux havens, Offshore — legacy classes op v3) —— */
+body.sx-page-marketing {
+  font-family: "DM Sans", var(--sx-font), system-ui, sans-serif;
+}
+
+body.sx-page-marketing .hero h1,
+body.sx-page-marketing .page-offshore h1,
+body.sx-page-marketing .page-offshore h2,
+body.sx-page-marketing .offshore-section h3 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+}
+
+body.sx-page-marketing .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: clamp(1rem, 4vw, 1.25rem);
+  padding-right: clamp(1rem, 4vw, 1.25rem);
+}
+
+body.sx-page-marketing .hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5.5rem, 12vw, 7rem) 1.25rem clamp(2.5rem, 6vw, 3.5rem);
+  text-align: center;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--glass-border);
+  background:
+    linear-gradient(135deg, rgba(10, 15, 28, 0.92) 0%, rgba(15, 22, 40, 0.88) 100%),
+    url("images/nebosh-igc-training-rotterdam-students.webp") center / cover no-repeat;
+}
+
+body.sx-page-marketing .hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body.sx-page-marketing .hero h1 {
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin: 0 0 1rem;
+}
+
+body.sx-page-marketing .hero-subtitle {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+
+body.sx-page-marketing .hero-subtitle strong {
+  color: var(--text-primary);
+}
+
+body.sx-page-marketing .hero-inner > p:not(.hero-subtitle) {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+body.sx-page-marketing .cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+body.sx-page-marketing .btn-pill-orange,
+body.sx-page-marketing .btn-pill-orange:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  background: var(--accent-gold);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  transition: transform 0.3s var(--sx-ease), box-shadow 0.3s var(--sx-ease);
+}
+
+body.sx-page-marketing .btn-pill-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(255, 102, 0, 0.28);
+  color: var(--primary);
+}
+
+body.sx-page-marketing .btn.btn-primary,
+body.sx-page-marketing a.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  background: var(--accent-gold);
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  transition: transform 0.3s var(--sx-ease), box-shadow 0.3s var(--sx-ease);
+  margin: 0.35rem 0.35rem 0.35rem 0;
+}
+
+body.sx-page-marketing .btn.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(255, 102, 0, 0.28);
+  color: var(--primary);
+}
+
+body.sx-page-marketing .btn.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(245, 240, 235, 0.35);
+  transition: border-color 0.2s, background 0.2s;
+  margin: 0.35rem 0.35rem 0.35rem 0;
+}
+
+body.sx-page-marketing .btn.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(245, 240, 235, 0.55);
+  color: var(--text-primary);
+}
+
+body.sx-page-marketing .btn.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(245, 240, 235, 0.35);
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0.35rem 0.35rem 0.35rem 0;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+body.sx-page-marketing .btn.btn-outline:hover {
+  border-color: var(--accent-gold);
+  background: rgba(255, 102, 0, 0.08);
+}
+
+body.sx-page-marketing .btn.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent-gold);
+  border: 1px solid rgba(255, 102, 0, 0.45);
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0.35rem 0.35rem 0.35rem 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+body.sx-page-marketing .btn.btn-accent:hover {
+  background: rgba(255, 102, 0, 0.12);
+  border-color: var(--accent-gold);
+}
+
+body.sx-page-marketing article[style*="background: #fff"] {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+body.sx-page-marketing article[style*="background: #fff"] h3 {
+  color: var(--accent-gold) !important;
+  margin-top: 0 !important;
+}
+
+body.sx-page-marketing article[style*="background: #fff"] p {
+  color: var(--text-muted);
+  margin: 0.35rem 0;
+}
+
+body.sx-page-marketing article[style*="background: #fff"] p strong {
+  color: var(--text-primary);
+}
+
+body.sx-page-marketing section.container[style*="background"] {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+body.sx-page-marketing section.container h2 {
+  color: var(--text-primary);
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 1.25rem;
+}
+
+body.sx-page-marketing .section-subtitle {
+  color: var(--text-muted);
+}
+
+body.sx-page-marketing section.container p {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+body.sx-page-marketing section.container p strong {
+  color: var(--text-primary);
+}
+
+body.sx-page-marketing .page-offshore {
+  padding: clamp(5.5rem, 12vw, 7rem) 0 clamp(3rem, 8vw, 4rem);
+}
+
+body.sx-page-marketing .offshore-hero .lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+body.sx-page-marketing .offshore-hero .lead strong,
+body.sx-page-marketing .page-offshore p strong {
+  color: var(--text-primary);
+}
+
+body.sx-page-marketing .page-offshore h1 {
+  font-size: clamp(1.75rem, 4vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+body.sx-page-marketing .offshore-section {
+  max-width: 900px;
+  margin: 0 auto 2.75rem;
+  color: var(--text-muted);
+}
+
+body.sx-page-marketing .offshore-section h2 {
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  font-weight: 800;
+  text-align: left;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+}
+
+body.sx-page-marketing .offshore-section h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--text-primary);
+}
+
+body.sx-page-marketing .offshore-section p,
+body.sx-page-marketing .offshore-section li {
+  line-height: 1.75;
+}
+
+body.sx-page-marketing .offshore-section a {
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 102, 0, 0.35);
+}
+
+body.sx-page-marketing .offshore-section a:hover {
+  color: #ff8533;
+}
+
+body.sx-page-marketing .offshore-location {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--sx-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+body.sx-page-marketing .offshore-faq .faq-item {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1.15rem;
+  margin-top: 1.15rem;
+}
+
+body.sx-page-marketing .offshore-faq .faq-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+body.sx-page-marketing .offshore-final-cta {
+  text-align: left;
+}
+
+body.sx-page-marketing .offshore-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  body.sx-page-marketing .offshore-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body.sx-page-marketing .offshore-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* —— bedankt.html (interesse NEBOSH) —— */
+body.sx-page-bedankt {
+  font-family: "DM Sans", var(--sx-font), system-ui, sans-serif;
+}
+
+body.sx-page-bedankt .thankyou-card h1 {
+  font-family: "Syne", var(--sx-display), sans-serif;
+}
+
+body.sx-page-bedankt .thankyou-main {
+  background: var(--primary);
+  min-height: calc(100vh - 140px);
+  padding: clamp(5.5rem, 10vw, 6.5rem) 1.25rem clamp(3rem, 8vw, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.sx-page-bedankt .thankyou-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--sx-radius);
+  border-top: 3px solid var(--accent-gold);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+body.sx-page-bedankt .thankyou-card h1 {
+  color: var(--text-primary);
+  font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+  margin: 0 0 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+body.sx-page-bedankt .thankyou-lead {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+body.sx-page-bedankt .thankyou-lead strong {
+  color: var(--text-primary);
+}
+
+body.sx-page-bedankt .thankyou-info-box {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  border-left: 4px solid var(--accent-success);
+  padding: 1.35rem 1.25rem;
+  border-radius: 12px;
+  margin: 1.75rem 0;
+  text-align: left;
+}
+
+body.sx-page-bedankt .thankyou-info-box h3 {
+  color: var(--accent-success);
+  font-size: 1.05rem;
+  margin: 0 0 0.65rem;
+}
+
+body.sx-page-bedankt .thankyou-info-box li {
+  color: var(--text-muted);
+}
+
+body.sx-page-bedankt .thankyou-info-box li::before {
+  color: var(--accent-success);
+}
+
+body.sx-page-bedankt .thankyou-info-box strong {
+  color: var(--text-primary);
+}
+
+body.sx-page-bedankt .thankyou-social {
+  border-top-color: var(--glass-border);
+}
+
+body.sx-page-bedankt .thankyou-social p {
+  color: var(--text-muted);
+}
+
+body.sx-page-bedankt .thankyou-social-link {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  box-shadow: none;
+}
+
+body.sx-page-bedankt .thankyou-social-link:hover {
+  border-color: rgba(255, 102, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+body.sx-page-bedankt .thankyou-contact {
+  color: var(--text-muted);
+}
+
+body.sx-page-bedankt .thankyou-contact strong {
+  color: var(--text-primary);
+}
+
+body.sx-page-bedankt .thankyou-contact a {
+  color: var(--accent-gold);
+}
+
+body.sx-page-bedankt .thankyou-actions .btn-pill-orange,
+body.sx-page-bedankt .thankyou-actions .btn-pill-orange:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  background: var(--accent-gold);
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 102, 0, 0.4);
+}
+
+body.sx-page-bedankt .thankyou-actions .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.65rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(245, 240, 235, 0.35);
+  box-shadow: none;
+}
+
+body.sx-page-bedankt .thankyou-actions .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(245, 240, 235, 0.55);
+  color: var(--text-primary);
+  transform: none;
+}
+
 /* —— NEBOSH oefenquiz (nebosh-quiz.html) —— */
 body.sx-page-quiz {
   font-family: "DM Sans", var(--sx-font), system-ui, sans-serif;
