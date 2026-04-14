@@ -44,6 +44,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--primary);
+  overflow-x: hidden;
 }
 
 body {
@@ -585,6 +586,31 @@ a.sx-btn--gold:hover,
     opacity: 1;
     transform: scaleY(1);
     transform-origin: top;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Homepage: hide Remotion/WebM hero; keep copy + CTAs in .sx-hero__inner */
+  .sx-hero .sx-hero__media,
+  .sx-hero .sx-hero__mesh {
+    display: none;
+  }
+
+  .sx-hero {
+    background: linear-gradient(180deg, #0d1426 0%, #0a0f1c 45%, #070a12 100%);
+  }
+
+  .sx-hero h1 {
+    animation: none;
+    color: var(--text-primary);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
+
+  .sx-scroll-hint__line {
+    animation: none;
+    opacity: 0.55;
   }
 }
 

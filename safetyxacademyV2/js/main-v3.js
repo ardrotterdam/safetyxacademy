@@ -43,6 +43,23 @@
     heroVideo.addEventListener('error', function () {
       heroMedia.classList.add('sx-hero__media--fallback');
     });
+
+    var narrowHero =
+      window.matchMedia && window.matchMedia('(max-width: 768px)');
+    function syncHeroPlayback() {
+      if (!narrowHero) return;
+      if (narrowHero.matches) {
+        heroVideo.pause();
+      } else {
+        heroVideo.play().catch(function () {});
+      }
+    }
+    syncHeroPlayback();
+    if (narrowHero.addEventListener) {
+      narrowHero.addEventListener('change', syncHeroPlayback);
+    } else if (narrowHero.addListener) {
+      narrowHero.addListener(syncHeroPlayback);
+    }
   }
 
   var prefersReduced =
