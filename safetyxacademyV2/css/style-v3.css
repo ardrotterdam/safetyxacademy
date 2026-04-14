@@ -1333,6 +1333,186 @@ a.sx-btn--gold:hover,
   gap: 1.25rem;
 }
 
+/* —— Jobs & ZZP (jobs.html) —— */
+.sx-jobs-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.sx-jobs-tier-card {
+  padding: 1.75rem;
+  border-radius: var(--sx-radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-top: 3px solid var(--accent-gold);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-jobs-tier-card h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--sx-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sx-jobs-tier-rate {
+  font-family: var(--sx-display);
+  font-weight: 800;
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.sx-jobs-tier-card p,
+.sx-jobs-tier-card ul {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.sx-jobs-tier-card p {
+  margin: 0 0 1rem;
+}
+
+.sx-jobs-tier-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.sx-jobs-tier-card li {
+  margin-bottom: 0.35rem;
+}
+
+.sx-jobs-note {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--sx-radius);
+  background: rgba(255, 102, 0, 0.06);
+  border: 1px solid rgba(255, 102, 0, 0.2);
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.sx-jobs-note strong {
+  color: var(--text-primary);
+}
+
+.sx-jobs-band {
+  background: #0f1628;
+  border-block: 1px solid var(--glass-border);
+}
+
+.sx-jobs-steps-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sx-jobs-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.5rem;
+  border-radius: var(--sx-radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-jobs-step__num {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sx-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: rgba(255, 102, 0, 0.15);
+  color: var(--accent-gold);
+  border: 1px solid rgba(255, 102, 0, 0.35);
+}
+
+.sx-jobs-step h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sx-jobs-step p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.sx-jobs-example {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  border-radius: var(--sx-radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-top: 3px solid var(--accent-gold);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sx-jobs-example > p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.sx-jobs-example-calc {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+.sx-jobs-example-item {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.sx-jobs-example-item strong {
+  color: var(--text-primary);
+}
+
+.sx-jobs-international-note {
+  margin-top: 1.5rem;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.sx-jobs-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
 .sx-price-card {
   padding: 2rem;
   border-radius: var(--sx-radius);
@@ -2138,6 +2318,216 @@ body.sx-page-werken main {
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* —— Bedankt talent pool (bedankt-jobs.html) —— */
+body.sx-page-talent-thanks {
+  font-family: "DM Sans", var(--sx-font), system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.sx-page-talent-thanks #main {
+  flex: 1;
+}
+
+.sx-talent-thanks-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5.5rem, 12vw, 7.5rem) clamp(1.25rem, 4vw, 1.5rem) clamp(3rem, 8vw, 5rem);
+  position: relative;
+  overflow: hidden;
+  background: var(--primary);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sx-talent-thanks-main::before {
+  content: "";
+  position: absolute;
+  top: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(700px, 130vw);
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(74, 222, 128, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sx-talent-thanks-card {
+  background: var(--glass-bg);
+  border: 1px solid rgba(74, 222, 128, 0.22);
+  border-radius: 20px;
+  padding: clamp(2.25rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+  max-width: 560px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation: sx-talent-thanks-fade-up 0.5s ease both;
+}
+
+@keyframes sx-talent-thanks-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sx-talent-thanks-pop {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.sx-talent-thanks-check {
+  width: 80px;
+  height: 80px;
+  background: rgba(74, 222, 128, 0.1);
+  border: 2px solid rgba(74, 222, 128, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.75rem;
+  font-size: 2.25rem;
+  line-height: 1;
+  animation: sx-talent-thanks-pop 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+.sx-talent-thanks-title {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: clamp(1.625rem, 5vw, 2.25rem);
+  font-weight: 800;
+  margin: 0 0 0.85rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.sx-talent-thanks-title span {
+  color: #4ade80;
+}
+
+.sx-talent-thanks-sub {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+  line-height: 1.7;
+}
+
+.sx-talent-thanks-info {
+  background: rgba(255, 102, 0, 0.06);
+  border: 1px solid rgba(255, 102, 0, 0.2);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.sx-talent-thanks-info strong {
+  color: var(--text-primary);
+}
+
+.sx-talent-thanks-cd-intro {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.sx-talent-thanks-cd-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.25rem;
+}
+
+.sx-talent-thanks-cd-block {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 0.75rem 1.1rem;
+  text-align: center;
+  min-width: 70px;
+}
+
+.sx-talent-thanks-cd-num {
+  font-family: "Syne", var(--sx-display), sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
+.sx-talent-thanks-cd-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sx-talent-thanks-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.sx-talent-thanks-share {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.sx-talent-thanks-share-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 0.85rem;
+}
+
+.sx-talent-thanks-share-row {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sx-talent-thanks-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.sx-talent-thanks-share-btn:hover {
+  border-color: rgba(255, 102, 0, 0.4);
+  color: var(--text-primary);
 }
 
 .visually-hidden {

@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0A0F1C" />
-  <title>Bedankt — Talent pool | SafetyXAcademy</title>
+  <title>Bedankt voor je inschrijving | SafetyXAcademy</title>
   <meta name="description" content="Je inschrijving voor de talent pool is ontvangen." />
   <meta name="robots" content="noindex,nofollow" />
+  <link rel="canonical" href="https://safetyxacademy.nl/bedankt-jobs.html" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
   <script>
@@ -14,11 +15,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-91JCVXBQ0W');
-    gtag('event', 'talent_pool_signup', {
-      event_category: 'form',
-      event_label: 'werken_bij_thank_you'
-    });
+    gtag('event', 'talent_pool_signup', { event_category: 'jobs' });
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style-v3.css" />
 
@@ -29,7 +31,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png" />
   <meta name="msapplication-TileImage" content="/favicon-512.png" />
 </head>
-<body>
+<body class="sx-page-talent-thanks">
   <div class="sx-grain" aria-hidden="true"></div>
 
   <header id="sx-header">
@@ -61,25 +63,62 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="sx-section sx-reveal" style="padding-top: clamp(6rem, 12vw, 8rem); padding-bottom: 4rem;" aria-labelledby="ty-jobs-title">
-      <div class="sx-section__inner" style="max-width: 640px; margin: 0 auto;">
-        <div class="sx-signup-card" style="text-align: center;">
-          <p class="sx-eyebrow" style="margin-bottom: 1rem;">Talent pool</p>
-          <h1 id="ty-jobs-title" class="sx-h2" style="margin-bottom: 1rem;">Bedankt voor je inschrijving</h1>
-          <p class="sx-prose" style="margin-bottom: 1.5rem;">
-            We hebben je gegevens ontvangen. Zodra er een rol past bij jouw profiel of de lancering dichterbij komt, nemen we contact met je op.
-          </p>
-          <p class="sx-prose" style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--text-muted);">
-            Geen spam — alleen relevant nieuws over SafetyX Academy en carrièrekansen.
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-            <a class="sx-btn sx-btn--gold" href="index.html">Terug naar home</a>
-            <a class="sx-btn sx-btn--ghost" href="werken-bij.html">Werken bij-pagina</a>
-          </div>
+  <main id="main" class="sx-talent-thanks-main">
+    <div class="sx-talent-thanks-card sx-reveal" aria-live="polite">
+      <div class="sx-talent-thanks-check" aria-hidden="true">✅</div>
+      <h1 class="sx-talent-thanks-title">Bedankt!<br><span>Je staat op de lijst.</span></h1>
+      <p class="sx-talent-thanks-sub">
+        We hebben je inschrijving ontvangen. Zodra we beginnen met werven, nemen we persoonlijk contact met je op — ruim voor de officiële lancering.
+      </p>
+
+      <div class="sx-talent-thanks-info">
+        <strong>Wat gebeurt er nu?</strong><br />
+        We leggen de komende maanden het fundament: accreditaties, partnerdeals en de juiste structuur. Zodra we klaar zijn om te groeien, ben jij een van de eersten die we benaderen.
+      </div>
+
+      <p class="sx-talent-thanks-cd-intro">Lancering over:</p>
+      <div class="sx-talent-thanks-cd-row" aria-live="polite">
+        <div class="sx-talent-thanks-cd-block">
+          <div class="sx-talent-thanks-cd-num" id="ty-cd-days">--</div>
+          <div class="sx-talent-thanks-cd-label">Dagen</div>
+        </div>
+        <div class="sx-talent-thanks-cd-block">
+          <div class="sx-talent-thanks-cd-num" id="ty-cd-hours">--</div>
+          <div class="sx-talent-thanks-cd-label">Uren</div>
+        </div>
+        <div class="sx-talent-thanks-cd-block">
+          <div class="sx-talent-thanks-cd-num" id="ty-cd-min">--</div>
+          <div class="sx-talent-thanks-cd-label">Min</div>
+        </div>
+        <div class="sx-talent-thanks-cd-block">
+          <div class="sx-talent-thanks-cd-num" id="ty-cd-sec">--</div>
+          <div class="sx-talent-thanks-cd-label">Sec</div>
         </div>
       </div>
-    </section>
+
+      <div class="sx-talent-thanks-actions">
+        <a class="sx-btn sx-btn--gold" href="nebosh-opleiding.html">Bekijk de NEBOSH opleiding</a>
+        <a class="sx-btn sx-btn--ghost" href="index.html">Terug naar home</a>
+      </div>
+
+      <div class="sx-talent-thanks-share">
+        <p class="sx-talent-thanks-share-label">Ken jij iemand die dit ook interesseert? Deel de pagina:</p>
+        <div class="sx-talent-thanks-share-row">
+          <a
+            class="sx-talent-thanks-share-btn"
+            href="https://www.linkedin.com/sharing/share-offsite/?url=https://safetyxacademy.nl/jobs.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn</a>
+          <a
+            class="sx-talent-thanks-share-btn"
+            href="https://wa.me/?text=SafetyX%20Academy%20lanceert%20september%202026%20-%20interessante%20HSE%20rollen%20komen%20eraan%3A%20https%3A%2F%2Fsafetyxacademy.nl%2Fjobs.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >WhatsApp</a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="sx-footer">
@@ -97,15 +136,43 @@
       </div>
       <div class="sx-footer__contact">
         <h3>Direct</h3>
+        <p>Westplein 12, Rotterdam</p>
         <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br />
         <a href="tel:+31108009512">010-800 9512</a>
       </div>
     </div>
     <div class="sx-footer__bottom">
       <span>© 2026 SafetyXAcademy</span>
+      <div class="sx-social">
+        <a href="https://www.linkedin.com/company/safetyxacademy" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </footer>
 
   <script src="js/main-v3.js" defer></script>
+  <script>
+    function updateTyCountdown() {
+      var target = new Date("2026-09-01T00:00:00");
+      var diff = target - new Date();
+      var d = document.getElementById("ty-cd-days");
+      var h = document.getElementById("ty-cd-hours");
+      var m = document.getElementById("ty-cd-min");
+      var s = document.getElementById("ty-cd-sec");
+      if (!d || !h || !m || !s) return;
+      if (diff <= 0) {
+        d.textContent = "0";
+        h.textContent = "00";
+        m.textContent = "00";
+        s.textContent = "00";
+        return;
+      }
+      d.textContent = String(Math.floor(diff / 86400000));
+      h.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+      m.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+      s.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+    }
+    updateTyCountdown();
+    setInterval(updateTyCountdown, 1000);
+  </script>
 </body>
 </html>
