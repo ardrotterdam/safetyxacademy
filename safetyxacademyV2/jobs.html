@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <!-- 1. Basis & SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HSE jobs & ZZP-opdrachten met NEBOSH | SafetyXAcademy</title>
+  <meta name="theme-color" content="#0A0F1C" />
+  <title>HSE jobs &amp; ZZP-opdrachten met NEBOSH | SafetyXAcademy</title>
   <meta name="description" content="HSE jobs en ZZP-opdrachten voor veiligheidskundigen met NEBOSH. ZZP veiligheidskundige dagtarieven €500–€1.500 per dag in Rotterdam, Antwerpen, offshore en internationale projecten." />
   <link rel="canonical" href="https://safetyxacademy.nl/jobs.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="HSE jobs & ZZP-opdrachten met NEBOSH | SafetyXAcademy">
-  <meta property="og:description" content="HSE jobs en ZZP-opdrachten voor veiligheidskundigen met NEBOSH. ZZP veiligheidskundige dagtarieven €500–€1.500 per dag in Rotterdam, Antwerpen, offshore en internationale projecten.">
-  <meta property="og:url" content="https://safetyxacademy.nl/jobs.html">
-  <meta property="og:image" content="https://safetyxacademy.nl/images/nebosh-igc-training-rotterdam-students.webp">
-  <meta property="og:locale" content="nl_NL">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HSE jobs &amp; ZZP-opdrachten met NEBOSH | SafetyXAcademy" />
+  <meta property="og:description" content="HSE jobs en ZZP-opdrachten voor veiligheidskundigen met NEBOSH. ZZP veiligheidskundige dagtarieven €500–€1.500 per dag in Rotterdam, Antwerpen, offshore en internationale projecten." />
+  <meta property="og:url" content="https://safetyxacademy.nl/jobs.html" />
+  <meta property="og:image" content="https://safetyxacademy.nl/images/nebosh-igc-training-rotterdam-students.webp" />
+  <meta property="og:locale" content="nl_NL" />
 
-  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -25,65 +23,74 @@
     gtag('config', 'G-91JCVXBQ0W');
   </script>
 
-  <!-- 2. CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-v3.css" />
 
-  <!-- Favicons -->
-  <!-- Favicon files are located in the repo root (safetyxacademyV2/) and deployed to https://safetyxacademy.nl/
-       Test URLs: https://safetyxacademy.nl/favicon-32.png, https://safetyxacademy.nl/favicon-192.png, etc. -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-  <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png">
-  <meta name="msapplication-TileImage" content="/favicon-512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png" />
+  <meta name="msapplication-TileImage" content="/favicon-512.png" />
 </head>
-
 <body>
-  <!-- HEADER INCLUDE -->
-  <div id="header-include"></div>
-  <script>
-    fetch('includes/header.html')
-      .then(r => r.text())
-      .then(html => {
-        const el = document.getElementById('header-include');
-        el.outerHTML = html;
-        setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
-      })
-      .catch(() => console.error('Header failed'));
-  </script>
+  <div class="sx-grain" aria-hidden="true"></div>
 
-  <main>
+  <header id="sx-header">
+    <div class="sx-header__inner">
+      <a class="sx-logo" href="index.html" aria-label="SafetyXAcademy Home">SafetyX<span>Academy</span></a>
+      <nav class="sx-nav-desktop" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+          <li><a href="jobs.html" aria-current="page">Jobs &amp; ZZP</a></li>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="sx-nav-cta-wrap">
+        <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
+      </div>
+      <button type="button" id="sx-nav-toggle" aria-expanded="false" aria-controls="sx-nav-panel" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="sx-nav-panel">
+      <ul>
+        <li><a href="nebosh-opleiding.html">NEBOSH Opleiding</a></li>
+        <li><a href="jobs.html" aria-current="page">Jobs &amp; ZZP</a></li>
+        <li><a href="over-ons.html">Over Ons</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+      </ul>
+      <a class="sx-nav-cta" href="aanmelden.html">Aanmelden</a>
+    </div>
+  </header>
 
-    <!-- 1. Hero: HSE Jobs & ZZP -->
-    <section class="jobs-hero">
-      <div class="jobs-hero-inner">
-        <h1>HSE jobs &amp; ZZP-opdrachten voor veiligheidskundigen met NEBOSH</h1>
-        <p class="jobs-hero-intro">
-          Veiligheidskundigen met NEBOSH zijn zeer gewild in havens, offshore en industrie. Als <strong>ZZP veiligheidskundige</strong> met NEBOSH kun je werken aan interessante <strong>HSE jobs</strong> in de havens van Rotterdam en Antwerpen, offshore-projecten of internationale opdrachten. <strong>Dagtarieven</strong> variëren van €500–€1.500 per dag, afhankelijk van je ervaring en het type project. Deze pagina legt uit welke tarieven normaal zijn en hoe SafetyXAcademy je helpt van NEBOSH naar je eerste ZZP-opdracht.
-        </p>
-        <div class="cta-buttons">
-          <a href="nebosh-opleiding.html" class="btn-pill-orange" aria-label="Bekijk NEBOSH opleiding">
-            Bekijk NEBOSH Opleiding <span class="arrow">→</span>
-          </a>
-          <a href="aanmelden.html" class="btn btn-secondary" aria-label="Plaats mij op de wachtlijst">
-            Plaats mij op de wachtlijst
-          </a>
+  <main id="main">
+    <section class="sx-page-hero sx-reveal" aria-labelledby="jobs-hero-title">
+      <div class="sx-page-hero__inner">
+        <span class="sx-eyebrow">HSE-carrière · ZZP</span>
+        <h1 id="jobs-hero-title">HSE jobs &amp; ZZP-opdrachten voor veiligheidskundigen met NEBOSH</h1>
+        <div class="sx-prose">
+          <p>
+            Veiligheidskundigen met NEBOSH zijn zeer gewild in havens, offshore en industrie. Als <strong>ZZP veiligheidskundige</strong> met NEBOSH kun je werken aan interessante <strong>HSE jobs</strong> in de havens van Rotterdam en Antwerpen, offshore-projecten of internationale opdrachten. <strong>Dagtarieven</strong> variëren van €500–€1.500 per dag, afhankelijk van je ervaring en het type project. Deze pagina legt uit welke tarieven normaal zijn en hoe SafetyXAcademy je helpt van NEBOSH naar je eerste ZZP-opdracht.
+          </p>
+        </div>
+        <div class="sx-hero__actions">
+          <a class="sx-btn sx-btn--gold" href="nebosh-opleiding.html">Bekijk NEBOSH opleiding →</a>
+          <a class="sx-btn sx-btn--ghost" href="aanmelden.html">Plaats mij op de wachtlijst</a>
         </div>
       </div>
     </section>
 
-    <!-- 2. Dagtarieven overzicht -->
-    <section class="jobs-section">
-      <div class="container">
-        <h2>Wat verdien je als HSE ZZP'er met NEBOSH?</h2>
-        <p class="section-subtitle">
-          Realistische dagtarieven voor HSE-professionals in verschillende markten en ervaringsniveaus.
-        </p>
-        <div class="jobs-grid">
-          <div class="jobs-tier-card">
+    <section class="sx-section sx-reveal" aria-labelledby="jobs-tiers-title">
+      <div class="sx-section__inner">
+        <div class="sx-jobs-section-head">
+          <h2 class="sx-h2" id="jobs-tiers-title">Wat verdien je als HSE ZZP'er met NEBOSH?</h2>
+          <p class="sx-lead">Realistische dagtarieven voor HSE-professionals in verschillende markten en ervaringsniveaus.</p>
+        </div>
+        <div class="sx-jobs-tier-grid">
+          <article class="sx-jobs-tier-card">
             <h3>Starter / Junior</h3>
-            <div class="jobs-tier-rate">€400–€600 per dag</div>
+            <div class="sx-jobs-tier-rate">€400–€600 per dag</div>
             <p>
               Voor HSE-professionals die net hun NEBOSH IGC hebben behaald of beperkte praktijkervaring hebben.
               Ideaal voor opdrachten in lokale havens, kleinere industriële projecten of als ondersteuning van
@@ -94,10 +101,10 @@
               <li>Lokale havens (Rotterdam, Amsterdam)</li>
               <li>Kleinere bouwprojecten</li>
             </ul>
-          </div>
-          <div class="jobs-tier-card">
+          </article>
+          <article class="sx-jobs-tier-card">
             <h3>Medior</h3>
-            <div class="jobs-tier-rate">€600–€900 per dag</div>
+            <div class="sx-jobs-tier-rate">€600–€900 per dag</div>
             <p>
               Voor HSE-professionals met 2–5 jaar ervaring en bewezen track record. Je werkt zelfstandig aan
               opdrachten in grote havens, industriële projecten of als HSE-coördinator bij aannemers.
@@ -107,10 +114,10 @@
               <li>Industriële projecten</li>
               <li>Turnaround projecten</li>
             </ul>
-          </div>
-          <div class="jobs-tier-card">
+          </article>
+          <article class="sx-jobs-tier-card">
             <h3>Senior / Specialist / Offshore</h3>
-            <div class="jobs-tier-rate">€900–€1.500 per dag</div>
+            <div class="sx-jobs-tier-rate">€900–€1.500 per dag</div>
             <p>
               Voor senior HSE-professionals met 5+ jaar ervaring, specialisaties (offshore, brandveiligheid, procesveiligheid)
               of opdrachten in internationale projecten. Offshore en Middle East projecten zitten vaak aan het hogere eind.
@@ -120,9 +127,9 @@
               <li>Internationale mega-projecten (Dubai, KSA)</li>
               <li>Specialistische HSE-rollen</li>
             </ul>
-          </div>
+          </article>
         </div>
-        <p class="jobs-note">
+        <p class="sx-jobs-note">
           <strong>Let op:</strong> Loondienst-salarissen zijn vaak lager (€3.500–€6.000 per maand), maar bieden meer
           stabiliteit en secundaire arbeidsvoorwaarden. ZZP geeft meer flexibiliteit en hogere tarieven, maar vereist
           zelf acquisitie en administratie.
@@ -130,94 +137,92 @@
       </div>
     </section>
 
-    <!-- 3. Benelux havens -->
-    <section class="jobs-section jobs-havens">
-      <div class="container">
-        <h2>Benelux havens: Rotterdam, Antwerpen, Zeebrugge, Amsterdam</h2>
-        <div class="jobs-havens-content">
-          <div class="jobs-havens-text">
-            <p>
-              De havens van Rotterdam, Antwerpen, Zeebrugge en Amsterdam zijn belangrijke hubs voor <a href="jobs.html">HSE jobs</a> en <a href="jobs.html">ZZP-opdrachten</a>. Hier werken duizenden aannemers, terminals en logistieke bedrijven die veiligheidskundigen nodig hebben.
-            </p>
-            <p>
-              Met een <a href="nebosh-opleiding.html">NEBOSH IGC diploma</a> en havenervaring ben je zeer gewild. Typische opdrachten zijn:
-            </p>
-            <ul>
-              <li><strong>Turnaround projecten</strong> – Tijdelijk HSE-beheer tijdens onderhoudsprojecten</li>
-              <li><strong>Bouw / Maintenance</strong> – HSE-coördinatie bij bouw- en onderhoudswerkzaamheden</li>
-              <li><strong>Terminal safety officer</strong> – Dagelijkse HSE-bewaking op terminals</li>
-              <li><strong>Contractor management</strong> – Begeleiden en controleren van aannemers</li>
-              <li><strong>Project HSE</strong> – HSE-beheer voor specifieke projecten (uitbreidingen, nieuwe installaties)</li>
-            </ul>
-            <p>
-              NEBOSH + havenervaring is een sterke combinatie. Veel opdrachtgevers vragen expliciet om NEBOSH omdat
-              het internationaal erkend is en aantoont dat je serieus bent over veiligheid. Ben je nog geen NEBOSH-gediplomeerd? Bekijk onze <a href="nebosh-opleiding.html">NEBOSH opleiding Rotterdam</a> of ga terug naar de <a href="index.html">homepage</a>. Wil je direct aanmelden? <a href="aanmelden.html">Meld je gratis aan</a> voor meer informatie over opleiding en jobplacement.
-            </p>
-          </div>
+    <section class="sx-section sx-jobs-band sx-reveal" aria-labelledby="jobs-havens-title">
+      <div class="sx-section__inner">
+        <h2 class="sx-h2" id="jobs-havens-title">Benelux havens: Rotterdam, Antwerpen, Zeebrugge, Amsterdam</h2>
+        <div class="sx-prose">
+          <p>
+            De havens van Rotterdam, Antwerpen, Zeebrugge en Amsterdam zijn belangrijke hubs voor <a href="jobs.html">HSE jobs</a> en <a href="jobs.html">ZZP-opdrachten</a>. Hier werken duizenden aannemers, terminals en logistieke bedrijven die veiligheidskundigen nodig hebben.
+          </p>
+          <p>
+            Met een <a href="nebosh-opleiding.html">NEBOSH IGC diploma</a> en havenervaring ben je zeer gewild. Typische opdrachten zijn:
+          </p>
+          <ul>
+            <li><strong>Turnaround projecten</strong> – Tijdelijk HSE-beheer tijdens onderhoudsprojecten</li>
+            <li><strong>Bouw / Maintenance</strong> – HSE-coördinatie bij bouw- en onderhoudswerkzaamheden</li>
+            <li><strong>Terminal safety officer</strong> – Dagelijkse HSE-bewaking op terminals</li>
+            <li><strong>Contractor management</strong> – Begeleiden en controleren van aannemers</li>
+            <li><strong>Project HSE</strong> – HSE-beheer voor specifieke projecten (uitbreidingen, nieuwe installaties)</li>
+          </ul>
+          <p>
+            NEBOSH + havenervaring is een sterke combinatie. Veel opdrachtgevers vragen expliciet om NEBOSH omdat
+            het internationaal erkend is en aantoont dat je serieus bent over veiligheid. Ben je nog geen NEBOSH-gediplomeerd? Bekijk onze <a href="nebosh-opleiding.html">NEBOSH opleiding Rotterdam</a> of ga terug naar de <a href="index.html">homepage</a>. Wil je direct aanmelden? <a href="aanmelden.html">Meld je gratis aan</a> voor meer informatie over opleiding en jobplacement.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- 4. Internationale opdrachten -->
-    <section class="jobs-section jobs-international">
-      <div class="container">
-        <div style="text-align:center; margin:30px 0;">
-          <img src="images/nebosh-offshore-safety-training-oil-rig.webp" 
-               alt="NEBOSH offshore safety training op olieplatform – internationale HSE banen Dubai, Noorwegen, Rotterdam" 
-               loading="lazy" 
-               style="width:100%; max-width:1200px; height:auto; display:block; margin:0 auto; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.12);">
-          <p style="font-style:italic; color:#666; margin-top:12px; font-size:0.9em;">
-            NEBOSH-gecertificeerde HSE-professionals op een offshore olieplatform
-          </p>
+    <section class="sx-section sx-reveal" aria-labelledby="jobs-intl-title">
+      <div class="sx-section__inner">
+        <figure class="sx-content-img">
+          <img
+            src="images/nebosh-offshore-safety-training-oil-rig.webp"
+            alt="NEBOSH offshore safety training op olieplatform – internationale HSE banen Dubai, Noorwegen, Rotterdam"
+            width="1200"
+            height="675"
+            loading="lazy"
+          />
+          <figcaption>NEBOSH-gecertificeerde HSE-professionals op een offshore olieplatform</figcaption>
+        </figure>
+        <div class="sx-jobs-section-head">
+          <h2 class="sx-h2" id="jobs-intl-title">Internationale HSE opdrachten: Offshore, Dubai, Noorwegen</h2>
         </div>
-        <h2>Internationale HSE opdrachten: Offshore, Dubai, Noorwegen</h2>
-        <div class="jobs-international-content">
+        <div class="sx-prose">
           <p>
             NEBOSH IGC is vaak een minimum-eis voor internationale HSE-opdrachten. Zonder NEBOSH kom je simpelweg
             niet in aanmerking voor veel projecten in offshore, Middle East of grote industriële hubs.
           </p>
-          <div class="jobs-international-grid">
-            <div class="jobs-international-card">
-              <h3>Offshore North Sea</h3>
-              <p>
-                Noorwegen, UK en Nederlandse offshore-projecten vragen standaard om NEBOSH. Dagtarieven liggen
-                tussen €900–€1.200 per dag, afhankelijk van ervaring en projecttype.
-              </p>
-            </div>
-            <div class="jobs-international-card">
-              <h3>Mega-projecten Dubai / KSA</h3>
-              <p>
-                Grote bouwprojecten in Dubai, Saudi-Arabië en andere Middle East-landen betalen goed (€1.000–€1.500/dag)
-                maar vereisen NEBOSH als minimum. Vaak ook aanvullende certificeringen nodig.
-              </p>
-            </div>
-            <div class="jobs-international-card">
-              <h3>Grote industriële projecten wereldwijd</h3>
-              <p>
-                Van Singapore tot Brazilië: internationale industriële projecten zoeken HSE-professionals met NEBOSH.
-                Tarieven variëren sterk per regio en projectgrootte.
-              </p>
-            </div>
-          </div>
-          <p class="jobs-international-note">
-            <strong>Tip:</strong> Begin met opdrachten in Benelux-havens om ervaring op te bouwen. Na 1–2 jaar kun je
-            doorgroeien naar internationale projecten met hogere tarieven.
-          </p>
         </div>
+        <div class="sx-module-grid" style="margin-top: 1.5rem;">
+          <article class="sx-glass sx-reveal" data-stagger="1">
+            <h3>Offshore North Sea</h3>
+            <p>
+              Noorwegen, UK en Nederlandse offshore-projecten vragen standaard om NEBOSH. Dagtarieven liggen
+              tussen €900–€1.200 per dag, afhankelijk van ervaring en projecttype.
+            </p>
+          </article>
+          <article class="sx-glass sx-reveal" data-stagger="2">
+            <h3>Mega-projecten Dubai / KSA</h3>
+            <p>
+              Grote bouwprojecten in Dubai, Saudi-Arabië en andere Middle East-landen betalen goed (€1.000–€1.500/dag)
+              maar vereisen NEBOSH als minimum. Vaak ook aanvullende certificeringen nodig.
+            </p>
+          </article>
+          <article class="sx-glass sx-reveal" data-stagger="3">
+            <h3>Grote industriële projecten wereldwijd</h3>
+            <p>
+              Van Singapore tot Brazilië: internationale industriële projecten zoeken HSE-professionals met NEBOSH.
+              Tarieven variëren sterk per regio en projectgrootte.
+            </p>
+          </article>
+        </div>
+        <p class="sx-jobs-international-note">
+          <strong>Tip:</strong> Begin met opdrachten in Benelux-havens om ervaring op te bouwen. Na 1–2 jaar kun je
+          doorgroeien naar internationale projecten met hogere tarieven.
+        </p>
       </div>
     </section>
 
-    <!-- 5. Van NEBOSH naar je eerste opdracht -->
-    <section class="jobs-section jobs-steps">
-      <div class="container">
-        <h2>Hoe helpt SafetyXAcademy jou naar je eerste NEBOSH-opdracht?</h2>
-        <p class="section-subtitle">
-          Een praktisch stappenplan om van NEBOSH IGC diploma naar je eerste ZZP-opdracht te komen.
-        </p>
-        <div class="jobs-steps-list">
-          <div class="jobs-step-item">
-            <div class="jobs-step-number">1</div>
-            <div class="jobs-step-content">
+    <section class="sx-section sx-reveal" aria-labelledby="jobs-steps-title">
+      <div class="sx-section__inner">
+        <div class="sx-jobs-section-head">
+          <h2 class="sx-h2" id="jobs-steps-title">Hoe helpt SafetyXAcademy jou naar je eerste NEBOSH-opdracht?</h2>
+          <p class="sx-lead">Een praktisch stappenplan om van NEBOSH IGC diploma naar je eerste ZZP-opdracht te komen.</p>
+        </div>
+        <div class="sx-jobs-steps-list">
+          <div class="sx-jobs-step">
+            <div class="sx-jobs-step__num" aria-hidden="true">1</div>
+            <div>
               <h3>NEBOSH IGC opleiding afronden</h3>
               <p>
                 Eerst behaal je je NEBOSH IGC diploma via onze opleiding in Rotterdam. Dit is je basis: zonder
@@ -225,9 +230,9 @@
               </p>
             </div>
           </div>
-          <div class="jobs-step-item">
-            <div class="jobs-step-number">2</div>
-            <div class="jobs-step-content">
+          <div class="sx-jobs-step">
+            <div class="sx-jobs-step__num" aria-hidden="true">2</div>
+            <div>
               <h3>CV en LinkedIn optimaliseren</h3>
               <p>
                 We helpen je je CV en LinkedIn-profiel te optimaliseren voor HSE-opdrachten. Belangrijk: benadruk
@@ -235,9 +240,9 @@
               </p>
             </div>
           </div>
-          <div class="jobs-step-item">
-            <div class="jobs-step-number">3</div>
-            <div class="jobs-step-content">
+          <div class="sx-jobs-step">
+            <div class="sx-jobs-step__num" aria-hidden="true">3</div>
+            <div>
               <h3>Profiel afstemmen op havens/offshore</h3>
               <p>
                 We geven je tips hoe je je profiel afstemt op specifieke markten (havens, offshore, industrie).
@@ -245,9 +250,9 @@
               </p>
             </div>
           </div>
-          <div class="jobs-step-item">
-            <div class="jobs-step-number">4</div>
-            <div class="jobs-step-content">
+          <div class="sx-jobs-step">
+            <div class="sx-jobs-step__num" aria-hidden="true">4</div>
+            <div>
               <h3>Solliciteren / pitchen op ZZP-opdrachten</h3>
               <p>
                 We delen praktische tips over waar je opdrachten vindt (LinkedIn, bureaus, direct bij opdrachtgevers),
@@ -260,26 +265,27 @@
       </div>
     </section>
 
-    <!-- 6. Verdien-voorbeeld -->
-    <section class="jobs-section jobs-example">
-      <div class="container">
-        <h2>Voorbeeld: van €3.500 investering naar €XX inkomen</h2>
-        <div class="jobs-example-box">
+    <section class="sx-section sx-reveal" aria-labelledby="jobs-example-title">
+      <div class="sx-section__inner">
+        <div class="sx-jobs-section-head">
+          <h2 class="sx-h2" id="jobs-example-title">Voorbeeld: van €3.500 investering naar €XX inkomen</h2>
+        </div>
+        <div class="sx-jobs-example">
           <p>
             Stel: je investeert €3.500 in de NEBOSH IGC opleiding. Hoe snel verdien je dat terug?
           </p>
-          <div class="jobs-example-calc">
-            <div class="jobs-example-item">
+          <div class="sx-jobs-example-calc">
+            <div class="sx-jobs-example-item">
               <strong>10 dagen à €600/dag</strong> = €6.000 omzet → opleiding terugverdiend in 2–3 maanden
             </div>
-            <div class="jobs-example-item">
+            <div class="sx-jobs-example-item">
               <strong>100 dagen à €700/dag</strong> = €70.000 omzet per jaar (bij parttime ZZP)
             </div>
-            <div class="jobs-example-item">
+            <div class="sx-jobs-example-item">
               <strong>200 dagen à €800/dag</strong> = €160.000 omzet per jaar (bij fulltime ZZP)
             </div>
           </div>
-          <p class="jobs-example-note">
+          <p class="sx-jobs-example-note">
             <strong>Realiteit:</strong> De meeste ZZP'ers beginnen met lagere tarieven (€400–€600) en groeien door
             naar €700–€900 na 1–2 jaar ervaring. Senior specialisten en offshore-opdrachten kunnen €1.000+ per dag
             verdienen.
@@ -288,47 +294,74 @@
       </div>
     </section>
 
-    <!-- 7. CTA -->
-    <section class="jobs-section jobs-cta">
-      <div class="container">
-        <h2>Wil je weten of NEBOSH en een ZZP-carrière bij jou passen?</h2>
-        <p class="section-subtitle">
+    <section class="sx-cta-band sx-reveal" aria-labelledby="jobs-cta-title">
+      <div class="sx-section__inner">
+        <h2 class="sx-h2" id="jobs-cta-title">Wil je weten of NEBOSH en een ZZP-carrière bij jou passen?</h2>
+        <p class="sx-lead" style="margin-left: auto; margin-right: auto; max-width: 560px;">
           Ontdek of de NEBOSH IGC opleiding en een carrière als HSE ZZP'er bij jouw ambities en situatie passen.
         </p>
-        <div class="jobs-cta-buttons">
-          <a href="nebosh-opleiding.html" class="btn-pill-orange">
-            Bekijk NEBOSH Opleiding <span class="arrow">→</span>
-          </a>
-          <a href="aanmelden.html" class="btn btn-secondary">
-            Plaats mij op de wachtlijst – Gratis
-          </a>
+        <div class="sx-jobs-cta-buttons">
+          <a class="sx-btn sx-btn--gold" href="nebosh-opleiding.html">Bekijk NEBOSH opleiding →</a>
+          <a class="sx-btn sx-btn--ghost" href="aanmelden.html">Plaats mij op de wachtlijst – Gratis</a>
         </div>
+        <p class="sx-lead" style="margin: 1.5rem auto 0; max-width: 520px; font-size: 15px;">
+          <a href="werken-bij.html">Werken bij SafetyXAcademy</a> — geen vacatures nu, wel een talent pool voor later.
+        </p>
       </div>
     </section>
-
   </main>
 
-  <footer>
-    <div style="max-width:1200px; margin:0 auto;">
-      <p>&copy; 2025 SafetyXAcademy - Onderdeel van ABshops.nl (KVK 72037628)</p>
-      <p style="margin-top:0.5rem;">
-        <a href="index.html">Home</a> |
-        <a href="nebosh-opleiding.html">NEBOSH Opleiding</a> |
-        <a href="jobs.html">Jobs &amp; ZZP Opdrachten</a> |
-        <a href="blog/index.html">Blog</a> |
-        <a href="over-ons.html">Over Ons</a> |
-        <a href="privacy.html">Privacy</a> |
-        <a href="#contact">Contact</a>
-      </p>
-      <p style="margin-top:0.75rem; font-style:italic; color:var(--secondary); font-weight:600;">
-        Train lokaal voor €3.500, werk wereldwijd als HSE professional.
-      </p>
+  <footer class="sx-footer">
+    <div class="sx-footer__grid">
+      <div class="sx-footer__brand">
+        <a class="sx-logo" href="index.html">SafetyX<span>Academy</span></a>
+        <p>Train lokaal, werk wereldwijd.</p>
+      </div>
+      <div>
+        <h3>Opleiding</h3>
+        <ul>
+          <li><a href="nebosh-opleiding.html">NEBOSH IGC</a></li>
+          <li><a href="nebosh-quiz.html">Oefentest</a></li>
+          <li><a href="nebosh-benelux-ports.html">Benelux havens</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Carrière</h3>
+        <ul>
+          <li><a href="jobs.html" aria-current="page">Jobs &amp; ZZP</a></li>
+          <li><a href="werken-bij.html">Werken bij</a></li>
+          <li><a href="nebosh-offshore.html">Offshore</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Content</h3>
+        <ul>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Juridisch</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="index.html#locatie">Contact</a></li>
+        </ul>
+      </div>
+      <div class="sx-footer__contact">
+        <h3>Direct</h3>
+        <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a><br />
+        <a href="tel:+31108009512">010-800 9512</a><br />
+        Westplein 12, Rotterdam
+      </div>
+    </div>
+    <div class="sx-footer__bottom">
+      <span>© 2026 SafetyXAcademy · KVK 72037628 · ABshops.nl</span>
+      <div class="sx-social">
+        <a href="https://www.linkedin.com/company/safetyxacademy" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </footer>
 
-  <!-- JS -->
-  <script src="/js/header.js" defer></script>
-
+  <script src="js/main-v3.js" defer></script>
 </body>
 </html>
-

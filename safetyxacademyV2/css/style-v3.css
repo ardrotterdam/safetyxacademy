@@ -1327,6 +1327,15 @@ a.sx-btn--gold:hover,
   border: 1px solid var(--glass-border);
 }
 
+.sx-content-img figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  border-top: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .sx-module-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1496,6 +1505,27 @@ a.sx-btn--gold:hover,
 
 .sx-jobs-example-item strong {
   color: var(--text-primary);
+}
+
+.sx-jobs-example-note {
+  margin: 1.25rem 0 0;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.sx-jobs-example-note strong {
+  color: var(--text-primary);
+}
+
+.sx-jobs-section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+.sx-jobs-section-head .sx-h2 {
+  margin-bottom: 0.75rem;
 }
 
 .sx-jobs-international-note {
