@@ -1,0 +1,23 @@
+{
+  "name": "safetyxacademy-hero",
+  "version": "1.0.0",
+  "private": true,
+  "remotion": {
+    "entryPoint": "src/index.ts"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "render:webm": "remotion render src/index.ts HeroLoop ../images/hero-remotion.webm --codec=vp8",
+    "render:mp4": "remotion render src/index.ts HeroLoop ../images/hero-remotion.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "typescript": "^5.6.3"
+  }
+}

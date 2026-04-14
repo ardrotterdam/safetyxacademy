@@ -326,6 +326,41 @@ a.sx-nav-cta:hover,
   opacity: 1;
 }
 
+/* Levendige mesh boven video: meteen zichtbaar; met Remotion-export nog rijker */
+.sx-hero__mesh {
+  position: absolute;
+  inset: -15%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.42;
+  mix-blend-mode: soft-light;
+  background:
+    conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(255, 102, 0, 0.22) 0deg,
+      transparent 55deg,
+      rgba(37, 99, 235, 0.14) 120deg,
+      transparent 200deg,
+      rgba(255, 102, 0, 0.12) 280deg,
+      transparent 360deg
+    ),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(255, 102, 0, 0.08), transparent 55%);
+  animation: sx-hero-mesh-spin 22s linear infinite;
+}
+
+@keyframes sx-hero-mesh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sx-hero__mesh {
+    animation: none;
+    opacity: 0.28;
+  }
+}
+
 .sx-hero__media {
   position: absolute;
   inset: 0;
@@ -410,9 +445,42 @@ a.sx-nav-cta:hover,
   font-size: clamp(2.75rem, 8.5vw, 5.75rem);
   line-height: 0.95;
   letter-spacing: -0.045em;
-  color: var(--text-primary);
   white-space: pre-line;
   text-wrap: balance;
+  background: linear-gradient(
+    117deg,
+    #f8f4ef 0%,
+    #f5f0eb 38%,
+    rgba(255, 200, 160, 0.95) 48%,
+    #f5f0eb 58%,
+    #ebe6e0 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sx-hero-title-shimmer 10s ease-in-out infinite;
+}
+
+@keyframes sx-hero-title-shimmer {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sx-hero h1 {
+    animation: none;
+    color: var(--text-primary);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    text-shadow: none;
+  }
 }
 
 .sx-hero__sub {
