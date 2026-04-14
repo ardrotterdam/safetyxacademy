@@ -1,6 +1,6 @@
 # SafetyXAcademy — Remotion heroloop
 
-Deze map is een **klein Remotion-project** om een korte, naadloos herhaalbare **achtergrondvideo** voor de homepage te maken (motion graphics + typografie op jullie huisstijl `#0A0F1C` / `#FF6600`).
+Deze map is een **klein Remotion-project** om een korte, naadloos herhaalbare **achtergrondvideo** te maken: orbs, raster, sheen en vignet op `#0A0F1C` / `#FF6600`. **Geen titeltekst in de video** — die blijft in `index.html` (SEO, toegankelijkheid, snelle copy-wijzigingen).
 
 ## Waarom zo?
 

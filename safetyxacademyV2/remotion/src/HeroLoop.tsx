@@ -1,37 +1,13 @@
-import {
-  AbsoluteFill,
-  interpolate,
-  spring,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 
 /**
- * Seamless hero loop: intro motion (0–90f), daarna alleen geometrie
- * die exact terugkeert op frame 210 voor perfecte loop.
+ * Alleen achtergrond-motion (geen typografie): de echte titel staat in HTML
+ * voor SEO, copy-updates en toegankelijkheid. Loopt naadloos over 210 frames.
  */
 export const HeroLoop: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { durationInFrames } = useVideoConfig();
   const loopT = (frame / durationInFrames) * Math.PI * 2;
-
-  const line1 = spring({
-    frame,
-    fps,
-    config: { damping: 19, mass: 0.65 },
-  });
-
-  const line2 = spring({
-    frame: frame - 12,
-    fps,
-    config: { damping: 19, mass: 0.65 },
-  });
-
-  const sub = spring({
-    frame: frame - 32,
-    fps,
-    config: { damping: 22, mass: 0.5 },
-  });
 
   const orbX = Math.sin(loopT * 0.85) * 14;
   const orbY = Math.cos(loopT * 0.62) * 10;
@@ -120,62 +96,6 @@ export const HeroLoop: React.FC = () => {
           mixBlendMode: "overlay",
         }}
       />
-
-      {/* Typografie — na intro statisch, blijft leesbaar in loop */}
-      <AbsoluteFill
-        style={{
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          padding: "4rem",
-        }}
-      >
-        <div
-          style={{
-            fontSize: 118,
-            fontWeight: 800,
-            letterSpacing: "-0.045em",
-            lineHeight: 0.98,
-            color: "#f5f0eb",
-            textAlign: "center",
-            transform: `translateY(${interpolate(line1, [0, 1], [36, 0])}px)`,
-            opacity: line1,
-            textShadow: "0 0 80px rgba(255,102,0,0.15), 0 24px 64px rgba(0,0,0,0.45)",
-          }}
-        >
-          Train lokaal.
-        </div>
-        <div
-          style={{
-            fontSize: 118,
-            fontWeight: 800,
-            letterSpacing: "-0.045em",
-            lineHeight: 0.98,
-            color: "#ff6600",
-            marginTop: "0.12em",
-            textAlign: "center",
-            transform: `translateY(${interpolate(line2, [0, 1], [44, 0])}px)`,
-            opacity: line2,
-            textShadow: "0 0 100px rgba(255,102,0,0.35)",
-          }}
-        >
-          Werk wereldwijd.
-        </div>
-        <div
-          style={{
-            marginTop: "2.5rem",
-            fontSize: 28,
-            fontWeight: 600,
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            color: "rgba(245,240,235,0.55)",
-            opacity: sub,
-            transform: `translateY(${interpolate(sub, [0, 1], [16, 0])}px)`,
-          }}
-        >
-          NEBOSH IGC · Rotterdam · 2026
-        </div>
-      </AbsoluteFill>
 
       {/* Vignet */}
       <div
