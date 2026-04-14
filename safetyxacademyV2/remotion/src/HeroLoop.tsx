@@ -4,7 +4,7 @@ import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remo
  * Alleen achtergrond-motion (geen typografie): de echte titel staat in HTML
  * voor SEO, copy-updates en toegankelijkheid. Loopt naadloos over 210 frames.
  */
-export const HeroLoop: React.FC = () => {
+export const HeroLoop = () => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const loopT = (frame / durationInFrames) * Math.PI * 2;
@@ -23,14 +23,7 @@ export const HeroLoop: React.FC = () => {
   );
 
   return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: "#0a0f1c",
-        overflow: "hidden",
-        fontFamily:
-          'ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
-      }}
-    >
+    <AbsoluteFill style={{ backgroundColor: "#0a0f1c", overflow: "hidden" }}>
       {/* Animated orbs — loopbaar via sin/cos op loopT */}
       <div
         style={{
