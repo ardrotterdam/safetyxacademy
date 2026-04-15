@@ -250,13 +250,14 @@
 
     // Map pathnames to their corresponding nav links
     const pathMap = {
-      '/index.html': '/index.html',
-      '/': '/index.html',
+      '/index.html': '/',
+      '/': '/',
       '/nebosh-opleiding.html': '/nebosh-opleiding.html',
       '/nebosh-quiz.html': '/nebosh-quiz.html',
       '/nebosh-benelux-ports.html': '/nebosh-benelux-ports.html',
       '/nebosh-offshore.html': '/nebosh-offshore.html',
-      '/blog/index.html': '/blog/index.html',
+      '/blog/index.html': '/blog/',
+      '/blog/': '/blog/',
       '/jobs.html': '/jobs.html',
       '/over-ons.html': '/over-ons.html',
       '/aanmelden.html': '/aanmelden.html'
@@ -271,11 +272,11 @@
     }
     // Check for blog pages (any path starting with /blog/)
     else if (pathname.startsWith('/blog/')) {
-      activePath = '/blog/index.html';
+      activePath = '/blog/';
     }
     // Check for home page (index.html or root)
     else if (pathname === '/index.html' || pathname === '/' || pathname === '') {
-      activePath = '/index.html';
+      activePath = '/';
     }
 
     // Find and activate the matching nav link (only anchor tags, and only in desktop nav, not mobile)
@@ -284,7 +285,11 @@
         // Only apply to desktop nav, not mobile menu
         if (!link.closest('.mobile-nav-panel')) {
           const href = link.getAttribute('href');
-          if (href === activePath || (activePath === '/index.html' && (href === '/index.html' || href === '/'))) {
+          if (
+            href === activePath ||
+            (activePath === '/' && href === '/index.html') ||
+            (activePath === '/blog/' && href === '/blog/index.html')
+          ) {
             link.classList.add('nav-link--active');
             link.classList.add('active'); // Also add 'active' class for new CSS
           }
