@@ -383,7 +383,22 @@ a.sx-nav-cta:hover,
   z-index: 1;
 }
 
+.sx-hero__media picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.sx-hero__media .sx-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .sx-hero__media video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -598,11 +613,11 @@ a.sx-btn--gold:hover,
   .sx-hero .sx-hero__media {
     display: block;
     background-color: var(--primary);
-    background-image: url("../images/nebosh-igc-training-rotterdam-students.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Iets hoger + centrum: minder “breed landschap”, meer focus op de groep */
-    background-position: 52% 22%;
+  }
+
+  .sx-hero .sx-hero__media .sx-hero__img {
+    /* Zelfde crop als voorheen via background-position */
+    object-position: 52% 22%;
   }
 
   .sx-hero .sx-hero__media video {
