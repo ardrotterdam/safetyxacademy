@@ -1,0 +1,164 @@
+{
+  "aanmelden.html": {
+    "wijzigingen_totaal": 7,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (3)",
+      "training→opleiding (NEBOSH-context): 4"
+    ]
+  },
+  "bedankt-jobs.html": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "bedankt.html": {
+    "wijzigingen_totaal": 1,
+    "details": [
+      "training→opleiding (NEBOSH-context): 1"
+    ]
+  },
+  "blog/hse-zzp-dagtarieven-rotterdam-antwerpen.html": {
+    "wijzigingen_totaal": 11,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (10)",
+      "training→opleiding (NEBOSH-context): 1"
+    ]
+  },
+  "blog/index.html": {
+    "wijzigingen_totaal": 3,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (2)",
+      "diversen: 1"
+    ]
+  },
+  "blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html": {
+    "wijzigingen_totaal": 21,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (2)",
+      "training→opleiding (NEBOSH-context): 17",
+      "diversen: 2"
+    ]
+  },
+  "blog/nebosh-vs-mkv.html": {
+    "wijzigingen_totaal": 6,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (1)",
+      "training→opleiding (NEBOSH-context): 5"
+    ]
+  },
+  "blog/wat-is-nebosh-igc.html": {
+    "wijzigingen_totaal": 3,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (1)",
+      "training→opleiding (NEBOSH-context): 2"
+    ]
+  },
+  "create-thumbnail-auto.html": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "docs/SAFETYXAC-BLUEPRINT.md": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "GA_GTM_AUDIT_REPORT.md": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "includes/header.html": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "index.html": {
+    "wijzigingen_totaal": 11,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (2)",
+      "training→opleiding (NEBOSH-context): 9"
+    ]
+  },
+  "jobs.html": {
+    "wijzigingen_totaal": 6,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (6)"
+    ]
+  },
+  "nebosh-benelux-ports.html": {
+    "wijzigingen_totaal": 23,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (10); Ghent → Gent (8)",
+      "training→opleiding (NEBOSH-context): 1",
+      "ports/Port of/Train: 4"
+    ]
+  },
+  "nebosh-offshore.html": {
+    "wijzigingen_totaal": 3,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (1)",
+      "training→opleiding (NEBOSH-context): 2"
+    ]
+  },
+  "nebosh-opleiding.html": {
+    "wijzigingen_totaal": 11,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (2)",
+      "training→opleiding (NEBOSH-context): 4",
+      "freelance→ZZP: 5"
+    ]
+  },
+  "nebosh-quiz.html": {
+    "wijzigingen_totaal": 66,
+    "details": [
+      "quiz EN-blokken verwijderd: 20",
+      "woord/zin: Antwerp → Antwerpen (4); Ghent → Gent (1)",
+      "training→opleiding (NEBOSH-context): 9",
+      "freelance→ZZP: 6",
+      "diversen: 2"
+    ]
+  },
+  "over-ons.html": {
+    "wijzigingen_totaal": 2,
+    "details": [
+      "woord/zin: Antwerp → Antwerpen (1)",
+      "training→opleiding (NEBOSH-context): 1"
+    ]
+  },
+  "README.md": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "remotion/README.md": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "resize-exact.html": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "SLIMBUITENLAND_MOBILE_MENU_IMPLEMENTATION.md": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  },
+  "werken-bij.html": {
+    "wijzigingen_totaal": 0,
+    "details": [
+      "geen wijziging"
+    ]
+  }
+}
