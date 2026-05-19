@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0A0F1C" />
-  <title>Interesse Geregistreerd - Bedankt! | SafetyXAcademy</title>
-  <meta name="robots" content="noindex,nofollow" />
+  <title>Bedankt voor je bericht | SafetyXAcademy</title>
+  <meta name="robots" content="noindex,follow" />
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
@@ -15,11 +15,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-91JCVXBQ0W');
-    // Track conversion
     gtag('event', 'conversion', {
       'send_to': 'G-91JCVXBQ0W',
       'event_category': 'form',
-      'event_label': 'interesse_registratie_nebosh'
+      'event_label': 'form_submission'
     });
   </script>
 
@@ -30,14 +29,37 @@
   <link rel="stylesheet" href="css/style-v3.css" />
 
   <!-- Favicons -->
-  <!-- Favicon files are located in the repo root (safetyxacademyV2/) and deployed to https://safetyxacademy.nl/
-       Test URLs: https://safetyxacademy.nl/favicon-32.png, https://safetyxacademy.nl/favicon-192.png, etc. -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
   <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192.png">
   <meta name="msapplication-TileImage" content="/favicon-512.png">
+
+  <style>
+    /* Inline fallback for thank-you checkmark in case base CSS is not loaded */
+    .thankyou-checkmark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #10b981;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .thankyou-checkmark svg {
+      width: 50px;
+      height: 50px;
+      max-width: 50px;
+      max-height: 50px;
+      stroke: #ffffff;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
 </head>
 
 <body class="sx-page-bedankt">
@@ -99,47 +121,38 @@
       <div class="container">
         <div class="thankyou-card">
           <div class="thankyou-checkmark">
-            <svg viewBox="0 0 52 52">
+            <svg viewBox="0 0 52 52" width="50" height="50" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M14 27l7 7 16-16"/>
             </svg>
           </div>
 
-          <h1>🎉 Je interesse is geregistreerd!</h1>
-          
+          <h1>Bedankt voor je bericht</h1>
+
           <p class="thankyou-lead">
-            Bedankt voor je interesse in SafetyXAcademy! Je hoort van ons zodra we de laatste details hebben afgerond en we officieel van start kunnen met de <strong>NEBOSH IGC opleiding in januari 2026</strong>.
+            We hebben je aanvraag ontvangen en nemen binnen 1-2 werkdagen contact met je op via email. Check ook even je spam-folder voor de zekerheid.
           </p>
 
-          <div class="thankyou-info-box">
-            <h3>📋 Wat gebeurt er nu?</h3>
-            <ul>
-              <li><strong>Je interesse is geregistreerd:</strong> Je bent bij de eerste groep mensen die we informeren!</li>
-              <li><strong>Laatste details afronden:</strong> We ronden de laatste administratieve puntjes af</li>
-              <li><strong>Update ontvangen:</strong> Zodra alles 100% rond is, krijg je als eerste bericht</li>
-              <li><strong>Officiële inschrijving:</strong> Dan kun je je officieel inschrijven voor januari 2026</li>
-              <li><strong>Bij 8-12 personen starten we:</strong> Voor optimale groepsdynamiek en persoonlijke aandacht</li>
-            </ul>
-          </div>
+          <p class="thankyou-lead">
+            Vragen in de tussentijd? Mail naar <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a>
+          </p>
 
           <div class="thankyou-actions">
-            <a href="/" class="btn-pill-orange">🏠 Terug naar Home</a>
-            <a href="/blog/" class="btn btn-secondary">📚 Lees onze Blog</a>
+            <a href="/" class="btn-pill-orange">Terug naar homepage</a>
           </div>
 
           <div class="thankyou-social">
-            <p><strong>Volg ons op social media voor HSE tips & vacatures:</strong></p>
-            <a href="https://www.linkedin.com/company/safetyxacademy" 
-               target="_blank" 
+            <p><strong>Volg ons op social media voor HSE tips &amp; vacatures:</strong></p>
+            <a href="https://www.linkedin.com/company/safetyxacademy"
+               target="_blank"
                class="thankyou-social-link"
                rel="noopener noreferrer">
-              💼 LinkedIn - SafetyXAcademy
+              LinkedIn - SafetyXAcademy
             </a>
           </div>
 
           <p class="thankyou-contact">
-            <strong>Vragen over NEBOSH, carrièremogelijkheden of onze planning?</strong><br>
-            📞 <a href="tel:+31108009512">010-800 9512</a> | 
-            📧 <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a>
+            <a href="tel:+31108009512">010-800 9512</a> ·
+            <a href="mailto:info@safetyxacademy.nl">info@safetyxacademy.nl</a>
           </p>
         </div>
       </div>
@@ -201,4 +214,3 @@
 
 </body>
 </html>
-
