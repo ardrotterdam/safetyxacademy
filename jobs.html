@@ -184,14 +184,11 @@
     <h2>Schrijf je in voor de talent pool</h2>
     <p>Gratis en vrijblijvend. Wij nemen contact op zodra een rol bij jou past.</p>
 
-    <form action="https://formsubmit.co/info@safetyxacademy.nl" method="POST">
-
-      <!-- FormSubmit instellingen -->
-      <input type="text" name="_honey" style="display:none">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="💼 Nieuwe Talent Pool Inschrijving – SafetyX Academy">
-      <input type="hidden" name="_next" value="https://www.safetyxacademy.nl/bedankt-jobs.html">
-      <input type="hidden" name="_template" value="table">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="6dc9e41a-cadb-4db4-9765-45f79fe4105b">
+      <input type="hidden" name="subject" value="Talent pool inschrijving — SafetyXAcademy (jobs.html)">
+      <input type="hidden" name="from_name" value="safetyxacademy.nl">
+      <input type="checkbox" name="botcheck" style="display:none">
 
       <div class="frow">
         <div class="fgroup">
@@ -278,6 +275,7 @@
 </footer>
 
 <script src="/js/header.js"></script>
+<script src="/js/web3forms-handler.js"></script>
 
 <script>
   function updateCountdown() {
