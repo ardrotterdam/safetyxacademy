@@ -420,15 +420,12 @@
                 <p style="margin-top: 1rem;"><strong>Laatste stappen:</strong> We ronden administratieve details af en willen graag weten hoeveel interesse er is voor de planning van de eerste groep. Registreer je interesse vrijblijvend!</p>
             </div>
 
-            <!-- ✅ FORMSUBMIT.CO - GECORRIGEERD NAAR info@safetyxacademy.nl -->
-            <form action="https://formsubmit.co/info@safetyxacademy.nl" method="POST">
-                
-                <!-- Anti-spam honeypot (blijf leeg!) -->
-                <input type="text" name="_honey" style="display:none">
-                
-                <!-- Disable CAPTCHA (we use honeypot instead) -->
-                <input type="hidden" name="_captcha" value="false">
-                
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6dc9e41a-cadb-4db4-9765-45f79fe4105b">
+                <input type="hidden" name="subject" value="NEBOSH IGC interesse registratie — SafetyXAcademy (aanmelden.html)">
+                <input type="hidden" name="from_name" value="safetyxacademy.nl">
+                <input type="checkbox" name="botcheck" style="display:none">
+
                 <!-- Voornaam & Achternaam -->
                 <div class="form-row">
                     <div class="form-group">
@@ -590,11 +587,6 @@
                               placeholder="Heb je specifieke vragen over de opleiding, kosten, startdata, of carrièremogelijkheden? Laat het ons weten!"></textarea>
                 </div>
 
-                <!-- Hidden Fields (for tracking) -->
-                <input type="hidden" name="_subject" value="📋 Nieuwe Interesse Registratie NEBOSH - SafetyXAcademy">
-                <input type="hidden" name="_next" value="https://www.safetyxacademy.nl/bedankt.html">
-                <input type="hidden" name="_template" value="table">
-
                 <!-- Submit Button -->
                 <button type="submit" class="submit-btn">
                     ✅ Registreer Mijn Interesse
@@ -641,5 +633,6 @@
     </footer>
 
     <script src="/js/header.js"></script>
+    <script src="/js/web3forms-handler.js"></script>
 </body>
 </html>
