@@ -76,6 +76,11 @@
     <loc>https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://safetyxacademy.nl/blog/geopolitieke-onrust-midden-oosten-hse-carriere.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <priority>0.8</priority>
+  </url>
   <!-- Merged from sitemap-blog.xml (fase 1); canonical student-guide (fase 4: 301 westplein hierheen) -->
   <url>
     <loc>https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-lunch-landmarks/</loc>
