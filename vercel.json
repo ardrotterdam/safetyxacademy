@@ -1,0 +1,102 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.safetyxacademy.nl" }],
+      "destination": "https://safetyxacademy.nl/:path*",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/index.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/index.php",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/veiligheidskundige-opleiding/index.html",
+      "destination": "/blog/veiligheidskundige-opleiding/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/veiligheidskundige-opleiding/index.php",
+      "destination": "/blog/veiligheidskundige-opleiding/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/nebosh-student-guide-rotterdam-lunch-landmarks/index.html",
+      "destination": "/blog/nebosh-student-guide-rotterdam-lunch-landmarks/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/nebosh-student-guide-rotterdam-lunch-landmarks/index.php",
+      "destination": "/blog/nebosh-student-guide-rotterdam-lunch-landmarks/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/aanmelden",
+      "destination": "/aanmelden.html",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/safetyxacademyV2",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/safetyxacademyV2/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/safetyxacademyV2/:path*",
+      "destination": "/:path*",
+      "statusCode": 301
+    }
+  ],
+
+  "_redirects_todo": [
+    {
+      "_comment": "TODO: Kies één canonical voor de twee Rotterdam student-guide varianten (MIGRATION-PLAN stap 4). Optie A (aanbevolen in plan): directory-URL behouden, V2 .html redirecten.",
+      "source": "/blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html",
+      "destination": "/blog/nebosh-student-guide-rotterdam-lunch-landmarks/",
+      "statusCode": 301,
+      "_alternative": "Optie B: redirect lunch-landmarks/ naar westplein-veerhaven.html als die URL al rankt."
+    },
+    {
+      "_comment": "TODO: Dev/utility-pagina's uit V2 — blokkeren, noindex of verplaatsen buiten webroot.",
+      "source": "/create-thumbnail-auto.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "_comment": "TODO: Dev/utility-pagina's uit V2 — blokkeren, noindex of verplaatsen buiten webroot.",
+      "source": "/resize-exact.html",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ],
+
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
