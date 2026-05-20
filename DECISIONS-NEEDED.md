@@ -56,6 +56,15 @@ Legenda: 🔴 = blokkeert SEO/deploy · ⚠️ = beslissing gewenst · ✅ = afg
 | **Beslissing** | 📋 **Marketing:** nieuwe OG-image laten maken/uploaden naar root-URL — **niet** oplossen in fase 3a |
 | **Dev (later)** | Na asset beschikbaar: deploy naar root; eventueel OG op overige pagina's harmoniseren |
 
+### `hero-remotion.webm` — niet in repo (mp4 voldoende)
+
+| Veld | Waarde |
+|---|---|
+| **Check** | 20 mei 2026: alleen `images/hero-remotion.mp4` aanwezig; geen `.webm` in repo |
+| **Referenties** | `index.html` hero-video (webm-regel verwijderd; mp4 als enige source) |
+| **Beslissing** | ✅ Geen blokkade voor 3b. Optioneel later: `npm run render:webm` in `safetyxacademyV2/remotion/` (zie `remotion/README.md`) |
+| **Dev** | Root `index.html` gebruikt alleen `.mp4` |
+
 ### SERP-snippet `/nebosh-opleiding.html`
 
 | Veld | Waarde |
