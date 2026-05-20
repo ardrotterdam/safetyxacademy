@@ -3055,6 +3055,15 @@ body.sx-page-blog-post .blog-featured-image img {
   box-shadow: none;
 }
 
+body.sx-page-blog-post .blog-article-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
 body.sx-page-blog-post .blog-article-header {
   background: linear-gradient(135deg, rgba(15, 22, 40, 0.98) 0%, rgba(10, 15, 28, 0.98) 100%);
   color: var(--text-primary);
