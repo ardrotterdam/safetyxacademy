@@ -76,5 +76,11 @@
     <loc>https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html</loc>
     <priority>0.8</priority>
   </url>
+  <!-- Merged from sitemap-blog.xml (fase 1); canonical student-guide (fase 4: 301 westplein hierheen) -->
+  <url>
+    <loc>https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-lunch-landmarks/</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Excluded: /blog/veiligheidskundige-opleiding/ (410 Gone per consolidatiebesluit) -->
 </urlset>
-
