@@ -24,13 +24,28 @@
       "statusCode": 301
     },
     {
+      "source": "/blog/veiligheidskundige-opleiding",
+      "destination": "/blog/veiligheidskundige-opleiding/",
+      "statusCode": 410
+    },
+    {
+      "source": "/blog/veiligheidskundige-opleiding/",
+      "destination": "/blog/veiligheidskundige-opleiding/",
+      "statusCode": 410
+    },
+    {
       "source": "/blog/veiligheidskundige-opleiding/index.html",
       "destination": "/blog/veiligheidskundige-opleiding/",
-      "statusCode": 301
+      "statusCode": 410
     },
     {
       "source": "/blog/veiligheidskundige-opleiding/index.php",
       "destination": "/blog/veiligheidskundige-opleiding/",
+      "statusCode": 410
+    },
+    {
+      "source": "/blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html",
+      "destination": "/blog/nebosh-student-guide-rotterdam-lunch-landmarks/",
       "statusCode": 301
     },
     {
