@@ -46,6 +46,16 @@ Legenda: 🔴 = blokkeert SEO/deploy · ⚠️ = beslissing gewenst · ✅ = afg
 
 ## 📋 Marketing (geen dev-blokker)
 
+### OG-image `/safetyxacademy-og-image.png` — live 404
+
+| Veld | Waarde |
+|---|---|
+| **Check** | 20 mei 2026: `curl -I https://safetyxacademy.nl/safetyxacademy-og-image.png` → **404** |
+| **Repo** | Bestand bestaat lokaal (`safetyxacademy-og-image.png`, ~504 KB) maar wordt niet geserveerd op live URL |
+| **Gebruikt in** | `safetyxacademyV2/aanmelden.html`, `safetyxacademyV2/werken-bij.html` (OG `og:image`) |
+| **Beslissing** | 📋 **Marketing:** nieuwe OG-image laten maken/uploaden naar root-URL — **niet** oplossen in fase 3a |
+| **Dev (later)** | Na asset beschikbaar: deploy naar root; eventueel OG op overige pagina's harmoniseren |
+
 ### SERP-snippet `/nebosh-opleiding.html`
 
 | Veld | Waarde |
