@@ -13,8 +13,7 @@ Gebaseerd op `LIVE-STATUS.md`, `AUDIT.md` en `MIGRATION-PLAN.md`.
   - `/blog/veiligheidskundige-opleiding/`
   - `/blog/nebosh-student-guide-rotterdam-lunch-landmarks/`
   - V2-landingspagina's die nog niet live zijn (`/nebosh-quiz.html`, `/nebosh-ig1-oefenvragen.html`, enz.)
-- [ ] Los **TODO-beslissingen** in `vercel.json` → `_redirects_todo` op vóór productie (student-guide canonical, MVK/MKV spelling).
-- [ ] Verplaats TODO-regels uit `_redirects_todo` naar `redirects` zodra besloten is.
+- [ ] Los open redirect-beslissingen op (zie `DECISIONS-NEEDED.md`) en voeg regels toe aan `vercel.json` → `redirects` zodra besloten is (student-guide canonical, utility-pagina's).
 
 ---
 
