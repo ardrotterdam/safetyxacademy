@@ -223,7 +223,7 @@ a.sx-nav-cta:hover,
 
 .sx-nav-dropdown__menu {
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 0;
   z-index: 8200;
   min-width: 260px;
@@ -242,6 +242,32 @@ a.sx-nav-cta:hover,
 }
 
 @media (min-width: 901px) {
+  /*
+   * padding-top bridges the visual gap: it is part of the menu hit-area so the
+   * cursor never passes through “dead space” between trigger and panel.
+   */
+  .sx-nav-dropdown__menu {
+    padding-top: 10px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .sx-nav-dropdown__menu::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: var(--primary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--sx-radius);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+    pointer-events: none;
+  }
+
   .sx-nav-dropdown:hover .sx-nav-dropdown__menu,
   .sx-nav-dropdown:focus-within .sx-nav-dropdown__menu,
   .sx-nav-dropdown.is-open .sx-nav-dropdown__menu {
