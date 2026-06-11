@@ -58,6 +58,11 @@
       "destination": "/blog/nebosh-student-guide-rotterdam-lunch-landmarks/",
       "statusCode": 301
     },
+    {
+      "source": "/blog/arbowet-wijziging-1-juli-2026/index.html",
+      "destination": "/blog/arbowet-wijziging-1-juli-2026/",
+      "statusCode": 301
+    },
 
     {
       "source": "/aanmelden",
