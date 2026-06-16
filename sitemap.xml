@@ -51,8 +51,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://safetyxacademy.nl/bedankt.html</loc>
-    <priority>0.5</priority>
+    <loc>https://safetyxacademy.nl/werken-bij.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://safetyxacademy.nl/privacy.html</loc>
+    <priority>0.4</priority>
   </url>
   <!-- Blog-overzicht -->
   <url>
@@ -78,7 +82,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html</loc>
+    <loc>https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-lunch-landmarks/</loc>
+    <lastmod>2025-11-03</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -86,11 +91,6 @@
     <lastmod>2026-05-20</lastmod>
     <priority>0.8</priority>
   </url>
-  <!-- Merged from sitemap-blog.xml (fase 1); canonical student-guide (fase 4: 301 westplein hierheen) -->
-  <url>
-    <loc>https://safetyxacademy.nl/blog/nebosh-student-guide-rotterdam-lunch-landmarks/</loc>
-    <lastmod>2025-11-03</lastmod>
-    <priority>0.8</priority>
-  </url>
+  <!-- Excluded: westplein-veerhaven.html (301 → lunch-landmarks); bedankt.html (noindex) -->
   <!-- Excluded: /blog/veiligheidskundige-opleiding/ (410 Gone per consolidatiebesluit) -->
 </urlset>

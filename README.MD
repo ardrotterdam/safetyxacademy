@@ -24,6 +24,7 @@ De live site draait op de **V2**-template (`safetyxacademyV2/` in de repo, gepub
 ## SEO & migratie (referentie)
 
 - **GSC-baseline:** `BASELINE-METRICS.md` (28 dagen, mei 2026)
+- **Actuele status:** `STATUS-JUNI-2026.md`
 - **Niet redirecten:** `/jobs.html`, `/blog/nebosh-vs-mkv.html`
 - **Interne linking:** De vroegere `README.MD` documenteerde een SEO internal-linking update (jobs/ZZP, sitemap, index-anchors). Die instructies zijn historisch; live jobs-content = V2 `jobs.html`.
 

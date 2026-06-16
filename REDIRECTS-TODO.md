@@ -4,23 +4,21 @@ Deze TODO's stonden eerder in vercel.json onder `_redirects_todo`. Verplaatst na
 
 ---
 
-## Rotterdam student-guide — één canonical
-
-**Reden niet geactiveerd:** Kies één canonical voor de twee Rotterdam student-guide varianten (MIGRATION-PLAN stap 4). Optie A (aanbevolen in plan): directory-URL behouden, V2 `.html` redirecten.
+## ✅ Afgerond
 
 | Source | Destination | Status |
 |---|---|---|
-| `/blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html` | `/blog/nebosh-student-guide-rotterdam-lunch-landmarks/` | 301 |
-
-**Alternatief:** Optie B — redirect `lunch-landmarks/` naar `westplein-veerhaven.html` als die URL al rankt.
+| `/blog/nebosh-student-guide-rotterdam-westplein-veerhaven.html` | `/blog/nebosh-student-guide-rotterdam-lunch-landmarks/` | 301 — actief in `vercel.json` (16 jun 2026) |
 
 ---
 
-## Dev/utility-pagina's
+## Open — dev/utility-pagina's
 
-**Reden niet geactiveerd:** Dev/utility-pagina's uit V2 — blokkeren, noindex of verplaatsen buiten webroot.
+**Context:** Utility HTML is uit webroot verwijderd (fase 1). Redirects alleen nodig als oude URL's extern gelinkt zijn.
 
 | Source | Destination | Status |
 |---|---|---|
-| `/create-thumbnail-auto.html` | `/` | 301 |
-| `/resize-exact.html` | `/` | 301 |
+| `/create-thumbnail-auto.html` | `/` | Niet actief — bestand niet meer in repo |
+| `/resize-exact.html` | `/` | Niet actief — bestand niet meer in repo |
+
+**Actie:** Alleen activeren in `vercel.json` als GSC/crawl 404's op deze paden toont.

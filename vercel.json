@@ -68,22 +68,6 @@
       "source": "/aanmelden",
       "destination": "/aanmelden.html",
       "statusCode": 301
-    },
-
-    {
-      "source": "/safetyxacademyV2",
-      "destination": "/",
-      "statusCode": 301
-    },
-    {
-      "source": "/safetyxacademyV2/",
-      "destination": "/",
-      "statusCode": 301
-    },
-    {
-      "source": "/safetyxacademyV2/:path*",
-      "destination": "/:path*",
-      "statusCode": 301
     }
   ],
 
