@@ -681,6 +681,13 @@ a.sx-nav-cta:hover,
   animation: sx-hero-title-shimmer 10s ease-in-out infinite;
 }
 
+@media (max-width: 480px) {
+  .sx-hero h1 {
+    font-size: clamp(2.15rem, 7.25vw, 2.75rem);
+    line-height: 1.05;
+  }
+}
+
 @keyframes sx-hero-title-shimmer {
   0%,
   100% {
