@@ -3,7 +3,8 @@ title: "Veiligheidskundige salaris 2026: wat verdien je echt?"
 description: "Wat verdient een veiligheidskundige in 2026? Salaris in loondienst, MVK/HVK, ZZP-uurtarieven en internationale dagtarieven."
 slug: "/blog/veiligheidskundige-salaris-2026/"
 date: "2026-06-20"
-heroAlt: "Veiligheidskundige met helm bekijkt salarisoverzicht en dagtarieven HSE 2026 in haven Rotterdam"
+heroAlt: "Veiligheidskundige bekijkt salaris en HSE-dagtarieven in de haven van Rotterdam in 2026"
+heroImage: "images/blog/veiligheidskundige-salaris-2026-hse-rotterdam.webp"
 keywords:
   - veiligheidskundige salaris
   - wat verdient een veiligheidskundige
@@ -46,6 +47,9 @@ Het echte salaris hangt vooral af van vier factoren:
 - loondienst of ZZP.
 
 ## Salaris veiligheidskundige per niveau
+
+![Carrièrepad van operationeel veiligheidskundige naar MVK, HVK en HSE-manager in 2026](images/blog/mvk-hvk-hse-manager-salaris-veiligheidskundige-2026.webp)
+*Meer ervaring en hogere kwalificaties zoals MVK en HVK leiden vaak tot een hoger salaris.*
 
 ### Starter of operationeel veiligheidskundige
 

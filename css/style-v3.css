@@ -3097,6 +3097,16 @@ body.sx-page-blog-post .blog-article-content img {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+body.sx-page-blog-post .blog-article-content .sx-content-img {
+  margin: 2rem 0;
+}
+
+body.sx-page-blog-post .blog-article-content .sx-content-img img {
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 body.sx-page-blog-post .blog-article-header {
   background: linear-gradient(135deg, rgba(15, 22, 40, 0.98) 0%, rgba(10, 15, 28, 0.98) 100%);
   color: var(--text-primary);
