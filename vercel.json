@@ -68,6 +68,11 @@
       "destination": "/blog/nebosh-igc-complete-gids-2026/",
       "statusCode": 301
     },
+    {
+      "source": "/blog/veiligheidskundige-salaris-2026/index.html",
+      "destination": "/blog/veiligheidskundige-salaris-2026/",
+      "statusCode": 301
+    },
 
     {
       "source": "/aanmelden",
