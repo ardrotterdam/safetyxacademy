@@ -3133,6 +3133,12 @@ body.sx-page-blog-post .blog-article-header h1 {
   line-height: 1.15;
   margin: 0 0 0.75rem;
   color: var(--text-primary);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-wrap: balance;
 }
 
 body.sx-page-blog-post .blog-article-header .blog-meta {
@@ -3239,6 +3245,11 @@ body.sx-page-blog-post .btn-pill-orange:focus-visible {
   body.sx-page-blog-post .blog-article-header-inner {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  body.sx-page-blog-post .blog-article-header h1 {
+    font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+    letter-spacing: -0.01em;
   }
 
   body.sx-page-blog-post .blog-article-content {
