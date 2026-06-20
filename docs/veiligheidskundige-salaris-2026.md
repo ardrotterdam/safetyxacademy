@@ -126,6 +126,9 @@ Starters zitten vaak rond **€84 per uur**, terwijl ervaren specialisten boven 
 | Offshore wind | €800 – €1.200 per dag |
 | Internationale projecten | €900 – €1.500 per dag |
 
+![ZZP-veiligheidskundige bekijkt uurtarieven en dagtarieven voor HSE-projecten in 2026](images/blog/zzp-veiligheidskundige-uurtarieven-dagtarieven-2026.webp)
+*Zelfstandige veiligheidskundigen kunnen vooral in havens en offshore hogere dagtarieven realiseren.*
+
 De hogere tarieven klinken aantrekkelijk, maar ZZP betekent ook dat je zelf verantwoordelijk bent voor pensioen, verzekeringen, administratie, acquisitie en periodes zonder opdracht.
 
 ## Wat verdient een NEBOSH-veiligheidskundige?

@@ -131,7 +131,7 @@ Deze pagina’s hebben al dedicated blog images; alleen vervangen als kwaliteit 
 |---|---|
 | Arbowet 2026 | `images/blog/arbowet-wijziging-2026-raadpleging-werknemers.webp` (+ 2 inline) |
 | Geopolitiek HSE | `images/blog/safetyx-academy-hse-geopolitical-risk-rotterdam-port.webp` |
-| Veiligheidskundige salaris 2026 | `images/blog/veiligheidskundige-salaris-2026-hse-rotterdam.webp` (+ inline: `mvk-hvk-hse-manager-salaris-veiligheidskundige-2026.webp`) |
+| Veiligheidskundige salaris 2026 | `images/blog/veiligheidskundige-salaris-2026-hse-rotterdam.webp` (+ inline: `mvk-hvk-hse-manager-salaris-veiligheidskundige-2026.webp`, `zzp-veiligheidskundige-uurtarieven-dagtarieven-2026.webp`) |
 | HSE ZZP dagtarieven | `images/blog/hse-zzp-dagtarieven-haven-rotterdam-antwerpen.webp` |
 | NEBOSH vs MVK | `images/blog/nebosh-vs-mvk-jonge-hse-professionals-haven-containerterminal.webp` |
 | Wat is NEBOSH IGC | `images/blog/nebosh-igc-opleiding-veiligheidskundigen-hse-internationale-industrie.webp` |
