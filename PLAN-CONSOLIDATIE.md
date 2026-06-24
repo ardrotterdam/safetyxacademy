@@ -154,7 +154,7 @@ Detail-checklists per fase: `DEPLOY-CHECKLIST.md`.
 | googlea9eb476bc6025f6e.html | Ja | Nee | Behouden | GSC-verificatie. |
 | images/blog/nebosh-student-erasmusbrug-rotterdam-westplein-veiligheidsopleiding.webp | Ja | Ja | V2 → root | Gedeeld pad; V2 leidend bij verschil. |
 | images/blog/veiligheidskundige-opleiding-industriele-inspectie.webp | Ja | Ja | V2 → root | Gedeeld blog-asset. |
-| images/blog/veiligheidskundige-opleiding-nebosh-mkv.jpg | Ja | Nee | Behouden | Alleen root; hoort bij root-only blogpost. |
+| images/blog/veiligheidskundige-opleiding-nebosh-mkv.webp | Ja | Nee | Behouden | WebP (q80, 31,5 KB) als hero van blog/veiligheidskundige-opleiding/. Oude .jpg mag na verificatie weg. |
 | includes/header.html | Ja | Ja | V2 → root | V2-nav; root fetch-include verouderd. |
 | index.html | Ja | Ja | V2 → root | Live = V2 (LIVE-STATUS). GSC #1 homepage (17 clicks). Root = oude template. |
 | jobs.html | Ja | Ja | V2 → root | DECISIONS: nooit → werken-bij. GSC #2: 12 clicks, 331 impr. |
