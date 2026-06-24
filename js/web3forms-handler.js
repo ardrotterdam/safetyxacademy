@@ -7,11 +7,15 @@ document.querySelectorAll('form').forEach(form => {
     const isInput = submitBtn.tagName === 'INPUT';
     const originalText = isInput ? submitBtn.value : submitBtn.textContent;
 
+    const redirectUrl = form.dataset.redirect || '/bedankt.html';
+    const sendingText = form.dataset.sending || 'Versturen...';
+    const errorText = form.dataset.error || 'Er ging iets mis. Mail rechtstreeks naar info@safetyxacademy.nl of probeer opnieuw.';
+
     submitBtn.disabled = true;
     if (isInput) {
-      submitBtn.value = 'Versturen...';
+      submitBtn.value = sendingText;
     } else {
-      submitBtn.textContent = 'Versturen...';
+      submitBtn.textContent = sendingText;
     }
 
     const formData = new FormData(form);
@@ -30,7 +34,7 @@ document.querySelectorAll('form').forEach(form => {
       const result = await response.json();
 
       if (result.success) {
-        window.location.href = '/bedankt.html';
+        window.location.href = redirectUrl;
       } else {
         throw new Error(result.message || 'Submission failed');
       }
@@ -41,7 +45,7 @@ document.querySelectorAll('form').forEach(form => {
       } else {
         submitBtn.textContent = originalText;
       }
-      alert('Er ging iets mis. Mail rechtstreeks naar info@safetyxacademy.nl of probeer opnieuw.');
+      alert(errorText);
       console.error('Form submission error:', error);
     }
   });

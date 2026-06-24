@@ -315,6 +315,56 @@ a.sx-nav-cta:hover,
   color: var(--primary) !important;
 }
 
+/* === Language toggle (NL | EN) === */
+.sx-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid var(--sx-card-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  margin-right: 0.6rem;
+}
+
+.sx-lang-toggle a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 30px;
+  padding: 0 0.6rem;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.sx-lang-toggle a:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.sx-lang-toggle a[aria-current="true"] {
+  background: var(--accent-gold);
+  color: var(--primary);
+}
+
+/* Full-width variant inside the mobile menu panel */
+.sx-lang-toggle--panel {
+  display: flex;
+  width: 100%;
+  margin: 1.25rem 0 0;
+}
+
+.sx-lang-toggle--panel a {
+  flex: 1;
+  height: 44px;
+  font-size: 14px;
+}
+
 #sx-nav-toggle {
   display: none;
   position: relative;
