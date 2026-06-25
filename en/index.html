@@ -647,33 +647,5 @@ starts here.</h2>
  </footer>
 
  <script src="/js/main-v3.js" defer></script>
-
- <!-- Language suggestion for Dutch-speaking visitors (no redirect, suggestion only) -->
- <script>
- (function () {
- try {
- if (localStorage.getItem('langBannerDismissed') === '1') return;
- } catch (e) {}
- var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
- var isNL = langs.some(function (l) { return /^nl\b/i.test(l); });
- if (!isNL) return;
- var bar = document.createElement('div');
- bar.className = 'sx-lang-banner';
- bar.setAttribute('role', 'region');
- bar.setAttribute('aria-label', 'Taalsuggestie');
- bar.innerHTML =
- '<a href="/" hreflang="nl" lang="nl">Deze pagina is ook in het Nederlands beschikbaar &rarr;</a>' +
- '<button type="button" class="sx-lang-banner__close" aria-label="Sluiten">&times;</button>';
- document.body.insertBefore(bar, document.body.firstChild);
- document.body.classList.add('has-lang-banner');
- document.documentElement.style.setProperty('--lang-banner-h', bar.offsetHeight + 'px');
- bar.querySelector('.sx-lang-banner__close').addEventListener('click', function () {
- bar.remove();
- document.body.classList.remove('has-lang-banner');
- document.documentElement.style.removeProperty('--lang-banner-h');
- try { localStorage.setItem('langBannerDismissed', '1'); } catch (e) {}
- });
- })();
- </script>
 </body>
 </html>
