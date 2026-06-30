@@ -46,8 +46,9 @@
  /* Self-contained top bar + language toggle */
  .gv-topbar{position:sticky;top:0;z-index:50;background:#0A0F1C;color:#fff;}
  .gv-topbar__inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
- .gv-logo{font-weight:800;font-size:1.2rem;color:#fff;text-decoration:none;letter-spacing:.2px;}
- .gv-logo span{color:var(--accent);}
+ .sx-logo{display:inline-flex;align-items:baseline;font-weight:800;letter-spacing:-0.01em;line-height:1;text-decoration:none;white-space:nowrap;font-size:1.2rem;}
+ .sx-logo__safety,.sx-logo__academy{color:#f5f0eb;}
+ .sx-logo__x{color:#ff6600;}
  .gv-nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
  .gv-nav a{color:#cbd5e1;font-weight:600;font-size:.95rem;text-decoration:none;}
  .gv-nav a:hover{color:#fff;text-decoration:none;}
@@ -217,7 +218,7 @@
  <!-- Self-contained top bar -->
  <header class="gv-topbar">
  <div class="gv-topbar__inner">
- <a class="gv-logo" href="/en/">SafetyX<span>Academy</span></a>
+ <a href="/en/" class="sx-logo" aria-label="SafetyXAcademy — home"><span class="sx-logo__safety">Safety</span><span class="sx-logo__x">X</span><span class="sx-logo__academy">Academy</span></a>
  <nav class="gv-nav" aria-label="Main navigation">
  <a href="/en/nebosh-course.html">NEBOSH Course</a>
  <a href="/en/hse-jobs.html">Jobs &amp; Contracting</a>

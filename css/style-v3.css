@@ -141,21 +141,32 @@ a.sx-nav-cta:hover,
 }
 
 .sx-logo {
-  font-family: var(--sx-display);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-  color: var(--sx-text);
+  display: inline-flex;
+  align-items: baseline;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  text-decoration: none;
   white-space: nowrap;
 }
 
 .sx-logo:hover {
-  color: var(--sx-text);
+  text-decoration: none;
 }
 
-.sx-logo span {
-  color: var(--sx-text-muted);
-  font-weight: 500;
+.sx-logo__safety,
+.sx-logo__academy {
+  color: var(--text-primary);
+}
+
+.sx-logo__x {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 600px) {
+  .sx-logo {
+    font-size: 1.15rem;
+  }
 }
 
 .sx-nav-desktop {
