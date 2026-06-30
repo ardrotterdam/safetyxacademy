@@ -1,15 +1,13 @@
-#!/usr/bin/env python3
-"""Update NEBOSH nav dropdown: Klassikaal/Online (NL) and Classroom/Online (EN)."""
+#!/usr/bin/env node
+/** Update NEBOSH nav dropdown across all sx-header HTML pages. */
 
-from __future__ import annotations
+const fs = require('fs');
+const path = require('path');
 
-import re
-from pathlib import Path
+const ROOT = path.join(__dirname, '..');
 
-ROOT = Path(__file__).resolve().parent.parent
-
-NL_DESKTOP = {
-    "default": """ <li class="sx-nav-dropdown">
+const NL_DESKTOP = {
+  default: ` <li class="sx-nav-dropdown">
  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
  NEBOSH Opleiding <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
  </button>
@@ -17,8 +15,8 @@ NL_DESKTOP = {
  <li><a href="/nebosh-opleiding.html">Klassikaal (met begeleiding)</a></li>
  <li><a href="/nebosh-igc.html">Online (zelfstudie)</a></li>
  </ul>
- </li>""",
-    "opleiding": """ <li class="sx-nav-dropdown is-open">
+ </li>`,
+  opleiding: ` <li class="sx-nav-dropdown is-open">
  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="true" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
  NEBOSH Opleiding <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
  </button>
@@ -26,8 +24,8 @@ NL_DESKTOP = {
  <li><a href="/nebosh-opleiding.html" aria-current="page">Klassikaal (met begeleiding)</a></li>
  <li><a href="/nebosh-igc.html">Online (zelfstudie)</a></li>
  </ul>
- </li>""",
-    "igc": """ <li class="sx-nav-dropdown is-open">
+ </li>`,
+  igc: ` <li class="sx-nav-dropdown is-open">
  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="true" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
  NEBOSH Opleiding <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
  </button>
@@ -35,11 +33,11 @@ NL_DESKTOP = {
  <li><a href="/nebosh-opleiding.html">Klassikaal (met begeleiding)</a></li>
  <li><a href="/nebosh-igc.html" aria-current="page">Online (zelfstudie)</a></li>
  </ul>
- </li>""",
-}
+ </li>`,
+};
 
-NL_MOBILE = {
-    "default": """ <li class="sx-nav-panel__dropdown">
+const NL_MOBILE = {
+  default: ` <li class="sx-nav-panel__dropdown">
  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
  NEBOSH Opleiding <span aria-hidden="true">▾</span>
  </button>
@@ -47,8 +45,8 @@ NL_MOBILE = {
  <li><a href="/nebosh-opleiding.html">Klassikaal (met begeleiding)</a></li>
  <li><a href="/nebosh-igc.html">Online (zelfstudie)</a></li>
  </ul>
- </li>""",
-    "opleiding": """ <li class="sx-nav-panel__dropdown">
+ </li>`,
+  opleiding: ` <li class="sx-nav-panel__dropdown">
  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="true" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
  NEBOSH Opleiding <span aria-hidden="true">▾</span>
  </button>
@@ -56,8 +54,8 @@ NL_MOBILE = {
  <li><a href="/nebosh-opleiding.html" aria-current="page">Klassikaal (met begeleiding)</a></li>
  <li><a href="/nebosh-igc.html">Online (zelfstudie)</a></li>
  </ul>
- </li>""",
-    "igc": """ <li class="sx-nav-panel__dropdown">
+ </li>`,
+  igc: ` <li class="sx-nav-panel__dropdown">
  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="true" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
  NEBOSH Opleiding <span aria-hidden="true">▾</span>
  </button>
@@ -65,11 +63,11 @@ NL_MOBILE = {
  <li><a href="/nebosh-opleiding.html">Klassikaal (met begeleiding)</a></li>
  <li><a href="/nebosh-igc.html" aria-current="page">Online (zelfstudie)</a></li>
  </ul>
- </li>""",
-}
+ </li>`,
+};
 
-EN_DESKTOP = {
-    "default": """ <li class="sx-nav-dropdown">
+const EN_DESKTOP = {
+  default: ` <li class="sx-nav-dropdown">
  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
  NEBOSH Training <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
  </button>
@@ -77,8 +75,8 @@ EN_DESKTOP = {
  <li><a href="/en/nebosh-course.html">Classroom (with guidance)</a></li>
  <li><a href="/en/nebosh-igc.html">Online (self-study)</a></li>
  </ul>
- </li>""",
-    "course": """ <li class="sx-nav-dropdown is-open">
+ </li>`,
+  course: ` <li class="sx-nav-dropdown is-open">
  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="true" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
  NEBOSH Training <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
  </button>
@@ -86,8 +84,8 @@ EN_DESKTOP = {
  <li><a href="/en/nebosh-course.html" aria-current="page">Classroom (with guidance)</a></li>
  <li><a href="/en/nebosh-igc.html">Online (self-study)</a></li>
  </ul>
- </li>""",
-    "igc": """ <li class="sx-nav-dropdown is-open">
+ </li>`,
+  igc: ` <li class="sx-nav-dropdown is-open">
  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="true" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
  NEBOSH Training <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
  </button>
@@ -95,11 +93,11 @@ EN_DESKTOP = {
  <li><a href="/en/nebosh-course.html">Classroom (with guidance)</a></li>
  <li><a href="/en/nebosh-igc.html" aria-current="page">Online (self-study)</a></li>
  </ul>
- </li>""",
-}
+ </li>`,
+};
 
-EN_MOBILE = {
-    "default": """ <li class="sx-nav-panel__dropdown">
+const EN_MOBILE = {
+  default: ` <li class="sx-nav-panel__dropdown">
  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
  NEBOSH Training <span aria-hidden="true">▾</span>
  </button>
@@ -107,8 +105,8 @@ EN_MOBILE = {
  <li><a href="/en/nebosh-course.html">Classroom (with guidance)</a></li>
  <li><a href="/en/nebosh-igc.html">Online (self-study)</a></li>
  </ul>
- </li>""",
-    "course": """ <li class="sx-nav-panel__dropdown">
+ </li>`,
+  course: ` <li class="sx-nav-panel__dropdown">
  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="true" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
  NEBOSH Training <span aria-hidden="true">▾</span>
  </button>
@@ -116,8 +114,8 @@ EN_MOBILE = {
  <li><a href="/en/nebosh-course.html" aria-current="page">Classroom (with guidance)</a></li>
  <li><a href="/en/nebosh-igc.html">Online (self-study)</a></li>
  </ul>
- </li>""",
-    "igc": """ <li class="sx-nav-panel__dropdown">
+ </li>`,
+  igc: ` <li class="sx-nav-panel__dropdown">
  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="true" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
  NEBOSH Training <span aria-hidden="true">▾</span>
  </button>
@@ -125,78 +123,69 @@ EN_MOBILE = {
  <li><a href="/en/nebosh-course.html">Classroom (with guidance)</a></li>
  <li><a href="/en/nebosh-igc.html" aria-current="page">Online (self-study)</a></li>
  </ul>
- </li>""",
+ </li>`,
+};
+
+const DESKTOP_RE =
+  / <li class="sx-nav-dropdown(?: is-open)?">\s*<button type="button" class="sx-nav-dropdown__toggle"[^>]*id="sx-nav-nebosh-btn"[^>]*>.*?<\/button>\s*<ul id="sx-nav-nebosh-menu" class="sx-nav-dropdown__menu" role="list">.*?<\/ul>\s*<\/li>/s;
+
+const MOBILE_RE =
+  / <li class="sx-nav-panel__dropdown">\s*<button type="button" class="sx-nav-panel__subtoggle"[^>]*id="sx-nav-panel-nebosh-btn"[^>]*>.*?<\/button>\s*<ul id="sx-nav-panel-nebosh" class="sx-nav-panel__submenu"(?: hidden)?>.*?<\/ul>\s*<\/li>/s;
+
+function pageVariant(relPath) {
+  const norm = relPath.replace(/\\/g, '/');
+  if (norm === 'nebosh-igc.html') return 'igc';
+  if (norm === 'nebosh-opleiding.html') return 'opleiding';
+  if (norm === 'en/nebosh-igc.html') return 'igc';
+  if (norm === 'en/nebosh-course.html') return 'course';
+  return 'default';
 }
 
-DESKTOP_RE = re.compile(
-    r' <li class="sx-nav-dropdown(?: is-open)?">\s*'
-    r'<button type="button" class="sx-nav-dropdown__toggle"[^>]*id="sx-nav-nebosh-btn"[^>]*>.*?</button>\s*'
-    r'<ul id="sx-nav-nebosh-menu" class="sx-nav-dropdown__menu" role="list">.*?</ul>\s*'
-    r'</li>',
-    re.DOTALL,
-)
+function walkHtml(dir, files = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name === 'node_modules' || entry.name === 'rotterdamshop' || entry.name === '.next') {
+      continue;
+    }
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      walkHtml(full, files);
+    } else if (entry.name.endsWith('.html')) {
+      files.push(path.relative(ROOT, full));
+    }
+  }
+  return files;
+}
 
-MOBILE_RE = re.compile(
-    r' <li class="sx-nav-panel__dropdown">\s*'
-    r'<button type="button" class="sx-nav-panel__subtoggle"[^>]*id="sx-nav-panel-nebosh-btn"[^>]*>.*?</button>\s*'
-    r'<ul id="sx-nav-panel-nebosh" class="sx-nav-panel__submenu"(?: hidden)?>.*?</ul>\s*'
-    r'</li>',
-    re.DOTALL,
-)
+function updateFile(relPath) {
+  const full = path.join(ROOT, relPath);
+  let text = fs.readFileSync(full, 'utf8');
+  if (!text.includes('sx-header')) return false;
 
+  const variant = pageVariant(relPath);
+  const en = relPath.replace(/\\/g, '/').startsWith('en/');
+  const original = text;
 
-def page_variant(rel_path: str) -> str:
-    norm = rel_path.replace("\\", "/")
-    if norm == "nebosh-igc.html":
-        return "igc"
-    if norm == "nebosh-opleiding.html":
-        return "opleiding"
-    if norm == "en/nebosh-igc.html":
-        return "igc"
-    if norm == "en/nebosh-course.html":
-        return "course"
-    return "default"
+  if (en) {
+    text = text.replace(DESKTOP_RE, EN_DESKTOP[variant]);
+    text = text.replace(MOBILE_RE, EN_MOBILE[variant]);
+  } else {
+    text = text.replace(DESKTOP_RE, NL_DESKTOP[variant]);
+    text = text.replace(MOBILE_RE, NL_MOBILE[variant]);
+  }
 
+  if (text !== original) {
+    fs.writeFileSync(full, text, 'utf8');
+    return true;
+  }
+  return false;
+}
 
-def is_en_page(rel_path: str) -> bool:
-    return rel_path.replace("\\", "/").startswith("en/")
+const updated = [];
+for (const file of walkHtml(ROOT)) {
+  if (updateFile(file)) updated.push(file.replace(/\\/g, '/'));
+}
 
-
-def update_file(path: Path) -> bool:
-    rel = str(path.relative_to(ROOT))
-    text = path.read_text(encoding="utf-8")
-    if "sx-header" not in text:
-        return False
-
-    variant = page_variant(rel)
-    en = is_en_page(rel)
-    original = text
-
-    if en:
-        text = DESKTOP_RE.sub(EN_DESKTOP[variant], text, count=1)
-        text = MOBILE_RE.sub(EN_MOBILE[variant], text, count=1)
-    else:
-        text = DESKTOP_RE.sub(NL_DESKTOP[variant], text, count=1)
-        text = MOBILE_RE.sub(NL_MOBILE[variant], text, count=1)
-
-    if text != original:
-        path.write_text(text, encoding="utf-8")
-        return True
-    return False
-
-
-def main() -> None:
-    updated = []
-    for path in ROOT.rglob("*.html"):
-        if "rotterdamshop" in path.parts:
-            continue
-        if update_file(path):
-            updated.append(path.relative_to(ROOT))
-
-    print(f"Updated {len(updated)} file(s):")
-    for p in sorted(updated):
-        print(f"  - {p}")
-
-
-if __name__ == "__main__":
-    main()
+console.log(`Updated ${updated.length} file(s):`);
+for (const f of updated.sort()) {
+  console.log(`  - ${f}`);
+}
