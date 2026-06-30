@@ -82,6 +82,17 @@ for (const file of htmlFiles) {
   if (content.includes('NEBOSH Course <span class="sx-nav-dropdown__caret"')) {
     errors.push(`${file}: still uses old NEBOSH Course dropdown label (expected NEBOSH Training)`);
   }
+  if (!content.includes('id="sx-nav-jobs-menu"')) {
+    errors.push(`${file}: missing Jobs dropdown menu`);
+  }
+  if (!content.includes('id="sx-nav-jobs-btn"')) {
+    errors.push(`${file}: missing Jobs dropdown toggle`);
+  }
+  const jobsLabel = isEn ? 'Contracting assignments' : 'ZZP-opdrachten';
+  const workAtLabel = isEn ? 'Work at SafetyX' : 'Werken bij SafetyX';
+  if (!content.includes(jobsLabel) || !content.includes(workAtLabel)) {
+    errors.push(`${file}: missing Jobs dropdown subitems (${jobsLabel}, ${workAtLabel})`);
+  }
 }
 
 // Active state on landing pages
