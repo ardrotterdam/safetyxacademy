@@ -4,6 +4,8 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+ <meta name="theme-color" content="#0A0F1C" />
+
  <!-- Google Analytics -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
  <script>
@@ -35,8 +37,11 @@
  <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg">
  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 
- <!-- Header CSS -->
- <link rel="stylesheet" href="/css/header.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+
+ <link rel="stylesheet" href="../../css/style-v3.css" />
 
  <style>
  :root{
@@ -45,7 +50,7 @@
  }
  *{margin:0;padding:0;box-sizing:border-box;}
  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.65;color:var(--tx);background:#fafafa;}
-.hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:60px 24px;text-align:center;}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:clamp(6rem,14vw,8rem) 24px 60px;text-align:center;}
 .hero h1{font-size:2.5rem;line-height:1.25;margin-bottom:16px;font-weight:700;}
 .hero p{font-size:1.2rem;color:#cbd5e1;max-width:800px;margin:0 auto 24px;}
 .hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.95rem;color:#94a3b8;}
@@ -186,29 +191,90 @@
  }
  </script>
 </head>
-<body>
+<body class="sx-page-blog-post">
+ <div class="sx-grain" aria-hidden="true"></div>
 
-<!-- HEADER INCLUDE -->
-<div id="header-include"></div>
-<script>
- fetch('/includes/header.html')
-.then(r => r.text())
-.then(html => {
- const el = document.getElementById('header-include');
- el.outerHTML = html;
- setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
- })
-.catch(() => console.error('Header failed'));
-</script>
+ <header id="sx-header">
+ <div class="sx-header__inner">
+ <a class="sx-logo" href="/" aria-label="SafetyXAcademy Home">SafetyX<span>Academy</span></a>
+ <nav class="sx-nav-desktop" aria-label="Hoofdnavigatie">
+ <ul>
+ <li class="sx-nav-dropdown">
+ <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
+ NEBOSH Opleiding <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
+ </button>
+ <ul id="sx-nav-nebosh-menu" class="sx-nav-dropdown__menu" role="list">
+ <li><a href="/nebosh-igc.html">NEBOSH International Certificate</a></li>
+ </ul>
+ </li>
+ <li class="sx-nav-dropdown">
+ <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-oefenen-menu" id="sx-nav-oefenen-btn">
+ Oefenen <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
+ </button>
+ <ul id="sx-nav-oefenen-menu" class="sx-nav-dropdown__menu" role="list">
+ <li><a href="/nebosh-quiz.html">Gratis NEBOSH Quiz</a></li>
+ <li><a href="/nebosh-ig1-oefenvragen.html">IG1 Oefenvragen</a></li>
+ <li><a href="/nebosh-ig2-risk-assessment.html">IG2 Praktijkopdracht</a></li>
+ <li><a href="/nebosh-benelux-ports.html">Benelux Havens</a></li>
+ </ul>
+ </li>
+ <li><a href="../../jobs.html">Jobs &amp; ZZP</a></li>
+ <li><a href="../../over-ons.html">Over Ons</a></li>
+ <li><a href="/blog/" aria-current="page">Blog</a></li>
+ </ul>
+ </nav>
+ <div class="sx-nav-cta-wrap">
+ <div class="sx-lang-toggle" role="group" aria-label="Taal / Language">
+ <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+ <a href="/en/blog/nebosh-student-guide-rotterdam/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+ </div>
+ <a class="sx-nav-cta" href="../../aanmelden.html">Aanmelden</a>
+ </div>
+ <div class="sx-lang-toggle sx-lang-toggle--mobile" role="group" aria-label="Taal / Language">
+ <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+ <a href="/en/blog/nebosh-student-guide-rotterdam/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+ </div>
+ <button type="button" id="sx-nav-toggle" aria-expanded="false" aria-controls="sx-nav-panel" aria-label="Menu openen">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ <div id="sx-nav-panel">
+ <ul>
+ <li class="sx-nav-panel__dropdown">
+ <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
+ NEBOSH Opleiding <span aria-hidden="true">▾</span>
+ </button>
+ <ul id="sx-nav-panel-nebosh" class="sx-nav-panel__submenu" hidden>
+ <li><a href="/nebosh-igc.html">NEBOSH International Certificate</a></li>
+ </ul>
+ </li>
+ <li class="sx-nav-panel__dropdown">
+ <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-oefenen" id="sx-nav-panel-oefenen-btn">
+ Oefenen <span aria-hidden="true">▾</span>
+ </button>
+ <ul id="sx-nav-panel-oefenen" class="sx-nav-panel__submenu" hidden>
+ <li><a href="/nebosh-quiz.html">Gratis NEBOSH Quiz</a></li>
+ <li><a href="/nebosh-ig1-oefenvragen.html">IG1 Oefenvragen</a></li>
+ <li><a href="/nebosh-ig2-risk-assessment.html">IG2 Praktijkopdracht</a></li>
+ <li><a href="/nebosh-benelux-ports.html">Benelux Havens</a></li>
+ </ul>
+ </li>
+ <li><a href="../../jobs.html">Jobs &amp; ZZP</a></li>
+ <li><a href="../../over-ons.html">Over Ons</a></li>
+ <li><a href="/blog/" aria-current="page">Blog</a></li>
+ </ul>
+ <div class="sx-lang-toggle sx-lang-toggle--panel" role="group" aria-label="Taal / Language">
+ <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+ <a href="/en/blog/nebosh-student-guide-rotterdam/" hreflang="en" lang="en">EN</a>
+ </div>
+ <a class="sx-nav-cta" href="../../aanmelden.html">Aanmelden</a>
+ </div>
+ </header>
+
+ <main id="main">
 
  <!-- Hero -->
  <section class="hero">
- <p style="margin-bottom:16px;">
- <span style="display:inline-flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;font-size:.85rem;font-weight:700;">
- <a href="/blog/nebosh-student-guide-rotterdam-lunch-landmarks/" hreflang="nl" lang="nl" aria-current="true" style="padding:5px 14px;background:var(--accent);color:#fff;">NL</a>
- <a href="/en/blog/nebosh-student-guide-rotterdam/" hreflang="en" lang="en" style="padding:5px 14px;color:#cbd5e1;" aria-label="Switch to English">EN</a>
- </span>
- </p>
  <h1>🗺️ NEBOSH Student Guide:<br>Lunch, Landmarks & Life Rond Westplein 12</h1>
  <p>Ontdek waarom onze trainingslocatie nabij de Erasmusbrug de perfecte plek is om je <a href="/#training">NEBOSH IGC</a> te halen.</p>
  <div class="hero-meta">
@@ -588,6 +654,8 @@
  </div>
  </article>
 
+ </main>
+
  <!-- Footer -->
  <footer>
  <div style="max-width:1200px;margin:0 auto;">
@@ -633,6 +701,6 @@
  });
  </script>
 
- <script src="/js/header.js"></script>
+ <script src="../../js/main-v3.js" defer></script>
 </body>
 </html>

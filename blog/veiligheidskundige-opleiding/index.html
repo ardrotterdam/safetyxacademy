@@ -23,8 +23,25 @@
   <meta name="twitter:description" content="NEBOSH vs MKV in 2026: kosten, salarissen, carrièrepaden en keuzehulp.">
   <meta name="twitter:image" content="https://safetyxacademy.nl/images/blog/veiligheidskundige-opleiding-nebosh-mkv.webp">
 
-  <!-- Header CSS -->
-  <link rel="stylesheet" href="/css/header.css">
+  <meta name="theme-color" content="#0A0F1C" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JCVXBQ0W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91JCVXBQ0W');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/style-v3.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-svg.svg" />
 
   <!-- Styling -->
   <style>
@@ -32,7 +49,7 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; line-height:1.65; color:var(--tx); background:var(--bg); }
 
-    .wrap { max-width:980px; margin:0 auto; padding:24px; }
+    .wrap { max-width:980px; margin:0 auto; padding: clamp(5.5rem, 12vw, 7rem) 24px 24px; }
     header { margin:40px 0 32px; }
 
     .badge { display:inline-block; font-size:.8rem; background:#ecfdf5; color:#065f46; border:1px solid #86efac; border-radius:999px; padding:4px 10px; margin:0 4px 8px 0; }
@@ -226,20 +243,87 @@
     }
   </style>
 </head>
-<body>
+<body class="sx-page-blog-post">
+  <div class="sx-grain" aria-hidden="true"></div>
 
-<!-- HEADER INCLUDE -->
-<div id="header-include"></div>
-<script>
-  fetch('/includes/header.html')
-    .then(r => r.text())
-    .then(html => {
-      const el = document.getElementById('header-include');
-      el.outerHTML = html;
-      setTimeout(() => window.dispatchEvent(new Event('headerloaded')), 200);
-    })
-    .catch(() => console.error('Header failed'));
-</script>
+  <header id="sx-header">
+  <div class="sx-header__inner">
+  <a class="sx-logo" href="/" aria-label="SafetyXAcademy Home">SafetyX<span>Academy</span></a>
+  <nav class="sx-nav-desktop" aria-label="Hoofdnavigatie">
+  <ul>
+  <li class="sx-nav-dropdown">
+  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
+  NEBOSH Opleiding <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
+  </button>
+  <ul id="sx-nav-nebosh-menu" class="sx-nav-dropdown__menu" role="list">
+  <li><a href="/nebosh-igc.html">NEBOSH International Certificate</a></li>
+  </ul>
+  </li>
+  <li class="sx-nav-dropdown">
+  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-oefenen-menu" id="sx-nav-oefenen-btn">
+  Oefenen <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
+  </button>
+  <ul id="sx-nav-oefenen-menu" class="sx-nav-dropdown__menu" role="list">
+  <li><a href="/nebosh-quiz.html">Gratis NEBOSH Quiz</a></li>
+  <li><a href="/nebosh-ig1-oefenvragen.html">IG1 Oefenvragen</a></li>
+  <li><a href="/nebosh-ig2-risk-assessment.html">IG2 Praktijkopdracht</a></li>
+  <li><a href="/nebosh-benelux-ports.html">Benelux Havens</a></li>
+  </ul>
+  </li>
+  <li><a href="../../jobs.html">Jobs &amp; ZZP</a></li>
+  <li><a href="../../over-ons.html">Over Ons</a></li>
+  <li><a href="/blog/" aria-current="page">Blog</a></li>
+  </ul>
+  </nav>
+  <div class="sx-nav-cta-wrap">
+  <div class="sx-lang-toggle" role="group" aria-label="Taal / Language">
+  <a href="/blog/veiligheidskundige-opleiding/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+  <a href="/en/blog/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+  </div>
+  <a class="sx-nav-cta" href="../../aanmelden.html">Aanmelden</a>
+  </div>
+  <div class="sx-lang-toggle sx-lang-toggle--mobile" role="group" aria-label="Taal / Language">
+  <a href="/blog/veiligheidskundige-opleiding/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+  <a href="/en/blog/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+  </div>
+  <button type="button" id="sx-nav-toggle" aria-expanded="false" aria-controls="sx-nav-panel" aria-label="Menu openen">
+  <span></span><span></span><span></span>
+  </button>
+  </div>
+  <div id="sx-nav-panel">
+  <ul>
+  <li class="sx-nav-panel__dropdown">
+  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
+  NEBOSH Opleiding <span aria-hidden="true">▾</span>
+  </button>
+  <ul id="sx-nav-panel-nebosh" class="sx-nav-panel__submenu" hidden>
+  <li><a href="/nebosh-igc.html">NEBOSH International Certificate</a></li>
+  </ul>
+  </li>
+  <li class="sx-nav-panel__dropdown">
+  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-oefenen" id="sx-nav-panel-oefenen-btn">
+  Oefenen <span aria-hidden="true">▾</span>
+  </button>
+  <ul id="sx-nav-panel-oefenen" class="sx-nav-panel__submenu" hidden>
+  <li><a href="/nebosh-quiz.html">Gratis NEBOSH Quiz</a></li>
+  <li><a href="/nebosh-ig1-oefenvragen.html">IG1 Oefenvragen</a></li>
+  <li><a href="/nebosh-ig2-risk-assessment.html">IG2 Praktijkopdracht</a></li>
+  <li><a href="/nebosh-benelux-ports.html">Benelux Havens</a></li>
+  </ul>
+  </li>
+  <li><a href="../../jobs.html">Jobs &amp; ZZP</a></li>
+  <li><a href="../../over-ons.html">Over Ons</a></li>
+  <li><a href="/blog/" aria-current="page">Blog</a></li>
+  </ul>
+  <div class="sx-lang-toggle sx-lang-toggle--panel" role="group" aria-label="Taal / Language">
+  <a href="/blog/veiligheidskundige-opleiding/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+  <a href="/en/blog/" hreflang="en" lang="en">EN</a>
+  </div>
+  <a class="sx-nav-cta" href="../../aanmelden.html">Aanmelden</a>
+  </div>
+  </header>
+
+  <main id="main">
 
   <!-- Article -->
   <article class="wrap">
@@ -534,6 +618,8 @@
     </div>
   </div>
 
+  </main>
+
   <!-- Footer -->
   <footer>
     <p>© 2026 SafetyXAcademy • <a href="/#privacy">Privacy</a> • <a href="/blog/">Blog</a></p>
@@ -606,6 +692,6 @@
     });
   </script>
 
-  <script src="/js/header.js"></script>
+  <script src="../../js/main-v3.js" defer></script>
 </body>
 </html>
