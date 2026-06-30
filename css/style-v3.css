@@ -293,6 +293,17 @@ a.sx-nav-cta:hover,
   background: rgba(255, 102, 0, 0.08);
 }
 
+.sx-nav-dropdown__menu a[aria-current="page"],
+.sx-nav-dropdown__toggle[aria-current="page"],
+.sx-nav-desktop a[aria-current="page"] {
+  color: var(--accent-gold);
+}
+
+#sx-nav-panel .sx-nav-panel__submenu a[aria-current="page"],
+#sx-nav-panel .sx-nav-panel__subtoggle[aria-current="page"] {
+  color: var(--accent-gold);
+}
+
 .sx-nav-cta {
   display: inline-flex;
   align-items: center;
