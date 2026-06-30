@@ -171,14 +171,14 @@ a.sx-nav-cta:hover,
   align-items: center;
 }
 
-.sx-nav-desktop a {
+.sx-nav-desktop > ul > li > a {
   color: var(--text-muted);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-.sx-nav-desktop a:hover {
+.sx-nav-desktop > ul > li > a:hover {
   color: var(--text-primary);
 }
 
@@ -288,14 +288,25 @@ a.sx-nav-cta:hover,
   transition: color 0.2s ease, background 0.2s ease;
 }
 
+.sx-nav-dropdown:hover .sx-nav-dropdown__menu a:not(:hover):not([aria-current="page"]),
+.sx-nav-dropdown.is-open .sx-nav-dropdown__menu a:not(:hover):not([aria-current="page"]),
+.sx-nav-dropdown:focus-within .sx-nav-dropdown__menu a:not(:hover):not([aria-current="page"]) {
+  color: rgba(245, 240, 235, 0.88);
+  text-decoration: none;
+}
+
 .sx-nav-dropdown__menu a:hover {
   color: var(--accent-gold);
   background: rgba(255, 102, 0, 0.08);
+  text-decoration: none;
 }
 
-.sx-nav-dropdown__menu a[aria-current="page"],
+.sx-nav-dropdown__menu a[aria-current="page"] {
+  color: var(--accent-gold);
+}
+
 .sx-nav-dropdown__toggle[aria-current="page"],
-.sx-nav-desktop a[aria-current="page"] {
+.sx-nav-desktop > ul > li > a[aria-current="page"] {
   color: var(--accent-gold);
 }
 
@@ -594,11 +605,13 @@ body.has-lang-banner #sx-header {
     font-weight: 500;
     color: rgba(255, 255, 255, 0.92);
     font-family: var(--sx-font);
+    text-decoration: none;
   }
 
   #sx-nav-panel .sx-nav-panel__submenu a:hover,
   #sx-nav-panel .sx-nav-panel__submenu a:active {
     color: var(--accent-gold);
+    text-decoration: none;
   }
 
   #sx-nav-panel .sx-nav-cta {
