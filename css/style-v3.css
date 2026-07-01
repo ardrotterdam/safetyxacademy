@@ -3084,14 +3084,24 @@ body.sx-page-werken main {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.15em;
+  top: 0.35rem;
   width: 1.1rem;
   height: 1.1rem;
-  border: 2px solid var(--accent-gold);
-  border-radius: 4px;
-  background:
-    linear-gradient(135deg, transparent 42%, var(--accent-gold) 42%, var(--accent-gold) 58%, transparent 58%),
-    linear-gradient(45deg, transparent 42%, var(--accent-gold) 42%, var(--accent-gold) 58%, transparent 58%);
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+.sx-vac__points li::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.55rem;
+  width: 5px;
+  height: 9px;
+  border: solid var(--sx-success);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .sx-vac__cta {
