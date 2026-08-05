@@ -123,6 +123,16 @@
  <nav class="sx-nav-desktop" aria-label="Hoofdnavigatie">
  <ul>
  <li class="sx-nav-dropdown">
+ <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-vca-menu" id="sx-nav-vca-btn">
+ VCA <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
+ </button>
+ <ul id="sx-nav-vca-menu" class="sx-nav-dropdown__menu" role="list">
+ <li><a href="/vca.html">VCA overzicht</a></li>
+ <li><a href="/b-vca.html">B-VCA</a></li>
+ <li><a href="/vol-vca.html">VOL-VCA</a></li>
+ </ul>
+ </li>
+ <li class="sx-nav-dropdown">
  <button type="button" class="sx-nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="sx-nav-nebosh-menu" id="sx-nav-nebosh-btn">
  NEBOSH Opleiding <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span>
  </button>
@@ -176,6 +186,16 @@ Jobs &amp; ZZP <span class="sx-nav-dropdown__caret" aria-hidden="true">▾</span
 
  <div id="sx-nav-panel">
  <ul>
+ <li class="sx-nav-panel__dropdown">
+ <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-vca" id="sx-nav-panel-vca-btn">
+ VCA <span aria-hidden="true">▾</span>
+ </button>
+ <ul id="sx-nav-panel-vca" class="sx-nav-panel__submenu" hidden>
+ <li><a href="/vca.html">VCA overzicht</a></li>
+ <li><a href="/b-vca.html">B-VCA</a></li>
+ <li><a href="/vol-vca.html">VOL-VCA</a></li>
+ </ul>
+ </li>
  <li class="sx-nav-panel__dropdown">
  <button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-nebosh" id="sx-nav-panel-nebosh-btn">
  NEBOSH Opleiding <span aria-hidden="true">▾</span>
@@ -291,11 +311,24 @@ Internationale carrière.</h1>
  <span class="sx-eyebrow sx-reveal">Onze pijlers</span>
  <h2 class="sx-h2 sx-reveal" id="sx-pillars-heading">Alles voor jouw HSE-carrière</h2>
  <p class="sx-lead sx-reveal">
- Opleiding, opdrachten en begeleiding — één lijn van klaslokaal naar internationale projecten.
+ Opleiding, opdrachten en begeleiding — van praktische VCA-basisveiligheid tot internationale
+ NEBOSH-ontwikkeling.
  </p>
 
  <div class="sx-pillars__grid">
  <article class="sx-glass sx-reveal" data-stagger="1">
+ <svg class="sx-glass__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+ <path d="M12 3l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z" stroke-linejoin="round"/>
+ <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+ </svg>
+ <h3>VCA cursus Rotterdam</h3>
+ <p>
+ B-VCA en VOL-VCA in voorbereiding voor medewerkers en leidinggevenden in haven, industrie en techniek.
+ </p>
+ <a class="sx-glass__link" href="/vca.html">Bekijk VCA-aanbod →</a>
+ </article>
+
+ <article class="sx-glass sx-reveal" data-stagger="2">
  <svg class="sx-glass__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
  <path d="M4 19V5M4 19H20M4 19H2M4 5H2M4 5L12 2L20 5M20 5H22M20 5V19M20 19H22M20 19H4M9 9.5H15M9 13H15" stroke-linecap="round" stroke-linejoin="round"/>
  </svg>
@@ -304,10 +337,10 @@ Internationale carrière.</h1>
  Klassikale opleiding in Veerhaven Rotterdam. €3.500 all-in, kleine groepen,
  Nederlandstalige begeleiding.
  </p>
- <a class="sx-glass__link" href="nebosh-opleiding.html">Meer info →</a>
+ <a class="sx-glass__link" href="nebosh-opleiding.html">Bekijk NEBOSH IGC →</a>
  </article>
 
- <article class="sx-glass sx-reveal" data-stagger="2">
+ <article class="sx-glass sx-reveal" data-stagger="3">
  <svg class="sx-glass__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
  <rect x="3" y="7" width="18" height="14" rx="2"/>
  <path d="M8 7V5a4 4 0 0 1 8 0v2" stroke-linecap="round"/>
@@ -319,7 +352,7 @@ Internationale carrière.</h1>
  <a class="sx-glass__link" href="jobs.html">Bekijk opdrachten →</a>
  </article>
 
- <article class="sx-glass sx-reveal" data-stagger="3">
+ <article class="sx-glass sx-reveal" data-stagger="4">
  <svg class="sx-glass__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
  <path d="M12 3v3M5.64 5.64l2.12 2.12M3 12h3M5.64 18.36l2.12-2.12M12 21v-3M18.36 18.36l-2.12-2.12M21 12h-3M18.36 5.64l-2.12 2.12" stroke-linecap="round"/>
  <path d="M12 8l4 6H8l4-6z" stroke-linejoin="round"/>
@@ -328,7 +361,7 @@ Internationale carrière.</h1>
  <p>
  CV-optimalisatie, LinkedIn-profiel en voorbereiding op gesprekken. Van diploma naar opdracht.
  </p>
- <a class="sx-glass__link" href="over-ons.html">Meer info →</a>
+ <a class="sx-glass__link" href="over-ons.html">Over SafetyX →</a>
  </article>
  </div>
  </div>
@@ -590,34 +623,28 @@ begint hier.</h2>
  <p>Studeer lokaal, werk wereldwijd.</p>
  </div>
  <div>
- <h3>Opleiding</h3>
+ <h3>Opleidingen</h3>
  <ul>
- <li><a href="nebosh-opleiding.html">NEBOSH IGC</a></li>
- <li><a href="nebosh-quiz.html">Oefentest</a></li>
- <li><a href="nebosh-benelux-ports.html">Benelux havens</a></li>
+ <li><a href="/vca.html">VCA</a></li>
+ <li><a href="/b-vca.html">B-VCA</a></li>
+ <li><a href="/vol-vca.html">VOL-VCA</a></li>
+ <li><a href="/nebosh-opleiding.html">NEBOSH IGC</a></li>
  </ul>
  </div>
  <div>
  <h3>Carrière</h3>
  <ul>
- <li class="sx-nav-panel__dropdown">
-<button type="button" class="sx-nav-panel__subtoggle" aria-expanded="false" aria-controls="sx-nav-panel-jobs" id="sx-nav-panel-jobs-btn">
-Jobs &amp; ZZP <span aria-hidden="true">▾</span>
-</button>
-<ul id="sx-nav-panel-jobs" class="sx-nav-panel__submenu" hidden>
-<li><a href="/jobs.html">ZZP-opdrachten</a></li>
-<li><a href="/werken-bij.html">Werken bij SafetyX</a></li>
-</ul>
-</li>
+ <li><a href="/jobs.html">ZZP-opdrachten</a></li>
  <li><a href="werken-bij.html">Werken bij</a></li>
  <li><a href="nebosh-offshore.html">Offshore</a></li>
  </ul>
  </div>
  <div>
- <h3>Content</h3>
+ <h3>SafetyX</h3>
  <ul>
- <li><a href="/blog/">Blog</a></li>
  <li><a href="over-ons.html">Over ons</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="nebosh-quiz.html">NEBOSH oefentest</a></li>
  </ul>
  </div>
  <div>
