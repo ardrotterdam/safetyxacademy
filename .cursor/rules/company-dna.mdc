@@ -1,0 +1,32 @@
+---
+description: SafetyXAcademy brand DNA — read COMPANY-DNA.md before brand, design, copy, email, SEO, or UI changes
+alwaysApply: true
+---
+
+# SafetyXAcademy Company DNA
+
+Before any brand-facing work (brand naming, visual identity, design, copy, email, SEO, UI, or marketing assets), read and follow the repository root file:
+
+`COMPANY-DNA.md`
+
+That file is the permanent source of truth. Do not invent brand spellings or redesign the identity without explicit owner instruction.
+
+## Quick locks
+
+| Rule | Value |
+|------|--------|
+| Written brand name | `SafetyXAcademy` |
+| Visual wordmark | `safetyXacademy` (`X` in Safety Orange) |
+| Safety Orange | `#FF6600` (use existing design token if present) |
+| SEO title suffix | `\| SafetyXAcademy` |
+| Email sender | `SafetyXAcademy <info@safetyxacademy.nl>` |
+| Domain | `safetyxacademy.nl` |
+
+## Agent behaviour
+
+1. Preserve `SafetyXAcademy` in prose, SEO, schema, email, legal, and forms.
+2. Preserve `safetyXacademy` where a styled logo treatment is appropriate; only the X is orange.
+3. Never use variants such as `Safety X Academy`, `SafetyXacademy`, or `safetyxacademy` as the written brand name.
+4. Do not globally replace brand names or redesign working components unless explicitly asked.
+5. If existing code or copy conflicts with `COMPANY-DNA.md`, flag the inconsistency — do not silently “fix” the brand to match old pages.
+6. Only update `COMPANY-DNA.md` when the owner explicitly instructs a DNA change.
