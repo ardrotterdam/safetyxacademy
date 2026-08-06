@@ -541,63 +541,63 @@
 
  <div class="form-row">
  <div class="form-group">
- <label for="voornaam">Voornaam <span class="required">*</span></label>
- <input type="text" id="voornaam" name="voornaam" required placeholder="Bijv. Alex" autocomplete="given-name">
+ <label for="voornaam">First name <span class="required">*</span></label>
+ <input type="text" id="voornaam" name="voornaam" required placeholder="e.g. Alex" autocomplete="given-name">
  </div>
  <div class="form-group">
- <label for="achternaam">Achternaam <span class="required">*</span></label>
- <input type="text" id="achternaam" name="achternaam" required placeholder="Bijv. Jensen" autocomplete="family-name">
+ <label for="achternaam">Last name <span class="required">*</span></label>
+ <input type="text" id="achternaam" name="achternaam" required placeholder="e.g. Johnson" autocomplete="family-name">
  </div>
  </div>
 
  <div class="form-row">
  <div class="form-group">
- <label for="email">E-mail <span class="required">*</span></label>
+ <label for="email">Email <span class="required">*</span></label>
  <input type="email" id="email" name="email" required placeholder="alex.jensen@email.com" autocomplete="email">
  </div>
  <div class="form-group">
- <label for="telefoon">Telefoon</label>
+ <label for="telefoon">Phone</label>
  <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 12345678" autocomplete="tel">
  </div>
  </div>
 
  <div class="form-group">
- <label for="bedrijfsnaam">Bedrijfsnaam</label>
- <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" placeholder="Optioneel" autocomplete="organization">
+ <label for="bedrijfsnaam">Company name</label>
+ <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" placeholder="Optional" autocomplete="organization">
  </div>
 
  <div class="form-row">
  <div class="form-group">
- <label for="rol">Rol <span class="required">*</span></label>
+ <label for="rol">Role <span class="required">*</span></label>
  <select id="rol" name="rol" required>
- <option value="">-- Kies --</option>
- <option value="Medewerker">Medewerker</option>
- <option value="Supervisor / leidinggevende">Supervisor / leidinggevende</option>
- <option value="ZZP'er">ZZP'er</option>
- <option value="Werkgever">Werkgever</option>
- <option value="Uitzendorganisatie">Uitzendorganisatie</option>
- <option value="Anders">Anders</option>
+ <option value="">-- Select --</option>
+ <option value="Employee">Employee</option>
+ <option value="Supervisor / manager">Supervisor / manager</option>
+ <option value="Self-employed">Self-employed</option>
+ <option value="Employer">Employer</option>
+ <option value="Temporary employment agency">Temporary employment agency</option>
+ <option value="Other">Other</option>
  </select>
  </div>
  <div class="form-group">
- <label for="interesse">Interesse <span class="required">*</span></label>
+ <label for="interesse">Interest <span class="required">*</span></label>
  <select id="interesse" name="interesse" required>
- <option value="">-- Kies --</option>
- <option value="B-VCA Engels">B-VCA Engels</option>
- <option value="VOL-VCA Engels">VOL-VCA Engels</option>
- <option value="VCA incompany Engels">VCA incompany Engels</option>
- <option value="VCA examen Engels">VCA examen Engels</option>
- <option value="Ik weet nog niet welke VCA ik nodig heb">Ik weet nog niet welke VCA ik nodig heb</option>
+ <option value="">-- Select --</option>
+ <option value="B-VCA English">B-VCA English</option>
+ <option value="VOL-VCA English">VOL-VCA English</option>
+ <option value="VCA in-company English">VCA in-company English</option>
+ <option value="VCA exam English">VCA exam English</option>
+ <option value="I'm not sure which VCA I need">I'm not sure which VCA I need</option>
  </select>
  </div>
  </div>
 
  <div class="form-row">
  <div class="form-group">
- <label for="deelnemers">Aantal deelnemers</label>
+ <label for="deelnemers">Number of participants</label>
  <select id="deelnemers" name="aantal_deelnemers">
- <option value="">-- Kies --</option>
- <option value="Alleen ik">Alleen ik</option>
+ <option value="">-- Select --</option>
+ <option value="Just me">Just me</option>
  <option value="2–5">2–5</option>
  <option value="6–10">6–10</option>
  <option value="11–20">11–20</option>
@@ -605,41 +605,41 @@
  </select>
  </div>
  <div class="form-group">
- <label for="voorkeursformat">Voorkeursformat</label>
+ <label for="voorkeursformat">Preferred format</label>
  <select id="voorkeursformat" name="voorkeursformat">
- <option value="">-- Kies --</option>
+ <option value="">-- Select --</option>
  <option value="Rotterdam">Rotterdam</option>
- <option value="Incompany">Incompany</option>
- <option value="Nog niet zeker">Nog niet zeker</option>
+ <option value="In-company">In-company</option>
+ <option value="Not sure yet">Not sure yet</option>
  </select>
  </div>
  </div>
 
  <div class="form-group">
- <label for="taalvoorkeur">Taalvoorkeur</label>
+ <label for="taalvoorkeur">Language preference</label>
  <select id="taalvoorkeur" name="taalvoorkeur">
- <option value="">-- Kies --</option>
- <option value="Engels">Engels</option>
- <option value="Nederlands + Engels">Nederlands + Engels</option>
- <option value="Nog niet zeker">Nog niet zeker</option>
+ <option value="">-- Select --</option>
+ <option value="English">English</option>
+ <option value="Dutch + English">Dutch + English</option>
+ <option value="Not sure yet">Not sure yet</option>
  </select>
  </div>
 
  <div class="form-group">
- <label for="bericht">Vraag of toelichting</label>
- <textarea id="bericht" name="bericht" rows="4" placeholder="Bijv. rol, teamgrootte, locatie of open vragen…"></textarea>
+ <label for="bericht">Question or additional information</label>
+ <textarea id="bericht" name="bericht" rows="4" placeholder="e.g. role, group size, location or any questions..."></textarea>
  </div>
 
  <div class="form-group">
  <label class="checkbox-option" style="align-items:flex-start;">
  <input type="checkbox" name="privacy" value="akkoord" required id="privacy-akkoord">
- <span>Ik ga akkoord met de <a href="/privacy.html">privacyverklaring</a> en geef toestemming om contact met mij op te nemen over mijn VCA Engels-interesse. <span class="required">*</span></span>
+ <span>I agree to the <a href="/privacy.html">privacy policy</a> and consent to being contacted about my interest in VCA English. <span class="required">*</span></span>
  </label>
  </div>
 
- <button type="submit" class="sx-btn sx-btn--gold sx-signup-submit">Registreer mijn interesse in VCA Engels →</button>
+ <button type="submit" class="sx-btn sx-btn--gold sx-signup-submit">Register my interest in VCA English →</button>
  <p class="privacy-notice" style="margin-top:0.85rem;text-align:center;">
- Vrijblijvend · Geen betaling · Geen definitieve inschrijving
+ No obligation · No payment · No final enrolment
  </p>
  </form>
  </div>
