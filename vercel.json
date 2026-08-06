@@ -80,6 +80,109 @@
       "source": "/aanmelden",
       "destination": "/aanmelden.html",
       "statusCode": 301
+    },
+
+    {
+      "source": "/vca.html",
+      "destination": "/vca",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca/",
+      "destination": "/vca",
+      "statusCode": 301
+    },
+    {
+      "source": "/b-vca.html",
+      "destination": "/b-vca",
+      "statusCode": 301
+    },
+    {
+      "source": "/b-vca/",
+      "destination": "/b-vca",
+      "statusCode": 301
+    },
+    {
+      "source": "/vol-vca.html",
+      "destination": "/vol-vca",
+      "statusCode": 301
+    },
+    {
+      "source": "/vol-vca/",
+      "destination": "/vol-vca",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca-incompany.html",
+      "destination": "/vca-incompany",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca-incompany/",
+      "destination": "/vca-incompany",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca-examen.html",
+      "destination": "/vca-examen",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca-examen/",
+      "destination": "/vca-examen",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca-engels.html",
+      "destination": "/en/vca-training",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca-engels",
+      "destination": "/en/vca-training",
+      "statusCode": 301
+    },
+    {
+      "source": "/vca-engels/",
+      "destination": "/en/vca-training",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/vca-training.html",
+      "destination": "/en/vca-training",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/vca-training/",
+      "destination": "/en/vca-training",
+      "statusCode": 301
+    }
+  ],
+
+  "rewrites": [
+    {
+      "source": "/vca",
+      "destination": "/vca.html"
+    },
+    {
+      "source": "/b-vca",
+      "destination": "/b-vca.html"
+    },
+    {
+      "source": "/vol-vca",
+      "destination": "/vol-vca.html"
+    },
+    {
+      "source": "/vca-incompany",
+      "destination": "/vca-incompany.html"
+    },
+    {
+      "source": "/vca-examen",
+      "destination": "/vca-examen.html"
+    },
+    {
+      "source": "/en/vca-training",
+      "destination": "/en/vca-training.html"
     }
   ],
 
