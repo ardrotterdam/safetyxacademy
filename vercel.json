@@ -183,6 +183,10 @@
     {
       "source": "/en/vca-training",
       "destination": "/en/vca-training.html"
+    },
+    {
+      "source": "/en/thank-you",
+      "destination": "/en/thank-you.html"
     }
   ],
 
