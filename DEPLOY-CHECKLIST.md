@@ -89,7 +89,7 @@ Of merge naar main/production branch als CI/CD dat triggert.
 ### Direct na deploy (5–10 min)
 
 - [ ] Vercel-dashboard: deployment **Ready**, geen build errors
-- [ ] `https://safetyxacademy.nl/` laadt V2-homepage (title: *NEBOSH Opleiding Nederland | SafetyX Academy Rotterdam*)
+- [ ] `https://safetyxacademy.nl/` laadt V2-homepage (title: *NEBOSH Opleiding Nederland | SafetyXAcademy Rotterdam*)
 - [ ] Geen onverwachte 404's op footerlinks (privacy, over ons, aanmelden)
 
 ---

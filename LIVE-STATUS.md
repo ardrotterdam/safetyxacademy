@@ -15,7 +15,7 @@ De map `/safetyxacademyV2/` zelf is live niet bereikbaar: `https://safetyxacadem
 
 | Live marker | Matcht met | Betekenis |
 |---|---|---|
-| `<title>NEBOSH Opleiding Nederland \| SafetyX Academy Rotterdam</title>` | `safetyxacademyV2/index.html:7` | Exacte V2-title, niet root-title. |
+| `<title>NEBOSH Opleiding Nederland \| SafetyXAcademy Rotterdam</title>` | `safetyxacademyV2/index.html:7` | Exacte V2-title, niet root-title. |
 | H1: `Studeer lokaal. Werk wereldwijd.` | `safetyxacademyV2/index.html:202` | V2-homepage hero. |
 | Stylesheet: `css/style-v3.css` | `safetyxacademyV2/index.html:27` | V2-stylesheet. Root gebruikt `/css/style.css` en `/css/header.css`. |
 | `JSONLD_COUNT: 2` | `safetyxacademyV2/index.html:36`, `safetyxacademyV2/index.html:80` | V2 heeft Organization/Course + LocalBusiness JSON-LD. |
@@ -44,7 +44,7 @@ Root-homepage markers die niet live als homepage verschijnen:
 |---|---|---|
 | Title `HSE jobs &amp; ZZP-opdrachten met NEBOSH \| SafetyXAcademy` | `safetyxacademyV2/jobs.html:7` | V2 jobs/ZZP-pagina staat live. |
 | H1 `HSE jobs &amp; ZZP-opdrachten voor veiligheidskundigen met NEBOSH` | `safetyxacademyV2/jobs.html:117` | V2 content staat live, niet de root `jobs.html`. |
-| Root title `Werken bij SafetyX Academy \| Lancering September 2026` | `jobs.html:6` | Niet live op `/jobs.html`; deze intent staat live op `/werken-bij.html`. |
+| Root title `Werken bij SafetyXAcademy \| Lancering September 2026` | `jobs.html:6` | Niet live op `/jobs.html`; deze intent staat live op `/werken-bij.html`. |
 
 ### Blogindex `/blog/`
 
@@ -61,7 +61,7 @@ Root-homepage markers die niet live als homepage verschijnen:
 |---|---:|---|
 | `/over-ons.html` | 200 | V2-title `Over SafetyXAcademy \| NEBOSH Rotterdam` en V2 H1 `Over SafetyXAcademy`. |
 | `/aanmelden.html` | 200 | V2-title `Aanmelden NEBOSH IGC Rotterdam ... Wachtlijst 2026` en V2 H1 `Aanmelden NEBOSH IGC Opleiding Veerhaven Rotterdam`. |
-| `/werken-bij.html` | 200 | V2-title `Werken bij SafetyX Academy \| Lancering September 2026`. |
+| `/werken-bij.html` | 200 | V2-title `Werken bij SafetyXAcademy \| Lancering September 2026`. |
 
 ## 3. Zijn er paden waar de andere versie toch bereikbaar is?
 

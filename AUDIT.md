@@ -47,7 +47,7 @@ Er staan twee versies naast elkaar:
 - Root-site: `index.html`, `jobs.html`, `aanmelden.html`, `blog/index.html`, enz.
 - V2-site: `safetyxacademyV2/index.html`, `safetyxacademyV2/nebosh-opleiding.html`, `safetyxacademyV2/jobs.html`, enz.
 
-Dit is op dit moment het grootste SEO-risico. De V2-set heeft veel betere metadata, schema en navigatie, maar de root bevat ook pagina's met dezelfde canonicals, oudere content en afwijkende informatie. Voorbeeld: de root-homepage heeft twee H1's (`index.html:61`, `index.html:82`) en start "Januari 2026" in metadata (`index.html:21`, `index.html:22`), terwijl V2 spreekt over september 2026 (`safetyxacademyV2/index.html:8`, `safetyxacademyV2/index.html:533`). Daarnaast is root `jobs.html` inhoudelijk geen jobs/ZZP-pagina maar "Werken bij SafetyX Academy" volgens de title (`jobs.html:6`), terwijl de root-sitemap juist `https://www.safetyxacademy.nl/jobs.html` als jobs-pagina opneemt (`sitemap.xml:65`, `sitemap.xml:67`).
+Dit is op dit moment het grootste SEO-risico. De V2-set heeft veel betere metadata, schema en navigatie, maar de root bevat ook pagina's met dezelfde canonicals, oudere content en afwijkende informatie. Voorbeeld: de root-homepage heeft twee H1's (`index.html:61`, `index.html:82`) en start "Januari 2026" in metadata (`index.html:21`, `index.html:22`), terwijl V2 spreekt over september 2026 (`safetyxacademyV2/index.html:8`, `safetyxacademyV2/index.html:533`). Daarnaast is root `jobs.html` inhoudelijk geen jobs/ZZP-pagina maar "Werken bij SafetyXAcademy" volgens de title (`jobs.html:6`), terwijl de root-sitemap juist `https://www.safetyxacademy.nl/jobs.html` als jobs-pagina opneemt (`sitemap.xml:65`, `sitemap.xml:67`).
 
 ### Crawlability & indexering
 
